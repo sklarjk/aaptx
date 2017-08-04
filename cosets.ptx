@@ -1,0 +1,957 @@
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="coslag">
+  <title>The Wonderful World of Cosets</title>
+  <introduction>
+    <p>
+      We have already seen one way we can examine a complicated group <m>G</m>:
+      namely, study its subgroups, whose group structures are in some
+      cases much more directly understandable than the structure of <m>G</m>
+      itself. But if <m>H</m> is a subgroup of a group <m>G</m>, if we only study
+      <m>H</m> we lose all the information about <m>G</m>'s structure <q>outside</q> of
+      <m>H</m>. We might hope that <m>G-H</m> (that is, the set of elements of <m>G</m>
+      that are not in <m>H</m>) is also a subgroup of <m>G</m>, but we immediately
+      see that cannot be the case since the identity element of <m>G</m> must
+      be in <m>H</m>, and <m>H\cap (G-H)=\emptyset</m>. Instead, let's ask how we
+      can get at some understanding of <m>G</m>'s entire structure using a
+      subgroup <m>H</m>? It turns out we use what are called <em>cosets</em> of
+      <m>H</m>; but before we get to those, we need to cover some preliminary
+      material.
+    </p>
+  </introduction>
+
+
+
+<section>
+  <title>Partitions of and equivalence relations
+  on sets</title>
+  <definition>
+    <statement>
+      <p>
+        Let <m>S</m> be a set. Then a collection of subsets
+        <m>P=\{S_i\}_{i\in I}</m> (where <m>I</m> is some index set) is a <term>partition</term> of <m>S</m> if each <m>S_i \neq \emptyset</m> and each element
+        of <m>S</m> is in exactly one <m>S_i</m>. In other words,
+        <m>P=\{S_i\}_{i\in I}</m> is a partition of <m>S</m> if and only if:
+        <ol>
+          <li>
+       
+            <p>
+              each <m>S_i\neq \emptyset</m>;
+            </p>
+          </li>
+
+          <li>            <p>
+              the <m>S_i</m> are mutually disjoint (that is, <m>S_i\cap S_j =
+              \emptyset</m> for <m>i\neq j \in I</m>); and
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>S=\bigcup_{i\in I}S_i</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+
+      <p>
+        The <m>S_i</m> are called the <term>cells</term> of the partition.
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            The set <m>\{1,2,3\}</m> has 5 partitions: namely,
+            <me>
+              \{\{1,2,3\}\},\{\{1,2\},\{3\}\}, \{\{1,3\},\{2\}\},\{\{2,3\},\{1\}\} \text{ and }  \{\{1\},\{2\},\{3\}\}.
+            </me>
+            The first partition we've mentioned has one cell, the next three have
+            two cells, and the last one has three cells.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            The following is a 2-celled partition of <m>\Z</m>:
+            <me>
+              \{\{x\in \Z\,:\ x \text{
+              is even} \},\{x\in \Z\,:\, x\text{ is odd} \}\}.
+            </me>
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </example>
+
+  <p>
+    The number of partitions of a finite set of <m>n</m> elements gets
+    large very quickly as <m>n</m> goes to infinity. Indeed, there are 52
+    partitions of a set containing just 5 elements!<fn>The total
+    number of partitions of an <m>n</m>-element set is the <em>Bell number</em>,
+    <m>B_n</m>. There is no trivial way of computing <m>B_n</m>, in general,
+    though the <m>B_n</m> do satisfy the relatively simple recurrence
+    relation
+    <me>
+      B_{n+1}=\sum_{k=0}^n \binom{n}{k} B_k,
+    </me>
+    for each <m>n\geq 1</m>.</fn>But our goal here is not to count the number of
+    partitions of a given set, but rather to use particular partitions
+    of a group <m>G</m> to help us study that group's structure. We turn now
+    to our next definition.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        Let <m>S</m> be a set. Then a <term>relation</term> on <m>S</m> is a
+        subset <m>R</m> of <m>S\times S</m>.<fn>More generally, if <m>S</m> and
+        <m>T</m> are sets, a <em>relation between <m>S</m> and <m>T</m></em> is a subset
+        of <m>S \times T</m>. We will not, however, in our class consider
+        the cases in which <m>S</m> and <m>T</m> are different sets.</fn>If <m>R</m> is
+        a relation on <m>S</m> and <m>x,y\in S</m>, then we say <m>x</m> is <term>related to</term> <m>y</m>, and write <m>x R y</m>, if <m>(x,y)\in R</m>;
+        otherwise, we say that <m>x</m> is <term>not related</term> to <m>y</m>, and
+        write <m>x \not R y</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <remark>
+    <p>
+      If there is a conventional notation used to denote
+      a particular relation on a set, we will usually use that notation,
+      rather than <m>R</m>, to denote the relation.
+    </p>
+  </remark>
+
+  <p>
+    We are already familiar with some relations on
+    <m>\R</m>. Common such relations are <m>=</m>, <m>\neq</m>, <m>\lt</m>, <m>\leq</m>, <m>></m>,
+    and <m>\geq</m>; they contain exactly the elements we'd expect them to
+    contain.
+  </p>
+
+  <example>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            <m>\lt</m> is a relation on <m>\R</m> that contains, for instance, <m>(3,4)</m> but not
+            <m>(3,3)</m> or <m>(4,3)</m>; <m>\leq</m> is a relation on <m>\R</m> that contains
+            <m>(3,4)</m> <em>and</em> <m>(3,3)</m> but not <m>(4,3)</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Given any <m>n\in \Z^+</m>, congruence modulo <m>n</m>, denoted <m>\equiv_n</m>, is a
+            relation on <m>\Z</m>, where <m>\equiv_n</m> is defined to be <m>\{(x,y) \in \Z
+            \times \Z \,:\, n \text{ divides } x-y\}</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            We can define a relation <m>R</m> on <m>C^1</m> (the set of
+            all differentiable functions from <m>\R</m> to <m>\R</m>
+            whose derivatives are continuous) by declaring that
+            <m>(f,g)\in C^1 \times C^1</m> is in <m>R</m> if and only if
+            <m>f'=g'</m>.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </example>
+
+  <definition>
+    <statement>
+      <p>
+        Let <m>R</m> be a relation on a set <m>S</m>. Then <m>R</m> is said to
+        be:
+      </p>
+<ul><li>
+      <p>
+        <term>reflexive on <m>S</m></term> if <m>xR x</m> for every <m>x\in S</m>;
+      </p></li>
+<li>
+      <p>
+        <term>symmetric on <m>S</m></term> if whenever <m>x,y\in S</m> with <m>xR y</m>
+        we also have <m>yR x</m>; and</p></li>
+<li>
+      <p>
+        <term>transitive on <m>S</m></term> if
+        whenever <m>x,y,z\in S</m> with <m>xR y</m> and <m>yR z</m> we also have <m>xR z</m>.
+      </p></li>
+</ul>
+
+      <p>
+        A relation that is reflexive,
+        symmetric, <term>and</term> transitive is called an <term>equivalence
+        relation</term>.
+      </p>
+    </statement>
+  </definition>
+
+  <remark>
+    <ol>
+      <li>
+        <p>
+          You can think of an
+          equivalence relation on a set <m>S</m> as being a <q>weak version</q> of
+          equality on <m>S</m>.  Indeed, <m>=</m> is an equivalence relation on any set
+          <m>S</m>, but it also has a very special property that most equivalence
+          relations <em>don't</em> have: namely, no element of <m>S</m> is related to
+          <em>any other element</em> of <m>S</m> under <m>=</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          If we know, or plan to prove, that a relation is an equivalence
+          relation, by convention we will often denote the relation by <m>\sim</m>,
+          rather than by <m>R</m>.
+        </p>
+      </li>
+    </ol>
+  </remark>
+
+  <example>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            <m>\lt</m> is <em>not</em> an equivalence relation on <m>\R</m> because
+            it is not reflexive: for instance, <m>3\not\lt  3</m>. <m>\leq</m> is also <em>not</em> an equivalence relation on <m>\R</m>, since even though it is
+            reflexive, it's not symmetric: indeed, <m>3\leq 4</m> but <m>4\not\leq 3</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Given any <m>n\in \Z^+</m>, <m>\equiv_n</m> <em>is</em> an equivalence relation on <m>\Z</m>.  The proof of this is left as an exercise for the reader.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            The relation <m>R</m> on <m>C^1</m> discussed above (<m>fR  g</m> iff <m>f'=g'</m>) <em>is</em> an equivalence relation
+            on <m>C^1</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\simeq</m> <em>is</em> an equivalence relation on any set of
+            groups. This follows from <xref ref="groupisoequiv">Theorem</xref>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Define relation <m>R</m> on <m>\Z</m> by <m>xR y</m> if and only if <m>xy
+            \geq 0</m>.  Is <m>R</m> an equivalence relation on <m>\Z</m>?  Well, for every
+            <m>x\in \Z</m>, <m>x^2\geq 0</m>, so <m>R</m> is reflexive.  Moreover, if <m>x,y\in
+            \Z</m> with <m>xy \geq 0</m>, then <m>yx \geq 0</m>; so <m>R</m> is symmetric.  But
+            <m>R</m> is <em>not</em> transitive: indeed, <m>3,0,-4\in \Z</m> with <m>3(0)=0
+            \geq 0</m> and <m>0(-4)=0\geq 0</m>, so <m>3\R 0</m> and <m>0 R -4</m>; but
+            <m>3(-4)=-12 \not \geq 0</m>.  So <m>R</m> isn't transitive, and hence is
+            <em>not</em> an equivalence relation.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </example>
+
+  <definition>
+    <statement>
+      <p>
+        Given an equivalence relation <m>\sim</m> on a set <m>S</m>, for
+        each <m>x\in S</m> we define the <term>equivalence class of <m>x</m> under
+        <m>\sim</m></term> to be
+        <me>
+          [x]=\{y\in S\,:\, y\sim x\}.
+        </me>
+      </p>
+
+      <p>
+        These sets <m>[x]</m> (<m>x\in S</m>) are
+        called the <term>equivalence classes of <m>S</m> under <m>\sim</m></term>.
+      </p>
+    </statement>
+  </definition>
+
+  <remark>
+    <p>
+      Note that, by reflexivity of <m>\sim</m>, <m>x\in [x]</m>
+      for every <m>x\in S</m>.
+    </p>
+  </remark>
+
+  <p>
+    We have now the following Very Important
+    Lemma:
+  </p>
+
+  <lemma xml:id="vil_lem">
+    <statement>
+      <p>
+        Let <m>\sim</m> be an equivalence relation on set <m>S</m>. Then for <m>x,y\in S</m>, the following are equivalent:
+<p>
+<ol>
+<li><p><m>y\in [x]</m>;</p></li>
+<li><p><m>[x]=[y]</m>;</p></li>
+<li><p><m>x\in [y]</m>.</p></li>
+</ol>
+     </p></p>
+    </statement>
+
+  <proof>
+    <p>
+      To prove that the first and second statements are equivalent: Let <m>x, y\in S</m>. If <m>y\in
+      [x]</m>, then <m>y \sim x</m>, so for every <m>z\in [y]</m> (that is, for every
+      <m>z</m> in <m>S</m> with <m>z\sim y</m>), we have, by transitivity, <m>z\sim x</m>, so
+      <m>z\in [x]</m>. On the other hand, by the symmetry of <m>\sim</m> we have
+      <m>x\sim y</m>; so for every <m>z\in [x]</m>, we have, again by transitivity,
+      that <m>z\in [y]</m>. Thus, <m>[x]=[y]</m>. Conversely, if <m>[x]=[y]</m>, then
+      since <m>y\in [y]=[x]</m>.
+    </p>
+
+    <p>
+      The proof that the second and third statements are equivalent is nearly
+      identical.
+    </p>
+  </proof>
+  </lemma>
+
+
+<!-- FIX: BELOW IS A REMK AND DEF -->
+<definition>
+    <statement>
+      <p>
+    In many cases there are
+    many distinct elements <m>x,y\in S</m> with <m>[x]=[y]</m>; thus, there
+    are usually many different ways we could denote a particular
+    equivalence class of <m>S</m> under <m>\sim</m>. Element <m>y\in S</m> is
+    called a <term>representative</term> of class <m>X</m> if <m>y\in X</m>.
+      </p>
+   </statement>
+</definition>
+  <example>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            Consider the equivalence relation <m>\equiv_2</m> on
+            <m>\Z</m>.  Under this relation, <m>[0]=\{0,\pm 2, \pm 4, \ldots\}</m>
+            and <m>[1]=\{\ldots, -3, -1, 1, 3, \ldots\}</m>; in fact, if we let
+            <m>E</m> be the set of all even integers and <m>O</m> the set of all odd
+            integers, then for <m>x\in \Z</m>, <m>[x]=E</m> if <m>x</m> is even and <m>O</m> if
+            <m>x</m> is odd. Thus, the set of all equivalence classes of <m>\Z</m>
+            under <m>\equiv_2</m> is the 2-element set <m>\{E,O\}</m>: every even
+            integer is a representative of <m>E</m>, while every odd integer is
+            a representative of <m>O</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            For <m>f\in C^1</m>, the equivalence class of <m>f</m> under <m>R</m>
+            (defined above)
+            is
+            the set of all functions in <m>C^1</m> of the
+            form <m>g(x)=f(x)+c</m>, where <m>c\in \R</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Let <m>A=\{a,b,c\}</m>, and define <m>\sim</m> on the power set <m>P(A)</m> of <m>A</m> by <m>X\sim Y</m> if
+            and only if <m>|X|=|Y|</m>. It is straightforward to show that <m>\sim</m> is
+            an equivalence relation on <m>P(A)</m>, under which <m>P(A)</m> has exactly 4
+            distinct equivalence classes:
+            <me>
+              [\emptyset]=\{\emptyset\},
+            </me>
+            <me>
+              [\{a\}]=[\{b\}]=[\{c\}]=\{\{a\},\{b\}, \{c\}\},
+            </me>
+            <me>
+              [\{a,b\}]=[\{a,c\}]=[\{b,c\}]=\{\{a,b\},\{a,c\},\{b,c\}\}, \text{ and }
+            </me>
+            <me>
+              [A]=\{A\}.
+            </me>
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </example>
+
+<remark>
+<p>Notice that the  
+complete set
+    <m>\{E,O\}</m> of distinct equivalence classes of <m>\Z</m> under
+    <m>\equiv_n</m> is a partition of <m>\Z</m>, and the complete set
+    <m>\{[\emptyset],[\{a\}],[\{a,b\}],[A]\}</m> of distinct equivalence
+    classes of <m>P(A)</m> under <m>\sim</m> is a partition of <m>P(A)</m>. This
+    is not a coincidence! It turns out that equivalence relations
+    and partitions go hand in hand.</p>
+</remark>
+
+  <theorem xml:id="part_quiv">
+    <statement>
+      <p>
+        Let <m>S</m> be a set. Then:
+        <ol>
+          <li>
+            <p>
+              If <m>\sim</m> is an equivalence relation on <m>S</m>,
+              then the set of all equivalence classes of <m>S</m> under
+              <m>\sim</m> is a partition of <m>S</m>; and
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If <m>P</m> is a partition of <m>S</m>, then the relation on <m>S</m>
+              defined by
+              <m>x\sim y</m> if and only <m>x</m> is in the same
+              cell of <m>P</m> as <m>y</m> is an equivalence relation on <m>S</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+
+      <p>
+        Notice that in each case, the cells of the partition are the
+        equivalence classes of the set under the corresponding equivalence
+        relation.
+      </p>
+    </statement>
+  
+
+  <proof>
+    <p>
+      To prove the first statement: Let <m>\sim</m> be an equivalence relation on <m>S</m>.
+      Clearly, the equivalence classes of <m>S</m> under <m>\sim</m> are
+      nonempty sets whose union is <m>S</m>. Thus, it suffices to show <m>X
+      \cap Y =\emptyset</m> for each pair of equivalence classes <m>X\neq
+      Y</m> of <m>S</m> under <m>\sim</m>. Let <m>X,Y</m> be equivalence classes of
+      <m>S</m> under <m>\sim</m> that are NOT disjoint. Then there exists an
+      element <m>z\in X\cap Y</m>. Then by <xref ref="vil_lem">Lemma</xref>, <m>[z]=X</m>
+      and <m>[z]=Y</m>; so <m>X=Y</m>. Thus, if <m>X\neq Y</m>, then <m>X\cap Y
+      =\emptyset</m>.
+    </p>
+
+    <p>
+      Finally, it is straightforward (almost silly!) to prove that
+      <m>\sim</m> is reflexive, symmetric, and transitive.
+    </p>
+  </proof>
+</theorem>
+
+  <example>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            For <m>n\in \Z^+</m>, the set of the equivalence classes of <m>\Z</m> under <m>\equiv_n</m> is
+            the partition <m>\{[0],[1],\ldots,[n-1]\}</m> of <m>\Z</m>. (The
+            partition <m>\{E
+            ,O\}</m> of <m>\Z</m> discussed above is this partition when
+            <m>n=2</m>.)
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </example>
+</section>
+
+<section>
+  <title>Introduction to cosets and normal subgroups</title>
+  <p>
+    Throughout this section, let <m>G</m> be a group with subgroup <m>H</m>
+    and consider two particular relations on <m>G</m>:
+    <m>\siml</m> defined by <m>a\siml b</m> if and only if
+    <m>a^{-1}b\in H</m>and
+    <m>\simr</m> defined by <m>a\simr b</m> if and only if
+    <m>ab^{-1}\in H</m>.
+  </p>
+
+  <theorem xml:id="simlreq">
+    <statement>
+      <p>
+        <m>\siml</m> and <m>\simr</m> are equivalence relations on <m>G</m>.
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      First, let <m>a\in G</m>. Then <m>a^{-1}a=e\in H</m>,
+      so <m>a\siml a</m>. Thus, <m>\siml</m> is reflexive.
+    </p>
+
+    <p>
+      Next, let <m>a,b\in G</m> with <m>a\siml b</m>. Then
+      <m>a^{-1}b\in H</m>, so, since <m>H</m> is a subgroup of <m>G</m>,
+      <m>(a^{-1}b)^{-1}\in H</m>. But
+      <m>(a^{-1}b)^{-1}=b^{-1}(a^{-1})^{-1}=b^{-1}a</m>; thus, <m>b\siml a</m>, and so <m>\siml</m> is symmetric.
+    </p>
+
+    <p>
+      Finally, let <m>a,b,c\in G</m> with <m>a\siml b</m>
+      and <m>b\siml c</m>. Then <m>a^{-1}b</m> and <m>b^{-1}c</m> are in <m>H</m>. Since
+      <m>H</m> is a subgroup of <m>G</m>, we must then have
+      <m>(a^{-1}b)(b^{-1}c)\in H</m>; but <m>(a^{-1}b)(b^{-1}c)</m> equals
+      <m>a^{-1}c</m>. Thus, <m>a\siml c</m>, and so <m>\siml</m> is transitive.
+    </p>
+
+    <p>
+      Thus, <m>\siml</m> is an equivalence relation on <m>G</m>. The proof that <m>\simr</m> is an equivalence relation is left as an exercise for the reader.
+    </p>
+  </proof>
+</theorem>
+
+
+  <p>
+    Now, as equivalence relations, each of <m>\siml</m> and <m>\simr</m>
+    gives rise to a partition of <m>G</m>. What are the cells of those
+    partitions?
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        Given <m>a\in G</m>, we define
+        <me>
+          aH =
+          \{ah\,:\, h\in H\}
+        </me>
+        and
+        <me>
+          Ha=\{ha\,:\,h\in H\}.
+        </me>
+      </p>
+
+      <p>
+        We call <m>aH</m> and <m>Ha</m>, respectively, the <term>left </term> and <term>right cosets of <m>H</m> containing
+        <m>a</m></term>.
+      </p>
+    </statement>
+  </definition>
+
+  <theorem xml:id="equivca">
+    <statement>
+      <p>
+        Let <m>a\in G</m>. Then under <m>\siml</m>, <m>[a]=aH</m> while
+        under <m>\simr</m>, <m>[a]=Ha</m>.
+      </p>
+    </statement>
+  
+
+  <proof>
+    <p>
+      Let <m>b\in G</m>. Then <m>b\siml a \Leftrightarrow a \siml b
+      \Leftrightarrow a^{-1}b\in H \Leftrightarrow a^{-1}b=h</m> for some
+      <m>h\in H \Leftrightarrow b=ah</m> for some <m>h\in H \Leftrightarrow b\in
+      aH</m>. So under <m>\siml</m> we have <m>[a]=aH</m>. Similarly, under <m>\simr</m> we
+      have <m>[a]=Ha</m>.
+    </p>
+  </proof>
+</theorem>
+
+  <p>
+    We next summarize some facts about the left and right cosets of
+    a subgroup <m>H</m> of a group <m>G</m>:
+  </p>
+
+  <theorem xml:id="cosetfacts">
+    <statement>
+      <p>
+        Let <m>G</m> be a group with <m>H\leq G</m> and <m>a,b\in G</m>.
+        <ol>
+          <li>
+            <p>
+              The left [right] cosets of <m>H</m> in <m>G</m> partition <m>G</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <me>
+                b\in aH \Leftrightarrow aH=bH \Leftrightarrow  a\in bH
+              </me>
+              and
+              <me>
+                b\in Ha \Leftrightarrow  Ha=Hb \Leftrightarrow  a\in
+                Hb.
+              </me>
+              In particular, <m>a\in H \Leftrightarrow aH=H \Leftrightarrow Ha=H</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>H</m> is the only left or right coset of <m>H</m> that is a <em>subgroup</em>
+              of <m>G</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>|aH|=|H|=|Ha|</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  
+
+  <proof>
+    <p>
+      Statements 1 and 2 hold because the left and right
+      cosets of <m>H</m> in <m>G</m> are equivalence classes. Statement 3
+      holds because no left or right coset of <m>H</m> other than <m>H</m>
+      itself can contain <m>e</m>, since the left [right] cosets of <m>H</m>
+      are mutually disjoint. For Statement 4: Define <m>f\,:\,H\to aH</m> by <m>f(h)=ah</m>. It is straightforward to show that <m>f</m> is a bijection, so <m>|H|=|aH|</m>. Similarly, <m>|Ha|=|H|</m>.
+    </p>
+  </proof>
+</theorem>
+
+  <remark>
+    <p>
+      We can use Statements 2 and 3, above, to save some
+      time when computing left and right cosets of a subgroup of a
+      group.
+    </p>
+  </remark>
+
+  <example xml:id="s3_ex">
+    <statement>
+      <p>
+        Find the left and right cosets of <m>H=\langle (12)\rangle</m> in
+        <m>S_3</m>.
+      </p>
+      <p>The left cosets are <me>eH=H=(12)H,</me><me>(13)H=\{(13),(123)\}=(123)H,</me><me>\text{ and } (23)H=\{(23),(132)\}=(132)H,</me> and the 
+      right cosets are <me>He=H=H(12),</me><me> H(13)=\{(13),(132)\}=H(132),</me><me>\text{ and } H(23)=\{(23),(123)\}=H(123).</me></p>
+      <p>
+        Thus, <m>\siml</m> partitions <m>S_3</m> into <m>\{H,\{(13),(123)\},\{(23),
+        (132)\}\}</m> and <m>\simr</m> partitions <m>S_3</m> into
+        <m>\{H,\{(13),(132)\},\{(23), (123)\}\}</m>.
+      </p>
+    </statement>
+  </example>
+
+  <example xml:id="d4_ex">
+    <statement>
+      <p>
+        Find the left and right cosets of <m>H=\langle f\rangle</m> in
+        <m>D_4</m>.
+      </p>
+
+      <p>
+        This example is left as an exercise for the reader.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    We now draw attention to some very important facts:
+  </p>
+
+  <warning>
+    <p>
+      For <m>a,b\in G</m>:
+      <ol>
+        <li>
+          <p>
+            In general, <m>aH \neq Ha</m>!
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>aH=bH</m> does not necessarily imply <m>a=b</m> or that there exists
+            an <m>h\in H</m> with <m>ah=bh</m>; similarly, <m>Ha=Hb</m> does not necessarily
+            imply <m>a=b</m> or that there exists an <m>h\in H</m> with
+            <m>ha=hb</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </warning>
+
+  <example>
+    <statement>
+      <p>
+        We saw above that in <m>S_3</m> with <m>H=\langle (12)\rangle</m>,
+        <me>
+          (13)H=\{(13),(123)\} \neq \{(13),(132)\}=H(13).
+        </me>
+      </p>
+
+      <p>
+        Also,
+        <m>(13)H=(123)H</m> but <m>(13)e\neq (123)e</m> and <m>(13)(12)\neq (123)(12)</m>.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    It turns out that subgroups <m>H</m> for which <m>aH=Ha</m> for all <m>a\in
+    G</m> will be very important to us.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        We say that subgroup <m>H</m> of <m>G</m> is <term>normal</term> in <m>G</m>
+        if <m>aH=Ha</m> for all <m>a\in G</m>. We denote that fact that <m>H</m> is
+        normal in <m>G</m> by writing <m>H\unlhd G</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <remark>
+    <ol>
+      <li>
+        <p>
+          If <m>H</m> is normal in <m>G</m>, we may refer to the left and
+          right cosets of <m>G</m> as simply <em>cosets</em>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Of course, if <m>G</m> is abelian, every subgroup of <m>G</m> is normal in <m>G</m>.
+          But there can also be normal subgroups of nonabelian groups: for instance, the trivial and improper
+          subgroups of every group are normal in that group.
+        </p>
+      </li>
+    </ol>
+  </remark>
+
+  <example>
+    <statement>
+      <p>
+        Find the cosets of <m>5\Z</m> in <m>\Z</m>.
+      </p>
+
+      <p>
+        Notice that in additive notation, the statement <q><m>a^{-1}b\in H</m></q>
+        becomes <m>-a+b\in H</m>. So for <m>a,b\in \Z</m>, <m>a\siml b</m> if and only if <m>-a+b \in
+        5\Z</m>; that is, if and only if <m>5</m> divides <m>b-a</m>. In other words, <m>a\siml b</m> if and only if <m>a\equiv_5 b</m>. So
+        in this case, <m>\siml</m> is just congruence modulo <m>5</m>. Thus, the cosets of <m>5\Z</m> in <m>\Z</m> are
+        <md>
+          <mrow>5\Z\amp =\{\ldots,-5,0,5,\ldots\}</mrow>
+          <mrow>1+5\Z\amp =\{\ldots,-4, 1,
+          6,\ldots\},</mrow>
+          <mrow>2+5\Z\amp =\{\ldots,-3,2, 7,
+          \ldots\},</mrow>
+          <mrow>3+5\Z\amp =\{\ldots,-2,3, 8,
+          \ldots\},</mrow>
+          <mrow>4+5\Z\amp =\{\ldots,-1, 4, 9,
+          \ldots\}.</mrow>
+        </md>
+      </p>
+
+      <p>
+        Do you see how this example would
+        generalize for <m>n\Z</m> (<m>n \in \Z^+</m>) in <m>\Z</m>?
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Find the cosets of <m>H=\langle 12\rangle</m> in <m>4\Z</m>.
+      </p>
+
+      <p>
+        They are
+        <md>
+          <mrow>H\amp =\{\ldots, -12,0,12\ldots\},</mrow>
+          <mrow>4+H \amp =
+          \{\ldots,-8,4,16,\ldots\},</mrow>
+          <mrow>8+H\amp =\{\ldots, -4,8,20,\ldots\}.</mrow>
+        </md>
+      </p>
+    </statement>
+  </example>
+
+  <example xml:id="z6_ex">
+    <statement>
+      <p>
+        Find the cosets of <m>H=\langle 4\rangle</m> in <m>\Z_{12}</m>.
+      </p>
+
+      <p>
+        They are
+        <md>
+          <mrow>H\amp =\{0,4,8\},</mrow>
+          <mrow>1+H \amp = \{1,5,9\},</mrow>
+          <mrow>2+H\amp =\{2,6,10\}</mrow>
+          <mrow>3+H\amp =\{3,7,11\}.</mrow>
+        </md>
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    We now consider the set of all left cosets of
+    a subgroup of a group. (Note: There are analogous versions of
+    what follows using right cosets, but we relegate any discussions
+    of that to footnotes.)
+  </p>
+
+  <notation>
+
+  <p>
+    We let <m>G/H</m> denote the set of
+    all left cosets of subgroup <m>H</m> in <m>G</m>. We read <m>G/H</m> as <q><m>G</m>
+    mod <m>H</m>.</q> (We denote the set of all right cosets of subgroup <m>H</m> in <m>G</m> by <m>H\backslash G</m>, but we will not be explicitly referring to  that set in this class.)</p>
+
+  </notation>
+</section>
+`
+<section>
+  <title>The index of a subgroup and Lagrange's Theorem</title>
+  <definition>
+    <statement>
+      <p>
+        We define the <term>index of <m>H</m> in <m>G</m></term>, denoted <m>(G:H)</m>,
+        to be the cardinality of <m>G/H</m>.<fn>Even though we need not have <m>aH=Ha</m> for all <m>a\in G</m>, we do always have <m>|G/H|=|H\backslash G|</m>.</fn></p>
+    </statement>
+  </definition>
+
+  <p>
+    Note that if <m>G</m> is finite then <m>(G:H)</m> must be finite; however,
+    we see below that if <m>G</m> is infinite then <m>(G:H)</m> could be finite or
+    infinite.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        If <m>(\R:\Z)</m> were finite, then we'd be able to
+        write <m>\R</m> as a finite union of countable sets, implying that
+        <m>\R</m> is countable<mdash />which it isn't. Thus, <m>(\R:\Z)=\infty</m>.
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Since <m>\langle i\rangle =\{i,-1,-i,1\}</m> is a finite subgroup
+        of <m>C^*</m> and <m>C^*</m> is infinite, we must have that <m>(C^*:\langle i\rangle )</m> is
+        infinite. However, <m>(C^*:C^*)=1</m>.
+      </p>
+    </statement>
+  </example>
+
+  <example xml:id="indices_ex">
+    <statement>
+      <p>
+        Referring to our previous examples, we have: 
+
+<!-- <m>(S_3:\langle (12)\rangle )=3, 
+  (D_4:\langle f\rangle )=4,
+  (\Z:5\Z)=5,
+  (4\Z:12\Z)=3,</m>
+      and <m>(\Z_{12}:\langle 4\rangle )=4.</m>-->
+
+
+  <me>(S_3:\langle (12)\rangle )=3,</me>
+  <me>(D_4:\langle f\rangle )=4,</me>
+  <me>(\Z:5\Z)=5,</me>
+  <me>(4\Z:12\Z)=3,</me>
+      <me>\text{and }(\Z_{12}:\langle 4\rangle )=4.</me>
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    Notice that in the cases in which <m>G</m> is finite,
+    <m>(G:H)=|G|/|H|</m>. This makes sense, since the left cosets of <m>H</m> in <m>G</m> partition <m>G</m>, and each left coset has cardinality <m>|H|</m>.
+  </p>
+
+  <p>
+    Since the left cosets of a subgroup <m>H</m> of a group <m>G</m>
+    partition <m>G</m> and all have the same cardinality, we have the
+    following two theorems. The first is known as <em>Lagrange's
+    Theorem</em> (named for the French mathematician Joseph-Louis Lagrange).</p>
+
+  <theorem xml:id="lagrange">
+  <title>Lagrange's Theorem</title>
+    <statement>
+      <p>
+         If <m>G</m> is a finite
+        group and <m>H\leq G</m>, then <m>|H|</m> divides <m>|G|</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <theorem xml:id="indexfin">
+    <statement>
+      <p>
+        If <m>G</m> is a finite group and <m>H\leq G</m>, then
+        <m>(G:H)=|G|/|H|</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <remark>
+    <p>
+      The converse of
+      <xref ref="lagrange" text="title"/> does <em>not</em> hold. Indeed <m>A_4</m> is a group of order 12 which contains no subgroup of
+      order <m>6</m> even though <m>6</m> divides <m>|A_4|=12</m>.
+    </p>
+  </remark>
+
+  <p>
+    We end this chapter with two corollaries to <xref ref="lagrange" text="title"/>.
+  </p>
+
+  <corollary>
+    <statement>
+      <p>
+        Let <m>G</m> be a finite group and let <m>a\in G</m>. Then
+        <m>a^{|G|}=e_G</m>.
+      </p>
+    </statement>
+  
+
+  <proof>
+    <p>
+      Let <m>d=o(a)</m>. By <xref ref="lagrange" text="title"/>, <m>d</m> divides <m>|G|</m>, so
+      there exists <m>k\in \Z</m> with <m>|G|=dk</m>. Then
+      <m>a^{|G|}=a^{dk}=(a^d)^k=(e_G)^k=e_G.</m>
+    </p>
+  </proof>
+</corollary>
+
+<p>Finally, we have the following corollary, whose proof is left as an exercise for the reader.</p>
+
+  <corollary xml:id="pcyc">
+    <statement>
+      <p>
+        Let <m>G</m> be a group of prime order. Then <m>G</m> is
+        cyclic. It follows that for every prime <m>p</m>, there exists a unique
+        group of order <m>p</m>, up to isomorphism.</p>
+          </statement>
+</corollary>
+</section>
+
+
+
+
+
+
+
+
+  <xi:include  href="./exercises/cosetsex.ptx" />
+</chapter>

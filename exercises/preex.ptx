@@ -1,0 +1,304 @@
+
+<exercises>
+  <title>Exercises</title>
+  <exercise>
+    <statement>
+      <p>
+        Yes/No. For each of the following, write Y if the object described is a well-defined set; otherwise, write N. You do NOT need to provide explanations or show work for this problem.
+        <ol>
+          <li>
+            <p>
+              <m>\{z \in \C \,:\, |z|=1\}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\{\epsilon \in \R^+\,:\, \epsilon \mbox{ is sufficiently small} \}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\{q\in \Q \,:\, q \mbox{ can be written  with denominator } 4\}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\{n \in \Z\,:\, n^2 \lt 0\}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+
+  <solution>
+     
+    <ol  cols="4" type="a">
+      <li>Y</li>    
+      <li>N</li>
+      <li>Y (it's <m>\Q</m>)</li>
+      <li>Y (it's <m>\emptyset</m>) </li> 
+    </ol>
+
+  </solution> 
+</exercise>
+
+
+
+  <exercise>
+    <statement>
+      <p>
+        List the elements in the following sets, writing your answers as sets.
+      </p>
+
+      <p>
+        <em>Example:</em> <m>\{z\in \C\,:\,z^4=1\}</m> <em>Solution:</em> <m>\{\pm 1, \pm i\}</m>
+        <ol>
+          <li>
+            <p>
+              <m>\{z\in \R\,:\, z^2=5\}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\{m \in \Z\,:\, mn=50 \mbox{ for some } n\in \Z\}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\{a,b,c\}\times \{1,d\}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>P(\{a,b,c\})</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  <solution>
+    
+    <ol>
+      <li>
+        <p>
+          <m>\{\pm\sqrt{5}\}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\{\pm 50, \pm 25, \pm 10, \pm 5, \pm 2, \pm 1\}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\{(a,1),(a,d), (b,1),(b,d),(c,1),(c,d)\}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\{\emptyset, \{a\}, \{b\},
+          \{c\},\{a,b\},\{a,c\},\{b,c\}, \{a,b,c\}\}</m>
+        </p>
+      </li>
+    </ol>
+  </solution>
+  
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Let <m>S</m> be a set with cardinality <m>n\in \N</m>. Use the cardinalities of <m>P(\{a,b\})</m> and <m>P(\{a,b,c\})</m> to make a conjecture about the cardinality of <m>P(S)</m>. You do not need to prove that your conjecture is correct (but you should try to ensure it is correct).
+      </p>
+    </statement>
+     <solution>
+    
+    <p>
+      <m>|P(\{a,b\})|=4=2^2</m> and <m>|P(\{a,b,c\})|=8=2^3</m>; we may conjecture that when <m>|S|=n</m>, <m>|P(S)|=2^n</m>.
+    </p>
+  </solution>
+  </exercise>
+ 
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m>f: \Z^2 \to \R</m> be defined by <m>f(a,b)=ab</m>. (Note: technically, we should write <m>f((a,b))</m>, not <m>f(a,b)</m>, since <m>f</m> is being applied to an ordered pair, but this is one of those cases in which mathematicians abuse notation in the interest of concision.)
+      </p>
+      <ol>
+      <li>
+        <p>
+          What are <m>f</m>'s domain, codomain, and range?
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Prove or disprove each of the following statements. (Your proofs do not need to be long to be correct!)
+        </p>
+        <ol>
+          <li>
+            <p>
+              <m>f</m> is onto;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>f</m> is 1-1;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>f</m> is a bijection. (You may refer to parts (i) and (ii) for this part.)
+            </p>
+          </li>
+        </ol>
+      </li>
+
+      <li>
+        <p>
+          Find the images of the element <m>(6,-2)</m> and of the set <m>\Z^- \times \Z^-</m> under <m>f</m>. (Remember that the image of an element is an element, and the image of a set is a set.)
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find the preimage of <m>\{2,3\}</m> under <m>f</m>. (Remember that the preimage of a set is a set.)
+        </p>
+      </li>
+      </ol>
+    </statement><solution>
+    
+    <ol>
+    <li>
+      <p>
+        <m>f</m>'s domain, codomain, and range are, respectively, <m>\Z^2</m>, <m>\R</m>, and <m>\Z</m>.
+      </p>
+    </li>
+
+    <li>
+      <ol>
+        <li>
+          <p>
+            <m>f</m> is not onto, since, for instance, <m>1/2\in \R-\Z</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>f</m> is not 1-1: for instance, <m>f(-2,2)=-4=f(2,-2)</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>f</m> is not a bijection since it's not 1-1. (It would be equally valid to answer that it's not a bijection since it's not onto, or that it's not a bijection since it's neither 1-1 nor onto.)
+          </p>
+        </li>
+      </ol>
+    </li>
+
+    <li>
+      <p>
+        <m>f(6,-2)=-12</m> and <m>f(\Z^-\times \Z^-)=\Z^+</m>.
+      </p>
+    </li>
+
+    <li>
+      <p>
+        <md>
+          <mrow>f^{\leftarrow}(\{2,3\})\amp =\{(a,b)\in \Z\times \Z\,:\, f(a,b)\in \{2,3\}\}</mrow>
+          <mrow>\amp =\{(a,b)\in \Z\times \Z\,:\, ab=2 \mbox{ or }  ab=3\},</mrow>
+        </md>
+        which is the set
+        <me>
+          \{(1,2),(2,1),(-1,-2),(-2,-1),(1,3),(3,1),(-1,-3),(-3,-1)\}.
+        </me>
+      </p>
+    </li>
+    </ol>
+  </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m>S</m>, <m>T</m>, and <m>U</m> be sets, and let <m>f: S\to T</m> and <m>g: T\to U</m> be onto. Prove that <m>g \circ f</m> is onto.
+      </p>
+    </statement>
+    <solution>
+    
+    <p>
+      Let <m>u\in U</m>. We want to show there is an element of <m>S</m> that gets mapped to <m>u</m> by <m>g\circ f</m>. Since <m>g:T\to U</m> is onto, there is an element <m>t\in T</m> such that <m>g(t)=u</m>; next, since <m>f:S\to T</m> is onto, there is an element <m>s\in S</m> such that <m>f(s)=t</m>. Then <m>(g\circ f)(s)=g(f(s))=g(t)=u</m>. Thus, <m>g\circ f</m> is onto.
+    </p>
+  </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m>|A|=n\lt \infty</m> and <m>|B|=m\lt  \infty</m>. Prove that <m>|A\times B|=mn</m>.
+      </p>
+    </statement>
+  <solution>
+    
+    <p>
+      We can list the elements of <m>A</m> and <m>B</m> as so:
+      <me>
+        A=\{a_1,a_2,\ldots, a_n\} \mbox{ and } B=\{b_1,b_2,\ldots, b_m\}.
+      </me>
+    </p>
+
+    <p>
+      Consider the table
+  </p>
+
+     <table xml:id="cardmn">
+
+<tabular halign="center">
+<row>
+    <cell><m>(a_1,b_1)</m></cell>
+    <cell><m>(a_1,b_2)</m></cell>
+    <cell><m>\cdots</m></cell>
+    <cell><m>(a_1,b_m)</m></cell>
+  </row>
+
+  <row>
+    <cell><m>(a_2,b_1)</m></cell>
+    <cell><m>(a_2,b_2)</m></cell>
+    <cell><m>\cdots</m></cell>
+    <cell><m>(a_2,b_m)</m></cell>
+  </row>
+  <row>
+    <cell><m>\vdots</m></cell>
+    <cell><m>\vdots</m></cell>
+    <cell><m>\ddots</m></cell>
+    <cell><m>\vdots</m></cell>
+  </row>
+  <row>
+    <cell><m>(a_n,b_1)</m></cell>
+    <cell><m>(a_n,b_2)</m></cell>
+    <cell><m>\cdots</m></cell>
+    <cell><m>(a_n,b_m)</m></cell>
+  </row>
+  </tabular>
+  <caption>Elements of <m>A\times B</m> when <m>|A|=n</m> and <m>|B|=m</m></caption>
+      </table>
+
+    <p>
+      Clearly this table contains <m>mn</m> elements, and contains each element of <m>A\times B</m> exactly once. Therefore, <m>|A\times B|=mn</m>.
+    </p>
+  </solution>
+  </exercise>
+  
+</exercises>

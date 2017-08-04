@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-03T23:36:40-07:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The index of a subgroup and Lagrange's Theorem</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\def\Z{\mathbb{Z}}
+\def\zn{\mathbb{Z}_n}
+\def\znc{\mathbb{Z}_n^\times}
+\def\R{\mathbb{R}}
+\def\Q{\mathbb{Q}}
+\def\C{\mathbb{C}}
+\def\N{\mathbb{N}}
+\def\M{\mathbb{M}}
+\def\G{\mathcal{G}}
+\def\0{\mathbf 0}
+\def\Gdot{\langle G, \cdot\,\rangle}
+\def\phibar{\overline{\phi}}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\Ker}{Ker}
+\def\siml{\sim_L}
+\def\simr{\sim_R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">First-Semester Abstract Algebra</span><span class="subtitle">A Structural Approach</span></a></h1>
+<p class="byline">Jessica K. Sklar</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-20.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="coslag.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="exercises-7.html" title="Next" alt="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-20.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="coslag.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="exercises-7.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+<h2 class="link"><a href="gps.html" data-scroll="gps"><span class="codenumber">1</span><span class="title">Groups</span></a></h2>
+<ul>
+<li><a href="section-1.html" data-scroll="section-1">Binary operations and structures</a></li>
+<li><a href="exercises-1.html" data-scroll="exercises-1">Exercises, Part I</a></li>
+<li><a href="section-2.html" data-scroll="section-2">The definition of a group</a></li>
+<li><a href="section-3.html" data-scroll="section-3">Examples of groups/nongroups, Part I</a></li>
+<li><a href="section-4.html" data-scroll="section-4">Group conventions and properties</a></li>
+<li><a href="section-5.html" data-scroll="section-5">Examples of groups/nongroups, Part II</a></li>
+<li><a href="section-6.html" data-scroll="section-6">Summaries of groups we've seen</a></li>
+<li><a href="exercises-2.html" data-scroll="exercises-2">Exercises, Part II</a></li>
+</ul>
+<h2 class="link"><a href="homoiso.html" data-scroll="homoiso"><span class="codenumber">2</span><span class="title">Homorphisms and Isomorphisms</span></a></h2>
+<ul>
+<li><a href="section-7.html" data-scroll="section-7">Groups of small order</a></li>
+<li><a href="section-8.html" data-scroll="section-8">Introduction to homomorphisms and isomorphisms</a></li>
+<li><a href="section-9.html" data-scroll="section-9">Isomorphic groups</a></li>
+<li><a href="exercises-3.html" data-scroll="exercises-3">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="subgps.html" data-scroll="subgps"><span class="codenumber">3</span><span class="title">Subgroups</span></a></h2>
+<ul>
+<li><a href="section-10.html" data-scroll="section-10">Introduction to subgroups</a></li>
+<li><a href="section-11.html" data-scroll="section-11">Subgroup proofs and lattices</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="cyc.html" data-scroll="cyc"><span class="codenumber">4</span><span class="title">Cyclic Groups</span></a></h2>
+<ul>
+<li><a href="section-12.html" data-scroll="section-12">Introduction to cyclic groups</a></li>
+<li><a href="section-13.html" data-scroll="section-13">The subgroup lattices of cyclic groups</a></li>
+<li><a href="exercises-5.html" data-scroll="exercises-5">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="perm.html" data-scroll="perm"><span class="codenumber">5</span><span class="title">Permutation Groups and Dihedral Groups</span></a></h2>
+<ul>
+<li><a href="section-14.html" data-scroll="section-14">Introduction to permutation groups</a></li>
+<li><a href="section-15.html" data-scroll="section-15">Symmetric groups</a></li>
+<li><a href="section-16.html" data-scroll="section-16">Alternating groups</a></li>
+<li><a href="section-17.html" data-scroll="section-17">Cayley's Theorem</a></li>
+<li><a href="dihedralgps.html" data-scroll="dihedralgps">Dihedral groups</a></li>
+<li><a href="exercises-6.html" data-scroll="exercises-6">Exercises</a></li>
+</ul>
+<h2 class="link active"><a href="coslag.html" data-scroll="coslag"><span class="codenumber">6</span><span class="title">The Wonderful World of Cosets</span></a></h2>
+<ul>
+<li><a href="section-19.html" data-scroll="section-19">Partitions of and equivalence relations on sets</a></li>
+<li><a href="section-20.html" data-scroll="section-20">Introduction to cosets and normal subgroups</a></li>
+<li><a href="section-21.html" data-scroll="section-21" class="active">The index of a subgroup and Lagrange's Theorem</a></li>
+<li><a href="exercises-7.html" data-scroll="exercises-7">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="factorgps.html" data-scroll="factorgps"><span class="codenumber">7</span><span class="title">Factor Groups</span></a></h2>
+<ul>
+<li><a href="section-22.html" data-scroll="section-22">Motivation</a></li>
+<li><a href="section-23.html" data-scroll="section-23">Focusing on normal subgroups</a></li>
+<li><a href="section-24.html" data-scroll="section-24">Introduction to factor groups</a></li>
+<li><a href="exercises-8.html" data-scroll="exercises-8">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="isothms.html" data-scroll="isothms"><span class="codenumber">8</span><span class="title">The Isomorphism Theorems</span></a></h2>
+<ul>
+<li><a href="section-25.html" data-scroll="section-25">The First Isomorphism Theorem</a></li>
+<li><a href="section-26.html" data-scroll="section-26">The Second and Third Isomorphism Theorems</a></li>
+<li><a href="exercises-9.html" data-scroll="exercises-9">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="appendix-1.html" data-scroll="appendix-1">Notation</a></li>
+<li><a href="appendix-2.html" data-scroll="appendix-2">Solutions to Exercises</a></li>
+<li><a href="references-1.html" data-scroll="references-1">Bibliography</a></li>
+<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
+<li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-21"><header title="Section 6.3 The index of a subgroup and Lagrange's Theorem"><h1 class="heading hide-type" alt="Section 6.3 The index of a subgroup and Lagrange's Theorem">
+<span class="type">Section</span><span class="codenumber">6.3</span><span class="title">The index of a subgroup and Lagrange's Theorem</span>
+</h1></header><article class="definition-like" id="definition-49"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">6.3.1</span>
+</h5>
+<p id="p-851">We define the <em class="terminology">index of \(H\) in \(G\)</em>, denoted \((G:H)\text{,}\) to be the cardinality of \(G/H\text{.}\)<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-7" id="fn-7"><span class="footnote"><sup> 1 </sup></span></a></span><span id="hk-fn-7" style="display: none;" class="tex2jax_ignore"><span class="footnote">Even though we need not have \(aH=Ha\) for all \(a\in G\text{,}\) we do always have \(|G/H|=|H\backslash G|\text{.}\)</span></span></p></article><p id="p-852">Note that if \(G\) is finite then \((G:H)\) must be finite; however, we see below that if \(G\) is infinite then \((G:H)\) could be finite or infinite.</p>
+<article class="example-like" id="example-65"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">6.3.2</span>
+</h5>
+<p id="p-853">If \((\R:\Z)\) were finite, then we'd be able to write \(\R\) as a finite union of countable sets, implying that \(\R\) is countable—which it isn't. Thus, \((\R:\Z)=\infty\text{.}\)</p></article><article class="example-like" id="example-66"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">6.3.3</span>
+</h5>
+<p id="p-854">Since \(\langle i\rangle =\{i,-1,-i,1\}\) is a finite subgroup of \(C^*\) and \(C^*\) is infinite, we must have that \((C^*:\langle i\rangle )\) is infinite. However, \((C^*:C^*)=1\text{.}\)</p></article><article class="example-like" id="indices_ex"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">6.3.4</span>
+</h5>
+<p id="p-855">Referring to our previous examples, we have: </p>
+\begin{equation*}
+(S_3:\langle (12)\rangle )=3,
+\end{equation*}
+
+\begin{equation*}
+(D_4:\langle f\rangle )=4,
+\end{equation*}
+
+\begin{equation*}
+(\Z:5\Z)=5,
+\end{equation*}
+
+\begin{equation*}
+(4\Z:12\Z)=3,
+\end{equation*}
+
+\begin{equation*}
+\text{and }(\Z_{12}:\langle 4\rangle )=4.
+\end{equation*}
+</article><p id="p-856">Notice that in the cases in which \(G\) is finite, \((G:H)=|G|/|H|\text{.}\) This makes sense, since the left cosets of \(H\) in \(G\) partition \(G\text{,}\) and each left coset has cardinality \(|H|\text{.}\)</p>
+<p id="p-857">Since the left cosets of a subgroup \(H\) of a group \(G\) partition \(G\) and all have the same cardinality, we have the following two theorems. The first is known as <!--Style me with CSS--><em>Lagrange's Theorem</em> (named for the French mathematician Joseph-Louis Lagrange).</p>
+<article class="theorem-like" id="lagrange"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">6.3.5</span><span class="title">Lagrange's Theorem</span>
+</h5>
+<p id="p-858">If \(G\) is a finite group and \(H\leq G\text{,}\) then \(|H|\) divides \(|G|\text{.}\)</p></article><article class="theorem-like" id="indexfin"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">6.3.6</span>
+</h5>
+<p id="p-859">If \(G\) is a finite group and \(H\leq G\text{,}\) then \((G:H)=|G|/|H|\text{.}\)</p></article><article class="remark-like" id="remark-34"><h5 class="heading">
+<span class="type">Remark</span><span class="codenumber">6.3.7</span>
+</h5>
+<p id="p-860">The converse of <a knowl="./knowl/lagrange.html" knowl-id="xref-lagrange" alt="Theorem 6.3.5 Lagrange's Theorem" title="Theorem 6.3.5 Lagrange's Theorem">Lagrange's Theorem</a> does <!--Style me with CSS--><em>not</em> hold. Indeed \(A_4\) is a group of order 12 which contains no subgroup of order \(6\) even though \(6\) divides \(|A_4|=12\text{.}\)</p></article><p id="p-861">We end this chapter with two corollaries to <a knowl="./knowl/lagrange.html" knowl-id="xref-lagrange" alt="Theorem 6.3.5 Lagrange's Theorem" title="Theorem 6.3.5 Lagrange's Theorem">Lagrange's Theorem</a>.</p>
+<article class="theorem-like" id="corollary-5"><h5 class="heading">
+<span class="type">Corollary</span><span class="codenumber">6.3.8</span>
+</h5>
+<p id="p-862">Let \(G\) be a finite group and let \(a\in G\text{.}\) Then \(a^{|G|}=e_G\text{.}\)</p></article><div class="posterior">
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-36" id="proof-36"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></div>
+<div id="hk-proof-36" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-863">Let \(d=o(a)\text{.}\) By <a knowl="./knowl/lagrange.html" knowl-id="xref-lagrange" alt="Theorem 6.3.5 Lagrange's Theorem" title="Theorem 6.3.5 Lagrange's Theorem">Lagrange's Theorem</a>, \(d\) divides \(|G|\text{,}\) so there exists \(k\in \Z\) with \(|G|=dk\text{.}\) Then \(a^{|G|}=a^{dk}=(a^d)^k=(e_G)^k=e_G.\)</p></article></div>
+</div>
+<p id="p-864">Finally, we have the following corollary, whose proof is left as an exercise for the reader.</p>
+<article class="theorem-like" id="pcyc"><h5 class="heading">
+<span class="type">Corollary</span><span class="codenumber">6.3.9</span>
+</h5>
+<p id="p-865">Let \(G\) be a group of prime order. Then \(G\) is cyclic. It follows that for every prime \(p\text{,}\) there exists a unique group of order \(p\text{,}\) up to isomorphism.</p></article></section></div></main>
+</div>
+<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
+</body>
+</html>

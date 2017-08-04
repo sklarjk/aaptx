@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-03T23:44:13-07:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="hiddenproof"><p>For each \(a\in G\text{,}\) let \(\lambda_a\) be defined, as above, by \(\lambda_a(x)=ax\) for each \(x\in G\text{;}\) recall that each \(\lambda_a\) is in \(S_G\text{.}\) Now define \(\phi\,:\, G\to S_G\) by \(\phi(a)=\lambda_a\text{,}\) for each \(a\in G\text{.}\)</p>
+<p>We claim that \(\phi\) is both a homomorphism and one-to-one. Indeed, let \(a,b\in G\text{.}\) Now, \(\phi(a)\phi(b)\) and \(\phi(ab)\) are both functions with domain \(G\text{,}\) so we need to show \((\phi(a)\phi(b))(x)=(\phi(ab))(x)\) for each \(x\in G\text{.}\) Well, let \(x\in G\text{.}\) Then</p>
+\begin{align*}
+(\phi(a)\phi(b))(x)\amp =(\lambda_a\lambda_b)(x)\amp \amp\\
+\amp =\lambda_a(\lambda_b(x)) \amp \amp \text{ (since the operation on \(S_G\) is
+composition) }\\
+\amp =\lambda_a(bx)\amp \amp\\
+\amp =a(bx)\amp \amp\\
+\amp =(ab)x\amp \amp\\
+\amp =\lambda_{ab}(x)\amp \amp\\
+\amp =(\phi(ab))(x).\amp \amp
+\end{align*}
+<p>So \(\phi\) is a homomorphism. Further, if \(a, b\in G\) with \(\phi(a)=\phi(b)\text{,}\) then \(\lambda_a=\lambda_b\text{.}\) In particular, \(\lambda_a(e)=\lambda_b(e)\text{.}\) But \(\lambda_a(e)=ae=a\) and \(\lambda_b(e)=be=b\text{,}\) so \(a=b\text{.}\) Thus, \(\phi\) is one-to-one.</p>
+<p>Since by definition \(\phi(G)\) we have that \(\phi\) maps \(G\) <!--Style me with CSS--><em>onto</em> \(\phi(G)\text{,}\) we conclude that \(\phi\) provides an isomorphism from \(G\) to the subgroup \(\phi(G)\) of \(S_G\text{.}\)</p></article></body>
+</html>

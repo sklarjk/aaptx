@@ -1,0 +1,1434 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="gps">
+  <title>Groups</title>
+
+<section>
+  <title>Binary operations and structures</title>
+
+  <p>
+    So far we have been discussing sets. These are extremely simple
+    objects, essentially mathematical <q>bags of stuff.</q> Without any
+    added structure, their usefulness is very limited. Imagine, for
+    instance, living with friends in a two-story house without rooms,
+    stairs, closets, or hallways. You have no privacy, cannot access the
+    second floor, etc. A set with no added structure will not help us,
+    say, solve a linear equation. What <em>will</em> help us with such
+    things are objects such as groups, rings, fields, and vector spaces.
+    These are sets equipped with <em>binary operations</em> which allow us
+    to combine set elements in various ways. We first rigorously define
+    a binary operation.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        A <term>binary operation</term> on a set <m>S</m> is a function from
+        <m>S\times S</m> to <m>S</m>. Given a binary operation <m>*</m> on <m>S</m>, for
+        each <m>(a,b)\in S\times S</m> we denote <m>*((a,b))</m> in <m>S</m> more
+        simply by <m>a*b</m>. (Intuitively, a binary operation <m>*</m> on <m>S</m>
+        assigns to each pair of elements <m>a,b \in S</m> a unique element
+        <m>a*b</m> of <m>S</m>.)
+      </p>
+
+      <p>
+        A set <m>S</m> equipped with a binary operation <m>*</m> is called a <term>binary (algebraic) structure</term>, and is denoted by <m>\langle S,*\rangle</m>, or
+        just by <m>S</m>, if <m>*</m> is understood from context.
+      </p>
+    </statement>
+  </definition>
+
+  <remark>
+    <ol>
+      <li>
+        <p>
+          For <m>*</m> to be a binary operation on <m>S</m>, <m>a*b</m> must be
+          <em>well defined</em> and <em>in</em> <m>\mathbf{S}</m> for each <m>a,b\in S</m>.
+          For instance, we cannot define a binary operation on
+          <m>\R</m> by
+          <me>
+            a*b=\text{ the greatest number less than
+            \(a+b\)}
+          </me>
+          since there <em>is</em>  no such <q>greatest number.</q>
+          Nor can we define a binary operation on <m>\Z</m> by <m>a*b=ab/2</m>,
+          since for, say, <m>a=b=1 \in \Z</m>, <m>ab/2=1/2 \not\in \Z</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Not every binary operation is denoted by <m>*</m>.  In fact, many already have common notations: for instance, <m>+</m> on <m>\Z</m> or <m>\circ</m> on the set of functions from <m>\R</m> to <m>\R</m>. We will assume these common notations represent the <q>usual</q> binary operations we know them to mean, unless otherwise noted.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Do not mix up the <m>*</m> that indicates a binary operation and the
+          superscript <m>^*</m> that indicates that we are only considering the
+          nonzero elements of a given set (e.g., <m>\R^*</m>). You should be
+          able to tell which type of <m>*</m> we are using from context and
+          placement. Also, make sure you correctly place these symbols!
+        </p>
+      </li>
+    </ol>
+  </remark>
+
+  <definition>
+    <statement>
+      <p>
+        A binary operation <m>*</m> on a set <m>S</m> is <term>associative</term>
+        if <m>(a*b)*c=a*(b*c)</m> for all <m>a,b,c\in S</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <remark>
+    <p>
+      When a binary operation is associative,
+      we can omit parentheses when operating on set elements. For
+      example, <m>+</m> is associative on <m>\Z</m>, so we can unambiguously
+      write the (equal) expressions <m>1+(2+3)</m> and <m>(1+2)+3</m> as
+      <m>1+2+3</m>.
+    </p>
+  </remark>
+
+  <definition>
+    <statement>
+      <p>
+        A binary operation <m>*</m> on set <m>S</m> is <term>commutative</term> if
+        <me>
+          a*b=b*a
+        </me>
+        for all <m>a,b\in S</m>. We say that specific elements
+        <m>a</m> and <m>b</m> of <m>S</m> <term>commute</term> if <m>a*b=b*a</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <definition>
+    <statement>
+      <p>
+        Let <m>\langle S,*\rangle</m> be a binary structure. An element <m>e</m> in
+        <m>S</m> is an <term>identity element of <m>\langle S,*\rangle</m></term> if <m>x*e=e*x=x</m> for all
+        <m>x\in S</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <note>
+
+  <p>
+    Sometimes an identity element of <m>\langle S,*\rangle</m> is referred to as an <term>identity element of <m>S</m> under <m>*</m></term>, or, when <m>*</m> is clear from context, simply
+    as an <term>identity element of <m>S</m></term>.
+  </p>
+
+  </note>
+
+  <warning>
+    <p>
+      Not every binary structure contains an identity element! (Ex: <m>\langle \Z,-\rangle</m>.)
+    </p>
+  </warning>
+
+  <p>
+    A natural question to ask is if a binary structure can have
+    more than one identity element? The answer is no!
+  </p>
+
+  <theorem xml:id="uniqueid">
+    <statement>
+      <p>
+        A binary structure <m>\langle S, *\rangle</m> has <em>at most one</em> identity element. That is, identity elements in binary structures, when they exist, are unique.
+      </p>
+    </statement>
+
+  <proof>
+    <p>
+      Assume that <m>e</m> and <m>f</m> are identity elements of <m>S</m>. Then since <m>e</m> is an identity element, <m>e*f=f</m> and since <m>f</m> is an identity element, <m>e*f=e</m>. Thus, <m>e=f</m>.
+    </p>
+  </proof>
+  </theorem>
+
+
+  <definition>
+    <statement>
+      <p>
+        Let <m>\langle S, *\rangle</m> be a binary structure with identity
+        element <m>e</m>. Then for <m>a\in S</m>, <m>b</m> is an <term>(two-sided)
+        inverse of <m>a</m> in <m>\langle S,*\rangle</m></term> if <m>a*b=b*a=e</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <note>
+
+  <p>
+    We can also refer to such an element <m>b</m> as an <term>inverse for <m>a</m> in <m>S</m> under <m>*</m></term>, or, when <m>*</m> is clear from context, simply as an <term>inverse of <m>a</m></term>.
+  </p>
+
+  </note>
+
+  <warning>
+    <ul>
+      <li><p>
+          Not every element in a binary structure with an identity element has an inverse!
+        </p>
+      </li>
+
+      <li>
+        <p>
+          If a binary structure <em>does not have</em> an identity element, it <em>doesn't even make sense</em> to say an element in the
+          structure does or does not have an inverse!
+        </p>
+      </li>
+    </ul>
+  </warning>
+
+  <theorem xml:id="uniqueinverse">
+    <statement>
+      <p>
+        Let <m>\langle S, *\rangle</m> be a binary structure with an identity element, where <m>*</m> is associative. Let <m>a\in S</m>. If <m>a</m> has an inverse, then its inverse is unique.
+      </p>
+    </statement>
+
+  <proof>
+    <p>
+      Let <m>e</m> be the identity element of <m>S</m>. Suppose <m>a</m> has inverses <m>b</m> and <m>c</m>. Then <m>a*b=e</m> so, multiplying both sides of the equation by <m>c</m> on the left, we have <m>c*(a*b)=c*e=c</m>. But since <m>*</m> is associative, we have <m>c*(a*b)=(c*a)*b=e*b=b</m>. But <m>b=c</m>. Thus, <m>a</m>'s inverse is unique.
+    </p>
+  </proof>
+  </theorem>
+
+</section>
+
+  <xi:include  href="./exercises/gpsex1.ptx" />
+
+<section>
+  <title>The definition of a group</title>
+  <p>
+    At this point you may be asking yourself, why do we care? We've covered a lot of definitions and proved some theorems, but what is the goal of all this? Well, there are actually many goals that we can achieve using such material. Consider the following as an example. Suppose we want to solve the equation <m>5+x=2</m>. We can probably solve this quite easily almost just by looking at it (<m>x=-3</m>), but what facts are we actually using there? If we break down the reasoning leading to this answer, we may obtain something like the following set of steps.
+  </p>
+
+
+<!--FIX 
+ <md>
+          <mrow>((f+g)+h)(x)\amp =(f+g)(x)+h(x)\amp \amp</mrow>
+          <mrow>\amp =((f(x)+g(x))+h(x)\amp \amp</mrow>
+          <mrow>\amp =f(x)+(g(x)+h(x))\amp \amp \text{ (since addition is associative on
+          \(\R\)) }</mrow>
+          <mrow>\amp =f(x)+(g+h)(x)\amp \amp</mrow>
+          <mrow>\amp =(f+(g+h))(x)\amp \amp .</mrow>
+        </md>-->
+
+
+  <tabular>
+    <row>
+      <cell></cell>
+      <cell><m>5+x</m></cell>
+      <cell>=</cell>
+      <cell><m>2</m></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\Rightarrow</m></cell>
+      <cell><m>-5+(5+x)</m></cell>
+      <cell>=</cell>
+      <cell><m>-5+2</m></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\Rightarrow</m></cell>
+      <cell><m>(-5+5)+x</m></cell>
+      <cell>=</cell>
+      <cell><m>-3</m></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\Rightarrow</m></cell> <md>
+          <mrow>{2}
+          \amp \amp  a^{-1}(ab)\amp =a^{-1}(ac)</mrow>
+          <mrow>\amp \Rightarrow
+          \amp (a^{-1}a)b\amp =(a^{-1}a)c</mrow>
+          <mrow>\amp \Rightarrow
+          \amp eb\amp =ec</mrow>
+          <mrow>\amp \Rightarrow
+          \amp b\amp =c</mrow>
+        </md>
+      <cell><m>0+x</m></cell>
+      <cell>=</cell>
+      <cell><m>-3</m></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\Rightarrow</m></cell>
+      <cell><m>x</m></cell>
+      <cell>=</cell>
+      <cell><m>-3</m></cell>
+      <cell>.</cell>
+    </row>
+  </tabular>
+  <p>
+    In line 2, we add the inverse of <m>5</m> in <m>\langle \Z, +\rangle</m> to each side of
+    the equation. In line 3, we use associativity of <m>+</m> in <m>\Z</m> (along
+    with computation), while in line 4 we use the fact that <m>-5</m> is the
+    additive inverse of <m>5</m> (that is, the inverse of <m>5</m> in <m>\Z</m> under
+    <m>+</m>). Finally, in line 5 we use the fact that 0 is an additive
+    identity element in <m>\Z</m> (that is, the identity element in <m>\Z</m>
+    under <m>+</m>).
+  </p>
+
+  <p>
+    In summary, we used <em>associativity, identity elements, and
+    inverses</em> in <m>\Z</m> to solve the given equation. This perhaps
+    suggests that these would be useful traits for a binary
+    structure and/or its operation to have. They are in fact so
+    useful that a binary structure displaying these characteristics
+    is given a special name. We note that these axioms are rather
+    strong; <q>most</q> binary structures aren't groups.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        A <term>group</term> is a set <m>G</m>, equipped with a binary
+        operation <m>*</m>, that satisfies the following three <term>group
+        axioms</term>:
+        <ol label="I">
+          <li>
+            <p>
+              <m>*</m> is associative on <m>G</m> (we call this axiom <m>\G_1</m>)
+            </p>
+          </li>
+
+          <li>
+            <p>
+              There exists an identity element for <m>*</m> in <m>G</m> (axiom <m>\G_2</m>)
+            </p>
+          </li>
+
+          <li> <p>
+              Every element <m>a\in G</m> has an inverse in <m>G</m> (axiom <m>\G_3</m>)
+
+            </p>
+          </li>
+        </ol>
+      </p>
+
+      <p>
+        We
+        denote group <m>G</m> under <m>*</m> by the binary structure notation
+        <m>\langle G,*\rangle</m>, or simply by <m>G</m> if the operation <m>*</m> is known
+        from context (or need not be known in the current
+        situation).
+      </p>
+    </statement>
+  </definition>
+
+ 
+ <remark>
+<p>
+  When proving/disproving that a set <m>G</m> is/is
+    not a group under an (apparent) operation <m>*</m>:
+    <ul>
+      <li>
+        <p>
+          The first thing you should do is check to make sure that  <m>\langle G,*\rangle</m>
+          is a binary structure by making sure <m>G</m> is closed under <m>*</m><mdash />if not, it doesn't make sense to
+          check to see if axioms <m>\G_1</m><ndash /><m>\G_3</m> hold). (For instance: <m>\Z^*</m> has no chance of being a group under
+          <m>\div</m>, since, e.g., <m>3,4\in \Z^*</m> but <m>3 \div 4 \not\in\Z^*</m>.)
+        </p>
+      </li>
+
+      <li>
+        <p>
+          You should never check <m>\G_3</m> before confirming
+          <m>\G_2</m> holds, because it makes no sense to look for
+          inverses if you haven't confirmed that <m>G</m> contains an
+          identity element under <m>*</m>.
+        </p>
+      </li>
+    </ul></p>
+</remark>
+</section>
+
+<section>
+  <title>Examples of groups/nongroups, Part I</title>
+  <p>
+    Let's look at some examples of groups/nongroups.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        We claim that <m>\Z</m> is a group under addition. Indeed, we already
+        know that <m>\Z</m> is closed under addition and that addition is
+        associative on the integers. The integer <m>0</m> acts as an identity
+        element of <m>\Z</m> under addition (since <m>a+0=0+a=a</m> for each <m>a\in
+        \Z</m>), and each element <m>a</m> in <m>G</m> has inverse <m>-a</m> since
+        <m>a+(-a)=-a+a=0</m>.
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            For each following binary structure <m>\langle G,*\rangle</m>, determine whether or not <m>G</m> is a group.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            For those that are <em>not </em> groups, determine the first group axiom  that fails, and provide a proof that it fails.
+          </p>
+        </li>
+
+        <li class="custom-list-style-type" label="" >
+
+        <p>
+          <tabular>
+            <row>
+              <cell><m>\langle \Q,+\rangle</m></cell>
+              <cell><m>\langle \Z,-\rangle</m></cell>
+              <cell><m>\langle \R,\cdot\,\rangle</m></cell>
+              <cell><m>\langle \C^*,\cdot\, \rangle</m></cell>
+            </row>
+            <row>
+              <cell><m>\langle \R,+\rangle</m></cell>
+              <cell><m>\langle \Z^+,+\rangle</m></cell>
+              <cell><m>\langle \Z^*,\cdot\,\rangle</m></cell>
+              <cell><m>\langle \M_n(\R),+\rangle</m></cell>
+            </row>
+            <row>
+              <cell><m>\langle \C,+\rangle</m></cell>
+              <cell><m>\langle \Z, \cdot\,\rangle</m></cell>
+              <cell><m>\langle \R^*,\cdot\, \rangle</m></cell>
+              <cell><m>\langle \M_n(\R),\cdot\, \rangle</m></cell>
+            </row>
+          </tabular>
+        </p>
+        </li>
+      </ol>
+    </statement>
+  </example>
+
+  <p>
+    If you have taken
+    linear algebra, you have also probably seen a collection of matrices
+    that is a group under matrix multiplication.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        For <m>n\in \Z^+</m>, we define <m>GL(n,\R)</m> by
+        <me>
+          GL(n,\R)=\{M\in \M_n(\R):\det M \neq 0\}.
+        </me>
+      </p>
+
+      <p>
+        In other
+        words, <m>G</m> is the set of all invertible <m>n\times n</m> matrices
+        over <m>\R</m>.</p><p> We  define subset <m>SL(n,\R)</m> by
+        <m>GL(n,\R)</m> to be the set
+        <me>
+          SL(n,\R)=\{M\in \M_n(\R):\det M =1\}.
+        </me>
+      </p>
+        <p>
+    We denote a zero matrix by  <m>\0</m> and the  <m>n\times n</m> identity matrix by  <m>I_n</m>.
+  </p>
+    </statement>
+  </definition>
+
+  <remark>
+    <p>
+      Throughout this course, if we are discussing a set <m>GL(n,\R)</m> or <m>SL(n,\R)</m>, you should assume <m>n\in \Z^+</m>, unless otherwise noted.
+    </p>
+  </remark>
+
+  <theorem xml:id="glsl">
+    <statement>
+      <p>
+        <m>GL(n,\R)</m> and <m>SL(n,\R)</m> are closed under matrix multiplication (so <m>\langle GL(n,\R),\cdot\rangle</m> and <m>\langle SL(n,\R),\cdot\rangle</m> are binary structures).
+      </p>
+    </statement>
+
+  <proof>
+    <p>
+      Let <m>A,B\in GL(n, \R)</m>. Then <m>\det(AB)=(\det A)(\det B) \neq 0</m> (since <m>\det A, \det B \neq 0)</m>, so <m>AB\in GL(n,\R)</m>. Similarly, if <m>A,B \in SL(n,\R)</m>, then <m>\det(AB)=(\det A)(\det B)=1(1)=1</m>, so <m>AB\in SL(n,\R)</m>.
+    </p>
+  </proof>
+
+  </theorem>
+
+  <theorem>
+    <statement>
+      <p>
+        The binary structures
+        <m>GL(n,\R)</m> and <m>SL(n,\R)</m> are groups under matrix multiplication.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        Let <m>G=GL(n,\R)</m>. We show that <m>G</m>, under matrix multiplication, satisfies
+        the three group axioms. First, we know that matrix multiplication is always associative. Next, the <m>n\times n</m> identity matrix
+              <me>
+                I_n=\begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \amp  0 \\
+                0 \amp  1 \amp  0 \amp  \cdots \amp  0 \\
+                0 \amp  0 \amp  1 \amp  \cdots \amp  0 \\
+                \vdots \amp  \vdots \amp  \vdots \amp  \ddots \amp  \vdots \\
+                0 \amp  0 \amp  0 \amp  \cdots \amp  1
+                \end{bmatrix}  \in G
+              </me>
+              acts as an identity element for <m>\langle G, \cdot\,\rangle</m> since
+              <me>
+                AI_n=I_nA = A
+              </me>
+              for all <m>A\in G</m>.
+            </p>
+        <p> Finally, let <m>A\in G</m>.  Since <m>\det A\neq 0</m>, <m>A</m> has
+              (matrix multiplicative) inverse <m>A^{-1}</m> in
+              <m>\M_2(\R)</m>. But we need to verify that <m>A^{-1}</m> is in
+              <m>G</m>. This is in fact the case, however, since
+              <m>A^{-1}</m> is invertible (it has inverse <m>A</m>), hence <m>\det
+              A^{-1} \neq 0</m>.  Thus, <m>A^{-1}</m> is also in <m>G</m>.
+            </p>
+
+      <p>
+        So <m>G</m> is a group under multiplication.
+      </p>
+
+      <p>
+        The proof that <m>SL(n,\R)</m> is a group under multiplication is left as an exercise for the reader.
+      </p>
+    </proof>
+
+  </theorem>
+
+  <p>
+    These groups are very important in many areas of mathematics, including linear algebra and geometry. Because of this, we have special names for them (which give rise to the <q>GL</q> and <q>SL</q> in their names).
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        For <m>n\in \Z^+</m>, <m>GL(n,\R)</m> is called the <term>general
+        linear group of degree <m>n</m> over <m>\R</m></term> and <m>SL(n,\R)</m> is
+        called the <term>special linear group of degree <m>n</m> over
+        <m>\R</m></term>.
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        Define <m>*</m> on <m>\Q^*</m> by <m>a*b=(ab)/2</m> for all <m>a,b\in \Q^*</m>. Prove that <m>\langle \Q^*,*\rangle</m> is a group.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        First, <m>\Q^*</m> is closed under <m>*</m>, since <m>(ab)/2</m> is
+        rational and nonzero whenever <m>a,b</m> are rational and nonzero.
+      </p>
+
+      <p>
+        Next, we check that <m>\Q^*</m> under <m>*</m> satisfies the group
+        axioms. Since multiplication is commutative on <m>\Q</m>, <m>*</m> is
+        clearly commutative on <m>\Q^*</m>, and so our work to show
+        <m>\G_2</m> and <m>\G_3</m> is marginally reduced.</p>
+<p>
+       First, associativity of <m>*</m> on <m>\Q^*</m> is inherited
+              from associativity of multiplication on <m>\Q^*</m>.</p>
+<p> Notice that the perhaps <q>obvious</q> choice, 1, is
+              <em>not</em> an identity element for <m>\Q^*</m> under
+              <m>*</m>: for instance, <m>1*3=3/2 \neq 3</m>. Rather, <m>e</m> is such an
+              identity element if and only if for all <m>a\in \Q</m> we
+              have <m>a=e*a=(ea)/2</m>. We clearly have <m>a=(2a)/2</m> for all
+              <m>a\in \Q^*</m>; so <m>2</m> acts as an identity element for
+              <m>\Q^*</m> under <m>*</m>.
+            </p>            <p>
+              Finally, let <m>a\in \Q^*</m>.  Since <m>a\neq 0</m>, it makes
+              sense to divide by <m>a</m>; then <m>4/a\in \Q^*</m>, with
+              <m>a*(4/a)=(a(4/a))/2=2</m>.
+            </p>
+        
+      <p>
+        Thus, <m>\langle \Q^*,*\rangle</m> is a group.
+      </p>
+    </proof>
+
+
+  </example>
+</section>
+<section>
+  <title>Group conventions and properties</title>
+  <introduction>
+    <p>
+      Before we discuss more examples, we present a theorem and look at some conventions we follow and notation we use when discussing groups in general; we also discuss some properties of groups.
+    </p>
+  </introduction>
+
+  <subsection>
+    <title>Some group conventions</title>
+    <theorem>
+      <statement>
+        <p>
+          The identity element of a group is
+          unique (by <xref ref="uniqueid">Theorem</xref>), and given any element <m>a</m>
+          of a group <m>G</m>, the inverse of <m>a</m> in <m>G</m> is unique (by <xref ref="uniqueinverse">Theorem</xref>).
+        </p>
+      </statement>
+    </theorem>
+
+
+        <ul>
+      <li>
+<p>          We usually <em>don't</em> use the notation <m>*</m> when describing group
+          operations. Instead, we use the multiplication symbol <m>\cdot</m> for
+          the operation in an arbitrary group, and  call
+          applying the operation <q>multiplying</q><mdash />even though the operation may
+          not be <q>multiplication</q> in the non-abstract, traditional sense! It may
+          actually be addition of real numbers, composition of
+          functions, etc. Moreover, when actually operating in a group <m>\langle G, \cdot\,\rangle</m>, we
+          typically omit the <m>\cdot</m> . That is, for <m>a,b\in G</m>, we write the
+          product <m>a\cdot b</m> as <m>ab</m>. We call this the <q>product</q> of <m>a</m> and <m>b</m>. </p><p>We will generally use <m>e</m>
+          or <m>e_G</m> as our default notation for an identity element of group, but be aware that many mathematicians denote a group's identity element by 1. We  denote the inverse of element <m>a</m> in <m>G</m> by <m>a^{-1}</m>.</p>
+</li>
+</ul>   <warning>
+            <p>
+              Although it is written in what we call  <em>multiplicative
+              notation</em>, do <em>not</em> assume <m>a^{-1}</m> is what we usually think of as a
+              multiplicative inverse for <m>a</m>; remember, we don't even know if
+              elements of a group are numbers! The type of inverse that <m>a^{-1}</m>
+              is (a multiplicative inverse for a real number? an additive inverse
+              for a real number? a multiplicative inverse for a matrix? an inverse
+              function for a function from <m>\R</m> to <m>\R</m>?) depends on both
+              <m>G</m>'s elements and its operation.
+            </p>
+          </warning>
+
+       
+<ul>
+      <li>
+        <p>
+          For every element <m>a</m> in a group <m>\Gdot</m> and <m>n\in \Z^+</m>, we use the expression <m>a^n</m> to denote  the product <me>a \times a \times \cdots \times a</me> of <m>n</m> copies of <m>a</m>, 
+      and <m>a^{-n}</m> to denote <m>(a^{-1})^n</m> (that is, the product of <m>n</m> copies of <m>a^{-1}</m>).
+          Finally, we define <m>a^0</m> to be <m>e</m>.  Note that our <q>usual</q> rules for exponents then hold in an arbitrary group: that is, if <m>a</m> is in group <m>\langle G, \cdot\,\rangle</m>
+          and <m>m,n\in \Z</m>, then <m>a^m a^n = a^{m+n}</m> and <m>(a^m)^n=a^{mn}=(a^n)^m</m>.
+        </p>
+      </li>
+    </ul>
+    <p>
+      There are exceptions to these conventions:
+      <ul>
+        <li>
+          <p>
+            When working with an operation that is known to be commutative, we typically
+            continue to use additive notation (<m>+</m> for the group operation, <m>-a</m>
+            for the inverse of element <m>a</m> in the group) and call the operation
+            <q>addition,</q> though using <m>\cdot</m> is also valid in these cases. When
+            we use additive notation, we do <em>not</em> omit the <m>+</m> when
+            operating in a group <m>\langle G,+\rangle</m>, and we call <m>a+b</m> a <em>sum</em> rather
+            than a product. Also, when working with an operation that is known to be commutative, the identity element may be denoted by 0 rather than by <m>e</m>, <m>e_G</m>, or 1, and for <m>n\in \N</m>, we write <m>na</m> instead of <m>a^n</m>.</p>
+
+            <p>Finally, note that
+            <m>(-n)a=n(-a)=-(na)</m> (where <m>-a</m> and <m>-(na)</m> indicate the
+            additive inverses of <m>a</m> and <m>na</m>, respectively); we can therefore
+            unambiguously use the notation <m>-na</m> for this element.
+            Using this notation, note that for <m>m\in \Z</m>, <m>na+ma=(n+m)a</m> and <m>n(ma)=(nm)a</m>.</p>
+
+            <p>
+            <warning>
+              <p>
+                Be careful to always know where an element
+                you are working with lives! For instance, if, as above, <m>n\in
+                \Z^+</m> and <m>a</m> is a group element, <m>-n</m> and <m>-a</m> look similar but
+                may mean very different things. While <m>-n</m> is a negative integer,
+                <m>-a</m> may be the additive inverse of a matrix in <m>\M_2(\R)</m>, the
+                additive inverse 2 of the number 4 in <m>\Z_6</m>, or even something
+                completely unrelated to numbers.
+              </p>
+            </warning></p>
+            
+            <p>
+            <remark>
+             <p>
+              Multiplicative notation can be used when working with any arbitary group, while additive notation should be used only when working with a group whose binary operation is commutative.
+             </p>
+            </remark></p>
+
+          <p>  We summarize multiplicative versus addition notation in the following table, where <m>a,b</m> are elements of a group <m>G</m>. </p>
+
+<p>
+              <tabular>
+      <row halign="center" bottom="medium">
+                <cell></cell>
+                <cell>Multiplicative notation</cell>
+                <cell>Additive notation</cell>
+                
+      </row>
+             
+      <row halign="center">
+                 <cell halign="left">Operation notation</cell>
+                <cell><m>\cdot</m></cell>
+                <cell><m>+</m></cell>
+      </row>
+      <row halign="center">
+                <cell halign="left"><m>a</m> operated with <m>b</m></cell>
+                <cell><m>ab</m></cell>
+                <cell><m>a+b</m></cell>
+      </row>
+      <row halign="center">
+                <cell halign="left">Identity element</cell>
+                <cell><m>e</m> or <m>e_G</m> or <m>1</m></cell>
+                <cell><m>e</m> or <m>e_G</m> or <m>0</m></cell>
+      </row>
+      <row halign="center">
+                <cell halign="left">Inverse of <m>a</m></cell>
+                <cell><m>a^{-1}</m></cell>
+                <cell><m>-a</m></cell>
+      </row>
+</tabular></p>
+
+        </li>
+
+        <li>
+          <p>
+            We <em>do</em> use the notation
+            <m>*</m> when using multiplicative or additive notation would lead to
+            confusion. For instance, if we want to define an operation on
+            <m>\Q^*</m> that assigns to pair <m>(a,b)</m> the quantity <m>ab/2</m>, it would
+            be unwise to use multiplicative or additive notation for this
+            operation since we already have conventional meanings of <m>ab</m> and
+            <m>a+b</m>. Similarly, we would not denote the identity element of
+            <m>\Q^*</m> under this operation by <m>0</m> or <m>1</m>, since the identity
+            element in this group is the rational number <m>2</m>, and writing <m>0=2</m>
+            or <m>1=2</m> would look weird.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            If there is a default notation for a particular
+            operation (say, <m>\circ</m> for composition of functions) or identity
+            element (say, <m>I_n</m> in <m>GL(n,\R)</m>) we usually use that notation
+            instead.
+          </p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+
+  <subsection>
+    <title>Some group properties</title>
+    <p>
+      While we don't need to worry about <q>order</q> when multiplying a group element <m>a</m> by itself, we <em>do</em> need to worry about it in general.
+    </p>
+
+    <warning>
+      <p>
+        Group operations need <em>not</em> be commutative!
+      </p>
+    </warning>
+
+    <definition>
+      <statement>
+        <p>
+          A group <m>\langle G, \cdot\,\rangle</m> is said to be <term>abelian</term> if <m>ab=ba</m> for all <m>a,b\in
+          G</m>. Otherwise, <m>G</m> is <term>nonabelian</term>. (The word <q>abelian</q> derives from the surname of
+          mathematician Niels Henrik Abel.)
+        </p>
+      </statement>
+    </definition>
+
+    <remark>
+      <p>
+        If we know that a binary operation <m>\cdot</m>
+        on a set <m>G</m> is commutative, then in checking to see if axioms
+        <m>\G_2</m> and <m>\G_3</m> hold we need only verify that there exists
+        <m>e\in G</m> such that <m>ae=a</m> (we don't need to check that
+        <m>ea=a</m>) for all <m>a\in G</m> and that for each <m>a\in G</m> there
+        exists <m>b\in G</m> such that <m>ab=e</m> (we don't need to check that
+        <m>ba=e</m>).
+      </p>
+    </remark>
+
+    <remark>
+      <p>
+        If <m>G</m> is not known to be abelian, we
+        must be careful when multiplying elements of <m>G</m> by one
+        another: multiplying on the left is, in general, not the same
+        as multiplying on the right!
+      </p>
+    </remark>
+
+    <definition>
+      <statement>
+        <p>
+          If <m>G</m> is a group, then the cardinality <m>|G|</m> of <m>G</m> is
+          called the <term>order of <m>G</m></term>. If <m>|G|</m> is finite, then <m>G</m> is
+          said to be a <term>finite group</term>; otherwise, it's an <term>infinite group</term>.
+        </p>
+      </statement>
+    </definition>
+
+    <example>
+      <statement>
+        <p>
+          Of the groups we've discussed, which are abelian? Which are infinite/finite?
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      We have already seen that identity elements of groups are unique,
+      and that each element <m>a</m> of a group <m>G</m> has a unique inverse
+      <m>a^{-1}\in G</m>. Here are some other basic properties of groups.
+    </p>
+
+    <theorem xml:id="cancel">
+      <statement>
+        <p>
+          If <m>\Gdot</m> is a group, then <em><em>left and right cancellation laws</em></em> hold in <m>G</m>. That is, if <m>a,b,c\in G</m>, then
+          <ol>
+            <li>
+              <p>
+                If <m>ab=ac</m>, we have <m>b=c</m> (the left cancellation law); and
+              </p>
+            </li>
+
+            <li>
+              <p>
+                If <m>ba=ca</m>, we have <m>b=c</m> (the right cancellation law).
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+
+    <proof>
+      <p>
+        Let <m>a,b,c\in G</m> and assume that <m>ab=ac</m>. Multiplying
+        both equation sides on the left by <m>a^{-1}</m>, we obtain
+        <md>
+          <mrow>{2}
+          \amp \amp  a^{-1}(ab)\amp =a^{-1}(ac)</mrow>
+          <mrow>\amp \Rightarrow
+          \amp (a^{-1}a)b\amp =(a^{-1}a)c</mrow>
+          <mrow>\amp \Rightarrow
+          \amp eb\amp =ec</mrow>
+          <mrow>\amp \Rightarrow
+          \amp b\amp =c</mrow>
+        </md>
+      </p>
+
+      <p>
+        This proves that the left cancellation law holds. A similar proof shows that the right cancellation law holds.
+      </p>
+    </proof>
+
+    </theorem>
+
+    <theorem xml:id="uniquesols">
+      <statement>
+        <p>
+          Let <m>\Gdot</m> be a group and let <m>a,b\in G</m>. Then there exist <em><em>unique</em></em> elements <m>x,y\in G</m> such that <m>ax=b</m> and <m>ya=b</m>.
+        </p>
+      </statement>
+    
+
+    <proof>
+      <p>
+        If <m>x=a^{-1}b</m> and <m>y=ba^{-1}</m>, then
+        <m>ax=a(a^{-1}b)=(aa^{-1})b=eb=b</m> and
+        <m>ya=(ba^{-1})a=b(a^{-1}a)=be=b</m>. So such elements <m>x</m> and <m>y</m>
+        exist. The fact that they are unique follows from the cancellation
+        laws: if <m>ax=b</m> and <m>ax'=b</m> then <m>x=x'</m> by left cancellation, and
+        if <m>ya=b</m> and <m>y'a=b</m> then <m>y=y'</m> by right cancellation.
+      </p>
+    </proof>
+</theorem>
+
+    <warning>
+      <p>
+        We only of necessity have <m>(ab)^{-1}=a^{-1}b^{-1}</m> if <m>G</m> is known to be abelian!
+      </p>
+    </warning>
+
+    <p>
+      However, we do have the following:
+    </p>
+
+    <theorem xml:id="invofprod">
+      <statement>
+        <p>
+          If <m>a</m> and <m>b</m> are elements of a group <m>\Gdot</m>, then
+          <me>
+            (ab)^{-1}=b^{-1}a^{-1}.
+          </me>
+        </p>
+      </statement>
+
+    <proof>
+      <p>
+        We have that
+        <me>
+          (ab)(b^{-1}a^{-1})=a(bb^{-1})a^{-1}=aea^{-1}=aa^{-1}=e.
+        </me>
+      </p>
+
+      <p>
+        Similarly, <m>(b^{-1}a^{-1})(ab)=e</m>.
+      </p>
+    </proof>
+</theorem>
+  </subsection>
+</section>
+<section>
+  <title>Examples of groups/nongroups, Part II</title>
+  <example>
+    <p>
+      Let <m>n\in \Z^+</m>. We define <m>n\Z</m> by
+      <me>
+        n\Z=\{nx: x\in \Z\}:
+      </me>
+      that is, <m>n\Z</m> is the set of all (integer) multiples of <m>n</m>.
+    </p>
+ </example>
+
+    <theorem xml:id="nz">
+      <statement>
+        <p>
+          <m>n\Z</m> is a group under <m>+</m> (the usual addition of integers).
+        </p>
+      </statement>
+
+    <proof>
+      <p>
+        Let <m>x, y\in n\Z</m>. Then there exist <m>a,b\in \Z</m> such that <m>x=na</m> and <m>y=nb</m>. Then <m>x+y=na+nb=n(a+b)\in n\Z</m>. So <m>\langle n\Z,+\rangle</m> is a binary structure. The remainder of the proof is left as an exercise for the reader.
+      </p>
+    </proof>
+  </theorem>
+  
+
+  <remark>
+    <p>
+      When we are discussing a group <m>n\Z</m>, assume that <m>n\in \Z^+</m>, unless otherwise noted.
+    </p>
+  </remark>
+
+  <p>
+    We use an example from our next class of groups all the time;
+    in fact, most six-year-olds do as well, since it is used when
+    telling time! Before we get to the example, we need some more
+    definitions and some notation. Throughout the following discussion,
+    assume <m>n</m> is a fixed positive integer.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        We say integers <m>a</m> and <m>b</m> are <term>congruent
+        modulo [or mod] <m>n</m></term> if <m>n</m> divides <m>a-b</m>. If <m>a</m> and <m>b</m> are
+        congruent mod <m>n</m>, we write <m>a \equiv b\, \pmod{n}</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <example xml:id="cong_ex">
+    <statement>
+      <p>
+        <m>1, 7, 13,</m> and <m>-5</m> are all congruent mod <m>6</m>.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    The following is a profoundly useful theorem; it's so
+    important, it has a special name. We omit the proof of this theorem,
+    but direct interested readers to for, instance, p. 5 in<nbsp /><xref ref="NZM" />.
+  </p>
+
+  <theorem xml:id="divalg"><title>Division Algorithm</title>
+<statement><p>
+
+Let <m>n\in \Z^+</m> and let <m>a</m> be any
+    integer. Then there exist unique integers <m>q</m> and <m>r</m>, with <m>0\leq
+    r \lt n</m>, such that <m>a=qn+r</m>.</p>
+
+
+
+
+    <p>(This is actually a special case
+    of a more general theorem, which states that given any integers <m>n</m>
+    and <m>a</m>, there exist unique integers <m>q</m> and <m>r</m>, with <m>0\leq
+    r\lt |n|</m>, such that <m>a=qn+r</m>.)</p>
+</statement>
+</theorem>
+
+  <p>
+    It follows that for each positive integer <m>n</m> and integer <m>a</m>,
+    there exists a unique element <m>R_n(a)</m> (the <m>r</m> in the above
+    theorem) of the set <m>\{0,1,2,\ldots, n-1\}</m> such that <m>a</m> is
+    congruent to <m>R_n(a)</m> modulo <m>n</m>. For example, <m>R_3(4)=1</m>, <m>R_3(0)=0</m>,
+    <m>R_3(17)=2</m>, and <m>R_3(-5)=1</m>.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        <m>R_n(a)</m> is the <term>remainder</term> when we divide <m>a</m> by <m>n</m>. (Note: You were probably already familiar with the remainder when you divide a positive integer by <m>n</m>.)
+      </p>
+    </statement>
+  </definition>
+
+  <definition>
+    <statement>
+      <p>
+        We define <term>addition modulo <m>n</m></term>, <m>+_n</m>, on <m>\Z</m> by,
+        for all <m>a,b\in \Z</m>,
+        <me>
+          a+_n b=R_n(a+b),
+        </me>
+        that is, the unique element of <m>\{0,1,\ldots, n-1\}</m> that's congruent to the integer <m>a+b</m> modulo <m>n</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <remark>
+    <p>
+      Addition mod 24 is what we use to tell
+      time!
+    </p>
+  </remark>
+
+  <p>
+    The set <m>\{0,1,2,\ldots, n-1\}</m> of remainders when dividing by <m>n</m> is so important we give it a
+    special notation.
+  </p>
+
+  <definition>
+
+  <p>
+    We define <m>\Z_n</m> to be the set <m>\{0,1,2,\ldots,n-1\}</m>.
+  </p>
+
+  </definition>
+
+  <p>
+    Throughout this course, if we are discussing a set <m>\Z_n</m>, you
+    should assume <m>n\in \Z^+, n\geq 2</m>, unless otherwise noted.
+    (Though it will rarely come up for us, we may occasionally make
+    reference to <m>\Z_1=\{0\}</m>.)
+  </p>
+
+  <warning>
+    <p>
+      Note that by our definition of <m>\Z_n</m>, the
+      integer <m>n</m> itself is <em>not</em> in <m>\Z_n</m>!
+    </p>
+  </warning>
+
+  <p>
+    We are now ready to consider our next type of group.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        For each <m>n\in \Z^+</m>, <m>\langle \Z_n,+_n\rangle</m> is a group, called the <em>cyclic group of order <m>n</m></em> (we will see later why we use the word <q>cyclic</q> here).
+        This group is abelian and of order <m>n</m>.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        We first check that <m>\Z_n</m> is closed under <m>+_n</m>. Note
+        that by the definition of <m>+_n</m>, <m>a+_nb \in \Z_n</m> for each
+        <m>a,b\in \Z</m>. Thus, <m>a+_nb \in \Z_n</m> for each <m>a,b\in \Z_n</m>.
+      </p>
+
+      <p>
+        We next check that <m>\Z_n</m> under <m>+_n</m> satisfies the three group
+        axioms. Note that since addition is commutative on <m>\Z</m>,
+        <me>
+          a+_n
+          b =R_n(a+b)=R_n(b+a)=b+_n a
+        </me>
+        for all <m>a,b\in \Z_n</m>. Again, a
+        simpler way of stating this is that commutativity of <m>+_n</m> on
+        <m>\Z_n</m> is inherited from the commutativity of addition on <m>\Z</m>.
+        One nice result of this is that since <m>+_n</m> is commutative on
+        <m>\Z_n</m>, we have less to check when verifying group axioms
+        <m>\G_2</m> and <m>\G_3</m>.</p>
+
+
+            <p>
+              Now, let <m>a,b,c\in \Z_n</m>.  We want to show that
+              <m>(a+_n b)+_n c = a +_n(b+_n c)</m>. Now,
+              <md>
+                <mrow>(a+_n b)+_n c\amp =R_n(a+b)+_n c\amp \amp</mrow>
+                <mrow>\amp \equiv R_n(a+b)+c\amp \amp  \pmod n</mrow>
+                <mrow>\amp \equiv (a+b)+c\amp \amp   \pmod n</mrow>
+                <mrow>\amp \equiv a+(b+c)\amp \amp   \pmod n</mrow>
+                <mrow>\amp \equiv a+R_n(b+c)\amp \amp   \pmod n</mrow>
+                <mrow>\amp \equiv a+_n (b+_n c)\amp \amp  \pmod n.</mrow>
+              </md>
+              So <m>(a+_n b)+_n c</m> and <m>a+_n (b+_n c)</m> are congruent mod <m>n</m>.  Since
+              both of these values are in <m>\{0,1,\ldots, n-1\}</m>, this implies that
+              they are equal, as desired.
+            </p>
+            <p>
+              Next, clearly, <m>0\in \Z_n</m> acts as an identity element
+              under <m>+_n</m>, since
+              <me>
+                0+_n a =R_n(0+a)=R_n(a)
+              </me>
+              for each
+              <m>a\in \Z_n</m>.
+            </p>
+          <p>Finally, let <m>a\in \Z_n</m>.  If <m>a=0</m>, then clearly <m>a</m> has
+              inverse <m>0\in \Z_n</m> since <m>0+_n 0 = 0</m>. If <m>a\neq 0</m>, then
+              the element <m>n-a\in \Z_n</m> is an inverse for <m>a</m> since
+              <me>
+                a+_n(n-a)=R_n(a+(n-a))=R_n(n)=0.
+              </me>
+            </p>
+
+      <p>
+        Since <m>+_n</m> is commutative on <m>\Z_n</m>, <m>\Z_n</m> is an abelian group under <m>+_n</m>. </p>
+<p>
+Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
+      </p>
+    </proof>
+
+  </example>
+
+  <remark>
+    <p>
+      In practice, we often omit the
+      subscript <m>n</m> and just write <m>+</m> when discussing addition
+      modulo <m>n</m> on <m>\Z_n</m>.
+    </p>
+  </remark>
+
+  <warning>
+    <p>
+      Do not confuse <m>n\Z</m> and <m>\Z_n</m>! They are very different as sets and as groups.
+    </p>
+  </warning>
+
+  <example>
+    <statement>
+      <p>
+        In the group <m>\langle \Z_8,+\rangle</m> (where, as indicated by our above remark, <m>+</m> means addition modulo <m>8</m>), we have, for instance, <m>3+7=2</m> and <m>7+7=6</m>.
+        The numbers 2 and 6 are each other's inverse, and <m>7^{-1}=1</m>. The number <m>0</m> has inverse <m>0</m> (it can't be <m>8</m>, since <m>8\not\in \Z_8</m>!).
+      </p>
+    </statement>
+  </example>
+
+  <definition>
+    <statement>
+      <p>
+        For <m>n\in \Z^+</m>, we define binary operation <m>\cdot_n</m> (<term>multiplication modulo <m>n</m></term>) on <m>\Z_n</m> by <m>a\cdot_n b = r_n(a)</m>, the remainder when <m>ab</m> is divided by <m>n</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <remark>
+    <p>
+      <m>\Z_n</m> is never a group under <m>\cdot_n</m> (do you see why?).
+    </p>
+  </remark>
+
+  <p>
+    But we can consider the following
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        For <m>n\in \Z^+</m>,
+        we define <m>\Z_n^{\times}</m> to be the set <me>\{a\in \Z_n\,:\,\gcd(a,n)=1\}</me>.
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        <m>\langle \Z_n^{\times},\,\cdot\, \rangle</m> is a group under multiplication. We omit the proof.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    We end this section by considering a few more examples.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Let <m>F</m> be the set of all functions from <m>\R</m> to <m>\R</m>, and define <em>pointwise addition</em> <m>+</m> on <m>F</m> by
+        <me>
+          (f+g)(x)=f(x)+g(x)
+        </me>
+        for all <m>f,g\in F</m> and <m>x\in \R</m>. We claim that <m>F</m> is a group under pointwise
+        addition. (For variety, in this proof we don't explicitly refer
+        to <m>\G_1</m><ndash /><m>\G_3</m>, though we certainly do verify they hold.)
+        Indeed, if <m>f,g\in F</m> then clearly <m>f+g</m> is also a function
+        from <m>\R</m> to <m>\R</m>, so <m>F</m> is closed under <m>+</m>.
+      </p>
+
+      <p>
+        Next, let <m>f,g,h\in F</m>. Then for all <m>x\in \R</m>,
+        <md>
+          <mrow>((f+g)+h)(x)\amp =(f+g)(x)+h(x)\amp \amp</mrow>
+          <mrow>\amp =((f(x)+g(x))+h(x)\amp \amp</mrow>
+          <mrow>\amp =f(x)+(g(x)+h(x))\amp \amp \text{ (since addition is associative on
+          \(\R\)) }</mrow>
+          <mrow>\amp =f(x)+(g+h)(x)\amp \amp</mrow>
+          <mrow>\amp =(f+(g+h))(x)\amp \amp .</mrow>
+        </md>
+      </p>
+
+      <p>
+        Note
+        that the key fact used in this argument is that <m>f(x)</m>, <m>g(x)</m> and
+        <m>h(x)</m> all lie in <m>\R</m>, and addition is associative on <m>\R</m>.
+        When you get used to such arguments, it is sufficient to say that
+        associativity of <m>+</m> on <m>F</m> is <em>inherited</em> from the
+        associativity of addition on <m>\R</m>.
+      </p>
+
+      <p>
+        Next, let <m>z:\R\to\R</m> be the function <m>z(x)=0</m> for all <m>x</m>. Then for all <m>f\in F</m> and <m>x\in \R</m>,
+     <md>
+          <mrow>(f+z)(x)\amp =f(x)+z(x)\amp \amp</mrow>
+          <mrow>\amp =f(x)+0\amp \amp</mrow>
+          <mrow>\amp =f(x)\amp \amp </mrow>
+          <mrow>\amp =0+f(x)\amp \amp</mrow>
+          <mrow>\amp =z(x)+f(x)\amp \amp</mrow>
+          <mrow>\amp = (z+f)(x).</mrow>
+        </md>
+      </p>
+
+      <p>
+        So <m>z</m> is an identity element of <m>\langle F,+\rangle</m>.
+      </p>
+
+      <p>
+        Finally, let <m>f\in F</m>, and define <m>g\in F</m> by <m>g(x)=-f(x)</m> for all <m>x\in \R</m>. It is easy then to see that <m>g</m> is an inverse for <m>f</m> in <m>F</m>.
+      </p>
+
+      <p>
+        Hence, <m>F</m> is a group under pointwise addition. Note that it is uncountably infinite and abelian.
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        The set <m>F</m> is <em>not</em> a group under function composition (do you see why?). But if we define <m>B</m> to be the set of all <em>bijections</em> from <m>\R</m> to <m>\R</m>, then <m>B</m> is a group under function composition. (Prove it!) <m>B</m> is uncountably infinite and nonabelian.
+      </p>
+    </statement>
+  </example>
+
+  <example xml:id="gpprod">
+    <statement>
+      <p>
+        Let <m>\langle G_1,*_1\rangle</m>, <m>\langle G_2,*_2\rangle</m> , <m>\ldots</m>, <m>\langle G_n,*_n\rangle</m> be groups (<m>n\in \Z^+</m>). Then the <em>group product</em>
+        <me>
+          G=G_1\times G_2\times \cdots \times G_n
+        </me>
+        is a group under the <em>componentwise</em> operation <m>*</m> defined by
+        <me>
+          (g_1,g_2,\ldots, g_n)*(h_1,h_2,\ldots,h_n)=(g_1*_1h_1, g_2*_2h_2,\ldots, g_n*_nh_n)
+        </me>
+        for all <m>(g_1,g_2,\ldots, g_n),(h_1,h_2,\ldots,h_n)\in G</m>.
+      </p>
+
+      <p>
+        For instance, considering multiplication on <m>\R^*</m>, matrix multiplication on <m>GL(2,\R)</m>, and addition modulo <m>6</m> on <m>\Z_6</m>, we have that <m>\langle \R^*\times GL(2,\R) \times \Z_6,*\rangle</m> is a group in which, for instance,
+
+        <me>
+          \left(-1, \begin{bmatrix}
+          1 \amp  \phantom{-}3 \\
+          0 \amp  -1
+          \end{bmatrix},
+          3\right)
+          *\left(\pi,
+                    \begin{bmatrix}
+          2 \amp  1 \\
+          1 \amp  1
+          \end{bmatrix},
+4\right)=\left(-\pi, 
+          \begin{bmatrix}
+          \phantom{-}5 \amp  \phantom{-}4 \\
+          -1 \amp -1
+          \end{bmatrix} 
+          ,1\right).
+        </me>
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        A common example of a group product is the group <m>\Z_2^2</m>, equipped with componentwise addition modulo 2.
+      </p>
+    </statement>
+  </example>
+
+  <definition>
+    <statement>
+      <p>
+        The group <m>\Z_2^2</m> is known as the <term>Klein 4-group</term>. (Felix Klein was a German mathematician; you may have heard of him in relation to the Klein Bottle.) The group <m>\Z_2^2</m> is sometimes denoted by <m>V</m>, which stands for <q>Vierergruppe,</q> the German word for <q>four-group</q>.</p>
+    </statement>
+  </definition>
+</section>
+
+<section>
+  <title>Summaries of groups we've seen</title>
+  <p>
+    When you see the following identified as groups, you should
+    assume they are equipped with the following operations, unless
+    otherwise. Throughout, assume <m>m,n\in \Z^+</m>.
+  </p>
+  <tabular>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><em>Group(s)</em></cell>
+      <cell><em>Operation</em></cell>
+      <cell><em>Properties</em></cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\Z</m>, <m>\Q</m></cell>
+      <cell>addition of numbers</cell>
+      <cell>countably
+      infinite; abelian</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>n\Z</m></cell>
+      <cell>addition of numbers</cell>
+      <cell>countably infinite; abelian (unless <m>m=0</m>)</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\R</m>, <m>\C</m></cell>
+      <cell>addition of numbers</cell>
+      <cell>uncountable; abelian</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\Q^*</m>, <m>\Q^+</m></cell>
+      <cell>multiplication of  numbers</cell>
+      <cell>countably infinite; abelian</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\R^*</m>, <m>\R^+</m>, <m>\C^*</m></cell>
+      <cell>multiplication of  numbers</cell>
+      <cell>uncountable; abelian</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\M_{m\times n}(\R), \M_n(\R)</m></cell>
+      <cell>matrix addition</cell>
+      <cell>uncountable; abelian</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>GL(n,\R), SL(n,\R)</m></cell>
+      <cell>matrix multiplication</cell>
+      <cell>uncountable; nonabelian (unless <m>n=1</m>)</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\Z_n</m></cell>
+      <cell>addition mod <m>n</m></cell>
+      <cell>finite; abelian</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>\Z_2^2</m></cell>
+      <cell>componentwise addition mod 2</cell>
+      <cell>finite; abelian</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>F</m></cell>
+      <cell>pointwise addition</cell>
+      <cell>uncountable; abelian</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+    <row>
+      <cell><m>B</m></cell>
+      <cell>composition</cell>
+      <cell>uncountable; nonabelian</cell>
+    </row>
+    <row bottom="minor">
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+  </tabular>
+
+</section>
+
+  <xi:include  href="./exercises/gpsex2.ptx" />
+</chapter>

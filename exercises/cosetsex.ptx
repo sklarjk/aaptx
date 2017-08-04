@@ -1,0 +1,608 @@
+<exercises>
+  <title>Exercises</title>
+  <exercise>
+    <statement>
+      <p>
+        How many distinct partitions of the set
+        <m>S=\{a,b,c,d\}</m> are there? You do not need to list them.
+        (Yes, you can find this answer online. But I recommend
+        doing the work yourself for practice working with
+        partitions!)
+      </p>
+    </statement>
+     <solution>
+    
+    <p>
+      There are 15 distinct partitions of the set <m>\{a,b,c,d\}</m>:
+      <me>
+        \{\{a\},\{b\},\{c\},\{d\}\}, \{\{a,b\},\{c\},\{d\}\},\{\{a,c\},\{b\},\{d\}\},\{\{a,d\},\{b\},\{c\}\},
+      </me>
+      <me>
+        \{\{b,c\},\{a\},\{d\}\},\{\{b,d\},\{a\},\{c\}\},\{\{c,d\},\{a\},\{b\}\},
+      </me>
+      <me>
+        \{\{a,b\},\{c,d\}\},
+        \{\{a,c\},\{b,d\}\},\{\{a,d\},\{b,c\}\},
+      </me>
+      <me>
+        \{\{a,b,c\},\{d\}\},\{\{a,b,d\},\{c\}\},\{\{a,c,d\},\{b\}\},\{\{b,c,d\},\{a\},\},
+      </me>
+    </p>
+    <me>
+      \{\{a,b,c,d\}\}.
+    </me>
+  </solution>
+  </exercise>
+ 
+  <exercise>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            Let  <m>n\in \Z^+</m>. Prove that  <m>\equiv_n</m> is an equivalence relation on <m>\Z</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            The cells of the induced partition of <m>\Z</m> are called
+            the <em>residue classes</em> (or <em>congruence classes</em>) <em>of <m>\Z</m> modulo <m>n</m></em>.  Using
+            set notation of the form <m>\{\ldots,\#, \#,\#,\ldots\}</m>
+            for each class, write down the residue classes of <m>\Z</m>
+            modulo <m>4</m>.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  <solution>
+    
+    <ol>
+      <li>
+        <p>
+          First, for every <m>x \in \Z</m>, <m>n</m>
+          divides <m>0=x-x</m>; so <m>x\equiv_n x</m> for every <m>x\in
+          \Z</m>.  Thus, <m>\equiv_n</m> is reflexive.
+
+          Next, let <m>x,y \in \Z</m> with <m>x\equiv_n y</m>.  Then
+          there exists some <m>q\in \Z</m> with <m>x-y=nq</m>; so <m>y-x=n(-q)</m>.
+          Since <m>-q\in \Z</m>, this shows us that <m>y\equiv_n x</m>.  Hence,
+          <m>\equiv_n</m> is symmetric.
+
+          Finally, let <m>x,y</m> and <m>z</m> be in <m>\Z</m> with <m>x\equiv_n
+          y</m> and <m>y\equiv_nz</m>.  Then there exist <m>q_1,q_2 \in \Z</m> with
+          <m>x-y=nq_1</m> and <m>y-z=nq_2</m>.  Thus,
+          <me>
+            x-z=(x-y)+(y-z)=nq_1+nq_2=n(q_1+q_2);
+          </me>
+          since <m>q_1+q_2 \in \Z</m>,
+          this shows us that <m>x\equiv_n z</m>.  Thus, <m>\equiv_n</m> is transitive.
+
+          Hence, <m>\equiv_n</m> is an equivalence relation, as desired.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <md>
+            <mrow>\{\ldots,-8,-4,0,4,\ldots\},\amp 
+            \{\ldots,-7,-3,1,5,\ldots\},</mrow>
+            <mrow>\{\ldots,-6,-2,2,6,\ldots\},\amp 
+            \{\ldots,-5,-1,3,7,\ldots\}</mrow>
+          </md>
+        </p>
+      </li>
+    </ol>
+  </solution>
+   </exercise>
+ 
+  <exercise>
+    <statement>
+      <p>
+        Let <m>G</m> be a group with subgroup <m>H</m>. Prove that <m>\simr</m> is an equivalence relation on <m>G</m>.
+      </p>
+    </statement>
+    <solution>
+    
+    <p>
+      First, let <m>a\in G</m>. Then <m>aa^{-1}=e\in H</m>,
+      so <m>a\simr a</m>. Thus, <m>\simr</m> is reflexive.
+    </p>
+
+    <p>
+      Next, let <m>a,b\in G</m> with <m>a\simr b</m>. Then
+      <m>ab^{-1}\in H</m>, so, since <m>H</m> is a subgroup of <m>G</m>,
+      <m>(ab^{-1})^{-1}\in H</m>. But
+      <m>(ab^{-1})^{-1}=ba^{-1}</m>; thus, <m>b\simr a</m>, and so <m>\simr</m> is symmetric.
+    </p>
+
+    <p>
+      Finally, let <m>a,b,c\in G</m> with <m>a\simr b</m>
+      and <m>b\siml c</m>. Then <m>ab^{-1}</m> and <m>bc^{-1}</m> are in <m>H</m>. Since
+      <m>H</m> is a subgroup of <m>G</m>, we must then have
+      <m>(ab^{-1})(bc^{-1})\in H</m>; but <m>(ab^{-1})(bc^{-1})</m> equals
+      <m>ac^{-1}</m>. Thus, <m>a\simr c</m>, and so <m>\simr</m> is transitive.
+    </p>
+
+    <p>
+      Hence, <m>\simr</m> is an equivalence relation on <m>G</m>, as desired.
+    </p>
+  </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        For each subgroup <m>H</m> of group <m>G</m>, (i) find the left and the right cosets of <m>H</m> in <m>G</m>, (ii) decide whether or not <m>H</m> is normal in <m>G</m>, and (iii) find <m>(G:H)</m>.
+      </p>
+
+<p>
+Write all permutations using <em>disjoint cycle notation</em>, and write all dihedral group elements using <em>standard form</em>.</p>
+      
+            <ol>
+        <li>
+          <p>
+            <m>H=6\Z</m> in <m>G=2\Z</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>H=\langle 4\rangle</m> in <m>\Z_{20}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>H=\langle (23)\rangle</m> in <m>G=S_3</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>H=\langle r\rangle</m> in <m>G=D_4</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>H=\langle f\rangle</m> in <m>G=D_4</m>
+          </p>
+        </li>
+      </ol>
+    </statement>
+  <solution>
+    
+    <ol>
+    <li>
+      <ol>
+        <li>
+          <p>
+            The left and the right cosets of <m>6\Z</m> in <m>2\Z</m> are <m>6\Z</m>, <m>2+6\Z=6\Z+2</m>, and <m>4+6\Z=6\Z+4</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>6\Z \unlhd 2\Z</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>(2\Z:6\Z)=3</m>.
+          </p>
+        </li>
+      </ol>
+    </li>
+
+    <li>
+      <ol>
+        <li>
+          <p>
+            The left and the right cosets of <m>H=\langle 4\rangle =\{0,4,8,12,16\}</m> in <m>\Z_{20}</m> are <m>H</m>, <m>1+H=\{1,5,9,13,17\}=H+1</m>, <m>2+H=\{2,7,10,14,18\}=H+2</m>, and <m>3+H=\{3,8,11,15,19\}=H+3</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>H \unlhd \Z_{20}</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>(\Z_{20}:H)=4</m>.
+          </p>
+        </li>
+      </ol>
+    </li>
+
+    <li>
+      <ol>
+        <li>
+          <p>
+            The left cosets of <m>H</m> in <m>S_3</m> are <m>H=\{e,(23)\}</m>, <m>(12)H=\{(12),(123)\}</m>, and <m>(13)H=\{(13),(132)\}</m>. The right cosets of <m>H</m> in <m>S_3</m> are <m>H</m>, <m>H(12)=\{(12),(132)\}</m>, and <m>H(13)=\{(13),(123)\}</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>H</m> is not normal in <m>S_3</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>(S_3:H)=3</m>.
+          </p>
+        </li>
+      </ol>
+    </li>
+
+    <li>
+      <ol>
+        <li>
+          <p>
+            The left cosets and the right cosets of <m>H</m> in <m>D_4</m> are <m>H=\{e,r,r^2,r^3\}</m> and <m>fH=\{f,fr, fr^2, fr^3\}=Hf</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>H\unlhd D_4</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>(D_4:H)=2</m>.
+          </p>
+        </li>
+      </ol>
+    </li>
+
+    <li>
+      <ol>
+        <li>
+          <p>
+            The left cosets of <m>H</m> in <m>D_4</m> are <m>H=\{e,f\}</m>, <m>rH=\{r,fr^3\}</m>, <m>r^2H=\{r^2,fr^2\}</m>, and <m>r^3H=\{r^3, fr\}</m>. The right cosets of <m>H</m> in <m>D_4</m> are <m>H</m>, <m>Hr=\{r, fr\}</m>, <m>Hr^2=\{r^2,fr^2\}</m>, and <m>Hr^3=\{r^3, fr^3\}</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>H</m> is not normal in <m>D_4</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>(D_4:H)=4</m>.
+          </p>
+        </li>
+      </ol>
+    </li>
+    </ol>
+  </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        For each of the following, give an example of a group <m>G</m> with a subgroup <m>H</m> that matches the given conditions. If no such example exists, prove that.
+        <ol>
+          <li>
+            <p>
+              A group <m>G</m> with subgroup <m>H</m> such that <m>|G/H|=1</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              A finite group <m>G</m> with subgroup <m>H</m> such that <m>|G/H|=|G|</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              An abelian group <m>G</m> of order <m>8</m> containing a non-normal subgroup <m>H</m> of order 2.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              A group <m>G</m> of order 8 containing a normal subgroup of order <m>2</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              A nonabelian group <m>G</m> of order 8 containing a normal subgroup of index <m>2</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              A group <m>G</m> of order 8 containing a subgroup of order <m>3</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              An infinite group <m>G</m> containing a subgroup <m>H</m> of finite index.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              An infinite group <m>G</m> containing a finite nontrivial subgroup <m>H</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  <solution>
+    
+    <p>
+      (Other answers are possible.)
+      <ol>
+        <li>
+          <p>
+            <m>G=H=S_3</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>G=S_3</m>, <m>H=\{e\}</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            No such example exists, since every subgroup of an abelian group is normal.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>G=\Z_8</m>, <m>H=\{0,4\}</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>G=D_4</m>, <m>H=\langle r\rangle</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            No such example exists, since by <xref ref="lagrange" text="title"/> <m>|H|</m> must divide <m>|G|</m>, and 3 doesn't divide 8.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>G=\Z</m>, <m>H=2\Z</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>G=GL(2,\R)</m>, <m>H=\{\pm I_2\}</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        True/False. For each of the following, write T if the statement is
+        true; otherwise, write F. You do NOT need to provide explanations or show work for this problem. Throughout, let <m>G</m> be a group with subgroup <m>H</m> and elements <m>a,b\in G</m>.
+        <ol>
+          <li>
+            <p>
+              If <m>a\in bH</m> then <m>aH</m> must equal <m>bH</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>aH</m> must equal <m>Ha</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If <m>aH=bH</m> then <m>Ha</m> must equal <m>Hb</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If <m>a\in H</m> then <m>aH</m> must equal <m>Ha</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>H</m> must be normal in <m>G</m> if there exists <m>a\in G</m> such that <m>aH=Ha</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If <m>aH=bH</m> then <m>ah=bh</m> for every <m>h\in H</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>|G/H|</m> must be less than <m>|G|</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>(G:H)</m> must be less than or equal to <m>|G|</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  <solution>
+    
+    <ol cols="4" type="a">
+      <li>
+        <p>
+          T
+        </p>
+      </li>
+
+      <li>
+        <p>
+          F
+        </p>
+      </li>
+
+      <li>
+        <p>
+          F
+        </p>
+      </li>
+
+      <li>
+        <p>
+          T
+        </p>
+      </li>
+
+      <li>
+        <p>
+          F
+        </p>
+      </li>
+
+      <li>
+        <p>
+          F
+        </p>
+      </li>
+
+      <li>
+        <p>
+          F
+        </p>
+      </li>
+
+      <li>
+        <p>
+          T
+        </p>
+      </li>
+    </ol>
+  </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Find the indices of:
+        <ol>
+          <li>
+            <p>
+              <m>H=\langle (15)(24)\rangle</m> in <m>S_5</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>K=\langle (1453)(25)\rangle</m> in <m>S_5</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>L=\langle (2354)(34)\rangle</m> in <m>S_6</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>A_n</m> in <m>S_n</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  <solution>
+    
+    <ol>
+      <li>
+        <p>
+          <m>(S_5:H)=|S_5|/|H|=120/2=60.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          In disjoint cycle notation, the permutation <m>(1453)(25)</m> is written <m>(14523)</m>, so <m>K</m> has order 5. Thus, <m>(S_5:K)=|S_5|/|K|=120/5=24.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          In disjoint cycle notation, the permutation <m>(2354)(34)</m> is written <m>(23)(45)</m>, so <m>L</m> has order 2. Thus, <m>(S_6:L)=|S_6|/|L|=720/2=360.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>(S_n:A_n)=2</m>.
+        </p>
+      </li>
+    </ol>
+  </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m>G</m> be a group of order <m>pq</m>, where <m>p</m>
+        and <m>q</m> are prime, and let <m>H</m> be a proper subgroup of
+        <m>G</m>. Prove that <m>H</m> is cyclic.
+      </p>
+    </statement>
+     <solution>
+    
+    <p>
+      By <xref ref="lagrange" text="title"/>, <m>|H|</m> divides <m>pq</m>, and since <m>H</m> is proper, <m>|H|\neq  pq</m>.
+      Thus, <m>|H|=1,p</m>, or <m>q</m>. Since the order of <m>H</m> is
+      either 1 or a prime number, <m>H</m> must be cyclic.
+    </p>
+  </solution>
+  </exercise>
+ 
+  <exercise>
+    <statement>
+      <p>
+        Prove <xref ref="pcyc">Corollary</xref>: that is, let <m>G</m> be a group of prime order, and prove that <m>G</m> is cyclic.
+      </p>
+    </statement>
+    <solution>
+    
+    <p>
+      Since <m>|G|</m> is prime, <m>|G|>1</m>, so there exists <m>a\in G</m>
+      with <m>a\neq e</m>. Then <m>\langle a\rangle</m> is a subgroup of <m>G</m>, so by
+      <xref ref="lagrange" text="title"/>, <m>|\langle a\rangle |</m> divides <m>|G|</m>. But <m>|G|</m> is
+      prime and <m>a\neq e</m>, so we must have <m>|\langle a\rangle |=|G|</m>; thus,
+      <m>G=\langle a\rangle</m>.
+    </p>
+  </solution>
+  </exercise>
+  
+</exercises>

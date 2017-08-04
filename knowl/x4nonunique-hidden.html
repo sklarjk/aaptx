@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-03T13:47:53-07:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example-like"><p>The groups \(\Z_4\) and \(V=\Z_2^2\) are not isomorphic. Why? Well, they are both abelian of order 4, so we cannot use cardinality or commutativity to prove they are nonisomorphic. The gist of our argument will be to note that every element in \(V\) is its own inverse; so if \(V\) and \(\Z_4\) are isomorphic (hence structurally identical) we must have that every element of \(\Z_4\) is also its own inverse, which doesn't hold (e.g., in \(\Z_4\text{,}\) \(3+3=2\text{,}\) not \(0\)).</p>
+<p>A rigorous proof of the fact that \(V\) and \(\Z_4\) are not isomorphic is as follows: For now, denote the usual operation on \(V\) by \(*\text{.}\) Suppose that \(V\) and \(\Z_4\) are isomorphic, via isomorphism \(\phi\) from \(V\) to \(\Z_4\text{.}\) Then since \(\phi\) is onto, there exists an element \(a\in V\) such that \(\phi(a)=3\text{.}\) Then</p>
+\begin{align*}
+3+3\amp =\phi(a)+\phi(a)\amp \amp \text{ (by definition of \(a\)) }\\
+\amp =\phi(a*a) \amp \amp \text{ (since \(\phi\) is a homomorphism) }\\
+\amp =\phi((0,0)) \amp \amp \text{ (since every element of \(V\) is its own inverse) }\\
+\amp =0, \amp \amp
+\end{align*}
+<p>since \(\phi\) is a homomorphism, so sends identity element to identity element. But this is a contradiction, since \(3+3=2\neq 0\) in \(\Z_4\text{.}\) Thus, \(V\not\simeq \Z_4\text{.}\)</p></article></body>
+</html>

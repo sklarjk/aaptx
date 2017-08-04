@@ -1,0 +1,448 @@
+
+<exercises>
+  <title>Exercises</title>
+  <exercise>
+    <statement>
+      <p>
+        True/False. For each of the following, write T if the statement is
+        true; otherwise, write F. You do NOT need to provide explanations or show work for this problem. Throughout, let <m>G</m> and <m>G'</m> be groups.
+        <ol>
+          <li>
+            <p>
+              If there exists a homomorphism <m>\phi\,:\,G\to G'</m>, then <m>G</m> and <m>G'</m> must be isomorphic groups.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              There is an integer <m>n\geq 2</m> such that <m>\Z\simeq \Z_n</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If <m>|G|=|G'|=3</m>, then we must have <m>G\simeq G'</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If <m>|G|=|G'|=4</m>, then we must have <m>G\simeq G'</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+      <solution>
+    
+    <ol cols="4" type="a">
+      <li>
+        <p>
+          F
+        </p>
+      </li>
+
+      <li>
+        <p>
+          F
+        </p>
+      </li>
+
+      <li>
+        <p>
+          T
+        </p>
+      </li>
+
+      <li>
+        <p>
+          F
+        </p>
+      </li>
+    </ol>
+  </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        For each of the following functions, prove or
+        disprove that the function is (i) a homomorphism; (ii)
+        an isomorphism. (Remember to work with the default operation on each of these groups!)
+        <ol>
+          <li>
+            <p>
+              The function <m>f:\Z\to\Z</m> defined by <m>f(n)=2n</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The function <m>g:\R\to\R</m> defined by <m>g(x)=x^2</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The function <m>h:\Q^*\to\Q^*</m> defined by
+              <m>h(x)=x^2</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+
+  <solution>
+    
+    <ol>
+    <li>
+      <ol>
+        <li>
+          <p>
+            The function <m>f</m> is a homomorphism, since for every <m>a,b \in
+            \Z,</m> we have
+            <me>
+              f(a+b)=2(a+b)=2a+2b=f(a)+f(b).
+            </me>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            The function <m>f</m> isn't a bijection, since it isn't onto: for instance, there is
+            no element <m>a</m> in <m>\Z</m> such that <m>f(a)=3</m>. Thus, <m>f</m> is not an
+            isomorphism.
+          </p>
+        </li>
+      </ol>
+    </li>
+
+    <li>
+      <ol>
+        <li>
+          <p>
+            The function <m>g</m> isn't a homomorphism: for instance, we have
+            <me>
+              g(2+3)=g(5)=25\neq 13=4+9=g(2)+g(3).
+            </me>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Since it isn't a homomorphism, it isn't an isomorphism.
+          </p>
+        </li>
+      </ol>
+    </li>
+
+    <li>
+      <ol>
+        <li>
+          <p>
+            The function <m>h</m> is a homomorphism, since for every <m>a,b \in
+            \Q,</m> we have
+            <me>
+              h(ab)=(ab)^2=a^2b^2=h(a)h(b).
+            </me>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            The function <m>h</m> isn't onto: its range is the set of nonnegative rational
+            numbers, not all of <m>\Q</m>. Thus, <m>h</m> is not an isomorphism.
+          </p>
+        </li>
+      </ol>
+    </li>
+    </ol>
+  </solution>
+    </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Define <m>d : GL(n,\R)\to \R^*</m> by <m>d(A)=\det A</m>. Prove/disprove that <m>d</m> is:
+        <ol>
+          <li>
+            <p>
+              a homomorphism
+            </p>
+          </li>
+
+          <li>
+            <p>
+              1-1
+            </p>
+          </li>
+
+          <li>
+            <p>
+              onto
+            </p>
+          </li>
+
+          <li>
+            <p>
+              an isomorphism.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+
+  <solution>
+    
+    <ol>
+      <li>
+        <p>
+          The function <m>d</m> is a homomorphism, since for every <m>A,B \in
+          GL(n,\R),</m> we have
+          <me>
+            d(AB)=\det(AB)=(\det A)(\det B)=d(A)d(B).
+          </me>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>d</m> isn't 1-1: For instance, <m>d(I_2)=d(-I_2)</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>d</m> is onto: Let <m>a\in \R^*</m>. Then the matrix
+          <me>
+            A:=\begin{bmatrix}a \amp  0 \amp  0 \amp  \cdots \amp  0 \\
+            0 \amp  1 \amp  0 \amp  \cdots \amp  0 \\
+            0 \amp  0 \amp  1 \amp  \cdots \amp  0 \\
+            \vdots \amp  \vdots \amp  \vdots \amp  \ddots \amp  \vdots \\
+            0 \amp  0 \amp  0 \amp  \cdots \amp  1
+            \end{bmatrix}
+          </me>
+          is in <m>GL(n,\R)</m>, with <m>d(A)=a</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Since <m>d</m> isn't 1-1, it isn't  an
+          isomorphism.
+        </p>
+      </li>
+    </ol>
+  </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Complete the group tables for <m>\Z_4</m> and <m>\Z_8^{\times}</m>. Use the group tables to decide whether or not <m>\Z_4</m> and <m>\Z_8^{\times}</m> are isomorphic to one another. (You do not need to provide a proof.)
+      </p>
+    </statement>
+  
+  <solution>
+    
+    <p>
+      The group tables of <m>\Z_4</m> and <m>\Z_8^{\times}</m> are, respectively,</p>
+
+
+
+     <table xml:id="z4-Cayley2">
+
+<tabular halign="center">
+	 <row bottom="medium">
+		<cell right="medium"><m>+</m></cell>
+		<cell><m>0</m></cell>
+		<cell><m>1</m></cell>
+		<cell><m>2</m></cell>
+		<cell><m>3</m></cell>
+	</row>
+	<row >
+		<cell right="medium"><m>0</m></cell>
+		<cell><m>0</m></cell>
+		<cell><m>1</m></cell>
+		<cell><m>2</m></cell>
+		<cell><m>3</m></cell>
+	</row>
+	<row >
+		<cell right="medium"><m>1</m></cell>
+		<cell><m>1</m></cell>
+		<cell><m>2</m></cell>
+		<cell><m>3</m></cell>
+		<cell><m>0</m></cell>
+	</row>
+	<row >
+		<cell right="medium"><m>2</m></cell>
+		<cell><m>2</m></cell>
+		<cell><m>3</m></cell>
+		<cell><m>0</m></cell>
+		<cell><m>1</m></cell>
+	</row>
+	<row>
+		<cell right="medium"><m>3</m></cell>
+		<cell><m>3</m></cell>
+		<cell><m>0</m></cell>
+		<cell><m>1</m></cell>
+		<cell><m>2</m></cell>
+	</row>
+	</tabular>
+			<caption>Group table for <m>\Z_4</m></caption>
+			</table>    
+
+<p>and</p>
+
+     <table xml:id="z8cross-Cayley">
+
+<tabular halign="center">
+	 <row bottom="medium">
+		<cell right="medium"><m>\cdot_8</m></cell>
+		<cell><m>1</m></cell>
+		<cell><m>3</m></cell>
+		<cell><m>5</m></cell>
+		<cell><m>7</m></cell>
+	</row>
+	<row >
+		<cell right="medium"><m>1</m></cell>
+		<cell><m>1</m></cell>
+		<cell><m>3</m></cell>
+		<cell><m>5</m></cell>
+		<cell><m>7</m></cell>
+	</row>
+	<row >
+		<cell right="medium"><m>3</m></cell>
+		<cell><m>3</m></cell>
+		<cell><m>1</m></cell>
+		<cell><m>7</m></cell>
+		<cell><m>5</m></cell>
+	</row>
+	<row >
+		<cell right="medium"><m>5</m></cell>
+		<cell><m>5</m></cell>
+		<cell><m>7</m></cell>
+		<cell><m>1</m></cell>
+		<cell><m>3</m></cell>
+	</row>
+	<row>
+		<cell right="medium"><m>7</m></cell>
+		<cell><m>7</m></cell>
+		<cell><m>5</m></cell>
+		<cell><m>3</m></cell>
+		<cell><m>1</m></cell>
+	</row>
+	</tabular>
+			<caption>Group table for <m>\Z_8^{\times}</m></caption>
+			</table>    
+
+
+    <p>
+      We can see from the group table for <m>\Z_8^{\times}</m> that every element of that group is its own inverse; that is not the case in <m>\Z_4</m>. Thus, <m>\Z_4\not\simeq\Z_8^{\times}</m>.
+    </p>
+  </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>n\in \Z^+</m>. Prove that <m>\langle n\Z,+\rangle  \simeq \langle \Z,+\rangle</m>.
+      </p>
+    </statement>
+  
+  <solution>
+    
+    <p>
+      Define <m>\phi\,:\,\Z \rightarrow n\Z</m>
+      by <m>\phi(x)=nx</m>, for all <m>x\in \Z</m>. Clearly, <m>\phi</m>
+      is a bijection. Moreover, for all <m>x,y\in \Z</m>,
+      <me>
+        \phi(x+y)=n(x+y)=nx+ny=\phi(x)+\phi(y);
+      </me>
+      so <m>\phi</m> is a
+      homomorphism. Thus, <m>\phi</m> is an isomorphism, and hence
+      <me>
+        \langle \Z, +\rangle \simeq \langle n\Z, +\rangle .
+      </me>
+    </p>
+  </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            Let <m>G</m> and <m>G'</m> be groups, where <m>G</m> is abelian and  <m>G\simeq G'</m>. Prove that <m>G'</m> is abelian.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Give an example of groups <m>G</m> and <m>G'</m>, where <m>G</m> is abelian and there exists a homomorphism from <m>G</m> to <m>G'</m>, but <m>G'</m> is NOT abelian.
+          </p>
+        </li>
+      </ol>
+    </statement>
+
+  <solution>
+    
+    <ol>
+      <li>
+        <p>
+          Since <m>G\simeq G'</m>, there exists some isomorphism <m>\phi:G\to G'</m>.  Let <m>x,y\in G'</m>.  Since <m>\phi</m> is onto, there exist <m>a,b\in G</m> such that <m>\phi(a)=x</m> and <m>\phi(b)=y</m>.  So
+          <md>
+            <mrow>xy\amp =\phi(a)\phi(b)\amp \amp</mrow>
+            <mrow>\amp =\phi(ab)\amp \amp \text{ (since \(\phi\) is a homomorphism) }</mrow>
+            <mrow>\amp =\phi(ba) \amp \amp \text{ (since \(G\) is abelian) }</mrow>
+            <mrow>\amp =\phi(b)\phi(a)</mrow>
+            <mrow>\amp =yx.</mrow>
+          </md>
+          Thus, <m>G'</m> is abelian.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Let <m>G=\{I_2\}</m> (under multiplication) and let <m>G'=GL(2,\R)</m>. Then the map <m>\phi: G\to G'</m> defined by <m>\phi(I_2)=I_2</m> is clearly a homomorphism, but note that <m>G</m> is abelian while <m>G'</m> is not.
+        </p>
+      </li>
+    </ol>
+  </solution>
+    </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>\langle G,\cdot\rangle</m> and <m>\langle G',\cdot'\rangle</m> be groups with identity elements <m>e</m> and <m>e'</m>, respectively, and let <m>\phi</m> be a homomorphism from <m>G</m> to <m>G'</m>. Let <m>a\in G</m>. Prove that <m>\phi(a)^{-1}=\phi(a^{-1})</m>.
+      </p>
+    </statement>
+
+  <solution>
+    
+    <note>
+
+    <p>
+      We omit the group operations in this solution in order to increase familiarity with the convention.
+    </p>
+
+    </note>
+
+    <p>
+      We want to show that <m>\phi(a)^{-1}=\phi(a^{-1})</m>.
+      Notice that
+      <md>
+        <mrow>\phi(a^{-1})\phi(a)\amp =\phi(a^{-1}a)\amp \amp \text{ (since \(\phi\) is a homomorphism) }</mrow>
+        <mrow>\amp =\phi(e)\amp \amp \text{(by definition of \(a^{-1}\))}</mrow>
+        <mrow>\amp =e'\amp \amp  \text{ (since \(\phi(e)\) is the identity element of
+        \(G'\)) }</mrow>
+        <mrow>\amp =\phi(a)^{-1}\phi(a)\amp \amp \text{(by definition of \(\phi(a)^{-1}\))} .</mrow>
+      </md>
+    </p>
+
+    <p>
+      Thus, <m>\phi(a^{-1})=\phi(a)^{-1}</m>, by right cancellation.
+    </p>
+  </solution>
+    </exercise>
+</exercises>

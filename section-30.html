@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-01T10:34:16-07:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Second and Third Isomorphism Theorems</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\def\Z{\mathbb{Z}}
+\def\zn{\mathbb{Z}_n}
+\def\znc{\mathbb{Z}_n^\times}
+\def\R{\mathbb{R}}
+\def\Q{\mathbb{Q}}
+\def\C{\mathbb{C}}
+\def\N{\mathbb{N}}
+\def\M{\mathbb{M}}
+\def\G{\mathcal{G}}
+\def\0{\mathbf 0}
+\def\Gdot{\langle G, \cdot\,\rangle}
+\def\phibar{\overline{\phi}}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\Ker}{Ker}
+\def\siml{\sim_L}
+\def\simr{\sim_R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">First-Semester Abstract Algebra</span><span class="subtitle">A Structural Approach</span></a></h1>
+<p class="byline">Jessica K. Sklar</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-29.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="isothms.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="exercises-9.html" title="Next" alt="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-29.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="isothms.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="exercises-9.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+<h2 class="link"><a href="pre.html" data-scroll="pre"><span class="codenumber">1</span><span class="title">Preliminaries</span></a></h2>
+<ul>
+<li><a href="section-1.html" data-scroll="section-1">Notation</a></li>
+<li><a href="section-2.html" data-scroll="section-2">Sets</a></li>
+<li><a href="section-3.html" data-scroll="section-3">Functions</a></li>
+<li><a href="section-4.html" data-scroll="section-4">Cardinality</a></li>
+<li><a href="exercises-1.html" data-scroll="exercises-1">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="gps.html" data-scroll="gps"><span class="codenumber">2</span><span class="title">Groups</span></a></h2>
+<ul>
+<li><a href="section-5.html" data-scroll="section-5">Binary operations and structures</a></li>
+<li><a href="section-6.html" data-scroll="section-6">The definition of a group</a></li>
+<li><a href="section-7.html" data-scroll="section-7">Examples of groups/nongroups, Part I</a></li>
+<li><a href="section-8.html" data-scroll="section-8">Group conventions and properties</a></li>
+<li><a href="section-9.html" data-scroll="section-9">Examples of groups/nongroups, Part II</a></li>
+<li><a href="section-10.html" data-scroll="section-10">Summaries of groups we've seen</a></li>
+<li><a href="exercises-2.html" data-scroll="exercises-2">Exercises, Part II</a></li>
+</ul>
+<h2 class="link"><a href="homoiso.html" data-scroll="homoiso"><span class="codenumber">3</span><span class="title">Homorphisms and Isomorphisms</span></a></h2>
+<ul>
+<li><a href="section-11.html" data-scroll="section-11">Groups of small order</a></li>
+<li><a href="section-12.html" data-scroll="section-12">Introduction to homomorphisms and isomorphisms</a></li>
+<li><a href="section-13.html" data-scroll="section-13">Isomorphic groups</a></li>
+<li><a href="exercises-3.html" data-scroll="exercises-3">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="subgps.html" data-scroll="subgps"><span class="codenumber">4</span><span class="title">Subgroups</span></a></h2>
+<ul>
+<li><a href="section-14.html" data-scroll="section-14">Introduction to subgroups</a></li>
+<li><a href="section-15.html" data-scroll="section-15">Subgroup proofs and lattices</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="cyc.html" data-scroll="cyc"><span class="codenumber">5</span><span class="title">Cyclic Groups</span></a></h2>
+<ul>
+<li><a href="section-16.html" data-scroll="section-16">Introduction to cyclic groups</a></li>
+<li><a href="section-17.html" data-scroll="section-17">Exploring the subgroup lattices of cyclic groups</a></li>
+<li><a href="exercises-5.html" data-scroll="exercises-5">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="perm.html" data-scroll="perm"><span class="codenumber">6</span><span class="title">Permutation Groups and Dihedral Groups</span></a></h2>
+<ul>
+<li><a href="section-18.html" data-scroll="section-18">Introduction to permutation groups</a></li>
+<li><a href="section-19.html" data-scroll="section-19">Symmetric groups</a></li>
+<li><a href="section-20.html" data-scroll="section-20">Alternating groups</a></li>
+<li><a href="section-21.html" data-scroll="section-21">Cayley's Theorem</a></li>
+<li><a href="dihedralgps.html" data-scroll="dihedralgps">Dihedral groups</a></li>
+<li><a href="exercises-6.html" data-scroll="exercises-6">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="coslag.html" data-scroll="coslag"><span class="codenumber">7</span><span class="title">The Wonderful World of Cosets</span></a></h2>
+<ul>
+<li><a href="section-23.html" data-scroll="section-23">Partitions of and equivalence relations on sets</a></li>
+<li><a href="section-24.html" data-scroll="section-24">Introduction to cosets and normal subgroups</a></li>
+<li><a href="section-25.html" data-scroll="section-25">The index of a subgroup and Lagrange's Theorem</a></li>
+<li><a href="exercises-7.html" data-scroll="exercises-7">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="factorgps.html" data-scroll="factorgps"><span class="codenumber">8</span><span class="title">Factor Groups</span></a></h2>
+<ul>
+<li><a href="section-26.html" data-scroll="section-26">Motivation</a></li>
+<li><a href="section-27.html" data-scroll="section-27">Focusing on normal subgroups</a></li>
+<li><a href="section-28.html" data-scroll="section-28">Introduction to factor groups</a></li>
+<li><a href="exercises-8.html" data-scroll="exercises-8">Exercises</a></li>
+</ul>
+<h2 class="link active"><a href="isothms.html" data-scroll="isothms"><span class="codenumber">9</span><span class="title">The Isomorphism Theorems</span></a></h2>
+<ul>
+<li><a href="section-29.html" data-scroll="section-29">The First Isomorphism Theorem</a></li>
+<li><a href="section-30.html" data-scroll="section-30" class="active">The Second and Third Isomorphism Theorems</a></li>
+<li><a href="exercises-9.html" data-scroll="exercises-9">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="appendix-1.html" data-scroll="appendix-1">Notation</a></li>
+<li><a href="appendix-2.html" data-scroll="appendix-2">Solutions to Exercises</a></li>
+<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
+<li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-30"><header title="Section 9.2 The Second and Third Isomorphism Theorems"><h1 class="heading hide-type" alt="Section 9.2 The Second and Third Isomorphism Theorems">
+<span class="type">Section</span><span class="codenumber">9.2</span><span class="title">The Second and Third Isomorphism Theorems</span>
+</h1></header><p id="p-1189">The following theorems can be proven using the First Isomorphism Theorem. They are very useful in special cases.</p>
+<article class="theorem-like" id="theorem-66"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">9.2.1</span>
+</h5>
+<p id="p-1190">(Second Isomorphism Theorem) Let \(G\) be a group, let \(H\leq G\text{,}\) and let \(N\unlhd G\text{.}\) Then the set</p>
+\begin{equation*}
+HN=\{hn:h\in H, n\in N\}
+\end{equation*}
+<p>is a subgroup of \(G\text{,}\) \(H\cap N\unlhd H\text{,}\) and</p>
+\begin{equation*}
+H/(H\cap N) \simeq
+HN/N.
+\end{equation*}
+</article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-56" id="proof-56"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-56" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-1191">We first prove that \(HN\) is a subgroup of \(G\text{.}\) Since \(e_G\in
+HN\text{,}\) \(HN\neq \emptyset\text{.}\) Next, let \(x=h_1n_1, y=h_2n_2\in HN\) (where \(h_1,h_2\in H\) and \(n_1,n_2\in N\)). Then</p>
+\begin{equation*}
+xy^{-1}=h_1n_1(h_2n_2)^{-1}=h_1n_1n_2^{-1}h_2^{-1}.
+\end{equation*}
+<p id="p-1192">Since \(N\leq G\text{,}\) \(n_1n_2^{-1}\) is in \(N\text{;}\) so \(h_1n_1n_2^{-1}h_2^{-1}\in
+h_1Nh_2^{-1}\text{,}\) which equals \(h_1h_2^{-1}N\text{,}\) since \(N\unlhd G\) implies \(Nh_2^{-1}=h_2^{-1}N\text{.}\) So \(xy^{-1}=\in h_1h_2^{-1}N.\) But \(H\leq G\) implies \(h_1h_2^{-1}\in H\text{;}\) thus, \(xy^{-1}\in HN\text{,}\) and so \(HN\) is a subgroup of \(G\text{.}\)</p>
+<p id="p-1193">Since \(N\unlhd G\) and \(N\subseteq HN\text{,}\) \(N\) is normal in \(HN\) (do you see why?). So \(HN/N\) is a group under left coset multiplication. We define \(\phi: H\to HN/N\) by \(\phi(h)=hN\) (notice that when \(h\in H\text{,}\) \(h\in HN\) since \(h=he_G\)). Clearly, \(\phi\) is a homomorphism. Further, \(\phi\) is onto: Indeed, let \(y\in HN/N\text{.}\) Then \(y=hnN\) for some \(h\in H\) and \(n\in N\text{.}\) But \(nN=N\text{,}\) so \(y=hN=\phi(h)\text{.}\) Finally,</p>
+\begin{equation*}
+\Ker \phi=\{h\in H\,:\, \phi(h)=N\}=\{h\in H\,:\, hN=N\}=\{h\in
+H\,:\, h\in N\}=H\cap N.
+\end{equation*}
+<p id="p-1194">Thus,</p>
+\begin{equation*}
+H/(H\cap N)
+\simeq HN/N,
+\end{equation*}
+<p>by the First Isomorphism Theorem.</p></article></span>
+</div>
+<article class="theorem-like" id="theorem-67"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">9.2.2</span>
+</h5>
+<p id="p-1195">(Third Isomorphism Theorem) Let \(G\) be a group, and let \(K\) and \(N\) be normal subgroups of \(G\text{,}\) with \(K\subseteq N\text{.}\) Then \(N/K \unlhd G/K\text{,}\) and</p>
+\begin{equation*}
+(G/K)/(N/K)\simeq G/N.
+\end{equation*}
+</article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-57" id="proof-57"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-57" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-1196">Define \(\phi: G/K\to G/N\) by \(\phi(aK)=aN\text{.}\) We have that \(\phi\) is well defined: indeed, let \(aK=bK \in G/K\text{.}\) Then by Statement 6 of <a knowl="./knowl/cosetfacts.html" knowl-id="xref-cosetfacts" alt="Theorem 7.2.4 " title="Theorem 7.2.4 ">Theorem 7.2.4</a>, we have \(aN=bN\text{,}\) that is, \(\phi(aK)=\phi(bK)\text{.}\) So \(\phi\) is well defined. \(\phi\) is clearly onto, and we have</p>
+\begin{align*}
+\Ker \phi\amp =\{aK\in
+G/K\,:\,\phi(aK)=N\}\\
+\amp =\{aK\in G/K\,:\,aN=N\}\\
+\amp =\{aK\in
+G/K\,:\,a\in N\}\\
+\amp =N/K.
+\end{align*}
+<p id="p-1197">So the desired results hold, by the First Isomorphism Theorem.</p></article></span>
+</div>
+<article class="example-like" id="example-88"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">9.2.3</span>
+</h5>
+<p id="p-1198">Using the Third Isomorphism Theorem we see that the group</p>
+\begin{equation*}
+(\Z/12\Z)/(6\Z/12\Z)
+\end{equation*}
+<p>is isomorphic to the group \(\Z/6\Z\text{,}\) or \(\Z_6\text{.}\)</p></article></section></div></main>
+</div>
+<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
+</body>
+</html>

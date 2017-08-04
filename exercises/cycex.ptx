@@ -1,0 +1,485 @@
+<exercises>
+  <title>Exercises</title>
+  <exercise>
+    <statement>
+      <p>
+        True/False. For each of the following, write T if the statement is
+        true; otherwise, write F. You do NOT need to provide explanations or show work for this problem. Throughout, let <m>G</m> be a group with identity element <m>e</m>.
+        <ol>
+          <li>
+            <p>
+              If <m>G</m> is infinite and cyclic, then <m>G</m> must have infinitely many generators.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              There may be two distinct elements <m>a</m> and <m>b</m> of a group <m>G</m> with <m>\langle a\rangle =\langle b\rangle</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If <m>a,b\in G</m> and <m>a\in \langle b\rangle</m> then we must have <m>b\in \langle a\rangle</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If <m>a\in G</m> with <m>a^4=e</m>, then <m>o(a)</m> must equal <m>4</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If <m>G</m> is countable then <m>G</m> must be cyclic.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  <solution>
+    
+    <ol cols="5" type="a">
+      <li>
+        <p>
+          F
+        </p>
+      </li>
+
+      <li>
+        <p>
+          T
+        </p>
+      </li>
+
+      <li>
+        <p>
+          F
+        </p>
+      </li>
+
+      <li>
+        <p>
+          F
+        </p>
+      </li>
+
+      <li>
+        <p>
+          F
+        </p>
+      </li>
+    </ol>
+  </solution>
+   </exercise>
+ 
+  <exercise>
+    <statement>
+      <p>
+        Give examples of the following.
+        <ol>
+          <li>
+            <p>
+              An infinite noncyclic group <m>G</m> containing an infinite cyclic subgroup <m>H</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              An infinite noncyclic group <m>G</m> containing a finite nontrivial cyclic subgroup <m>H</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              A cyclic group <m>G</m> containing exactly 20 elements.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              A nontrivial cyclic group <m>G</m> whose elements are all matrices.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              A noncyclic group <m>G</m> such that every proper subgroup of <m>G</m> is cyclic.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+ 
+  <solution>
+    
+    <p>
+      (Other answers are possible.)
+      <ol>
+        <li>
+          <p>
+            <m>G=\R</m>, <m>H=\Z</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>G=GL(n,\R)</m>, <m>H=\{\pm I_2\}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>G=\Z_{20}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>G=\{\pm I_2\}</m>, under matrix multiplication
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>G=\Z_2^2</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </solution>
+   </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Find the orders of the following elements in the given groups.
+        <ol>
+          <li>
+            <p>
+              <m>2\in \Z</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>-i\in \C^*</m>
+ 
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>-I_2\in GL(2,\R)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>-I_2\in \M_2(\R)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>(6,8)\in \Z_{10}\times \Z_{10}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  
+  <solution>
+    
+    <ol>
+      <li>
+        <p>
+          <m>o(2)=\infty</m>, since <m>\langle 2\rangle =2\Z</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>o(-i)=4</m>, since <m>\langle -i\rangle =\{-i,-1,i,1\}</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>o(I_2)=2</m>, since <m>\langle -I_2\rangle =\{-I_2,I_2\}</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>o(I_2)=\infty</m>, since <m>\langle -I_2\rangle =\{kI_2\,:\,k\in \Z\}</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>o((6,8))=5</m>, since <m>\langle (6,8)\rangle =\{(6,8),(2,6),(8,4),(4,2),(0,0)\}</m>.
+        </p>
+      </li>
+    </ol>
+  </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        For each of the following, if the group is cyclic, list <em>all</em> of its generators. If the group is <em>not</em> cyclic, write NC.
+        <ol type="a">
+          <li>
+            <p>
+              <m>5\Z</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\Z_{18}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\R</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\langle \pi\rangle</m> in <m>\R</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\Z_2^2</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\langle 8\rangle</m> in <m>\Q^*</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  
+  <solution>
+    
+    <ol type="a">
+      <li>
+        <p>
+          <m>\pm 5</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>1,5,7,11,13,17</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          NC
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\pm \pi</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          NC
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>8,1/8</m>
+        </p>
+      </li>
+    </ol>
+  </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Explicitly identify the elements of the following subgroups of the given groups. You may use set-builder notation if the subgroup is infinite, or a conventional name for the subgroup if we have one.
+        <ol>
+          <li>
+            <p>
+              <m>\langle 3\rangle</m> in <m>\Z</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\langle i\rangle</m> in <m>C^*</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\langle A\rangle</m>, for <m>A=\left[ \begin{array}{cc}
+              1 \amp  0 \\
+              0 \amp  0
+              \end{array} 
+              \right]\in \M_2(\R)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\langle (2,3)\rangle</m> in <m>\Z_4\times \Z_5</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\langle B\rangle</m>, for <m>B=\left[ \begin{array}{cc}
+              1 \amp  1\\
+              0 \amp  1
+              \end{array} 
+              \right]\in GL(2,\R)</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  
+  <solution>
+    
+    <ol>
+      <li>
+        <p>
+          <m>3\Z</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\{i,-1,-i,1\}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\left\{\left[
+          \begin{array}{cc}
+          k \amp  0 \\
+          0 \amp  0
+          \end{array} 
+          \right]\,:\,k\in \Z
+          \right\}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\{(2,3),(0,1),(2,4),(0,2),(2,0),(0,3),(2,1),(0,4),(2,2),(0,0)\}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\left\{\left[
+          \begin{array}{cc}
+          1 \amp  k \\
+          0 \amp  1
+          \end{array} 
+          \right]\,:\,k\in \Z\right\}</m>
+        </p>
+      </li>
+    </ol>
+  </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Draw subgroup lattices for the following groups.
+        <ol cols="3">
+          <li>
+            <p>
+              <m>\Z_6</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\Z_{13}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\Z_{18}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+ 
+  <solution>
+  
+<ol>
+<li>
+    <image width="30%">
+    <latex-image-code>
+    \[\xymatrix{&amp;\Z_6&amp;\\ \langle 2\rangle \ar@{-}[ur]&amp;&amp;\langle 3\rangle\ar@{-}[ul]\\&amp;\langle 0\rangle \ar@{-}[ul]\ar@{-}[ur]&amp;}\]
+     </latex-image-code>
+    </image>
+
+</li>
+<li>
+    <image width="6%">
+    <latex-image-code>
+\[\xymatrix{\Z_{13}\ar@{-}[d]\\ \langle0\rangle}\]
+</latex-image-code>
+</image>
+</li>
+
+<li>
+    <image width="50%">
+    <latex-image-code>
+\[\xymatrix{&amp;\Z_{18}&amp;&amp;\\ \langle 2\rangle\ar@{-}[ur]\ar@{-}[dr]&amp;&amp;\langle 3\rangle\ar@{-}[ul]\ar@{-}[dl]&amp;\\
+&amp;\langle 6 \rangle \ar@{-}[dr]\ar@{-}[ur]&amp;&amp; \langle 9 \rangle \ar@{-}[dl]\ar@{-}[ul]\\&amp;&amp; \langle 0 \rangle &amp;}\]
+ </latex-image-code>
+  </image>
+</li>
+</ol>
+
+  </solution>
+  </exercise>
+
+   <exercise>
+    <statement>
+      <p>
+        Let <m>G</m> be a group with no nontrivial proper subgroups. Prove that <m>G</m> is cyclic.
+      </p>
+    </statement>
+
+  <solution>
+    
+    <p>
+      Let <m>e</m> be the identity
+      element of <m>G</m>. If <m>G=\{e\}</m>, then <m>G</m> is clearly
+      cyclic. Else, there exists <m>a\neq e</m> in <m>G</m>. Then
+      <m>\langle a\rangle</m> is a subgroup of <m>G</m>. Since <m>e\neq a\in
+      \langle a\rangle</m>, <m>\langle a\rangle</m> is a nontrivial subgroup of <m>G</m>. Therefore, we must have
+      <m>\langle a\rangle =G</m>. Hence, <m>G</m> is cyclic, as desired.
+    </p>
+  </solution>
+  </exercise>
+ </exercises>

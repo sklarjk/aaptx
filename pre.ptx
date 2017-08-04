@@ -1,0 +1,794 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="pre">
+  <title>Preliminaries</title>
+
+<section>
+  <title>Sets</title>
+  <p>
+    We start off by providing a <q>definition</q> of a basic mathematical structure to which we will soon add bells and whistles. We use quotes here because what follows doesn't have the precision we usually require when defining a mathematical object.
+  </p>
+
+  <definition> <p> A <term>set</term> is an (unordered)
+    collection of objects.
+  </p></definition>
+
+  <p>
+    This is only sort of  a <q>definition</q> because it is not a
+    rigorous definition of a set. For instance, what do we mean by a
+    <q>collection</q> of objects? This <q>definition</q> will be sufficient for
+    our course, but be warned that defining a set in this vague way can
+    lead to some serious mathematical issues, such as <em>Russell's
+    paradox</em>.  A mathematician whose expertise is in set
+    theory may scowl disagreeably if you try to define a set as we have
+    above.
+  </p> 
+
+    <note>
+    <p>
+    Let <m>S</m> be the set of all sets that aren't members
+    of themselves.  Is <m>S</m> a member of itself? If you think carefully
+    about this, you'll see that <m>S</m> can be neither a member of itself,
+    nor <em>not</em> a member of itself. Uh oh!  This contradiction
+    is known as <q>Russell's paradox</q> (named for the British philosopher, mathematician, and all-round academic Bertrand Russell). Mathematicians deal with this by
+    declaring that some object collections, called <em>classes</em>, are
+    not in fact sets.</p>
+    </note>
+
+
+  <definition>
+    <statement>
+      <p>
+        The members of a set are called its <term>elements</term>. If
+        <m>S</m> is a set, we write <m>x\in S</m> to indicate <q><m>x</m> is an element
+        of <m>S</m>,</q> and <m>x \not\in S</m> to indicate <q><m>x</m> is not an element
+        of <m>S</m>.</q> There is a unique set containing no elements; it is
+        called the <term>empty set</term>, and denoted by <m>\emptyset</m>.
+      </p>
+    </statement>
+
+
+<notation><usage>x \in S</usage><description><m>x</m> is an element of <m>S</m></description></notation>
+<notation><usage>x \not\in S</usage><description><m>x</m> is not an element of <m>S</m></description></notation>
+<notation><usage>\emptyset</usage><description>the empty set <m>\{\}</m></description></notation>
+  </definition>
+
+
+  <p>
+    Sets must be <em>well defined</em>: that is, it must be clear
+    exactly which objects are in a set, and which objects aren't.
+    For instance, the set of all integers is well defined, but the
+    set of all big integers is not well defined, since it is
+    unclear what <q>big</q> means in this context.
+  </p>
+
+  <p>
+    We refer to some sets so frequently in mathematics that we have special notation for them.
+  </p>
+
+<example>Some common sets are:
+<p>
+<dl>
+<li><title><m>\Z</m></title><p>the set of all integers  (the <m>\Z</m> comes <q>zahlen,</q> the German word for <q>numbers</q>)</p></li>
+<li><title><m>\Q</m></title><p>set of all rational numbers</p></li>
+<li><title><m>\R</m></title><p>the set of all real numbers</p></li>
+<li><title><m>\C</m></title><p>the set of all complex numbers</p></li>
+<li><title><m>\N</m></title><p>the set of all natural numbers, i.e., <m>\{0, 1, 2, \ldots\}</m></p><p> (Be aware that many books/mathematicians do not include <m>0</m> in the set of natural numbers</p></li>
+</dl>
+We can further write denote by <m>\Z^+</m> the set of all positive integers, and by <m>\Z^*</m> the set of all nonzero integers.
+Can you guess what the penultimate notation represents if we replace <m>\Z</m> with <m>\Q</m> or <m>\R</m>, and/or <m>+</m> with <m>-</m>? What about 
+what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m>\C</m>?
+</p>
+
+<notation><usage>\Z</usage><description>the set of all integers</description></notation>
+<notation><usage>\Q</usage><description>the set of all rational numbers</description></notation>
+<notation><usage>\R</usage><description>the set of all real numbers</description></notation>
+<notation><usage>\C</usage><description>the set of all complex numbers</description></notation>
+<notation><usage>\N</usage><description>the set of all natural numbers, <m>\{0,1,2,\ldots\}</m></description></notation>
+<notation><usage>\Z^+/\Q^+/\R^+</usage><description>the set of all positive integers/rational numbers/real numbers</description></notation>
+<notation><usage>\Z^-/\Q^-/\R^-</usage><description>the set of all negative integers/rational numbers/real numbers</description></notation>
+<notation><usage>\Z^*/\Q^*/\R^*/\C^*</usage><description>the set of all nonzer integers/rational numbers/real numbers/complex numbers</description></notation>
+
+</example>
+ 
+  <p>
+    We also provide notation for commonly considered sets of matrices:
+  </p>
+
+<insight>
+<statement>
+ Given <m>m,n\in \Z^+</m> and a set <m>S</m>, we define <m>\M_{m\times n}(S)</m> to
+    be the set of all <m>m\times n</m> matrices over <m>S</m> (that is, of all <m>m\times n</m> matrices with entries in <m>S</m>). We use the
+    shorthand notation <m>\M_n(S)</m> for the set <m>\M_{n\times n}(S)</m>.</statement>
+<notation><usage>\M_{m\times n}(S)</usage><description>the set of all <m>m \times n</m> matrices over <m>S</m></description></notation>
+<notation><usage>\M_n(S)</usage><description>the set of all <m>n \times n</m> matrices over <m>S</m></description></notation>
+
+    </insight>
+  
+
+
+  <p>
+    One common way of describing a set is to list its elements in
+    curly braces, separated by commas; you can use ellipses to
+    indicate a repeated pattern of elements. A few examples are
+    <m>\{1,4,\pi\}</m>, <m>\{3, 4, 5, \ldots\}</m>, and <m>\{\ldots, -4, -2, 0,
+    2, 4, \ldots\}</m>; the last of these can be written more concisely as <m>\{0,\pm 2, \pm 4,\ldots\}</m>. Note that since elements of a set are
+    unordered, the sets <m>\{1,4,\pi\}</m> and <m>\{4,\pi, 1\}</m>, for
+    instance, are identical.
+  </p>
+
+  <p>
+    Another method is using <term>set-builder notation</term>. This consists of an element name (or
+    names), followed by a colon (meaning <q>such that</q>), followed by
+    a Boolean expression involving the element name(s), all
+    surrounded by curly braces.
+
+   <warning><p>The use of a colon to denote <q>such that</q> is <em>only</em> valid in the above set-builder notation context.  Outside of this context, you should never use a colon to denote <q>such that</q>; instead, write out the actual words or use the abbreviation s.t. (or the symbol <m>\ni</m>, though I do not recommended).  Conversely, never use one of those ways of indicating <q>such that</q> within set-builder notation; always use a colon there.  Why?  Convention.</p></warning>
+
+    For example,
+    <me>
+      \{x\in \Z : x > 4\}
+    </me>
+    is the set <m>\{5, 6, 7, \ldots\}</m>, while
+    <me>
+      \{z\in \C : |z|=1\}
+    </me>
+    is the set of all complex numbers at
+    distance 1 from the origin in the complex plane.
+  </p>
+
+  <note>
+
+  <p>
+    If one simply writes <m>\{x\,:\,x>4\}</m>,
+    it is unclear what this set is; it could be the set of all
+    integers greater than 4, or the set of all real numbers greater
+    than 4, or something else. When one can, it is better to
+    identify the named element(s) as a member (members) of a known
+    set, such as <m>\R</m> or <m>\Z</m>, whenever possible.
+  </p>
+
+  </note>
+
+  <definition>
+    <statement>
+      <p>
+        Set <m>A</m> is a <term>subset</term> of <m>B</m> (and set <m>B</m> is a <term>superset</term> of <m>A</m>) if every element in <m>A</m> is also in <m>B</m>. We
+        denote <q><m>A</m> is a subset of <m>B</m></q> by <m>A\subseteq B</m>. Sets <m>A</m>
+        and <m>B</m> are said to be <term>equal</term>, and we write <m>A=B</m>, if they
+        contain exactly the same elements; equivalently, <m>A=B</m> if and
+        only if <m>A \subseteq B</m> and <m>B\subseteq A</m>. Set <m>A</m> is a <term>proper</term> subset of set <m>B</m> if <m>A\subseteq B</m> but <m>A\neq B</m>; we
+        write this <m>A\subsetneq B</m> or <m>A\subset B</m>.
+        </p>
+
+      <warning>
+      <p> Sometimes the notation <m>A\subset B</m> is merely used to
+        indicate that <m>A</m> is a subset of <m>B</m> (but may equal <m>B</m>). Be
+        careful to check what your book or peer means by this
+        notation.</p></warning>
+     
+    </statement>
+
+<notation><usage>A\subseteq B</usage><description> <m>A</m> is a subset of the <m>B</m></description></notation>
+<notation><usage>A\subsetneq B, A \subset B</usage><description> <m>A</m> is a proper subset of <m>B</m></description></notation>
+
+  </definition>
+
+  <remark>
+    <p>
+      One often proves that two sets <m>A</m> and
+      <m>B</m> are equal by proving that <m>A\subseteq B</m> and <m>B\subseteq A</m>.
+    </p>
+  </remark>
+
+  <example>
+    <statement>
+      <p>
+        We have the following: <m>\Z^+ \subseteq \Z \subseteq \Q \subseteq \R \subseteq \C</m>.
+      </p>
+    </statement>
+  </example>
+
+  <definition>
+    <statement>
+      <p>
+        The <term>power set</term> of <m>A</m>, denoted <m>P(A)</m>, is the set of
+        all subsets of <m>A</m>. (Note that the power set of any set
+        contains the empty set as an element.)
+      </p>
+    </statement>
+
+    <notation><usage>P(A)</usage><description>the power set of <m>A</m></description></notation>
+  </definition>
+
+  <warning>
+    <p>
+      Be careful to use your curly braces correctly when writing power sets!
+      Remember, the power set of a set is a <em>set of sets</em>.
+    </p>
+  </warning>
+
+  <p>
+    The following provides a good example of using braces correctly.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        If <m>A=\{a,b\}</m>, then <m>P(A)=\{\emptyset, \{a\}, \{b\}, \{a,b\}\}</m>. Note that the element <m>\{a,b\}</m> of <m>P(A)</m> could also be written simply as <m>A</m>.
+      </p>
+    </statement>
+  </example>
+
+  <definition>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            If <m>A</m> and <m>B</m> are sets, then the <term>union</term> of <m>A</m> and <m>B</m>, denoted <m>A\cup B</m>, is the set
+            <m>A\cup B=\{x: x\in A \text{ or }  x\in B\};</m> the <term>intersection</term> of <m>A</m> and <m>B</m>, denoted <m>A\cap B</m>, is the set
+            <m>A\cap B=\{x: x\in A \text{ and }  x\in B\};</m> and the <term>difference</term> of <m>A</m> and <m>B</m>, denoted <m>A-B</m> (or <m>A\setminus B</m>), is the set
+            <m>A-B=\{x: x\in A \text{ and }  x\not\in B\}.</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            More generally, given any collection of sets <m>A_i</m> (<m>i</m> in some index set <m>I</m>), the <term>union</term> of the <m>A_i</m> is
+            <me>
+              \bigcup_{i\in I}A_i=\{x: x\in A_i \text{ for some }  i\in I\},
+            </me>
+            and the <term>intersection</term> of the <m>A_i</m> is
+            <me>
+              \bigcap_{i\in I}A_i=\{x: x\in A_i \text{ for every }  i\in I\}.
+            </me>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Sets <m>A</m> and <m>B</m> are <em>disjoint</em> if <m>A\cap B=\emptyset</m>.  More generally, sets <m>A_i</m> (<m>i</m> in some index set <m>I</m>) are
+            <em>disjoint</em> if
+            <me>
+              \bigcap_{i\in I}A_i=\emptyset
+            </me>
+            and are <em>mutually disjoint</em> if
+            <me>
+              A_i\cap A_j=\emptyset \text{ for all } i\neq j \in I.
+            </me>
+          </p>
+        </li>
+      </ol>
+    </statement>
+     <notation><usage>A\cap B</usage><description>the intersection of  <m>A</m> and <m>B</m></description></notation>
+     <notation><usage>A\cup B</usage><description>the union of  <m>A</m> and <m>B</m></description></notation>
+     <notation><usage>A - B</usage><description>the difference of  <m>A</m> and <m>B</m></description></notation>
+
+  </definition>
+
+  <p>
+    Notice that for any sets <m>A</m> and <m>B</m>, <m>A\cap B \subseteq A \subseteq A\cup B</m> and
+    <m>A\cap B \subseteq B \subseteq A\cup B</m>. Also note that if sets <m>A_i</m> (<m>i \in I</m>) are mutually disjoint then they are also disjoint, but they may be disjoint without being mutually disjoint. For example, the sets <m>\{i, i+1\}</m> for <m>i\in \Z</m> are disjoint but not mutually disjoint. (Do you see why?)
+  </p>
+
+  <p>
+    We define one more way of <q>combining</q> sets.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        Let <m>A</m> and <m>B</m> be sets. Then the <term>direct product</term> (or <term>Cartesian 
+        product</term>) <m>A\times B</m> of <m>A</m> and <m>B</m> is the set
+        <me>
+          A\times B =
+          \{(a,b): \text{\(a\in A\), \(b\in B\)} \}.
+        </me>
+      </p>
+
+      <p>
+        An element <m>(a,b)</m> of
+        <m>A\times B</m> is called an <term>ordered pair</term>. More generally, if
+        <m>A_1, A_2, \ldots, A_n</m> are sets for some <m>n\in \Z^+</m>, then the
+        <term>product</term> of the <m>A_i</m> is
+        <me>
+          A_1\times A_2 \times \cdots
+          \times A_n=\{(a_1, a_2 \ldots, a_n): a_i \in A_i \text{ for
+          } i=1,2, \ldots, n\}; 
+        </me>
+        the elements <m>(a_1,a_2,\ldots,a_n)</m> of this
+        product are called <m>n</m>-tuples (or triples, if <m>n=3</m>). (You can also have products of infinitely many sets, but we will
+        not discuss that in this course.) Finally, if each set <m>A_i</m> is
+        the same set <m>A</m>, we can use the notation <m>A^n</m> to denote the
+        product
+        <me>
+          A\times A \times \cdots \times A
+        </me>
+        of <m>n</m> copies of
+        <m>A</m>.
+      </p>
+    </statement>
+    <notation><usage>A\times B</usage><description>the direct product of  <m>A</m> and <m>B</m></description></notation>
+  
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        For example, the Cartesian plane is the set <m>\R^2</m>, and the set <m>\Z \times \R</m> consists of exactly the points in the plane with integer <m>x</m>-coordinates
+        (that is, the points that lie on vertical lines intersecting the <m>x</m>-axis at integer values).
+      </p>
+    </statement>
+  </example>
+</section>
+
+<section>
+  <title>Functions</title>
+  <p>
+    You have probably encountered functions before. In introductory
+    calculus, for instance, you typically deal with functions from
+    <m>\R</m> to <m>\R</m> (e.g., the function <m>f(x)=x^2</m>). More generally,
+    functions <q>send</q> elements of one set to elements of another set;
+    these sets may or may not be sets of real numbers. We provide below
+    a <q>good enough for government work</q> definition of a function.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        A <term>function</term> <m>f</m> from a set <m>S</m> to a set <m>T</m> is a
+        <q>rule</q> that assigns to each element <m>s</m> in <m>S</m> a unique
+        element <m>f(s)</m> in <m>T</m>; the element <m>f(s)</m> is called the <term>image of <m>s</m> under <m>f</m></term>. If <m>f</m> is a function from <m>S</m> to <m>T</m>,
+        we write <m>f: S \to T</m>, and call <m>S</m> the <term>domain</term> of <m>f</m> and
+        <m>T</m> the <term>codomain</term> of <m>f</m>. The <term>range</term> of <m>f</m> is
+        <me>
+          f(S)=\{f(s) \in T : s \in S\} \subseteq T.
+        </me>
+      </p>
+
+      <p>
+        More generally, if <m>U \subseteq S</m>, the <term>image of <m>U</m> in <m>T</m> under <m>f</m></term> is
+        <me>
+          f(U)=\{f(u)\in T : u\in U\}.
+        </me>
+      </p>
+
+      <p>
+        If <m>V\subseteq T</m>, the <term>preimage of <m>V</m> in <m>S</m> under <m>f</m></term> is the set
+        <me>
+          f^{\leftarrow}(V)=\{s\in S: f(s)\in V\}.
+        </me>
+      </p>
+    </statement>
+  <notation><usage>f:S\to T</usage><description>function <m>f</m> from  <m>S</m> to  <m>T</m></description></notation>
+  <notation><usage>f(U)</usage><description>the image of a set <m>U</m> under <m>f</m></description></notation>
+    <notation><usage>f^{\leftarrow}(V)</usage><description>the preimage of a set <m>V</m> under <m>f</m></description></notation>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        Consider the function <m>f: \Z \to \R</m> defined by <m>f(x)=x^2</m>.
+        The domain of <m>f</m> is <m>\Z</m> and the codomain of <m>f</m> is <m>\R</m>; the
+        range of <m>f</m> is <m>\{x^2\,:\,x\in \Z\}=\{0,1,4,9,\ldots\}</m>. The image
+        of <m>\{-2,-1,1,2\}</m> under <m>f</m> is the two-element set <m>\{1,4\} \subseteq
+        \R</m>, and the preimage of <m>\{4,25,\pi\}</m> under <m>f</m> is the set
+        <m>\{\pm 2, \pm 5\}</m>. (Do you see why <m>\pm \sqrt{\pi}</m> are not in this
+        preimage?) What is the preimage of just <m>\{\pi\}</m> under <m>f</m>?
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    The following definitions will be very important in our future work.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        Let <m>S</m> and <m>T</m> be sets, and <m>f:S\to T</m>.
+        <ol>
+          <li>
+            <p>
+              Function <m>f</m> is <term>one-to-one</term> (1-1) if whenever <m>s_1, s_2\in S</m> with <m>f(s_1)=f(s_2)</m>, we have <m>s_1=s_2</m>.  Equivalently, <m>f</m> is one-to-one if
+              whenever <m>s_1\neq s_2 \in S</m>, then <m>f(s_1)\neq f(s_2) \in T</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Function <m>f</m> is <term>onto</term> if for every <m>t\in T</m>, there exists an element <m>s\in S</m> such that <m>f(s)=t</m>.  Equivalently, <m>f</m> is onto if <m>f(S)=T</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Function <m>f</m> is a <term>bijection</term> if it is both one-to-one and onto.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </definition>
+
+  <remark><p>
+    We will often have to show functions are one-to-one or onto. Given a function <m>f:S\to T</m>, the following methods are recommended.
+</p>
+<ul>
+<li>
+<p>
+To prove that <m>f</m> is one-to-one: Let <m>s_1,s_2 \in S</m> with <m>f(s_1)=f(s_2)</m> and prove that then <m>s_1=s_2</m>.</p>
+<p>
+<alert>Note: It is <em>not</em> sufficient to prove that if <m>s_1=s_2</m> in <m>S</m> then <m>f(s_1)=f(s_2)</m>; that holds true for ANY function from <m>S</m> to <m>T</m>!  Be careful to <em>assume</em> and <em>prove</em> the correct facts.</alert></p>
+</li>
+<li>
+<p>
+To prove that <m>f</m> is <em>not</em> one-to-one: Identify two elements <m>s_1 \neq s_2</m> of <m>S</m> such that <m>f(s_1)=f(s_2)</m>.
+</p>
+</li>
+<li>
+<p>
+To prove that <m>f</m> is onto: Let <m>t\in T</m> and prove that there exists an element <m>s\in S</m> with <m>f(s)=t</m>.</p>
+<p><alert>Note: It is <em>not</em> sufficient to prove that if <m>s\in S</m> then <m>f(s)</m> is in <m>T</m>; that holds true for ANY function from <m>S</m> to <m>T</m>!  Again, be careful to <em>assume</em> and <em>prove</em> the correct facts.</alert></p>
+</li>
+<li>
+<p>
+To prove that <m>f</m> is <em>not</em> onto: Identify an element <m>t\in T</m> for which there is no <m>s\in S</m> with <m>f(s)=t</m>.
+</p>
+</li>
+</ul>
+</remark>
+
+  <example>
+    <statement>
+      <p>
+        Consider the function <m>f: \R^* \to \R^+</m> defined by <m>f(x)=x^2</m>. Function <m>f</m> is <em>not</em> one-to-one: indeed,
+        <m>-1</m> and <m>1</m> are in <m>\R^*</m> with <m>f(-1)=1=f(1)</m> in <m>\R^+</m>.
+        However, <m>f</m> <em>is</em> onto: indeed, let <m>t\in \R^+</m>. Then
+        <m>\sqrt{t} \in \R^*</m> with <m>t=f(\sqrt{t})</m>, so we're done.
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Consider the function <m>f: \Z^+ \to \R</m> defined by <m>f(x)=x/2</m>. Function <m>f</m> <em>is</em> one-to-one: indeed, let <m>s_1, s_2 \in \Z^+</m> with <m>f(s_1)=f(s_2)</m>.
+        Then <m>s_1/2=f(s_1)=f(s_2)=s_2/2</m>; multiplying both sides of the equation <m>s_1/2=s_2/2</m> by 2, we obtain <m>s_1=s_2</m>. However, <m>f</m> is <em>not</em> onto: for example, <m>\pi\in \R</m>
+        but there is no positive integer <m>s</m> for which <m>f(s)=s/2=\pi</m>.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    Recall that we can combine certain functions using <em>composition</em>:</p>
+
+  <definition>
+  <statement>If <m>f:S\to T</m> and <m>g:T\to U</m>, then the  <term>composition of <m>f</m> and <m>g</m></term> is the function <m>g\circ f: S\to U</m> defined by
+    <me>
+      (g\circ f)(s)=g(f(s))
+    </me>
+    for all <m>s\in S</m>. (More generally, you can <term>compose</term> functions <m>f:S\to T</m> and <m>g:R\to U</m> to form <m>g\circ f:S\to U</m>,  as long as <m>f(S)\subseteq R</m>.) Also recall that given any set <m>S</m>, the <em>identity function on <m>S</m></em> is the function <m>1_S: S\to S</m> defined by <m>1_S(s)=s</m> for every <m>s\in S</m>.
+  </statement>
+
+  <notation><usage>f\circ g</usage><description>the composition of  <m>f</m> with  <m>g</m></description></notation>
+  <notation><usage>1_S</usage><description>the identity function on <m>S</m></description></notation>
+  </definition>
+ 
+
+  <definition>
+    <statement>
+      <p>
+        Let <m>f</m> be a function from <m>S</m> to <m>T</m>. A function <m>g</m>
+        from <m>T</m> to <m>S</m> is an <term>inverse</term> of <m>f</m> if <m>g\circ f</m> and
+        <m>f\circ g</m> are the identity functions on <m>S</m> and <m>T</m>,
+        respectively; that is, if for all <m>s\in S</m> and <m>t\in
+        T</m>, <m>g(f(s))=s</m> and <m>f(g(t))=t</m>. 
+
+      </p>
+    <p>We say a function is <term>invertible</term> if it has an inverse.</p>
+    </statement>
+  </definition>
+
+<p>We have the following useful theorems.</p>
+
+  <theorem xml:id="invbij">
+    <statement>
+      <p>
+        Function <m>f:S\to T</m> is invertible if and only if <m>f</m> is a bijection. 
+      </p>
+    </statement>
+    <proof>
+    <p>Suppose <m>f</m> has inverse <m>g</m>. Let <m>t\in T</m>. Then <m>f(g(t))=t</m>, so <m>f</m> is onto.  Next, suppose 
+    <m>s_1,s_2\in S</m> with <m>f(s_1)=f(s_2)</m>. Then <me>s_1=g(f(s_1))=g(f(s_2))=s_2,</me> so <m>f</m>is one-to-one.</p>
+
+<p>  Conversely, suppose <m>f</m> is a bijection.  Then for every <m>t\in T</m>, there exists a unique element <m>s_t\in S</m> such that <m>f(s_t)=t</m>. It is then straighforward to show that the function <m>g:T\to S</m> defined by <me>g(t)=t_s \text{ for every }t\in T</me> is an inverse of <m>f</m>.</p>
+
+</proof>
+  </theorem>
+
+  <theorem>
+    <statement>
+     Let <m>f:S\to T</m> be invertible. Then the  inverse of <m>f</m> is unique; we denote the unique inverse of <m>f</m> by <m>f^{-1}</m>.
+    </statement>
+
+  <proof><p>Suppose <m>f</m> has inverses <m>g</m> and <m>h</m>. Then for every <m>t\in T,</m>
+    <m>f(g(t))=t=f(h(t))</m>. But since <m>f</m> is invertible, it's one-to-one, so we must have <m>g(t)=h(t)</m> for every <m>t\in T</m>. Thus, <m>g=h</m>, and so <m>f</m> cannot have two or more distinct inverses.</p>
+    </proof>
+
+      <notation><usage>f^{-1}</usage><description>the inverse of <m>f</m></description></notation>
+  </theorem>
+  
+
+  <theorem xml:id="compbij">
+    <statement>
+      <p>
+        Let <m>f:S\to T</m> and <m>g:T\to U</m> be functions.
+        If <m>f</m> and <m>g</m> are both 1-1 [onto], then so is <m>g\circ f: S\to U</m>.
+      </p>
+    </statement>
+  
+
+  <proof>
+    <p>
+      Assume <m>f</m> and <m>g</m> are 1-1. Let <m>s_1, s_2\in S</m>
+      with <m>(g\circ f)(s_1)=(g\circ f)(s_2)</m>. Then <m>g(f(s_1))=g(f(s_2))</m>;
+      since <m>g</m> is one-to-one (since it's a bijection), this shows that
+      <m>f(s_1)=f(s_2)</m>. Then since <m>f</m> is one-to-one (since <m>f</m> is also a
+      bijection), we must have <m>s_1=s_2</m>. Thus, <m>g\circ f</m> is one-to-one.
+    </p>
+  <p>
+    The proof that <m>g\circ f</m> is onto if <m>f</m> and <m>g</m> are onto is left as an exercise for the reader.
+  </p>
+  </proof>
+</theorem>
+
+</section>
+
+<section>
+  <title>Cardinality</title>
+  <p>
+    One of the set traits that will be useful to us in
+    distinguishing between algebraic structures is <em>cardinality</em>.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        A set is <term>finite</term> if it contains a finite number of
+        elements;
+        otherwise, it's <term>infinite</term>. The <term>cardinality</term> of a finite set <m>S</m> is the
+        number of elements in <m>S</m>; we denote the cardinality of <m>S</m> by <m>|S|</m>.
+      </p>
+    </statement>
+    <notation><usage><m>|S|</m></usage><description>the cardinality of  <m>S</m></description></notation>
+  </definition>
+
+  <p>
+    <warning><p>Of course, vertical bars are used to denote
+    other mathematical concepts; for instance, if <m>x</m> is a real
+    number, <m>|x|</m> usually denotes the absolute value of <m>x</m>. You
+    must determine from context, and from the nature of the
+    expression within the bars, what vertical bars mean in a
+    particular context.</p></warning>
+</p>
+
+
+<p>Note that in the above definition, we omitted the definition of the cardinality of an infinite set.  This is because defining the cardinality of an infinite set is a more complicated endeavor, and one which is, in the most general context, beyond the scope of this class.  For us it will suffice to distinguish between two types of infinite sets: <em>countably infinite</em> sets and <em>uncountable</em> (or <em>uncountably infinite</em>) sets.</p>
+
+
+
+
+<definition>
+    <statement>
+       <p> A set <m>S</m> is said to be <term>countably infinite</term> if there exists a bijection from <m>S</m> to <m>\Z</m> (equivalently, if there
+        exists a bijection from <m>\Z</m> to <m>S</m>). It is said to be <term>countable</term> if it is finite or countably infinite, and <term>uncountable</term> (or <term>uncountably infinite</term>) if it is not countable.</p>
+
+      </statement>
+
+ 
+   </definition>
+
+<p>  Here are some straightforward examples to get us started:</p>
+
+  <example>
+  <p>
+
+ 
+    <ol>
+    <li> <m>|\{a,b\}|=2</m>. </li>
+    <li><m>|\emptyset|=0</m>.</li>
+    <li> Clearly, <m>\Z</m> itself is countably
+        infinite.
+      </li>
+    </ol>
+  </p>
+  </example>
+
+<remark>
+<p>It turns out that countably infinite sets have the same cardinality as one another, while a countably infinite set and an uncountable set have different cardinalities. Intuitively, you  can think  of two countably infinite sets as having the same <q>size,</q> and a countable set and an uncountable set as having different <q>sizes</q>; however, this is a risky way of framing things, since it can  make some results seem counterintuitive when you're used to dealing only with finite sets (see, for instance, <xref ref="zplus">Example</xref>).  Luckily, exploring the cardinality of infinite sets isn't the focus of this class.</p></remark>
+
+  <p>
+    Perhaps surprisingly, a proper subset of a set can have the
+    same cardinality as its superset, as the following example
+    shows.
+  </p>
+
+  <example xml:id="zplus">
+    <statement>
+      <p>
+        We claim that <m>\Z^+</m> is countably infinite. Indeed, consider the function <m>f:\Z^+ \to \Z</m> defined by <m>f(n)=(-1)^n \lfloor n/2 \rfloor</m>, where <m>\lfloor x \rfloor</m>
+        denotes the greatest integer less than or equal to <m>x</m>, for each <m>x\in \R</m>. The fact that <m>f</m> is a bijection is demonstrated (though not proven) by the following visual representation,
+        where each number maps via <m>f</m> to the value directly to the right of it:
+<sidebyside><tabular halign="right">
+	 <row >
+		<cell ><m>1</m></cell>
+		<cell><m>0</m></cell>
+	</row>
+	<row>
+		<cell><m>1</m></cell>
+		<cell><m>1</m></cell>
+	</row>
+	<row>
+		<cell><m>2</m></cell>
+		<cell><m>-1</m></cell>
+	</row>
+		<row>
+		<cell><m>3</m></cell>
+		<cell><m>2</m></cell>
+	</row>
+		<row>
+		<cell><m>4</m></cell>
+		<cell><m>-2</m></cell>
+	</row>
+		<row>
+		<cell><m>\vdots</m></cell>
+		<cell><m>\vdots</m></cell>
+	</row>
+	</tabular>
+</sidebyside>
+</p>
+
+      <p>
+        Note that this means that <m>\Z</m> and its proper subset <m>\Z^+</m>
+        have the same cardinality, that is, the same <q>size</q>!
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    We summarize here examples of countably and uncountably
+    infinite sets. (On pp. 5<ndash />6 of<nbsp /><xref ref="F" />, Fraleigh sketches proofs of the
+    facts that <m>\Q</m> is countable and that the interval <m>(0,1)</m>
+    in <m>\R</m> is uncountable. The proof then that <m>\R</m> is
+    uncountable follows from <xref ref="cardthm">Theorem</xref>, below.)
+  </p>
+<p>Countably infinite sets: <m>\Z</m>, <m>\Z^+</m>, <m>\Z^-</m>, <m>\Z^*</m>, <m>\Q</m>, <m>\Q^+</m>, <m>\Q^-</m>, <m>\Q^*</m>, <m>\N</m></p>
+<p>Uncountably infinite sets: <m>\R</m>, <m>\R^+</m>, <m>\R^-</m>, <m>\R^*</m>, <m>\C</m>, <m>\C^*</m>,  the interval <m>(0,1)</m> in <m>\R</m></p>     
+
+  <p>
+    The key idea here for us is that if two sets are
+    essentially <q>the same,</q> then they must have the same <q>size.</q>
+    Thus, we see that there is some fundamental difference between
+    the sets <m>\Z</m> and <m>\R</m> (in fact, there are many such
+    differences). On the other hand, cardinality alone won't allow
+    us to distinguish structurally between the sets <m>\Z</m> and
+    <m>\Z^+</m>.
+  </p>
+
+  <p>
+    We end our preliminary chapter with the following theorem and a corollary of it (which can be proved using induction on <m>n</m>). We prove only the fourth statement in the theorem, omitting the proofs of the first two statements and leaving the proof of the third statement as an exercise for the reader.
+  </p>
+
+  <theorem xml:id="cardthm">
+    <statement>
+      <p>
+        Let <m>A</m> and <m>B</m> be sets.
+        <ol>
+          <li>
+            <p>
+              If <m>A\subseteq B</m> and <m>A</m> is infinite [uncountable] then so is <m>B</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If <m>A\subseteq B</m> and <m>B</m> is finite [countable] then so is <m>A</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If <m>|A|=n\lt \infty</m> and <m>|B|=m\lt  \infty</m>, then <m>|A\times B|=mn</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Any finite product of countable sets is countable.</p>
+              
+          </li>
+        </ol>
+      </p>
+    </statement>
+
+<proof>
+  <p>
+    To prove the fourth statement: Let <m>A</m> and <m>B</m> be countable sets. Assume that <m>A</m> and <m>B</m> are both countably infinite. Since <m>\Z^+</m> is countably infinite, we can index the elements of <m>A</m> and of <m>B</m> by <m>\Z^+</m>, writing
+    <me>
+      A=\{a_1,a_2,\ldots\} \text{ and }  B=\{b_1,b_2,\ldots\}.
+    </me>
+  </p>
+
+  <p>
+    Notice that the table
+</p>
+
+<sidebyside>
+
+<tabular>
+   <row >
+    <cell ><m>(a_1,b_1)</m></cell>
+    <cell><m>(a_1,b_2)</m></cell>
+    <cell><m>(a_1,b_3)</m></cell>
+    <cell><m>\cdots</m></cell>
+  </row>
+  <row >
+    <cell ><m>(a_2,b_1)</m></cell>
+    <cell><m>(a_2,b_2)</m></cell>
+    <cell><m>(a_2,b_3)</m></cell>
+    <cell><m>\cdots</m></cell>
+  </row>
+  
+  <row >
+    <cell ><m>(a_3,b_1)</m></cell>
+    <cell><m>(a_3,b_2)</m></cell>
+    <cell><m>(a_3,b_3)</m></cell>
+    <cell><m>\cdots</m></cell>
+  </row>
+  <row >
+    <cell ><m>\vdots</m></cell>
+    <cell><m>\vdots</m></cell>
+    <cell><m>\vdots</m></cell>
+    <cell><m>\ddots</m></cell>
+  </row>
+  </tabular>
+  </sidebyside>
+    
+    <p>contains every element of <m>A\times B</m>. We can then list the elements of <m>A\times B</m> by listing the elements in progressive upper-right to lower-left diagonals, starting with <m>(a_1,b_1)</m> and moving to the right along the top row: that is, we can write
+    <me>
+      A\times B=\{(a_1,b_1),(a_1,b_2),(a_2,b_1),(a_2,b_3),(a_2,b_2),(a_3,b_1),\ldots\}
+    </me>
+  </p>
+
+  <p>
+    This implicitly yields a bijection from <m>\Z^+</m> to <m>A\times B</m>; thus, <m>A\times B</m> is countably infinite, and hence countable.
+  </p>
+
+  <p>
+    The proof in the case that one or both of sets <m>A</m> and <m>B</m> are finite is similar; the corresponding table in that case will simply have either only finitely many rows or finitely many columns, or both.
+  </p>
+
+  </proof>
+</theorem>
+
+  <remark><p>It is <em>not</em> true that any countable product
+              of countable (or even finite) sets is countable. Indeed, even
+              the set <m>\{0,1\}\times \{0,1\}\times \cdots</m> is
+              uncountable. (If you want to get into the gory details
+              of this, the key is that there is a bijection from this set to
+              the power set of the natural numbers, which Cantor's Theorem
+              tells us is uncountable.  You are welcome to jump down this
+              rabbit hole by googling <q>Cantor's Theorem,</q> if you desire, but
+              know that you will not be responsible for that material in
+              class.)</p></remark>
+
+  <corollary>
+    <statement>
+      <p>
+        Let <m>n>1</m> be an integer and let <m>A_1,A_2,\ldots, A_n</m> be countable sets. Then <m>A_1\times A_2\times \cdots \times A_n</m> is countable.
+      </p>
+    </statement>
+  </corollary>
+</section>
+
+  <xi:include href="./exercises/preex.ptx" />
+</chapter>

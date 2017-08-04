@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-03T23:44:23-07:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="hiddenproof"><p>We first prove that \(HN\) is a subgroup of \(G\text{.}\) Since \(e_G\in
+HN\text{,}\) \(HN\neq \emptyset\text{.}\) Next, let \(x=h_1n_1, y=h_2n_2\in HN\) (where \(h_1,h_2\in H\) and \(n_1,n_2\in N\)). Then</p>
+\begin{equation*}
+xy^{-1}=h_1n_1(h_2n_2)^{-1}=h_1n_1n_2^{-1}h_2^{-1}.
+\end{equation*}
+<p>Since \(N\leq G\text{,}\) \(n_1n_2^{-1}\) is in \(N\text{;}\) so \(h_1n_1n_2^{-1}h_2^{-1}\in
+h_1Nh_2^{-1}\text{,}\) which equals \(h_1h_2^{-1}N\text{,}\) since \(N\unlhd G\) implies \(Nh_2^{-1}=h_2^{-1}N\text{.}\) So \(xy^{-1}=\in h_1h_2^{-1}N.\) But \(H\leq G\) implies \(h_1h_2^{-1}\in H\text{;}\) thus, \(xy^{-1}\in HN\text{,}\) and so \(HN\) is a subgroup of \(G\text{.}\)</p>
+<p>Since \(N\unlhd G\) and \(N\subseteq HN\text{,}\) \(N\) is normal in \(HN\) (do you see why?). So \(HN/N\) is a group under left coset multiplication. We define \(\phi: H\to HN/N\) by \(\phi(h)=hN\) (notice that when \(h\in H\text{,}\) \(h\in HN\) since \(h=he_G\)). Clearly, \(\phi\) is a homomorphism. Further, \(\phi\) is onto: Indeed, let \(y\in HN/N\text{.}\) Then \(y=hnN\) for some \(h\in H\) and \(n\in N\text{.}\) But \(nN=N\text{,}\) so \(y=hN=\phi(h)\text{.}\) Finally,</p>
+\begin{align*}
+\Ker \phi\amp =\{h\in H\,:\, \phi(h)=N\}\\
+\amp =\{h\in H\,:\, hN=N\}\\
+\amp =\{h\in
+H\,:\, h\in N\}\\
+\amp =H\cap N.
+\end{align*}
+<p>Thus,</p>
+\begin{equation*}
+H/(H\cap N)
+\simeq HN/N,
+\end{equation*}
+<p>by the <a knowl="./knowl/fit.html" knowl-id="xref-fit" alt="Theorem 9.1.6 First Isomorphism Theorem" title="Theorem 9.1.6 First Isomorphism Theorem">First Isomorphism Theorem</a>.</p></article></body>
+</html>

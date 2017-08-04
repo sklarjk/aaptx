@@ -1,0 +1,1033 @@
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="perm">
+  <title>Permutation Groups and Dihedral Groups</title>
+  <introduction>
+    <p>
+      We have already been introduced to two important classes of
+      nonabelian groups: namely, the matrix groups <m>GL(n,\R)</m> and
+      <m>SL(n,\R)</m> for <m>n\geq 2</m>. We now consider a more general class of
+      (mostly) nonabelian groups: permutation groups.
+    </p>
+  </introduction>
+
+
+
+<section>
+  <title>Introduction to permutation groups</title>
+
+
+
+  <definition>
+    <statement>
+      <p>
+        A <term>permutation</term> on a set <m>A</m> is a bijection from <m>A</m>
+        to <m>A</m>. We say a permutation <m>\sigma</m> on <m>A</m> <term>fixes</term> <m>a\in
+        A</m> if <m>\sigma(a)=a</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <example xml:id="stperm">
+    <statement>
+      <p>
+        Let <m>A</m> be the set <m>A=\{\Delta, \star, 4\}</m>. Then the functions <m>\sigma : A\to A</m> defined by
+        <me>
+          \sigma(\Delta)=\star,
+          \sigma(\star)=\Delta,  \text{and }  \sigma(4)=4;
+        </me>
+        and <m>\tau : A\to A</m> defined by
+        <me>
+          \tau(\Delta)=4, 
+          \tau(\star)=\Delta,  \text{and }  \tau(4)=\star
+        </me>
+        are
+        both permutations on <m>A</m>.
+      </p>
+    </statement>
+  </example>
+
+  <definition>
+    <statement>
+      <p>
+        Composition of permutations on a set <m>A</m> is often called
+        <term>permutation multiplication</term>, and if <m>\sigma</m> and <m>\tau</m>
+        are permutations on a set <m>A</m>, we usually omit the composition
+        symbol and write <m>\sigma \circ \tau</m> simply as <m>\sigma \tau</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <warning>
+    <p>
+      For us, if <m>\sigma</m> and <m>\tau</m> are permutations on a set <m>A</m>, then applying <m>\sigma \tau</m> to <m>A</m> means first applying <m>\tau</m> and <em>then</em> applying <m>\sigma</m>. This is due to the conventional right-to-left reading of function compositions.
+    </p>
+  </warning>
+
+  <p>
+    That is, if <m>a\in A</m>, by <m>\sigma \tau(a)</m> we mean <m>\sigma(\tau(a))</m>. (Some other books/mathematicians do not use this convention, and read permutation multiplication from left-to-right.
+    Make sure to always know what convention your particular author or colleague is using!)
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Let <m>A</m>, <m>\sigma</m>, and <m>\tau</m> be as in <xref ref="stperm">Example</xref>.
+        Then <m>\sigma \tau</m> is the function from <m>A</m> to <m>A</m> defined by
+        <me>
+          \sigma \tau(\Delta)=4,  \sigma \tau(\star)=\star,  \text{and }  \sigma \tau(4)=\Delta,
+        </me>
+        while <m>\tau \sigma</m> is
+        the function from <m>A</m> to <m>A</m> defined by
+        <me>
+          \tau \sigma (\Delta)=\Delta,  \tau \sigma (\star)=4,  \text{and }  \tau \sigma(4)=\star
+        </me>
+      </p>
+    </statement>
+  </example>
+
+  <definition>
+    <statement>
+      <p>
+        Given a set <m>A</m>, we define <m>S_A</m> be the set of all
+        permutations on <m>A</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <theorem xml:id="sym">
+    <statement>
+      <p>
+        Given a set <m>A</m>:
+        <ol>
+          <li>            <p>
+              <m>S_A</m> is a group under permutation multiplication.
+            </p>
+          </li>
+
+          <li>            <p>
+              If <m>A</m> has finite cardinality <m>n</m>, then <m>|S_A|=n!</m> (if <m>|A|=\infty</m> then <m>|S_A|</m> is also <m>\infty</m>).
+            </p>
+          </li>
+
+          <li>            <p>
+              <m>S_A</m> is abelian if <m>|A|=1</m> or <m>2</m>, and nonabelian otherwise.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  
+
+  <proof>
+   
+<ol><li><p>
+      Let <m>\sigma, \tau \in S_A</m>. Since a composition of
+      bijections is a bijection (see <xref ref="compbij">Theorem</xref>), <m>\sigma
+      \tau</m> is a bijection from <m>A</m> to <m>A</m>, hence is in <m>S_A</m>. So
+      <m>S_A</m> is closed under composition.</p> <p>Next,            function composition is always associative.</p><p> The identity function <m>1_A : A\to A</m> defined by
+            <me>
+              1_A(a)=a \text{ for all \(a\in A\)}
+            </me>
+            clearly acts as an
+            identity element in <m>S_A</m>. Henceforth, we will denote <m>1_A</m>
+            by <m>e</m>.
+          </p>
+        <p>
+            Finally, let <m>\sigma \in S_A</m>.  Since <m>\sigma</m> is a
+            bijection, <m>\sigma</m> has an inverse function <m>\sigma^{-1}</m>
+            that is also a bijection from <m>A</m> to <m>A</m> (<xref ref="invbij">Theorem</xref>). Since <m>\sigma^{-1}\in S_A</m> with <m>\sigma
+            \sigma^{-1}= \sigma^{-1} \sigma=1_A</m>, every element of
+            <m>S_A</m> has an inverse element in <m>S_A</m>.
+          </p>
+    <p>
+      So <m>S_A</m> is a group.
+    </p></li>
+<li>
+  <p>
+    Clearly <m>|S_A|=\infty</m> when <m>|A|=\infty</m>, and a straightforward
+    combinatorial argument yields that when <m>|A|=n \in \Z^+</m>, we have
+    <m>|S_A|=n!</m>.</p></li>
+<li><p>Finally, if <m>|A|=1</m> or <m>2</m>, then <m>|S_A|=1!=1</m> or
+    <m>|S_A|=2!=2</m> so <m>S_A</m> must be abelian (as it's a group of order 1 or
+    2). On the other hand, suppose <m>|A|>2</m>. Then <m>A</m> contains at least
+    three distinct elements, say <m>x</m>, <m>y</m>, and <m>z</m>. Let <m>\sigma</m> be the
+    permutation of <m>A</m> swapping <m>x</m> and <m>y</m> and fixing every other
+    element of <m>A</m>, and let <m>\tau</m> be the permutation of <m>A</m> swapping
+    <m>y</m> and <m>z</m> and fixing every other element of <m>A</m>. Then <m>\sigma
+    \tau(x)=y</m> while <m>\tau \sigma(x)=z</m>, so <m>\sigma \tau \neq \tau
+    \sigma</m>, and hence <m>S_A</m> is nonabelian.</p></li></ol>
+</proof>
+</theorem>
+
+<p>
+    We will in the future use language provided by the following
+    definition:
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        A group is said to be a <term>permutation group</term> if it is
+        a subgroup of <m>S_A</m> for some set <m>A</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <remark>
+    <p>
+      Notice
+      that if <m>A</m> and <m>B</m> are sets, then <m>|A|=|B|</m> if and only if
+      <m>S_A\simeq S_B</m>.
+    </p>
+  </remark>
+
+  <p>
+    Thus, for any set <m>B</m> with <m>|B|=n \in \Z^+</m>, we have <m>S_B\simeq
+    S_A</m>, where <m>A=\{1,2,\ldots,n\}</m>. Since we are concerned in this
+    course primarily with group structures which are invariant under
+    isomorphism, we may focus now on groups of permutations on the set
+    <m>\{1,2,\ldots, n\}</m> (<m>n\in \Z^+</m>).<fn>We can, in fact,  define <m>S_0</m>, the set of all permutations on the empty set. One can show, using the fact that a function is a relation on a Cartesian product of sets, that <m>S_0</m> is the trivial group. However, this will not be relevant in this text.</fn></p>
+</section>
+
+<section>
+  <title>Symmetric groups</title>
+  <definition>
+    <statement>
+      <p>
+        When <m>A=\{1,2,\ldots, n\}</m> (<m>n\in \Z^+</m>), we call <m>S_A</m>
+        the <term>symmetric group on <m>n</m> letters</term> and denote it by
+        <m>S_n</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <remark>
+    <p>
+      Throughout this course, if we are discussing a
+      group <m>S_n</m>, you should assume <m>n\in \Z^+</m>.
+    </p>
+  </remark>
+
+  <p>
+    It is important for us to be able to easily describe specific elements of <m>S_n</m>. It would be cumbersome to describe, for instance, an element of <m>S_3</m> by saying it swaps <m>1</m> and <m>2</m> and fixes <m>3</m>; imagine how much more cumbersome it could be to describe an element of, say, <m>S_{100}</m>! One can somewhat concisely describe a permutation <m>\sigma</m> of <m>S_n</m> by listing out the elements <m>1,2,\ldots,n</m> and writing the element <m>\sigma(i)</m> below each <m>i</m> for <m>i=1,2,\ldots, n</m>.
+    For instance, if <m>\sigma</m> sends <m>1</m> to <m>2</m>, we'd write the number <m>2</m> below the number <m>1</m>. The convention is to enclose these two rows of numbers in a single set of parentheses, as in the following example.
+  </p>
+
+  <example xml:id="nocommute">
+    <statement>
+      <p>
+        We can denote the element <m>\sigma</m> of <m>S_3</m> that swaps <m>1</m> and <m>2</m> and fixes <m>3</m> by
+        <me>
+          \sigma = \begin{pmatrix}1\amp 2\amp 3\\ 2\amp 1\amp 3
+          \end{pmatrix},
+        </me>
+        and the element <m>\tau</m> of <m>S_3</m> that sends <m>1</m> to <m>3</m>, <m>2</m> to <m>1</m>, and <m>3</m> to <m>2</m> by
+        <me>
+          \tau =\begin{pmatrix}1\amp 2\amp 3\\ 3\amp 1\amp 2
+          \end{pmatrix}.
+        </me>
+      </p>
+
+      <p>
+        Then
+        <me>
+          \sigma\tau = \begin{pmatrix}1\amp 2\amp 3\\ 3\amp 2\amp 1
+          \end{pmatrix}</me> and
+        
+<me>          \tau\sigma = \begin{pmatrix}1\amp 2\amp 3\\ 1\amp 3\amp 2
+          \end{pmatrix}.
+        </me>
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    But even this notation is unnecessarily cumbersome. Instead, we
+    use <em>cycle notation</em>.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        A permutation <m>\sigma</m> in <m>S_n</m> is called a <term><m>k</m>-cycle</term> or a <term>cycle of length <m>k</m></term> (or, less
+        specifically, a <term>cycle</term>) if there exist elements <m>a_1,
+        a_2,\ldots, a_k</m> in <m>\{1,2,\ldots,n\}</m> such that
+
+      <ul>
+      <li><p>
+        <m>\sigma(a_i)=a_{i+1}</m> for each <m>i=1,2,\ldots, k-1</m>;</p></li>
+<li><p><m>\sigma(a_k)=a_1</m>;</p></li>
+       <li><p><m>\sigma(x)=x</m> for every other element of <m>\{1,2,\ldots, n\}</m>.</p></li>
+        </ul>
+</p>
+      <p>
+        We use the <term>cycle notation</term> <m>\sigma = (a_1 a_2 \cdots a_k)</m> to describe such a cycle. A <m>2</m>-cycle is often called a <term>transposition</term>.
+      </p>
+    </statement>
+  </definition>
+
+  <example xml:id="tr">
+    <statement>
+      <p>
+        The permutation <m>\tau</m> in <m>S_3</m> that sends <m>1</m> to <m>3</m>, <m>2</m> to <m>1</m>, and <m>3</m> to <m>2</m> is a cycle. It can be denoted by <m>\tau =(132)</m>.
+        Similarly, the cycle <m>\rho</m> in <m>S_3</m> swapping <m>1</m> and <m>3</m> can be denoted by <m>\rho=(13)</m>. On the other hand, the permutation in <m>S_4</m> that swaps <m>1</m> with <m>2</m> and <m>3</m> with <m>4</m> is
+        <em>not</em> a cycle.
+      </p>
+    </statement>
+  </example>
+
+  <remark>
+    <p>
+      Given a <m>k</m>-cycle <m>\sigma=(a_1 a_2\cdots a_k)</m>, there are <m>k</m> different expressions for <m>\sigma</m>. Indeed, we have
+      <me>
+        \sigma=(a_1 a_2\cdots a_k)=(a_2 a_3 \cdots a_k a_1)=(a_3 a_4 \cdots a_k a_1 a_2)=\cdots = (a_k a_1 \cdots a_{k-1}).
+      </me>
+    </p>
+  </remark>
+
+  <example>
+    <statement>
+      <p>
+        The permutation <m>\tau</m> described in <xref ref="tr">Example</xref> can also be written as <m>(321)</m> and as <m>(213)</m>.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    However, by convention, we usually <q>start</q> a cycle <m>\sigma</m>
+    with the smallest of the numbers that <m>\sigma</m> doesn't fix: e.g.,
+    we'd write <m>\sigma=(213)</m> as <m>(132)</m>.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        Two cycles <m>\sigma=(a_1 a_2 \cdots a_k)</m> and <m>\tau=(b_1
+        b_2 \cdots b_m)</m> are said to be <term>disjoint</term> if <m>a_i \neq
+        b_j</m> for all <m>i</m> and <m>j</m>. Cycles <m>\sigma_1</m>,
+        <m>\sigma_2</m>, <m>\ldots</m>, <m>\sigma_m</m> are <term>disjoint</term> if <m>\sigma_i</m>
+        and <m>\sigma_j</m> are disjoint for each <m>i \neq j</m>. (Notice: this
+        version of disjointness is what we usually refer to as <term>mutual</term> disjointness.)
+      </p>
+    </statement>
+  </definition>
+
+  <remark>
+    <p>
+      Note that if cycles <m>\sigma</m> and <m>\tau</m> are disjoint, then <m>\sigma</m> and <m>\tau</m> commute; that is, <m>\sigma \tau=\tau \sigma</m>.
+    </p>
+  </remark>
+
+  <warning>
+    <p>
+      If cycles <m>\sigma</m> and <m>\tau</m> are <em>not</em> disjoint then they may not commute. For instance, see <xref ref="nocommute">Example</xref>, where <m>\sigma\tau \neq \tau \sigma</m>.
+    </p>
+  </warning>
+
+  <p>
+    Note that any permutation of <m>S_n</m> is a product of disjoint cycles (where by <q>product</q> we mean the permutation resulting from permutation multiplication).
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        Writing a permutation in <term>(disjoint)
+        cycle notation</term> means writing it as a product of disjoint
+        cycles, where each cycle is written in cycle notation.
+      </p>
+    </statement>
+  </definition>
+
+  <remark>
+    <p>
+      Note that if <m>\sigma</m> in <m>S_n</m> is
+      written in cycle notation and the number <m>a\in \{1,2,\ldots, n\}</m>
+      appears nowhere in <m>\sigma</m>'s representation, this means that
+      <m>\sigma</m> fixes <m>a</m>. The only permutation that we cannot really write
+      in cycle notation is the identity element <m>1_A</m> of <m>S_A</m>, which we
+      henceforth denote by <m>e</m>.
+    </p>
+  </remark>
+
+  <example>
+    <statement>
+      <p>
+        The permutation
+        <me>
+          \sigma =\begin{pmatrix}1\amp 2\amp 3\amp 4\amp 5\amp 6\\ 3\amp 1\amp 2\amp 6\amp 5\amp 4
+          \end{pmatrix}
+        </me>
+        is the product of disjoint cycles
+        <m>(132)</m> and <m>(46)</m>, so in cycle notation we have
+        <me>
+          \sigma=(132)(46).
+        </me>
+      </p>
+
+      <p>
+        Note that we could also write <m>\sigma</m> as <m>(321)(46)</m>, <m>(213)(64)</m>, <m>(64)(132)</m>, etc.
+      </p>
+
+      <p>
+        While it is true that we also have <m>\sigma=(13)(23)(46)</m>, this is not a disjoint cycle representation of <m>\sigma</m> since both <m>(13)</m> and <m>(23)</m> <q>move</q> the element <m>3</m>.
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        In <m>S_4</m>, let <m>\sigma=(243)</m> and <m>\tau=(13)(24)</m>. Then <m>\sigma \tau=(123)</m> and <m>\tau \sigma = (134).</m>
+      </p>
+    </statement>
+  </example>
+
+  <example xml:id="s9ex">
+    <statement>
+      <p>
+        In <m>S_9</m>, let <m>\sigma=(134)</m>, <m>\tau=(26)(17)</m>, and <m>\rho=(358)(12)</m>. Find the following, writing your answers using disjoint cycle notation.
+      </p>
+<ol cols="4" label="a">
+<li><p><m>\sigma^{-1}</m></p></li>
+<li><p><m>\sigma^{-1}\tau\sigma</m></p></li>
+<li><p><m>\sigma^2</m></p></li>
+<li><p><m>\sigma^3</m></p></li>
+<li><p><m>\rho^2</m></p></li>
+<li><p><m>\rho^{-2}</m></p></li>
+<li><p><m>\sigma \tau</m></p></li>
+<li><p><m>\sigma \rho</m></p></li>
+</ol>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Explicitly express all the elements of <m>S_4</m> in disjoint cycle notation.
+      </p>
+    </statement>
+  </example>
+
+  <theorem xml:id="kcyc">
+    <statement>
+      <p>
+        Any <m>k</m>-cycle has order <m>k</m> in <m>S_n</m>. More generally, if permutation <m>\sigma</m> can be written in disjoint cycle notation as <m>\sigma=\sigma_1 \sigma_2 \cdots \sigma_m</m>, then
+        <md>
+          <mrow>o(\sigma)\amp =\lcm(o(\sigma_1), o(\sigma_2),\ldots, o(\sigma_m))</mrow>
+          <mrow>\amp =\lcm(\mathrm{length}(\sigma_1),\mathrm{length}(\sigma_2),\ldots,\mathrm{length}(\sigma_m)),</mrow>
+        </md>
+        where <m>\lcm</m> denotes the least common multiple.
+      </p>
+    </statement>
+  </theorem>
+
+  <warning>
+    <p>
+      Permutation <m>\sigma</m> must be in <em>disjoint</em> cycle notation for the above formula to hold. For instance, let <m>\sigma=(12)(23)</m> in <m>S_3</m>. The transpositions <m>(12)</m> and <m>(23)</m> both have order <m>2</m>, but <m>o(\sigma)\neq \lcm(2,2)=2</m>. Rather, <m>o(\sigma)=3</m>, since in disjoint cycle notation <m>\sigma</m> can be written as <m>\sigma=(123)</m>. You must write a permutation using disjoint cycle notation before attempting to use this method to compute its order!
+    </p>
+  </warning>
+
+  <example>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            Find the orders of each of the elements in <xref ref="s9ex">Example</xref>, including <m>\sigma</m>, <m>\tau</m>, and <m>\rho</m> themselves.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Explicitly list the elements of <m>\langle \sigma\rangle</m>, <m>\langle \tau\rangle</m>, and <m>\langle \rho\rangle</m>.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </example>
+</section>
+
+<section>
+  <title>Alternating groups</title>
+  <p>
+    Note that every <m>k</m>-cycle <m>(a_1a_2\ldots a_k)\in S_n</m> can be written as a product of (not necessarily disjoint) transpositions:
+    <me>
+      (a_1a_2\ldots a_k)=(a_1a_n)(a_1a_{n-1})\cdots(a_1a_3)(a_1a_2).
+    </me>
+  </p>
+
+  <p>
+    We therefore have the following theorem.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        Every permutation in <m>S_n</m> can be written as a product of transpositions.
+      </p>
+    </statement>
+  </theorem>
+
+  <definition>
+    <statement>
+      <p>
+        We say that a permutation in <m>S_n</m> is <term>even</term> [resp., <term>odd</term>] if it can be written as a product of an even [resp., odd] number of transpositions.
+      </p>
+    </statement>
+  </definition>
+
+  <theorem>
+    <statement>
+      <p>
+        Every permutation in <m>S_n</m> is even or odd, but not both.
+      </p>
+    </statement>
+
+  <proof>
+    <p>
+      We already know that every permutation is <m>S_n</m> is a product of transpositions, so must be even or odd. For proof that no permutation is both even <em>and</em> odd, see, for instance, Proof 1 or 2 of Theorem 9.15 on p. 91 in<nbsp /><xref ref="F" />.
+    </p>
+  </proof>
+
+  </theorem>
+
+  <lemma xml:id="evenodd">
+    <statement>
+      <p>
+        For each <m>2\leq k\leq n</m>, then a <m>k</m>-cycle is even if <m>k</m> is odd, and odd if <m>k</m> is even.
+      </p>
+<p>The proof of this is left as an exercise for the reader.</p>
+    </statement>
+</lemma>
+
+  <example>
+    <statement>
+      <p>
+        In <m>S_3</m>, the permutations <m>e</m>, <m>(123)=(13)(12)</m>, and <m>(132)=(12)(13)</m> are even, while the permutations <m>(12)</m>, <m>(13)</m>, and <m>(23)</m> are odd.
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        List all of the even [resp., odd] permutations in <m>S_4</m>.
+      </p>
+    </statement>
+  </example>
+
+  <p>We have the following theorem, whose proof is left as an exercise for the reader.</p>
+
+<theorem>
+<statement><p>
+ The set of all even permutations in <m>S_n</m> is a subgroup of <m>S_n</m>. 
+  </p>
+</statement>
+</theorem>
+
+  <definition>
+    <statement>
+      <p>The <term>alternating group on <m>n</m> letters</term> is the subgroup <m>A_n</m> of <m>S_n</m> consisting of all of the  even permutations in <m>S_n</m>.      </p>
+    </statement>
+  </definition>
+
+  <p>
+    We end with this theorem, whose proof can be found on p. 93 of<nbsp /><xref ref="F" />.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        <m>A_n=(n!)/2</m>.
+      </p>
+    </statement>
+  </theorem>
+</section>
+
+<section>
+  <title>Cayley's Theorem</title>
+  <p>
+    One might wonder how <q>common</q> permutation groups are in math. They
+    are, it turns out, ubiquitous in abstract algebra: in fact, <em>every group</em> can be thought of as a group of permutations! We will
+    prove this, but we first need the following lemma. (We will not use
+    the maps <m>\rho_a</m> or <m>c_a</m>, defined below, in our theorem, but
+    define them here for potential future use.)
+  </p>
+
+  <lemma xml:id="cay_lem">
+    <statement>
+      <p>
+        Let <m>G</m> be a group and <m>a\in G</m>. Then the
+        following functions are permutations on <m>G</m>, and hence are elements
+        of <m>S_G</m>:
+
+
+        <ul>
+          <li>
+            
+            <p>
+              <m>\lambda_a\,:\,G\to G</m> defined by <m>\lambda_a(x)=ax</m>;
+            </p>
+          </li>
+
+          <li>        
+            <p>
+              <m>\rho_a\,:\,G\to G</m> defined by <m>\rho_a(x)=xa</m>;
+            </p>
+          </li>
+
+          <li>
+      
+            <p>
+              <m>c_a\,:\,G\to G</m> defined by <m>c_a(x)=axa^{-1}</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+
+  <proof>
+    <p>
+      To show that <m>\lambda_a</m> is a bijection, first assume <m>x_1,x_2 \in G</m> with
+      <m>\lambda_a(x_1)=\lambda_a(x_2)</m>. Then <m>ax_1=ax_2</m>; so, by left
+      cancellation, <m>x_1=x_2</m>. Thus, <m>\lambda_a</m> is one-to-one. Further,
+      each <m>y\in G</m> equals <m>\lambda_a(a^{-1}y)</m> for <m>a^{-1}y\in G</m>, so
+      <m>\lambda_a</m> is onto. Thus, <m>\lambda_a</m> is a bijection from <m>G</m> to
+      <m>G</m>: that is, it's a permutation on <m>G</m>. The proofs that <m>\rho_a</m> and
+      <m>c_a</m> are bijections are similar.
+    </p>
+  </proof>
+  </lemma>
+
+   
+<definition>
+<statement>
+<p>
+We say that <m>\lambda_a</m>, <m>\rho_a</m>, and <m>c_a</m>
+    perform on <m>G</m>, respectively, <term>left multiplication by <m>a</m></term>, <term>right multiplication by <m>a</m></term>, and <term>conjugation by <m>a</m></term>. (Note: Sometimes when people talk about conjugation by <m>a</m> they
+    instead are referring to the permutation of <m>G</m> that sends each <m>x</m>
+    to <m>a^{-1}xa</m>.)
+  </p>
+</statement>
+</definition>
+
+  <p>
+    Now we are ready for our theorem:
+  </p>
+
+  <theorem><title>Cayley's Theorem</title>
+    <statement>
+      <p>
+       Let <m>G</m> be a group. Then <m>G</m>
+        is isomorphic to a subgroup of <m>S_G</m>. Thus, every group can be
+        thought of as a group of permutations.
+      </p>
+    </statement>
+  
+
+  <proof>
+    <p>
+      For each <m>a\in G</m>, let <m>\lambda_a</m> be defined, as above, by
+      <m>\lambda_a(x)=ax</m> for each <m>x\in G</m>; recall that each <m>\lambda_a</m> is
+      in <m>S_G</m>. Now define <m>\phi\,:\, G\to S_G</m> by <m>\phi(a)=\lambda_a</m>,
+      for each <m>a\in G</m>.
+    </p>
+
+    <p>
+      We claim that <m>\phi</m> is both a homomorphism and one-to-one. Indeed,
+      let <m>a,b\in G</m>. Now, <m>\phi(a)\phi(b)</m> and <m>\phi(ab)</m> are both
+      functions with domain <m>G</m>, so we need to show
+      <m>(\phi(a)\phi(b))(x)=(\phi(ab))(x)</m> for each <m>x\in G</m>. Well, let
+      <m>x\in G</m>. Then
+      <md>
+        <mrow>(\phi(a)\phi(b))(x)\amp =(\lambda_a\lambda_b)(x)\amp \amp</mrow>
+        <mrow>\amp =\lambda_a(\lambda_b(x)) \amp \amp \text{ (since the operation on \(S_G\) is
+        composition) }</mrow>
+        <mrow>\amp =\lambda_a(bx)\amp \amp</mrow>
+        <mrow>\amp =a(bx)\amp \amp</mrow>
+        <mrow>\amp =(ab)x\amp \amp</mrow>
+        <mrow>\amp =\lambda_{ab}(x)\amp \amp</mrow>
+        <mrow>\amp =(\phi(ab))(x).\amp \amp</mrow>
+      </md>
+    </p>
+
+    <p>
+      So <m>\phi</m> is a homomorphism. Further, if <m>a, b\in G</m> with
+      <m>\phi(a)=\phi(b)</m>, then <m>\lambda_a=\lambda_b</m>. In particular,
+      <m>\lambda_a(e)=\lambda_b(e)</m>. But <m>\lambda_a(e)=ae=a</m> and
+      <m>\lambda_b(e)=be=b</m>, so <m>a=b</m>. Thus, <m>\phi</m> is one-to-one.
+    </p>
+
+    <p>
+      Since by definition <m>\phi(G)</m> we have that <m>\phi</m> maps <m>G</m> <em>onto</em> <m>\phi(G)</m>, we conclude that <m>\phi</m> provides an isomorphism
+      from <m>G</m> to the subgroup <m>\phi(G)</m> of <m>S_G</m>.
+    </p>
+  </proof>
+</theorem>
+ 
+ <remark>
+
+  <p>
+    In general, <m>\phi(G) \neq S_G</m>, so we cannot
+    conclude that <m>G</m> is isomorphic to <m>S_G</m> itself; rather, we may only
+    conclude that it is is isomorphic to some <em>subgroup</em> of
+    <m>S_G</m>.
+  </p>
+
+  </remark>
+
+  <remark>
+    <p>
+      While we chose to use the maps <m>\lambda_a</m> to
+      prove the above theorem, we could just as well have used the maps
+      <m>\rho_a</m> or <m>c_a</m>, instead.
+    </p>
+  </remark>
+</section>
+
+<section xml:id="dihedralgps">
+  <title>Dihedral groups</title>
+  <p>
+    Dihedral groups are groups of symmetries of regular <m>n</m>-gons. We start with an example.
+  </p>
+
+  <example xml:id="D3">
+    <p>
+      Consider a regular triangle <m>T</m>, with vertices labeled <m>1</m>, <m>2</m>, and <m>3</m>. We show <m>T</m> below, also using dotted lines to indicate a vertical line of symmetry of <m>T</m> and a rotation of <m>T</m>.</p>
+
+ <figure>
+    <image width="20%">
+    <latex-image-code>
+ \[\xymatrix{&amp;1\ar@{-}[ldd]\ar@{-}[rdd]\ar@{--}[dd]\\ &amp;\stackrel{\longleftrightarrow}{\hspace{-10pt}f} &amp;
+\\ 3\ar@{-}[rr]&amp;&amp;2\ar@{-->}@/^{15pt}/[ll]^{\begin{array}{ccc}&amp;r&amp; \end{array}}}\]
+ </latex-image-code>
+  </image>
+  <caption>Symmetries of the triangle</caption>
+
+  </figure>
+
+
+    <p>
+      Note that if we reflect <m>T</m> over the vertical dotted line (indicated in the picture by <m>f</m>), <m>T</m> maps onto itself, with <m>1</m> mapping to <m>1</m>, and <m>2</m> and <m>3</m> mapping to each other. Similarly, if we rotate <m>T</m> clockwise by <m>120^{\circ}</m> (indicated in the picture by <m>r</m>), <m>T</m> again maps onto itself, this time with <m>1</m> mapping to <m>2</m>, <m>2</m> mapping to <m>3</m>, and <m>3</m> mapping to <m>1</m>. Both of these maps are called <em>symmetries</em> of <m>T</m>; <m>f</m> is a <em>reflection</em> or <em>flip</em> and <m>r</m> is a <em>rotation</em>.
+    </p>
+
+    <p>
+      Of course, these are not the only symmetries of <m>T</m>. If we compose
+      two symmetries of <m>T</m>, we obtain a symmetry of <m>T</m>: for instance, if
+      we apply the map <m>f\circ r</m> to <m>T</m> (meaning first do <m>r</m>, then do
+      <m>f</m>) we obtain reflection over the line connecting <m>2</m> to the
+      midpoint of line segment <m>\overline{13}</m>. Similarly, if we apply
+      the map <m>f\circ (r\circ r)</m> to <m>T</m> (first do <m>r</m> twice, then do <m>f</m>)
+      we obtain reflection over the line connecting <m>3</m> to the midpoint of
+      line segment <m>\overline{12}</m>. In fact, every symmetry of <m>T</m> can be
+      obtained by composing applications of <m>f</m> and applications of <m>r</m>.
+    </p>
+
+    <p>
+      For convenience of notation, we omit the composition symbols, writing, for instance, <m>fr</m> for <m>f\circ r</m>, <m>r\circ r</m> as <m>r^2</m>, etc. It turns out there are exactly six symmetries of <m>T</m>, namely:
+      <ol>
+        <li>
+          <p>
+            the map <m>e</m> from <m>T</m> to <m>T</m> sending every element to itself;
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>f</m> (that is, reflection over the line connecting <m>1</m> and the midpoint of <m>\overline{23}</m>);
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>r</m> (that is, clockwise rotation by <m>120^{\circ}</m>);
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>r^2</m> (that is, clockwise rotation by <m>240^{\circ}</m>);
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>fr</m> (that is, reflection over the line connecting <m>2</m> and the midpoint of <m>\overline{13}</m>); and
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>fr^2</m> (that is, reflection over the line connecting <m>3</m> and the midpoint of <m>\overline{12}</m>).
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p>
+      Declaring that <m>f^0=r^0=e</m>, the set
+      <me>
+        D_3=\{e, f, r, r^2, fr, fr^2\}=\{f^ir^j:i=0,1, j=0,1,2\}
+      </me>
+      is the collection of all symmetries of <m>T</m>.
+    </p>
+</example>
+    <remark>
+      <p>
+        Notice that <m>rf=fr^2</m> and that <m>f^2=r^3=e</m>.
+      </p>
+    </remark>
+
+    <theorem xml:id="di3">
+      <statement>
+        <p>
+          <m>D_3</m> is a group under composition.
+        </p>
+      </statement>
+
+    <proof>
+      <p>
+        We first show that <m>D_3</m> is closed under composition. As
+        noted above, <m>rf=fr^2</m>. So any map of the form <m>f^ir^jf^kr^l</m>
+        (<m>i,k=0,1</m>, <m>j,l=0,1,2</m>) can be written in the form <m>f^sr^t</m>
+        for some <m>s,t \in \N</m>. Finally, let <m>R_2(s)</m> and <m>R_3(t)</m> be
+        the remainders when you divide <m>s</m> by <m>2</m> and <m>t</m> by <m>3</m>; then
+        <m>f^sr^t=f^{R_2(s)}r^{R_3(t)} \in D_3</m>. So <m>D_3</m> is closed under
+        composition.
+      </p>
+
+      <p>
+        Next, function composition is always associative, and the function <m>e</m> clearly acts as identity
+              element
+              in <m>D_3</m>.
+         Finally, let <m>x=f^ir^j\in D_3</m>. Then <m>y=r^{3-j}f^{2-i}</m>
+              is
+              in <m>D_3</m> (since <m>D_3</m> is closed under composition) with <m>xy=yx=e</m>. So <m>D_3</m> is a group.
+      </p>
+    </proof>
+   </theorem>
+
+    <p>
+      Let us look at <m>D_3</m> another way. Note that each map in <m>D_3</m> can be uniquely described by how it permutes the vertices <m>1,2,3</m> of <m>T</m>: that is, each map in <m>D_3</m> can be uniquely identified with a unique element of <m>S_3</m>. For instance, <m>f</m> corresponds to the permutation <m>(23)</m> in <m>S_3</m>, while <m>fr</m> corresponds to the permutation <m>(13)</m>. In turns out that <m>D_3 \simeq S_3</m>, via the following correspondence.
+      <me>
+        \begin{array}{ccl}
+        e \amp \leftrightarrow \amp  e\\
+        f \amp \leftrightarrow \amp  (23)\\
+        r \amp \leftrightarrow \amp  (123)\\
+        r^2 \amp \leftrightarrow \amp  (132)\\
+        fr \amp \leftrightarrow \amp  (13)\\
+        fr^2 \amp \leftrightarrow \amp  (12)
+        \end{array}
+      </me>
+    </p>
+  <p>
+    The group <m>D_3</m> is an example of class of groups called <em>dihedral groups</em>.
+  </p>
+
+
+  <definition>
+    <statement>
+      <p>
+        Let <m>n</m> be an integer greater than or equal to <m>3</m>. We
+        let <m>D_n</m> be the collection of symmetries of the regular
+        <m>n</m>-gon. It turns out that <m>D_n</m> is a group (see below), called
+        the <term>dihedral group of order <m>2n</m></term>. (Note: Some books and
+        mathematicians instead denote the group of symmetries of the
+        regular <m>n</m>-gon by <m>D_{2n}</m><mdash />so, for instance, our <m>D_3</m>,
+        above, would instead be called <m>D_6</m>. Make sure you are aware
+        of the convention your book or colleague is using.)
+      </p>
+    </statement>
+  </definition>
+
+  <theorem xml:id="rf">
+    <statement>
+      <p>
+        Let <m>n</m> be an integer greater than or equal to <m>3</m>. Then, again using the convention that <m>f^0=r^0=e</m>, <m>D_n</m> can be uniquely described as
+        <me>
+          D_n=\{f^ir^j: i=0,1, j=0,1,\ldots, n-1\}
+        </me>
+        with the relations
+        <me>
+          rf=fr^{n-1} \text{ and }  f^2=r^n=e.
+        </me>
+      </p>
+
+      <p>
+        The dihedral group <m>D_n</m> is a nonabelian group of order <m>2n</m>.
+      </p>
+    </statement>
+
+  <proof>
+    <p>
+      The proof that <m>D_n</m> is a group parallels the proof, above, that <m>D_3</m> is a group. It is clear that <m>D_n</m> is nonabelian (e.g., <m>rf=fr^{n-1}\neq fr</m>) and has order <m>2n</m>.
+    </p>
+  </proof>
+
+  </theorem>
+
+  <remark>
+    <p>
+      Throughout this course, if we are discussing a
+      group <m>D_n</m> you should assume <m>n\in \Z^+</m>, <m>n\geq 3</m>, unless
+      otherwise noted.
+    </p>
+  </remark>
+
+  <definition>
+    <statement>
+      <p>
+        We say that an element of <m>D_n</m> is written in <term>standard form</term> if it is written in the form <m>f^ir^j</m> where
+        <m>i\in \{0,1\}</m> and <m>j\in \{0,1,\ldots,n-1\}</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <theorem>
+    <statement>
+      <p>
+        Each <m>D_n</m> is isomorphic to a subgroup of <m>S_n</m>.
+      </p>
+    </statement>
+
+  <proof> 
+<p> We provide here a sketch of a proof; the details are left as an exercise for the reader. We described above how <m>D_3</m> is isomorphic to a subgroup
+    (namely, the improper subgroup) of <m>S_3</m>. One can show that each <m>D_n</m> is isomorphic to a subgroup of <m>S_n</m> by similarly labeling the vertices of the regular <m>n</m>-gon <m>1,2,\ldots, n</m> and determining how these vertices are permuted by each element of <m>D_n</m>.
+  </p>
+</proof>  
+</theorem>
+
+
+  <warning>
+    <p>
+      While <m>D_3</m> is actually isomorphic to <m>S_3</m> itself, for <m>n>3</m> we have that <m>D_n</m> is <em>not</em> isomorphic to <m>S_n</m> but is rather isomorphic to a <em>proper subgroup</em> of <m>S_n</m>. When <m>n>3</m> you can see that <m>D_n</m> cannot be isomorphic to <m>S_n</m> since <m>|D_n|=2n \lt  n! = |S_n|</m> for <m>n>3</m>.
+    </p>
+  </warning>
+
+  <p>
+    It is important to be able to do computations with specific elements of dihedral
+    groups. We have the following theorem.
+  </p>
+
+  <theorem xml:id="diords">
+    <statement>
+      <p>
+        The following relations hold in <m>D_n</m>, for every <m>n</m>:
+        <ol>
+          <li>
+            <p>
+              For every <m>i</m>, <m>r^if=fr^{-i}</m> (in particular, <m>rf=fr^{-1}=fr^{n-1}</m>);
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>o(fr^i)=2</m> for every <m>i</m> (in particular, <m>f^2=e</m>);
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>o(r)=o(r^{-1})=n</m>;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If <m>n</m> is even, then <m>r^{n/2}</m> commutes with every element of <m>D_n</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+
+  <proof>
+    <ol>
+      <li>
+        <p>
+          We use induction on the exponent of <m>r</m>. We already know that <m>r^1f=fr^{-1}</m>.  Now suppose <m>r^{i-1}f=fr^{-(i-1)}</m> for some <m>i\geq 2</m>.  Then
+          <me>
+            r^if=r(r^{i-1}f)=r(fr^{-(i-1)})=(rf)r^{-i+1}=(fr^{-1})r^{-i+1}=fr^{-i}.
+          </me>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          For every <m>i</m>, <m>fr^i\neq e</m>, but
+          <me>
+            (fr^i)^2=(fr^i)(fr^i)=f(r^if)r^i=f(fr^{-i})r^i=f^2r^0=e.
+          </me>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          This follows from <xref ref="invord">Theorem</xref> and the fact that <m>o(r)=n</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          The proof of this statement is left as an exercise for the reader. 
+        </p>
+      </li>
+    </ol>
+  </proof>
+
+  </theorem>
+
+  <example>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            Write <m>fr^2f</m> in <m>D_3</m> in standard form.  Do the same for <m>fr^2f</m> in <m>D_4</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            What is the inverse of <m>fr^3</m> in <m>D_5</m>?  Write it in standard form.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Explicitly describe an isomorphism from <m>D_4</m> to a subgroup of <m>S_4</m>.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Classify the following groups up to isomorphism. (<em>Hint:</em>
+        You may want to look at the number of group elements that have
+        a specific finite order.)
+
+<me>\Z, \Z_6, \Z_2, S_6, \Z_4, \Q, 3\Z, \R, S_2, \R^*, S_3,\Q^*, \C^*, \langle \pi\rangle \text{ in } \R^*,</me>
+<me> D_6, 
+\langle (134)(25)\rangle \text{ in } S_5, \R^+, D_3, \langle r \rangle \text{ in } D_4, 17\Z</me>
+      </p>
+    </statement>
+  </example>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <xi:include  href="./exercises/permex.ptx" />
+</chapter>

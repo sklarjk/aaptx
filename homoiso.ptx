@@ -1,0 +1,718 @@
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="homoiso">
+  <title>Homorphisms and Isomorphisms</title>
+
+<section>
+  <title>Groups of small order</title>
+  <p>
+    Let's start exploring groups in order of increasing, well, order. Before we do this, it will be helpful to introduce the notion of a <em>group table</em> (also known as a <em>Cayley table</em><fn>Named after the British mathematician Arthur Cayley.</fn>) for a finite group. Given a finite group <m>G</m>, list its elements in some fixed order, say, <m>a_1, a_2, \ldots, a_n</m>, and then construct its group table by creating an array with exactly one row and exactly one column corresponding to each group element. We then put in the row <m>i</m> and column <m>j</m> the element <m>a_ia_j</m> of <m>G</m>. Note that a single group can have group tables that look different from one another, since reordering a group's elements will change its table.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Consider the group <m>\Z_4</m> under addition modulo 4. Ordering the elements of <m>\Z_4</m> as <m>1,2,3,4</m>, we have the following group table for <m>\langle \Z_4,+\rangle</m>:
+      </p>
+
+     <table xml:id="z4-Cayley">
+
+<tabular halign="left">
+	 <row bottom="medium">
+		<cell right="medium"><m>+</m></cell>
+		<cell><m>0</m></cell>
+		<cell><m>1</m></cell>
+		<cell><m>2</m></cell>
+		<cell><m>3</m></cell>
+	</row>
+	<row >
+		<cell right="medium"><m>0</m></cell>
+		<cell><m>0</m></cell>
+		<cell><m>1</m></cell>
+		<cell><m>2</m></cell>
+		<cell><m>3</m></cell>
+	</row>
+	<row >
+		<cell right="medium"><m>1</m></cell>
+		<cell><m>1</m></cell>
+		<cell><m>2</m></cell>
+		<cell><m>3</m></cell>
+		<cell><m>0</m></cell>
+	</row>
+	<row >
+		<cell right="medium"><m>2</m></cell>
+		<cell><m>2</m></cell>
+		<cell><m>3</m></cell>
+		<cell><m>0</m></cell>
+		<cell><m>1</m></cell>
+	</row>
+	<row>
+		<cell right="medium"><m>3</m></cell>
+		<cell><m>3</m></cell>
+		<cell><m>0</m></cell>
+		<cell><m>1</m></cell>
+		<cell><m>2</m></cell>
+	</row>
+	</tabular>
+			<caption>Group table for <m>\Z_4</m></caption>
+			</table>    
+
+    </statement>
+  </example>
+
+  <p>
+    Now, clearly, there is no group of order 0 (do you see why?). Is there a group of order 1? Well, suppose <m>\langle G,*\rangle</m> is such a group. Since <m>G</m> must contain an identity element <m>e</m>, we must have <m>G=\{e\}</m>, and since <m>e</m> is <m>G</m>'s identity element, we must have <m>e*e=e</m>. Clearly, in this case, the three group axioms hold. So <m>G</m> is a valid group, without much going on in it.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        If <m>G</m> is a group with <m>|G|=1</m>, then <m>G</m> is called the
+        <term>trivial group</term><fn>A good question to ask here is
+        why it's called <q>the</q> trivial group, rather than <q>a</q> trivial
+        group.  Indeed, there are infinitely many groups of order 1!
+        (Do you see why?) But it turns out that all of these groups are
+        <em>structurally</em> the same. Hence mathematicians end up
+        thinking of them as various instantiations of one group, rather
+        than separate groups. We will discuss this in more depth
+        shortly, when we introduce the idea of <em>isomorphism</em>.</fn>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Next suppose that group <m>\Gdot</m> has order 2. Then <m>G</m> must contain an identity element, <m>e</m>, and a non-identity element, <m>a</m>. Since <m>e</m> is its own inverse, and inverses are unique, <m>a</m> must be its own inverse as well. So <m>G</m> must have the following table.
+  </p>
+
+<table xml:id="Cayley2">
+
+<tabular halign="left">
+	 <row bottom="medium">
+		<cell right="medium"><m>*</m></cell>
+		<cell><m>e</m></cell>
+		<cell><m>a</m></cell>
+		</row>
+	<row >
+		<cell right="medium"><m>e</m></cell>
+		<cell><m>e</m></cell>
+		<cell><m>a</m></cell>
+		</row>
+	<row >
+		<cell right="medium"><m>a</m></cell>
+		<cell><m>a</m></cell>
+		<cell><m>e</m></cell>
+			</row>
+		</tabular>
+			<caption>Group table for a group of order <m>2</m></caption>
+			</table>    
+
+  <p>
+    It is straightforward to show that such a structure does satisfy all the group axioms (the only one we really need to check is associativity).
+  </p>
+
+  <p>
+    Now, what if group <m>\Gdot</m> has order 3? Note that <em>you can't have any entry appear more than once in the same row or same column</em> (excluding of course the labels outside the grid we're filling in), given <xref ref="uniquesols">Theorem</xref>. Is there only one way of filling in the table for a group of order 3? (Hint: consider what element must be the second row, third column entry.)
+  </p>
+
+<table xml:id="Cayley3">
+
+<tabular halign="left">
+	 <row bottom="medium">
+		<cell right="medium"><m>*</m></cell>
+		<cell><m>e</m></cell>
+		<cell><m>a</m></cell>
+		<cell><m>b</m></cell>
+	</row>
+	<row >
+		<cell right="medium"><m>e</m></cell>
+		<cell><m></m></cell>
+		<cell><m></m></cell>
+		<cell><m></m></cell>
+		</row>
+	<row >
+		<cell right="medium"><m>a</m></cell>
+		<cell><m></m></cell>
+		<cell><m></m></cell>
+		<cell><m></m></cell>
+		</row>
+	<row >
+		<cell right="medium"><m>b</m></cell>
+		<cell><m></m></cell>
+		<cell><m></m></cell>
+		<cell><m></m></cell>
+		</row>
+	</tabular>
+			<caption>Incomplete group table for a group of order <m>3</m></caption>
+			</table>    
+
+  <p>
+    Finally, what if group <m>\Gdot</m> has order 4? It turns out in this case there are <em>two</em> valid ways of filling in a group table!
+  </p>
+
+  <p>
+    What we have been doing here is really getting into the idea of the
+    <em>structure</em> of groups, and when we can consider groups to be
+    essentially <q>the same</q> or fundamentally <q>different.</q> We approach
+    this more formally via the concepts of homomorphism and isomorphism.
+  </p>
+</section>
+
+<section>
+  <title>Introduction to homomorphisms and isomorphisms</title>
+  <definition>
+    <statement>
+      <p>
+        Let <m>\langle S,*\rangle</m> and <m>\langle S',*'\rangle</m> be binary structures. A
+        function <m>\phi</m> from <m>S</m> to <m>S'</m> is a <term>homomorphism</term> if
+        <me>
+          \phi(a* b)=\phi(a)*'\phi(b)
+        </me>
+        for all <m>a,b\in S</m>. An <term>isomorphism</term> is a homomorphism that is also a bijection.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Intuitively, you can think of a homomorphism <m>\phi</m> as a
+    <q>structure-preserving</q> map: if you multiply and then apply <m>\phi</m>,
+    you get the same result as when you first apply <m>\phi</m> and then
+    multiply. Isomorphisms, then, are both structure-preserving and
+    cardinality-preserving.
+  </p>
+
+  <note>
+
+  <p>
+    We may omit the <m>*</m> and <m>*'</m>, as per our group conventions, but we include them here to emphasize that the operations in the structures may be distinct from one another. When we omit them and write <m>\phi(st)=\phi(s)\phi(t)</m>, then it is the writers' and readers' responsibility to keep in mind that <m>s</m> and <m>t</m> are being operated together using the operation in <m>S</m>, while <m>\phi(s)</m> and <m>\phi(t)</m> are being operated together using the operation in <m>S'</m>.
+  </p>
+
+  </note>
+
+  <remark>
+    <p>
+      There may be more than one homomorphism
+      [isomorphism] from one binary structure to another (see <xref ref="homos">Example</xref>).
+    </p>
+  </remark>
+
+  <example xml:id="homos">
+    <statement>
+      <p>
+        For each of the following, decide whether or not the given function
+        <m>\phi</m> from one binary structure to another is a homomorphism, and,
+        if so, if it is an isomorphism. Prove or disprove your answers! For
+        Parts 6 and 7, <m>C^0</m> is the set of all continuous functions from
+        <m>\R</m> to <m>\R</m>; <m>C^1</m> is the set of all differentiable functions
+        from <m>\R</m> to <m>\R</m> whose derivatives are continuous; and each
+        <m>+</m> indicates pointwise addition on <m>C^0</m> and <m>C^1</m>. (Note that
+        <m>C^1</m> and <m>C^0</m> are not groups, since elements of them will not have
+        inverses unless they are bijections.)
+        <ol>
+          <li>
+            <p>
+              <m>\phi:\langle \Z,+\rangle \to \langle \Z,+\rangle</m> defined by <m>\phi(x)=x</m>;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\phi:\langle \Z,+\rangle \to \langle \Z,+\rangle</m> defined by <m>\phi(x)=-x</m>;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\phi:\langle \Z,+\rangle \to \langle \Z,+\rangle</m> defined by <m>\phi(x)=2x</m>;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\phi:\langle \R,+\rangle \to \langle \R^+,\cdot\,\rangle</m> defined by <m>\phi(x)=e^x</m>;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\phi:\langle \R,+\rangle \to \langle \R^*,\cdot\,\rangle</m> defined by <m>\phi(x)=e^x</m>;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\phi:\langle C^1,+\rangle \to \langle C^0,+\rangle</m> defined by <m>\phi(f)=f'</m> (the derivative of
+              <m>f</m>);
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\phi:\langle C^0,+\rangle \to \langle \R,+\rangle</m> defined by <m>\phi(f)=\displaystyle{\int_0^1 f(x)\, dx}</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Let <m>\Gdot</m> be a group and let <m>a\in G</m>. Then the
+        function <m>c_a</m> from <m>G</m> to <m>G</m> defined by <m>c_a(x)=axa^{-1}</m> (for
+        all <m>x\in G</m>) is a homomorphism. Indeed, let <m>x,y\in G</m>. Then
+        <md>
+          <mrow>c_a(xy)\amp =a(xy)a^{-1}</mrow>
+          <mrow>\amp =(ax)e(ya^{-1})</mrow>
+          <mrow>\amp =(ax)(a^{-1}a)(ya^{-1})</mrow>
+          <mrow>\amp =(axa^{-1})(aya^{-1})</mrow>
+          <mrow>\amp =c_a(x)c_a(y).</mrow>
+        </md>
+      </p>
+
+      <p>
+        The homomorphism <m>c_a</m> is called
+        <term>conjugation by <m>a</m></term>. Homomorphisms from a group <m>G</m> to
+        itself are called <term>automorphisms</term>. Thus, conjugation by any
+        element <m>a</m> in <m>G</m> is an automorphism of <m>G</m>. (Beware: Some texts use <q>conjugation by <m>a</m></q> to 
+        refer to the function <m>x\mapsto a^{-1}xa</m>.) Both versions of conjugation by <m>a</m> in group <m>G</m> are
+        automorphisms of <m>G</m>.)</p>
+    </statement>
+  </example>
+
+  <p>
+    We end with a theorem stating basic facts about
+    homomorphisms from one group to another. (<em>Note.</em> This doesn't apply to arbitrary binary structures, which may or may not even have identity elements.)
+  </p>
+
+  <theorem xml:id="homoprops">
+    <statement>
+      <p>
+        Let <m>\langle G,\cdot\rangle</m> and <m>\langle G',\cdot'\rangle</m> be groups with identity elements <m>e</m> and <m>e'</m>, respectively, and let <m>\phi</m> be a homomorphism from <m>G</m> to <m>G'</m>. Then:
+        <ol>
+          <li>
+            <p>
+              <m>\phi(e)=e'</m>; and
+            </p>
+          </li>
+
+          <li>
+            <p>
+              For every <m>a\in G</m>, <m>\phi(a)^{-1}=\phi(a^{-1})</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+
+  <proof>
+    <p>
+      For Part 1, note that
+      <md>
+        <mrow>\phi(e)\cdot'e'\amp =\phi(e)\amp \amp \text{ (by definition of \(e'\)) }</mrow>
+        <mrow>\amp =\phi(e\cdot e) \amp \amp \text{ (by definition of \(e\)) }</mrow>
+        <mrow>\amp =\phi(e)\cdot'\phi(e) \amp \amp \text{ (since \(\phi\) is a homomorphism). }</mrow>
+      </md>
+    </p>
+
+    <p>
+      Thus, by left
+      cancellation, <m>e'=\phi(e)</m>. The proof of Part 2 is left as an exercise for the reader.
+    </p>
+  </proof>
+
+  </theorem>
+</section>
+
+<section>
+  <title>Isomorphic groups</title>
+  <p>
+    One of the key ideas we've discussed in determining whether binary
+    structures are essentially <q>the same</q> or <q>different.</q> We approach
+    this rigorously using the concept of <em>isomorphic</em> groups.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        We say that two groups <m>G</m> and <m>G'</m> (or binary
+        structures <m>S</m> and <m>S'</m>) are <term>isomorphic</term>, and write
+        <m>G\simeq G'</m>, if there exists an isomorphism from <m>G</m> to <m>G'</m>.
+        We say that <m>G</m> is <term>isomorphic to <m>G'</m> via <m>\phi</m></term> if
+        <m>\phi</m> is an isomorphism from <m>G</m> to <m>G'</m>. If there exists no
+        isomorphism from <m>G</m> and <m>G'</m>, then we say that <m>G</m> and <m>G'</m>
+        are <term>nonisomorphic</term>, and write <m>G\not\simeq G'</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <warning>
+    <p>
+      Just because a particular map (even an
+      <q>obvious</q> one) from group <m>G</m> to group <m>G'</m> is not an isomorphism,
+      we do not know that <m>G</m> and <m>G'</m> are not isomorphic! For instance,
+      the map <m>\phi: \Z\to \Z</m> defined by <m>\phi(x)=2x</m> for all <m>x</m> is <em>not</em>
+      an isomorphism (since it's not onto), but <m>\Z</m> <em>is</em> isomorphic to itself, as we will see in Part 1 of <xref ref="groupisoequiv">Theorem</xref>.
+    </p>
+  </warning>
+
+  <p>
+    Isomorphic groups have <em>the same structure</em> as far as
+    algebraists are concerned. Again, picture two houses that are
+    identical except for the colors they are painted. Though they
+    differ in some ways (one house is red while the other is
+    green), they are structurally identical. Isomorphic groups
+    have identical structures, though the elements of one group may
+    differ greatly from those of the other. Returning to the house
+    analogy: if two houses are structurally identical, we can learn
+    many things about one house by looking at the other (e.g., how
+    many bathrooms it has, whether it has a basement, etc.).
+    Similarly, suppose we know a great deal about group <m>G</m> and are
+    given a new group, <m>G'</m>. If we prove that <m>G'</m> is isomorphic
+    to <m>G</m>, then we can likely deduce information about <m>G'</m> from
+    the information we know about <m>G</m>.
+  </p>
+
+  <theorem xml:id="groupisoequiv">
+    <statement>
+      <p>
+        Let <m>\langle G,\cdot\rangle</m>, <m>\langle G',\cdot'\rangle</m>, and <m>\langle G'',\cdot''\rangle</m> be groups.
+        <ol>
+          <li>
+            <p>
+              Group <m>G</m> is isomorphic to itself.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If <m>\phi</m> is an isomorphism from <m>G</m> to group <m>G'</m>, then there exists an isomorphism from <m>G'</m> to <m>G</m>. Hence, <m>G\simeq G'</m> if and only if <m>G'\simeq G</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If <m>G\simeq G'</m> and <m>G'\simeq G''</m>, then <m>G\simeq G''</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+
+  <proof>
+    <p>
+      For Part 1: The identity map <m>1_G:G\to G</m> defined by
+      <m>1_G(a)=a</m> for all <m>a\in G</m> is clearly an isomorphism.
+    </p>
+
+    <p>
+      For Part 2: Since <m>\phi</m> is an isomorphism, it's a bijection, hence
+      has inverse <m>\phi^{-1}</m>. From <xref ref="invbij">Theorem</xref>, we know that
+      <m>\phi^{-1}</m> must also be a bijection (in this case, from <m>G'</m> to
+      <m>G</m>). So it suffices to show that <m>\phi^{-1}</m> is a homomorphism.
+      Let <m>a,b\in G'</m>. We want to show that
+      <m>\phi^{-1}(a\cdot'b)=\phi^{-1}(a)\cdot\phi^{-1}(b)</m>. Since <m>\phi</m> is 1-1, it suffices to show that
+      <me>
+        \phi(\phi^{-1}(a\cdot'b))=\phi(\phi^{-1}(a)\cdot\phi^{-1}(b)).
+      </me>
+    </p>
+
+    <p>
+      Notice, we have
+      <m>\phi(\phi^{-1}(a\cdot'b))=a\cdot'b</m>; further, we have
+      <me>
+        \phi(\phi^{-1}(a)\cdot\phi^{-1}(b))=\phi(\phi^{-1}(a))\cdot'\phi(\phi^{-1}(b))=a\cdot'b.
+      </me>
+    </p>
+
+    <p>
+      This shows that
+      <m>\phi^{-1}(a\cdot'b)=\phi^{-1}(a)\cdot\phi^{-1}(b)</m>, as desired.
+    </p>
+
+    <p>
+      For Part 3: Since <m>G\simeq G'</m> and <m>G'\simeq G''</m>, there exist
+      isomorphisms <m>\phi:G\to G'</m> and <m>\psi:G'\to G''</m>. Define
+      <m>\theta:G\to G''</m> by <m>\theta=\psi \circ \phi</m>. Since <m>\phi</m> and
+      <m>\psi</m> are both bijections, <m>\theta</m> is a bijection (<xref ref="compbij">Theorem</xref>). Next, let <m>a,b\in G</m>. The
+      <md>
+        <mrow>\theta(a\cdot b)\amp =\psi(\phi(a\cdot b))\amp \amp \text{ (by definition of \(\theta\)) }</mrow>
+        <mrow>\amp =\psi(\phi(a)\cdot'\phi(b))\amp \amp \text{ (since \(\phi\) is a homomorphism) }</mrow>
+        <mrow>\amp =\psi(\phi(a))\cdot''\psi(\phi(b))\amp \amp \text{ (since \(\psi\) is a homomorphism) }</mrow>
+        <mrow>\amp =\theta(a)\cdot''\theta(b)\amp \amp \text{ (by definition of \(\theta\)) } .</mrow>
+      </md>
+    </p>
+
+    <p>
+      Thus, <m>\theta</m> is a homomorphism, and hence, since it is also a bijection, an isomorphism.
+    </p>
+  </proof>
+</theorem>
+
+  <remark><p>
+To show that given groups <m>G</m> and <m>G'</m> are isomorphic, we must do three things:
+
+<ol>
+<li><p> <em>Define</em> a function <m>\phi</m> from <m>G</m> to <m>G'</m> (or from <m>G'</m> to <m>G</m>, as we have <xref ref="groupisoequiv">Theorem</xref>).</p></li>
+<li><p>Prove that <m>\phi</m> is a homomorphism.</p></li>
+<li><p>Prove that <m>\phi</m> is a bijection.</p></li>
+</ol></p>
+</remark>
+
+
+
+<note>
+<p>Remember, you can show that <m>\phi</m> is a bijection by proving that it's one-to-one and onto, <em>or</em> by showing that it has an inverse.</p>
+</note>
+
+  <warning>
+    <p>
+      Do <em>NOT</em> try to prove that a function <m>\phi</m> is an isomorphism WITHOUT DEFINING <m>\phi</m>!
+    </p>
+  </warning>
+
+  <p>
+    We know provide some terminology that will be helpful for our study of the structures of groups.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        Given a certain property (or properties), we say there
+        is a <term>unique group</term> with that property (or properties) <term>up to isomorphism</term> if any two groups sharing that property (or
+        properties) are isomorphic to one another.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    This may seem a little abstruse at the moment, but seeing examples will help illuminate the concept.
+  </p>
+
+  <example>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            If <m>G</m> and <m>G'</m>are groups with <m>|G|=|G'|=1</m>, then <m>G\simeq G'</m>, since the map from <m>G</m> to <m>G'</m> sending <m>G</m>'s identity (and sole) element to <m>G'</m>'s identity
+            (and sole) element is clearly an isomorphism.  This is why we can mildly abuse terminology and call any group of order 1 <em>the</em> trivial group instead of <em>a</em> trivial group: <m>G</m> and
+            <m>G'</m> may technically be different groups, but structurally they are identical, so we can consider them to be more or less <q>the same.</q>  Thus, there is a unique group of order 1, up to isomorphism.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Let <m>G</m> be a group with <m>|G|=2</m>.  Then <m>G</m> must consist of an identity element <m>e</m> and a nonidentity element <m>a</m>, and have the following group table. Compare the group tables for <m>G</m> and for the specific two-element group <m>\Z_2</m>.
+
+
+     <table xml:id="twoetable">
+
+<tabular halign="center">
+	 <row bottom="medium">
+		<cell right="medium"><m>*</m></cell>
+		<cell><m>e</m></cell>
+		<cell><m>a</m></cell>
+			</row>
+	<row >
+		<cell right="medium"><m>e</m></cell>
+		<cell><m>e</m></cell>
+		<cell><m>a</m></cell>
+	</row>	
+	<row >
+		<cell right="medium"><m>a</m></cell>
+		<cell><m>a</m></cell>
+		<cell><m>e</m></cell>
+	</row>
+</tabular>
+		<caption>Group table for an arbitrary two-element group <m>G</m></caption>
+			</table>    
+
+
+
+    <table xml:id="z2table">
+
+<tabular halign="center">
+	 <row bottom="medium">
+		<cell right="medium"><m>+</m></cell>
+		<cell><m>0</m></cell>
+		<cell><m>1</m></cell>
+			</row>
+	<row >
+		<cell right="medium"><m>0</m></cell>
+		<cell><m>0</m></cell>
+		<cell><m>1</m></cell>
+		</row>	
+	<row >
+		<cell right="medium"><m>1</m></cell>
+		<cell><m>1</m></cell>
+		<cell><m>0</m></cell>
+	</row>
+</tabular>
+		<caption>Group table for <m>\Z_2</m></caption>
+			</table>    
+
+
+
+Note that the first table looks exactly like the second table if we
+            replace <m>*</m> with <m>+</m>, each <m>e</m> with <m>0</m>, and each <m>a</m> with <m>1</m>. This
+            shows that groups <m>G</m> and <m>\Z_2</m> have identical structures; more
+            precisely, it shows that the function <m>\phi</m> from <m>G</m> to <m>\Z_2</m>
+            defined by <m>\phi(e)=0</m> and <m>\phi(a)=1</m> is an isomorphism.  Since any
+            group of order 2 is isomorphic to <m>\Z_2</m>, using <xref ref="groupisoequiv">Theorem</xref> we see that there is a unique group of order 2,
+            up to isomorphism.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            A similar argument shows that there is a unique group of order 3 up to isomorphism: specifically, any group of order 3 is isomorphic to <m>\Z_3</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            We will see later, in <xref ref="x4nonunique">Example</xref>, that there is <em>not</em> a unique group of order 4 up to isomorphism: that is, there are two nonisomorphic groups of order 4.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        The groups <m>\langle \R,+\rangle</m> and <m>\langle \R^+, \cdot\rangle</m> are isomorphic.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        Define <m>\phi:\R\to \R^+</m> by <m>\phi(x)=e^x</m>. Our map
+        <m>\phi</m> is a homomorphism since for every <m>x,y\in \R</m>, we have
+        <me>
+          \phi(x+y)=e^{x+y}=e^xe^y=\phi(x)\phi(y).
+        </me>
+      </p>
+
+      <p>
+        Moreover, <m>\phi</m> is a
+        bijection, since it has inverse function <m>\ln x: \R^+\to \R</m>.
+        Hence, <m>\R \simeq \R^+</m> via isomorphism <m>\phi</m>.
+      </p>
+    </proof>
+
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Let <m>n\in \Z^+</m>. Then the groups <m>\langle n\Z,+\rangle</m> and <m>\langle \Z,+\rangle</m> are isomorphic. The proof of this is left as an exercise for the reader.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    We have now seen examples in which we have proved that two groups
+    are isomorphic. How, though, do we prove that two groups are <em>not</em> isomorphic? It is usually wildly impractical, if not
+    impossible, to check that no function from one group to the other is
+    an isomorphism. For instance, it turns out that <m>\R^*</m> is not
+    isomorphic to <m>GL(2,\R)</m> (see <xref ref="rgl">Example</xref>), but there are
+    infinitely many bijections from <m>\R^*</m> to <m>GL(2,\R)</m><mdash />it is
+    impossible to check that each one is not an isomorphism. Instead, we
+    use <em>group invariants</em>.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        A group property <m>P</m> is called a <term>group invariant</term>
+        if it is preserved under isomorphism.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Group invariants are <em>structural</em> properties. Some examples of group invariants are:
+    <ol>
+      <li>
+        <p>
+          Cardinality (since any isomorphism between groups is a bijection);
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Abelianness (the proof that this is a group invariant is left as an exercise for the reader);
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Number of elements which are their own inverses (proven by an argument similar to that in <xref ref="x4nonunique">Example</xref>).
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    A <em>nonexample</em> of a group invariant is the property of being a subset of <m>\R</m>.
+  </p>
+
+  <example xml:id="rgl">
+    <statement>
+      <p>
+        The group <m>\R</m> cannot be isomorphic to the group <m>GL(2,\R)</m> since the former group is abelian and the latter nonabelian.
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        The groups <m>\R</m> and <m>\Q</m> cannot be isomorphic since the former group is uncountable and the latter countable.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    Sometimes we must resort to trickier methods in order to decide whether or not two groups are isomorphic.
+  </p>
+
+  <example xml:id="zq">
+    <statement>
+      <p>
+        The groups <m>\Z</m> and <m>\Q</m> are not isomorphic. We use contradiction to prove this. Suppose that <m>\Z</m> and <m>\Q</m> are isomorphic via isomorphism
+        <m>\phi :\Q \to \Z</m>. Let <m>a\in \Q</m>. Then <m>a/2 \in \Q</m> with
+        <m>a/2 + a/2 =a</m>. Then
+        <me>
+          \phi(a/2)+\phi(a/2)=
+          \phi(a/2+a/2)=\phi(a);
+        </me>
+        since <m>\phi(a/2)</m> is in <m>\Z</m>, <m>\phi(a)</m>
+        must be evenly divisible by 2. But <m>a</m> was arbitrary in <m>\Q</m> and
+        <m>\phi</m> is onto, so this means every element of <m>\Z</m> must be evenly
+        divisible by 2, which is clearly false. Thus, <m>\Z\not\simeq \Q</m>.
+      </p>
+    </statement>
+  </example>
+
+  <example xml:id="x4nonunique">
+    <statement>
+      <p>
+        The groups <m>\Z_4</m> and <m>V=\Z_2^2</m> are not isomorphic. Why? Well, they are both abelian of order 4, so we cannot use cardinality or commutativity to prove they are nonisomorphic. The gist of our argument will be to note that every element in <m>V</m> is its own inverse; so if <m>V</m> and <m>\Z_4</m> are isomorphic (hence structurally identical) we must have that every element of <m>\Z_4</m> is also its own inverse, which doesn't hold (e.g., in <m>\Z_4</m>, <m>3+3=2</m>, not <m>0</m>).
+      </p>
+
+      <p>
+        A rigorous proof of the fact that <m>V</m> and <m>\Z_4</m> are not isomorphic is as follows: For now, denote the usual operation on <m>V</m> by <m>*</m>. Suppose that <m>V</m> and <m>\Z_4</m> are isomorphic, via isomorphism <m>\phi</m> from <m>V</m> to <m>\Z_4</m>. Then since <m>\phi</m> is onto, there exists an element <m>a\in V</m> such that <m>\phi(a)=3</m>. Then
+        <md>
+          <mrow>3+3\amp =\phi(a)+\phi(a)\amp \amp \text{ (by definition of \(a\)) }</mrow>
+          <mrow>\amp =\phi(a*a) \amp \amp \text{ (since \(\phi\) is a homomorphism) }</mrow>
+          <mrow>\amp =\phi((0,0)) \amp \amp \text{ (since every element of \(V\) is its own inverse) }</mrow>
+          <mrow>\amp =0, \amp \amp</mrow>
+        </md>
+        since <m>\phi</m> is a homomorphism, so sends identity element to identity element. But this is a contradiction, since <m>3+3=2\neq 0</m> in <m>\Z_4</m>. Thus, <m>V\not\simeq \Z_4</m>.
+      </p>
+    </statement>
+  </example>
+</section>
+
+  <xi:include  href="./exercises/homosex.ptx" />
+</chapter>

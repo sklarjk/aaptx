@@ -1,0 +1,828 @@
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="factorgps">
+  <title>Factor Groups</title>
+<section>
+  <title>Motivation</title>
+  <p>
+    We mentioned previously that given a subgroup <m>H</m> of <m>G</m>, we'd like
+    to use <m>H</m> to get at some understanding of <m>G</m>'s entire structure.
+    Recall that we've defined <m>G/H</m> to be the set of all left cosets of
+    <m>H</m> in <m>G</m>. What we'd like to do now is equip <m>G/H</m> with some
+    operation under which <m>G/H</m> is a group! The natural way to do this
+    would be to define multiplication on <m>G/H</m> by
+    <me>
+      (aH)(bH)=abH \text{ for all } a,b\in G.
+    </me>
+  </p>
+
+  <p>
+    Ok, so let's do that! But wait: we're defining this operation
+    by referring to coset representatives, so we'd better make sure
+    our operation is well defined. Only it sadly turns out that in
+    general this operation is <em>not</em> well defined. For
+    example:
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Let <m>H=\langle (12)\rangle</m> in <m>S_3</m>, and let <m>a=(13)</m> and
+        <m>b=(132)</m>. Let <m>x=aH</m> and <m>y=bH</m> in <m>S_3/H</m>. Then using the
+        above-defined operation on <m>G/H</m> we'd have
+        <me>
+          xy=(aH)(bH)=abH=(13)(132)H=(23)H.
+        </me>
+      </p>
+
+      <p>
+        But also <m>x=(123)H</m> and <m>y=(23)H</m>, so
+        we'd also have
+        <me>
+          xy=((123)H)((23)H))=(123)(23)H=(12)H=H\neq (23)H.
+        </me>
+      </p>
+
+      <p>
+        So this operation isn't well defined.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    The question for us now becomes: what conditions must hold
+    for <m>H</m> in <m>G</m> in order for operation
+    <me>
+      (aH)(bH)=abH
+    </me>
+    on <m>G/H</m>
+    to be well defined? It turns out that this operation is well
+    defined exactly when <m>H</m> is normal in <m>G</m>! We state this in the
+    following theorem:
+  </p>
+
+  <theorem xml:id="cmwd">
+    <statement>
+      <p>
+        Let <m>H\leq G</m>. Then the operation
+        <me>
+          (aH)(bH)=abH
+        </me>
+        on
+        <m>G/H</m> is well defined if and only if <m>H \unlhd G</m>.
+      </p>
+    </statement>
+  
+
+  <proof>
+    <p>
+      First, assume that the described operation is well defined. Let <m>a\in G</m>; we want to show that <m>aH=Ha</m>.</p><p>Well, let <m>x\in aH</m>. Then
+      <me>
+        (xH)(a^{-1}H)=xa^{-1}H
+      </me>
+      and, since
+      <m>xH=aH</m>,
+      <me>
+        (xH)(a^{-1}H)=(aH)(a^{-1}H)=aa^{-1}H=H.
+      </me>
+      Since our operation on <m>G/H</m> is well defined, this means that
+      <m>xa^{-1}H=H</m>, so <m>xa^{-1}\in H</m>; thus, <m>x\in Ha</m>. We conclude that
+      <m>aH\subseteq Ha</m>. The proof that <m>Ha\subseteq aH</m> is similar. So <m>aH=Ha</m>, and thus, since <m>a\in G</m> was arbitrary, 
+      <m>H</m> is normal in <m>G</m>.
+    </p>
+
+
+<p> Conversely, assume <m>H\unlhd  G</m>.
+      Let <m>a_1,a_2,b_1,b_2\in G</m> with <m>a_1H=a_2H</m> and
+      <m>b_1H=b_2H</m>. We want to show that then <m>a_1b_1H=a_2b_2H</m>, that is,
+      that <m>(a_2b_2)^{-1}a_1b_1\in H</m>. Well, since <m>a_1H=a_2H</m> we have
+      <m>a_2^{-1}a_1\in H</m>. So
+      <me>
+        (a_2b_2)^{-1}a_1b_1=b_2^{-1}(a_2^{-1}a_1)b_1 \in b_2^{-1}Hb_1.
+      </me>
+    </p>
+
+    <p>
+      Next, since <m>H\unlhd G</m>,
+      we have <m>Hb_1=b_1H</m>, so <m>b_2^{-1}Hb_1=b_2^{-1}b_1H</m>; but since
+      <m>b_1H=b_2H</m>, we have <m>b_2^{-1}b_1\in H</m>, so <m>b_2^{-1}b_1H=H</m>. Thus,
+      <m>(a_2b_2)^{-1}a_1b_1\in H</m>, as desired.
+    </p>
+    
+  </proof>
+</theorem>
+
+  <definition>
+    <statement>
+      <p>
+        When <m>H\unlhd G</m>, the well defined operation
+        <m>(aH)(bH)=abH</m> on <m>G/H</m> is called <term>left coset
+        multiplication</term>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    It is clear that normal subgroups will be
+    very important for us in studying group structures. We therefore
+    spend some time looking at normal subgroups before returning to
+    equipping <m>G/H</m> with a group structure.
+  </p>
+</section>
+
+<section>
+  <title>Focusing on normal subgroups</title>
+  <p>
+    We first provide a theorem that will help us in identifying when a
+    subgroup of a group is normal. First, we provide a definition.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        Let <m>H</m> be a subgroup of <m>G</m> and <m>a,b</m> in <m>G</m>. We define
+        <me>
+          aHb=\{ahb\,:h\in H\}.
+        </me>
+      </p>
+    </statement>
+  </definition>
+
+  <theorem xml:id="norm_thm">
+    <statement>
+      <p>
+        Let <m>H</m> be a subgroup of a group <m>G</m>. Then the
+        following are equivalent:
+        <ol>
+          <li>
+            <p>
+              <m>H</m> is normal in <m>G</m>;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>aHa^{-1}=H</m> for all <m>a\in G</m>;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>aHa^{-1}\subseteq H</m> for all <m>a\in G</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+
+
+  <proof>
+    <p>
+      The equivalence of Statements 1 and 2 is clear, as is the
+      fact that Statement 2 implies Statement 3. So it suffices to show
+      that Statement 3 implies Statement 2. Well, assume that
+      <m>aHa^{-1}\subseteq H</m> for all <m>a\in G</m>, and let <m>b\in G</m>. We want
+      to show that <m>bHb^{-1}=H</m>. Since Statement 3 holds, we clearly have
+      <m>bHb^{-1}\subseteq H</m>. But, again using Statement 3, we also have
+      <m>b^{-1}Hb\subseteq H</m>; multiplying both sides of this equation on
+      the left by <m>b</m> and on the right by <m>b^{-1}</m>, we obtain <m>H\subseteq
+      bHb^{-1}</m>. Hence, since <m>bHb^{-1}\subseteq H</m> and <m>H\subseteq
+      bHb^{-1}</m>, those two sets are equal. Thus, Statement 2 is proven.
+    </p>
+  </proof>
+  </theorem>
+
+  <p>
+    We now consider some examples and nonexamples of normal subgroups of
+    groups.
+  </p>
+
+  <example>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            As previously mentioned, the trivial and improper subgroups of
+            any group <m>G</m> are normal in <m>G</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            As previously mentioned, if group <m>G</m> is abelian then each of
+            its subgroups is normal in <m>G</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Suppose <m>H\leq G</m> has <m>(G:H)=2</m>.  Then <m>H \unlhd G</m>. The proof of this is left as an exercise for the reader.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <xref ref="s3_ex">Example</xref> shows that subgroup <m>H=\langle (12)\rangle</m> isn't normal in
+            <m>S_3</m> (for example, <m>(13)H\neq H(13)</m>.  But <m>\langle (123)\rangle</m> must be
+            normal in <m>S_3</m> since <m>(S_3:\langle (123)\rangle )=6/3=2.</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\langle r\rangle</m> is normal in <m>D_n</m> since <m>(D_n:\langle r\rangle )=2</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\langle f\rangle</m> isn't normal in <m>D_4</m>: for instance,
+            <me>
+              r\langle f\rangle r^{-1}=\{e,rfr^3\}=\{e, fr^3r^3\}=\{e,fr^2\}\not\subseteq
+              \langle f\rangle .
+            </me>
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </example>
+
+  <p>
+    We consider two other very significant examples. First, we revisit the idea of the center of a group, first introduced in <xref ref="zgdef">Example</xref>.
+  </p>
+
+  
+ <definition>
+ <statement>
+ <p> Let <m>G</m>
+    be a group. We let
+    <me>
+      Z(G)=\{z\in G\,:\, az=za \text{ for all } a\in
+      G\}.
+    </me>
+    <m>Z(G)</m> is called the <term>center</term> of <m>G</m>.</p><p>(The Z stands for <q>zentrum,</q> the German word for <q>center.</q>)
+ </p>
+</statement>
+
+
+</definition>
+
+  <theorem>
+    <statement>
+      <p>
+        Let <m>G</m> be a group. Then <m>Z(G)</m> is a subgroup of <m>G</m>.
+      </p>
+    </statement>
+
+  <proof>
+    <p>
+      Clearly,
+      <m>e\in Z(G)</m>. Next, let <m>z,w\in Z(G)</m>. Then for all <m>a \in G</m>,
+      <me>
+        a(zw)=(az)w=(za)w=z(aw)=z(wa)=(zw)a,
+      </me>
+      so <m>zw\in Z(G)</m>. Finally, <m>az=za</m> so, multiplying both
+      sides on the left and right by <m>z^{-1}</m>, we have <m>z^{-1}a=az^{-1}</m>;
+      thus, <m>z^{-1}\in Z(G)</m>. Hence, <m>Z(G)\leq G</m>.
+    </p>
+  </proof>
+
+  </theorem>
+
+  <theorem xml:id="znorm">
+    <statement>
+      <p>
+        Let <m>G</m> be a group and let <m>H</m> be a subgroup of <m>G</m> with <m>H\subseteq Z(G)</m>. Then <m>H\unlhd G</m>. In particular, <m>Z(G)</m> is itself a normal
+        subgroup of <m>G</m>.
+      </p>
+    </statement>
+  
+  <proof>
+    <p>
+      Let <m>a\in G</m>.
+      Then since every element of <m>Z(G)</m> commutes with every element of
+      <m>G</m>, every element of <m>H</m> commutes with every element of <m>G</m>; so we must have <m>aH=Ha</m>. Thus,
+      <m>H\unlhd G</m>.
+    </p>
+  </proof>
+</theorem>
+
+  <p>
+    The next definition is profoundly important for us.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        Let <m>G</m> and <m>G'</m> be groups and let <m>\phi</m> a
+        homomorphism from <m>G</m> to <m>G'</m>. Letting <m>e'</m> be the identity
+        element of <m>G'</m>, we define the <term>kernel of <m>\phi</m></term>, <m>\Ker
+        \phi</m>, by
+        <me>
+          \Ker \phi = \{k\in G\,:\,\phi(k)=e'\}.
+        </me>
+      </p>
+    </statement>
+    <notation><usage>\Ker \phi</usage><description>the kernel of <m>\phi</m></description></notation>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        Let <m>G</m> and <m>G'</m> be groups and let <m>\phi</m> be a
+        homomorphism from <m>G</m> to <m>G'</m>. Then <m>\Ker \phi</m> is a normal subgroup
+        of <m>G</m>.
+      </p>
+    </statement>
+    <proof>
+      <p>
+        Let <m>K=\Ker \phi</m>. We first show that <m>K</m> is a subgroup of
+        <m>G</m>. Clearly, the identity element of <m>G</m> is in <m>K</m>, so <m>K\neq
+        \emptyset</m>. Next, let <m>k,m\in K</m>. Then, letting <m>e'</m> denote the
+        identity element of <m>G'</m>, we have
+        <me>
+          \phi(km^{-1})=\phi(k)\phi(m)^{-1}=e'(e')^{-1}=e',
+        </me>
+        so <m>km^{-1}\in
+        K</m>. Thus, by the <xref ref="twostep" text="title"/>, we have that <m>K</m> is a
+        subgroup of <m>G</m>.
+      </p>
+
+      <p>
+        Next, let <m>k\in K</m> and let <m>a\in G</m>. Then
+        <me>
+          \phi(aka^{-1})=\phi(a)\phi(k)\phi(a)^{-1}=\phi(a)e'\phi(a)^{-1}=\phi(a)\phi(a)^{-1}=e'.
+        </me>
+      </p>
+
+      <p>
+        So <m>aka^{-1}\in K</m>. Thus, <m>K \unlhd G</m>.
+      </p>
+    </proof>
+
+  </example>
+
+  <p>
+    One slick way, therefore, of showing that a particular set is a
+    normal subgroup of a group <m>G</m> is by showing it's the kernel of a
+    homomorphism from <m>G</m> to another group.
+  </p>
+
+  <example xml:id="slnormgl">
+    <statement>
+      <p>
+        Let <m>n\in \Z^+</m>. Here is a rather elegant proof of the fact that
+        <m>SL(n,\R)</m> is a normal subgroup of <m>GL(n,\R)</m>: Define <m>\phi:
+        GL(n,\R) \to \R^*</m> by <m>\phi(A)=\det A</m>. Clearly, <m>\phi</m> is a
+        homomorphism, and since the identity element of <m>\R^*</m> is 1,
+        <me>
+          \Ker \phi=\{A\in GL(n,\R)\,:\,\det A= 1\}=SL(n,\R).
+        </me>
+      </p>
+
+      <p>
+        So
+        <m>SL(n,\R)\unlhd GL(n,\R)</m>.
+      </p>
+    </statement>
+  </example>
+</section>
+
+<section>
+  <title>Introduction to factor groups</title>
+  <p>
+    We now return to the notion
+    of equipping <m>G/H</m>, when <m>H\unlhd G</m>, with a group structure.
+    We have already saw that left coset multiplication on <m>G/H</m>
+    is well defined when <m>H\unlhd G</m> (<xref ref="cmwd">Theorem</xref>); it turns out that given this,
+    it is very easy to prove that <m>G/H</m> under this operation is a
+    group.
+  </p>
+
+  <p>
+    Before we prove this, we introduce a change in our notation: We
+    initiate the convention of frequently using <m>N</m>, rather than <m>H</m>, to
+    denote a subgroup of a group <m>G</m> when we know that that subgroup is
+    <em>normal</em> in <m>G</m>.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        Let <m>G</m> be a group with identity element <m>e</m>, and let <m>N\unlhd G</m>. Then <m>G/N</m> is a
+        group under left coset multiplication (that is, under the operation
+        <m>(aN)(bN)=abN</m> for all <m>a,b\in G</m>), and <m>|G/N|=(G:N)</m> (in
+        particular, if <m>|G|\lt \infty</m>, then <m>|G/N|=|G|/|N|</m>).
+      </p>
+    </statement>
+
+  <proof>
+    <p>
+      We already know that since <m>N\unlhd G</m>, left coset
+      multiplication on <m>G/N</m> is well defined; further, it is clear
+      that <m>G/N</m> is closed under this operation.
+    </p>
+
+    <p>
+      Associativity of this operation on <m>G/N</m> follows from the
+      associativity of <m>G</m>'s operation: indeed, if <m>aN</m>, <m>bN</m>, <m>cN \in
+      G/N</m>, then
+      <me>
+        ((aN)(bN))(cN)=(abN)(cN)=(ab)cN=a(bc)N=(aN)(bcN)=(aN)((bN)(cN)).
+      </me>
+    </p>
+
+    <p>
+      Next, <m>N=eN\in G/N</m> acts as an identity element since for all <m>a\in
+      G</m>,
+    </p>
+
+    <p>
+      <m>(aN)(N)=aeN=aN</m> and <m>N(aN)=eaN=aN</m>.
+    </p>
+
+    <p>
+      Finally, let <m>aN\in G/N</m>. Then <m>a^{-1}N\in G/N</m> with
+      <m>(aN)(a^{-1}N)=aa^{-1}N=N</m> and <m>(a^{-1}N)(aN)=a^{-1}aN=N</m>.
+    </p>
+
+    <p>
+      So <m>G/N</m> is a group under left coset multiplication. Since <m>(G:N)</m>
+      is, by definition, the cardinality of <m>G/N</m>, we're done.
+    </p>
+  </proof>
+  </theorem>
+
+
+  <definition>
+    <statement>
+      <p>
+        When <m>G</m> is a group and <m>N\unlhd G</m>, the above group
+        (<m>G/N</m> under left coset multiplication) is called a <term>factor
+        group</term> or <term>quotient group</term>.
+      </p>
+    </statement>
+    <notation><usage>G/N</usage><description>factor group <m>G/N</m></description></notation>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        Let <m>G=\Z</m> and <m>N=3\Z</m>. Then <m>N</m> is normal in <m>G</m>, since <m>G</m> is abelian, so the set
+        <m>G/N=\{N,1+N,2+N\}</m> is a group under left coset multiplication.
+        Noting that <m>N=0+N</m>, it is straightforward to see that
+        <m>G/N</m> (that is, <m>\Z/3\Z</m>) has the following group table:
+      </p>
+
+      <p>
+
+     <table xml:id="z3-Cayley">
+
+<tabular halign="left">
+	 <row halign="center" bottom="medium">
+		<cell right="medium"><m>+</m></cell>
+		<cell><m>0+N</m></cell>
+		<cell><m>1+N</m></cell>
+		<cell><m>2+N</m></cell>
+	</row>
+	<row >
+		<cell right="medium"><m>0+N</m></cell>
+		<cell><m>0+N</m></cell>
+		<cell><m>1+N</m></cell>
+		<cell><m>2+N</m></cell>
+		</row>
+	<row >
+		<cell right="medium"><m>1+N</m></cell>
+		<cell><m>1+N</m></cell>
+		<cell><m>2+N</m></cell>
+		<cell><m>0+N</m></cell>
+		</row>
+	<row >
+		<cell right="medium"><m>2+N</m></cell>
+		<cell><m>2+N</m></cell>
+		<cell><m>0+N</m></cell>
+		<cell><m>1+N</m></cell>
+
+	</row>
+	</tabular>
+			<caption>Group table for <m>\Z/3\Z</m></caption>
+			</table>    
+
+
+        Clearly, if we ignore all the <m>+N's</m> after the <m>0</m>'s, <m>1</m>'s, and
+        <m>2'</m> in the above table, and consider <m>+</m> to be addition mod 3,
+        rather than left coset addition in <m>\Z/3\Z</m>, we obtain the group
+        table for <m>\Z_3</m>:
+
+
+     <table xml:id="z3-Cayley2">
+
+<tabular halign="center">
+	 <row bottom="medium">
+		<cell right="medium"><m>+</m></cell>
+		<cell><m>0</m></cell>
+		<cell><m>1</m></cell>
+		<cell><m>2</m></cell>
+	</row>
+	<row >
+		<cell right="medium"><m>0</m></cell>
+		<cell><m>0</m></cell>
+		<cell><m>1</m></cell>
+		<cell><m>2</m></cell>
+		</row>
+	<row >
+		<cell right="medium"><m>1</m></cell>
+		<cell><m>1</m></cell>
+		<cell><m>2</m></cell>
+		<cell><m>0</m></cell>
+		</row>
+	<row >
+		<cell right="medium"><m>2</m></cell>
+		<cell><m>2</m></cell>
+		<cell><m>0</m></cell>
+		<cell><m>1</m></cell>
+
+	</row>
+	</tabular>
+			<caption>Group table for <m>\Z_3</m></caption>
+			</table>    
+      
+    Thus, we see that <m>\Z/3\Z</m> is isomorphic to <m>\Z_3</m>.
+</p>
+    </statement>
+  </example>
+
+
+  <p>
+    This is not a coincidence! In fact, we have the following:
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        Let <m>n,d \in \Z^+</m> with <m>d</m> dividing <m>n</m>. Then we have:
+        <ol>
+          <li>
+            <p>
+              <m>n\Z\unlhd d\Z</m> and <m>\langle d\rangle \unlhd \Z_n</m>;
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>d\Z/n\Z\simeq \Z_{n/d}</m> (special case: <m>\Z/n\Z \simeq \Z_n</m>);
+              and
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>Z_n/\langle d\rangle  \simeq \Z_d</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+
+  <proof>
+    <ol>
+      <li>
+        <p>
+          Since <m>d</m> is a positive divisor of <m>n</m>, <m>n\Z</m> and
+          <m>\langle d\rangle</m> are clearly subgroups of, respectively, <m>d\Z</m> and <m>\Z_n</m>.
+          Moreover, since <m>d\Z</m> and <m>\Z_n</m> are abelian, all of their subgroups
+          are normal.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          This follows from the facts that <m>d\Z/n\Z=\langle d+n\Z\rangle</m>, hence
+          is cyclic, and that <m>|d\Z/n\Z|=(d\Z:n\Z)=n/d</m> (see <xref ref="indices_ex">Example</xref>). (Unpacking the statement that
+          <m>d\Z/n\Z=\langle d+n\Z\rangle</m>: Notice that <m>d\Z=\langle d\rangle</m>, so every element of
+          <m>d\Z</m> is of the form <m>kd</m> for some integer <m>k</m>. Thus, every element
+          of <m>d\Z/n\Z</m> is of the form <m>kd+n\Z</m> for some integer <m>k</m>. But for
+          each <m>k\in \Z</m>, using the definition of left coset multiplication we
+          have that <m>kd+n\Z=k(d+n\Z)</m>. So <m>d\Z/n\Z=\langle d+n\Z\rangle</m>.)
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Similarly, since <m>\Z_n=\langle 1\rangle</m>, <m>\Z_n/\langle d\rangle =\langle 1+\langle d\rangle \rangle</m>, so
+          is cyclic. Since <m>(\Z_n:\langle d\rangle )=d</m> (again, see <xref ref="indices_ex">Example</xref>), <m>\Z_n/\langle d\rangle</m> is isomorphic to <m>\Z_d</m>, as desired. \qedhere
+        </p>
+      </li>
+    </ol>
+  </proof>
+
+  </theorem>
+
+  <example>
+    <statement>
+      <p>
+        Let <m>N=\langle (123)\rangle  \leq S_3</m>. Since <m>(S_3:N)=2</m>,
+        <m>N</m> must be normal in <m>S_3</m>, so <m>S_3/N</m> is a group under left coset
+        multiplication. Since <m>|S_3/N|=2</m>, <m>S_3/N</m> must be isomomorphic to
+        <m>\Z_2</m>.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    In the above examples, we were able to identify <m>G/N</m> up to
+    isomorphism relatively easily because we could determine that <m>G/N</m>
+    was cyclic. In general, however, it can be quite difficult to
+    identify the group structure of a factor group. We explore some
+    powerful tools we can use in this identification in the next
+    section, but first we note a couple properties of <m>G</m> that are
+    <q>inherited</q> by any of its factor groups.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        Let <m>G</m> be a group and <m>N\unlhd G</m>. Then:
+        <ol>
+          <li>
+            <p>
+              If <m>G</m> is finite, then <m>G/N</m> is finite.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If <m>G</m> is abelian, then <m>G/N</m> is abelian; and
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If <m>G</m> is cyclic, then <m>G/N</m> is cyclic.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+
+  <proof>
+    <ol>
+      <li>
+        <p>
+          Clearly this holds, since in this case
+          <m>|G/N|=|G|/|N|</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          The proof of this statement is left as an exercise for the reader.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Let <m>G</m> be cyclic.  Then there exists <m>a\in G</m> with <m>G=\langle a\rangle</m>.  We claim <m>G/N=\langle aN\rangle</m>. Indeed:
+          <me>
+            \langle aN\rangle =\{(aN)^i\,:\,i\in \Z\}=\{a^iN\,:\,i\in \Z\}.
+          </me>
+          But every element of <m>G</m> is an integer power of <m>a</m>, so this set equals <m>\{xN\,:x\in G\}</m>, that is, it equals <m>G/N</m>.
+</p>
+      </li>
+    </ol>
+  </proof>
+
+  </theorem>
+
+  <warning>
+    <p>
+      However, <m>G</m> can be nonabelian [noncyclic, nonfinite] and
+      yet have a normal subgroup <m>N</m> such that <m>G/N</m> is abelian [cyclic,
+      finite]. (See the examples below.) Intuitively, the idea is that
+      modding out a group by a normal subgroup can <em>introduce</em>
+      abelianness or cyclicity, or finiteness, but not <em>remove</em>
+      one of those characteristics.
+    </p>
+  </warning>
+
+  <example>
+    <statement>
+      <p>
+        <m>S_3</m> is nonabelian (and therefore of course noncyclic), but we
+        saw above that <m>N=\langle (123)\rangle</m> is a normal subgroup of <m>S_3</m> with
+        <m>S_3/N \simeq \Z_2</m>, a cyclic (and therefore of course abelian)
+        group.
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        <m>\Z</m> is an infinite group, but it has finite factor group
+        <m>\Z/2\Z</m>.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    What do the (normal) subgroups of a factor group <m>G/N</m> look like?
+    Well, they come from the (normal) subgroups of <m>G</m>! We have the
+    following theorem, whose proof is tedious but straightforward.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        {<em>(Correspondence Theorem)</em>} Let <m>G</m> be a
+        group, and let <m>K\unlhd G</m>. Then the subgroups of <m>G/K</m> are exactly
+        those of the form <m>H/K</m>, where <m>H\leq G</m> with <m>K\subseteq H</m>.
+        Moreover, the normal subgroups of <m>G/K</m> are exactly those of the
+        form <m>N/K</m>, where <m>N\unlhd G</m> with <m>K\subseteq N</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <example>
+    <statement>
+      <p>
+        Let <m>N=18\Z</m> in <m>\Z</m>. Since the subgroups of <m>\Z</m> containing <m>N</m>
+        are the sets <m>d\Z</m> where <m>d</m> is a positive divisor of <m>18</m>, the
+        subgroups of <m>\Z/N</m> are the sets <m>d\Z/N</m>, where, again, <m>d</m> is a
+        positive divisor of <m>18</m>.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    We end this chapter by noting that given any group <m>G</m> and
+    factor group <m>G/N</m> of <m>G</m>, there is a homomorphism from <m>G</m> to <m>G/N</m>
+    that is onto. Before we define this homomorphism, we provide some
+    more terminology.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        Let <m>\phi: G\to G'</m> be a homomorphism of groups. Then
+        <m>\phi</m> is can be called an <term>epimorphism</term> if <m>\phi</m> is onto,
+        and a <term>monomorphism</term> if <m>\phi</m> is one-to-one. (Of course,
+        we already know that an epimorphism that is also a monomorphism
+        is called an <q>isomorphism.</q>)
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    We now present the following theorem, whose straightforward
+    proof is left to the reader.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        Let <m>G</m> be a group and let <m>N\unlhd G</m>. Then the
+        map <m>\Psi: G\to G/N</m> defined by <m>\Psi(g)=gN</m> is an epimorphism.
+      </p>
+    </statement>
+  </theorem>
+
+  <definition>
+    <statement>
+      <p>
+        We call this map <m>\Psi</m> the <term>canonical epimorphism
+        from <m>G</m> to <m>G/N</m></term>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Notice that given <m>N\unlhd G</m>, the kernel of the canonical
+    epimorphism from <m>G</m> to <m>G/N</m> is <m>N</m>. Thus, putting this fact
+    together with the fact that every kernel of a homomorphism is a
+    normal subgroup of the homomorphism's domain, we have the following:
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        Let <m>G</m> be a group and <m>N</m> a subset of <m>G</m>. Then <m>N</m>
+        is a normal subgroup of <m>G</m> if and only if <m>N</m> is the kernel of a
+        homomorphism from <m>G</m> to some group <m>G'</m>.
+      </p>
+    </statement>
+  </theorem>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+  
+  <xi:include  href="./exercises/fgpsex.ptx" />
+</chapter>

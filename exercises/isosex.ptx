@@ -1,0 +1,123 @@
+<exercises>
+  <title>Exercises</title>
+  <exercise>
+    <statement>
+      <p>
+        Let <m>F</m> be the group of all functions from <m>[0,1]</m> to
+        <m>\R</m>, under pointwise addition. Let
+        <me>
+          N=\{f\in F:
+          f(1/4)=0\}.
+        </me>
+      </p>
+
+      <p>
+        Prove that <m>F/N</m> is a group that's
+        isomorphic to <m>\R</m>.
+      </p>
+    </statement>
+  <solution>
+
+    <p>
+      Define <m>\Phi:F\rightarrow \R</m> by
+      <m>\Phi(f)=f\left(\frac{1}{4}\right)</m>, for every <m>f\in F</m>. We have
+      that <m>\Phi</m> is a homomorphism, since for every <m>f, g\in F</m>,
+      <me>
+        \Phi(f+g)=(f+g)\left(\frac{1}{4}\right)=f\left(\frac{1}{4}\right)+g\left(\frac{1}{4}\right)=\Phi(f)+\Phi(g).
+      </me>
+    </p>
+
+    <p>
+      We also have that <m>\Phi</m> is onto, since if <m>r\in \R</m>, then the
+      constant function <m>c_r</m> defined by
+      <me>
+        c_r(x)=r \mbox{ for every \(x\in
+        [0,1]\)}
+      </me>
+      is sent to <m>r</m> by <m>\Phi</m>. So <m>\Phi(F)=\R</m>. Finally, if
+      <m>f\in F</m>, then
+      <me>
+        f\in \Ker \Phi \Leftrightarrow \Phi(f)=0 \Leftrightarrow
+        f\left(\frac{1}{4}\right)=0 \Leftrightarrow f\in N;
+      </me>
+      so <m>\Ker
+      \Phi=N</m>. Thus, <m>F/N \cong \R</m>, by the <xref ref="fit" text="title"/>.
+    </p>
+  </solution></exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m>N=\{1,-1\}\subseteq \R^*</m>. Prove that <m>\R^*/N</m> is
+        a group that's isomorphic to
+        <m>\R^+</m>.
+      </p>
+    </statement>
+
+  <solution>
+ 
+    <p>
+      Define <m>\Phi: \R^* \rightarrow \R^+</m> by
+      <m>\Phi(x)=|x|</m>. We know that <m>\Phi</m> is a homomorphism, since
+      <m>\Phi(xy)=|xy|=|x||y|=\Phi(x)\Phi(y)</m>, for every <m>x,y\in \R^*</m>.
+      Moreover, <m>\Phi</m> is clearly onto (so <m>\Phi(\R^*)=\R^+</m>), and
+      has
+      <me>
+        \Ker \Phi=\{x\in \R^*\,:\,\Phi(x)=1\}=\{1,-1\}=N.
+      </me>
+    </p>
+
+    <p>
+      Thus,
+      <m>\R^*/N \cong \R^+</m>, by the <xref ref="fit" text="title"/>.
+    </p>
+  </solution>
+    </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>n\in \Z^+</m> and let <m>H=\{A\in GL(n,\R)\,:\, \det A =\pm
+        1\}</m>. Identify a group familiar to us that is isomorphic to
+        <m>GL(n,\R)/H</m>.
+      </p>
+    </statement>
+ 
+  <solution>
+   
+    <p>
+      Define <m>\Phi:GL(n,\R)\to \R^+</m> by
+      <m>\Phi(A)=|\det A|</m>. We have that <m>\Phi</m> is an epimorphism since for
+      all <m>A,B\in GL(n,\R)</m>,
+      <me>
+        \Phi(AB)=|\det AB|=|\det A \det B|=|\det
+        A||\det B|=\Phi(A)\Phi(B),
+      </me>
+      and for all <m>\lambda \in \R^+</m>, the
+      diagonal matrix having <m>\lambda</m> in the uppermost left position and
+      1's elsewhere down the diagonal gets sent to <m>\lambda</m>. Since <m>\Ker
+      \Phi=H</m>, we have that <m>GL(n,\R)/H \simeq \R^+</m>, by the <xref ref="fit" text="title"/>.
+    </p>
+  </solution>
+   </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>G</m> and <m>G'</m> be groups with respective normal subgroups
+        <m>N</m> and <m>N'</m>. Prove or disprove: If <m>G/N\simeq G'/N'</m> then <m>G\simeq
+        G'</m>.
+      </p>
+    </statement>
+
+  <solution>
+
+    <p>
+      The statement is false. Indeed, using the preceding two problems, we see that <m>\R^*/\{1,-1\}</m> and <m>GL(2,\R)/H</m>,
+      where <m>H=\{A\in GL(2,\R):\det A =\pm 1\}</m>, are both isomorphic
+      to <m>\R^+</m>, hence are isomorphic to each other. But we know that
+      <m>\R^* \not\simeq GL(2,\R)</m>.
+    </p>
+  </solution>
+    </exercise>
+</exercises>

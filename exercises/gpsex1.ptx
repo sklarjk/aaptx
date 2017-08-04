@@ -1,0 +1,212 @@
+
+<exercises>
+  <title>Exercises, Part I</title>
+  <exercise>
+    <statement>
+      <p>
+        For each of the following, write Y if the given <q>operation</q> is a well-defined binary operation on the given set; otherwise, write N. In each case in which it <em>isn't</em> a well-defined binary operation on the set, provide a <em>brief</em> explanations. You do not need to prove or explain anything in the cases in which it <em>is</em> a binary operation.
+        <ol>
+          <li>
+            <p>
+              <m>+</m> on <m>\C^*</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>*</m> on <m>\R^+</m> defined by <m>x*y=\log_x y</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>*</m> on <m>\M_2(\R)</m> defined by <m>A*B=AB^{-1}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>*</m> on <m>\Q^*</m> defined by <m>z*w=z/w</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+      <solution>
+    <ol>
+      <li>
+        <p>
+          Y
+        </p>
+      </li>
+
+      <li>
+        <p>
+          N; for instance, <m>10*1=\log_{10}0.1=-1\not\in\R^+</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          N; for instance, the zero matrix, <m>\0</m>, in <m>\M_2(\R)</m> is not invertible, so <m>A*\0</m> is undefined for every <m>A\in\M_2(\R)</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Y
+        </p>
+      </li>
+    </ol>
+  </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Define <m>*</m> on <m>\Q</m> by <m>p*q=pq+1</m>. Prove or disprove that <m>*</m> is (a) commutative; (b) associative.
+      </p>
+    </statement>
+    <solution>
+        <ol>
+      <li>
+        <p>
+          Let <m>p,q\in \Q</m>.  Then <m>p*q=pq+1=qp+1</m> (since multiplication is commutative on <m>\Q</m>), which equals <m>q*p</m>.  So <m>*</m> is commutative.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>*</m> is not associative: for instance, <m>1,2,3\in \Q</m> and <m>1*(2*3)=1*7=8</m>, while <m>(1*2)*3=3*3=10\neq 8</m>.
+        </p>
+      </li>
+    </ol>
+  </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Prove that matrix multiplication is not commutative on <m>\M_2(\R)</m>.
+      </p>
+    </statement>
+    <solution>
+        <p>
+      Let <m>A=\begin{bmatrix}1 \amp 0 \\ 0 \amp 0\end{bmatrix}</m> and <m>B = \begin{bmatrix}0 \amp 1 \\ 0 \amp 0\end{bmatrix}</m>
+in <m>\M_2(\R)</m>. Then <m>AB=B</m> while <m>BA</m> is the zero matrix. Since <m>AB\neq BA</m>, matrix multiplication isn't commutative on <m>\M_2(\R)</m>.
+    </p>
+  </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Prove or disprove each of the following statements.
+        <ol>
+          <li>
+            <p>
+              The set <m>2\Z=\{2x\,:\,x\in \Z\}</m> is closed under addition in <m>\Z</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The set <m>S=\{1,2,3\}</m> is closed under multiplication in <m>\R</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The set
+
+<me>U=\left\{
+\begin{bmatrix}
+	a    \amp    b\\
+	0 \amp c \end{bmatrix}\,:\,a,b,c\in \R\right\}</me>
+
+              is closed under multiplication in <m>\M_2(\R)</m>. (Recall that <m>U</m> is  the set of <em>upper-triangular matrices</em> in <m>\M_2(\R)</m>.)
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  <solution>
+        <ol>
+      <li>
+        <p>
+          Let <m>x, y\in 2\Z</m>. Then there exist <m>a,b\in \Z</m> such that <m>x=2a</m> and <m>y=2b</m>.  Then
+          <me>
+            x+y=2a+2b=2(a+b)\in 2\Z.
+          </me>
+          So <m>2\Z</m> is closed under addition.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Since, for instance, <m>2,3\in S</m> but <m>2(3)=6\not\in S</m>, <m>S</m> isn't closed under multiplication.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Let <m>A=\begin{bmatrix}a \amp b \\ 0 \amp c\end{bmatrix}</m> and <m>B=\begin{bmatrix}\alpha \amp \beta \\ 0 \amp \gamma\end{bmatrix}</m> in <m>U</m>. 
+Then 
+
+          <me>
+            AB=
+            \begin{bmatrix}
+            a \amp  b \\
+            0 \amp  c
+            \end{bmatrix} 
+            \begin{bmatrix}
+            \alpha \amp  \beta \\
+            0 \amp  \gamma
+            \end{bmatrix} 
+            =
+            \begin{bmatrix}
+            a\alpha \amp  a\beta+b\gamma \\
+            0 \amp  c\gamma
+            \end{bmatrix} 
+          \in U.
+          </me>
+          So <m>U</m> is closed under matrix multiplication.
+        </p>
+      </li>
+    </ol>
+
+  </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Let <m>*</m> be an associative and commutative binary operation on a set <m>S</m>. An element <m>u\in S</m> is said to be an <em>idempotent</em> in <m>S</m> if <m>u*u=u</m>. Let <m>H</m> be the set of all idempotents in <m>S</m>. Prove that <m>H</m> is closed under <m>*</m>.
+      </p>
+
+
+<figure xml:id="zip">
+                <image width="100%" source="zippy.png">
+                    <description>A Zippy the Pinhead comic strip about idempotents</description>
+                </image>
+                <caption>&#169;  Bill Griffith. Reprinted with permission.</caption>
+</figure>
+
+    </statement>
+  <solution>
+        <p>
+      Let <m>u,v\in H</m>. To show <m>u*v\in H</m>, we need to show that <m>(u*v)*(u*v)=u*v</m>. Now,
+      <md>
+        <mrow>(u*v)*(u*v)\amp =u*(v*u)*v \amp \amp \text{ (since \(*\) is associative) }</mrow>
+        <mrow>\amp =u*(u*v)*v \amp \amp \text{ (since \(*\) is commutative) }</mrow>
+        <mrow>\amp =(u*u)*(v*v) \amp \amp \text{ (since \(*\) is associative) }</mrow>
+        <mrow>\amp =u*v \amp \amp \text{ (since \(u,v\in H\)) } .</mrow>
+      </md>
+    </p>
+
+    <p>
+      So <m>u*v\in H</m>.
+    </p>
+  </solution>
+    </exercise>
+</exercises>

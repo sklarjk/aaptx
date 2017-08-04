@@ -1,0 +1,578 @@
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="isothms">
+  <title>The Isomorphism Theorems</title>
+
+<introduction>
+<p>
+      Recall that our goal here is to use a subgroup of a group <m>G</m> to
+      study not just the structure of the subgroup, but the structure of
+      <m>G</m> outside of that subgroup (the ultimate goal being to get a
+      feeling for the structure of <m>G</m> as a whole). We've further seen
+      that if we choose <m>N</m> to be a normal subgroup of <m>G</m>, we can do this
+      by studying both <m>N</m> and the factor group <m>G/N</m>. Now, we've noticed
+      that in some cases<mdash />in particular, when <m>G</m> is cyclic<ndash />it is not
+      too hard to identify the structure of a factor group of <m>G</m>. But
+      what about when <m>G</m> and <m>N</m> are more complicated? For instance, we
+      have seen that <m>SL(5,\R)</m> is a normal subgroup of <m>GL(5,\R)</m>.
+      What is the structure of <m>GL(5,\R)/SL(5,\R)</m>? That is not so
+      easy to figure out by looking directly at left coset multiplication
+      in the factor group.
+    </p>
+  </introduction>
+
+
+
+
+<!--
+  <section><title>Introduction</title>
+    <p>
+      Recall that our goal here is to use a subgroup of a group <m>G</m> to
+      study not just the structure of the subgroup, but the structure of
+      <m>G</m> outside of that subgroup (the ultimate goal being to get a
+      feeling for the structure of <m>G</m> as a whole). We've further seen
+      that if we choose <m>N</m> to be a normal subgroup of <m>G</m>, we can do this
+      by studying both <m>N</m> and the factor group <m>G/N</m>. Now, we've noticed
+      that in some cases<mdash />in particular, when <m>G</m> is cyclic<ndash />it is not
+      too hard to identify the structure of a factor group of <m>G</m>. But
+      what about when <m>G</m> and <m>N</m> are more complicated? For instance, we
+      have seen that <m>SL(5,\R)</m> is a normal subgroup of <m>GL(5,\R)</m>.
+      What is the structure of <m>GL(5,\R)/SL(5,\R)</m>? That is not so
+      easy to figure out by looking directly at left coset multiplication
+      in the factor group.
+    </p>
+  </section>-->
+
+
+<section>
+  <title>The First Isomorphism Theorem</title>
+  
+  <p>
+    A very powerful theorem, called the <em>First Isomorphism
+    Theorem</em>, lets us in many cases identify factor groups (up to
+    isomorphism) in a very slick way. Kernels will play an extremely
+    important role in this. We
+    therefore first provide some theorems relating to kernels.
+  </p>
+
+  <theorem xml:id="kermean">
+    <statement>
+      <p>
+        Let <m>G</m> and <m>G'</m> be groups, let <m>\phi</m> be a
+        homomorphism from <m>G</m> to <m>G'</m>, and let <m>K=\Ker \phi</m>. Then for
+        <m>a,b\in G</m>, <m>aK=bK</m> if and only if <m>\phi(a)=\phi(b)</m>.
+      </p>
+    </statement>
+
+  <proof>
+    <p>
+      Let <m>a,b\in G</m>. Then
+      <md>
+        <mrow>\phi(a)=\phi(b)\amp \Leftrightarrow
+        \phi(b)^{-1}\phi(a)=e_{G'}</mrow>
+        <mrow>\amp \Leftrightarrow \phi(b^{-1}a)=e_{G'}</mrow>
+        <mrow>\amp \Leftrightarrow b^{-1}a\in K</mrow>
+        <mrow>\amp \Leftrightarrow a \in bK</mrow>
+        <mrow>\amp \Leftrightarrow aK=bK,</mrow>
+      </md>
+      as desired.
+    </p>
+  </proof>
+  </theorem>
+
+
+  <corollary xml:id="kerone">
+    <statement>
+      <p>
+        Let <m>\phi</m> be a homomorphism from group <m>G</m> to group
+        <m>G'</m>. Then <m>\phi</m> is one-to-one (hence a monomorphism) if and only
+        if <m>\Ker \phi=\{e_G\}</m>.
+      </p>
+    </statement>
+
+  <proof>
+    <p>
+      Clearly, if <m>\phi</m> is one-to-one then <m>\Ker \phi=\{e_G\}</m>.
+      Conversely, assume <m>\Ker \phi=\{e_G\}</m>. If <m>a,b\in G</m> with
+      <m>\phi(a)=\phi(b)</m>, then by the above theorem, <m>a\Ker \phi=b\Ker
+      \phi</m>. But <m>a\Ker \phi=a\{e_G\}=\{a\}</m> and <m>b\Ker
+      \phi=b\{e_G\}=\{b\}</m>. Thus, <m>a=b</m>, and we see that <m>\phi</m> is
+      one-to-one.
+    </p>
+  </proof>
+
+  </corollary>
+
+  <p>
+    We now prove a theorem that
+    provides the meat and potatoes of the <xref ref="fit" text="title" />.
+  </p>
+
+  <theorem xml:id="facthm">
+   <title>Factorization Theorem</title> <statement>
+      <p>
+         Let <m>G</m> and
+        <m>G'</m> be groups, let <m>\phi</m> be a homomorphism from <m>G</m> to <m>G'</m>,
+        let <m>K=\Ker \phi</m>, let <m>N</m> be a normal subgroup of <m>G</m> with
+        <m>N\subseteq K</m>, and let <m>\Psi</m> be the canonical epimorphism
+        from <m>G</m> to <m>G/N</m>. Then the map <m>\phibar: G/N \to G'</m> defined
+        by <m>\phibar(aN)=\phi(a)</m> is a well defined homomorphism, with
+        <m>\phibar \circ \Psi=\phi</m>.
+      </p>
+    </statement>
+
+  <p>
+    We  summarize this in the following picture:
+  </p>
+   <figure>
+    <image width="30%">
+    <latex-image-code>
+  \[\xymatrix{G\ar[rr]^{\phi}\ar[dr]_{\Psi}&amp;&amp;G'\\&amp;G/N\ar@{.>}[ur]_{\phibar}&amp;}\]
+</latex-image-code>
+</image>
+  <caption>Visual representation of the Factorization Theorem</caption>
+  </figure>
+  <proof>
+    <p>
+      We define <m>\phibar: G/N\to G'</m>, as indicated above, by
+      <m>\phibar(aN)=\phi(a)</m> for every <m>aN\in G/N</m>. Since <m>\phibar</m>
+      is defined using coset representatives, we must first show that
+      <m>\phibar</m> is well defined. So let <m>aN=bN\in G/N</m>. Then
+      <m>\phibar(aN)=\phi(a)</m> and <m>\phibar(bN)=\phi(b)</m>, so we must
+      show that <m>\phi(a)=\phi(b)</m>. Since <m>aN=bN</m> and <m>N\subseteq K</m>,
+      we have that <m>aK=bK</m> by Statement 6 of <xref ref="cosetfacts">Theorem</xref>; thus <m>\phi(a)=\phi(b)</m> (using <xref ref="kermean">Lemma</xref>). So <m>\phibar</m> is well defined.
+    </p>
+
+    <p>
+      Next, we show that <m>\phibar</m> is a homomorphism. Let <m>aN,bN\in
+      G/N</m>. Then
+      <me>
+        \phibar((aN)(bN))=\phibar(abN)=\phi(ab)=\phi(a)\phi(b)=\phibar(aN)\phibar(bN).
+      </me>
+    </p>
+
+    <p>
+      Finally, for every <m>a\in G</m>,
+      <me>
+        (\phibar \circ
+        \Psi)(a)=\phibar(\Psi(a))=\phibar(aN)=\phi(a);
+      </me>
+      so <m>\phibar \circ
+      \Psi = \phi</m>, as desired.
+    </p>
+  </proof>
+</theorem>
+
+
+
+  <p>
+    Note that the above theorem does <em>not</em> state that
+    <m>\phibar</m> is a monomorphism or an epimorphism. This is because in
+    general it may be neither! We do have the following theorem:
+  </p>
+
+  <theorem xml:id="epimono">
+    <statement>
+      <p>
+        Let <m>G</m>, <m>G'</m>, <m>\phi</m>, <m>N</m>, and <m>\phibar</m> be as
+        defined in the  <xref ref="facthm" text="title"/>. Then
+        <ol>
+          <li>
+            <p>
+              <m>\phibar</m> is onto (an epimorphism) if and only if <m>\phi</m> is onto
+              (an epimorphism); and
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\phibar</m> is one-to-one (a monomorphism) if and only if <m>N=\Ker
+              \phi</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  
+
+  <proof>
+    <ol>
+      <li>
+        <p>
+          This is clear, since
+          <m>\phibar(G/N)=\phi(G)</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          By <xref ref="kerone">Corollary</xref>, <m>\phibar</m> is one-to-one if and only if <m>\Ker
+          \phibar=\{N\}</m>.  But
+          <md>
+            <mrow>\Ker \phibar\amp =\{aN\in G/N
+            \,:\, \phibar(aN)=e_{G'}\}</mrow>
+            <mrow>\amp =\{aN\in G/N \,:\,
+            \phi(a)=e_{G'}\}</mrow>
+            <mrow>\amp =\{aN\in G/N \,:\, a\in
+            \Ker\phi\}.</mrow>
+          </md>
+          So <m>\Ker \phibar = \{N\}</m> if and only if
+          <me>
+            \{aN\in G/N\,:\,a\in \Ker\phi\}=\{N\},
+          </me>
+          in other words if and
+          only if <m>aN=N</m> for all <m>a\in \Ker\phi</m>.  But
+          <md>
+            <mrow>{3}
+            \amp \amp \amp aN=N \amp \amp \ \ \text{ for all \(a\in \Ker\phi\) }</mrow>
+            <mrow>\amp \Leftrightarrow  \amp \amp  a\in N \amp \amp \ \ \text{ for all \(a\in \Ker\phi\) }</mrow>
+            <mrow>\amp \Leftrightarrow  \amp \amp  \Ker \phi\subseteq N\amp \amp</mrow>
+            <mrow>\amp \Leftrightarrow  \amp \amp  \Ker\phi=N,\amp \amp</mrow>
+          </md>
+          since we are given that
+          <m>N\subseteq \Ker \phi</m>. Thus, <m>\phibar</m> is one-to-one
+          if and only if <m>N=\Ker\phi</m>, as desired. 
+        </p>
+      </li>
+    </ol>
+  </proof>
+</theorem>
+
+  <p>
+    We are now ready to state the all-important First Isomorphism
+    Theorem, which follows directly from the <xref ref="facthm" text="title"/>  and
+      <xref ref="epimono">Theorem</xref>.
+  </p>
+
+  <theorem xml:id="fit">
+  <title>First Isomorphism Theorem</title>
+    <statement>
+      <p>
+       Let <m>G</m> and <m>G'</m>
+        be groups, with homomorphism <m>\phi:G \rightarrow G'</m>. Let <m>K=\Ker
+        \phi</m>. Then <m>G/K \simeq \phi(G)</m>. In particular, if <m>\phi</m> is onto,
+        then <m>G/K\simeq G'</m>.
+      </p>
+    </statement>
+  
+  </theorem>
+
+
+  <p>
+    So to prove that a factor group <m>G/N</m> is isomorphic to a group
+    <m>G'</m>, it suffices to show there exists an epimorphism from <m>G</m> to
+    <m>G'</m> that has <m>N</m> as its kernel.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Letting <m>n\in \Z^+</m>, let's identify a familiar group to which
+        <m>GL(n,\R)/SL(n,\R)</m> is isomorphic. As in <xref ref="slnormgl">Example</xref>, the map <m>\phi:GL(n,\R)\to \R^*</m> defined by
+        <m>\phi(A)</m> is a homomorphism with kernel <m>SL(n,\R)</m>. Moreover,
+        <m>Phi</m> clearly maps onto <m>\R^*</m>: indeed, given <m>\lambda \in
+        \R^*</m>, the diagonal matrix having <m>\lambda</m> in the uppermost left
+        position and 1's elsewhere down the diagonal gets sent to <m>\lambda</m>
+        by <m>\phi</m>. So by the <xref ref="fit" text="title"/>, we have
+        <m>GL(n,\R)/SL(n,\R) \simeq \R^*</m>.
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Let <m>G=S_3\times \Z_{52}</m> and let <m>N=S_3 \times
+        \{0\}\subseteq G</m>. It is straightforward to show that <m>N</m> is normal
+        in <m>G</m>. What is the structure of <m>G/N</m>? Well, define <m>\phi:G\to
+        \Z_{52}</m> by <m>\phi((\sigma, a))=a</m>. Then <m>\phi</m> is clearly an
+        epimorphism and <m>\Ker \phi=\{(\sigma,a)\in G\,:a=0\}=N</m>. So <m>G/N</m> is
+        isomorphic to <m>\Z_{52}</m>.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    Generalizing the above example, we have the following theorem, whose
+    proof we leave to the reader.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        Let <m>G=G_1\times G_2 \times \cdots \times G_k</m> (where
+        <m>k\in \Z^+</m>) and let <m>N_i</m> be a normal subgroup of <m>G_i</m> for each
+        <m>i=1,2,\ldots, k</m>. Then <m>N=N_1 \times N_2 \times \cdots \times N_k</m>
+        is a normal subgroup of <m>G</m>, with <m>G/N \simeq G_1/N_1 \times G_2/N_2
+        \cdots \times G_k/N_k.</m>
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    We provide one more cool example of using the <xref ref="fit" text="title"/>. Clearly, since <m>\R</m> is abelian, <m>\Z</m> is a normal
+    subgroup of <m>\R</m>. What is the structure of <m>\R/\Z</m>? Well, in
+    modding <m>\R</m> out by <m>\Z</m> we have essentially identified together
+    all real numbers that are an integer distance apart. So we can
+    think of the canonical epimorphism from <m>\R</m> to <m>\R/\Z</m> as
+    wrapping up <m>\R</m> like a garden hose! Thus, one might guess that
+    <m>\R/\Z</m> has some circle-like structure<mdash />but if we want to think
+    of it as a group, we have to figure out what the group structure on
+    such a <q>circle</q> would be!
+  </p>
+
+  <p>
+    We leave, for a moment, our group <m>\R/\Z</m>, and look at how we can
+    consider a circle to be a group.
+  </p>
+
+
+  <p>
+    Recall that for every <m>\theta \in \R</m>,
+    <m>e^{i\theta}</m> is defined to be <m>\cos \theta + i\sin \theta</m>. It
+    is clear then that the set <m>\{e^{i\theta} \,:\, \theta\in
+    \R\}</m> is the unit circle in the complex plane; we denote
+    this set by <m>S^1</m>.</p>
+
+  <notation><usage>S^1</usage><description>the unit circle  <m>\{e^{i\theta} \,:\, \theta\in
+    \R\}</m> in the complex plane</description>
+  </notation>
+
+  <remark>
+    <p>
+      Note that if <m>\theta_1, \theta_2\in \R</m>, then
+      <m>e^{i\theta_1}=e^{i\theta_2}</m> if and only if <m>\theta_1-\theta_2
+      \in 2\pi \Z</m>.
+    </p>
+  </remark>
+
+  <theorem>
+    <statement>
+      <p>
+        <m>S^1</m> is a group under the multiplication
+        <m>e^{i\theta_1}e^{i\theta_2}=e^{i(\theta_1+\theta_2)}</m>.
+      </p>
+    </statement>
+  
+
+  <proof>
+    <p>
+      The tricky part is showing that the operation is well
+      defined. Suppose <m>\theta_1, \theta_2, t_1</m>, and <m>t_2</m> are in
+      <m>\R</m>, with <m>e^{i\theta_1}=e^{it_1}</m> and
+      <m>e^{i\theta_2}=e^{it_2}</m>. We want to show that
+      <me>
+        e^{i\theta_1}e^{i\theta_2}=e^{it_1}e^{it_2},
+      </me>
+      i.e., that
+      <me>
+        e^{i(\theta_1+\theta_2)}=e^{i(t_1+t_2)}.
+      </me>
+    </p>
+
+    <p>
+      Now, <m>e^{i\theta_1}=e^{it_1}</m> and
+      <m>e^{i\theta_2}=e^{it_2}</m> imply that <m>\theta_1 -t_1 = 2\pi m</m>
+      and <m>\theta_2-t_2 = 2\pi n</m> for some <m>m</m> and <m>n</m> in <m>\Z</m>;
+      hence,
+      <me>
+        \theta_1+\theta_2-(t_1+t_2)= 2\pi(m+n) \in 2\pi\Z.
+      </me>
+    </p>
+
+    <p>
+      Thus,
+      <m>e^{i(\theta_1+\theta_2)}=e^{i(t_1+t_2)}</m>, so our operation is
+      well defined.
+    </p>
+
+    <p>
+      Next, <m>S^1</m> is clearly closed under the operation, and
+      associativity follows from associativity of addition in
+      <m>\R</m>. Moreover, <m>e^{i0}=1</m> clearly acts as an identity
+      element in <m>S^1</m>, and if <m>e^{i\theta}\in S^1</m>, then
+      <m>e^{i\theta}</m> has inverse <m>e^{i(-\theta)} \in S^1</m>. So <m>S^1</m>
+      is a group under the described operation.
+
+    </p>
+  </proof>
+</theorem>
+
+<p> Beautifully, it turns out that our group <m>\R/\Z</m> is
+      isomorphic to <m>S^1</m>.</p>
+  <theorem>
+    <statement>
+      <p>
+        <m>\R/\Z \simeq S^1</m>.
+      </p>
+    </statement>
+
+  <proof>
+    <p>
+      We will define an epimorphism <m>\phi</m> from <m>\R</m> to <m>S^1</m>
+      with <m>\Ker \phi=\Z</m>; then we'll have <m>\R/\Z \simeq S^1</m>,
+      by the <xref ref="fit" text="title"/>.
+    </p>
+
+    <p>
+      Define <m>\phi:\R \to S^1</m> by <m>\phi(r)=e^{i2\pi r}</m>. We have
+      that <m>\phi</m> is a homomorphism, since for every <m>r,s\in \R</m>,
+      we have
+      <me>
+        \phi(r+s)=e^{i2\pi (r+s)}=e^{i2\pi r+i2\pi s}=e^{i2\pi
+        r}e^{i2\pi s}=\phi(r)\phi(s).
+      </me>
+    </p>
+
+    <p>
+      Moreover, <m>\phi</m> is clearly
+      onto, since if <m>e^{i\theta}\in S^1</m>, then
+      <me>
+        e^{i\theta}=e^{i2\pi\left(\frac{\theta}{2\pi}\right)}=\phi\left(\frac{\theta}{2\pi}\right).
+      </me>
+    </p>
+
+    <p>
+      Finally, <m>\Ker\phi=\Z</m>: indeed,
+      <md>
+        <mrow>r\in \Ker\phi \amp \Leftrightarrow \phi(r)=1</mrow>
+        <mrow>\amp \Leftrightarrow e^{i2\pi r}=1</mrow>
+        <mrow>\amp \Leftrightarrow \cos 2\pi r + i\sin 2\pi r=1</mrow>
+        <mrow>\amp \Leftrightarrow \cos 2\pi r = 1 \text{ and } \sin 2\pi r = 0</mrow>
+        <mrow>\amp \Leftrightarrow r\in \Z.</mrow>
+      </md>
+    </p>
+
+    <p>
+      Thus, <m>\Ker \phi = \Z</m>, and hence <m>\R/\Z\simeq S^1</m>, as
+      desired.
+    </p>
+  </proof>
+  </theorem>
+
+</section>
+
+<section>
+  <title>The Second and Third Isomorphism Theorems</title>
+  <p>
+    The following theorems can be proven using the <xref ref="fit" text="title"/>. They are very useful in special cases.
+  </p>
+
+  <theorem xml:id="sit">
+    <statement>
+    <title>Second Isomorphism Theorem</title>
+      <p>
+ Let <m>G</m> be a
+        group, let <m>H\leq G</m>, and let <m>N\unlhd G</m>. Then the set
+        <me>
+          HN=\{hn:h\in H, n\in N\}
+        </me>
+        is a subgroup of <m>G</m>, <m>H\cap N\unlhd H</m>, and
+        <me>
+          H/(H\cap N) \simeq
+          HN/N.
+        </me>
+      </p>
+    </statement>
+  
+
+  <proof>
+    <p>
+      We first prove that <m>HN</m> is a subgroup of <m>G</m>. Since <m>e_G\in
+      HN</m>, <m>HN\neq \emptyset</m>. Next, let <m>x=h_1n_1, y=h_2n_2\in HN</m>
+      (where <m>h_1,h_2\in H</m> and <m>n_1,n_2\in N</m>). Then
+      <me>
+        xy^{-1}=h_1n_1(h_2n_2)^{-1}=h_1n_1n_2^{-1}h_2^{-1}.
+      </me>
+    </p>
+
+    <p>
+      Since
+      <m>N\leq G</m>, <m>n_1n_2^{-1}</m> is in <m>N</m>; so <m>h_1n_1n_2^{-1}h_2^{-1}\in
+      h_1Nh_2^{-1}</m>, which equals <m>h_1h_2^{-1}N</m>, since <m>N\unlhd G</m>
+      implies <m>Nh_2^{-1}=h_2^{-1}N</m>. So <m>xy^{-1}=\in h_1h_2^{-1}N.</m> But
+      <m>H\leq G</m> implies <m>h_1h_2^{-1}\in H</m>; thus, <m>xy^{-1}\in HN</m>, and so
+      <m>HN</m> is a subgroup of <m>G</m>.
+    </p>
+
+    <p>
+      Since <m>N\unlhd G</m> and <m>N\subseteq HN</m>, <m>N</m> is normal in <m>HN</m>
+      (do you see why?). So <m>HN/N</m> is a group under left coset
+      multiplication. We define <m>\phi: H\to HN/N</m> by <m>\phi(h)=hN</m>
+      (notice that when <m>h\in H</m>, <m>h\in HN</m> since <m>h=he_G</m>). Clearly,
+      <m>\phi</m> is a homomorphism. Further, <m>\phi</m> is onto: Indeed, let
+      <m>y\in HN/N</m>. Then <m>y=hnN</m> for some <m>h\in H</m> and <m>n\in N</m>. But
+      <m>nN=N</m>, so <m>y=hN=\phi(h)</m>. Finally,
+      
+
+         <md>
+        <mrow>\Ker \phi\amp =\{h\in H\,:\, \phi(h)=N\}</mrow>
+        <mrow>\amp =\{h\in H\,:\, hN=N\}</mrow>
+        <mrow>\amp =\{h\in
+        H\,:\, h\in N\}</mrow>
+        <mrow>\amp =H\cap N.</mrow>
+      </md>
+    </p>
+
+    <p>
+      Thus,
+      <me>
+        H/(H\cap N)
+        \simeq HN/N,
+      </me>
+      by the <xref ref="fit" text="title"/>.
+    </p>
+  </proof>
+</theorem>
+
+  <theorem xml:id="tit">
+  <title>Third Isomorphism Theorem</title>
+    <statement>
+      <p> Let <m>G</m> be a group,
+        and let <m>K</m> and <m>N</m> be normal subgroups of <m>G</m>, with <m>K\subseteq N</m>.
+        Then <m>N/K \unlhd G/K</m>, and
+        <me>
+          (G/K)/(N/K)\simeq G/N.
+        </me>
+      </p>
+    </statement>
+
+  <proof>
+    <p>
+      Define <m>\phi: G/K\to G/N</m> by <m>\phi(aK)=aN</m>. We have that
+      <m>\phi</m> is well defined: indeed, let <m>aK=bK \in G/K</m>. Then by
+      Statement 6 of <xref ref="cosetfacts">Theorem</xref>, we have <m>aN=bN</m>, that
+      is, <m>\phi(aK)=\phi(bK)</m>. So <m>\phi</m> is well defined. <m>\phi</m> is
+      clearly onto, and we have
+      <md>
+        <mrow>\Ker \phi\amp =\{aK\in
+        G/K\,:\,\phi(aK)=N\}</mrow>
+        <mrow>\amp =\{aK\in G/K\,:\,aN=N\}</mrow>
+        <mrow>\amp =\{aK\in
+        G/K\,:\,a\in N\}</mrow>
+        <mrow>\amp =N/K.</mrow>
+      </md>
+    </p>
+
+    <p>
+      So the desired
+      results hold, by the <xref ref="fit" text="title"/>.
+    </p>
+  </proof>
+  </theorem>
+
+
+  <example>
+    <statement>
+      <p>
+        Using the <xref ref="tit" text="title"/>, we see that the group
+        <me>
+          (\Z/12\Z)/(6\Z/12\Z)
+        </me>
+        is isomorphic to the group <m>\Z/6\Z</m>, or
+        <m>\Z_6</m>.
+      </p>
+    </statement>
+  </example>
+</section>
+  <xi:include  href="./exercises/isosex.ptx" />
+</chapter>

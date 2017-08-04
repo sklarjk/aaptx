@@ -1,0 +1,279 @@
+<exercises>
+  <title>Exercises</title>
+
+<p>
+Throughout, write all permutations using <em>disjoint cycle notation</em>, and write all dihedral group elements using <em>standard form</em>.</p>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>\sigma=(134)</m>, <m>\tau=(23)(145)</m>, <m>\rho=(56)(78)</m>, and <m>\alpha=(12)(145)</m> in <m>S_8</m>. Compute the following.
+        <ol cols="4" type="a">
+          <li>
+            <p>
+              <m>\sigma \tau</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\tau \sigma</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\tau^2</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\tau^{-1}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>o(\tau)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>o(\rho)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>o(\alpha)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\langle \tau\rangle</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+    <ol>
+      <li>
+        <p>
+          <m>\sigma \tau= (134)(23)(145)=(2453)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\tau \sigma=  (23)(145)(134)=(1235)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\tau^2=(154)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\tau^{-1}=(23)(154)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>o(\tau)=\lcm(2,3)=6</m> (since <m>(23)</m> and <m>(145)</m> are disjoint)
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>o(\rho)=\lcm(2,2)=2</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          In disjoint cycle notation, <m>\alpha=(1452)</m>, so <m>o(\alpha)=o(1452)=4</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\langle \tau\rangle =\{(23)(145), (154), (23), (145), e\}</m>
+        </p>
+      </li>
+    </ol>
+  </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Prove <xref ref="evenodd">Lemma</xref>.
+      </p>
+    </statement>
+
+  <solution>
+        <p>
+      Let <m>\sigma=(a_1a_2\cdots a_k)\in S_n</m>. Then <m>\sigma=(a_1a_k)(a_1a_{k-1})\cdots (a_1a_3)(a_1a_2)</m>, so is a product of <m>k-1</m> transpositions. Thus, <m>\sigma</m> is even if <m>k-1</m> is even, that is, if <m>k</m> is odd, and odd if <m>k-1</m> is odd, that is, if <m>k</m> is even.
+    </p>
+  </solution>
+    </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Prove that <m>A_n</m> is a subgroup of <m>S_n</m>.
+      </p>
+    </statement>
+  
+  <solution>
+    <p>
+      Since <m>e\in A_n</m>, <m>A_n\neq \emptyset</m>. Next, let <m>\sigma, \tau \in A_n</m>. Then <m>\sigma</m> can be written as a product of <m>k</m> transpositions and <m>\tau</m> can be written as <m>\tau=\tau_1\tau_2\cdots \tau_m</m>, where <m>k</m> and <m>m</m> are even and the <m>\tau_i</m> are transpositions. Since each <m>\tau_i</m> is a transposition, each <m>\tau_i</m> is its own inverse; so
+      <me>
+        \tau^{-1}=(\tau_m)^{-1}(\tau_{m-1})^{-1}\cdots \tau_1^{-1}=\tau_m^{-1}\tau_{m-1}^{-1}\cdots \tau_1^{-1}.
+      </me>
+    </p>
+
+    <p>
+      Thus, <m>\sigma \tau^{-1}</m> is a product of <m>k+m</m> transpositions; since <m>k</m> and <m>m</m> are even, <m>k+m</m> is even, and so <m>\sigma \tau^{-1}\in A_n</m>. Thus, <m>A_n\leq S_n</m>, by the <xref ref="twostep" text="title"/>.
+    </p>
+  </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Prove or disprove: The set of all odd permutations in <m>S_n</m> is a subgroup of <m>S_n</m>.
+      </p>
+    </statement>
+
+  <solution>
+        <p>
+      This set is <em>not</em> a subgroup of <m>S_n</m> because, for instance, it doesn't contain <m>e</m>.
+    </p>
+  </solution>
+    </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>n</m> be an integer greater than 2. <m>m \in \{1,2,\ldots,n\}</m>, and let <m>H=\{\sigma\in S_n\,:\,\sigma(m)=m\}</m> (in other words, <m>H</m> is the set of all permutations in <m>S_n</m> that fix <m>m</m>).
+        <ol>
+          <li>
+            <p>
+              Prove that <m>H\leq S_n</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Identify a familiar group to which <m>H</m> is isomorphic. (You do not need to show any work.)
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+
+  <solution>
+    <ol>
+      <li>
+        <p>
+          Since <m>e\in H</m>, <m>H\neq \emptyset</m>.  Next, let <m>\sigma, \tau\in H</m>.  Since <m>\tau(m)=m</m> and <m>\tau</m> is a bijection, <m>\tau^{-1}(m)=m</m>.  So <m>\sigma \tau^{-1}(m)=\sigma(\tau^{-1}(m))=\sigma(m)=m</m>.  So <m>\sigma \tau^{-1}\in H</m>; therefore, <m>H\leq S_n</m>, by the <xref ref="twostep" text="title"/>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>S_{n-1}</m>.
+        </p>
+      </li>
+    </ol>
+  </solution>
+    </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Write <m>rfr^2frfr</m> in <m>D_5</m> in standard form.
+      </p>
+    </statement>
+  
+  <solution>
+    <p>
+      In <m>D_5</m>, <m>frfr=(fr)^2=e</m> and <m>rf=fr^{-1}</m>, so
+      <me>
+        rfr^2frfr=rfr^2=fr^{-1}r^2=fr.
+      </me>
+    </p>
+  </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Prove or disprove: <m>D_6\simeq S_6</m>.
+      </p>
+    </statement>
+
+  <solution>
+        <p>
+      <m>|D_6|=2(6)=12</m> while <m>|S_6|=720</m>, so <m>D_6\not\simeq S_6</m>.
+    </p>
+  </solution>
+    </exercise>
+
+  <exercise>
+    <statement>
+      <p> Which elements of <m>D_4</m> (if any)
+        <ol>
+          <li>
+            <p>
+              have order 2?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              have order <m>3</m>?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  
+  <solution>
+    <p>
+      We know <m>o(fr^i)=2</m> for every <m>i</m>, and <m>o(e)=1</m>. Moreover, since <m>4</m> is even, <m>r^{4/2}=r^2</m> has order 2. Finally, <m>o(r)=o(r^{-1})=4</m>. So (a) the elements of order 2 in <m>D_4</m> are <m>f</m>, <m>fr</m>, <m>fr^2</m>, <m>fr^3</m>, and <m>r^2</m>, and (b) <m>D_4</m> contains no elements of order 3.
+    </p>
+  </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>n</m> be an even integer that's greater than or equal to 4. Prove that <m>r^{n/2}\in Z(D_n)</m>: that is, prove that <m>r^{n/2}</m> commutes with every element of <m>D_n</m>. (Do NOT simply refer to the last statement in <xref ref="diords">Theorem</xref>; that is the statement you are proving here.)
+      </p>
+    </statement>
+  
+  <solution>
+    
+    <p>
+      Clearly, <m>r^{n/2}</m> commutes with every <m>r^k</m> for <m>0\leq k\leq n</m>. Moreover, by the first statement of <xref ref="diords">Theorem</xref>,
+      <me>
+        r^{n/2}f=f(r^{n/2})^{-1}=fr^{n-n/2}=fr^{n/2}.
+      </me>
+    </p>
+
+    <p>
+      So <m>r^{n/2}</m> commutes with <m>f</m>. It clearly follows that <m>r^{n/2}\in Z(D_n)</m>.
+    </p>
+  </solution>
+</exercise>
+</exercises>

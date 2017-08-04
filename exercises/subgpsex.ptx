@@ -1,0 +1,310 @@
+<exercises>
+  <title>Exercises</title>
+  <exercise>
+    <statement>
+      <p>
+        True/False. For each of the following, write T if the statement is
+        true; otherwise, write F. You do NOT need to provide explanations or show work for this problem. Throughout, let <m>G</m> and <m>G'</m> be groups.
+        <ol>
+          <li>
+            <p>
+              Every group contains at least two distinct subgroups.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If <m>H</m> is a proper subgroup of group <m>G</m> and <m>G</m> is finite, then we must have <m>|H|\lt |G|</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>7\Z</m> is a subgroup of <m>14\Z</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              A group <m>G</m> may have two distinct proper subgroups which are isomorphic (to one another).
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+    
+    <ol cols="4" type="a">
+      <li>
+        <p>
+          F
+        </p>
+      </li>
+
+      <li>
+        <p>
+          T
+        </p>
+      </li>
+
+      <li>
+        <p>
+          F
+        </p>
+      </li>
+
+      <li>
+        <p>
+          T
+        </p>
+      </li>
+    </ol>
+  </solution>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        Give specific, precise examples of the following groups <m>G</m> with subgroups <m>H</m>:
+        <ol>
+          <li>
+            <p>
+              A group <m>G</m> with a proper subgroup <m>H</m> of <m>G</m> such that <m>|H|=|G|</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              A group <m>G</m> of order 12 containing a subgroup <m>H</m> with <m>|H|=3</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              A nonabelian group <m>G</m> containing a nontrivial abelian subgroup <m>H</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              A finite subgroup <m>H</m> of an infinite group <m>G</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  <solution>
+    
+    <p>
+      (Other answers are possible.)
+      <ol>
+        <li>
+          <p>
+            <m>G=\Z</m>, <m>H=2\Z</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>G=\Z_{12}</m>, <m>H=\{0,4,8\}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>G=GL(2,\R)</m>, <m>H=\{\pm I_2\}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>G=\R^*, H=\{\pm 1\}</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </solution>   
+  
+  </exercise>
+ 
+  <exercise>
+    <statement>
+      <p>
+        Let <m>n\in \Z^+</m>.
+        <ol>
+          <li>
+            <p>
+              Prove that <m>n\Z \leq \Z</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Prove that the set <m>H=\{A\in \M_n(\R)\,:\,\det A=\pm 1\}</m> is a subgroup of <m>GL(n,\R)</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+
+      <p>
+        (<em>Note:</em> Your proofs do not need to be long to be correct!)
+      </p>
+    </statement>
+  <solution>
+    
+    <ol>
+      <li>
+        <p>
+          We know that <m>n\Z\subseteq \Z</m> and that <m>n\Z</m> is a group under addition, the group operation in <m>\Z</m>.  Therefore, <m>n\Z\leq \Z</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Clearly, <m>H</m> is a nonempty subset of <m>GL(n,\R)</m> (for instance, <m>I_n\in H</m>).  Next, let <m>A,B\in H</m>.
+          Then
+          <me>
+            \det(AB^{-1})=(\det A)(\det (B^{-1}))=(\pm 1)\left(\frac{1}{\pm 1}\right)=\pm 1,
+          </me>
+          so <m>AB^{-1}\in H</m>.  Thus, <m>H\leq GL(n,\R)</m> by the <xref ref="twostep" text="title"/>.
+        </p>
+      </li>
+    </ol>
+  </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        For each group <m>G</m> and subset <m>H</m>, decide whether or not <m>H</m> is a subgroup of <m>G</m>. In the cases in which <m>H</m> is <em>not</em> a subgroup of <m>G</m>, provide a proof. (<em>Note.</em> Your proofs do not need to be long to be correct!)
+        <ol>
+          <li>
+            <p>
+              <m>G=\Z</m>, <m>H=\R</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>G=\Z_{15}</m>, <m>H=\{0,5,10\}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>G=\Z_{15}</m>, <m>H=\{0,4,8,12\}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>G=\C</m>, <m>H=\R^*</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>G=\C^*</m>, <m>H=\{1,i,-1,-i\}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>G=\M_n(\R)</m>, <m>H=GL(n,\R)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>G=GL(n,\R)</m>, <m>H=\{A\in \M_n(\R)\,:\,\det A = -1\}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  <solution>
+    
+    <ol>
+      <li>
+        <p>
+          <m>H\not\subseteq G</m>, so <m>H\not\leq G</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>H\leq G</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>H</m> is a subset of <m>G</m> but isn't closed under <m>+_{15}</m>: for instance <m>12+_{15}4=1\not\in H</m>.  So <m>H\not\leq G</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>H</m> is a subset of <m>G</m>, but the identity element, 0, of <m>G</m> isn't in <m>H</m>, so <m>H\not\leq G</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>H\leq G</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>H</m> is a subset of <m>G</m>, but the identity element, <m>\0</m>, of <m>G</m> isn't in <m>H</m>, so <m>H\not\leq G</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>H</m> is a subset of <m>G</m>, but the identity element, <m>I_n</m>, of <m>G</m> isn't in <m>H</m>, since <m>\det I_n=1</m>.  Thus, <m>H\not\leq G</m>.
+        </p>
+      </li>
+    </ol>
+  </solution>
+    </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>G</m> and <m>G'</m> be groups, let <m>\phi</m> a homomorphism from <m>G</m> to <m>G'</m>, and let <m>H</m> a subgroup of <m>G</m>. Then <m>\phi(H)</m> is a subgroup of <m>G'</m>.
+      </p>
+    </statement>
+    <solution>
+    
+    <p>
+      Let <m>x,y\in \phi(H)</m>. Then <m>x=\phi(a)</m> and <m>y=\phi(b)</m> for some <m>a,b\in H</m>. So <m>xy=\phi(a)\phi(b)=\phi(ab)</m> (since <m>\phi</m> is a homomorphism). Since <m>H\leq G</m>, <m>ab\in H</m>. Thus, <m>xy\in \phi(H)</m>. Next, <m>e_G\in H</m>, so <m>e_{G'}=\phi(e_G)\in \phi(H)</m>. Finally, since <m>H\leq G</m> and <m>a\in H</m>, <m>a^{-1}\in H</m>; so <m>x^{-1}=\phi(a)^{-1}=\phi(a^{-1}) \in \phi(H)</m>. Thus, <m>\phi(H)\leq G'</m>.
+    </p>
+  </solution>
+  </exercise>
+  
+  <exercise>
+    <statement>
+      <p>
+        Recall that an element <m>u</m> of a binary structure is said to be an <em>idempotent</em> if <m>u^2=u</m>. Let <m>G</m> be an abelian group, and let <m>U</m> be the set of all idempotents of <m>G</m>. Prove that <m>U</m> is a subgroup of <m>G</m>.
+      </p>
+    </statement>
+    <solution>
+    
+    <p>
+      Clearly, <m>e\in H</m>, so <m>H\neq \emptyset</m>. Next, let <m>u,v\in H</m>. Then
+      <md>
+        <mrow>(uv^{-1})^2\amp =(uv^{-1})(uv^{-1})\amp \amp</mrow>
+        <mrow>\amp =u^2(v^{-1})^2 \amp \amp \text{ (since the group operation is assoc. and comm.) }</mrow>
+        <mrow>\amp =u^2(v^2)^{-1} \amp \amp \text{ (using the rules for exponents) }</mrow>
+        <mrow>\amp =uv^{-1}\amp \amp \text{ (since \(u,v\in H\)). }</mrow>
+      </md>
+    </p>
+
+    <p>
+      Thus, <m>uv^{-1}\in H</m>, and so <m>H \leq G</m> by the <xref ref="twostep" text="title"/>.
+    </p>
+  </solution>
+  </exercise>
+  
+</exercises>
