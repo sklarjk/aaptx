@@ -116,6 +116,8 @@
         write <m>x \not R y</m>.
       </p>
     </statement>
+    <notation><usage>xRy</usage><description><m>x</m> is related to <m>y</m></description></notation>
+    <notation><usage>x\not R y</usage><description><m>x</m> is not related to <m>y</m></description></notation>
   </definition>
 
   <remark>
@@ -191,7 +193,11 @@
         symmetric, <term>and</term> transitive is called an <term>equivalence
         relation</term>.
       </p>
-    </statement>
+      <p> If we know, or plan to prove, that a relation is an equivalence
+          relation, by convention we may denote the relation by <m>\sim</m>,
+          rather than by <m>R</m>.</p>
+
+    </statement>  
   </definition>
 
   <remark>
@@ -207,13 +213,6 @@
         </p>
       </li>
 
-      <li>
-        <p>
-          If we know, or plan to prove, that a relation is an equivalence
-          relation, by convention we will often denote the relation by <m>\sim</m>,
-          rather than by <m>R</m>.
-        </p>
-      </li>
     </ol>
   </remark>
 
@@ -280,6 +279,7 @@
         called the <term>equivalence classes of <m>S</m> under <m>\sim</m></term>.
       </p>
     </statement>
+<notation><usage>[x]</usage><description>the equivalence class of <m>x</m></description></notation>
   </definition>
 
   <remark>

@@ -261,7 +261,8 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
      <notation><usage>A\cap B</usage><description>the intersection of  <m>A</m> and <m>B</m></description></notation>
      <notation><usage>A\cup B</usage><description>the union of  <m>A</m> and <m>B</m></description></notation>
      <notation><usage>A - B</usage><description>the difference of  <m>A</m> and <m>B</m></description></notation>
-
+<notation><usage>\bigcup_{i\in I}A_i</usage><description><m>\{x: x\in A_i \text{ for some }  i\in I\}</m></description></notation>
+<notation><usage>\bigcap_{i\in I}A_i</usage><description><m>\{x: x\in A_i \text{ for every }  i\in I\}</m></description></notation>
   </definition>
 
   <p>

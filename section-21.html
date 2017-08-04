@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-03T23:36:40-07:00    *-->
+<!--*    on 2017-08-04T13:38:29-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -149,7 +149,6 @@ MathJax.Hub.Config({
 <li><a href="appendix-1.html" data-scroll="appendix-1">Notation</a></li>
 <li><a href="appendix-2.html" data-scroll="appendix-2">Solutions to Exercises</a></li>
 <li><a href="references-1.html" data-scroll="references-1">Bibliography</a></li>
-<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
 <li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-21"><header title="Section 6.3 The index of a subgroup and Lagrange's Theorem"><h1 class="heading hide-type" alt="Section 6.3 The index of a subgroup and Lagrange's Theorem">
@@ -157,17 +156,17 @@ MathJax.Hub.Config({
 </h1></header><article class="definition-like" id="definition-49"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">6.3.1</span>
 </h5>
-<p id="p-851">We define the <em class="terminology">index of \(H\) in \(G\)</em>, denoted \((G:H)\text{,}\) to be the cardinality of \(G/H\text{.}\)<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-7" id="fn-7"><span class="footnote"><sup> 1 </sup></span></a></span><span id="hk-fn-7" style="display: none;" class="tex2jax_ignore"><span class="footnote">Even though we need not have \(aH=Ha\) for all \(a\in G\text{,}\) we do always have \(|G/H|=|H\backslash G|\text{.}\)</span></span></p></article><p id="p-852">Note that if \(G\) is finite then \((G:H)\) must be finite; however, we see below that if \(G\) is infinite then \((G:H)\) could be finite or infinite.</p>
+<p id="p-850">We define the <em class="terminology">index of \(H\) in \(G\)</em>, denoted \((G:H)\text{,}\) to be the cardinality of \(G/H\text{.}\)<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-7" id="fn-7"><span class="footnote"><sup> 1 </sup></span></a></span><span id="hk-fn-7" style="display: none;" class="tex2jax_ignore"><span class="footnote">Even though we need not have \(aH=Ha\) for all \(a\in G\text{,}\) we do always have \(|G/H|=|H\backslash G|\text{.}\)</span></span></p></article><p id="p-851">Note that if \(G\) is finite then \((G:H)\) must be finite; however, we see below that if \(G\) is infinite then \((G:H)\) could be finite or infinite.</p>
 <article class="example-like" id="example-65"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">6.3.2</span>
 </h5>
-<p id="p-853">If \((\R:\Z)\) were finite, then we'd be able to write \(\R\) as a finite union of countable sets, implying that \(\R\) is countable—which it isn't. Thus, \((\R:\Z)=\infty\text{.}\)</p></article><article class="example-like" id="example-66"><h5 class="heading">
+<p id="p-852">If \((\R:\Z)\) were finite, then we'd be able to write \(\R\) as a finite union of countable sets, implying that \(\R\) is countable—which it isn't. Thus, \((\R:\Z)=\infty\text{.}\)</p></article><article class="example-like" id="example-66"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">6.3.3</span>
 </h5>
-<p id="p-854">Since \(\langle i\rangle =\{i,-1,-i,1\}\) is a finite subgroup of \(C^*\) and \(C^*\) is infinite, we must have that \((C^*:\langle i\rangle )\) is infinite. However, \((C^*:C^*)=1\text{.}\)</p></article><article class="example-like" id="indices_ex"><h5 class="heading">
+<p id="p-853">Since \(\langle i\rangle =\{i,-1,-i,1\}\) is a finite subgroup of \(C^*\) and \(C^*\) is infinite, we must have that \((C^*:\langle i\rangle )\) is infinite. However, \((C^*:C^*)=1\text{.}\)</p></article><article class="example-like" id="indices_ex"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">6.3.4</span>
 </h5>
-<p id="p-855">Referring to our previous examples, we have: </p>
+<p id="p-854">Referring to our previous examples, we have: </p>
 \begin{equation*}
 (S_3:\langle (12)\rangle )=3,
 \end{equation*}
@@ -187,30 +186,30 @@ MathJax.Hub.Config({
 \begin{equation*}
 \text{and }(\Z_{12}:\langle 4\rangle )=4.
 \end{equation*}
-</article><p id="p-856">Notice that in the cases in which \(G\) is finite, \((G:H)=|G|/|H|\text{.}\) This makes sense, since the left cosets of \(H\) in \(G\) partition \(G\text{,}\) and each left coset has cardinality \(|H|\text{.}\)</p>
-<p id="p-857">Since the left cosets of a subgroup \(H\) of a group \(G\) partition \(G\) and all have the same cardinality, we have the following two theorems. The first is known as <!--Style me with CSS--><em>Lagrange's Theorem</em> (named for the French mathematician Joseph-Louis Lagrange).</p>
+</article><p id="p-855">Notice that in the cases in which \(G\) is finite, \((G:H)=|G|/|H|\text{.}\) This makes sense, since the left cosets of \(H\) in \(G\) partition \(G\text{,}\) and each left coset has cardinality \(|H|\text{.}\)</p>
+<p id="p-856">Since the left cosets of a subgroup \(H\) of a group \(G\) partition \(G\) and all have the same cardinality, we have the following two theorems. The first is known as <!--Style me with CSS--><em>Lagrange's Theorem</em> (named for the French mathematician Joseph-Louis Lagrange).</p>
 <article class="theorem-like" id="lagrange"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">6.3.5</span><span class="title">Lagrange's Theorem</span>
 </h5>
-<p id="p-858">If \(G\) is a finite group and \(H\leq G\text{,}\) then \(|H|\) divides \(|G|\text{.}\)</p></article><article class="theorem-like" id="indexfin"><h5 class="heading">
+<p id="p-857">If \(G\) is a finite group and \(H\leq G\text{,}\) then \(|H|\) divides \(|G|\text{.}\)</p></article><article class="theorem-like" id="indexfin"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">6.3.6</span>
 </h5>
-<p id="p-859">If \(G\) is a finite group and \(H\leq G\text{,}\) then \((G:H)=|G|/|H|\text{.}\)</p></article><article class="remark-like" id="remark-34"><h5 class="heading">
+<p id="p-858">If \(G\) is a finite group and \(H\leq G\text{,}\) then \((G:H)=|G|/|H|\text{.}\)</p></article><article class="remark-like" id="remark-34"><h5 class="heading">
 <span class="type">Remark</span><span class="codenumber">6.3.7</span>
 </h5>
-<p id="p-860">The converse of <a knowl="./knowl/lagrange.html" knowl-id="xref-lagrange" alt="Theorem 6.3.5 Lagrange's Theorem" title="Theorem 6.3.5 Lagrange's Theorem">Lagrange's Theorem</a> does <!--Style me with CSS--><em>not</em> hold. Indeed \(A_4\) is a group of order 12 which contains no subgroup of order \(6\) even though \(6\) divides \(|A_4|=12\text{.}\)</p></article><p id="p-861">We end this chapter with two corollaries to <a knowl="./knowl/lagrange.html" knowl-id="xref-lagrange" alt="Theorem 6.3.5 Lagrange's Theorem" title="Theorem 6.3.5 Lagrange's Theorem">Lagrange's Theorem</a>.</p>
+<p id="p-859">The converse of <a knowl="./knowl/lagrange.html" knowl-id="xref-lagrange" alt="Theorem 6.3.5 Lagrange's Theorem" title="Theorem 6.3.5 Lagrange's Theorem">Lagrange's Theorem</a> does <!--Style me with CSS--><em>not</em> hold. Indeed \(A_4\) is a group of order 12 which contains no subgroup of order \(6\) even though \(6\) divides \(|A_4|=12\text{.}\)</p></article><p id="p-860">We end this chapter with two corollaries to <a knowl="./knowl/lagrange.html" knowl-id="xref-lagrange" alt="Theorem 6.3.5 Lagrange's Theorem" title="Theorem 6.3.5 Lagrange's Theorem">Lagrange's Theorem</a>.</p>
 <article class="theorem-like" id="corollary-5"><h5 class="heading">
 <span class="type">Corollary</span><span class="codenumber">6.3.8</span>
 </h5>
-<p id="p-862">Let \(G\) be a finite group and let \(a\in G\text{.}\) Then \(a^{|G|}=e_G\text{.}\)</p></article><div class="posterior">
+<p id="p-861">Let \(G\) be a finite group and let \(a\in G\text{.}\) Then \(a^{|G|}=e_G\text{.}\)</p></article><div class="posterior">
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-36" id="proof-36"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></div>
-<div id="hk-proof-36" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-863">Let \(d=o(a)\text{.}\) By <a knowl="./knowl/lagrange.html" knowl-id="xref-lagrange" alt="Theorem 6.3.5 Lagrange's Theorem" title="Theorem 6.3.5 Lagrange's Theorem">Lagrange's Theorem</a>, \(d\) divides \(|G|\text{,}\) so there exists \(k\in \Z\) with \(|G|=dk\text{.}\) Then \(a^{|G|}=a^{dk}=(a^d)^k=(e_G)^k=e_G.\)</p></article></div>
+<div id="hk-proof-36" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-862">Let \(d=o(a)\text{.}\) By <a knowl="./knowl/lagrange.html" knowl-id="xref-lagrange" alt="Theorem 6.3.5 Lagrange's Theorem" title="Theorem 6.3.5 Lagrange's Theorem">Lagrange's Theorem</a>, \(d\) divides \(|G|\text{,}\) so there exists \(k\in \Z\) with \(|G|=dk\text{.}\) Then \(a^{|G|}=a^{dk}=(a^d)^k=(e_G)^k=e_G.\)</p></article></div>
 </div>
-<p id="p-864">Finally, we have the following corollary, whose proof is left as an exercise for the reader.</p>
+<p id="p-863">Finally, we have the following corollary, whose proof is left as an exercise for the reader.</p>
 <article class="theorem-like" id="pcyc"><h5 class="heading">
 <span class="type">Corollary</span><span class="codenumber">6.3.9</span>
 </h5>
-<p id="p-865">Let \(G\) be a group of prime order. Then \(G\) is cyclic. It follows that for every prime \(p\text{,}\) there exists a unique group of order \(p\text{,}\) up to isomorphism.</p></article></section></div></main>
+<p id="p-864">Let \(G\) be a group of prime order. Then \(G\) is cyclic. It follows that for every prime \(p\text{,}\) there exists a unique group of order \(p\text{,}\) up to isomorphism.</p></article></section></div></main>
 </div>
 <script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
 </body>
