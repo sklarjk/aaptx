@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-04T13:46:57-07:00    *-->
+<!--*    on 2017-08-04T15:00:36-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,8 +13,10 @@
 </head>
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>To prove that the first and second statements are equivalent: Let \(x, y\in S\text{.}\) If \(y\in
-[x]\text{,}\) then \(y \sim x\text{,}\) so for every \(z\in [y]\) (that is, for every \(z\) in \(S\) with \(z\sim y\)), we have, by transitivity, \(z\sim x\text{,}\) so \(z\in [x]\text{.}\) On the other hand, by the symmetry of \(\sim\) we have \(x\sim y\text{;}\) so for every \(z\in [x]\text{,}\) we have, again by transitivity, that \(z\in [y]\text{.}\) Thus, \([x]=[y]\text{.}\) Conversely, if \([x]=[y]\text{,}\) then since \(y\in [y]=[x]\text{.}\)</p>
+<p>Define relation \(R\) on \(\Z\) by \(xR y\) if and only if \(xy
+\geq 0\text{.}\)  Is \(R\) an equivalence relation on \(\Z\text{?}\)  Well, for every \(x\in \Z\text{,}\) \(x^2\geq 0\text{,}\) so \(R\) is reflexive.  Moreover, if \(x,y\in
+\Z\) with \(xy \geq 0\text{,}\) then \(yx \geq 0\text{;}\) so \(R\) is symmetric.  But \(R\) is <!--Style me with CSS--><em>not</em> transitive: indeed, \(3,0,-4\in \Z\) with \(3(0)=0
+\geq 0\) and \(0(-4)=0\geq 0\text{,}\) so \(3\R 0\) and \(0 R -4\text{;}\) but \(3(-4)=-12 \not \geq 0\text{.}\)  So \(R\) isn't transitive, and hence is <!--Style me with CSS--><em>not</em> an equivalence relation.</p>
 <span class="incontext"><a href="section-22.html#p-924">in-context</a></span>
 </body>
 </html>

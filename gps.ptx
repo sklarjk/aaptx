@@ -369,46 +369,45 @@
   </example>
 
   <example>
-    <statement>
-      <ol>
-        <li>
-          <p>
+    <statement><p>
             For each following binary structure <m>\langle G,*\rangle</m>, determine whether or not <m>G</m> is a group.
-          </p>
-        </li>
-
-        <li>
-          <p>
             For those that are <em>not </em> groups, determine the first group axiom  that fails, and provide a proof that it fails.
-          </p>
+          
+<ol cols="4">
+        <li><p>
+        <m>\langle \Q,+\rangle</m></p>
         </li>
-
-        <li class="custom-list-style-type" label="" >
-
-        <p>
-          <tabular>
-            <row>
-              <cell><m>\langle \Q,+\rangle</m></cell>
-              <cell><m>\langle \Z,-\rangle</m></cell>
-              <cell><m>\langle \R,\cdot\,\rangle</m></cell>
-              <cell><m>\langle \C^*,\cdot\, \rangle</m></cell>
-            </row>
-            <row>
-              <cell><m>\langle \R,+\rangle</m></cell>
-              <cell><m>\langle \Z^+,+\rangle</m></cell>
-              <cell><m>\langle \Z^*,\cdot\,\rangle</m></cell>
-              <cell><m>\langle \M_n(\R),+\rangle</m></cell>
-            </row>
-            <row>
-              <cell><m>\langle \C,+\rangle</m></cell>
-              <cell><m>\langle \Z, \cdot\,\rangle</m></cell>
-              <cell><m>\langle \R^*,\cdot\, \rangle</m></cell>
-              <cell><m>\langle \M_n(\R),\cdot\, \rangle</m></cell>
-            </row>
-          </tabular>
-        </p>
+<li><p>
+        <m>\langle \Z,-\rangle</m></p>
         </li>
-      </ol>
+        <li><p>
+        <m>\langle \R,\cdot\rangle</m></p>
+        </li>
+        <li><p>
+        <m>\langle \C^*,\cdot\rangle</m></p>
+        </li>
+<li><p>
+        <m>\langle \R,+\rangle</m></p>
+        </li>
+        <li><p>
+        <m>\langle \Z^+,+\rangle</m></p>
+        </li>
+        <li><p>
+        <m>\langle \Z^*,\cdot\rangle</m></p>
+        </li>
+        <li><p>
+        <m>\langle \M_n(\R),+\rangle</m></p>
+        </li>
+        <li><p>
+        <m>\langle \C,+\rangle</m></p>
+        </li><li><p>
+        <m>\langle \Z,\cdot\rangle</m></p>
+        </li><li><p>
+        <m>\langle \R^*,\cdot\rangle</m></p>
+        </li><li><p>
+        <m>\langle \M_n(\R),\cdot\rangle</m></p>
+        </li>
+      </ol></p>
     </statement>
   </example>
 

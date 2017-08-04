@@ -135,6 +135,7 @@
     contain.
   </p>
 
+
   <example>
     <statement>
       <ol>
@@ -166,6 +167,12 @@
       </ol>
     </statement>
   </example>
+
+
+
+
+
+
 
   <definition>
     <statement>
@@ -471,14 +478,18 @@ complete set
 
 <section>
   <title>Introduction to cosets and normal subgroups</title>
-  <p>
-    Throughout this section, let <m>G</m> be a group with subgroup <m>H</m>
-    and consider two particular relations on <m>G</m>:
-    <m>\siml</m> defined by <m>a\siml b</m> if and only if
-    <m>a^{-1}b\in H</m>and
-    <m>\simr</m> defined by <m>a\simr b</m> if and only if
-    <m>ab^{-1}\in H</m>.
-  </p>
+   
+    <definition><statement> Given a group <m>G</m> with subgroup <m>H</m>, we define
+    <m>\siml</m> on <m>G</m> by  <me>a\siml b \text{ if and only if }
+   a^{-1}b\in H</me> and
+    <m>\simr</m> on <m>G</m> by  <me>a\simr b \text{ if and only if }
+   ab^{-1}\in H.</me>
+   </statement>
+   <notation><usage>\siml </usage><description>the relation on <m>G</m> defined by <m>a\siml b \Leftrightarrow
+   a^{-1}b\in H</m>, given <m>H\leq G</m></description></notation>
+    <notation><usage>\simr </usage><description>the relation on <m>G</m> defined by <m>a\simr b \Leftrightarrow
+   ab^{-1}\in H</m>, given <m>H\leq G</m></description></notation>  
+   </definition>
 
   <theorem xml:id="simlreq">
     <statement>
@@ -514,9 +525,12 @@ complete set
   </proof>
 </theorem>
 
-
+<remark><p> Of course, different subgroups <m>H</m> and <m>K</m> in a group <m>G</m> will give rise to different relations <m>\siml</m> and <m>\simr</m> on <m>G</m>; that is, these relations are really defined  with respect to a particular subgroup of <m>G</m>.</p> </remark>
+<p>
+  From now on, whenever we discuss <m>\siml</m> or <m>\simr</m> on a group, assume that it is with respect to a particular subgroup <m>H</m> of <m>G</m>.</p>
+ 
   <p>
-    Now, as equivalence relations, each of <m>\siml</m> and <m>\simr</m>
+    Now, as equivalence relations on a group <m>G</m>, each of <m>\siml</m> and <m>\simr</m>
     gives rise to a partition of <m>G</m>. What are the cells of those
     partitions?
   </p>
@@ -538,8 +552,12 @@ complete set
       <p>
         We call <m>aH</m> and <m>Ha</m>, respectively, the <term>left </term> and <term>right cosets of <m>H</m> containing
         <m>a</m></term>.
+
+        <p>If we know that <m>G</m> is abelian, with operation denoted by <m>+</m>, we may denote these left and right cosets by <m>a+H</m> and <m>H+a</m>, respectively.</p>
       </p>
     </statement>
+    <notation><usage>aH, a+H</usage><description>the left coset of <m>H</m> containing <m>a</m></description></notation>
+<notation><usage>Ha, H+a</usage><description>the right coset of <m>H</m> containing <m>a</m></description></notation>
   </definition>
 
   <theorem xml:id="equivca">
@@ -552,6 +570,8 @@ complete set
   
 
   <proof>
+    <p>Below, we use the notation <m>\Leftrightarrow</m> to denote <q>if and only if.</q></p>
+
     <p>
       Let <m>b\in G</m>. Then <m>b\siml a \Leftrightarrow a \siml b
       \Leftrightarrow a^{-1}b\in H \Leftrightarrow a^{-1}b=h</m> for some
@@ -560,6 +580,7 @@ complete set
       have <m>[a]=Ha</m>.
     </p>
   </proof>
+  <notation><usage>\Leftrightarrow</usage><description>if and only if</description></notation>
 </theorem>
 
   <p>
@@ -800,23 +821,24 @@ complete set
     </statement>
   </example>
 
-  <p>
+<p>
     We now consider the set of all left cosets of
-    a subgroup of a group. (Note: There are analogous versions of
-    what follows using right cosets, but we relegate any discussions
-    of that to footnotes.)
+    a subgroup of a group.
   </p>
 
-  <notation>
-
-  <p>
-    We let <m>G/H</m> denote the set of
+   <definition>
+   <statement>
+   <p>
+    We let <m>G/H</m> be the set of
     all left cosets of subgroup <m>H</m> in <m>G</m>. We read <m>G/H</m> as <q><m>G</m>
     mod <m>H</m>.</q> (We denote the set of all right cosets of subgroup <m>H</m> in <m>G</m> by <m>H\backslash G</m>, but we will not be explicitly referring to  that set in this class.)</p>
+    </statement>
+<notation><usage>G/H</usage><description>the set of all left cosets of <m>H</m> in <m>G</m></description></notation>
+<notation><usage>H \backslash G</usage><description>the set of all right cosets of <m>H</m> in <m>G</m></description></notation>
+    </definition>
 
-  </notation>
 </section>
-`
+
 <section>
   <title>The index of a subgroup and Lagrange's Theorem</title>
   <definition>
@@ -825,12 +847,15 @@ complete set
         We define the <term>index of <m>H</m> in <m>G</m></term>, denoted <m>(G:H)</m>,
         to be the cardinality of <m>G/H</m>.<fn>Even though we need not have <m>aH=Ha</m> for all <m>a\in G</m>, we do always have <m>|G/H|=|H\backslash G|</m>.</fn></p>
     </statement>
+    <notation><usage>(G:H)</usage><description><m>|G/H|</m></description></notation>
   </definition>
+
+<p>In the cases in which <m>G/H</m> contains infinitely many elements, we won't worry about specific cardinality, and may simply say that the index of <m>H</m> in <m>G</m> is infinite, and write <m>(G:H)=\infty</m>. However, we can, of course, distinguish between countably infinite and uncountably infinite indices.</p>
 
   <p>
     Note that if <m>G</m> is finite then <m>(G:H)</m> must be finite; however,
     we see below that if <m>G</m> is infinite then <m>(G:H)</m> could be finite or
-    infinite.
+    infinite. 
   </p>
 
   <example>

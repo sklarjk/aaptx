@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-04T13:46:36-07:00    *-->
+<!--*    on 2017-08-04T15:00:19-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -161,32 +161,32 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-27"><header title="Section 8.3 Introduction to factor groups"><h1 class="heading hide-type" alt="Section 8.3 Introduction to factor groups">
 <span class="type">Section</span><span class="codenumber">8.3</span><span class="title">Introduction to factor groups</span>
-</h1></header><p id="p-1120">We now return to the notion of equipping \(G/H\text{,}\) when \(H\unlhd G\text{,}\) with a group structure. We have already saw that left coset multiplication on \(G/H\) is well defined when \(H\unlhd G\) (<a knowl="./knowl/cmwd.html" knowl-id="xref-cmwd" alt="Theorem 8.1.2 " title="Theorem 8.1.2 ">Theorem 8.1.2</a>); it turns out that given this, it is very easy to prove that \(G/H\) under this operation is a group.</p>
-<p id="p-1121">Before we prove this, we introduce a change in our notation: We initiate the convention of frequently using \(N\text{,}\) rather than \(H\text{,}\) to denote a subgroup of a group \(G\) when we know that that subgroup is <!--Style me with CSS--><em>normal</em> in \(G\text{.}\)</p>
+</h1></header><p id="p-1134">We now return to the notion of equipping \(G/H\text{,}\) when \(H\unlhd G\text{,}\) with a group structure. We have already saw that left coset multiplication on \(G/H\) is well defined when \(H\unlhd G\) (<a knowl="./knowl/cmwd.html" knowl-id="xref-cmwd" alt="Theorem 8.1.2 " title="Theorem 8.1.2 ">Theorem 8.1.2</a>); it turns out that given this, it is very easy to prove that \(G/H\) under this operation is a group.</p>
+<p id="p-1135">Before we prove this, we introduce a change in our notation: We initiate the convention of frequently using \(N\text{,}\) rather than \(H\text{,}\) to denote a subgroup of a group \(G\) when we know that that subgroup is <!--Style me with CSS--><em>normal</em> in \(G\text{.}\)</p>
 <article class="theorem-like" id="theorem-53"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">8.3.1</span>
 </h5>
-<p id="p-1122">Let \(G\) be a group with identity element \(e\text{,}\) and let \(N\unlhd G\text{.}\) Then \(G/N\) is a group under left coset multiplication (that is, under the operation \((aN)(bN)=abN\) for all \(a,b\in G\)), and \(|G/N|=(G:N)\) (in particular, if \(|G|\lt \infty\text{,}\) then \(|G/N|=|G|/|N|\)).</p></article><div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-46" id="proof-46"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-46" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-1123">We already know that since \(N\unlhd G\text{,}\) left coset multiplication on \(G/N\) is well defined; further, it is clear that \(G/N\) is closed under this operation.</p>
-<p id="p-1124">Associativity of this operation on \(G/N\) follows from the associativity of \(G\)'s operation: indeed, if \(aN\text{,}\) \(bN\text{,}\) \(cN \in
+<p id="p-1136">Let \(G\) be a group with identity element \(e\text{,}\) and let \(N\unlhd G\text{.}\) Then \(G/N\) is a group under left coset multiplication (that is, under the operation \((aN)(bN)=abN\) for all \(a,b\in G\)), and \(|G/N|=(G:N)\) (in particular, if \(|G|\lt \infty\text{,}\) then \(|G/N|=|G|/|N|\)).</p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-46" id="proof-46"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-46" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-1137">We already know that since \(N\unlhd G\text{,}\) left coset multiplication on \(G/N\) is well defined; further, it is clear that \(G/N\) is closed under this operation.</p>
+<p id="p-1138">Associativity of this operation on \(G/N\) follows from the associativity of \(G\)'s operation: indeed, if \(aN\text{,}\) \(bN\text{,}\) \(cN \in
 G/N\text{,}\) then</p>
 \begin{equation*}
 ((aN)(bN))(cN)=(abN)(cN)=(ab)cN=a(bc)N=(aN)(bcN)=(aN)((bN)(cN)).
 \end{equation*}
-<p id="p-1125">Next, \(N=eN\in G/N\) acts as an identity element since for all \(a\in
+<p id="p-1139">Next, \(N=eN\in G/N\) acts as an identity element since for all \(a\in
 G\text{,}\)</p>
-<p id="p-1126">\((aN)(N)=aeN=aN\) and \(N(aN)=eaN=aN\text{.}\)</p>
-<p id="p-1127">Finally, let \(aN\in G/N\text{.}\) Then \(a^{-1}N\in G/N\) with \((aN)(a^{-1}N)=aa^{-1}N=N\) and \((a^{-1}N)(aN)=a^{-1}aN=N\text{.}\)</p>
-<p id="p-1128">So \(G/N\) is a group under left coset multiplication. Since \((G:N)\) is, by definition, the cardinality of \(G/N\text{,}\) we're done.</p></article></span>
+<p id="p-1140">\((aN)(N)=aeN=aN\) and \(N(aN)=eaN=aN\text{.}\)</p>
+<p id="p-1141">Finally, let \(aN\in G/N\text{.}\) Then \(a^{-1}N\in G/N\) with \((aN)(a^{-1}N)=aa^{-1}N=N\) and \((a^{-1}N)(aN)=a^{-1}aN=N\text{.}\)</p>
+<p id="p-1142">So \(G/N\) is a group under left coset multiplication. Since \((G:N)\) is, by definition, the cardinality of \(G/N\text{,}\) we're done.</p></article></span>
 </div>
-<article class="definition-like" id="definition-66"><h5 class="heading">
+<article class="definition-like" id="definition-69"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">8.3.2</span>
 </h5>
-<p id="p-1129">When \(G\) is a group and \(N\unlhd G\text{,}\) the above group (\(G/N\) under left coset multiplication) is called a <em class="terminology">factor group</em> or <em class="terminology">quotient group</em>.</p></article><article class="example-like" id="example-81"><h5 class="heading">
+<p id="p-1143">When \(G\) is a group and \(N\unlhd G\text{,}\) the above group (\(G/N\) under left coset multiplication) is called a <em class="terminology">factor group</em> or <em class="terminology">quotient group</em>.</p></article><article class="example-like" id="example-81"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">8.3.3</span>
 </h5>
-<p id="p-1130">Let \(G=\Z\) and \(N=3\Z\text{.}\) Then \(N\) is normal in \(G\text{,}\) since \(G\) is abelian, so the set \(G/N=\{N,1+N,2+N\}\) is a group under left coset multiplication. Noting that \(N=0+N\text{,}\) it is straightforward to see that \(G/N\) (that is, \(\Z/3\Z\)) has the following group table:</p>
-<p id="p-1131"><figure class="figure-like" id="z3-Cayley"><table>
+<p id="p-1144">Let \(G=\Z\) and \(N=3\Z\text{.}\) Then \(N\) is normal in \(G\text{,}\) since \(G\) is abelian, so the set \(G/N=\{N,1+N,2+N\}\) is a group under left coset multiplication. Noting that \(N=0+N\text{,}\) it is straightforward to see that \(G/N\) (that is, \(\Z/3\Z\)) has the following group table:</p>
+<p id="p-1145"><figure class="figure-like" id="z3-Cayley"><table>
 <tr>
 <td class="c m b2 r2 l0 t0 lines">\(+\)</td>
 <td class="c m b2 r0 l0 t0 lines">\(0+N\)</td>
@@ -238,40 +238,40 @@ G\text{,}\)</p>
 <td class="c m b0 r0 l0 t0 lines">\(1\)</td>
 </tr>
 </table>
-<figcaption><span class="heading">Table</span><span class="codenumber">8.3.5</span>Group table for \(\Z_3\)</figcaption></figure> Thus, we see that \(\Z/3\Z\) is isomorphic to \(\Z_3\text{.}\)</p></article><p id="p-1132">This is not a coincidence! In fact, we have the following:</p>
+<figcaption><span class="heading">Table</span><span class="codenumber">8.3.5</span>Group table for \(\Z_3\)</figcaption></figure> Thus, we see that \(\Z/3\Z\) is isomorphic to \(\Z_3\text{.}\)</p></article><p id="p-1146">This is not a coincidence! In fact, we have the following:</p>
 <article class="theorem-like" id="theorem-54"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">8.3.6</span>
 </h5>
-<p id="p-1133">Let \(n,d \in \Z^+\) with \(d\) dividing \(n\text{.}\) Then we have: </p>
+<p id="p-1147">Let \(n,d \in \Z^+\) with \(d\) dividing \(n\text{.}\) Then we have: </p>
 <ol id="ol-119" style="list-style-type: decimal;">
-<li id="li-488"><p id="p-1134">\(n\Z\unlhd d\Z\) and \(\langle d\rangle \unlhd \Z_n\text{;}\)</p></li>
-<li id="li-489"><p id="p-1135">\(d\Z/n\Z\simeq \Z_{n/d}\) (special case: \(\Z/n\Z \simeq \Z_n\)); and</p></li>
-<li id="li-490"><p id="p-1136">\(Z_n/\langle d\rangle  \simeq \Z_d\text{.}\)</p></li>
+<li id="li-497"><p id="p-1148">\(n\Z\unlhd d\Z\) and \(\langle d\rangle \unlhd \Z_n\text{;}\)</p></li>
+<li id="li-498"><p id="p-1149">\(d\Z/n\Z\simeq \Z_{n/d}\) (special case: \(\Z/n\Z \simeq \Z_n\)); and</p></li>
+<li id="li-499"><p id="p-1150">\(Z_n/\langle d\rangle  \simeq \Z_d\text{.}\)</p></li>
 </ol></article><div class="posterior">
 <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-47" id="proof-47"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-47" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><ol id="ol-120" style="list-style-type: decimal;">
-<li id="li-491"><p id="p-1137">Since \(d\) is a positive divisor of \(n\text{,}\) \(n\Z\) and \(\langle d\rangle\) are clearly subgroups of, respectively, \(d\Z\) and \(\Z_n\text{.}\) Moreover, since \(d\Z\) and \(\Z_n\) are abelian, all of their subgroups are normal.</p></li>
-<li id="li-492"><p id="p-1138">This follows from the facts that \(d\Z/n\Z=\langle d+n\Z\rangle\text{,}\) hence is cyclic, and that \(|d\Z/n\Z|=(d\Z:n\Z)=n/d\) (see <a knowl="./knowl/indices_ex.html" knowl-id="xref-indices_ex" alt="Example 7.3.4 " title="Example 7.3.4 ">Example 7.3.4</a>). (Unpacking the statement that \(d\Z/n\Z=\langle d+n\Z\rangle\text{:}\) Notice that \(d\Z=\langle d\rangle\text{,}\) so every element of \(d\Z\) is of the form \(kd\) for some integer \(k\text{.}\) Thus, every element of \(d\Z/n\Z\) is of the form \(kd+n\Z\) for some integer \(k\text{.}\) But for each \(k\in \Z\text{,}\) using the definition of left coset multiplication we have that \(kd+n\Z=k(d+n\Z)\text{.}\) So \(d\Z/n\Z=\langle d+n\Z\rangle\text{.}\))</p></li>
-<li id="li-493"><p id="p-1139">Similarly, since \(\Z_n=\langle 1\rangle\text{,}\) \(\Z_n/\langle d\rangle =\langle 1+\langle d\rangle \rangle\text{,}\) so is cyclic. Since \((\Z_n:\langle d\rangle )=d\) (again, see <a knowl="./knowl/indices_ex.html" knowl-id="xref-indices_ex" alt="Example 7.3.4 " title="Example 7.3.4 ">Example 7.3.4</a>), \(\Z_n/\langle d\rangle\) is isomorphic to \(\Z_d\text{,}\) as desired. \qedhere</p></li>
+<li id="li-500"><p id="p-1151">Since \(d\) is a positive divisor of \(n\text{,}\) \(n\Z\) and \(\langle d\rangle\) are clearly subgroups of, respectively, \(d\Z\) and \(\Z_n\text{.}\) Moreover, since \(d\Z\) and \(\Z_n\) are abelian, all of their subgroups are normal.</p></li>
+<li id="li-501"><p id="p-1152">This follows from the facts that \(d\Z/n\Z=\langle d+n\Z\rangle\text{,}\) hence is cyclic, and that \(|d\Z/n\Z|=(d\Z:n\Z)=n/d\) (see <a knowl="./knowl/indices_ex.html" knowl-id="xref-indices_ex" alt="Example 7.3.4 " title="Example 7.3.4 ">Example 7.3.4</a>). (Unpacking the statement that \(d\Z/n\Z=\langle d+n\Z\rangle\text{:}\) Notice that \(d\Z=\langle d\rangle\text{,}\) so every element of \(d\Z\) is of the form \(kd\) for some integer \(k\text{.}\) Thus, every element of \(d\Z/n\Z\) is of the form \(kd+n\Z\) for some integer \(k\text{.}\) But for each \(k\in \Z\text{,}\) using the definition of left coset multiplication we have that \(kd+n\Z=k(d+n\Z)\text{.}\) So \(d\Z/n\Z=\langle d+n\Z\rangle\text{.}\))</p></li>
+<li id="li-502"><p id="p-1153">Similarly, since \(\Z_n=\langle 1\rangle\text{,}\) \(\Z_n/\langle d\rangle =\langle 1+\langle d\rangle \rangle\text{,}\) so is cyclic. Since \((\Z_n:\langle d\rangle )=d\) (again, see <a knowl="./knowl/indices_ex.html" knowl-id="xref-indices_ex" alt="Example 7.3.4 " title="Example 7.3.4 ">Example 7.3.4</a>), \(\Z_n/\langle d\rangle\) is isomorphic to \(\Z_d\text{,}\) as desired. \qedhere</p></li>
 </ol></article></span>
 </div>
 <article class="example-like" id="example-82"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">8.3.7</span>
 </h5>
-<p id="p-1140">Let \(N=\langle (123)\rangle  \leq S_3\text{.}\) Since \((S_3:N)=2\text{,}\) \(N\) must be normal in \(S_3\text{,}\) so \(S_3/N\) is a group under left coset multiplication. Since \(|S_3/N|=2\text{,}\) \(S_3/N\) must be isomomorphic to \(\Z_2\text{.}\)</p></article><p id="p-1141">In the above examples, we were able to identify \(G/N\) up to isomorphism relatively easily because we could determine that \(G/N\) was cyclic. In general, however, it can be quite difficult to identify the group structure of a factor group. We explore some powerful tools we can use in this identification in the next section, but first we note a couple properties of \(G\) that are “inherited” by any of its factor groups.</p>
+<p id="p-1154">Let \(N=\langle (123)\rangle  \leq S_3\text{.}\) Since \((S_3:N)=2\text{,}\) \(N\) must be normal in \(S_3\text{,}\) so \(S_3/N\) is a group under left coset multiplication. Since \(|S_3/N|=2\text{,}\) \(S_3/N\) must be isomomorphic to \(\Z_2\text{.}\)</p></article><p id="p-1155">In the above examples, we were able to identify \(G/N\) up to isomorphism relatively easily because we could determine that \(G/N\) was cyclic. In general, however, it can be quite difficult to identify the group structure of a factor group. We explore some powerful tools we can use in this identification in the next section, but first we note a couple properties of \(G\) that are “inherited” by any of its factor groups.</p>
 <article class="theorem-like" id="theorem-55"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">8.3.8</span>
 </h5>
-<p id="p-1142">Let \(G\) be a group and \(N\unlhd G\text{.}\) Then: </p>
+<p id="p-1156">Let \(G\) be a group and \(N\unlhd G\text{.}\) Then: </p>
 <ol id="ol-121" style="list-style-type: decimal;">
-<li id="li-494"><p id="p-1143">If \(G\) is finite, then \(G/N\) is finite.</p></li>
-<li id="li-495"><p id="p-1144">If \(G\) is abelian, then \(G/N\) is abelian; and</p></li>
-<li id="li-496"><p id="p-1145">If \(G\) is cyclic, then \(G/N\) is cyclic.</p></li>
+<li id="li-503"><p id="p-1157">If \(G\) is finite, then \(G/N\) is finite.</p></li>
+<li id="li-504"><p id="p-1158">If \(G\) is abelian, then \(G/N\) is abelian; and</p></li>
+<li id="li-505"><p id="p-1159">If \(G\) is cyclic, then \(G/N\) is cyclic.</p></li>
 </ol></article><div class="posterior">
 <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-48" id="proof-48"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-48" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><ol id="ol-122" style="list-style-type: decimal;">
-<li id="li-497"><p id="p-1146">Clearly this holds, since in this case \(|G/N|=|G|/|N|\text{.}\)</p></li>
-<li id="li-498"><p id="p-1147">The proof of this statement is left as an exercise for the reader.</p></li>
-<li id="li-499">
-<p id="p-1148">Let \(G\) be cyclic.  Then there exists \(a\in G\) with \(G=\langle a\rangle\text{.}\)  We claim \(G/N=\langle aN\rangle\text{.}\) Indeed:</p>
+<li id="li-506"><p id="p-1160">Clearly this holds, since in this case \(|G/N|=|G|/|N|\text{.}\)</p></li>
+<li id="li-507"><p id="p-1161">The proof of this statement is left as an exercise for the reader.</p></li>
+<li id="li-508">
+<p id="p-1162">Let \(G\) be cyclic.  Then there exists \(a\in G\) with \(G=\langle a\rangle\text{.}\)  We claim \(G/N=\langle aN\rangle\text{.}\) Indeed:</p>
 \begin{equation*}
 \langle aN\rangle =\{(aN)^i\,:\,i\in \Z\}=\{a^iN\,:\,i\in \Z\}.
 \end{equation*}
@@ -282,35 +282,35 @@ G\text{,}\)</p>
 <article class="remark-like" id="warning-22"><h5 class="heading">
 <span class="type">Warning</span><span class="codenumber">8.3.9</span>
 </h5>
-<p id="p-1149">However, \(G\) can be nonabelian [noncyclic, nonfinite] and yet have a normal subgroup \(N\) such that \(G/N\) is abelian [cyclic, finite]. (See the examples below.) Intuitively, the idea is that modding out a group by a normal subgroup can <!--Style me with CSS--><em>introduce</em> abelianness or cyclicity, or finiteness, but not <!--Style me with CSS--><em>remove</em> one of those characteristics.</p></article><article class="example-like" id="example-83"><h5 class="heading">
+<p id="p-1163">However, \(G\) can be nonabelian [noncyclic, nonfinite] and yet have a normal subgroup \(N\) such that \(G/N\) is abelian [cyclic, finite]. (See the examples below.) Intuitively, the idea is that modding out a group by a normal subgroup can <!--Style me with CSS--><em>introduce</em> abelianness or cyclicity, or finiteness, but not <!--Style me with CSS--><em>remove</em> one of those characteristics.</p></article><article class="example-like" id="example-83"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">8.3.10</span>
 </h5>
-<p id="p-1150">\(S_3\) is nonabelian (and therefore of course noncyclic), but we saw above that \(N=\langle (123)\rangle\) is a normal subgroup of \(S_3\) with \(S_3/N \simeq \Z_2\text{,}\) a cyclic (and therefore of course abelian) group.</p></article><article class="example-like" id="example-84"><h5 class="heading">
+<p id="p-1164">\(S_3\) is nonabelian (and therefore of course noncyclic), but we saw above that \(N=\langle (123)\rangle\) is a normal subgroup of \(S_3\) with \(S_3/N \simeq \Z_2\text{,}\) a cyclic (and therefore of course abelian) group.</p></article><article class="example-like" id="example-84"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">8.3.11</span>
 </h5>
-<p id="p-1151">\(\Z\) is an infinite group, but it has finite factor group \(\Z/2\Z\text{.}\)</p></article><p id="p-1152">What do the (normal) subgroups of a factor group \(G/N\) look like? Well, they come from the (normal) subgroups of \(G\text{!}\) We have the following theorem, whose proof is tedious but straightforward.</p>
+<p id="p-1165">\(\Z\) is an infinite group, but it has finite factor group \(\Z/2\Z\text{.}\)</p></article><p id="p-1166">What do the (normal) subgroups of a factor group \(G/N\) look like? Well, they come from the (normal) subgroups of \(G\text{!}\) We have the following theorem, whose proof is tedious but straightforward.</p>
 <article class="theorem-like" id="theorem-56"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">8.3.12</span>
 </h5>
-<p id="p-1153">{<!--Style me with CSS--><em>(Correspondence Theorem)</em>} Let \(G\) be a group, and let \(K\unlhd G\text{.}\) Then the subgroups of \(G/K\) are exactly those of the form \(H/K\text{,}\) where \(H\leq G\) with \(K\subseteq H\text{.}\) Moreover, the normal subgroups of \(G/K\) are exactly those of the form \(N/K\text{,}\) where \(N\unlhd G\) with \(K\subseteq N\text{.}\)</p></article><article class="example-like" id="example-85"><h5 class="heading">
+<p id="p-1167">{<!--Style me with CSS--><em>(Correspondence Theorem)</em>} Let \(G\) be a group, and let \(K\unlhd G\text{.}\) Then the subgroups of \(G/K\) are exactly those of the form \(H/K\text{,}\) where \(H\leq G\) with \(K\subseteq H\text{.}\) Moreover, the normal subgroups of \(G/K\) are exactly those of the form \(N/K\text{,}\) where \(N\unlhd G\) with \(K\subseteq N\text{.}\)</p></article><article class="example-like" id="example-85"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">8.3.13</span>
 </h5>
-<p id="p-1154">Let \(N=18\Z\) in \(\Z\text{.}\) Since the subgroups of \(\Z\) containing \(N\) are the sets \(d\Z\) where \(d\) is a positive divisor of \(18\text{,}\) the subgroups of \(\Z/N\) are the sets \(d\Z/N\text{,}\) where, again, \(d\) is a positive divisor of \(18\text{.}\)</p></article><p id="p-1155">We end this chapter by noting that given any group \(G\) and factor group \(G/N\) of \(G\text{,}\) there is a homomorphism from \(G\) to \(G/N\) that is onto. Before we define this homomorphism, we provide some more terminology.</p>
-<article class="definition-like" id="definition-67"><h5 class="heading">
+<p id="p-1168">Let \(N=18\Z\) in \(\Z\text{.}\) Since the subgroups of \(\Z\) containing \(N\) are the sets \(d\Z\) where \(d\) is a positive divisor of \(18\text{,}\) the subgroups of \(\Z/N\) are the sets \(d\Z/N\text{,}\) where, again, \(d\) is a positive divisor of \(18\text{.}\)</p></article><p id="p-1169">We end this chapter by noting that given any group \(G\) and factor group \(G/N\) of \(G\text{,}\) there is a homomorphism from \(G\) to \(G/N\) that is onto. Before we define this homomorphism, we provide some more terminology.</p>
+<article class="definition-like" id="definition-70"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">8.3.14</span>
 </h5>
-<p id="p-1156">Let \(\phi: G\to G'\) be a homomorphism of groups. Then \(\phi\) is can be called an <em class="terminology">epimorphism</em> if \(\phi\) is onto, and a <em class="terminology">monomorphism</em> if \(\phi\) is one-to-one. (Of course, we already know that an epimorphism that is also a monomorphism is called an “isomorphism.”)</p></article><p id="p-1157">We now present the following theorem, whose straightforward proof is left to the reader.</p>
+<p id="p-1170">Let \(\phi: G\to G'\) be a homomorphism of groups. Then \(\phi\) is can be called an <em class="terminology">epimorphism</em> if \(\phi\) is onto, and a <em class="terminology">monomorphism</em> if \(\phi\) is one-to-one. (Of course, we already know that an epimorphism that is also a monomorphism is called an “isomorphism.”)</p></article><p id="p-1171">We now present the following theorem, whose straightforward proof is left to the reader.</p>
 <article class="theorem-like" id="theorem-57"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">8.3.15</span>
 </h5>
-<p id="p-1158">Let \(G\) be a group and let \(N\unlhd G\text{.}\) Then the map \(\Psi: G\to G/N\) defined by \(\Psi(g)=gN\) is an epimorphism.</p></article><article class="definition-like" id="definition-68"><h5 class="heading">
+<p id="p-1172">Let \(G\) be a group and let \(N\unlhd G\text{.}\) Then the map \(\Psi: G\to G/N\) defined by \(\Psi(g)=gN\) is an epimorphism.</p></article><article class="definition-like" id="definition-71"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">8.3.16</span>
 </h5>
-<p id="p-1159">We call this map \(\Psi\) the <em class="terminology">canonical epimorphism from \(G\) to \(G/N\)</em>.</p></article><p id="p-1160">Notice that given \(N\unlhd G\text{,}\) the kernel of the canonical epimorphism from \(G\) to \(G/N\) is \(N\text{.}\) Thus, putting this fact together with the fact that every kernel of a homomorphism is a normal subgroup of the homomorphism's domain, we have the following:</p>
+<p id="p-1173">We call this map \(\Psi\) the <em class="terminology">canonical epimorphism from \(G\) to \(G/N\)</em>.</p></article><p id="p-1174">Notice that given \(N\unlhd G\text{,}\) the kernel of the canonical epimorphism from \(G\) to \(G/N\) is \(N\text{.}\) Thus, putting this fact together with the fact that every kernel of a homomorphism is a normal subgroup of the homomorphism's domain, we have the following:</p>
 <article class="theorem-like" id="theorem-58"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">8.3.17</span>
 </h5>
-<p id="p-1161">Let \(G\) be a group and \(N\) a subset of \(G\text{.}\) Then \(N\) is a normal subgroup of \(G\) if and only if \(N\) is the kernel of a homomorphism from \(G\) to some group \(G'\text{.}\)</p></article></section></div></main>
+<p id="p-1175">Let \(G\) be a group and \(N\) a subset of \(G\text{.}\) Then \(N\) is a normal subgroup of \(G\) if and only if \(N\) is the kernel of a homomorphism from \(G\) to some group \(G'\text{.}\)</p></article></section></div></main>
 </div>
 <script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
 </body>

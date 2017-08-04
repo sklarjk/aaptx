@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-04T13:46:39-07:00    *-->
+<!--*    on 2017-08-04T15:00:21-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,23 +13,30 @@
 </head>
 <body>
 <article class="definition-like"><h5 class="heading">
-<span class="type">Definition</span><span class="codenumber">1.1.16</span>
+<span class="type">Definition</span><span class="codenumber">1.1.15</span>
 </h5>
-<p>Let \(A\) and \(B\) be sets. Then the <em class="terminology">direct product</em> (or <em class="terminology">Cartesian product</em>) \(A\times B\) of \(A\) and \(B\) is the set</p>
+<ol style="list-style-type: decimal;">
+<li><p>If \(A\) and \(B\) are sets, then the <em class="terminology">union</em> of \(A\) and \(B\text{,}\) denoted \(A\cup B\text{,}\) is the set \(A\cup B=\{x: x\in A \text{ or }  x\in B\};\) the <em class="terminology">intersection</em> of \(A\) and \(B\text{,}\) denoted \(A\cap B\text{,}\) is the set \(A\cap B=\{x: x\in A \text{ and }  x\in B\};\) and the <em class="terminology">difference</em> of \(A\) and \(B\text{,}\) denoted \(A-B\) (or \(A\setminus B\)), is the set \(A-B=\{x: x\in A \text{ and }  x\not\in B\}.\)</p></li>
+<li>
+<p>More generally, given any collection of sets \(A_i\) (\(i\) in some index set \(I\)), the <em class="terminology">union</em> of the \(A_i\) is</p>
 \begin{equation*}
-A\times B =
-\{(a,b): \text{\(a\in A\), \(b\in B\)} \}.
+\bigcup_{i\in I}A_i=\{x: x\in A_i \text{ for some }  i\in I\},
 \end{equation*}
-<p>An element \((a,b)\) of \(A\times B\) is called an <em class="terminology">ordered pair</em>. More generally, if \(A_1, A_2, \ldots, A_n\) are sets for some \(n\in \Z^+\text{,}\) then the <em class="terminology">product</em> of the \(A_i\) is</p>
+<p>and the <em class="terminology">intersection</em> of the \(A_i\) is</p>
 \begin{equation*}
-A_1\times A_2 \times \cdots
-\times A_n=\{(a_1, a_2 \ldots, a_n): a_i \in A_i \text{ for
-} i=1,2, \ldots, n\}; 
+\bigcap_{i\in I}A_i=\{x: x\in A_i \text{ for every }  i\in I\}.
 \end{equation*}
-<p>the elements \((a_1,a_2,\ldots,a_n)\) of this product are called \(n\)-tuples (or triples, if \(n=3\)). (You can also have products of infinitely many sets, but we will not discuss that in this course.) Finally, if each set \(A_i\) is the same set \(A\text{,}\) we can use the notation \(A^n\) to denote the product</p>
+</li>
+<li>
+<p>Sets \(A\) and \(B\) are <!--Style me with CSS--><em>disjoint</em> if \(A\cap B=\emptyset\text{.}\)  More generally, sets \(A_i\) (\(i\) in some index set \(I\)) are <!--Style me with CSS--><em>disjoint</em> if</p>
 \begin{equation*}
-A\times A \times \cdots \times A
+\bigcap_{i\in I}A_i=\emptyset
 \end{equation*}
-<p>of \(n\) copies of \(A\text{.}\)</p></article><span class="incontext"><a href="section-1.html#definition-6">in-context</a></span>
+<p>and are <!--Style me with CSS--><em>mutually disjoint</em> if</p>
+\begin{equation*}
+A_i\cap A_j=\emptyset \text{ for all } i\neq j \in I.
+\end{equation*}
+</li>
+</ol></article><span class="incontext"><a href="section-1.html#definition-6">in-context</a></span>
 </body>
 </html>

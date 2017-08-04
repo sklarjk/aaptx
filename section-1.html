@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-04T13:46:31-07:00    *-->
+<!--*    on 2017-08-04T15:00:16-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -194,8 +194,8 @@ MathJax.Hub.Config({
 </dd>
 </dl>
 <p> We can further write denote by \(\Z^+\) the set of all positive integers, and by \(\Z^*\) the set of all nonzero integers. Can you guess what the penultimate notation represents if we replace \(\Z\) with \(\Q\) or \(\R\text{,}\) and/or \(+\) with \(-\text{?}\) What about what the last notation, if we replace \(\Z\) with \(\Q\text{,}\) \(\R\text{,}\) or \(\C\text{?}\)</p></article><p id="p-19">We also provide notation for commonly considered sets of matrices:</p>
-<article class="remark-like" id="insight-1"><h5 class="heading">
-<span class="type">Terminology</span><span class="codenumber">1.1.5</span>
+<article class="definition-like" id="definition-3"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">1.1.5</span>
 </h5>Given \(m,n\in \Z^+\) and a set \(S\text{,}\) we define \(\M_{m\times n}(S)\) to be the set of all \(m\times n\) matrices over \(S\) (that is, of all \(m\times n\) matrices with entries in \(S\)). We use the shorthand notation \(\M_n(S)\) for the set \(\M_{n\times n}(S)\text{.}\)</article><p id="p-20">One common way of describing a set is to list its elements in curly braces, separated by commas; you can use ellipses to indicate a repeated pattern of elements. A few examples are \(\{1,4,\pi\}\text{,}\) \(\{3, 4, 5, \ldots\}\text{,}\) and \(\{\ldots, -4, -2, 0,
 2, 4, \ldots\}\text{;}\) the last of these can be written more concisely as \(\{0,\pm 2, \pm 4,\ldots\}\text{.}\) Note that since elements of a set are unordered, the sets \(\{1,4,\pi\}\) and \(\{4,\pi, 1\}\text{,}\) for instance, are identical.</p>
 <p id="p-21">Another method is using <em class="terminology">set-builder notation</em>. This consists of an element name (or names), followed by a colon (meaning “such that”), followed by a Boolean expression involving the element name(s), all surrounded by curly braces. <article class="remark-like" id="warning-1"><h5 class="heading">
@@ -213,7 +213,7 @@ MathJax.Hub.Config({
 <article class="remark-like" id="note-2"><h5 class="heading">
 <span class="type">Note</span><span class="codenumber">1.1.7</span>
 </h5>
-<p id="p-23">If one simply writes \(\{x\,:\,x&gt;4\}\text{,}\) it is unclear what this set is; it could be the set of all integers greater than 4, or the set of all real numbers greater than 4, or something else. When one can, it is better to identify the named element(s) as a member (members) of a known set, such as \(\R\) or \(\Z\text{,}\) whenever possible.</p></article><article class="definition-like" id="definition-3"><h5 class="heading">
+<p id="p-23">If one simply writes \(\{x\,:\,x&gt;4\}\text{,}\) it is unclear what this set is; it could be the set of all integers greater than 4, or the set of all real numbers greater than 4, or something else. When one can, it is better to identify the named element(s) as a member (members) of a known set, such as \(\R\) or \(\Z\text{,}\) whenever possible.</p></article><article class="definition-like" id="definition-4"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">1.1.8</span>
 </h5>
 <p id="p-24">Set \(A\) is a <em class="terminology">subset</em> of \(B\) (and set \(B\) is a <em class="terminology">superset</em> of \(A\)) if every element in \(A\) is also in \(B\text{.}\) We denote “\(A\) is a subset of \(B\)” by \(A\subseteq B\text{.}\) Sets \(A\) and \(B\) are said to be <em class="terminology">equal</em>, and we write \(A=B\text{,}\) if they contain exactly the same elements; equivalently, \(A=B\) if and only if \(A \subseteq B\) and \(B\subseteq A\text{.}\) Set \(A\) is a <em class="terminology">proper</em> subset of set \(B\) if \(A\subseteq B\) but \(A\neq B\text{;}\) we write this \(A\subsetneq B\) or \(A\subset B\text{.}\)</p>
@@ -226,7 +226,7 @@ MathJax.Hub.Config({
 <p id="p-26">One often proves that two sets \(A\) and \(B\) are equal by proving that \(A\subseteq B\) and \(B\subseteq A\text{.}\)</p></article><article class="example-like" id="example-2"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">1.1.11</span>
 </h5>
-<p id="p-27">We have the following: \(\Z^+ \subseteq \Z \subseteq \Q \subseteq \R \subseteq \C\text{.}\)</p></article><article class="definition-like" id="definition-4"><h5 class="heading">
+<p id="p-27">We have the following: \(\Z^+ \subseteq \Z \subseteq \Q \subseteq \R \subseteq \C\text{.}\)</p></article><article class="definition-like" id="definition-5"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">1.1.12</span>
 </h5>
 <p id="p-28">The <em class="terminology">power set</em> of \(A\text{,}\) denoted \(P(A)\text{,}\) is the set of all subsets of \(A\text{.}\) (Note that the power set of any set contains the empty set as an element.)</p></article><article class="remark-like" id="warning-3"><h5 class="heading">
@@ -236,7 +236,7 @@ MathJax.Hub.Config({
 <article class="example-like" id="example-3"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">1.1.14</span>
 </h5>
-<p id="p-31">If \(A=\{a,b\}\text{,}\) then \(P(A)=\{\emptyset, \{a\}, \{b\}, \{a,b\}\}\text{.}\) Note that the element \(\{a,b\}\) of \(P(A)\) could also be written simply as \(A\text{.}\)</p></article><article class="definition-like" id="definition-5"><h5 class="heading">
+<p id="p-31">If \(A=\{a,b\}\text{,}\) then \(P(A)=\{\emptyset, \{a\}, \{b\}, \{a,b\}\}\text{.}\) Note that the element \(\{a,b\}\) of \(P(A)\) could also be written simply as \(A\text{.}\)</p></article><article class="definition-like" id="definition-6"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">1.1.15</span>
 </h5>
 <ol id="ol-1" style="list-style-type: decimal;">
@@ -263,7 +263,7 @@ A_i\cap A_j=\emptyset \text{ for all } i\neq j \in I.
 </li>
 </ol></article><p id="p-35">Notice that for any sets \(A\) and \(B\text{,}\) \(A\cap B \subseteq A \subseteq A\cup B\) and \(A\cap B \subseteq B \subseteq A\cup B\text{.}\) Also note that if sets \(A_i\) (\(i \in I\)) are mutually disjoint then they are also disjoint, but they may be disjoint without being mutually disjoint. For example, the sets \(\{i, i+1\}\) for \(i\in \Z\) are disjoint but not mutually disjoint. (Do you see why?)</p>
 <p id="p-36">We define one more way of “combining” sets.</p>
-<article class="definition-like" id="definition-6"><h5 class="heading">
+<article class="definition-like" id="definition-7"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">1.1.16</span>
 </h5>
 <p id="p-37">Let \(A\) and \(B\) be sets. Then the <em class="terminology">direct product</em> (or <em class="terminology">Cartesian product</em>) \(A\times B\) of \(A\) and \(B\) is the set</p>

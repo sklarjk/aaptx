@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-04T13:46:46-07:00    *-->
+<!--*    on 2017-08-04T15:00:27-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,12 +13,14 @@
 </head>
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>For each of the following functions, prove or disprove that the function is (i) a homomorphism; (ii) an isomorphism. (Remember to work with the default operation on each of these groups!) </p>
-<ol style="list-style-type: lower-alpha;">
-<li><p>The function \(f:\Z\to\Z\) defined by \(f(n)=2n\text{.}\)</p></li>
-<li><p>The function \(g:\R\to\R\) defined by \(g(x)=x^2\text{.}\)</p></li>
-<li><p>The function \(h:\Q^*\to\Q^*\) defined by \(h(x)=x^2\text{.}\)</p></li>
-</ol>
-<span class="incontext"><a href="exercises-4.html#p-446">in-context</a></span>
+<p>A rigorous proof of the fact that \(V\) and \(\Z_4\) are not isomorphic is as follows: For now, denote the usual operation on \(V\) by \(*\text{.}\) Suppose that \(V\) and \(\Z_4\) are isomorphic, via isomorphism \(\phi\) from \(V\) to \(\Z_4\text{.}\) Then since \(\phi\) is onto, there exists an element \(a\in V\) such that \(\phi(a)=3\text{.}\) Then</p>
+\begin{align*}
+3+3\amp =\phi(a)+\phi(a)\amp \amp \text{ (by definition of \(a\)) }\\
+\amp =\phi(a*a) \amp \amp \text{ (since \(\phi\) is a homomorphism) }\\
+\amp =\phi((0,0)) \amp \amp \text{ (since every element of \(V\) is its own inverse) }\\
+\amp =0, \amp \amp
+\end{align*}
+<p>since \(\phi\) is a homomorphism, so sends identity element to identity element. But this is a contradiction, since \(3+3=2\neq 0\) in \(\Z_4\text{.}\) Thus, \(V\not\simeq \Z_4\text{.}\)</p>
+<span class="incontext"><a href="section-12.html#p-446">in-context</a></span>
 </body>
 </html>

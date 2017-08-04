@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-04T13:46:36-07:00    *-->
+<!--*    on 2017-08-04T15:00:19-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -161,21 +161,36 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-23"><header title="Section 7.2 Introduction to cosets and normal subgroups"><h1 class="heading hide-type" alt="Section 7.2 Introduction to cosets and normal subgroups">
 <span class="type">Section</span><span class="codenumber">7.2</span><span class="title">Introduction to cosets and normal subgroups</span>
-</h1></header><p id="p-938">Throughout this section, let \(G\) be a group with subgroup \(H\) and consider two particular relations on \(G\text{:}\) \(\siml\) defined by \(a\siml b\) if and only if \(a^{-1}b\in H\)and \(\simr\) defined by \(a\simr b\) if and only if \(ab^{-1}\in H\text{.}\)</p>
-<article class="theorem-like" id="simlreq"><h5 class="heading">
-<span class="type">Theorem</span><span class="codenumber">7.2.1</span>
+</h1></header><article class="definition-like" id="definition-60"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">7.2.1</span>
+</h5>Given a group \(G\) with subgroup \(H\text{,}\) we define \(\siml\) on \(G\) by
+\begin{equation*}
+a\siml b \text{ if and only if }
+a^{-1}b\in H
+\end{equation*}
+and \(\simr\) on \(G\) by
+\begin{equation*}
+a\simr b \text{ if and only if }
+ab^{-1}\in H.
+\end{equation*}
+</article><article class="theorem-like" id="simlreq"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">7.2.2</span>
 </h5>
-<p id="p-939">\(\siml\) and \(\simr\) are equivalence relations on \(G\text{.}\)</p></article><div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-37" id="proof-37"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-37" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-940">First, let \(a\in G\text{.}\) Then \(a^{-1}a=e\in H\text{,}\) so \(a\siml a\text{.}\) Thus, \(\siml\) is reflexive.</p>
-<p id="p-941">Next, let \(a,b\in G\) with \(a\siml b\text{.}\) Then \(a^{-1}b\in H\text{,}\) so, since \(H\) is a subgroup of \(G\text{,}\) \((a^{-1}b)^{-1}\in H\text{.}\) But \((a^{-1}b)^{-1}=b^{-1}(a^{-1})^{-1}=b^{-1}a\text{;}\) thus, \(b\siml a\text{,}\) and so \(\siml\) is symmetric.</p>
-<p id="p-942">Finally, let \(a,b,c\in G\) with \(a\siml b\) and \(b\siml c\text{.}\) Then \(a^{-1}b\) and \(b^{-1}c\) are in \(H\text{.}\) Since \(H\) is a subgroup of \(G\text{,}\) we must then have \((a^{-1}b)(b^{-1}c)\in H\text{;}\) but \((a^{-1}b)(b^{-1}c)\) equals \(a^{-1}c\text{.}\) Thus, \(a\siml c\text{,}\) and so \(\siml\) is transitive.</p>
-<p id="p-943">Thus, \(\siml\) is an equivalence relation on \(G\text{.}\) The proof that \(\simr\) is an equivalence relation is left as an exercise for the reader.</p></article></span>
+<p id="p-948">\(\siml\) and \(\simr\) are equivalence relations on \(G\text{.}\)</p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-37" id="proof-37"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-37" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-949">First, let \(a\in G\text{.}\) Then \(a^{-1}a=e\in H\text{,}\) so \(a\siml a\text{.}\) Thus, \(\siml\) is reflexive.</p>
+<p id="p-950">Next, let \(a,b\in G\) with \(a\siml b\text{.}\) Then \(a^{-1}b\in H\text{,}\) so, since \(H\) is a subgroup of \(G\text{,}\) \((a^{-1}b)^{-1}\in H\text{.}\) But \((a^{-1}b)^{-1}=b^{-1}(a^{-1})^{-1}=b^{-1}a\text{;}\) thus, \(b\siml a\text{,}\) and so \(\siml\) is symmetric.</p>
+<p id="p-951">Finally, let \(a,b,c\in G\) with \(a\siml b\) and \(b\siml c\text{.}\) Then \(a^{-1}b\) and \(b^{-1}c\) are in \(H\text{.}\) Since \(H\) is a subgroup of \(G\text{,}\) we must then have \((a^{-1}b)(b^{-1}c)\in H\text{;}\) but \((a^{-1}b)(b^{-1}c)\) equals \(a^{-1}c\text{.}\) Thus, \(a\siml c\text{,}\) and so \(\siml\) is transitive.</p>
+<p id="p-952">Thus, \(\siml\) is an equivalence relation on \(G\text{.}\) The proof that \(\simr\) is an equivalence relation is left as an exercise for the reader.</p></article></span>
 </div>
-<p id="p-944">Now, as equivalence relations, each of \(\siml\) and \(\simr\) gives rise to a partition of \(G\text{.}\) What are the cells of those partitions?</p>
-<article class="definition-like" id="definition-59"><h5 class="heading">
-<span class="type">Definition</span><span class="codenumber">7.2.2</span>
+<article class="remark-like" id="remark-36"><h5 class="heading">
+<span class="type">Remark</span><span class="codenumber">7.2.3</span>
 </h5>
-<p id="p-945">Given \(a\in G\text{,}\) we define</p>
+<p id="p-953">Of course, different subgroups \(H\) and \(K\) in a group \(G\) will give rise to different relations \(\siml\) and \(\simr\) on \(G\text{;}\) that is, these relations are really defined  with respect to a particular subgroup of \(G\text{.}\)</p></article><p id="p-954">From now on, whenever we discuss \(\siml\) or \(\simr\) on a group, assume that it is with respect to a particular subgroup \(H\) of \(G\text{.}\)</p>
+<p id="p-955">Now, as equivalence relations on a group \(G\text{,}\) each of \(\siml\) and \(\simr\) gives rise to a partition of \(G\text{.}\) What are the cells of those partitions?</p>
+<article class="definition-like" id="definition-61"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">7.2.4</span>
+</h5>
+<p id="p-956">Given \(a\in G\text{,}\) we define</p>
 \begin{equation*}
 aH =
 \{ah\,:\, h\in H\}
@@ -184,23 +199,24 @@ aH =
 \begin{equation*}
 Ha=\{ha\,:\,h\in H\}.
 \end{equation*}
-<p id="p-946">We call \(aH\) and \(Ha\text{,}\) respectively, the <em class="terminology">left</em> and <em class="terminology">right cosets of \(H\) containing \(a\)</em>.</p></article><article class="theorem-like" id="equivca"><h5 class="heading">
-<span class="type">Theorem</span><span class="codenumber">7.2.3</span>
+<p id="p-957">We call \(aH\) and \(Ha\text{,}\) respectively, the <em class="terminology">left</em> and <em class="terminology">right cosets of \(H\) containing \(a\)</em>. <p id="p-958">If we know that \(G\) is abelian, with operation denoted by \(+\text{,}\) we may denote these left and right cosets by \(a+H\) and \(H+a\text{,}\) respectively.</p></p></article><article class="theorem-like" id="equivca"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">7.2.5</span>
 </h5>
-<p id="p-947">Let \(a\in G\text{.}\) Then under \(\siml\text{,}\) \([a]=aH\) while under \(\simr\text{,}\) \([a]=Ha\text{.}\)</p></article><div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-38" id="proof-38"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-38" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-948">Let \(b\in G\text{.}\) Then \(b\siml a \Leftrightarrow a \siml b
+<p id="p-959">Let \(a\in G\text{.}\) Then under \(\siml\text{,}\) \([a]=aH\) while under \(\simr\text{,}\) \([a]=Ha\text{.}\)</p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-38" id="proof-38"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-38" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-960">Below, we use the notation \(\Leftrightarrow\) to denote “if and only if.”</p>
+<p id="p-961">Let \(b\in G\text{.}\) Then \(b\siml a \Leftrightarrow a \siml b
 \Leftrightarrow a^{-1}b\in H \Leftrightarrow a^{-1}b=h\) for some \(h\in H \Leftrightarrow b=ah\) for some \(h\in H \Leftrightarrow b\in
 aH\text{.}\) So under \(\siml\) we have \([a]=aH\text{.}\) Similarly, under \(\simr\) we have \([a]=Ha\text{.}\)</p></article></span>
 </div>
-<p id="p-949">We next summarize some facts about the left and right cosets of a subgroup \(H\) of a group \(G\text{:}\)</p>
+<p id="p-962">We next summarize some facts about the left and right cosets of a subgroup \(H\) of a group \(G\text{:}\)</p>
 <article class="theorem-like" id="cosetfacts"><h5 class="heading">
-<span class="type">Theorem</span><span class="codenumber">7.2.4</span>
+<span class="type">Theorem</span><span class="codenumber">7.2.6</span>
 </h5>
-<p id="p-950">Let \(G\) be a group with \(H\leq G\) and \(a,b\in G\text{.}\) </p>
+<p id="p-963">Let \(G\) be a group with \(H\leq G\) and \(a,b\in G\text{.}\) </p>
 <ol id="ol-99" style="list-style-type: decimal;">
-<li id="li-402"><p id="p-951">The left [right] cosets of \(H\) in \(G\) partition \(G\text{.}\)</p></li>
-<li id="li-403">
-<p id="p-952"></p>
+<li id="li-411"><p id="p-964">The left [right] cosets of \(H\) in \(G\) partition \(G\text{.}\)</p></li>
+<li id="li-412">
+<p id="p-965"></p>
 \begin{equation*}
 b\in aH \Leftrightarrow aH=bH \Leftrightarrow  a\in bH
 \end{equation*}
@@ -211,19 +227,19 @@ Hb.
 \end{equation*}
 <p>In particular, \(a\in H \Leftrightarrow aH=H \Leftrightarrow Ha=H\text{.}\)</p>
 </li>
-<li id="li-404"><p id="p-953">\(H\) is the only left or right coset of \(H\) that is a <!--Style me with CSS--><em>subgroup</em> of \(G\text{.}\)</p></li>
-<li id="li-405"><p id="p-954">\(|aH|=|H|=|Ha|\text{.}\)</p></li>
+<li id="li-413"><p id="p-966">\(H\) is the only left or right coset of \(H\) that is a <!--Style me with CSS--><em>subgroup</em> of \(G\text{.}\)</p></li>
+<li id="li-414"><p id="p-967">\(|aH|=|H|=|Ha|\text{.}\)</p></li>
 </ol></article><div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-39" id="proof-39"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-39" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-955">Statements 1 and 2 hold because the left and right cosets of \(H\) in \(G\) are equivalence classes. Statement 3 holds because no left or right coset of \(H\) other than \(H\) itself can contain \(e\text{,}\) since the left [right] cosets of \(H\) are mutually disjoint. For Statement 4: Define \(f\,:\,H\to aH\) by \(f(h)=ah\text{.}\) It is straightforward to show that \(f\) is a bijection, so \(|H|=|aH|\text{.}\) Similarly, \(|Ha|=|H|\text{.}\)</p></article></span>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-39" id="proof-39"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-39" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-968">Statements 1 and 2 hold because the left and right cosets of \(H\) in \(G\) are equivalence classes. Statement 3 holds because no left or right coset of \(H\) other than \(H\) itself can contain \(e\text{,}\) since the left [right] cosets of \(H\) are mutually disjoint. For Statement 4: Define \(f\,:\,H\to aH\) by \(f(h)=ah\text{.}\) It is straightforward to show that \(f\) is a bijection, so \(|H|=|aH|\text{.}\) Similarly, \(|Ha|=|H|\text{.}\)</p></article></span>
 </div>
-<article class="remark-like" id="remark-36"><h5 class="heading">
-<span class="type">Remark</span><span class="codenumber">7.2.5</span>
+<article class="remark-like" id="remark-37"><h5 class="heading">
+<span class="type">Remark</span><span class="codenumber">7.2.7</span>
 </h5>
-<p id="p-956">We can use Statements 2 and 3, above, to save some time when computing left and right cosets of a subgroup of a group.</p></article><article class="example-like" id="s3_ex"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">7.2.6</span>
+<p id="p-969">We can use Statements 2 and 3, above, to save some time when computing left and right cosets of a subgroup of a group.</p></article><article class="example-like" id="s3_ex"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">7.2.8</span>
 </h5>
-<p id="p-957">Find the left and right cosets of \(H=\langle (12)\rangle\) in \(S_3\text{.}\)</p>
-<p id="p-958">The left cosets are</p>
+<p id="p-970">Find the left and right cosets of \(H=\langle (12)\rangle\) in \(S_3\text{.}\)</p>
+<p id="p-971">The left cosets are</p>
 \begin{equation*}
 eH=H=(12)H,
 \end{equation*}
@@ -247,42 +263,42 @@ H(13)=\{(13),(132)\}=H(132),
 \begin{equation*}
 \text{ and } H(23)=\{(23),(123)\}=H(123).
 \end{equation*}
-<p id="p-959">Thus, \(\siml\) partitions \(S_3\) into \(\{H,\{(13),(123)\},\{(23),
+<p id="p-972">Thus, \(\siml\) partitions \(S_3\) into \(\{H,\{(13),(123)\},\{(23),
 (132)\}\}\) and \(\simr\) partitions \(S_3\) into \(\{H,\{(13),(132)\},\{(23), (123)\}\}\text{.}\)</p></article><article class="example-like" id="d4_ex"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">7.2.7</span>
-</h5>
-<p id="p-960">Find the left and right cosets of \(H=\langle f\rangle\) in \(D_4\text{.}\)</p>
-<p id="p-961">This example is left as an exercise for the reader.</p></article><p id="p-962">We now draw attention to some very important facts:</p>
-<article class="remark-like" id="warning-21"><h5 class="heading">
-<span class="type">Warning</span><span class="codenumber">7.2.8</span>
-</h5>
-<p id="p-963">For \(a,b\in G\text{:}\) </p>
-<ol id="ol-100" style="list-style-type: decimal;">
-<li id="li-406"><p id="p-964">In general, \(aH \neq Ha\text{!}\)</p></li>
-<li id="li-407"><p id="p-965">\(aH=bH\) does not necessarily imply \(a=b\) or that there exists an \(h\in H\) with \(ah=bh\text{;}\) similarly, \(Ha=Hb\) does not necessarily imply \(a=b\) or that there exists an \(h\in H\) with \(ha=hb\text{.}\)</p></li>
-</ol></article><article class="example-like" id="example-70"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">7.2.9</span>
 </h5>
-<p id="p-966">We saw above that in \(S_3\) with \(H=\langle (12)\rangle\text{,}\)</p>
+<p id="p-973">Find the left and right cosets of \(H=\langle f\rangle\) in \(D_4\text{.}\)</p>
+<p id="p-974">This example is left as an exercise for the reader.</p></article><p id="p-975">We now draw attention to some very important facts:</p>
+<article class="remark-like" id="warning-21"><h5 class="heading">
+<span class="type">Warning</span><span class="codenumber">7.2.10</span>
+</h5>
+<p id="p-976">For \(a,b\in G\text{:}\) </p>
+<ol id="ol-100" style="list-style-type: decimal;">
+<li id="li-415"><p id="p-977">In general, \(aH \neq Ha\text{!}\)</p></li>
+<li id="li-416"><p id="p-978">\(aH=bH\) does not necessarily imply \(a=b\) or that there exists an \(h\in H\) with \(ah=bh\text{;}\) similarly, \(Ha=Hb\) does not necessarily imply \(a=b\) or that there exists an \(h\in H\) with \(ha=hb\text{.}\)</p></li>
+</ol></article><article class="example-like" id="example-70"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">7.2.11</span>
+</h5>
+<p id="p-979">We saw above that in \(S_3\) with \(H=\langle (12)\rangle\text{,}\)</p>
 \begin{equation*}
 (13)H=\{(13),(123)\} \neq \{(13),(132)\}=H(13).
 \end{equation*}
-<p id="p-967">Also, \((13)H=(123)H\) but \((13)e\neq (123)e\) and \((13)(12)\neq (123)(12)\text{.}\)</p></article><p id="p-968">It turns out that subgroups \(H\) for which \(aH=Ha\) for all \(a\in
+<p id="p-980">Also, \((13)H=(123)H\) but \((13)e\neq (123)e\) and \((13)(12)\neq (123)(12)\text{.}\)</p></article><p id="p-981">It turns out that subgroups \(H\) for which \(aH=Ha\) for all \(a\in
 G\) will be very important to us.</p>
-<article class="definition-like" id="definition-60"><h5 class="heading">
-<span class="type">Definition</span><span class="codenumber">7.2.10</span>
+<article class="definition-like" id="definition-62"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">7.2.12</span>
 </h5>
-<p id="p-969">We say that subgroup \(H\) of \(G\) is <em class="terminology">normal</em> in \(G\) if \(aH=Ha\) for all \(a\in G\text{.}\) We denote that fact that \(H\) is normal in \(G\) by writing \(H\unlhd G\text{.}\)</p></article><article class="remark-like" id="remark-37"><h5 class="heading">
-<span class="type">Remark</span><span class="codenumber">7.2.11</span>
+<p id="p-982">We say that subgroup \(H\) of \(G\) is <em class="terminology">normal</em> in \(G\) if \(aH=Ha\) for all \(a\in G\text{.}\) We denote that fact that \(H\) is normal in \(G\) by writing \(H\unlhd G\text{.}\)</p></article><article class="remark-like" id="remark-38"><h5 class="heading">
+<span class="type">Remark</span><span class="codenumber">7.2.13</span>
 </h5>
 <ol id="ol-101" style="list-style-type: decimal;">
-<li id="li-408"><p id="p-970">If \(H\) is normal in \(G\text{,}\) we may refer to the left and right cosets of \(G\) as simply <!--Style me with CSS--><em>cosets</em>.</p></li>
-<li id="li-409"><p id="p-971">Of course, if \(G\) is abelian, every subgroup of \(G\) is normal in \(G\text{.}\) But there can also be normal subgroups of nonabelian groups: for instance, the trivial and improper subgroups of every group are normal in that group.</p></li>
+<li id="li-417"><p id="p-983">If \(H\) is normal in \(G\text{,}\) we may refer to the left and right cosets of \(G\) as simply <!--Style me with CSS--><em>cosets</em>.</p></li>
+<li id="li-418"><p id="p-984">Of course, if \(G\) is abelian, every subgroup of \(G\) is normal in \(G\text{.}\) But there can also be normal subgroups of nonabelian groups: for instance, the trivial and improper subgroups of every group are normal in that group.</p></li>
 </ol></article><article class="example-like" id="example-71"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">7.2.12</span>
+<span class="type">Example</span><span class="codenumber">7.2.14</span>
 </h5>
-<p id="p-972">Find the cosets of \(5\Z\) in \(\Z\text{.}\)</p>
-<p id="p-973">Notice that in additive notation, the statement “\(a^{-1}b\in H\)” becomes \(-a+b\in H\text{.}\) So for \(a,b\in \Z\text{,}\) \(a\siml b\) if and only if \(-a+b \in
+<p id="p-985">Find the cosets of \(5\Z\) in \(\Z\text{.}\)</p>
+<p id="p-986">Notice that in additive notation, the statement “\(a^{-1}b\in H\)” becomes \(-a+b\in H\text{.}\) So for \(a,b\in \Z\text{,}\) \(a\siml b\) if and only if \(-a+b \in
 5\Z\text{;}\) that is, if and only if \(5\) divides \(b-a\text{.}\) In other words, \(a\siml b\) if and only if \(a\equiv_5 b\text{.}\) So in this case, \(\siml\) is just congruence modulo \(5\text{.}\) Thus, the cosets of \(5\Z\) in \(\Z\) are</p>
 \begin{align*}
 5\Z\amp =\{\ldots,-5,0,5,\ldots\}\\
@@ -295,11 +311,11 @@ G\) will be very important to us.</p>
 4+5\Z\amp =\{\ldots,-1, 4, 9,
 \ldots\}.
 \end{align*}
-<p id="p-974">Do you see how this example would generalize for \(n\Z\) (\(n \in \Z^+\)) in \(\Z\text{?}\)</p></article><article class="example-like" id="example-72"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">7.2.13</span>
+<p id="p-987">Do you see how this example would generalize for \(n\Z\) (\(n \in \Z^+\)) in \(\Z\text{?}\)</p></article><article class="example-like" id="example-72"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">7.2.15</span>
 </h5>
-<p id="p-975">Find the cosets of \(H=\langle 12\rangle\) in \(4\Z\text{.}\)</p>
-<p id="p-976">They are</p>
+<p id="p-988">Find the cosets of \(H=\langle 12\rangle\) in \(4\Z\text{.}\)</p>
+<p id="p-989">They are</p>
 \begin{align*}
 H\amp =\{\ldots, -12,0,12\ldots\},\\
 4+H \amp =
@@ -307,17 +323,21 @@ H\amp =\{\ldots, -12,0,12\ldots\},\\
 8+H\amp =\{\ldots, -4,8,20,\ldots\}.
 \end{align*}
 </article><article class="example-like" id="z6_ex"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">7.2.14</span>
+<span class="type">Example</span><span class="codenumber">7.2.16</span>
 </h5>
-<p id="p-977">Find the cosets of \(H=\langle 4\rangle\) in \(\Z_{12}\text{.}\)</p>
-<p id="p-978">They are</p>
+<p id="p-990">Find the cosets of \(H=\langle 4\rangle\) in \(\Z_{12}\text{.}\)</p>
+<p id="p-991">They are</p>
 \begin{align*}
 H\amp =\{0,4,8\},\\
 1+H \amp = \{1,5,9\},\\
 2+H\amp =\{2,6,10\}\\
 3+H\amp =\{3,7,11\}.
 \end{align*}
-</article><p id="p-979">We now consider the set of all left cosets of a subgroup of a group. (Note: There are analogous versions of what follows using right cosets, but we relegate any discussions of that to footnotes.)</p></section></div></main>
+</article><p id="p-992">We now consider the set of all left cosets of a subgroup of a group.</p>
+<article class="definition-like" id="definition-63"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">7.2.17</span>
+</h5>
+<p id="p-993">We let \(G/H\) be the set of all left cosets of subgroup \(H\) in \(G\text{.}\) We read \(G/H\) as “\(G\) mod \(H\text{.}\)” (We denote the set of all right cosets of subgroup \(H\) in \(G\) by \(H\backslash G\text{,}\) but we will not be explicitly referring to  that set in this class.)</p></article></section></div></main>
 </div>
 <script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
 </body>

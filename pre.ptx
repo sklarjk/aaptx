@@ -48,7 +48,7 @@
 
 <notation><usage>x \in S</usage><description><m>x</m> is an element of <m>S</m></description></notation>
 <notation><usage>x \not\in S</usage><description><m>x</m> is not an element of <m>S</m></description></notation>
-<notation><usage>\emptyset</usage><description>the empty set <m>\{\}</m></description></notation>
+<notation><usage>\emptyset</usage><description>the empty set, <m>\{\}</m></description></notation>
   </definition>
 
 
@@ -83,9 +83,9 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
 <notation><usage>\R</usage><description>the set of all real numbers</description></notation>
 <notation><usage>\C</usage><description>the set of all complex numbers</description></notation>
 <notation><usage>\N</usage><description>the set of all natural numbers, <m>\{0,1,2,\ldots\}</m></description></notation>
-<notation><usage>\Z^+/\Q^+/\R^+</usage><description>the set of all positive integers/rational numbers/real numbers</description></notation>
-<notation><usage>\Z^-/\Q^-/\R^-</usage><description>the set of all negative integers/rational numbers/real numbers</description></notation>
-<notation><usage>\Z^*/\Q^*/\R^*/\C^*</usage><description>the set of all nonzer integers/rational numbers/real numbers/complex numbers</description></notation>
+<notation><usage>\Z^+,\Q^+,\R^+</usage><description>the set of all positive elements of <m>\Z,\Q,\R</m></description></notation>
+<notation><usage>\Z^-,\Q^-,\R^-</usage><description>the set of all negative elements of <m>\Z,\Q,\R</m></description></notation>
+<notation><usage>\Z^*,\Q^*,\R^*,\C^*</usage><description>the set of all nonzero elements of <m>\Z,\Q,\R,\C</m></description></notation>
 
 </example>
  
@@ -93,7 +93,7 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
     We also provide notation for commonly considered sets of matrices:
   </p>
 
-<insight>
+<definition>
 <statement>
  Given <m>m,n\in \Z^+</m> and a set <m>S</m>, we define <m>\M_{m\times n}(S)</m> to
     be the set of all <m>m\times n</m> matrices over <m>S</m> (that is, of all <m>m\times n</m> matrices with entries in <m>S</m>). We use the
@@ -101,7 +101,7 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
 <notation><usage>\M_{m\times n}(S)</usage><description>the set of all <m>m \times n</m> matrices over <m>S</m></description></notation>
 <notation><usage>\M_n(S)</usage><description>the set of all <m>n \times n</m> matrices over <m>S</m></description></notation>
 
-    </insight>
+    </definition>
   
 
 

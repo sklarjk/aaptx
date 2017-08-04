@@ -461,7 +461,7 @@
         group</term> or <term>quotient group</term>.
       </p>
     </statement>
-    <notation><usage>G/N</usage><description>factor group <m>G/N</m></description></notation>
+    <notation><usage>G/N</usage><description>the factor group <m>G/N</m>, when <m>N\unlhd G</m></description></notation>
   </definition>
 
   <example>

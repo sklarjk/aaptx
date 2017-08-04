@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-04T13:47:04-07:00    *-->
+<!--*    on 2017-08-04T15:00:42-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,10 +13,29 @@
 </head>
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Now, \(e^{i\theta_1}=e^{it_1}\) and \(e^{i\theta_2}=e^{it_2}\) imply that \(\theta_1 -t_1 = 2\pi m\) and \(\theta_2-t_2 = 2\pi n\) for some \(m\) and \(n\) in \(\Z\text{;}\) hence,</p>
+<p>By <a knowl="./knowl/kerone.html" knowl-id="xref-kerone" alt="Corollary 9.1.2 " title="Corollary 9.1.2 ">Corollary 2</a>, \(\phibar\) is one-to-one if and only if \(\Ker
+\phibar=\{N\}\text{.}\)  But</p>
+\begin{align*}
+\Ker \phibar\amp =\{aN\in G/N
+\,:\, \phibar(aN)=e_{G'}\}\\
+\amp =\{aN\in G/N \,:\,
+\phi(a)=e_{G'}\}\\
+\amp =\{aN\in G/N \,:\, a\in
+\Ker\phi\}.
+\end{align*}
+<p>So \(\Ker \phibar = \{N\}\) if and only if</p>
 \begin{equation*}
-\theta_1+\theta_2-(t_1+t_2)= 2\pi(m+n) \in 2\pi\Z.
+\{aN\in G/N\,:\,a\in \Ker\phi\}=\{N\},
 \end{equation*}
+<p>in other words if and only if \(aN=N\) for all \(a\in \Ker\phi\text{.}\)  But</p>
+\begin{align*}
+{3}
+\amp \amp \amp aN=N \amp \amp \ \ \text{ for all \(a\in \Ker\phi\) }\\
+\amp \Leftrightarrow  \amp \amp  a\in N \amp \amp \ \ \text{ for all \(a\in \Ker\phi\) }\\
+\amp \Leftrightarrow  \amp \amp  \Ker \phi\subseteq N\amp \amp\\
+\amp \Leftrightarrow  \amp \amp  \Ker\phi=N,\amp \amp
+\end{align*}
+<p>since we are given that \(N\subseteq \Ker \phi\text{.}\) Thus, \(\phibar\) is one-to-one if and only if \(N=\Ker\phi\text{,}\) as desired.</p>
 <span class="incontext"><a href="section-28.html#p-1204">in-context</a></span>
 </body>
 </html>

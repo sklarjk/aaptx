@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-04T13:38:29-07:00    *-->
+<!--*    on 2017-08-04T14:58:26-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>The index of a subgroup and Lagrange's Theorem</title>
+<title>Introduction to factor groups</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
@@ -71,11 +71,11 @@ MathJax.Hub.Config({
 </div></div>
 <nav id="primary-navbar" class="navbar" style=""><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-20.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="coslag.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="exercises-7.html" title="Next" alt="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-20.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="factorgps.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="exercises-7.html" title="Next" alt="Next">Next</a></span></div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-20.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="coslag.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="exercises-7.html" title="Next" alt="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-20.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="factorgps.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="exercises-7.html" title="Next" alt="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
@@ -85,131 +85,221 @@ MathJax.Hub.Config({
 <li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
 </ul>
-<h2 class="link"><a href="gps.html" data-scroll="gps"><span class="codenumber">1</span><span class="title">Groups</span></a></h2>
+<h2 class="link"><a href="pre.html" data-scroll="pre"><span class="codenumber">1</span><span class="title">Preliminaries</span></a></h2>
 <ul>
-<li><a href="section-1.html" data-scroll="section-1">Binary operations and structures</a></li>
-<li><a href="exercises-1.html" data-scroll="exercises-1">Exercises, Part I</a></li>
-<li><a href="section-2.html" data-scroll="section-2">The definition of a group</a></li>
-<li><a href="section-3.html" data-scroll="section-3">Examples of groups/nongroups, Part I</a></li>
-<li><a href="section-4.html" data-scroll="section-4">Group conventions and properties</a></li>
-<li><a href="section-5.html" data-scroll="section-5">Examples of groups/nongroups, Part II</a></li>
-<li><a href="section-6.html" data-scroll="section-6">Summaries of groups we've seen</a></li>
-<li><a href="exercises-2.html" data-scroll="exercises-2">Exercises, Part II</a></li>
+<li><a href="section-1.html" data-scroll="section-1">Sets</a></li>
+<li><a href="section-2.html" data-scroll="section-2">Functions</a></li>
+<li><a href="section-3.html" data-scroll="section-3">Cardinality</a></li>
+<li><a href="exercises-1.html" data-scroll="exercises-1">Exercises</a></li>
 </ul>
 <h2 class="link"><a href="homoiso.html" data-scroll="homoiso"><span class="codenumber">2</span><span class="title">Homorphisms and Isomorphisms</span></a></h2>
 <ul>
-<li><a href="section-7.html" data-scroll="section-7">Groups of small order</a></li>
-<li><a href="section-8.html" data-scroll="section-8">Introduction to homomorphisms and isomorphisms</a></li>
-<li><a href="section-9.html" data-scroll="section-9">Isomorphic groups</a></li>
-<li><a href="exercises-3.html" data-scroll="exercises-3">Exercises</a></li>
+<li><a href="section-4.html" data-scroll="section-4">Groups of small order</a></li>
+<li><a href="section-5.html" data-scroll="section-5">Introduction to homomorphisms and isomorphisms</a></li>
+<li><a href="section-6.html" data-scroll="section-6">Isomorphic groups</a></li>
+<li><a href="exercises-2.html" data-scroll="exercises-2">Exercises</a></li>
 </ul>
 <h2 class="link"><a href="subgps.html" data-scroll="subgps"><span class="codenumber">3</span><span class="title">Subgroups</span></a></h2>
 <ul>
-<li><a href="section-10.html" data-scroll="section-10">Introduction to subgroups</a></li>
-<li><a href="section-11.html" data-scroll="section-11">Subgroup proofs and lattices</a></li>
-<li><a href="exercises-4.html" data-scroll="exercises-4">Exercises</a></li>
+<li><a href="section-7.html" data-scroll="section-7">Introduction to subgroups</a></li>
+<li><a href="section-8.html" data-scroll="section-8">Subgroup proofs and lattices</a></li>
+<li><a href="exercises-3.html" data-scroll="exercises-3">Exercises</a></li>
 </ul>
 <h2 class="link"><a href="cyc.html" data-scroll="cyc"><span class="codenumber">4</span><span class="title">Cyclic Groups</span></a></h2>
 <ul>
-<li><a href="section-12.html" data-scroll="section-12">Introduction to cyclic groups</a></li>
-<li><a href="section-13.html" data-scroll="section-13">The subgroup lattices of cyclic groups</a></li>
-<li><a href="exercises-5.html" data-scroll="exercises-5">Exercises</a></li>
+<li><a href="section-9.html" data-scroll="section-9">Introduction to cyclic groups</a></li>
+<li><a href="section-10.html" data-scroll="section-10">The subgroup lattices of cyclic groups</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Exercises</a></li>
 </ul>
 <h2 class="link"><a href="perm.html" data-scroll="perm"><span class="codenumber">5</span><span class="title">Permutation Groups and Dihedral Groups</span></a></h2>
 <ul>
-<li><a href="section-14.html" data-scroll="section-14">Introduction to permutation groups</a></li>
-<li><a href="section-15.html" data-scroll="section-15">Symmetric groups</a></li>
-<li><a href="section-16.html" data-scroll="section-16">Alternating groups</a></li>
-<li><a href="section-17.html" data-scroll="section-17">Cayley's Theorem</a></li>
+<li><a href="section-11.html" data-scroll="section-11">Introduction to permutation groups</a></li>
+<li><a href="section-12.html" data-scroll="section-12">Symmetric groups</a></li>
+<li><a href="section-13.html" data-scroll="section-13">Alternating groups</a></li>
+<li><a href="section-14.html" data-scroll="section-14">Cayley's Theorem</a></li>
 <li><a href="dihedralgps.html" data-scroll="dihedralgps">Dihedral groups</a></li>
+<li><a href="exercises-5.html" data-scroll="exercises-5">Exercises</a></li>
+</ul>
+<h2 class="link"><a href="coslag.html" data-scroll="coslag"><span class="codenumber">6</span><span class="title">The Wonderful World of Cosets</span></a></h2>
+<ul>
+<li><a href="section-16.html" data-scroll="section-16">Partitions of and equivalence relations on sets</a></li>
+<li><a href="section-17.html" data-scroll="section-17">Introduction to cosets and normal subgroups</a></li>
+<li><a href="section-18.html" data-scroll="section-18">The index of a subgroup and Lagrange's Theorem</a></li>
 <li><a href="exercises-6.html" data-scroll="exercises-6">Exercises</a></li>
 </ul>
-<h2 class="link active"><a href="coslag.html" data-scroll="coslag"><span class="codenumber">6</span><span class="title">The Wonderful World of Cosets</span></a></h2>
+<h2 class="link active"><a href="factorgps.html" data-scroll="factorgps"><span class="codenumber">7</span><span class="title">Factor Groups</span></a></h2>
 <ul>
-<li><a href="section-19.html" data-scroll="section-19">Partitions of and equivalence relations on sets</a></li>
-<li><a href="section-20.html" data-scroll="section-20">Introduction to cosets and normal subgroups</a></li>
-<li><a href="section-21.html" data-scroll="section-21" class="active">The index of a subgroup and Lagrange's Theorem</a></li>
+<li><a href="section-19.html" data-scroll="section-19">Motivation</a></li>
+<li><a href="section-20.html" data-scroll="section-20">Focusing on normal subgroups</a></li>
+<li><a href="section-21.html" data-scroll="section-21" class="active">Introduction to factor groups</a></li>
 <li><a href="exercises-7.html" data-scroll="exercises-7">Exercises</a></li>
-</ul>
-<h2 class="link"><a href="factorgps.html" data-scroll="factorgps"><span class="codenumber">7</span><span class="title">Factor Groups</span></a></h2>
-<ul>
-<li><a href="section-22.html" data-scroll="section-22">Motivation</a></li>
-<li><a href="section-23.html" data-scroll="section-23">Focusing on normal subgroups</a></li>
-<li><a href="section-24.html" data-scroll="section-24">Introduction to factor groups</a></li>
-<li><a href="exercises-8.html" data-scroll="exercises-8">Exercises</a></li>
 </ul>
 <h2 class="link"><a href="isothms.html" data-scroll="isothms"><span class="codenumber">8</span><span class="title">The Isomorphism Theorems</span></a></h2>
 <ul>
-<li><a href="section-25.html" data-scroll="section-25">The First Isomorphism Theorem</a></li>
-<li><a href="section-26.html" data-scroll="section-26">The Second and Third Isomorphism Theorems</a></li>
-<li><a href="exercises-9.html" data-scroll="exercises-9">Exercises</a></li>
+<li><a href="section-22.html" data-scroll="section-22">The First Isomorphism Theorem</a></li>
+<li><a href="section-23.html" data-scroll="section-23">The Second and Third Isomorphism Theorems</a></li>
+<li><a href="exercises-8.html" data-scroll="exercises-8">Exercises</a></li>
 </ul>
 <h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
 <ul>
 <li><a href="appendix-1.html" data-scroll="appendix-1">Notation</a></li>
 <li><a href="appendix-2.html" data-scroll="appendix-2">Solutions to Exercises</a></li>
 <li><a href="references-1.html" data-scroll="references-1">Bibliography</a></li>
+<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
 <li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-21"><header title="Section 6.3 The index of a subgroup and Lagrange's Theorem"><h1 class="heading hide-type" alt="Section 6.3 The index of a subgroup and Lagrange's Theorem">
-<span class="type">Section</span><span class="codenumber">6.3</span><span class="title">The index of a subgroup and Lagrange's Theorem</span>
-</h1></header><article class="definition-like" id="definition-49"><h5 class="heading">
-<span class="type">Definition</span><span class="codenumber">6.3.1</span>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-21"><header title="Section 7.3 Introduction to factor groups"><h1 class="heading hide-type" alt="Section 7.3 Introduction to factor groups">
+<span class="type">Section</span><span class="codenumber">7.3</span><span class="title">Introduction to factor groups</span>
+</h1></header><p id="p-896">We now return to the notion of equipping \(G/H\text{,}\) when \(H\unlhd G\text{,}\) with a group structure. We have already saw that left coset multiplication on \(G/H\) is well defined when \(H\unlhd G\) (<a knowl="./knowl/cmwd.html" knowl-id="xref-cmwd" alt="Theorem 7.1.2 " title="Theorem 7.1.2 ">Theorem 7.1.2</a>); it turns out that given this, it is very easy to prove that \(G/H\) under this operation is a group.</p>
+<p id="p-897">Before we prove this, we introduce a change in our notation: We initiate the convention of frequently using \(N\text{,}\) rather than \(H\text{,}\) to denote a subgroup of a group \(G\) when we know that that subgroup is <!--Style me with CSS--><em>normal</em> in \(G\text{.}\)</p>
+<article class="theorem-like" id="theorem-43"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">7.3.1</span>
 </h5>
-<p id="p-850">We define the <em class="terminology">index of \(H\) in \(G\)</em>, denoted \((G:H)\text{,}\) to be the cardinality of \(G/H\text{.}\)<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-7" id="fn-7"><span class="footnote"><sup> 1 </sup></span></a></span><span id="hk-fn-7" style="display: none;" class="tex2jax_ignore"><span class="footnote">Even though we need not have \(aH=Ha\) for all \(a\in G\text{,}\) we do always have \(|G/H|=|H\backslash G|\text{.}\)</span></span></p></article><p id="p-851">Note that if \(G\) is finite then \((G:H)\) must be finite; however, we see below that if \(G\) is infinite then \((G:H)\) could be finite or infinite.</p>
-<article class="example-like" id="example-65"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">6.3.2</span>
-</h5>
-<p id="p-852">If \((\R:\Z)\) were finite, then we'd be able to write \(\R\) as a finite union of countable sets, implying that \(\R\) is countable—which it isn't. Thus, \((\R:\Z)=\infty\text{.}\)</p></article><article class="example-like" id="example-66"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">6.3.3</span>
-</h5>
-<p id="p-853">Since \(\langle i\rangle =\{i,-1,-i,1\}\) is a finite subgroup of \(C^*\) and \(C^*\) is infinite, we must have that \((C^*:\langle i\rangle )\) is infinite. However, \((C^*:C^*)=1\text{.}\)</p></article><article class="example-like" id="indices_ex"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">6.3.4</span>
-</h5>
-<p id="p-854">Referring to our previous examples, we have: </p>
+<p id="p-898">Let \(G\) be a group with identity element \(e\text{,}\) and let \(N\unlhd G\text{.}\) Then \(G/N\) is a group under left coset multiplication (that is, under the operation \((aN)(bN)=abN\) for all \(a,b\in G\)), and \(|G/N|=(G:N)\) (in particular, if \(|G|\lt \infty\text{,}\) then \(|G/N|=|G|/|N|\)).</p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-36" id="proof-36"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-36" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-899">We already know that since \(N\unlhd G\text{,}\) left coset multiplication on \(G/N\) is well defined; further, it is clear that \(G/N\) is closed under this operation.</p>
+<p id="p-900">Associativity of this operation on \(G/N\) follows from the associativity of \(G\)'s operation: indeed, if \(aN\text{,}\) \(bN\text{,}\) \(cN \in
+G/N\text{,}\) then</p>
 \begin{equation*}
-(S_3:\langle (12)\rangle )=3,
+((aN)(bN))(cN)=(abN)(cN)=(ab)cN=a(bc)N=(aN)(bcN)=(aN)((bN)(cN)).
 \end{equation*}
-
-\begin{equation*}
-(D_4:\langle f\rangle )=4,
-\end{equation*}
-
-\begin{equation*}
-(\Z:5\Z)=5,
-\end{equation*}
-
-\begin{equation*}
-(4\Z:12\Z)=3,
-\end{equation*}
-
-\begin{equation*}
-\text{and }(\Z_{12}:\langle 4\rangle )=4.
-\end{equation*}
-</article><p id="p-855">Notice that in the cases in which \(G\) is finite, \((G:H)=|G|/|H|\text{.}\) This makes sense, since the left cosets of \(H\) in \(G\) partition \(G\text{,}\) and each left coset has cardinality \(|H|\text{.}\)</p>
-<p id="p-856">Since the left cosets of a subgroup \(H\) of a group \(G\) partition \(G\) and all have the same cardinality, we have the following two theorems. The first is known as <!--Style me with CSS--><em>Lagrange's Theorem</em> (named for the French mathematician Joseph-Louis Lagrange).</p>
-<article class="theorem-like" id="lagrange"><h5 class="heading">
-<span class="type">Theorem</span><span class="codenumber">6.3.5</span><span class="title">Lagrange's Theorem</span>
-</h5>
-<p id="p-857">If \(G\) is a finite group and \(H\leq G\text{,}\) then \(|H|\) divides \(|G|\text{.}\)</p></article><article class="theorem-like" id="indexfin"><h5 class="heading">
-<span class="type">Theorem</span><span class="codenumber">6.3.6</span>
-</h5>
-<p id="p-858">If \(G\) is a finite group and \(H\leq G\text{,}\) then \((G:H)=|G|/|H|\text{.}\)</p></article><article class="remark-like" id="remark-34"><h5 class="heading">
-<span class="type">Remark</span><span class="codenumber">6.3.7</span>
-</h5>
-<p id="p-859">The converse of <a knowl="./knowl/lagrange.html" knowl-id="xref-lagrange" alt="Theorem 6.3.5 Lagrange's Theorem" title="Theorem 6.3.5 Lagrange's Theorem">Lagrange's Theorem</a> does <!--Style me with CSS--><em>not</em> hold. Indeed \(A_4\) is a group of order 12 which contains no subgroup of order \(6\) even though \(6\) divides \(|A_4|=12\text{.}\)</p></article><p id="p-860">We end this chapter with two corollaries to <a knowl="./knowl/lagrange.html" knowl-id="xref-lagrange" alt="Theorem 6.3.5 Lagrange's Theorem" title="Theorem 6.3.5 Lagrange's Theorem">Lagrange's Theorem</a>.</p>
-<article class="theorem-like" id="corollary-5"><h5 class="heading">
-<span class="type">Corollary</span><span class="codenumber">6.3.8</span>
-</h5>
-<p id="p-861">Let \(G\) be a finite group and let \(a\in G\text{.}\) Then \(a^{|G|}=e_G\text{.}\)</p></article><div class="posterior">
-<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-36" id="proof-36"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></div>
-<div id="hk-proof-36" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-862">Let \(d=o(a)\text{.}\) By <a knowl="./knowl/lagrange.html" knowl-id="xref-lagrange" alt="Theorem 6.3.5 Lagrange's Theorem" title="Theorem 6.3.5 Lagrange's Theorem">Lagrange's Theorem</a>, \(d\) divides \(|G|\text{,}\) so there exists \(k\in \Z\) with \(|G|=dk\text{.}\) Then \(a^{|G|}=a^{dk}=(a^d)^k=(e_G)^k=e_G.\)</p></article></div>
+<p id="p-901">Next, \(N=eN\in G/N\) acts as an identity element since for all \(a\in
+G\text{,}\)</p>
+<p id="p-902">\((aN)(N)=aeN=aN\) and \(N(aN)=eaN=aN\text{.}\)</p>
+<p id="p-903">Finally, let \(aN\in G/N\text{.}\) Then \(a^{-1}N\in G/N\) with \((aN)(a^{-1}N)=aa^{-1}N=N\) and \((a^{-1}N)(aN)=a^{-1}aN=N\text{.}\)</p>
+<p id="p-904">So \(G/N\) is a group under left coset multiplication. Since \((G:N)\) is, by definition, the cardinality of \(G/N\text{,}\) we're done.</p></article></span>
 </div>
-<p id="p-863">Finally, we have the following corollary, whose proof is left as an exercise for the reader.</p>
-<article class="theorem-like" id="pcyc"><h5 class="heading">
-<span class="type">Corollary</span><span class="codenumber">6.3.9</span>
+<article class="definition-like" id="definition-52"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">7.3.2</span>
 </h5>
-<p id="p-864">Let \(G\) be a group of prime order. Then \(G\) is cyclic. It follows that for every prime \(p\text{,}\) there exists a unique group of order \(p\text{,}\) up to isomorphism.</p></article></section></div></main>
+<p id="p-905">When \(G\) is a group and \(N\unlhd G\text{,}\) the above group (\(G/N\) under left coset multiplication) is called a <em class="terminology">factor group</em> or <em class="terminology">quotient group</em>.</p></article><article class="example-like" id="example-68"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">7.3.3</span>
+</h5>
+<p id="p-906">Let \(G=\Z\) and \(N=3\Z\text{.}\) Then \(N\) is normal in \(G\text{,}\) since \(G\) is abelian, so the set \(G/N=\{N,1+N,2+N\}\) is a group under left coset multiplication. Noting that \(N=0+N\text{,}\) it is straightforward to see that \(G/N\) (that is, \(\Z/3\Z\)) has the following group table:</p>
+<p id="p-907"><figure class="figure-like" id="z3-Cayley"><table>
+<tr>
+<td class="c m b2 r2 l0 t0 lines">\(+\)</td>
+<td class="c m b2 r0 l0 t0 lines">\(0+N\)</td>
+<td class="c m b2 r0 l0 t0 lines">\(1+N\)</td>
+<td class="c m b2 r0 l0 t0 lines">\(2+N\)</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">\(0+N\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(0+N\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(1+N\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(2+N\)</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">\(1+N\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(1+N\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(2+N\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(0+N\)</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">\(2+N\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(2+N\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(0+N\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(1+N\)</td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">7.3.4</span>Group table for \(\Z/3\Z\)</figcaption></figure> Clearly, if we ignore all the \(+N's\) after the \(0\)'s, \(1\)'s, and \(2'\) in the above table, and consider \(+\) to be addition mod 3, rather than left coset addition in \(\Z/3\Z\text{,}\) we obtain the group table for \(\Z_3\text{:}\) <figure class="figure-like" id="z3-Cayley2"><table>
+<tr>
+<td class="c m b2 r2 l0 t0 lines">\(+\)</td>
+<td class="c m b2 r0 l0 t0 lines">\(0\)</td>
+<td class="c m b2 r0 l0 t0 lines">\(1\)</td>
+<td class="c m b2 r0 l0 t0 lines">\(2\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">\(0\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(0\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(1\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(2\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">\(1\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(1\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(2\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(0\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">\(2\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(2\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(0\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(1\)</td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">7.3.5</span>Group table for \(\Z_3\)</figcaption></figure> Thus, we see that \(\Z/3\Z\) is isomorphic to \(\Z_3\text{.}\)</p></article><p id="p-908">This is not a coincidence! In fact, we have the following:</p>
+<article class="theorem-like" id="theorem-44"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">7.3.6</span>
+</h5>
+<p id="p-909">Let \(n,d \in \Z^+\) with \(d\) dividing \(n\text{.}\) Then we have: </p>
+<ol id="ol-103" style="list-style-type: decimal;">
+<li id="li-415"><p id="p-910">\(n\Z\unlhd d\Z\) and \(\langle d\rangle \unlhd \Z_n\text{;}\)</p></li>
+<li id="li-416"><p id="p-911">\(d\Z/n\Z\simeq \Z_{n/d}\) (special case: \(\Z/n\Z \simeq \Z_n\)); and</p></li>
+<li id="li-417"><p id="p-912">\(Z_n/\langle d\rangle  \simeq \Z_d\text{.}\)</p></li>
+</ol></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-37" id="proof-37"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-37" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><ol id="ol-104" style="list-style-type: decimal;">
+<li id="li-418"><p id="p-913">Since \(d\) is a positive divisor of \(n\text{,}\) \(n\Z\) and \(\langle d\rangle\) are clearly subgroups of, respectively, \(d\Z\) and \(\Z_n\text{.}\) Moreover, since \(d\Z\) and \(\Z_n\) are abelian, all of their subgroups are normal.</p></li>
+<li id="li-419"><p id="p-914">This follows from the facts that \(d\Z/n\Z=\langle d+n\Z\rangle\text{,}\) hence is cyclic, and that \(|d\Z/n\Z|=(d\Z:n\Z)=n/d\) (see <a knowl="./knowl/indices_ex.html" knowl-id="xref-indices_ex" alt="Example 6.3.4 " title="Example 6.3.4 ">Example 6.3.4</a>). (Unpacking the statement that \(d\Z/n\Z=\langle d+n\Z\rangle\text{:}\) Notice that \(d\Z=\langle d\rangle\text{,}\) so every element of \(d\Z\) is of the form \(kd\) for some integer \(k\text{.}\) Thus, every element of \(d\Z/n\Z\) is of the form \(kd+n\Z\) for some integer \(k\text{.}\) But for each \(k\in \Z\text{,}\) using the definition of left coset multiplication we have that \(kd+n\Z=k(d+n\Z)\text{.}\) So \(d\Z/n\Z=\langle d+n\Z\rangle\text{.}\))</p></li>
+<li id="li-420"><p id="p-915">Similarly, since \(\Z_n=\langle 1\rangle\text{,}\) \(\Z_n/\langle d\rangle =\langle 1+\langle d\rangle \rangle\text{,}\) so is cyclic. Since \((\Z_n:\langle d\rangle )=d\) (again, see <a knowl="./knowl/indices_ex.html" knowl-id="xref-indices_ex" alt="Example 6.3.4 " title="Example 6.3.4 ">Example 6.3.4</a>), \(\Z_n/\langle d\rangle\) is isomorphic to \(\Z_d\text{,}\) as desired. \qedhere</p></li>
+</ol></article></span>
+</div>
+<article class="example-like" id="example-69"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">7.3.7</span>
+</h5>
+<p id="p-916">Let \(N=\langle (123)\rangle  \leq S_3\text{.}\) Since \((S_3:N)=2\text{,}\) \(N\) must be normal in \(S_3\text{,}\) so \(S_3/N\) is a group under left coset multiplication. Since \(|S_3/N|=2\text{,}\) \(S_3/N\) must be isomomorphic to \(\Z_2\text{.}\)</p></article><p id="p-917">In the above examples, we were able to identify \(G/N\) up to isomorphism relatively easily because we could determine that \(G/N\) was cyclic. In general, however, it can be quite difficult to identify the group structure of a factor group. We explore some powerful tools we can use in this identification in the next section, but first we note a couple properties of \(G\) that are “inherited” by any of its factor groups.</p>
+<article class="theorem-like" id="theorem-45"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">7.3.8</span>
+</h5>
+<p id="p-918">Let \(G\) be a group and \(N\unlhd G\text{.}\) Then: </p>
+<ol id="ol-105" style="list-style-type: decimal;">
+<li id="li-421"><p id="p-919">If \(G\) is finite, then \(G/N\) is finite.</p></li>
+<li id="li-422"><p id="p-920">If \(G\) is abelian, then \(G/N\) is abelian; and</p></li>
+<li id="li-423"><p id="p-921">If \(G\) is cyclic, then \(G/N\) is cyclic.</p></li>
+</ol></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-38" id="proof-38"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-38" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><ol id="ol-106" style="list-style-type: decimal;">
+<li id="li-424"><p id="p-922">Clearly this holds, since in this case \(|G/N|=|G|/|N|\text{.}\)</p></li>
+<li id="li-425"><p id="p-923">The proof of this statement is left as an exercise for the reader.</p></li>
+<li id="li-426">
+<p id="p-924">Let \(G\) be cyclic.  Then there exists \(a\in G\) with \(G=\langle a\rangle\text{.}\)  We claim \(G/N=\langle aN\rangle\text{.}\) Indeed:</p>
+\begin{equation*}
+\langle aN\rangle =\{(aN)^i\,:\,i\in \Z\}=\{a^iN\,:\,i\in \Z\}.
+\end{equation*}
+<p>But every element of \(G\) is an integer power of \(a\text{,}\) so this set equals \(\{xN\,:x\in G\}\text{,}\) that is, it equals \(G/N\text{.}\)</p>
+</li>
+</ol></article></span>
+</div>
+<article class="remark-like" id="warning-14"><h5 class="heading">
+<span class="type">Warning</span><span class="codenumber">7.3.9</span>
+</h5>
+<p id="p-925">However, \(G\) can be nonabelian [noncyclic, nonfinite] and yet have a normal subgroup \(N\) such that \(G/N\) is abelian [cyclic, finite]. (See the examples below.) Intuitively, the idea is that modding out a group by a normal subgroup can <!--Style me with CSS--><em>introduce</em> abelianness or cyclicity, or finiteness, but not <!--Style me with CSS--><em>remove</em> one of those characteristics.</p></article><article class="example-like" id="example-70"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">7.3.10</span>
+</h5>
+<p id="p-926">\(S_3\) is nonabelian (and therefore of course noncyclic), but we saw above that \(N=\langle (123)\rangle\) is a normal subgroup of \(S_3\) with \(S_3/N \simeq \Z_2\text{,}\) a cyclic (and therefore of course abelian) group.</p></article><article class="example-like" id="example-71"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">7.3.11</span>
+</h5>
+<p id="p-927">\(\Z\) is an infinite group, but it has finite factor group \(\Z/2\Z\text{.}\)</p></article><p id="p-928">What do the (normal) subgroups of a factor group \(G/N\) look like? Well, they come from the (normal) subgroups of \(G\text{!}\) We have the following theorem, whose proof is tedious but straightforward.</p>
+<article class="theorem-like" id="theorem-46"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">7.3.12</span>
+</h5>
+<p id="p-929">{<!--Style me with CSS--><em>(Correspondence Theorem)</em>} Let \(G\) be a group, and let \(K\unlhd G\text{.}\) Then the subgroups of \(G/K\) are exactly those of the form \(H/K\text{,}\) where \(H\leq G\) with \(K\subseteq H\text{.}\) Moreover, the normal subgroups of \(G/K\) are exactly those of the form \(N/K\text{,}\) where \(N\unlhd G\) with \(K\subseteq N\text{.}\)</p></article><article class="example-like" id="example-72"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">7.3.13</span>
+</h5>
+<p id="p-930">Let \(N=18\Z\) in \(\Z\text{.}\) Since the subgroups of \(\Z\) containing \(N\) are the sets \(d\Z\) where \(d\) is a positive divisor of \(18\text{,}\) the subgroups of \(\Z/N\) are the sets \(d\Z/N\text{,}\) where, again, \(d\) is a positive divisor of \(18\text{.}\)</p></article><p id="p-931">We end this chapter by noting that given any group \(G\) and factor group \(G/N\) of \(G\text{,}\) there is a homomorphism from \(G\) to \(G/N\) that is onto. Before we define this homomorphism, we provide some more terminology.</p>
+<article class="definition-like" id="definition-53"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">7.3.14</span>
+</h5>
+<p id="p-932">Let \(\phi: G\to G'\) be a homomorphism of groups. Then \(\phi\) is can be called an <em class="terminology">epimorphism</em> if \(\phi\) is onto, and a <em class="terminology">monomorphism</em> if \(\phi\) is one-to-one. (Of course, we already know that an epimorphism that is also a monomorphism is called an “isomorphism.”)</p></article><p id="p-933">We now present the following theorem, whose straightforward proof is left to the reader.</p>
+<article class="theorem-like" id="theorem-47"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">7.3.15</span>
+</h5>
+<p id="p-934">Let \(G\) be a group and let \(N\unlhd G\text{.}\) Then the map \(\Psi: G\to G/N\) defined by \(\Psi(g)=gN\) is an epimorphism.</p></article><article class="definition-like" id="definition-54"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">7.3.16</span>
+</h5>
+<p id="p-935">We call this map \(\Psi\) the <em class="terminology">canonical epimorphism from \(G\) to \(G/N\)</em>.</p></article><p id="p-936">Notice that given \(N\unlhd G\text{,}\) the kernel of the canonical epimorphism from \(G\) to \(G/N\) is \(N\text{.}\) Thus, putting this fact together with the fact that every kernel of a homomorphism is a normal subgroup of the homomorphism's domain, we have the following:</p>
+<article class="theorem-like" id="theorem-48"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">7.3.17</span>
+</h5>
+<p id="p-937">Let \(G\) be a group and \(N\) a subset of \(G\text{.}\) Then \(N\) is a normal subgroup of \(G\) if and only if \(N\) is the kernel of a homomorphism from \(G\) to some group \(G'\text{.}\)</p></article></section></div></main>
 </div>
 <script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
 </body>

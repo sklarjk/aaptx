@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-04T13:46:54-07:00    *-->
+<!--*    on 2017-08-04T15:00:34-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,17 @@
 </head>
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>the map \(e\) from \(T\) to \(T\) sending every element to itself;</p>
-<span class="incontext"><a href="dihedralgps.html#p-811">in-context</a></span>
+<p>We claim that \(\phi\) is both a homomorphism and one-to-one. Indeed, let \(a,b\in G\text{.}\) Now, \(\phi(a)\phi(b)\) and \(\phi(ab)\) are both functions with domain \(G\text{,}\) so we need to show \((\phi(a)\phi(b))(x)=(\phi(ab))(x)\) for each \(x\in G\text{.}\) Well, let \(x\in G\text{.}\) Then</p>
+\begin{align*}
+(\phi(a)\phi(b))(x)\amp =(\lambda_a\lambda_b)(x)\amp \amp\\
+\amp =\lambda_a(\lambda_b(x)) \amp \amp \text{ (since the operation on \(S_G\) is
+composition) }\\
+\amp =\lambda_a(bx)\amp \amp\\
+\amp =a(bx)\amp \amp\\
+\amp =(ab)x\amp \amp\\
+\amp =\lambda_{ab}(x)\amp \amp\\
+\amp =(\phi(ab))(x).\amp \amp
+\end{align*}
+<span class="incontext"><a href="section-20.html#p-811">in-context</a></span>
 </body>
 </html>

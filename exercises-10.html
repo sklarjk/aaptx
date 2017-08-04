@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-04T13:46:37-07:00    *-->
+<!--*    on 2017-08-04T15:00:20-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -162,17 +162,17 @@ MathJax.Hub.Config({
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="exercises" id="exercises-10"><header title="Exercises 9.3 Exercises"><h1 class="heading hide-type" alt="Exercises 9.3 Exercises">
 <span class="type">Section</span><span class="codenumber">9.3</span><span class="title">Exercises</span>
 </h1></header><article class="exercise-like" id="exercise-63"><h5 class="heading"><span class="codenumber">1</span></h5>
-<p id="p-1224">Let \(F\) be the group of all functions from \([0,1]\) to \(\R\text{,}\) under pointwise addition. Let</p>
+<p id="p-1238">Let \(F\) be the group of all functions from \([0,1]\) to \(\R\text{,}\) under pointwise addition. Let</p>
 \begin{equation*}
 N=\{f\in F:
 f(1/4)=0\}.
 \end{equation*}
-<p id="p-1225">Prove that \(F/N\) is a group that's isomorphic to \(\R\text{.}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-63" id="solution-63"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-63" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1226">Define \(\Phi:F\rightarrow \R\) by \(\Phi(f)=f\left(\frac{1}{4}\right)\text{,}\) for every \(f\in F\text{.}\) We have that \(\Phi\) is a homomorphism, since for every \(f, g\in F\text{,}\)</p>
+<p id="p-1239">Prove that \(F/N\) is a group that's isomorphic to \(\R\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-63" id="solution-63"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-63" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1240">Define \(\Phi:F\rightarrow \R\) by \(\Phi(f)=f\left(\frac{1}{4}\right)\text{,}\) for every \(f\in F\text{.}\) We have that \(\Phi\) is a homomorphism, since for every \(f, g\in F\text{,}\)</p>
 \begin{equation*}
 \Phi(f+g)=(f+g)\left(\frac{1}{4}\right)=f\left(\frac{1}{4}\right)+g\left(\frac{1}{4}\right)=\Phi(f)+\Phi(g).
 \end{equation*}
-<p id="p-1227">We also have that \(\Phi\) is onto, since if \(r\in \R\text{,}\) then the constant function \(c_r\) defined by</p>
+<p id="p-1241">We also have that \(\Phi\) is onto, since if \(r\in \R\text{,}\) then the constant function \(c_r\) defined by</p>
 \begin{equation*}
 c_r(x)=r \mbox{ for every \(x\in
 [0,1]\)}
@@ -184,24 +184,24 @@ f\left(\frac{1}{4}\right)=0 \Leftrightarrow f\in N;
 \end{equation*}
 <p>so \(\Ker
 \Phi=N\text{.}\) Thus, \(F/N \cong \R\text{,}\) by the <a knowl="./knowl/fit.html" knowl-id="xref-fit" alt="Theorem 9.1.6 First Isomorphism Theorem" title="Theorem 9.1.6 First Isomorphism Theorem">First Isomorphism Theorem</a>.</p></span></span> </article><article class="exercise-like" id="exercise-64"><h5 class="heading"><span class="codenumber">2</span></h5>
-<p id="p-1228">Let \(N=\{1,-1\}\subseteq \R^*\text{.}\) Prove that \(\R^*/N\) is a group that's isomorphic to \(\R^+\text{.}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-64" id="solution-64"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-64" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1229">Define \(\Phi: \R^* \rightarrow \R^+\) by \(\Phi(x)=|x|\text{.}\) We know that \(\Phi\) is a homomorphism, since \(\Phi(xy)=|xy|=|x||y|=\Phi(x)\Phi(y)\text{,}\) for every \(x,y\in \R^*\text{.}\) Moreover, \(\Phi\) is clearly onto (so \(\Phi(\R^*)=\R^+\)), and has</p>
+<p id="p-1242">Let \(N=\{1,-1\}\subseteq \R^*\text{.}\) Prove that \(\R^*/N\) is a group that's isomorphic to \(\R^+\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-64" id="solution-64"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-64" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1243">Define \(\Phi: \R^* \rightarrow \R^+\) by \(\Phi(x)=|x|\text{.}\) We know that \(\Phi\) is a homomorphism, since \(\Phi(xy)=|xy|=|x||y|=\Phi(x)\Phi(y)\text{,}\) for every \(x,y\in \R^*\text{.}\) Moreover, \(\Phi\) is clearly onto (so \(\Phi(\R^*)=\R^+\)), and has</p>
 \begin{equation*}
 \Ker \Phi=\{x\in \R^*\,:\,\Phi(x)=1\}=\{1,-1\}=N.
 \end{equation*}
-<p id="p-1230">Thus, \(\R^*/N \cong \R^+\text{,}\) by the <a knowl="./knowl/fit.html" knowl-id="xref-fit" alt="Theorem 9.1.6 First Isomorphism Theorem" title="Theorem 9.1.6 First Isomorphism Theorem">First Isomorphism Theorem</a>.</p></span></span> </article><article class="exercise-like" id="exercise-65"><h5 class="heading"><span class="codenumber">3</span></h5>
-<p id="p-1231">Let \(n\in \Z^+\) and let \(H=\{A\in GL(n,\R)\,:\, \det A =\pm
+<p id="p-1244">Thus, \(\R^*/N \cong \R^+\text{,}\) by the <a knowl="./knowl/fit.html" knowl-id="xref-fit" alt="Theorem 9.1.6 First Isomorphism Theorem" title="Theorem 9.1.6 First Isomorphism Theorem">First Isomorphism Theorem</a>.</p></span></span> </article><article class="exercise-like" id="exercise-65"><h5 class="heading"><span class="codenumber">3</span></h5>
+<p id="p-1245">Let \(n\in \Z^+\) and let \(H=\{A\in GL(n,\R)\,:\, \det A =\pm
 1\}\text{.}\) Identify a group familiar to us that is isomorphic to \(GL(n,\R)/H\text{.}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-65" id="solution-65"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-65" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1232">Define \(\Phi:GL(n,\R)\to \R^+\) by \(\Phi(A)=|\det A|\text{.}\) We have that \(\Phi\) is an epimorphism since for all \(A,B\in GL(n,\R)\text{,}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-65" id="solution-65"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-65" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1246">Define \(\Phi:GL(n,\R)\to \R^+\) by \(\Phi(A)=|\det A|\text{.}\) We have that \(\Phi\) is an epimorphism since for all \(A,B\in GL(n,\R)\text{,}\)</p>
 \begin{equation*}
 \Phi(AB)=|\det AB|=|\det A \det B|=|\det
 A||\det B|=\Phi(A)\Phi(B),
 \end{equation*}
 <p>and for all \(\lambda \in \R^+\text{,}\) the diagonal matrix having \(\lambda\) in the uppermost left position and 1's elsewhere down the diagonal gets sent to \(\lambda\text{.}\) Since \(\Ker
 \Phi=H\text{,}\) we have that \(GL(n,\R)/H \simeq \R^+\text{,}\) by the <a knowl="./knowl/fit.html" knowl-id="xref-fit" alt="Theorem 9.1.6 First Isomorphism Theorem" title="Theorem 9.1.6 First Isomorphism Theorem">First Isomorphism Theorem</a>.</p></span></span> </article><article class="exercise-like" id="exercise-66"><h5 class="heading"><span class="codenumber">4</span></h5>
-<p id="p-1233">Let \(G\) and \(G'\) be groups with respective normal subgroups \(N\) and \(N'\text{.}\) Prove or disprove: If \(G/N\simeq G'/N'\) then \(G\simeq
+<p id="p-1247">Let \(G\) and \(G'\) be groups with respective normal subgroups \(N\) and \(N'\text{.}\) Prove or disprove: If \(G/N\simeq G'/N'\) then \(G\simeq
 G'\text{.}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-66" id="solution-66"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-66" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1234">The statement is false. Indeed, using the preceding two problems, we see that \(\R^*/\{1,-1\}\) and \(GL(2,\R)/H\text{,}\) where \(H=\{A\in GL(2,\R):\det A =\pm 1\}\text{,}\) are both isomorphic to \(\R^+\text{,}\) hence are isomorphic to each other. But we know that \(\R^* \not\simeq GL(2,\R)\text{.}\)</p></span></span> </article></section></div></main>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-66" id="solution-66"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-66" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1248">The statement is false. Indeed, using the preceding two problems, we see that \(\R^*/\{1,-1\}\) and \(GL(2,\R)/H\text{,}\) where \(H=\{A\in GL(2,\R):\det A =\pm 1\}\text{,}\) are both isomorphic to \(\R^+\text{,}\) hence are isomorphic to each other. But we know that \(\R^* \not\simeq GL(2,\R)\text{.}\)</p></span></span> </article></section></div></main>
 </div>
 <script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
 </body>

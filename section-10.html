@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-04T13:46:33-07:00    *-->
+<!--*    on 2017-08-04T15:00:17-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -161,11 +161,11 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-10"><header title="Section 3.1 Groups of small order"><h1 class="heading hide-type" alt="Section 3.1 Groups of small order">
 <span class="type">Section</span><span class="codenumber">3.1</span><span class="title">Groups of small order</span>
-</h1></header><p id="p-364">Let's start exploring groups in order of increasing, well, order. Before we do this, it will be helpful to introduce the notion of a <!--Style me with CSS--><em>group table</em> (also known as a <!--Style me with CSS--><em>Cayley table</em><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-1" id="fn-1"><span class="footnote"><sup> 1 </sup></span></a></span><span id="hk-fn-1" style="display: none;" class="tex2jax_ignore"><span class="footnote">Named after the British mathematician Arthur Cayley.</span></span>) for a finite group. Given a finite group \(G\text{,}\) list its elements in some fixed order, say, \(a_1, a_2, \ldots, a_n\text{,}\) and then construct its group table by creating an array with exactly one row and exactly one column corresponding to each group element. We then put in the row \(i\) and column \(j\) the element \(a_ia_j\) of \(G\text{.}\) Note that a single group can have group tables that look different from one another, since reordering a group's elements will change its table.</p>
+</h1></header><p id="p-374">Let's start exploring groups in order of increasing, well, order. Before we do this, it will be helpful to introduce the notion of a <!--Style me with CSS--><em>group table</em> (also known as a <!--Style me with CSS--><em>Cayley table</em><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-1" id="fn-1"><span class="footnote"><sup> 1 </sup></span></a></span><span id="hk-fn-1" style="display: none;" class="tex2jax_ignore"><span class="footnote">Named after the British mathematician Arthur Cayley.</span></span>) for a finite group. Given a finite group \(G\text{,}\) list its elements in some fixed order, say, \(a_1, a_2, \ldots, a_n\text{,}\) and then construct its group table by creating an array with exactly one row and exactly one column corresponding to each group element. We then put in the row \(i\) and column \(j\) the element \(a_ia_j\) of \(G\text{.}\) Note that a single group can have group tables that look different from one another, since reordering a group's elements will change its table.</p>
 <article class="example-like" id="example-23"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">3.1.1</span>
 </h5>
-<p id="p-365">Consider the group \(\Z_4\) under addition modulo 4. Ordering the elements of \(\Z_4\) as \(1,2,3,4\text{,}\) we have the following group table for \(\langle \Z_4,+\rangle\text{:}\)</p>
+<p id="p-375">Consider the group \(\Z_4\) under addition modulo 4. Ordering the elements of \(\Z_4\) as \(1,2,3,4\text{,}\) we have the following group table for \(\langle \Z_4,+\rangle\text{:}\)</p>
 <figure class="figure-like" id="z4-Cayley"><table>
 <tr>
 <td class="l m b2 r2 l0 t0 lines">\(+\)</td>
@@ -203,11 +203,11 @@ MathJax.Hub.Config({
 <td class="l m b0 r0 l0 t0 lines">\(2\)</td>
 </tr>
 </table>
-<figcaption><span class="heading">Table</span><span class="codenumber">3.1.2</span>Group table for \(\Z_4\)</figcaption></figure></article><p id="p-366">Now, clearly, there is no group of order 0 (do you see why?). Is there a group of order 1? Well, suppose \(\langle G,*\rangle\) is such a group. Since \(G\) must contain an identity element \(e\text{,}\) we must have \(G=\{e\}\text{,}\) and since \(e\) is \(G\)'s identity element, we must have \(e*e=e\text{.}\) Clearly, in this case, the three group axioms hold. So \(G\) is a valid group, without much going on in it.</p>
-<article class="definition-like" id="definition-30"><h5 class="heading">
+<figcaption><span class="heading">Table</span><span class="codenumber">3.1.2</span>Group table for \(\Z_4\)</figcaption></figure></article><p id="p-376">Now, clearly, there is no group of order 0 (do you see why?). Is there a group of order 1? Well, suppose \(\langle G,*\rangle\) is such a group. Since \(G\) must contain an identity element \(e\text{,}\) we must have \(G=\{e\}\text{,}\) and since \(e\) is \(G\)'s identity element, we must have \(e*e=e\text{.}\) Clearly, in this case, the three group axioms hold. So \(G\) is a valid group, without much going on in it.</p>
+<article class="definition-like" id="definition-31"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">3.1.3</span>
 </h5>
-<p id="p-367">If \(G\) is a group with \(|G|=1\text{,}\) then \(G\) is called the <em class="terminology">trivial group</em><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-2" id="fn-2"><span class="footnote"><sup> 2 </sup></span></a></span><span id="hk-fn-2" style="display: none;" class="tex2jax_ignore"><span class="footnote">A good question to ask here is why it's called “the” trivial group, rather than “a” trivial group.  Indeed, there are infinitely many groups of order 1! (Do you see why?) But it turns out that all of these groups are <!--Style me with CSS--><em>structurally</em> the same. Hence mathematicians end up thinking of them as various instantiations of one group, rather than separate groups. We will discuss this in more depth shortly, when we introduce the idea of <!--Style me with CSS--><em>isomorphism</em>.</span></span>.</p></article><p id="p-368">Next suppose that group \(\Gdot\) has order 2. Then \(G\) must contain an identity element, \(e\text{,}\) and a non-identity element, \(a\text{.}\) Since \(e\) is its own inverse, and inverses are unique, \(a\) must be its own inverse as well. So \(G\) must have the following table.</p>
+<p id="p-377">If \(G\) is a group with \(|G|=1\text{,}\) then \(G\) is called the <em class="terminology">trivial group</em><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-2" id="fn-2"><span class="footnote"><sup> 2 </sup></span></a></span><span id="hk-fn-2" style="display: none;" class="tex2jax_ignore"><span class="footnote">A good question to ask here is why it's called “the” trivial group, rather than “a” trivial group.  Indeed, there are infinitely many groups of order 1! (Do you see why?) But it turns out that all of these groups are <!--Style me with CSS--><em>structurally</em> the same. Hence mathematicians end up thinking of them as various instantiations of one group, rather than separate groups. We will discuss this in more depth shortly, when we introduce the idea of <!--Style me with CSS--><em>isomorphism</em>.</span></span>.</p></article><p id="p-378">Next suppose that group \(\Gdot\) has order 2. Then \(G\) must contain an identity element, \(e\text{,}\) and a non-identity element, \(a\text{.}\) Since \(e\) is its own inverse, and inverses are unique, \(a\) must be its own inverse as well. So \(G\) must have the following table.</p>
 <figure class="figure-like" id="Cayley2"><table>
 <tr>
 <td class="l m b2 r2 l0 t0 lines">\(*\)</td>
@@ -225,8 +225,8 @@ MathJax.Hub.Config({
 <td class="l m b0 r0 l0 t0 lines">\(e\)</td>
 </tr>
 </table>
-<figcaption><span class="heading">Table</span><span class="codenumber">3.1.4</span>Group table for a group of order \(2\)</figcaption></figure><p id="p-369">It is straightforward to show that such a structure does satisfy all the group axioms (the only one we really need to check is associativity).</p>
-<p id="p-370">Now, what if group \(\Gdot\) has order 3? Note that <!--Style me with CSS--><em>you can't have any entry appear more than once in the same row or same column</em> (excluding of course the labels outside the grid we're filling in), given <a knowl="./knowl/uniquesols.html" knowl-id="xref-uniquesols" alt="Theorem 2.5.12 " title="Theorem 2.5.12 ">Theorem 2.5.12</a>. Is there only one way of filling in the table for a group of order 3? (Hint: consider what element must be the second row, third column entry.)</p>
+<figcaption><span class="heading">Table</span><span class="codenumber">3.1.4</span>Group table for a group of order \(2\)</figcaption></figure><p id="p-379">It is straightforward to show that such a structure does satisfy all the group axioms (the only one we really need to check is associativity).</p>
+<p id="p-380">Now, what if group \(\Gdot\) has order 3? Note that <!--Style me with CSS--><em>you can't have any entry appear more than once in the same row or same column</em> (excluding of course the labels outside the grid we're filling in), given <a knowl="./knowl/uniquesols.html" knowl-id="xref-uniquesols" alt="Theorem 2.5.12 " title="Theorem 2.5.12 ">Theorem 2.5.12</a>. Is there only one way of filling in the table for a group of order 3? (Hint: consider what element must be the second row, third column entry.)</p>
 <figure class="figure-like" id="Cayley3"><table>
 <tr>
 <td class="l m b2 r2 l0 t0 lines">\(*\)</td>
@@ -253,8 +253,8 @@ MathJax.Hub.Config({
 <td class="l m b0 r0 l0 t0 lines">\(\)</td>
 </tr>
 </table>
-<figcaption><span class="heading">Table</span><span class="codenumber">3.1.5</span>Incomplete group table for a group of order \(3\)</figcaption></figure><p id="p-371">Finally, what if group \(\Gdot\) has order 4? It turns out in this case there are <!--Style me with CSS--><em>two</em> valid ways of filling in a group table!</p>
-<p id="p-372">What we have been doing here is really getting into the idea of the <!--Style me with CSS--><em>structure</em> of groups, and when we can consider groups to be essentially “the same” or fundamentally “different.” We approach this more formally via the concepts of homomorphism and isomorphism.</p></section></div></main>
+<figcaption><span class="heading">Table</span><span class="codenumber">3.1.5</span>Incomplete group table for a group of order \(3\)</figcaption></figure><p id="p-381">Finally, what if group \(\Gdot\) has order 4? It turns out in this case there are <!--Style me with CSS--><em>two</em> valid ways of filling in a group table!</p>
+<p id="p-382">What we have been doing here is really getting into the idea of the <!--Style me with CSS--><em>structure</em> of groups, and when we can consider groups to be essentially “the same” or fundamentally “different.” We approach this more formally via the concepts of homomorphism and isomorphism.</p></section></div></main>
 </div>
 <script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
 </body>
