@@ -1298,18 +1298,15 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
     assume they are equipped with the following operations, unless
     otherwise. Throughout, assume <m>m,n\in \Z^+</m>.
   </p>
+
   <tabular>
-    <row bottom="minor">
-      <cell></cell>
-      <cell></cell>
-      <cell></cell>
-    </row>
-    <row>
+  
+    <row bottom="medium">
       <cell><em>Group(s)</em></cell>
       <cell><em>Operation</em></cell>
       <cell><em>Properties</em></cell>
     </row>
-    <row bottom="minor">
+    <row >
       <cell></cell>
       <cell></cell>
       <cell></cell>
@@ -1320,7 +1317,7 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
       <cell>countably
       infinite; abelian</cell>
     </row>
-    <row bottom="minor">
+    <row >
       <cell></cell>
       <cell></cell>
       <cell></cell>
@@ -1330,7 +1327,7 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
       <cell>addition of numbers</cell>
       <cell>countably infinite; abelian (unless <m>m=0</m>)</cell>
     </row>
-    <row bottom="minor">
+    <row >
       <cell></cell>
       <cell></cell>
       <cell></cell>
@@ -1340,7 +1337,7 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
       <cell>addition of numbers</cell>
       <cell>uncountable; abelian</cell>
     </row>
-    <row bottom="minor">
+    <row >
       <cell></cell>
       <cell></cell>
       <cell></cell>
@@ -1350,7 +1347,7 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
       <cell>multiplication of  numbers</cell>
       <cell>countably infinite; abelian</cell>
     </row>
-    <row bottom="minor">
+    <row >
       <cell></cell>
       <cell></cell>
       <cell></cell>
@@ -1360,7 +1357,7 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
       <cell>multiplication of  numbers</cell>
       <cell>uncountable; abelian</cell>
     </row>
-    <row bottom="minor">
+    <row >
       <cell></cell>
       <cell></cell>
       <cell></cell>
@@ -1370,7 +1367,7 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
       <cell>matrix addition</cell>
       <cell>uncountable; abelian</cell>
     </row>
-    <row bottom="minor">
+    <row >
       <cell></cell>
       <cell></cell>
       <cell></cell>
@@ -1380,7 +1377,7 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
       <cell>matrix multiplication</cell>
       <cell>uncountable; nonabelian (unless <m>n=1</m>)</cell>
     </row>
-    <row bottom="minor">
+    <row >
       <cell></cell>
       <cell></cell>
       <cell></cell>
@@ -1390,7 +1387,7 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
       <cell>addition mod <m>n</m></cell>
       <cell>finite; abelian</cell>
     </row>
-    <row bottom="minor">
+    <row >
       <cell></cell>
       <cell></cell>
       <cell></cell>
@@ -1400,7 +1397,7 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
       <cell>componentwise addition mod 2</cell>
       <cell>finite; abelian</cell>
     </row>
-    <row bottom="minor">
+    <row >
       <cell></cell>
       <cell></cell>
       <cell></cell>
@@ -1410,7 +1407,7 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
       <cell>pointwise addition</cell>
       <cell>uncountable; abelian</cell>
     </row>
-    <row bottom="minor">
+    <row >
       <cell></cell>
       <cell></cell>
       <cell></cell>
@@ -1420,7 +1417,7 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
       <cell>composition</cell>
       <cell>uncountable; nonabelian</cell>
     </row>
-    <row bottom="minor">
+    <row >
       <cell></cell>
       <cell></cell>
       <cell></cell>

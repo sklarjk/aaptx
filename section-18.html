@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-04T15:00:18-07:00    *-->
+<!--*    on 2017-08-06T12:51:04-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -164,14 +164,15 @@ MathJax.Hub.Config({
 </h1></header><article class="definition-like" id="definition-46"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">6.2.1</span>
 </h5>
-<p id="p-747">When \(A=\{1,2,\ldots, n\}\) (\(n\in \Z^+\)), we call \(S_A\) the <em class="terminology">symmetric group on \(n\) letters</em> and denote it by \(S_n\text{.}\)</p></article><article class="remark-like" id="remark-24"><h5 class="heading">
+<p id="p-748">When \(A=\{1,2,\ldots, n\}\) (\(n\in \Z^+\)), we call \(S_A\) the <em class="terminology">symmetric group on \(n\) letters</em> and denote it by \(S_n\text{.}\)</p>
+<p id="p-749">(We can, in fact,  define \(S_0\text{,}\) the set of all permutations on the empty set. One can show, using the fact that a function is a relation on a Cartesian product of sets, that \(S_0\) is the trivial group. However, this will not be relevant in this text.)</p></article><article class="remark-like" id="remark-25"><h5 class="heading">
 <span class="type">Remark</span><span class="codenumber">6.2.2</span>
 </h5>
-<p id="p-748">Throughout this course, if we are discussing a group \(S_n\text{,}\) you should assume \(n\in \Z^+\text{.}\)</p></article><p id="p-749">It is important for us to be able to easily describe specific elements of \(S_n\text{.}\) It would be cumbersome to describe, for instance, an element of \(S_3\) by saying it swaps \(1\) and \(2\) and fixes \(3\text{;}\) imagine how much more cumbersome it could be to describe an element of, say, \(S_{100}\text{!}\) One can somewhat concisely describe a permutation \(\sigma\) of \(S_n\) by listing out the elements \(1,2,\ldots,n\) and writing the element \(\sigma(i)\) below each \(i\) for \(i=1,2,\ldots, n\text{.}\) For instance, if \(\sigma\) sends \(1\) to \(2\text{,}\) we'd write the number \(2\) below the number \(1\text{.}\) The convention is to enclose these two rows of numbers in a single set of parentheses, as in the following example.</p>
+<p id="p-750">Throughout this course, if we are discussing a group \(S_n\text{,}\) you should assume \(n\in \Z^+\text{.}\)</p></article><p id="p-751">It is important for us to be able to easily describe specific elements of \(S_n\text{.}\) It would be cumbersome to describe, for instance, an element of \(S_3\) by saying it swaps \(1\) and \(2\) and fixes \(3\text{;}\) imagine how much more cumbersome it could be to describe an element of, say, \(S_{100}\text{!}\) One can somewhat concisely describe a permutation \(\sigma\) of \(S_n\) by listing out the elements \(1,2,\ldots,n\) and writing the element \(\sigma(i)\) below each \(i\) for \(i=1,2,\ldots, n\text{.}\) For instance, if \(\sigma\) sends \(1\) to \(2\text{,}\) we'd write the number \(2\) below the number \(1\text{.}\) The convention is to enclose these two rows of numbers in a single set of parentheses, as in the following example.</p>
 <article class="example-like" id="nocommute"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">6.2.3</span>
 </h5>
-<p id="p-750">We can denote the element \(\sigma\) of \(S_3\) that swaps \(1\) and \(2\) and fixes \(3\) by</p>
+<p id="p-752">We can denote the element \(\sigma\) of \(S_3\) that swaps \(1\) and \(2\) and fixes \(3\) by</p>
 \begin{equation*}
 \sigma = \begin{pmatrix}1\amp 2\amp 3\\ 2\amp 1\amp 3
 \end{pmatrix},
@@ -181,7 +182,7 @@ MathJax.Hub.Config({
 \tau =\begin{pmatrix}1\amp 2\amp 3\\ 3\amp 1\amp 2
 \end{pmatrix}.
 \end{equation*}
-<p id="p-751">Then</p>
+<p id="p-753">Then</p>
 \begin{equation*}
 \sigma\tau = \begin{pmatrix}1\amp 2\amp 3\\ 3\amp 2\amp 1
 \end{pmatrix}
@@ -191,53 +192,53 @@ MathJax.Hub.Config({
 \tau\sigma = \begin{pmatrix}1\amp 2\amp 3\\ 1\amp 3\amp 2
 \end{pmatrix}.
 \end{equation*}
-</article><p id="p-752">But even this notation is unnecessarily cumbersome. Instead, we use <!--Style me with CSS--><em>cycle notation</em>.</p>
+</article><p id="p-754">But even this notation is unnecessarily cumbersome. Instead, we use <!--Style me with CSS--><em>cycle notation</em>.</p>
 <article class="definition-like" id="definition-47"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">6.2.4</span>
 </h5>
-<p id="p-753">A permutation \(\sigma\) in \(S_n\) is called a <em class="terminology">\(k\)-cycle</em> or a <em class="terminology">cycle of length \(k\)</em> (or, less specifically, a <em class="terminology">cycle</em>) if there exist elements \(a_1,
+<p id="p-755">A permutation \(\sigma\) in \(S_n\) is called a <em class="terminology">\(k\)-cycle</em> or a <em class="terminology">cycle of length \(k\)</em> (or, less specifically, a <em class="terminology">cycle</em>) if there exist elements \(a_1,
 a_2,\ldots, a_k\) in \(\{1,2,\ldots,n\}\) such that </p>
 <ul id="ul-7" style="list-style-type: disc;">
-<li id="li-330"><p id="p-754">\(\sigma(a_i)=a_{i+1}\) for each \(i=1,2,\ldots, k-1\text{;}\)</p></li>
-<li id="li-331"><p id="p-755">\(\sigma(a_k)=a_1\text{;}\)</p></li>
-<li id="li-332"><p id="p-756">\(\sigma(x)=x\) for every other element of \(\{1,2,\ldots, n\}\text{.}\)</p></li>
+<li id="li-330"><p id="p-756">\(\sigma(a_i)=a_{i+1}\) for each \(i=1,2,\ldots, k-1\text{;}\)</p></li>
+<li id="li-331"><p id="p-757">\(\sigma(a_k)=a_1\text{;}\)</p></li>
+<li id="li-332"><p id="p-758">\(\sigma(x)=x\) for every other element of \(\{1,2,\ldots, n\}\text{.}\)</p></li>
 </ul>
-<p id="p-757">We use the <em class="terminology">cycle notation</em> \(\sigma = (a_1 a_2 \cdots a_k)\) to describe such a cycle. A \(2\)-cycle is often called a <em class="terminology">transposition</em>.</p></article><article class="example-like" id="tr"><h5 class="heading">
+<p id="p-759">We use the <em class="terminology">cycle notation</em> \(\sigma = (a_1 a_2 \cdots a_k)\) to describe such a cycle. A \(2\)-cycle is often called a <em class="terminology">transposition</em>.</p></article><article class="example-like" id="tr"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">6.2.5</span>
 </h5>
-<p id="p-758">The permutation \(\tau\) in \(S_3\) that sends \(1\) to \(3\text{,}\) \(2\) to \(1\text{,}\) and \(3\) to \(2\) is a cycle. It can be denoted by \(\tau =(132)\text{.}\) Similarly, the cycle \(\rho\) in \(S_3\) swapping \(1\) and \(3\) can be denoted by \(\rho=(13)\text{.}\) On the other hand, the permutation in \(S_4\) that swaps \(1\) with \(2\) and \(3\) with \(4\) is <!--Style me with CSS--><em>not</em> a cycle.</p></article><article class="remark-like" id="remark-25"><h5 class="heading">
+<p id="p-760">The permutation \(\tau\) in \(S_3\) that sends \(1\) to \(3\text{,}\) \(2\) to \(1\text{,}\) and \(3\) to \(2\) is a cycle. It can be denoted by \(\tau =(132)\text{.}\) Similarly, the cycle \(\rho\) in \(S_3\) swapping \(1\) and \(3\) can be denoted by \(\rho=(13)\text{.}\) On the other hand, the permutation in \(S_4\) that swaps \(1\) with \(2\) and \(3\) with \(4\) is <!--Style me with CSS--><em>not</em> a cycle.</p></article><article class="remark-like" id="remark-26"><h5 class="heading">
 <span class="type">Remark</span><span class="codenumber">6.2.6</span>
 </h5>
-<p id="p-759">Given a \(k\)-cycle \(\sigma=(a_1 a_2\cdots a_k)\text{,}\) there are \(k\) different expressions for \(\sigma\text{.}\) Indeed, we have</p>
+<p id="p-761">Given a \(k\)-cycle \(\sigma=(a_1 a_2\cdots a_k)\text{,}\) there are \(k\) different expressions for \(\sigma\text{.}\) Indeed, we have</p>
 \begin{equation*}
 \sigma=(a_1 a_2\cdots a_k)=(a_2 a_3 \cdots a_k a_1)=(a_3 a_4 \cdots a_k a_1 a_2)=\cdots = (a_k a_1 \cdots a_{k-1}).
 \end{equation*}
 </article><article class="example-like" id="example-52"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">6.2.7</span>
 </h5>
-<p id="p-760">The permutation \(\tau\) described in <a knowl="./knowl/tr.html" knowl-id="xref-tr" alt="Example 6.2.5 " title="Example 6.2.5 ">Example 5</a> can also be written as \((321)\) and as \((213)\text{.}\)</p></article><p id="p-761">However, by convention, we usually “start” a cycle \(\sigma\) with the smallest of the numbers that \(\sigma\) doesn't fix: e.g., we'd write \(\sigma=(213)\) as \((132)\text{.}\)</p>
+<p id="p-762">The permutation \(\tau\) described in <a knowl="./knowl/tr.html" knowl-id="xref-tr" alt="Example 6.2.5 " title="Example 6.2.5 ">Example 5</a> can also be written as \((321)\) and as \((213)\text{.}\)</p></article><p id="p-763">However, by convention, we usually “start” a cycle \(\sigma\) with the smallest of the numbers that \(\sigma\) doesn't fix: e.g., we'd write \(\sigma=(213)\) as \((132)\text{.}\)</p>
 <article class="definition-like" id="definition-48"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">6.2.8</span>
 </h5>
-<p id="p-762">Two cycles \(\sigma=(a_1 a_2 \cdots a_k)\) and \(\tau=(b_1
+<p id="p-764">Two cycles \(\sigma=(a_1 a_2 \cdots a_k)\) and \(\tau=(b_1
 b_2 \cdots b_m)\) are said to be <em class="terminology">disjoint</em> if \(a_i \neq
-b_j\) for all \(i\) and \(j\text{.}\) Cycles \(\sigma_1\text{,}\) \(\sigma_2\text{,}\) \(\ldots\text{,}\) \(\sigma_m\) are <em class="terminology">disjoint</em> if \(\sigma_i\) and \(\sigma_j\) are disjoint for each \(i \neq j\text{.}\) (Notice: this version of disjointness is what we usually refer to as <em class="terminology">mutual</em> disjointness.)</p></article><article class="remark-like" id="remark-26"><h5 class="heading">
+b_j\) for all \(i\) and \(j\text{.}\) Cycles \(\sigma_1\text{,}\) \(\sigma_2\text{,}\) \(\ldots\text{,}\) \(\sigma_m\) are <em class="terminology">disjoint</em> if \(\sigma_i\) and \(\sigma_j\) are disjoint for each \(i \neq j\text{.}\) (Notice: this version of disjointness is what we usually refer to as <em class="terminology">mutual</em> disjointness.)</p></article><article class="remark-like" id="remark-27"><h5 class="heading">
 <span class="type">Remark</span><span class="codenumber">6.2.9</span>
 </h5>
-<p id="p-763">Note that if cycles \(\sigma\) and \(\tau\) are disjoint, then \(\sigma\) and \(\tau\) commute; that is, \(\sigma \tau=\tau \sigma\text{.}\)</p></article><article class="remark-like" id="warning-18"><h5 class="heading">
+<p id="p-765">Note that if cycles \(\sigma\) and \(\tau\) are disjoint, then \(\sigma\) and \(\tau\) commute; that is, \(\sigma \tau=\tau \sigma\text{.}\)</p></article><article class="remark-like" id="warning-17"><h5 class="heading">
 <span class="type">Warning</span><span class="codenumber">6.2.10</span>
 </h5>
-<p id="p-764">If cycles \(\sigma\) and \(\tau\) are <!--Style me with CSS--><em>not</em> disjoint then they may not commute. For instance, see <a knowl="./knowl/nocommute.html" knowl-id="xref-nocommute" alt="Example 6.2.3 " title="Example 6.2.3 ">Example 3</a>, where \(\sigma\tau \neq \tau \sigma\text{.}\)</p></article><p id="p-765">Note that any permutation of \(S_n\) is a product of disjoint cycles (where by “product” we mean the permutation resulting from permutation multiplication).</p>
+<p id="p-766">If cycles \(\sigma\) and \(\tau\) are <!--Style me with CSS--><em>not</em> disjoint then they may not commute. For instance, see <a knowl="./knowl/nocommute.html" knowl-id="xref-nocommute" alt="Example 6.2.3 " title="Example 6.2.3 ">Example 3</a>, where \(\sigma\tau \neq \tau \sigma\text{.}\)</p></article><p id="p-767">Note that any permutation of \(S_n\) is a product of disjoint cycles (where by “product” we mean the permutation resulting from permutation multiplication).</p>
 <article class="definition-like" id="definition-49"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">6.2.11</span>
 </h5>
-<p id="p-766">Writing a permutation in <em class="terminology">(disjoint) cycle notation</em> means writing it as a product of disjoint cycles, where each cycle is written in cycle notation.</p></article><article class="remark-like" id="remark-27"><h5 class="heading">
+<p id="p-768">Writing a permutation in <em class="terminology">(disjoint) cycle notation</em> means writing it as a product of disjoint cycles, where each cycle is written in cycle notation.</p></article><article class="remark-like" id="remark-28"><h5 class="heading">
 <span class="type">Remark</span><span class="codenumber">6.2.12</span>
 </h5>
-<p id="p-767">Note that if \(\sigma\) in \(S_n\) is written in cycle notation and the number \(a\in \{1,2,\ldots, n\}\) appears nowhere in \(\sigma\)'s representation, this means that \(\sigma\) fixes \(a\text{.}\) The only permutation that we cannot really write in cycle notation is the identity element \(1_A\) of \(S_A\text{,}\) which we henceforth denote by \(e\text{.}\)</p></article><article class="example-like" id="example-53"><h5 class="heading">
+<p id="p-769">Note that if \(\sigma\) in \(S_n\) is written in cycle notation and the number \(a\in \{1,2,\ldots, n\}\) appears nowhere in \(\sigma\)'s representation, this means that \(\sigma\) fixes \(a\text{.}\) The only permutation that we cannot really write in cycle notation is the identity element \(1_A\) of \(S_A\text{,}\) which we henceforth denote by \(e\text{.}\)</p></article><article class="example-like" id="example-53"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">6.2.13</span>
 </h5>
-<p id="p-768">The permutation</p>
+<p id="p-770">The permutation</p>
 \begin{equation*}
 \sigma =\begin{pmatrix}1\amp 2\amp 3\amp 4\amp 5\amp 6\\ 3\amp 1\amp 2\amp 6\amp 5\amp 4
 \end{pmatrix}
@@ -246,43 +247,43 @@ b_j\) for all \(i\) and \(j\text{.}\) Cycles \(\sigma_1\text{,}\) \(\sigma_2\tex
 \begin{equation*}
 \sigma=(132)(46).
 \end{equation*}
-<p id="p-769">Note that we could also write \(\sigma\) as \((321)(46)\text{,}\) \((213)(64)\text{,}\) \((64)(132)\text{,}\) etc.</p>
-<p id="p-770">While it is true that we also have \(\sigma=(13)(23)(46)\text{,}\) this is not a disjoint cycle representation of \(\sigma\) since both \((13)\) and \((23)\) “move” the element \(3\text{.}\)</p></article><article class="example-like" id="example-54"><h5 class="heading">
+<p id="p-771">Note that we could also write \(\sigma\) as \((321)(46)\text{,}\) \((213)(64)\text{,}\) \((64)(132)\text{,}\) etc.</p>
+<p id="p-772">While it is true that we also have \(\sigma=(13)(23)(46)\text{,}\) this is not a disjoint cycle representation of \(\sigma\) since both \((13)\) and \((23)\) “move” the element \(3\text{.}\)</p></article><article class="example-like" id="example-54"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">6.2.14</span>
 </h5>
-<p id="p-771">In \(S_4\text{,}\) let \(\sigma=(243)\) and \(\tau=(13)(24)\text{.}\) Then \(\sigma \tau=(123)\) and \(\tau \sigma = (134).\)</p></article><article class="example-like" id="s9ex"><h5 class="heading">
+<p id="p-773">In \(S_4\text{,}\) let \(\sigma=(243)\) and \(\tau=(13)(24)\text{.}\) Then \(\sigma \tau=(123)\) and \(\tau \sigma = (134).\)</p></article><article class="example-like" id="s9ex"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">6.2.15</span>
 </h5>
-<p id="p-772">In \(S_9\text{,}\) let \(\sigma=(134)\text{,}\) \(\tau=(26)(17)\text{,}\) and \(\rho=(358)(12)\text{.}\) Find the following, writing your answers using disjoint cycle notation.</p>
+<p id="p-774">In \(S_9\text{,}\) let \(\sigma=(134)\text{,}\) \(\tau=(26)(17)\text{,}\) and \(\rho=(358)(12)\text{.}\) Find the following, writing your answers using disjoint cycle notation.</p>
 <ol id="ol-79" class="cols4" style="list-style-type: lower-alpha;">
-<li id="li-333" style="width:24.5%; float:left;"><p id="p-773">\(\sigma^{-1}\)</p></li>
-<li id="li-334" style="width:24.5%; float:left;"><p id="p-774">\(\sigma^{-1}\tau\sigma\)</p></li>
-<li id="li-335" style="width:24.5%; float:left;"><p id="p-775">\(\sigma^2\)</p></li>
-<li id="li-336" style="width:24.5%; float:left;"><p id="p-776">\(\sigma^3\)</p></li>
-<li id="li-337" style="width:24.5%; float:left;"><p id="p-777">\(\rho^2\)</p></li>
-<li id="li-338" style="width:24.5%; float:left;"><p id="p-778">\(\rho^{-2}\)</p></li>
-<li id="li-339" style="width:24.5%; float:left;"><p id="p-779">\(\sigma \tau\)</p></li>
-<li id="li-340" style="width:24.5%; float:left;"><p id="p-780">\(\sigma \rho\)</p></li>
+<li id="li-333" style="width:24.5%; float:left;"><p id="p-775">\(\sigma^{-1}\)</p></li>
+<li id="li-334" style="width:24.5%; float:left;"><p id="p-776">\(\sigma^{-1}\tau\sigma\)</p></li>
+<li id="li-335" style="width:24.5%; float:left;"><p id="p-777">\(\sigma^2\)</p></li>
+<li id="li-336" style="width:24.5%; float:left;"><p id="p-778">\(\sigma^3\)</p></li>
+<li id="li-337" style="width:24.5%; float:left;"><p id="p-779">\(\rho^2\)</p></li>
+<li id="li-338" style="width:24.5%; float:left;"><p id="p-780">\(\rho^{-2}\)</p></li>
+<li id="li-339" style="width:24.5%; float:left;"><p id="p-781">\(\sigma \tau\)</p></li>
+<li id="li-340" style="width:24.5%; float:left;"><p id="p-782">\(\sigma \rho\)</p></li>
 </ol></article><article class="example-like" id="example-56"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">6.2.16</span>
 </h5>
-<p id="p-781">Explicitly express all the elements of \(S_4\) in disjoint cycle notation.</p></article><article class="theorem-like" id="kcyc"><h5 class="heading">
+<p id="p-783">Explicitly express all the elements of \(S_4\) in disjoint cycle notation.</p></article><article class="theorem-like" id="kcyc"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">6.2.17</span>
 </h5>
-<p id="p-782">Any \(k\)-cycle has order \(k\) in \(S_n\text{.}\) More generally, if permutation \(\sigma\) can be written in disjoint cycle notation as \(\sigma=\sigma_1 \sigma_2 \cdots \sigma_m\text{,}\) then</p>
+<p id="p-784">Any \(k\)-cycle has order \(k\) in \(S_n\text{.}\) More generally, if permutation \(\sigma\) can be written in disjoint cycle notation as \(\sigma=\sigma_1 \sigma_2 \cdots \sigma_m\text{,}\) then</p>
 \begin{align*}
 o(\sigma)\amp =\lcm(o(\sigma_1), o(\sigma_2),\ldots, o(\sigma_m))\\
 \amp =\lcm(\mathrm{length}(\sigma_1),\mathrm{length}(\sigma_2),\ldots,\mathrm{length}(\sigma_m)),
 \end{align*}
-<p>where \(\lcm\) denotes the least common multiple.</p></article><article class="remark-like" id="warning-19"><h5 class="heading">
+<p>where \(\lcm\) denotes the least common multiple.</p></article><article class="remark-like" id="warning-18"><h5 class="heading">
 <span class="type">Warning</span><span class="codenumber">6.2.18</span>
 </h5>
-<p id="p-783">Permutation \(\sigma\) must be in <!--Style me with CSS--><em>disjoint</em> cycle notation for the above formula to hold. For instance, let \(\sigma=(12)(23)\) in \(S_3\text{.}\) The transpositions \((12)\) and \((23)\) both have order \(2\text{,}\) but \(o(\sigma)\neq \lcm(2,2)=2\text{.}\) Rather, \(o(\sigma)=3\text{,}\) since in disjoint cycle notation \(\sigma\) can be written as \(\sigma=(123)\text{.}\) You must write a permutation using disjoint cycle notation before attempting to use this method to compute its order!</p></article><article class="example-like" id="example-57"><h5 class="heading">
+<p id="p-785">Permutation \(\sigma\) must be in <!--Style me with CSS--><em>disjoint</em> cycle notation for the above formula to hold. For instance, let \(\sigma=(12)(23)\) in \(S_3\text{.}\) The transpositions \((12)\) and \((23)\) both have order \(2\text{,}\) but \(o(\sigma)\neq \lcm(2,2)=2\text{.}\) Rather, \(o(\sigma)=3\text{,}\) since in disjoint cycle notation \(\sigma\) can be written as \(\sigma=(123)\text{.}\) You must write a permutation using disjoint cycle notation before attempting to use this method to compute its order!</p></article><article class="example-like" id="example-57"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">6.2.19</span>
 </h5>
 <ol id="ol-80" style="list-style-type: decimal;">
-<li id="li-341"><p id="p-784">Find the orders of each of the elements in <a knowl="./knowl/s9ex.html" knowl-id="xref-s9ex" alt="Example 6.2.15 " title="Example 6.2.15 ">Example 15</a>, including \(\sigma\text{,}\) \(\tau\text{,}\) and \(\rho\) themselves.</p></li>
-<li id="li-342"><p id="p-785">Explicitly list the elements of \(\langle \sigma\rangle\text{,}\) \(\langle \tau\rangle\text{,}\) and \(\langle \rho\rangle\text{.}\)</p></li>
+<li id="li-341"><p id="p-786">Find the orders of each of the elements in <a knowl="./knowl/s9ex.html" knowl-id="xref-s9ex" alt="Example 6.2.15 " title="Example 6.2.15 ">Example 15</a>, including \(\sigma\text{,}\) \(\tau\text{,}\) and \(\rho\) themselves.</p></li>
+<li id="li-342"><p id="p-787">Explicitly list the elements of \(\langle \sigma\rangle\text{,}\) \(\langle \tau\rangle\text{,}\) and \(\langle \rho\rangle\text{.}\)</p></li>
 </ol></article></section></div></main>
 </div>
 <script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>

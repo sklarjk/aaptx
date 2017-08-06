@@ -105,15 +105,19 @@
         <m>G</m> are called the <term>trivial subgroup</term> and the <term>improper
         subgroup</term> of <m>G</m>, respectively. Not surprisingly, if <m>H\leq G</m>
         and <m>H\neq \{e_G\}</m>, <m>H</m> is called a <term>nontrivial</term> subgroup
-        of <m>G</m>, and if <m>H\leq G</m> and <m>H\neq G</m>, <m>H</m> is called a <term>proper subgroup</term> of <m>G</m>.<fn>Sometimes the notation <m>H\lt G</m>
-        is used to indicated that <m>H</m> is a proper subgroup of <m>G</m>, but
-        sometimes it is simply used to mean that <m>H</m> is a
-        subgroup<mdash />proper or improper<mdash />of <m>G</m>.</fn></p>
+        of <m>G</m>, and if <m>H\leq G</m> and <m>H\neq G</m>, <m>H</m> is called a <term>proper subgroup</term> of <m>G</m>.</p>
     </statement>
   </definition>
 
+  <remark>
+  <p>Sometimes the notation <m>H\lt G</m>
+        is used to indicate that <m>H</m> is a proper subgroup of <m>G</m>, but
+        sometimes it is simply used to mean that <m>H</m> is a
+        subgroup<mdash />proper or improper<mdash />of <m>G</m>. We will not use the notation <m>H\lt G</m> in this text.</p>
+</remark>
+
   <p>
-    Note that in the cases above, we saw subsets of groups fail to be subgroups because
+    Notice that in the cases above, we saw subsets of groups fail to be subgroups because
     they were not closed under the groups' operations; because they did not contain identity elements; or because they didn't contain an
     inverse for each of their elements. None, however, failed because the relevant group's operation was not associative on them.
     This is not a coincidence: rather, since any element of a subset of a group <m>G</m> also lives in <m>G</m>, any associative operation on <m>G</m> is of

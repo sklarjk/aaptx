@@ -485,10 +485,10 @@ complete set
     <m>\simr</m> on <m>G</m> by  <me>a\simr b \text{ if and only if }
    ab^{-1}\in H.</me>
    </statement>
-   <notation><usage>\siml </usage><description>the relation on <m>G</m> defined by <m>a\siml b \Leftrightarrow
-   a^{-1}b\in H</m>, given <m>H\leq G</m></description></notation>
-    <notation><usage>\simr </usage><description>the relation on <m>G</m> defined by <m>a\simr b \Leftrightarrow
-   ab^{-1}\in H</m>, given <m>H\leq G</m></description></notation>  
+   <notation><usage>a\siml b </usage><description> <m>
+   a^{-1}b\in H</m>, where <m>H\leq G</m> is specified</description></notation>
+    <notation><usage>a\simr b</usage><description><m>
+   ab^{-1}\in H</m>, where <m>H\leq G</m> is specified</description></notation>  
    </definition>
 
   <theorem xml:id="simlreq">
@@ -560,6 +560,13 @@ complete set
 <notation><usage>Ha, H+a</usage><description>the right coset of <m>H</m> containing <m>a</m></description></notation>
   </definition>
 
+<insight>
+<p>
+  We  may use the notation <m>\Leftrightarrow</m> to denote the phrase <q>if and only if</q>.
+</p>
+<notation><usage>\Leftrightarrow</usage><description>if and only if</description></notation>
+</insight>
+
   <theorem xml:id="equivca">
     <statement>
       <p>
@@ -570,7 +577,6 @@ complete set
   
 
   <proof>
-    <p>Below, we use the notation <m>\Leftrightarrow</m> to denote <q>if and only if.</q></p>
 
     <p>
       Let <m>b\in G</m>. Then <m>b\siml a \Leftrightarrow a \siml b
@@ -580,7 +586,7 @@ complete set
       have <m>[a]=Ha</m>.
     </p>
   </proof>
-  <notation><usage>\Leftrightarrow</usage><description>if and only if</description></notation>
+  
 </theorem>
 
   <p>
@@ -831,10 +837,10 @@ complete set
    <p>
     We let <m>G/H</m> be the set of
     all left cosets of subgroup <m>H</m> in <m>G</m>. We read <m>G/H</m> as <q><m>G</m>
-    mod <m>H</m>.</q> (We denote the set of all right cosets of subgroup <m>H</m> in <m>G</m> by <m>H\backslash G</m>, but we will not be explicitly referring to  that set in this class.)</p>
+    mod <m>H</m>.</q> </p>
+    <p>(We may denote the set of all right cosets of subgroup <m>H</m> in <m>G</m> by <m>H\backslash G</m>, but we will  not use that notation in this class.)</p>
     </statement>
 <notation><usage>G/H</usage><description>the set of all left cosets of <m>H</m> in <m>G</m></description></notation>
-<notation><usage>H \backslash G</usage><description>the set of all right cosets of <m>H</m> in <m>G</m></description></notation>
     </definition>
 
 </section>
@@ -845,10 +851,14 @@ complete set
     <statement>
       <p>
         We define the <term>index of <m>H</m> in <m>G</m></term>, denoted <m>(G:H)</m>,
-        to be the cardinality of <m>G/H</m>.<fn>Even though we need not have <m>aH=Ha</m> for all <m>a\in G</m>, we do always have <m>|G/H|=|H\backslash G|</m>.</fn></p>
+        to be the cardinality of <m>G/H</m>.</p>
     </statement>
     <notation><usage>(G:H)</usage><description><m>|G/H|</m></description></notation>
   </definition>
+
+<remark><p>
+If <m>H\leq G</m>, there are always have the same number of left cosets and right cosets of <m>H</m> in <m>G</m>.  The proof of this is left as an exercise for the reader.</p><p> (Keep in mind your proof must apply even when there are infinitely many left and/or right cosets of <m>H</m> in <m>G</m>.  Hint: Show there is a bijection between <m>G/H</m> and the set of all right cosets of <m>H</m> in <m>G</m>.)</p>
+ </remark>
 
 <p>In the cases in which <m>G/H</m> contains infinitely many elements, we won't worry about specific cardinality, and may simply say that the index of <m>H</m> in <m>G</m> is infinite, and write <m>(G:H)=\infty</m>. However, we can, of course, distinguish between countably infinite and uncountably infinite indices.</p>
 

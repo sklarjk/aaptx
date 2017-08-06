@@ -156,28 +156,27 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
         and <m>B</m> are said to be <term>equal</term>, and we write <m>A=B</m>, if they
         contain exactly the same elements; equivalently, <m>A=B</m> if and
         only if <m>A \subseteq B</m> and <m>B\subseteq A</m>. Set <m>A</m> is a <term>proper</term> subset of set <m>B</m> if <m>A\subseteq B</m> but <m>A\neq B</m>; we
-        write this <m>A\subsetneq B</m> or <m>A\subset B</m>.
+        write this <m>A\subsetneq B</m>.
         </p>
-
-      <warning>
-      <p> Sometimes the notation <m>A\subset B</m> is merely used to
-        indicate that <m>A</m> is a subset of <m>B</m> (but may equal <m>B</m>). Be
-        careful to check what your book or peer means by this
-        notation.</p></warning>
-     
     </statement>
 
 <notation><usage>A\subseteq B</usage><description> <m>A</m> is a subset of the <m>B</m></description></notation>
-<notation><usage>A\subsetneq B, A \subset B</usage><description> <m>A</m> is a proper subset of <m>B</m></description></notation>
+<notation><usage>A\subsetneq B</usage><description> <m>A</m> is a proper subset of <m>B</m></description></notation>
 
   </definition>
 
-  <remark>
+
+      <remark>
+      <p> Sometimes the notation <m>A\subset B</m> is  used to
+        indicate that <m>A</m> is a proper subset of <m>B</m>, and sometimes it is simply used to mean that <m>A</m> is a subset<mdash />proper or improper<mdash />of <m>B</m>. We will not use the notation <m>A \subset B</m> in this text. </p></remark>
+     
+
+  <note>
     <p>
       One often proves that two sets <m>A</m> and
       <m>B</m> are equal by proving that <m>A\subseteq B</m> and <m>B\subseteq A</m>.
     </p>
-  </remark>
+  </note>
 
   <example>
     <statement>

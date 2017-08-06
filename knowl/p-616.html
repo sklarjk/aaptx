@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-04T15:00:31-07:00    *-->
+<!--*    on 2017-08-06T12:51:18-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,11 @@
 </head>
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>On the other hand, assume \(o(a)= \infty\text{.}\) Then \(a^{-1}\) must also have infinite order, since if it had finite order \(m\text{,}\) \(a\) would, by the above argument, have order less than or equal to \(m\text{.}\)</p>
+<p>First, assume \(o(a)=n\lt \infty\text{.}\) Then</p>
+\begin{equation*}
+(a^{-1})^n=(a^n)^{-1}=e^{-1}=e,
+\end{equation*}
+<p>so \(o(a^{-1})\leq n=o(a)\text{.}\) Using the same argument, we have \(n=o(a)\leq o(a^{-1})\text{.}\) Since \(o(a^{-1})\leq n\) and \(n\leq o(a^{-1})\text{,}\) \(o(a^{-1})=n=o(a)\text{.}\)</p>
 <span class="incontext"><a href="section-15.html#p-616">in-context</a></span>
 </body>
 </html>

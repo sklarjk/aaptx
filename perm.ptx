@@ -186,7 +186,7 @@
     S_A</m>, where <m>A=\{1,2,\ldots,n\}</m>. Since we are concerned in this
     course primarily with group structures which are invariant under
     isomorphism, we may focus now on groups of permutations on the set
-    <m>\{1,2,\ldots, n\}</m> (<m>n\in \Z^+</m>).<fn>We can, in fact,  define <m>S_0</m>, the set of all permutations on the empty set. One can show, using the fact that a function is a relation on a Cartesian product of sets, that <m>S_0</m> is the trivial group. However, this will not be relevant in this text.</fn></p>
+    <m>\{1,2,\ldots, n\}</m> (<m>n\in \Z^+</m>).</p>
 </section>
 
 <section>
@@ -198,6 +198,8 @@
         the <term>symmetric group on <m>n</m> letters</term> and denote it by
         <m>S_n</m>.
       </p>
+      
+<p>    (We can, in fact,  define <m>S_0</m>, the set of all permutations on the empty set. One can show, using the fact that a function is a relation on a Cartesian product of sets, that <m>S_0</m> is the trivial group. However, this will not be relevant in this text.)</p>
     </statement>
   </definition>
 

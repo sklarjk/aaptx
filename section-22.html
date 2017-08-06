@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-04T15:00:19-07:00    *-->
+<!--*    on 2017-08-06T12:51:05-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -164,32 +164,32 @@ MathJax.Hub.Config({
 </h1></header><article class="definition-like" id="definition-55"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">7.1.1</span>
 </h5>
-<p id="p-899">Let \(S\) be a set. Then a collection of subsets \(P=\{S_i\}_{i\in I}\) (where \(I\) is some index set) is a <em class="terminology">partition</em> of \(S\) if each \(S_i \neq \emptyset\) and each element of \(S\) is in exactly one \(S_i\text{.}\) In other words, \(P=\{S_i\}_{i\in I}\) is a partition of \(S\) if and only if: </p>
+<p id="p-901">Let \(S\) be a set. Then a collection of subsets \(P=\{S_i\}_{i\in I}\) (where \(I\) is some index set) is a <em class="terminology">partition</em> of \(S\) if each \(S_i \neq \emptyset\) and each element of \(S\) is in exactly one \(S_i\text{.}\) In other words, \(P=\{S_i\}_{i\in I}\) is a partition of \(S\) if and only if: </p>
 <ol id="ol-90" style="list-style-type: decimal;">
-<li id="li-385"><p id="p-900">each \(S_i\neq \emptyset\text{;}\)</p></li>
-<li id="li-386"><p id="p-901">the \(S_i\) are mutually disjoint (that is, \(S_i\cap S_j =
+<li id="li-385"><p id="p-902">each \(S_i\neq \emptyset\text{;}\)</p></li>
+<li id="li-386"><p id="p-903">the \(S_i\) are mutually disjoint (that is, \(S_i\cap S_j =
 \emptyset\) for \(i\neq j \in I\)); and</p></li>
-<li id="li-387"><p id="p-902">\(S=\bigcup_{i\in I}S_i\text{.}\)</p></li>
+<li id="li-387"><p id="p-904">\(S=\bigcup_{i\in I}S_i\text{.}\)</p></li>
 </ol>
-<p id="p-903">The \(S_i\) are called the <em class="terminology">cells</em> of the partition.</p></article><article class="example-like" id="example-63"><h5 class="heading">
+<p id="p-905">The \(S_i\) are called the <em class="terminology">cells</em> of the partition.</p></article><article class="example-like" id="example-63"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">7.1.2</span>
 </h5>
 <ol id="ol-91" style="list-style-type: decimal;">
 <li id="li-388">
-<p id="p-904">The set \(\{1,2,3\}\) has 5 partitions: namely,</p>
+<p id="p-906">The set \(\{1,2,3\}\) has 5 partitions: namely,</p>
 \begin{equation*}
 \{\{1,2,3\}\},\{\{1,2\},\{3\}\}, \{\{1,3\},\{2\}\},\{\{2,3\},\{1\}\} \text{ and }  \{\{1\},\{2\},\{3\}\}.
 \end{equation*}
 <p>The first partition we've mentioned has one cell, the next three have two cells, and the last one has three cells.</p>
 </li>
 <li id="li-389">
-<p id="p-905">The following is a 2-celled partition of \(\Z\text{:}\)</p>
+<p id="p-907">The following is a 2-celled partition of \(\Z\text{:}\)</p>
 \begin{equation*}
 \{\{x\in \Z\,:\ x \text{
 is even} \},\{x\in \Z\,:\, x\text{ is odd} \}\}.
 \end{equation*}
 </li>
-</ol></article><p id="p-906">The number of partitions of a finite set of \(n\) elements gets large very quickly as \(n\) goes to infinity. Indeed, there are 52 partitions of a set containing just 5 elements!<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-5" id="fn-5"><span class="footnote"><sup> 1 </sup></span></a></span><span id="hk-fn-5" style="display: none;" class="tex2jax_ignore"><span class="footnote">The total number of partitions of an \(n\)-element set is the <!--Style me with CSS--><em>Bell number</em>, \(B_n\text{.}\) There is no trivial way of computing \(B_n\text{,}\) in general, though the \(B_n\) do satisfy the relatively simple recurrence relation
+</ol></article><p id="p-908">The number of partitions of a finite set of \(n\) elements gets large very quickly as \(n\) goes to infinity. Indeed, there are 52 partitions of a set containing just 5 elements!<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-3" id="fn-3"><span class="footnote"><sup> 1 </sup></span></a></span><span id="hk-fn-3" style="display: none;" class="tex2jax_ignore"><span class="footnote">The total number of partitions of an \(n\)-element set is the <!--Style me with CSS--><em>Bell number</em>, \(B_n\text{.}\) There is no trivial way of computing \(B_n\text{,}\) in general, though the \(B_n\) do satisfy the relatively simple recurrence relation
 \begin{equation*}
 B_{n+1}=\sum_{k=0}^n \binom{n}{k} B_k,
 \end{equation*}
@@ -197,78 +197,78 @@ for each \(n\geq 1\text{.}\)</span></span>But our goal here is not to count the 
 <article class="definition-like" id="definition-56"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">7.1.3</span>
 </h5>
-<p id="p-907">Let \(S\) be a set. Then a <em class="terminology">relation</em> on \(S\) is a subset \(R\) of \(S\times S\text{.}\)<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-6" id="fn-6"><span class="footnote"><sup> 2 </sup></span></a></span><span id="hk-fn-6" style="display: none;" class="tex2jax_ignore"><span class="footnote">More generally, if \(S\) and \(T\) are sets, a <!--Style me with CSS--><em>relation between \(S\) and \(T\)</em> is a subset of \(S \times T\text{.}\) We will not, however, in our class consider the cases in which \(S\) and \(T\) are different sets.</span></span>If \(R\) is a relation on \(S\) and \(x,y\in S\text{,}\) then we say \(x\) is <em class="terminology">related to</em> \(y\text{,}\) and write \(x R y\text{,}\) if \((x,y)\in R\text{;}\) otherwise, we say that \(x\) is <em class="terminology">not related</em> to \(y\text{,}\) and write \(x \not R y\text{.}\)</p></article><article class="remark-like" id="remark-32"><h5 class="heading">
+<p id="p-909">Let \(S\) be a set. Then a <em class="terminology">relation</em> on \(S\) is a subset \(R\) of \(S\times S\text{.}\)<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-4" id="fn-4"><span class="footnote"><sup> 2 </sup></span></a></span><span id="hk-fn-4" style="display: none;" class="tex2jax_ignore"><span class="footnote">More generally, if \(S\) and \(T\) are sets, a <!--Style me with CSS--><em>relation between \(S\) and \(T\)</em> is a subset of \(S \times T\text{.}\) We will not, however, in our class consider the cases in which \(S\) and \(T\) are different sets.</span></span>If \(R\) is a relation on \(S\) and \(x,y\in S\text{,}\) then we say \(x\) is <em class="terminology">related to</em> \(y\text{,}\) and write \(x R y\text{,}\) if \((x,y)\in R\text{;}\) otherwise, we say that \(x\) is <em class="terminology">not related</em> to \(y\text{,}\) and write \(x \not R y\text{.}\)</p></article><article class="remark-like" id="remark-33"><h5 class="heading">
 <span class="type">Remark</span><span class="codenumber">7.1.4</span>
 </h5>
-<p id="p-908">If there is a conventional notation used to denote a particular relation on a set, we will usually use that notation, rather than \(R\text{,}\) to denote the relation.</p></article><p id="p-909">We are already familiar with some relations on \(\R\text{.}\) Common such relations are \(=\text{,}\) \(\neq\text{,}\) \(\lt\text{,}\) \(\leq\text{,}\) \(&gt;\text{,}\) and \(\geq\text{;}\) they contain exactly the elements we'd expect them to contain.</p>
+<p id="p-910">If there is a conventional notation used to denote a particular relation on a set, we will usually use that notation, rather than \(R\text{,}\) to denote the relation.</p></article><p id="p-911">We are already familiar with some relations on \(\R\text{.}\) Common such relations are \(=\text{,}\) \(\neq\text{,}\) \(\lt\text{,}\) \(\leq\text{,}\) \(&gt;\text{,}\) and \(\geq\text{;}\) they contain exactly the elements we'd expect them to contain.</p>
 <article class="example-like" id="example-64"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">7.1.5</span>
 </h5>
 <ol id="ol-92" style="list-style-type: decimal;">
-<li id="li-390"><p id="p-910">\(\lt\) is a relation on \(\R\) that contains, for instance, \((3,4)\) but not \((3,3)\) or \((4,3)\text{;}\) \(\leq\) is a relation on \(\R\) that contains \((3,4)\) <!--Style me with CSS--><em>and</em> \((3,3)\) but not \((4,3)\text{.}\)</p></li>
-<li id="li-391"><p id="p-911">Given any \(n\in \Z^+\text{,}\) congruence modulo \(n\text{,}\) denoted \(\equiv_n\text{,}\) is a relation on \(\Z\text{,}\) where \(\equiv_n\) is defined to be \(\{(x,y) \in \Z
+<li id="li-390"><p id="p-912">\(\lt\) is a relation on \(\R\) that contains, for instance, \((3,4)\) but not \((3,3)\) or \((4,3)\text{;}\) \(\leq\) is a relation on \(\R\) that contains \((3,4)\) <!--Style me with CSS--><em>and</em> \((3,3)\) but not \((4,3)\text{.}\)</p></li>
+<li id="li-391"><p id="p-913">Given any \(n\in \Z^+\text{,}\) congruence modulo \(n\text{,}\) denoted \(\equiv_n\text{,}\) is a relation on \(\Z\text{,}\) where \(\equiv_n\) is defined to be \(\{(x,y) \in \Z
 \times \Z \,:\, n \text{ divides } x-y\}\text{.}\)</p></li>
-<li id="li-392"><p id="p-912">We can define a relation \(R\) on \(C^1\) (the set of all differentiable functions from \(\R\) to \(\R\) whose derivatives are continuous) by declaring that \((f,g)\in C^1 \times C^1\) is in \(R\) if and only if \(f'=g'\text{.}\)</p></li>
+<li id="li-392"><p id="p-914">We can define a relation \(R\) on \(C^1\) (the set of all differentiable functions from \(\R\) to \(\R\) whose derivatives are continuous) by declaring that \((f,g)\in C^1 \times C^1\) is in \(R\) if and only if \(f'=g'\text{.}\)</p></li>
 </ol></article><article class="definition-like" id="definition-57"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">7.1.6</span>
 </h5>
-<p id="p-913">Let \(R\) be a relation on a set \(S\text{.}\) Then \(R\) is said to be:</p>
+<p id="p-915">Let \(R\) be a relation on a set \(S\text{.}\) Then \(R\) is said to be:</p>
 <ul id="ul-9" style="list-style-type: disc;">
-<li id="li-393"><p id="p-914"><em class="terminology">reflexive on \(S\)</em> if \(xR x\) for every \(x\in S\text{;}\)</p></li>
-<li id="li-394"><p id="p-915"><em class="terminology">symmetric on \(S\)</em> if whenever \(x,y\in S\) with \(xR y\) we also have \(yR x\text{;}\) and</p></li>
-<li id="li-395"><p id="p-916"><em class="terminology">transitive on \(S\)</em> if whenever \(x,y,z\in S\) with \(xR y\) and \(yR z\) we also have \(xR z\text{.}\)</p></li>
+<li id="li-393"><p id="p-916"><em class="terminology">reflexive on \(S\)</em> if \(xR x\) for every \(x\in S\text{;}\)</p></li>
+<li id="li-394"><p id="p-917"><em class="terminology">symmetric on \(S\)</em> if whenever \(x,y\in S\) with \(xR y\) we also have \(yR x\text{;}\) and</p></li>
+<li id="li-395"><p id="p-918"><em class="terminology">transitive on \(S\)</em> if whenever \(x,y,z\in S\) with \(xR y\) and \(yR z\) we also have \(xR z\text{.}\)</p></li>
 </ul>
-<p id="p-917">A relation that is reflexive, symmetric, <em class="terminology">and</em> transitive is called an <em class="terminology">equivalence relation</em>.</p>
-<p id="p-918">If we know, or plan to prove, that a relation is an equivalence relation, by convention we may denote the relation by \(\sim\text{,}\) rather than by \(R\text{.}\)</p></article><article class="remark-like" id="remark-33"><h5 class="heading">
+<p id="p-919">A relation that is reflexive, symmetric, <em class="terminology">and</em> transitive is called an <em class="terminology">equivalence relation</em>.</p>
+<p id="p-920">If we know, or plan to prove, that a relation is an equivalence relation, by convention we may denote the relation by \(\sim\text{,}\) rather than by \(R\text{.}\)</p></article><article class="remark-like" id="remark-34"><h5 class="heading">
 <span class="type">Remark</span><span class="codenumber">7.1.7</span>
 </h5>
-<ol id="ol-93" style="list-style-type: decimal;"><li id="li-396"><p id="p-919">You can think of an equivalence relation on a set \(S\) as being a “weak version” of equality on \(S\text{.}\)  Indeed, \(=\) is an equivalence relation on any set \(S\text{,}\) but it also has a very special property that most equivalence relations <!--Style me with CSS--><em>don't</em> have: namely, no element of \(S\) is related to <!--Style me with CSS--><em>any other element</em> of \(S\) under \(=\text{.}\)</p></li></ol></article><article class="example-like" id="example-65"><h5 class="heading">
+<ol id="ol-93" style="list-style-type: decimal;"><li id="li-396"><p id="p-921">You can think of an equivalence relation on a set \(S\) as being a “weak version” of equality on \(S\text{.}\)  Indeed, \(=\) is an equivalence relation on any set \(S\text{,}\) but it also has a very special property that most equivalence relations <!--Style me with CSS--><em>don't</em> have: namely, no element of \(S\) is related to <!--Style me with CSS--><em>any other element</em> of \(S\) under \(=\text{.}\)</p></li></ol></article><article class="example-like" id="example-65"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">7.1.8</span>
 </h5>
 <ol id="ol-94" style="list-style-type: decimal;">
-<li id="li-397"><p id="p-920">\(\lt\) is <!--Style me with CSS--><em>not</em> an equivalence relation on \(\R\) because it is not reflexive: for instance, \(3\not\lt  3\text{.}\) \(\leq\) is also <!--Style me with CSS--><em>not</em> an equivalence relation on \(\R\text{,}\) since even though it is reflexive, it's not symmetric: indeed, \(3\leq 4\) but \(4\not\leq 3\text{.}\)</p></li>
-<li id="li-398"><p id="p-921">Given any \(n\in \Z^+\text{,}\) \(\equiv_n\) <!--Style me with CSS--><em>is</em> an equivalence relation on \(\Z\text{.}\)  The proof of this is left as an exercise for the reader.</p></li>
-<li id="li-399"><p id="p-922">The relation \(R\) on \(C^1\) discussed above (\(fR  g\) iff \(f'=g'\)) <!--Style me with CSS--><em>is</em> an equivalence relation on \(C^1\text{.}\)</p></li>
-<li id="li-400"><p id="p-923">\(\simeq\) <!--Style me with CSS--><em>is</em> an equivalence relation on any set of groups. This follows from <a knowl="./knowl/groupisoequiv.html" knowl-id="xref-groupisoequiv" alt="Theorem 3.3.3 " title="Theorem 3.3.3 ">Theorem 3.3.3</a>.</p></li>
-<li id="li-401"><p id="p-924">Define relation \(R\) on \(\Z\) by \(xR y\) if and only if \(xy
+<li id="li-397"><p id="p-922">\(\lt\) is <!--Style me with CSS--><em>not</em> an equivalence relation on \(\R\) because it is not reflexive: for instance, \(3\not\lt  3\text{.}\) \(\leq\) is also <!--Style me with CSS--><em>not</em> an equivalence relation on \(\R\text{,}\) since even though it is reflexive, it's not symmetric: indeed, \(3\leq 4\) but \(4\not\leq 3\text{.}\)</p></li>
+<li id="li-398"><p id="p-923">Given any \(n\in \Z^+\text{,}\) \(\equiv_n\) <!--Style me with CSS--><em>is</em> an equivalence relation on \(\Z\text{.}\)  The proof of this is left as an exercise for the reader.</p></li>
+<li id="li-399"><p id="p-924">The relation \(R\) on \(C^1\) discussed above (\(fR  g\) iff \(f'=g'\)) <!--Style me with CSS--><em>is</em> an equivalence relation on \(C^1\text{.}\)</p></li>
+<li id="li-400"><p id="p-925">\(\simeq\) <!--Style me with CSS--><em>is</em> an equivalence relation on any set of groups. This follows from <a knowl="./knowl/groupisoequiv.html" knowl-id="xref-groupisoequiv" alt="Theorem 3.3.3 " title="Theorem 3.3.3 ">Theorem 3.3.3</a>.</p></li>
+<li id="li-401"><p id="p-926">Define relation \(R\) on \(\Z\) by \(xR y\) if and only if \(xy
 \geq 0\text{.}\)  Is \(R\) an equivalence relation on \(\Z\text{?}\)  Well, for every \(x\in \Z\text{,}\) \(x^2\geq 0\text{,}\) so \(R\) is reflexive.  Moreover, if \(x,y\in
 \Z\) with \(xy \geq 0\text{,}\) then \(yx \geq 0\text{;}\) so \(R\) is symmetric.  But \(R\) is <!--Style me with CSS--><em>not</em> transitive: indeed, \(3,0,-4\in \Z\) with \(3(0)=0
 \geq 0\) and \(0(-4)=0\geq 0\text{,}\) so \(3\R 0\) and \(0 R -4\text{;}\) but \(3(-4)=-12 \not \geq 0\text{.}\)  So \(R\) isn't transitive, and hence is <!--Style me with CSS--><em>not</em> an equivalence relation.</p></li>
 </ol></article><article class="definition-like" id="definition-58"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">7.1.9</span>
 </h5>
-<p id="p-925">Given an equivalence relation \(\sim\) on a set \(S\text{,}\) for each \(x\in S\) we define the <em class="terminology">equivalence class of \(x\) under \(\sim\)</em> to be</p>
+<p id="p-927">Given an equivalence relation \(\sim\) on a set \(S\text{,}\) for each \(x\in S\) we define the <em class="terminology">equivalence class of \(x\) under \(\sim\)</em> to be</p>
 \begin{equation*}
 [x]=\{y\in S\,:\, y\sim x\}.
 \end{equation*}
-<p id="p-926">These sets \([x]\) (\(x\in S\)) are called the <em class="terminology">equivalence classes of \(S\) under \(\sim\)</em>.</p></article><article class="remark-like" id="remark-34"><h5 class="heading">
+<p id="p-928">These sets \([x]\) (\(x\in S\)) are called the <em class="terminology">equivalence classes of \(S\) under \(\sim\)</em>.</p></article><article class="remark-like" id="remark-35"><h5 class="heading">
 <span class="type">Remark</span><span class="codenumber">7.1.10</span>
 </h5>
-<p id="p-927">Note that, by reflexivity of \(\sim\text{,}\) \(x\in [x]\) for every \(x\in S\text{.}\)</p></article><p id="p-928">We have now the following Very Important Lemma:</p>
+<p id="p-929">Note that, by reflexivity of \(\sim\text{,}\) \(x\in [x]\) for every \(x\in S\text{.}\)</p></article><p id="p-930">We have now the following Very Important Lemma:</p>
 <article class="theorem-like" id="vil_lem"><h5 class="heading">
 <span class="type">Lemma</span><span class="codenumber">7.1.11</span>
 </h5>
-<p id="p-929">Let \(\sim\) be an equivalence relation on set \(S\text{.}\) Then for \(x,y\in S\text{,}\) the following are equivalent: <p id="p-930"></p><ol id="ol-95" style="list-style-type: decimal;">
-<li id="li-402"><p id="p-931">\(y\in [x]\text{;}\)</p></li>
-<li id="li-403"><p id="p-932">\([x]=[y]\text{;}\)</p></li>
-<li id="li-404"><p id="p-933">\(x\in [y]\text{.}\)</p></li>
+<p id="p-931">Let \(\sim\) be an equivalence relation on set \(S\text{.}\) Then for \(x,y\in S\text{,}\) the following are equivalent: <p id="p-932"></p><ol id="ol-95" style="list-style-type: decimal;">
+<li id="li-402"><p id="p-933">\(y\in [x]\text{;}\)</p></li>
+<li id="li-403"><p id="p-934">\([x]=[y]\text{;}\)</p></li>
+<li id="li-404"><p id="p-935">\(x\in [y]\text{.}\)</p></li>
 </ol></p></article><div class="posterior">
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-35" id="proof-35"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></div>
-<div id="hk-proof-35" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-934">To prove that the first and second statements are equivalent: Let \(x, y\in S\text{.}\) If \(y\in
+<div id="hk-proof-35" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-936">To prove that the first and second statements are equivalent: Let \(x, y\in S\text{.}\) If \(y\in
 [x]\text{,}\) then \(y \sim x\text{,}\) so for every \(z\in [y]\) (that is, for every \(z\) in \(S\) with \(z\sim y\)), we have, by transitivity, \(z\sim x\text{,}\) so \(z\in [x]\text{.}\) On the other hand, by the symmetry of \(\sim\) we have \(x\sim y\text{;}\) so for every \(z\in [x]\text{,}\) we have, again by transitivity, that \(z\in [y]\text{.}\) Thus, \([x]=[y]\text{.}\) Conversely, if \([x]=[y]\text{,}\) then since \(y\in [y]=[x]\text{.}\)</p>
-<p id="p-935">The proof that the second and third statements are equivalent is nearly identical.</p></article></div>
+<p id="p-937">The proof that the second and third statements are equivalent is nearly identical.</p></article></div>
 </div>
 <article class="definition-like" id="definition-59"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">7.1.12</span>
 </h5>
-<p id="p-936">In many cases there are many distinct elements \(x,y\in S\) with \([x]=[y]\text{;}\) thus, there are usually many different ways we could denote a particular equivalence class of \(S\) under \(\sim\text{.}\) Element \(y\in S\) is called a <em class="terminology">representative</em> of class \(X\) if \(y\in X\text{.}\)</p></article><article class="example-like" id="example-66"><h5 class="heading">
+<p id="p-938">In many cases there are many distinct elements \(x,y\in S\) with \([x]=[y]\text{;}\) thus, there are usually many different ways we could denote a particular equivalence class of \(S\) under \(\sim\text{.}\) Element \(y\in S\) is called a <em class="terminology">representative</em> of class \(X\) if \(y\in X\text{.}\)</p></article><article class="example-like" id="example-66"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">7.1.13</span>
 </h5>
 <ol id="ol-96" style="list-style-type: decimal;">
-<li id="li-405"><p id="p-937">Consider the equivalence relation \(\equiv_2\) on \(\Z\text{.}\)  Under this relation, \([0]=\{0,\pm 2, \pm 4, \ldots\}\) and \([1]=\{\ldots, -3, -1, 1, 3, \ldots\}\text{;}\) in fact, if we let \(E\) be the set of all even integers and \(O\) the set of all odd integers, then for \(x\in \Z\text{,}\) \([x]=E\) if \(x\) is even and \(O\) if \(x\) is odd. Thus, the set of all equivalence classes of \(\Z\) under \(\equiv_2\) is the 2-element set \(\{E,O\}\text{:}\) every even integer is a representative of \(E\text{,}\) while every odd integer is a representative of \(O\text{.}\)</p></li>
-<li id="li-406"><p id="p-938">For \(f\in C^1\text{,}\) the equivalence class of \(f\) under \(R\) (defined above) is the set of all functions in \(C^1\) of the form \(g(x)=f(x)+c\text{,}\) where \(c\in \R\text{.}\)</p></li>
+<li id="li-405"><p id="p-939">Consider the equivalence relation \(\equiv_2\) on \(\Z\text{.}\)  Under this relation, \([0]=\{0,\pm 2, \pm 4, \ldots\}\) and \([1]=\{\ldots, -3, -1, 1, 3, \ldots\}\text{;}\) in fact, if we let \(E\) be the set of all even integers and \(O\) the set of all odd integers, then for \(x\in \Z\text{,}\) \([x]=E\) if \(x\) is even and \(O\) if \(x\) is odd. Thus, the set of all equivalence classes of \(\Z\) under \(\equiv_2\) is the 2-element set \(\{E,O\}\text{:}\) every even integer is a representative of \(E\text{,}\) while every odd integer is a representative of \(O\text{.}\)</p></li>
+<li id="li-406"><p id="p-940">For \(f\in C^1\text{,}\) the equivalence class of \(f\) under \(R\) (defined above) is the set of all functions in \(C^1\) of the form \(g(x)=f(x)+c\text{,}\) where \(c\in \R\text{.}\)</p></li>
 <li id="li-407">
-<p id="p-939">Let \(A=\{a,b,c\}\text{,}\) and define \(\sim\) on the power set \(P(A)\) of \(A\) by \(X\sim Y\) if and only if \(|X|=|Y|\text{.}\) It is straightforward to show that \(\sim\) is an equivalence relation on \(P(A)\text{,}\) under which \(P(A)\) has exactly 4 distinct equivalence classes:</p>
+<p id="p-941">Let \(A=\{a,b,c\}\text{,}\) and define \(\sim\) on the power set \(P(A)\) of \(A\) by \(X\sim Y\) if and only if \(|X|=|Y|\text{.}\) It is straightforward to show that \(\sim\) is an equivalence relation on \(P(A)\text{,}\) under which \(P(A)\) has exactly 4 distinct equivalence classes:</p>
 \begin{equation*}
 [\emptyset]=\{\emptyset\},
 \end{equation*}
@@ -285,28 +285,28 @@ for each \(n\geq 1\text{.}\)</span></span>But our goal here is not to count the 
 [A]=\{A\}.
 \end{equation*}
 </li>
-</ol></article><article class="remark-like" id="remark-35"><h5 class="heading">
+</ol></article><article class="remark-like" id="remark-36"><h5 class="heading">
 <span class="type">Remark</span><span class="codenumber">7.1.14</span>
 </h5>
-<p id="p-940">Notice that the complete set \(\{E,O\}\) of distinct equivalence classes of \(\Z\) under \(\equiv_n\) is a partition of \(\Z\text{,}\) and the complete set \(\{[\emptyset],[\{a\}],[\{a,b\}],[A]\}\) of distinct equivalence classes of \(P(A)\) under \(\sim\) is a partition of \(P(A)\text{.}\) This is not a coincidence! It turns out that equivalence relations and partitions go hand in hand.</p></article><article class="theorem-like" id="part_quiv"><h5 class="heading">
+<p id="p-942">Notice that the complete set \(\{E,O\}\) of distinct equivalence classes of \(\Z\) under \(\equiv_n\) is a partition of \(\Z\text{,}\) and the complete set \(\{[\emptyset],[\{a\}],[\{a,b\}],[A]\}\) of distinct equivalence classes of \(P(A)\) under \(\sim\) is a partition of \(P(A)\text{.}\) This is not a coincidence! It turns out that equivalence relations and partitions go hand in hand.</p></article><article class="theorem-like" id="part_quiv"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">7.1.15</span>
 </h5>
-<p id="p-941">Let \(S\) be a set. Then: </p>
+<p id="p-943">Let \(S\) be a set. Then: </p>
 <ol id="ol-97" style="list-style-type: decimal;">
-<li id="li-408"><p id="p-942">If \(\sim\) is an equivalence relation on \(S\text{,}\) then the set of all equivalence classes of \(S\) under \(\sim\) is a partition of \(S\text{;}\) and</p></li>
-<li id="li-409"><p id="p-943">If \(P\) is a partition of \(S\text{,}\) then the relation on \(S\) defined by \(x\sim y\) if and only \(x\) is in the same cell of \(P\) as \(y\) is an equivalence relation on \(S\text{.}\)</p></li>
+<li id="li-408"><p id="p-944">If \(\sim\) is an equivalence relation on \(S\text{,}\) then the set of all equivalence classes of \(S\) under \(\sim\) is a partition of \(S\text{;}\) and</p></li>
+<li id="li-409"><p id="p-945">If \(P\) is a partition of \(S\text{,}\) then the relation on \(S\) defined by \(x\sim y\) if and only \(x\) is in the same cell of \(P\) as \(y\) is an equivalence relation on \(S\text{.}\)</p></li>
 </ol>
-<p id="p-944">Notice that in each case, the cells of the partition are the equivalence classes of the set under the corresponding equivalence relation.</p></article><div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-36" id="proof-36"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-36" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-945">To prove the first statement: Let \(\sim\) be an equivalence relation on \(S\text{.}\) Clearly, the equivalence classes of \(S\) under \(\sim\) are nonempty sets whose union is \(S\text{.}\) Thus, it suffices to show \(X
+<p id="p-946">Notice that in each case, the cells of the partition are the equivalence classes of the set under the corresponding equivalence relation.</p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-36" id="proof-36"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-36" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-947">To prove the first statement: Let \(\sim\) be an equivalence relation on \(S\text{.}\) Clearly, the equivalence classes of \(S\) under \(\sim\) are nonempty sets whose union is \(S\text{.}\) Thus, it suffices to show \(X
 \cap Y =\emptyset\) for each pair of equivalence classes \(X\neq
 Y\) of \(S\) under \(\sim\text{.}\) Let \(X,Y\) be equivalence classes of \(S\) under \(\sim\) that are NOT disjoint. Then there exists an element \(z\in X\cap Y\text{.}\) Then by <a knowl="./knowl/vil_lem.html" knowl-id="xref-vil_lem" alt="Lemma 7.1.11 " title="Lemma 7.1.11 ">Lemma 11</a>, \([z]=X\) and \([z]=Y\text{;}\) so \(X=Y\text{.}\) Thus, if \(X\neq Y\text{,}\) then \(X\cap Y
 =\emptyset\text{.}\)</p>
-<p id="p-946">Finally, it is straightforward (almost silly!) to prove that \(\sim\) is reflexive, symmetric, and transitive.</p></article></span>
+<p id="p-948">Finally, it is straightforward (almost silly!) to prove that \(\sim\) is reflexive, symmetric, and transitive.</p></article></span>
 </div>
 <article class="example-like" id="example-67"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">7.1.16</span>
 </h5>
-<ol id="ol-98" style="list-style-type: decimal;"><li id="li-410"><p id="p-947">For \(n\in \Z^+\text{,}\) the set of the equivalence classes of \(\Z\) under \(\equiv_n\) is the partition \(\{[0],[1],\ldots,[n-1]\}\) of \(\Z\text{.}\) (The partition \(\{E
+<ol id="ol-98" style="list-style-type: decimal;"><li id="li-410"><p id="p-949">For \(n\in \Z^+\text{,}\) the set of the equivalence classes of \(\Z\) under \(\equiv_n\) is the partition \(\{[0],[1],\ldots,[n-1]\}\) of \(\Z\text{.}\) (The partition \(\{E
 ,O\}\) of \(\Z\) discussed above is this partition when \(n=2\text{.}\))</p></li></ol></article></section></div></main>
 </div>
 <script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>

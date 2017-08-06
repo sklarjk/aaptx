@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-04T15:00:43-07:00    *-->
+<!--*    on 2017-08-06T12:51:31-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,11 +13,14 @@
 </head>
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Using the <a knowl="./knowl/tit.html" knowl-id="xref-tit" alt="Theorem 9.2.2 Third Isomorphism Theorem" title="Theorem 9.2.2 Third Isomorphism Theorem">Third Isomorphism Theorem</a>, we see that the group</p>
-\begin{equation*}
-(\Z/12\Z)/(6\Z/12\Z)
-\end{equation*}
-<p>is isomorphic to the group \(\Z/6\Z\text{,}\) or \(\Z_6\text{.}\)</p>
+<p>Since \(N\unlhd G\) and \(N\subseteq HN\text{,}\) \(N\) is normal in \(HN\) (do you see why?). So \(HN/N\) is a group under left coset multiplication. We define \(\phi: H\to HN/N\) by \(\phi(h)=hN\) (notice that when \(h\in H\text{,}\) \(h\in HN\) since \(h=he_G\)). Clearly, \(\phi\) is a homomorphism. Further, \(\phi\) is onto: Indeed, let \(y\in HN/N\text{.}\) Then \(y=hnN\) for some \(h\in H\) and \(n\in N\text{.}\) But \(nN=N\text{,}\) so \(y=hN=\phi(h)\text{.}\) Finally,</p>
+\begin{align*}
+\Ker \phi\amp =\{h\in H\,:\, \phi(h)=N\}\\
+\amp =\{h\in H\,:\, hN=N\}\\
+\amp =\{h\in
+H\,:\, h\in N\}\\
+\amp =H\cap N.
+\end{align*}
 <span class="incontext"><a href="section-29.html#p-1237">in-context</a></span>
 </body>
 </html>

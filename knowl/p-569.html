@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-04T15:00:30-07:00    *-->
+<!--*    on 2017-08-06T12:51:17-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,16 +13,11 @@
 </head>
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>For each group \(G\) and subset \(H\text{,}\) decide whether or not \(H\) is a subgroup of \(G\text{.}\) In the cases in which \(H\) is <!--Style me with CSS--><em>not</em> a subgroup of \(G\text{,}\) provide a proof. (<!--Style me with CSS--><em>Note.</em> Your proofs do not need to be long to be correct!) </p>
-<ol style="list-style-type: lower-alpha;">
-<li><p>\(G=\Z\text{,}\) \(H=\R\)</p></li>
-<li><p>\(G=\Z_{15}\text{,}\) \(H=\{0,5,10\}\)</p></li>
-<li><p>\(G=\Z_{15}\text{,}\) \(H=\{0,4,8,12\}\)</p></li>
-<li><p>\(G=\C\text{,}\) \(H=\R^*\)</p></li>
-<li><p>\(G=\C^*\text{,}\) \(H=\{1,i,-1,-i\}\)</p></li>
-<li><p>\(G=\M_n(\R)\text{,}\) \(H=GL(n,\R)\)</p></li>
-<li><p>\(G=GL(n,\R)\text{,}\) \(H=\{A\in \M_n(\R)\,:\,\det A = -1\}\)</p></li>
-</ol>
+<p>Clearly, \(H\) is a nonempty subset of \(GL(n,\R)\) (for instance, \(I_n\in H\)).  Next, let \(A,B\in H\text{.}\) Then</p>
+\begin{equation*}
+\det(AB^{-1})=(\det A)(\det (B^{-1}))=(\pm 1)\left(\frac{1}{\pm 1}\right)=\pm 1,
+\end{equation*}
+<p>so \(AB^{-1}\in H\text{.}\)  Thus, \(H\leq GL(n,\R)\) by the <a knowl="./knowl/twostep.html" knowl-id="xref-twostep" alt="Theorem 4.2.5 Two-Step Subgroup Test" title="Theorem 4.2.5 Two-Step Subgroup Test">Two-Step Subgroup Test</a>.</p>
 <span class="incontext"><a href="exercises-5.html#p-569">in-context</a></span>
 </body>
 </html>

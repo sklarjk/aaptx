@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-04T15:00:18-07:00    *-->
+<!--*    on 2017-08-06T12:51:04-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -161,29 +161,29 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-20"><header title="Section 6.4 Cayley's Theorem"><h1 class="heading hide-type" alt="Section 6.4 Cayley's Theorem">
 <span class="type">Section</span><span class="codenumber">6.4</span><span class="title">Cayley's Theorem</span>
-</h1></header><p id="p-801">One might wonder how “common” permutation groups are in math. They are, it turns out, ubiquitous in abstract algebra: in fact, <!--Style me with CSS--><em>every group</em> can be thought of as a group of permutations! We will prove this, but we first need the following lemma. (We will not use the maps \(\rho_a\) or \(c_a\text{,}\) defined below, in our theorem, but define them here for potential future use.)</p>
+</h1></header><p id="p-803">One might wonder how “common” permutation groups are in math. They are, it turns out, ubiquitous in abstract algebra: in fact, <!--Style me with CSS--><em>every group</em> can be thought of as a group of permutations! We will prove this, but we first need the following lemma. (We will not use the maps \(\rho_a\) or \(c_a\text{,}\) defined below, in our theorem, but define them here for potential future use.)</p>
 <article class="theorem-like" id="cay_lem"><h5 class="heading">
 <span class="type">Lemma</span><span class="codenumber">6.4.1</span>
 </h5>
-<p id="p-802">Let \(G\) be a group and \(a\in G\text{.}\) Then the following functions are permutations on \(G\text{,}\) and hence are elements of \(S_G\text{:}\) </p>
+<p id="p-804">Let \(G\) be a group and \(a\in G\text{.}\) Then the following functions are permutations on \(G\text{,}\) and hence are elements of \(S_G\text{:}\) </p>
 <ul id="ul-8" style="list-style-type: disc;">
-<li id="li-343"><p id="p-803">\(\lambda_a\,:\,G\to G\) defined by \(\lambda_a(x)=ax\text{;}\)</p></li>
-<li id="li-344"><p id="p-804">\(\rho_a\,:\,G\to G\) defined by \(\rho_a(x)=xa\text{;}\)</p></li>
-<li id="li-345"><p id="p-805">\(c_a\,:\,G\to G\) defined by \(c_a(x)=axa^{-1}\text{.}\)</p></li>
+<li id="li-343"><p id="p-805">\(\lambda_a\,:\,G\to G\) defined by \(\lambda_a(x)=ax\text{;}\)</p></li>
+<li id="li-344"><p id="p-806">\(\rho_a\,:\,G\to G\) defined by \(\rho_a(x)=xa\text{;}\)</p></li>
+<li id="li-345"><p id="p-807">\(c_a\,:\,G\to G\) defined by \(c_a(x)=axa^{-1}\text{.}\)</p></li>
 </ul></article><div class="posterior">
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-29" id="proof-29"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></div>
-<div id="hk-proof-29" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-806">To show that \(\lambda_a\) is a bijection, first assume \(x_1,x_2 \in G\) with \(\lambda_a(x_1)=\lambda_a(x_2)\text{.}\) Then \(ax_1=ax_2\text{;}\) so, by left cancellation, \(x_1=x_2\text{.}\) Thus, \(\lambda_a\) is one-to-one. Further, each \(y\in G\) equals \(\lambda_a(a^{-1}y)\) for \(a^{-1}y\in G\text{,}\) so \(\lambda_a\) is onto. Thus, \(\lambda_a\) is a bijection from \(G\) to \(G\text{:}\) that is, it's a permutation on \(G\text{.}\) The proofs that \(\rho_a\) and \(c_a\) are bijections are similar.</p></article></div>
+<div id="hk-proof-29" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-808">To show that \(\lambda_a\) is a bijection, first assume \(x_1,x_2 \in G\) with \(\lambda_a(x_1)=\lambda_a(x_2)\text{.}\) Then \(ax_1=ax_2\text{;}\) so, by left cancellation, \(x_1=x_2\text{.}\) Thus, \(\lambda_a\) is one-to-one. Further, each \(y\in G\) equals \(\lambda_a(a^{-1}y)\) for \(a^{-1}y\in G\text{,}\) so \(\lambda_a\) is onto. Thus, \(\lambda_a\) is a bijection from \(G\) to \(G\text{:}\) that is, it's a permutation on \(G\text{.}\) The proofs that \(\rho_a\) and \(c_a\) are bijections are similar.</p></article></div>
 </div>
 <article class="definition-like" id="definition-52"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">6.4.2</span>
 </h5>
-<p id="p-807">We say that \(\lambda_a\text{,}\) \(\rho_a\text{,}\) and \(c_a\) perform on \(G\text{,}\) respectively, <em class="terminology">left multiplication by \(a\)</em>, <em class="terminology">right multiplication by \(a\)</em>, and <em class="terminology">conjugation by \(a\)</em>. (Note: Sometimes when people talk about conjugation by \(a\) they instead are referring to the permutation of \(G\) that sends each \(x\) to \(a^{-1}xa\text{.}\))</p></article><p id="p-808">Now we are ready for our theorem:</p>
+<p id="p-809">We say that \(\lambda_a\text{,}\) \(\rho_a\text{,}\) and \(c_a\) perform on \(G\text{,}\) respectively, <em class="terminology">left multiplication by \(a\)</em>, <em class="terminology">right multiplication by \(a\)</em>, and <em class="terminology">conjugation by \(a\)</em>. (Note: Sometimes when people talk about conjugation by \(a\) they instead are referring to the permutation of \(G\) that sends each \(x\) to \(a^{-1}xa\text{.}\))</p></article><p id="p-810">Now we are ready for our theorem:</p>
 <article class="theorem-like" id="theorem-38"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">6.4.3</span><span class="title">Cayley's Theorem</span>
 </h5>
-<p id="p-809">Let \(G\) be a group. Then \(G\) is isomorphic to a subgroup of \(S_G\text{.}\) Thus, every group can be thought of as a group of permutations.</p></article><div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-30" id="proof-30"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-30" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-810">For each \(a\in G\text{,}\) let \(\lambda_a\) be defined, as above, by \(\lambda_a(x)=ax\) for each \(x\in G\text{;}\) recall that each \(\lambda_a\) is in \(S_G\text{.}\) Now define \(\phi\,:\, G\to S_G\) by \(\phi(a)=\lambda_a\text{,}\) for each \(a\in G\text{.}\)</p>
-<p id="p-811">We claim that \(\phi\) is both a homomorphism and one-to-one. Indeed, let \(a,b\in G\text{.}\) Now, \(\phi(a)\phi(b)\) and \(\phi(ab)\) are both functions with domain \(G\text{,}\) so we need to show \((\phi(a)\phi(b))(x)=(\phi(ab))(x)\) for each \(x\in G\text{.}\) Well, let \(x\in G\text{.}\) Then</p>
+<p id="p-811">Let \(G\) be a group. Then \(G\) is isomorphic to a subgroup of \(S_G\text{.}\) Thus, every group can be thought of as a group of permutations.</p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-30" id="proof-30"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-30" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-812">For each \(a\in G\text{,}\) let \(\lambda_a\) be defined, as above, by \(\lambda_a(x)=ax\) for each \(x\in G\text{;}\) recall that each \(\lambda_a\) is in \(S_G\text{.}\) Now define \(\phi\,:\, G\to S_G\) by \(\phi(a)=\lambda_a\text{,}\) for each \(a\in G\text{.}\)</p>
+<p id="p-813">We claim that \(\phi\) is both a homomorphism and one-to-one. Indeed, let \(a,b\in G\text{.}\) Now, \(\phi(a)\phi(b)\) and \(\phi(ab)\) are both functions with domain \(G\text{,}\) so we need to show \((\phi(a)\phi(b))(x)=(\phi(ab))(x)\) for each \(x\in G\text{.}\) Well, let \(x\in G\text{.}\) Then</p>
 \begin{align*}
 (\phi(a)\phi(b))(x)\amp =(\lambda_a\lambda_b)(x)\amp \amp\\
 \amp =\lambda_a(\lambda_b(x)) \amp \amp \text{ (since the operation on \(S_G\) is
@@ -194,16 +194,16 @@ composition) }\\
 \amp =\lambda_{ab}(x)\amp \amp\\
 \amp =(\phi(ab))(x).\amp \amp
 \end{align*}
-<p id="p-812">So \(\phi\) is a homomorphism. Further, if \(a, b\in G\) with \(\phi(a)=\phi(b)\text{,}\) then \(\lambda_a=\lambda_b\text{.}\) In particular, \(\lambda_a(e)=\lambda_b(e)\text{.}\) But \(\lambda_a(e)=ae=a\) and \(\lambda_b(e)=be=b\text{,}\) so \(a=b\text{.}\) Thus, \(\phi\) is one-to-one.</p>
-<p id="p-813">Since by definition \(\phi(G)\) we have that \(\phi\) maps \(G\) <!--Style me with CSS--><em>onto</em> \(\phi(G)\text{,}\) we conclude that \(\phi\) provides an isomorphism from \(G\) to the subgroup \(\phi(G)\) of \(S_G\text{.}\)</p></article></span>
+<p id="p-814">So \(\phi\) is a homomorphism. Further, if \(a, b\in G\) with \(\phi(a)=\phi(b)\text{,}\) then \(\lambda_a=\lambda_b\text{.}\) In particular, \(\lambda_a(e)=\lambda_b(e)\text{.}\) But \(\lambda_a(e)=ae=a\) and \(\lambda_b(e)=be=b\text{,}\) so \(a=b\text{.}\) Thus, \(\phi\) is one-to-one.</p>
+<p id="p-815">Since by definition \(\phi(G)\) we have that \(\phi\) maps \(G\) <!--Style me with CSS--><em>onto</em> \(\phi(G)\text{,}\) we conclude that \(\phi\) provides an isomorphism from \(G\) to the subgroup \(\phi(G)\) of \(S_G\text{.}\)</p></article></span>
 </div>
-<article class="remark-like" id="remark-28"><h5 class="heading">
+<article class="remark-like" id="remark-29"><h5 class="heading">
 <span class="type">Remark</span><span class="codenumber">6.4.4</span>
 </h5>
-<p id="p-814">In general, \(\phi(G) \neq S_G\text{,}\) so we cannot conclude that \(G\) is isomorphic to \(S_G\) itself; rather, we may only conclude that it is is isomorphic to some <!--Style me with CSS--><em>subgroup</em> of \(S_G\text{.}\)</p></article><article class="remark-like" id="remark-29"><h5 class="heading">
+<p id="p-816">In general, \(\phi(G) \neq S_G\text{,}\) so we cannot conclude that \(G\) is isomorphic to \(S_G\) itself; rather, we may only conclude that it is is isomorphic to some <!--Style me with CSS--><em>subgroup</em> of \(S_G\text{.}\)</p></article><article class="remark-like" id="remark-30"><h5 class="heading">
 <span class="type">Remark</span><span class="codenumber">6.4.5</span>
 </h5>
-<p id="p-815">While we chose to use the maps \(\lambda_a\) to prove the above theorem, we could just as well have used the maps \(\rho_a\) or \(c_a\text{,}\) instead.</p></article></section></div></main>
+<p id="p-817">While we chose to use the maps \(\lambda_a\) to prove the above theorem, we could just as well have used the maps \(\rho_a\) or \(c_a\text{,}\) instead.</p></article></section></div></main>
 </div>
 <script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
 </body>
