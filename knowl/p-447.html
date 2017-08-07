@@ -1,8 +1,8 @@
 <!doctype html>
 <html>
 <!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-06T12:57:11-07:00    *-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2017-08-07T00:21:31-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,13 +13,19 @@
 </head>
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>True/False. For each of the following, write T if the statement is true; otherwise, write F. You do NOT need to provide explanations or show work for this problem. Throughout, let \(G\) and \(G'\) be groups. </p>
-<ol style="list-style-type: lower-alpha;">
-<li><p>If there exists a homomorphism \(\phi\,:\,G\to G'\text{,}\) then \(G\) and \(G'\) must be isomorphic groups.</p></li>
-<li><p>There is an integer \(n\geq 2\) such that \(\Z\simeq \Z_n\text{.}\)</p></li>
-<li><p>If \(|G|=|G'|=3\text{,}\) then we must have \(G\simeq G'\text{.}\)</p></li>
-<li><p>If \(|G|=|G'|=4\text{,}\) then we must have \(G\simeq G'\text{.}\)</p></li>
-</ol>
-<span class="incontext"><a href="exercises-4.html#p-447">in-context</a></span>
+<p>
+        The groups \(\Z\) and \(\Q\) are not isomorphic. We use contradiction to prove this. Suppose that \(\Z\) and \(\Q\) are isomorphic via isomorphism
+        \(\phi :\Q \to \Z\text{.}\). Let \(a\in \Q\text{.}\). Then \(a/2 \in \Q\) with
+        \(a/2 + a/2 =a\text{.}\). Then
+        \begin{equation*}
+          \phi(a/2)+\phi(a/2)=
+          \phi(a/2+a/2)=\phi(a);
+        \end{equation*}
+        since \(\phi(a/2)\) is in \(\Z\text{,}\), \(\phi(a)\)
+        must be evenly divisible by 2. But \(a\) was arbitrary in \(\Q\) and
+        \(\phi\) is onto, so this means every element of \(\Z\) must be evenly
+        divisible by 2, which is clearly false. Thus, \(\Z\not\simeq \Q\text{.}\).
+      </p>
+<span class="incontext"><a href="section-12.html#p-447">in-context</a></span>
 </body>
 </html>

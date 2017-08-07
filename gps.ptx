@@ -35,7 +35,7 @@
       </p>
     </statement>
 
-    <notation><usage>a*b</usage><description><m>a</m> operated with <m>b</m> under operation <m>*</m></description></notation>
+   
 <notation><usage>\langle S, *\rangle </usage><description>binary structure </description></notation>
 
   </definition>
@@ -116,7 +116,7 @@
         <m>x\in S</m>.
       </p>
     </statement>
-    <notation><usage>e</usage><description>identity element in a binary structure</description></notation>
+    <notation><usage>e</usage><description>the identity element in a binary structure/group</description></notation>
   </definition>
 
   <note>
@@ -419,113 +419,80 @@
   <p>
     If you have taken
     linear algebra, you have also probably seen a collection of matrices
-    that is a group under matrix multiplication.
+    that is a group under matrix multiplication. Recall that given a square matrix <m>A</m>, the notation <m>\det A</m> denotes the 
+    determinant of <m>A</m>.
+   <notation><usage>\det A</usage><description>the determinant of <m>A</m></description></notation>
   </p>
 
-  <definition>
-    <statement>
-      <p>
-        For <m>n\in \Z^+</m>, we define <m>GL(n,\R)</m> by
-        <me>
-          GL(n,\R)=\{M\in \M_n(\R):\det M \neq 0\}.
-        </me>
-      </p>
+<p>
+  <example xml:id="gl">
 
-      <p>
-        In other
-        words, <m>G</m> is the set of all invertible <m>n\times n</m> matrices
-        over <m>\R</m>.</p><p> We  define subset <m>SL(n,\R)</m> by
-        <m>GL(n,\R)</m> to be the set
-        <me>
-          SL(n,\R)=\{M\in \M_n(\R):\det M =1\}.
-        </me>
-      </p>
+ <statement> 
+ <p>The set
+<me>GL(n,\R)=\{M\in \M_n(\R):\det M \neq 0\}</me>, that is, 
+the set of invertible <m>n\times n</m> matrices
+        over <m>\R</m>,  is a group under matrix multiplication, called the <term>general linear group of degree <m>n</m> over <m>\R</m> </term>.</p>
         <p>
-    We denote a zero matrix by  <m>\0</m> and the  <m>n\times n</m> identity matrix by  <m>I_n</m>.
-  </p>
-    </statement>
-  </definition>
-
-  <remark>
-    <p>
-      Throughout this course, if we are discussing a set <m>GL(n,\R)</m> or <m>SL(n,\R)</m>, you should assume <m>n\in \Z^+</m>, unless otherwise noted.
-    </p>
-  </remark>
-
-  <theorem xml:id="glsl">
-    <statement>
-      <p>
-        <m>GL(n,\R)</m> and <m>SL(n,\R)</m> are closed under matrix multiplication (so <m>\langle GL(n,\R),\cdot\rangle</m> and <m>\langle SL(n,\R),\cdot\rangle</m> are binary structures).
-      </p>
-    </statement>
-
-  <proof>
-    <p>
-      Let <m>A,B\in GL(n, \R)</m>. Then <m>\det(AB)=(\det A)(\det B) \neq 0</m> (since <m>\det A, \det B \neq 0)</m>, so <m>AB\in GL(n,\R)</m>. Similarly, if <m>A,B \in SL(n,\R)</m>, then <m>\det(AB)=(\det A)(\det B)=1(1)=1</m>, so <m>AB\in SL(n,\R)</m>.
-    </p>
-  </proof>
-
-  </theorem>
-
-  <theorem>
-    <statement>
-      <p>
-        The binary structures
-        <m>GL(n,\R)</m> and <m>SL(n,\R)</m> are groups under matrix multiplication.
-      </p>
-    </statement>
-    <proof>
-      <p>
-        Let <m>G=GL(n,\R)</m>. We show that <m>G</m>, under matrix multiplication, satisfies
-        the three group axioms. First, we know that matrix multiplication is always associative. Next, the <m>n\times n</m> identity matrix
-              <me>
-                I_n=\begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \amp  0 \\
+Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \amp  0 \\
                 0 \amp  1 \amp  0 \amp  \cdots \amp  0 \\
                 0 \amp  0 \amp  1 \amp  \cdots \amp  0 \\
                 \vdots \amp  \vdots \amp  \vdots \amp  \ddots \amp  \vdots \\
                 0 \amp  0 \amp  0 \amp  \cdots \amp  1
-                \end{bmatrix}  \in G
-              </me>
-              acts as an identity element for <m>\langle G, \cdot\,\rangle</m> since
+                \end{bmatrix},</me> the <m>n \times n</m> identity matrix.</p>
+ </statement>
+ <proof>
+<p>
+  Let <m>A,B\in GL(n, \R)</m>. Then <m>\det(AB)=(\det A)(\det B) \neq 0</m> (since <m>\det A, \det B \neq 0)</m>, so <m>AB\in GL(n,\R)</m>.  Thus, 
+  <m>\langle GL(n,\R), \cdot\rangle</m> is a binary structure.</p>
+   <p>We know that matrix multiplication is always associative,so <m>\G_2</m> holds. Next, <m>I_n</m> is in <m>GL(n,\R)</m>since <m>\det I_n=1\neq 0</m>, and it
+     acts as an identity element for <m>\langle GL(n,\R), \cdot\,\rangle</m> since
               <me>
                 AI_n=I_nA = A
               </me>
-              for all <m>A\in G</m>.
+              for all <m>A\in GL(n,\R)</m>.
             </p>
-        <p> Finally, let <m>A\in G</m>.  Since <m>\det A\neq 0</m>, <m>A</m> has
+        <p> Finally, let <m>A\in GL(n,\R)</m>.  Since <m>\det A\neq 0</m>, <m>A</m> has
               (matrix multiplicative) inverse <m>A^{-1}</m> in
               <m>\M_2(\R)</m>. But we need to verify that <m>A^{-1}</m> is in
               <m>G</m>. This is in fact the case, however, since
               <m>A^{-1}</m> is invertible (it has inverse <m>A</m>), hence <m>\det
-              A^{-1} \neq 0</m>.  Thus, <m>A^{-1}</m> is also in <m>G</m>.
+              A^{-1} \neq 0</m>.  Thus, <m>A^{-1}</m> is also in <m>GL(n,\R)</m>.
             </p>
 
       <p>
-        So <m>G</m> is a group under multiplication.
+        So <m>GL(n,\R)</m> is a group under multiplication.
       </p>
+ </proof>
+<notation><usage>GL(n,\R)</usage><description>the general linear group of degree <m>n</m> over <m>\R</m></description></notation>
+ <notation><usage>I_n</usage><description>the <m>n \times n</m> identity matrix</description></notation>
+  </example>
+</p>
 
-      <p>
-        The proof that <m>SL(n,\R)</m> is a group under multiplication is left as an exercise for the reader.
-      </p>
-    </proof>
-
-  </theorem>
-
-  <p>
-    These groups are very important in many areas of mathematics, including linear algebra and geometry. Because of this, we have special names for them (which give rise to the <q>GL</q> and <q>SL</q> in their names).
+<p>
+  <example xml:id="sl">
+ <statement><p> The set
+<me>SL(n,\R)=\{M\in \M_n(\R):\det M =1\}</me>, is a group under matrix multiplication, called the <term>special linear group of degree <m>n</m> over <m>\R</m> </term>. Like <m>GL(n,\R)</m>, it has <m>I_n</m> as its identity element.</p>
+ </statement>
+ <proof>
+<p>
+  Let <m>A,B\in SL(n, \R)</m>. Then <m>\det(AB)=(\det A)(\det B) =1(1)=1</m>, so <m>AB\in SL(n,\R)</m>.  Thus, 
+  <m>\langle SL(n,\R), \cdot\rangle</m> is a binary structure.</p>
+   <p>The rest of the proof is left as an exercise for the reader.</p>
+ </proof>
+<notation><usage>SL(n,\R)</usage><description>the special linear group of degree <m>n</m> over <m>\R</m></description></notation>
+  </example>
   </p>
 
-  <definition>
-    <statement>
-      <p>
-        For <m>n\in \Z^+</m>, <m>GL(n,\R)</m> is called the <term>general
-        linear group of degree <m>n</m> over <m>\R</m></term> and <m>SL(n,\R)</m> is
-        called the <term>special linear group of degree <m>n</m> over
-        <m>\R</m></term>.
-      </p>
-    </statement>
-  </definition>
+<p>
+<remark>
+    <p>
+      Throughout this course, if we are discussing a set <m>GL(n,\R)</m> or <m>SL(n,\R)</m>, you should assume <m>n\in \Z^+</m>, unless otherwise noted.
+    </p>
+  </remark>
+</p>
 
+<p>We end this section with a final example.</p>
+<p>
   <example>
     <statement>
       <p>
@@ -566,6 +533,7 @@
 
 
   </example>
+</p>
 </section>
 <section>
   <title>Group conventions and properties</title>
@@ -584,24 +552,19 @@
           unique (by <xref ref="uniqueid">Theorem</xref>), and given any element <m>a</m>
           of a group <m>G</m>, the inverse of <m>a</m> in <m>G</m> is unique (by <xref ref="uniqueinverse">Theorem</xref>).
         </p>
-      </statement>
+</statement>
     </theorem>
 
-
-        <ul>
-      <li>
-<p>          We usually <em>don't</em> use the notation <m>*</m> when describing group
-          operations. Instead, we use the multiplication symbol <m>\cdot</m> for
-          the operation in an arbitrary group, and  call
-          applying the operation <q>multiplying</q><mdash />even though the operation may
-          not be <q>multiplication</q> in the non-abstract, traditional sense! It may
-          actually be addition of real numbers, composition of
-          functions, etc. Moreover, when actually operating in a group <m>\langle G, \cdot\,\rangle</m>, we
-          typically omit the <m>\cdot</m> . That is, for <m>a,b\in G</m>, we write the
-          product <m>a\cdot b</m> as <m>ab</m>. We call this the <q>product</q> of <m>a</m> and <m>b</m>. </p><p>We will generally use <m>e</m>
+<p>
+<observation>
+<p>We will generally use <m>e</m>
           or <m>e_G</m> as our default notation for an identity element of group, but be aware that many mathematicians denote a group's identity element by 1. We  denote the inverse of element <m>a</m> in <m>G</m> by <m>a^{-1}</m>.</p>
-</li>
-</ul>   <warning>
+          <notation><usage>e_G</usage><description>the identity element in a group <m>G</m></description></notation>
+                <notation><usage>a^{-1}</usage><description>the inverse of <m>a</m> in a group</description></notation>
+          </observation>
+</p>
+
+ <warning>
             <p>
               Although it is written in what we call  <em>multiplicative
               notation</em>, do <em>not</em> assume <m>a^{-1}</m> is what we usually think of as a
@@ -614,23 +577,31 @@
             </p>
           </warning>
 
-       
-<ul>
-      <li>
+<convention>
+        <ul>
+
+<li><p> We usually <em>don't</em> use the notation <m>*</m> when describing group
+          operations. Instead, we use the multiplication symbol <m>\cdot</m> for
+          the operation in an arbitrary group, and  call
+          applying the operation <q>multiplying</q><mdash />even though the operation may
+          not be <q>multiplication</q> in the non-abstract, traditional sense! It may
+          actually be addition of real numbers, composition of
+          functions, etc. Moreover, when actually operating in a group <m>\langle G, \cdot\,\rangle</m>, we
+          typically omit the <m>\cdot</m> . That is, for <m>a,b\in G</m>, we write the
+          product <m>a\cdot b</m> as <m>ab</m>. We call this the <q>product</q> of <m>a</m> and <m>b</m>. </p>
+
         <p>
           For every element <m>a</m> in a group <m>\Gdot</m> and <m>n\in \Z^+</m>, we use the expression <m>a^n</m> to denote  the product <me>a \times a \times \cdots \times a</me> of <m>n</m> copies of <m>a</m>, 
       and <m>a^{-n}</m> to denote <m>(a^{-1})^n</m> (that is, the product of <m>n</m> copies of <m>a^{-1}</m>).
           Finally, we define <m>a^0</m> to be <m>e</m>.  Note that our <q>usual</q> rules for exponents then hold in an arbitrary group: that is, if <m>a</m> is in group <m>\langle G, \cdot\,\rangle</m>
           and <m>m,n\in \Z</m>, then <m>a^m a^n = a^{m+n}</m> and <m>(a^m)^n=a^{mn}=(a^n)^m</m>.
         </p>
-      </li>
-    </ul>
-    <p>
-      There are exceptions to these conventions:
-      <ul>
-        <li>
-          <p>
-            When working with an operation that is known to be commutative, we typically
+
+        <p>However:</p>
+      </li>  
+  
+
+<li><p>When we know our operation is commutative, we typically
             continue to use additive notation (<m>+</m> for the group operation, <m>-a</m>
             for the inverse of element <m>a</m> in the group) and call the operation
             <q>addition,</q> though using <m>\cdot</m> is also valid in these cases. When
@@ -638,12 +609,21 @@
             operating in a group <m>\langle G,+\rangle</m>, and we call <m>a+b</m> a <em>sum</em> rather
             than a product. Also, when working with an operation that is known to be commutative, the identity element may be denoted by 0 rather than by <m>e</m>, <m>e_G</m>, or 1, and for <m>n\in \N</m>, we write <m>na</m> instead of <m>a^n</m>.</p>
 
+
+
             <p>Finally, note that
             <m>(-n)a=n(-a)=-(na)</m> (where <m>-a</m> and <m>-(na)</m> indicate the
             additive inverses of <m>a</m> and <m>na</m>, respectively); we can therefore
             unambiguously use the notation <m>-na</m> for this element.
             Using this notation, note that for <m>m\in \Z</m>, <m>na+ma=(n+m)a</m> and <m>n(ma)=(nm)a</m>.</p>
+</li>
 
+</ul>
+
+
+            <notation><usage>-a</usage><description>the inverse of <m>a</m> in an abelian group</description></notation>
+
+</convention>
             <p>
             <warning>
               <p>
@@ -655,7 +635,9 @@
                 additive inverse 2 of the number 4 in <m>\Z_6</m>, or even something
                 completely unrelated to numbers.
               </p>
-            </warning></p>
+            </warning>
+
+            </p>
             
             <p>
             <remark>
@@ -667,6 +649,7 @@
           <p>  We summarize multiplicative versus addition notation in the following table, where <m>a,b</m> are elements of a group <m>G</m>. </p>
 
 <p>
+<table>
               <tabular>
       <row halign="center" bottom="medium">
                 <cell></cell>
@@ -687,19 +670,19 @@
       </row>
       <row halign="center">
                 <cell halign="left">Identity element</cell>
-                <cell><m>e</m> or <m>e_G</m> or <m>1</m></cell>
-                <cell><m>e</m> or <m>e_G</m> or <m>0</m></cell>
+                <cell><m>e</m> or <m>e_G</m> (or <m>1</m>)</cell>
+                <cell><m>e</m> or <m>e_G</m> (or <m>0</m>)</cell>
       </row>
       <row halign="center">
                 <cell halign="left">Inverse of <m>a</m></cell>
                 <cell><m>a^{-1}</m></cell>
                 <cell><m>-a</m></cell>
       </row>
-</tabular></p>
+</tabular><caption>Summary of multiplicative and addition notation in groups.</caption>
 
-        </li>
+</table></p>
 
-        <li>
+    <convention>
           <p>
             We <em>do</em> use the notation
             <m>*</m> when using multiplicative or additive notation would lead to
@@ -712,18 +695,18 @@
             element in this group is the rational number <m>2</m>, and writing <m>0=2</m>
             or <m>1=2</m> would look weird.
           </p>
-        </li>
-
-        <li>
+      
+</convention>
+<p>Finally:</p>
+<convention>
+     
           <p>
             If there is a default notation for a particular
             operation (say, <m>\circ</m> for composition of functions) or identity
             element (say, <m>I_n</m> in <m>GL(n,\R)</m>) we usually use that notation
             instead.
           </p>
-        </li>
-      </ul>
-    </p>
+ </convention> 
   </subsection>
 
   <subsection>
@@ -901,6 +884,7 @@
       </me>
       that is, <m>n\Z</m> is the set of all (integer) multiples of <m>n</m>.
     </p>
+            <notation><usage>n\Z</usage><description><m>\{nm\,:\,m\in \Z\}</m></description></notation>
  </example>
 
     <theorem xml:id="nz">
@@ -940,6 +924,9 @@
         congruent mod <m>n</m>, we write <m>a \equiv b\, \pmod{n}</m>.
       </p>
     </statement>
+
+
+            <notation><usage>a\equiv b\, \pmod{n}</usage><description><m>a</m> is congruent to <m>b</m> mod <m>n</m></description></notation>
   </definition>
 
   <example xml:id="cong_ex">
@@ -986,6 +973,7 @@ Let <m>n\in \Z^+</m> and let <m>a</m> be any
       <p>
         <m>R_n(a)</m> is the <term>remainder</term> when we divide <m>a</m> by <m>n</m>. (Note: You were probably already familiar with the remainder when you divide a positive integer by <m>n</m>.)
       </p>
+<notation><usage>R_n(a)</usage><description>the remainder when <m>a</m> is divided by <m>n</m></description></notation>
     </statement>
   </definition>
 
@@ -999,6 +987,7 @@ Let <m>n\in \Z^+</m> and let <m>a</m> be any
         </me>
         that is, the unique element of <m>\{0,1,\ldots, n-1\}</m> that's congruent to the integer <m>a+b</m> modulo <m>n</m>.
       </p>
+      <notation><usage>+_n</usage><description>addition modulo <m>n</m></description></notation>
     </statement>
   </definition>
 
@@ -1019,6 +1008,7 @@ Let <m>n\in \Z^+</m> and let <m>a</m> be any
   <p>
     We define <m>\Z_n</m> to be the set <m>\{0,1,2,\ldots,n-1\}</m>.
   </p>
+
 
   </definition>
 
@@ -1046,6 +1036,7 @@ Let <m>n\in \Z^+</m> and let <m>a</m> be any
         For each <m>n\in \Z^+</m>, <m>\langle \Z_n,+_n\rangle</m> is a group, called the <em>cyclic group of order <m>n</m></em> (we will see later why we use the word <q>cyclic</q> here).
         This group is abelian and of order <m>n</m>.
       </p>
+        <notation><usage>\Z_n</usage><description>the cyclic group of order <m>n</m></description></notation>
     </statement>
     <proof>
       <p>
@@ -1158,6 +1149,7 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
         we define <m>\Z_n^{\times}</m> to be the set <me>\{a\in \Z_n\,:\,\gcd(a,n)=1\}</me>.
       </p>
     </statement>
+      <notation><usage>\Z_n^{\times}</usage><description><m>\{a\in \Z_n\,:\,\gcd(a,n)=1\}</m></description></notation>
   </definition>
 
   <example>

@@ -239,7 +239,7 @@
   
   <solution>
     <p>
-      We know from <xref ref="glsl">Theorem</xref> that <m>\langle SL(n,\R),\cdot\rangle</m> is a binary structure,and we know that matrix multiplication is always associative. Next, since <m>\det I_n=1</m>, <m>I_n</m> is in <m>SL(n,\R)</m>, and clearly acts as an identity element in <m>SL(n,\R)</m>. Finally, let <m>A\in SL(n,\R)</m>.  Since <m>\det A=1\neq 0</m>, <m>A</m> has an inverse matrix <m>A^{-1}</m> in <m>GL(n, \R)</m>.  <m>A^{-1}</m> is in <m>SL(n,\R)</m> since
+      We know from <xref ref="sl">Example</xref> that <m>\langle SL(n,\R),\cdot\rangle</m> is a binary structure,and we know that matrix multiplication is always associative. Next, since <m>\det I_n=1</m>, <m>I_n</m> is in <m>SL(n,\R)</m>, and clearly acts as an identity element in <m>SL(n,\R)</m>. Finally, let <m>A\in SL(n,\R)</m>.  Since <m>\det A=1\neq 0</m>, <m>A</m> has an inverse matrix <m>A^{-1}</m> in <m>GL(n, \R)</m>.  <m>A^{-1}</m> is in <m>SL(n,\R)</m> since
             <me>
               \det(A^{-1})=\frac{1}{\det A}=1/1=1.
             </me>

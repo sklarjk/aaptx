@@ -1,8 +1,8 @@
 <!doctype html>
 <html>
 <!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-06T12:57:26-07:00    *-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2017-08-07T00:21:43-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,20 @@
 </head>
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Recall that our goal here is to use a subgroup of a group \(G\) to study not just the structure of the subgroup, but the structure of \(G\) outside of that subgroup (the ultimate goal being to get a feeling for the structure of \(G\) as a whole). We've further seen that if we choose \(N\) to be a normal subgroup of \(G\text{,}\) we can do this by studying both \(N\) and the factor group \(G/N\text{.}\) Now, we've noticed that in some cases—in particular, when \(G\) is cyclic–it is not too hard to identify the structure of a factor group of \(G\text{.}\) But what about when \(G\) and \(N\) are more complicated? For instance, we have seen that \(SL(5,\R)\) is a normal subgroup of \(GL(5,\R)\text{.}\) What is the structure of \(GL(5,\R)/SL(5,\R)\text{?}\) That is not so easy to figure out by looking directly at left coset multiplication in the factor group.</p>
-<span class="incontext"><a href="isothms.html#p-1192">in-context</a></span>
+<p>
+      Define \(\Phi:GL(n,\R)\to \R^+\) by
+      \(\Phi(A)=|\det A|\text{.}\). We have that \(\Phi\) is an epimorphism since for
+      all \(A,B\in GL(n,\R)\text{,}\),
+      \begin{equation*}
+        \Phi(AB)=|\det AB|=|\det A \det B|=|\det
+        A||\det B|=\Phi(A)\Phi(B),
+      \end{equation*}
+      and for all \(\lambda \in \R^+\text{,}\), the
+      diagonal matrix having \(\lambda\) in the uppermost left position and
+      1's elsewhere down the diagonal gets sent to \(\lambda\text{.}\). Since \(\Ker
+      \Phi=H\text{,}\), we have that \(GL(n,\R)/H \simeq \R^+\text{,}\), by the First
+      Isomorphism Theorem.
+    </p>
+<span class="incontext"><a href="exercises-9.html#p-1192">in-context</a></span>
 </body>
 </html>

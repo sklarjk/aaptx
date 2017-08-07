@@ -1,8 +1,8 @@
 <!doctype html>
 <html>
 <!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-06T12:57:25-07:00    *-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2017-08-07T00:21:42-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,18 @@
 </head>
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>One slick way, therefore, of showing that a particular set is a normal subgroup of a group \(G\) is by showing it's the kernel of a homomorphism from \(G\) to another group.</p>
+<p>
+        Let \(K=\Ker \phi\text{.}\). We first show that \(K\) is a subgroup of
+        \(G\text{.}\). Clearly, the identity element of \(G\) is in \(K\text{,}\), so \(K\neq
+        \emptyset\text{.}\). Next, let \(k,m\in K\text{.}\). Then, letting \(e'\) denote the
+        identity element of \(G'\text{,}\), we have
+        \begin{equation*}
+          \phi(km^{-1})=\phi(k)\phi(m)^{-1}=e'(e')^{-1}=e',
+        \end{equation*}
+        so \(km^{-1}\in
+        K\text{.}\). Thus, by the <a knowl="./knowl/twostep.html" knowl-id="xref-twostep" alt="Theorem 4.2.5 Two-Step Subgroup Test" title="Theorem 4.2.5 Two-Step Subgroup Test">4.2.5</a>, we have that \(K\) is a
+        subgroup of \(G\text{.}\).
+      </p>
 <span class="incontext"><a href="section-26.html#p-1136">in-context</a></span>
 </body>
 </html>

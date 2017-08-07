@@ -1,8 +1,8 @@
 <!doctype html>
 <html>
 <!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-06T12:57:07-07:00    *-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2017-08-06T23:51:56-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,9 +13,26 @@
 </head>
 <body>
 <article class="example-like"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">2.4.8</span>
+<span class="type">Example</span><span class="codenumber">2.2.5</span>
 </h5>
-<p>Define \(*\) on \(\Q^*\) by \(a*b=(ab)/2\) for all \(a,b\in \Q^*\text{.}\) Prove that \(\langle \Q^*,*\rangle\) is a group.</p></article><div class="posterior"><div><a knowl="./knowl/proof-9-hidden.html" knowl-id="hidden-proof-9" alt="Proof 2.4.8.1 " title="Proof 2.4.8.1 "><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></div></div>
-<span class="incontext"><a href="section-6.html#example-12">in-context</a></span>
+<p id="p-157">
+        Let \(\Gdot\) be a group and let \(a\in G\text{.}\) Then the
+        function \(c_a\) from \(G\) to \(G\) defined by \(c_a(x)=axa^{-1}\) (for
+        all \(x\in G\)) is a homomorphism. Indeed, let \(x,y\in G\text{.}\) Then
+        \begin{align*}
+c_a(xy)\amp =a(xy)a^{-1}\\
+\amp =(ax)e(ya^{-1})\\
+\amp =(ax)(a^{-1}a)(ya^{-1})\\
+\amp =(axa^{-1})(aya^{-1})\\
+\amp =c_a(x)c_a(y).
+\end{align*}
+      </p>
+<p id="p-158">
+        The homomorphism \(c_a\) is called
+        <em class="terminology">conjugation by \(a\)</em>. Homomorphisms from a group \(G\) to
+        itself are called <em class="terminology">automorphisms</em>. Thus, conjugation by any
+        element \(a\) in \(G\) is an automorphism of \(G\text{.}\) (Beware: Some texts use “conjugation by \(a\)” to 
+        refer to the function \(x\mapsto a^{-1}xa\text{.}\)) Both versions of conjugation by \(a\) in group \(G\) are
+        automorphisms of \(G\text{.}\))</p></article><span class="incontext"><a href="section-5.html#example-12">in-context</a></span>
 </body>
 </html>

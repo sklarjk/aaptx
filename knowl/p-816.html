@@ -1,8 +1,8 @@
 <!doctype html>
 <html>
 <!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-06T12:57:18-07:00    *-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2017-08-07T00:21:37-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,23 @@
 </head>
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>In general, \(\phi(G) \neq S_G\text{,}\) so we cannot conclude that \(G\) is isomorphic to \(S_G\) itself; rather, we may only conclude that it is is isomorphic to some <!--Style me with CSS--><em>subgroup</em> of \(S_G\text{.}\)</p>
+<p>
+      We claim that \(\phi\) is both a homomorphism and one-to-one. Indeed,
+      let \(a,b\in G\text{.}\). Now, \(\phi(a)\phi(b)\) and \(\phi(ab)\) are both
+      functions with domain \(G\text{,}\), so we need to show
+      \((\phi(a)\phi(b))(x)=(\phi(ab))(x)\) for each \(x\in G\text{.}\). Well, let
+      \(x\in G\text{.}\). Then
+      \begin{align*}
+(\phi(a)\phi(b))(x)\amp =(\lambda_a\lambda_b)(x)\amp \amp\\
+\amp =\lambda_a(\lambda_b(x)) \amp \amp \text{ (since the operation on \(S_G\) is
+        composition) }\\
+\amp =\lambda_a(bx)\amp \amp\\
+\amp =a(bx)\amp \amp\\
+\amp =(ab)x\amp \amp\\
+\amp =\lambda_{ab}(x)\amp \amp\\
+\amp =(\phi(ab))(x).\amp \amp
+\end{align*}
+    </p>
 <span class="incontext"><a href="section-20.html#p-816">in-context</a></span>
 </body>
 </html>

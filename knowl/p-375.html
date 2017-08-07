@@ -1,8 +1,8 @@
 <!doctype html>
 <html>
 <!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-06T12:57:10-07:00    *-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2017-08-07T00:21:30-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,20 @@
 </head>
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Consider the group \(\Z_4\) under addition modulo 4. Ordering the elements of \(\Z_4\) as \(1,2,3,4\text{,}\) we have the following group table for \(\langle \Z_4,+\rangle\text{:}\)</p>
-<span class="incontext"><a href="section-10.html#p-375">in-context</a></span>
+<p>
+      Let \(z_1, z_2\in Z(G)\text{.}\). Let \(z=z_1z_2\text{;}\); we want to
+      show that \(z\) is in \(H\text{:}\): that is, we want to show that for every \(g\in G\text{,}\),
+      \(zg=gz\text{.}\). But for every \(g\in G\text{,}\),
+      \begin{align*}
+zg\amp =(z_1z_2)g\amp \amp  \text{ (using the definition of \(z\)) }\\
+\amp =z_1(z_2g)\amp \amp  \text{ (since \(G\)'s operation is associative) }\\
+\amp =z_1(gz_2)\amp \amp  \text{ (since \(z_2\in Z(G)\)) }\\
+\amp =(z_1g)z_2 \amp \amp  \text{ (since \(G\)'s operation is associative) }\\
+\amp =(gz_1)z_2 \amp \amp  \text{ (since \(z_1\in Z(G)\)) }\\
+\amp =g(z_1z_2)\amp \amp   \text{ (since \(G\)'s operation is associative) }\\
+\amp =gz \amp \amp  \text{ (using the definition of \(h\)) } .
+\end{align*}
+    </p>
+<span class="incontext"><a href="exercises-3.html#p-375">in-context</a></span>
 </body>
 </html>

@@ -1,8 +1,8 @@
 <!doctype html>
 <html>
 <!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-06T12:57:11-07:00    *-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2017-08-07T00:21:31-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,7 +13,18 @@
 </head>
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p><!--Style me with CSS--><em>Define</em> a function \(\phi\) from \(G\) to \(G'\) (or from \(G'\) to \(G\text{,}\) as we have <a knowl="./knowl/groupisoequiv.html" knowl-id="xref-groupisoequiv" alt="Theorem 3.3.3 " title="Theorem 3.3.3 ">Theorem 3</a>).</p>
+<p>
+      For Part 3: Since \(G\simeq G'\) and \(G'\simeq G''\text{,}\), there exist
+      isomorphisms \(\phi:G\to G'\) and \(\psi:G'\to G''\text{.}\). Define
+      \(\theta:G\to G''\) by \(\theta=\psi \circ \phi\text{.}\). Since \(\phi\) and
+      \(\psi\) are both bijections, \(\theta\) is a bijection (<a knowl="./knowl/compbij.html" knowl-id="xref-compbij" alt="Theorem 1.2.11 " title="Theorem 1.2.11 ">Theorem 1.2.11</a>). Next, let \(a,b\in G\text{.}\). The
+      \begin{align*}
+\theta(a\cdot b)\amp =\psi(\phi(a\cdot b))\amp \amp \text{ (by definition of \(\theta\)) }\\
+\amp =\psi(\phi(a)\cdot'\phi(b))\amp \amp \text{ (since \(\phi\) is a homomorphism) }\\
+\amp =\psi(\phi(a))\cdot''\psi(\phi(b))\amp \amp \text{ (since \(\psi\) is a homomorphism) }\\
+\amp =\theta(a)\cdot''\theta(b)\amp \amp \text{ (by definition of \(\theta\)) } .
+\end{align*}
+    </p>
 <span class="incontext"><a href="section-12.html#p-418">in-context</a></span>
 </body>
 </html>

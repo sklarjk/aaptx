@@ -246,82 +246,82 @@
           <p>
             In <m>\M_2(\R)</m>,
             <me>
-              \left\langle \left[
-              \begin{array}{cc}
+              \left\langle 
+              \begin{bmatrix}
               1 \amp  1 \\
               0 \amp  1
-              \end{array} 
-              \right]\right\rangle =\left\{\left[
-              \begin{array}{cc}
+              \end{bmatrix}\right\rangle =\left\{
+              \begin{bmatrix}
               c \amp  c \\
               0 \amp  c
-              \end{array} 
-              \right] : c\in \Z \right\}= \left\{c\left[
-              \begin{array}{cc}
+              \end{bmatrix} 
+              : c\in \Z \right\}= \left\{c
+              \begin{bmatrix}
               1 \amp  1 \\
               0 \amp  1
-              \end{array} 
-              \right] : c\in \Z \right\}.
+              \end{bmatrix} 
+             : c\in \Z \right\}.
             </me>
-            The order of the the matrix is therefore infinity.
+            The matrix therefore has infinite order.
           </p>
         </li>
 
         <li>
           <p>
-            In <m>\M_2(\Z_2)</m>, if <m>A=\left[
-            \begin{array}{cc}
+            In <m>\M_2(\Z_2)</m>, if <m>A=
+            \begin{bmatrix}
             1 \amp  1 \\
             0 \amp  1
-            \end{array} 
-            \right]</m>, then <m>\langle A\rangle =\{A, \0\}</m>, so <m>A</m> has order 2.
+            \end{bmatrix} 
+           </m>, then <m>\langle A\rangle =\left\{A, \begin{bmatrix}0\amp 0 \\ 0\amp 0\end{bmatrix}\right\}</m>, so <m>A</m> has order 2.
           </p>
         </li>
 
         <li>
           <p>
-            In <m>GL(2,\Z_2)</m>, <m>\left[
-            \begin{array}{cc}
+            In <m>GL(2,\Z_2)</m>, <m>
+            \begin{bmatrix}
             1 \amp  1 \\
             0 \amp  1
-            \end{array} 
-            \right]</m> has order 2. (Why?)
+            \end{bmatrix} 
+            </m> has order 2. (Why?)
           </p>
         </li>
 
         <li>
           <p>
-            In <m>GL(2,\R)</m>, <m>\left[
-            \begin{array}{cr}
+            In <m>GL(2,\R)</m>, <m>
+
+            \begin{bmatrix}            
             0 \amp  -1 \\
-            1 \amp  0
-            \end{array} 
-            \right]</m> has order 4. (Why?)
+            1 \amp  \phantom{-}0
+            \end{bmatrix} 
+           </m> has order 4. (Why?)
           </p>
         </li>
 
         <li>
           <p>
-            In <m>GL(2,\R)</m>, <m>\left[
-            \begin{array}{cc}
+            In <m>GL(2,\R)</m>, <m>
+            \begin{bmatrix}
             1 \amp  1 \\
             0 \amp  1
-            \end{array} 
-            \right]</m> has infinite order. (Why?)
+            \end{bmatrix} 
+           </m> has infinite order. (Why?)
           </p>
         </li>
 
         <li>
           <p>
             In <m>GL(4,\Z_2)</m>,
-            <m>A=\left[
-            \begin{array}{cccc}
+            <m>A=\
+            \begin{bmatrix}
             0 \amp  0 \amp  1 \amp  0 \\
             0 \amp  0 \amp  0 \amp  1 \\
             1 \amp  0 \amp  0 \amp  0 \\
             0 \amp  1 \amp  0 \amp  0
-            \end{array} 
-            \right]</m> has order 2. (Why?)
+            \end{bmatrix} 
+            </m> has order 2. (Why?)
           </p>
         </li>
       </ol>

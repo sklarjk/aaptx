@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-06T12:57:01-07:00    *-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2017-08-07T00:21:22-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -10,37 +10,38 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Exercises</title>
-<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="Keywords" content="Authored in MathBook XML">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
     },
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", },
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
         TagSide: "right",
         TagIndent: ".8em",
     },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
     "HTML-CSS": {
         scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
     },
 });
-</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\def\Z{\mathbb{Z}}
@@ -59,9 +60,9 @@ MathJax.Hub.Config({
 \DeclareMathOperator{\Ker}{Ker}
 \def\siml{\sim_L}
 \def\simr{\sim_R}
-\newcommand{\lt}{&lt;}
-\newcommand{\gt}{&gt;}
-\newcommand{\amp}{&amp;}
+\newcommand{\lt}{ &lt; }
+\newcommand{\gt}{ &gt; }
+\newcommand{\amp}{ &amp; }
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
@@ -69,9 +70,9 @@ MathJax.Hub.Config({
 <p class="byline">Jessica K. Sklar</p>
 </div>
 </div></div>
-<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<nav id="primary-navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-16.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="cyc.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="perm.html" title="Next" alt="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" onclick="window.location.href='index.html'">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a class="previous-button toolbar-item button" href="section-16.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="cyc.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="perm.html" title="Next" alt="Next">Next</a></span></div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
@@ -79,201 +80,232 @@ MathJax.Hub.Config({
 </div>
 </div></nav></header><div class="page">
 <aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
-<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html"><span class="title">Front Matter</span></a></h2>
 <ul>
-<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
-<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
-<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="colophon-1.html">Colophon</a></li>
+<li><a href="acknowledgement-1.html">Acknowledgements</a></li>
+<li><a href="preface-1.html">Preface</a></li>
 </ul>
-<h2 class="link"><a href="pre.html" data-scroll="pre"><span class="codenumber">1</span><span class="title">Preliminaries</span></a></h2>
+<h2 class="link"><a href="pre.html"><span class="codenumber">1</span><span class="title">Preliminaries</span></a></h2>
 <ul>
-<li><a href="section-1.html" data-scroll="section-1">Sets</a></li>
-<li><a href="section-2.html" data-scroll="section-2">Functions</a></li>
-<li><a href="section-3.html" data-scroll="section-3">Cardinality</a></li>
-<li><a href="exercises-1.html" data-scroll="exercises-1">Exercises</a></li>
+<li><a href="section-1.html">Sets</a></li>
+<li><a href="section-2.html">Functions</a></li>
+<li><a href="section-3.html">Cardinality</a></li>
+<li><a href="exercises-1.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="gps.html" data-scroll="gps"><span class="codenumber">2</span><span class="title">Groups</span></a></h2>
+<h2 class="link"><a href="gps.html"><span class="codenumber">2</span><span class="title">Groups</span></a></h2>
 <ul>
-<li><a href="section-4.html" data-scroll="section-4">Binary operations and structures</a></li>
-<li><a href="exercises-2.html" data-scroll="exercises-2">Exercises, Part I</a></li>
-<li><a href="section-5.html" data-scroll="section-5">The definition of a group</a></li>
-<li><a href="section-6.html" data-scroll="section-6">Examples of groups/nongroups, Part I</a></li>
-<li><a href="section-7.html" data-scroll="section-7">Group conventions and properties</a></li>
-<li><a href="section-8.html" data-scroll="section-8">Examples of groups/nongroups, Part II</a></li>
-<li><a href="section-9.html" data-scroll="section-9">Summaries of groups we've seen</a></li>
-<li><a href="exercises-3.html" data-scroll="exercises-3">Exercises, Part II</a></li>
+<li><a href="section-4.html">Binary operations and structures</a></li>
+<li><a href="exercises-2.html">Exercises, Part I</a></li>
+<li><a href="section-5.html">The definition of a group</a></li>
+<li><a href="section-6.html">Examples of groups/nongroups, Part I</a></li>
+<li><a href="section-7.html">Group conventions and properties</a></li>
+<li><a href="section-8.html">Examples of groups/nongroups, Part II</a></li>
+<li><a href="section-9.html">Summaries of groups we've seen</a></li>
+<li><a href="exercises-3.html">Exercises, Part II</a></li>
 </ul>
-<h2 class="link"><a href="homoiso.html" data-scroll="homoiso"><span class="codenumber">3</span><span class="title">Homorphisms and Isomorphisms</span></a></h2>
+<h2 class="link"><a href="homoiso.html"><span class="codenumber">3</span><span class="title">Homorphisms and Isomorphisms</span></a></h2>
 <ul>
-<li><a href="section-10.html" data-scroll="section-10">Groups of small order</a></li>
-<li><a href="section-11.html" data-scroll="section-11">Introduction to homomorphisms and isomorphisms</a></li>
-<li><a href="section-12.html" data-scroll="section-12">Isomorphic groups</a></li>
-<li><a href="exercises-4.html" data-scroll="exercises-4">Exercises</a></li>
+<li><a href="section-10.html">Groups of small order</a></li>
+<li><a href="section-11.html">Introduction to homomorphisms and isomorphisms</a></li>
+<li><a href="section-12.html">Isomorphic groups</a></li>
+<li><a href="exercises-4.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="subgps.html" data-scroll="subgps"><span class="codenumber">4</span><span class="title">Subgroups</span></a></h2>
+<h2 class="link"><a href="subgps.html"><span class="codenumber">4</span><span class="title">Subgroups</span></a></h2>
 <ul>
-<li><a href="section-13.html" data-scroll="section-13">Introduction to subgroups</a></li>
-<li><a href="section-14.html" data-scroll="section-14">Subgroup proofs and lattices</a></li>
-<li><a href="exercises-5.html" data-scroll="exercises-5">Exercises</a></li>
+<li><a href="section-13.html">Introduction to subgroups</a></li>
+<li><a href="section-14.html">Subgroup proofs and lattices</a></li>
+<li><a href="exercises-5.html">Exercises</a></li>
 </ul>
-<h2 class="link active"><a href="cyc.html" data-scroll="cyc"><span class="codenumber">5</span><span class="title">Cyclic Groups</span></a></h2>
+<h2 class="link active"><a href="cyc.html"><span class="codenumber">5</span><span class="title">Cyclic Groups</span></a></h2>
 <ul>
-<li><a href="section-15.html" data-scroll="section-15">Introduction to cyclic groups</a></li>
-<li><a href="section-16.html" data-scroll="section-16">The subgroup lattices of cyclic groups</a></li>
-<li><a href="exercises-6.html" data-scroll="exercises-6" class="active">Exercises</a></li>
+<li><a href="section-15.html">Introduction to cyclic groups</a></li>
+<li><a href="section-16.html">The subgroup lattices of cyclic groups</a></li>
+<li><a href="exercises-6.html" class="active">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="perm.html" data-scroll="perm"><span class="codenumber">6</span><span class="title">Permutation Groups and Dihedral Groups</span></a></h2>
+<h2 class="link"><a href="perm.html"><span class="codenumber">6</span><span class="title">Permutation Groups and Dihedral Groups</span></a></h2>
 <ul>
-<li><a href="section-17.html" data-scroll="section-17">Introduction to permutation groups</a></li>
-<li><a href="section-18.html" data-scroll="section-18">Symmetric groups</a></li>
-<li><a href="section-19.html" data-scroll="section-19">Alternating groups</a></li>
-<li><a href="section-20.html" data-scroll="section-20">Cayley's Theorem</a></li>
-<li><a href="dihedralgps.html" data-scroll="dihedralgps">Dihedral groups</a></li>
-<li><a href="exercises-7.html" data-scroll="exercises-7">Exercises</a></li>
+<li><a href="section-17.html">Introduction to permutation groups</a></li>
+<li><a href="section-18.html">Symmetric groups</a></li>
+<li><a href="section-19.html">Alternating groups</a></li>
+<li><a href="section-20.html">Cayley's Theorem</a></li>
+<li><a href="dihedralgps.html">Dihedral groups</a></li>
+<li><a href="exercises-7.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="coslag.html" data-scroll="coslag"><span class="codenumber">7</span><span class="title">The Wonderful World of Cosets</span></a></h2>
+<h2 class="link"><a href="coslag.html"><span class="codenumber">7</span><span class="title">The Wonderful World of Cosets</span></a></h2>
 <ul>
-<li><a href="section-22.html" data-scroll="section-22">Partitions of and equivalence relations on sets</a></li>
-<li><a href="section-23.html" data-scroll="section-23">Introduction to cosets and normal subgroups</a></li>
-<li><a href="section-24.html" data-scroll="section-24">The index of a subgroup and Lagrange's Theorem</a></li>
-<li><a href="exercises-8.html" data-scroll="exercises-8">Exercises</a></li>
+<li><a href="section-22.html">Partitions of and equivalence relations
+  on sets</a></li>
+<li><a href="section-23.html">Introduction to cosets and normal subgroups</a></li>
+<li><a href="section-24.html">The index of a subgroup and Lagrange's Theorem</a></li>
+<li><a href="exercises-8.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="factorgps.html" data-scroll="factorgps"><span class="codenumber">8</span><span class="title">Factor Groups</span></a></h2>
+<h2 class="link"><a href="factorgps.html"><span class="codenumber">8</span><span class="title">Factor Groups</span></a></h2>
 <ul>
-<li><a href="section-25.html" data-scroll="section-25">Motivation</a></li>
-<li><a href="section-26.html" data-scroll="section-26">Focusing on normal subgroups</a></li>
-<li><a href="section-27.html" data-scroll="section-27">Introduction to factor groups</a></li>
-<li><a href="exercises-9.html" data-scroll="exercises-9">Exercises</a></li>
+<li><a href="section-25.html">Motivation</a></li>
+<li><a href="section-26.html">Focusing on normal subgroups</a></li>
+<li><a href="section-27.html">Introduction to factor groups</a></li>
+<li><a href="exercises-9.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="isothms.html" data-scroll="isothms"><span class="codenumber">9</span><span class="title">The Isomorphism Theorems</span></a></h2>
+<h2 class="link"><a href="isothms.html"><span class="codenumber">9</span><span class="title">The Isomorphism Theorems</span></a></h2>
 <ul>
-<li><a href="section-28.html" data-scroll="section-28">The First Isomorphism Theorem</a></li>
-<li><a href="section-29.html" data-scroll="section-29">The Second and Third Isomorphism Theorems</a></li>
-<li><a href="exercises-10.html" data-scroll="exercises-10">Exercises</a></li>
+<li><a href="section-28.html">The First Isomorphism Theorem</a></li>
+<li><a href="section-29.html">The Second and Third Isomorphism Theorems</a></li>
+<li><a href="exercises-10.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<h2 class="link"><a href="backmatter-1.html"><span class="title">Back Matter</span></a></h2>
 <ul>
-<li><a href="appendix-1.html" data-scroll="appendix-1">Notation</a></li>
-<li><a href="appendix-2.html" data-scroll="appendix-2">Solutions to Exercises</a></li>
-<li><a href="references-1.html" data-scroll="references-1">Bibliography</a></li>
-<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
-<li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+<li><a href="appendix-1.html">Notation</a></li>
+<li><a href="appendix-2.html">Solutions to Exercises</a></li>
+<li><a href="references-1.html">Bibliography</a></li>
+<li><a href="appendix-gfdl.html">GNU Free Documentation License</a></li>
+<li><a href="colophon-2.html">Colophon</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="exercises" id="exercises-6"><header title="Exercises 5.3 Exercises"><h1 class="heading hide-type" alt="Exercises 5.3 Exercises">
 <span class="type">Section</span><span class="codenumber">5.3</span><span class="title">Exercises</span>
 </h1></header><article class="exercise-like" id="exercise-34"><h5 class="heading"><span class="codenumber">1</span></h5>
-<p id="p-661">True/False. For each of the following, write T if the statement is true; otherwise, write F. You do NOT need to provide explanations or show work for this problem. Throughout, let \(G\) be a group with identity element \(e\text{.}\) </p>
+<p id="p-664">
+        True/False. For each of the following, write T if the statement is
+        true; otherwise, write F. You do NOT need to provide explanations or show work for this problem. Throughout, let \(G\) be a group with identity element \(e\text{.}\)
+        </p>
 <ol id="ol-65" style="list-style-type: lower-alpha;">
-<li id="li-266"><p id="p-662">If \(G\) is infinite and cyclic, then \(G\) must have infinitely many generators.</p></li>
-<li id="li-267"><p id="p-663">There may be two distinct elements \(a\) and \(b\) of a group \(G\) with \(\langle a\rangle =\langle b\rangle\text{.}\)</p></li>
-<li id="li-268"><p id="p-664">If \(a,b\in G\) and \(a\in \langle b\rangle\) then we must have \(b\in \langle a\rangle\text{.}\)</p></li>
-<li id="li-269"><p id="p-665">If \(a\in G\) with \(a^4=e\text{,}\) then \(o(a)\) must equal \(4\text{.}\)</p></li>
-<li id="li-270"><p id="p-666">If \(G\) is countable then \(G\) must be cyclic.</p></li>
+<li id="li-263"><p id="p-665">
+              If \(G\) is infinite and cyclic, then \(G\) must have infinitely many generators.
+            </p></li>
+<li id="li-264"><p id="p-666">
+              There may be two distinct elements \(a\) and \(b\) of a group \(G\) with \(\langle a\rangle =\langle b\rangle\text{.}\)
+            </p></li>
+<li id="li-265"><p id="p-667">
+              If \(a,b\in G\) and \(a\in \langle b\rangle\) then we must have \(b\in \langle a\rangle\text{.}\)
+            </p></li>
+<li id="li-266"><p id="p-668">
+              If \(a\in G\) with \(a^4=e\text{,}\) then \(o(a)\) must equal \(4\text{.}\)
+            </p></li>
+<li id="li-267"><p id="p-669">
+              If \(G\) is countable then \(G\) must be cyclic.
+            </p></li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-34" id="solution-34"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-34" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol id="ol-66" class="cols5" style="list-style-type: lower-alpha;">
-<li id="li-271" style="width:19.6%; float:left;"><p id="p-667">F</p></li>
-<li id="li-272" style="width:19.6%; float:left;"><p id="p-668">T</p></li>
-<li id="li-273" style="width:19.6%; float:left;"><p id="p-669">F</p></li>
-<li id="li-274" style="width:19.6%; float:left;"><p id="p-670">F</p></li>
-<li id="li-275" style="width:19.6%; float:left;"><p id="p-671">F</p></li>
-</ol></span></span> </article><article class="exercise-like" id="exercise-35"><h5 class="heading"><span class="codenumber">2</span></h5>
-<p id="p-672">Give examples of the following. </p>
+<p>
+      </p></article><article class="exercise-like" id="exercise-35"><h5 class="heading"><span class="codenumber">2</span></h5>
+<p id="p-675">
+        Give examples of the following.
+        </p>
 <ol id="ol-67" style="list-style-type: lower-alpha;">
-<li id="li-276"><p id="p-673">An infinite noncyclic group \(G\) containing an infinite cyclic subgroup \(H\text{.}\)</p></li>
-<li id="li-277"><p id="p-674">An infinite noncyclic group \(G\) containing a finite nontrivial cyclic subgroup \(H\text{.}\)</p></li>
-<li id="li-278"><p id="p-675">A cyclic group \(G\) containing exactly 20 elements.</p></li>
-<li id="li-279"><p id="p-676">A nontrivial cyclic group \(G\) whose elements are all matrices.</p></li>
-<li id="li-280"><p id="p-677">A noncyclic group \(G\) such that every proper subgroup of \(G\) is cyclic.</p></li>
+<li id="li-273"><p id="p-676">
+              An infinite noncyclic group \(G\) containing an infinite cyclic subgroup \(H\text{.}\)
+            </p></li>
+<li id="li-274"><p id="p-677">
+              An infinite noncyclic group \(G\) containing a finite nontrivial cyclic subgroup \(H\text{.}\)
+            </p></li>
+<li id="li-275"><p id="p-678">
+              A cyclic group \(G\) containing exactly 20 elements.
+            </p></li>
+<li id="li-276"><p id="p-679">
+              A nontrivial cyclic group \(G\) whose elements are all matrices.
+            </p></li>
+<li id="li-277"><p id="p-680">
+              A noncyclic group \(G\) such that every proper subgroup of \(G\) is cyclic.
+            </p></li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-35" id="solution-35"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-35" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-678">(Other answers are possible.) </p>
-<ol id="ol-68" style="list-style-type: lower-alpha;">
-<li id="li-281"><p id="p-679">\(G=\R\text{,}\) \(H=\Z\)</p></li>
-<li id="li-282"><p id="p-680">\(G=GL(n,\R)\text{,}\) \(H=\{\pm I_2\}\)</p></li>
-<li id="li-283"><p id="p-681">\(G=\Z_{20}\)</p></li>
-<li id="li-284"><p id="p-682">\(G=\{\pm I_2\}\text{,}\) under matrix multiplication</p></li>
-<li id="li-285"><p id="p-683">\(G=\Z_2^2\)</p></li>
-</ol></span></span> </article><article class="exercise-like" id="exercise-36"><h5 class="heading"><span class="codenumber">3</span></h5>
-<p id="p-684">Find the orders of the following elements in the given groups. </p>
+<p>
+      </p></article><article class="exercise-like" id="exercise-36"><h5 class="heading"><span class="codenumber">3</span></h5>
+<p id="p-687">
+        Find the orders of the following elements in the given groups.
+        </p>
 <ol id="ol-69" style="list-style-type: lower-alpha;">
-<li id="li-286"><p id="p-685">\(2\in \Z\)</p></li>
-<li id="li-287"><p id="p-686">\(-i\in \C^*\)</p></li>
-<li id="li-288"><p id="p-687">\(-I_2\in GL(2,\R)\)</p></li>
-<li id="li-289"><p id="p-688">\(-I_2\in \M_2(\R)\)</p></li>
-<li id="li-290"><p id="p-689">\((6,8)\in \Z_{10}\times \Z_{10}\)</p></li>
+<li id="li-283"><p id="p-688">
+              \(2\in \Z\)
+            </p></li>
+<li id="li-284"><p id="p-689">
+              \(-i\in \C^*\)
+ 
+            </p></li>
+<li id="li-285"><p id="p-690">
+              \(-I_2\in GL(2,\R)\)
+            </p></li>
+<li id="li-286"><p id="p-691">
+              \(-I_2\in \M_2(\R)\)
+            </p></li>
+<li id="li-287"><p id="p-692">
+              \((6,8)\in \Z_{10}\times \Z_{10}\)
+            </p></li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-36" id="solution-36"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-36" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol id="ol-70" style="list-style-type: lower-alpha;">
-<li id="li-291"><p id="p-690">\(o(2)=\infty\text{,}\) since \(\langle 2\rangle =2\Z\text{.}\)</p></li>
-<li id="li-292"><p id="p-691">\(o(-i)=4\text{,}\) since \(\langle -i\rangle =\{-i,-1,i,1\}\text{.}\)</p></li>
-<li id="li-293"><p id="p-692">\(o(I_2)=2\text{,}\) since \(\langle -I_2\rangle =\{-I_2,I_2\}\text{.}\)</p></li>
-<li id="li-294"><p id="p-693">\(o(I_2)=\infty\text{,}\) since \(\langle -I_2\rangle =\{kI_2\,:\,k\in \Z\}\text{.}\)</p></li>
-<li id="li-295"><p id="p-694">\(o((6,8))=5\text{,}\) since \(\langle (6,8)\rangle =\{(6,8),(2,6),(8,4),(4,2),(0,0)\}\text{.}\)</p></li>
-</ol></span></span> </article><article class="exercise-like" id="exercise-37"><h5 class="heading"><span class="codenumber">4</span></h5>
-<p id="p-695">For each of the following, if the group is cyclic, list <!--Style me with CSS--><em>all</em> of its generators. If the group is <!--Style me with CSS--><em>not</em> cyclic, write NC. </p>
+<p>
+      </p></article><article class="exercise-like" id="exercise-37"><h5 class="heading"><span class="codenumber">4</span></h5>
+<p id="p-698">
+        For each of the following, if the group is cyclic, list <!--Style me with CSS--><em>all</em> of its generators. If the group is <!--Style me with CSS--><em>not</em> cyclic, write NC.
+        </p>
 <ol id="ol-71" style="list-style-type: lower-alpha;">
-<li id="li-296"><p id="p-696">\(5\Z\)</p></li>
-<li id="li-297"><p id="p-697">\(\Z_{18}\)</p></li>
-<li id="li-298"><p id="p-698">\(\R\)</p></li>
-<li id="li-299"><p id="p-699">\(\langle \pi\rangle\) in \(\R\)</p></li>
-<li id="li-300"><p id="p-700">\(\Z_2^2\)</p></li>
-<li id="li-301"><p id="p-701">\(\langle 8\rangle\) in \(\Q^*\)</p></li>
+<li id="li-293"><p id="p-699">
+              \(5\Z\)
+            </p></li>
+<li id="li-294"><p id="p-700">
+              \(\Z_{18}\)
+            </p></li>
+<li id="li-295"><p id="p-701">
+              \(\R\)
+            </p></li>
+<li id="li-296"><p id="p-702">
+              \(\langle \pi\rangle\) in \(\R\)
+            </p></li>
+<li id="li-297"><p id="p-703">
+              \(\Z_2^2\)
+            </p></li>
+<li id="li-298"><p id="p-704">
+              \(\langle 8\rangle\) in \(\Q^*\)
+            </p></li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-37" id="solution-37"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-37" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol id="ol-72" style="list-style-type: lower-alpha;">
-<li id="li-302"><p id="p-702">\(\pm 5\)</p></li>
-<li id="li-303"><p id="p-703">\(1,5,7,11,13,17\)</p></li>
-<li id="li-304"><p id="p-704">NC</p></li>
-<li id="li-305"><p id="p-705">\(\pm \pi\)</p></li>
-<li id="li-306"><p id="p-706">NC</p></li>
-<li id="li-307"><p id="p-707">\(8,1/8\)</p></li>
-</ol></span></span> </article><article class="exercise-like" id="exercise-38"><h5 class="heading"><span class="codenumber">5</span></h5>
-<p id="p-708">Explicitly identify the elements of the following subgroups of the given groups. You may use set-builder notation if the subgroup is infinite, or a conventional name for the subgroup if we have one. </p>
+<p>
+      </p></article><article class="exercise-like" id="exercise-38"><h5 class="heading"><span class="codenumber">5</span></h5>
+<p id="p-711">
+        Explicitly identify the elements of the following subgroups of the given groups. You may use set-builder notation if the subgroup is infinite, or a conventional name for the subgroup if we have one.
+        </p>
 <ol id="ol-73" style="list-style-type: lower-alpha;">
-<li id="li-308"><p id="p-709">\(\langle 3\rangle\) in \(\Z\)</p></li>
-<li id="li-309"><p id="p-710">\(\langle i\rangle\) in \(C^*\)</p></li>
-<li id="li-310"><p id="p-711">\(\langle A\rangle\text{,}\) for \(A=\left[ \begin{array}{cc}
-1 \amp  0 \\
-0 \amp  0
-\end{array} 
-\right]\in \M_2(\R)\)</p></li>
-<li id="li-311"><p id="p-712">\(\langle (2,3)\rangle\) in \(\Z_4\times \Z_5\)</p></li>
-<li id="li-312"><p id="p-713">\(\langle B\rangle\text{,}\) for \(B=\left[ \begin{array}{cc}
-1 \amp  1\\
-0 \amp  1
-\end{array} 
-\right]\in GL(2,\R)\)</p></li>
+<li id="li-305"><p id="p-712">
+              \(\langle 3\rangle\) in \(\Z\)
+            </p></li>
+<li id="li-306"><p id="p-713">
+              \(\langle i\rangle\) in \(C^*\)
+            </p></li>
+<li id="li-307"><p id="p-714">
+              \(\langle A\rangle\text{,}\) for \(A=\left[ \begin{array}{cc}
+              1 \amp  0 \\
+              0 \amp  0
+              \end{array} 
+              \right]\in \M_2(\R)\)
+            </p></li>
+<li id="li-308"><p id="p-715">
+              \(\langle (2,3)\rangle\) in \(\Z_4\times \Z_5\)
+            </p></li>
+<li id="li-309"><p id="p-716">
+              \(\langle B\rangle\text{,}\) for \(B=\left[ \begin{array}{cc}
+              1 \amp  1\\
+              0 \amp  1
+              \end{array} 
+              \right]\in GL(2,\R)\)
+            </p></li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-38" id="solution-38"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-38" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol id="ol-74" style="list-style-type: lower-alpha;">
-<li id="li-313"><p id="p-714">\(3\Z\)</p></li>
-<li id="li-314"><p id="p-715">\(\{i,-1,-i,1\}\)</p></li>
-<li id="li-315"><p id="p-716">\(\left\{\left[
-\begin{array}{cc}
-k \amp  0 \\
-0 \amp  0
-\end{array} 
-\right]\,:\,k\in \Z
-\right\}\)</p></li>
-<li id="li-316"><p id="p-717">\(\{(2,3),(0,1),(2,4),(0,2),(2,0),(0,3),(2,1),(0,4),(2,2),(0,0)\}\)</p></li>
-<li id="li-317"><p id="p-718">\(\left\{\left[
-\begin{array}{cc}
-1 \amp  k \\
-0 \amp  1
-\end{array} 
-\right]\,:\,k\in \Z\right\}\)</p></li>
-</ol></span></span> </article><article class="exercise-like" id="exercise-39"><h5 class="heading"><span class="codenumber">6</span></h5>
-<p id="p-719">Draw subgroup lattices for the following groups. </p>
+<p>
+      </p></article><article class="exercise-like" id="exercise-39"><h5 class="heading"><span class="codenumber">6</span></h5>
+<p id="p-722">
+        Draw subgroup lattices for the following groups.
+        </p>
 <ol id="ol-75" class="cols3" style="list-style-type: lower-alpha;">
-<li id="li-318" style="width:32.6666666666667%; float:left;"><p id="p-720">\(\Z_6\)</p></li>
-<li id="li-319" style="width:32.6666666666667%; float:left;"><p id="p-721">\(\Z_{13}\)</p></li>
-<li id="li-320" style="width:32.6666666666667%; float:left;"><p id="p-722">\(\Z_{18}\)</p></li>
+<li id="li-315" style="width:32.6666666666667%; float:left;"><p id="p-723">
+              \(\Z_6\)
+            </p></li>
+<li id="li-316" style="width:32.6666666666667%; float:left;"><p id="p-724">
+              \(\Z_{13}\)
+            </p></li>
+<li id="li-317" style="width:32.6666666666667%; float:left;"><p id="p-725">
+              \(\Z_{18}\)
+            </p></li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-39" id="solution-39"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-39" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol id="ol-76" style="list-style-type: lower-alpha;">
-<li id="li-321"><object type="image/svg+xml" style="width:30%; margin:auto; display:block;" data="images/image-6.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></li>
-<li id="li-322"><object type="image/svg+xml" style="width:6%; margin:auto; display:block;" data="images/image-7.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></li>
-<li id="li-323"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/image-8.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></li>
-</ol></span></span> </article><article class="exercise-like" id="exercise-40"><h5 class="heading"><span class="codenumber">7</span></h5>
-<p id="p-723">Let \(G\) be a group with no nontrivial proper subgroups. Prove that \(G\) is cyclic.</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-40" id="solution-40"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-40" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-724">Let \(e\) be the identity element of \(G\text{.}\) If \(G=\{e\}\text{,}\) then \(G\) is clearly cyclic. Else, there exists \(a\neq e\) in \(G\text{.}\) Then \(\langle a\rangle\) is a subgroup of \(G\text{.}\) Since \(e\neq a\in
-\langle a\rangle\text{,}\) \(\langle a\rangle\) is a nontrivial subgroup of \(G\text{.}\) Therefore, we must have \(\langle a\rangle =G\text{.}\) Hence, \(G\) is cyclic, as desired.</p></span></span> </article></section></div></main>
+<p>
+      </p></article><article class="exercise-like" id="exercise-40"><h5 class="heading"><span class="codenumber">7</span></h5>
+<p id="p-726">
+        Let \(G\) be a group with no nontrivial proper subgroups. Prove that \(G\) is cyclic.
+      </p></article></section></div></main>
 </div>
-<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
 </body>
 </html>

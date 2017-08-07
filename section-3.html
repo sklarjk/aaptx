@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-06T12:56:59-07:00    *-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2017-08-07T00:21:20-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -10,37 +10,38 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Cardinality</title>
-<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="Keywords" content="Authored in MathBook XML">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
     },
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", },
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
         TagSide: "right",
         TagIndent: ".8em",
     },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
     "HTML-CSS": {
         scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
     },
 });
-</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\def\Z{\mathbb{Z}}
@@ -59,9 +60,9 @@ MathJax.Hub.Config({
 \DeclareMathOperator{\Ker}{Ker}
 \def\siml{\sim_L}
 \def\simr{\sim_R}
-\newcommand{\lt}{&lt;}
-\newcommand{\gt}{&gt;}
-\newcommand{\amp}{&amp;}
+\newcommand{\lt}{ &lt; }
+\newcommand{\gt}{ &gt; }
+\newcommand{\amp}{ &amp; }
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
@@ -69,9 +70,9 @@ MathJax.Hub.Config({
 <p class="byline">Jessica K. Sklar</p>
 </div>
 </div></div>
-<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<nav id="primary-navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-2.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="pre.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="exercises-1.html" title="Next" alt="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" onclick="window.location.href='index.html'">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a class="previous-button toolbar-item button" href="section-2.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="pre.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="exercises-1.html" title="Next" alt="Next">Next</a></span></div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
@@ -79,117 +80,149 @@ MathJax.Hub.Config({
 </div>
 </div></nav></header><div class="page">
 <aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
-<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html"><span class="title">Front Matter</span></a></h2>
 <ul>
-<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
-<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
-<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="colophon-1.html">Colophon</a></li>
+<li><a href="acknowledgement-1.html">Acknowledgements</a></li>
+<li><a href="preface-1.html">Preface</a></li>
 </ul>
-<h2 class="link active"><a href="pre.html" data-scroll="pre"><span class="codenumber">1</span><span class="title">Preliminaries</span></a></h2>
+<h2 class="link active"><a href="pre.html"><span class="codenumber">1</span><span class="title">Preliminaries</span></a></h2>
 <ul>
-<li><a href="section-1.html" data-scroll="section-1">Sets</a></li>
-<li><a href="section-2.html" data-scroll="section-2">Functions</a></li>
-<li><a href="section-3.html" data-scroll="section-3" class="active">Cardinality</a></li>
-<li><a href="exercises-1.html" data-scroll="exercises-1">Exercises</a></li>
+<li><a href="section-1.html">Sets</a></li>
+<li><a href="section-2.html">Functions</a></li>
+<li><a href="section-3.html" class="active">Cardinality</a></li>
+<li><a href="exercises-1.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="gps.html" data-scroll="gps"><span class="codenumber">2</span><span class="title">Groups</span></a></h2>
+<h2 class="link"><a href="gps.html"><span class="codenumber">2</span><span class="title">Groups</span></a></h2>
 <ul>
-<li><a href="section-4.html" data-scroll="section-4">Binary operations and structures</a></li>
-<li><a href="exercises-2.html" data-scroll="exercises-2">Exercises, Part I</a></li>
-<li><a href="section-5.html" data-scroll="section-5">The definition of a group</a></li>
-<li><a href="section-6.html" data-scroll="section-6">Examples of groups/nongroups, Part I</a></li>
-<li><a href="section-7.html" data-scroll="section-7">Group conventions and properties</a></li>
-<li><a href="section-8.html" data-scroll="section-8">Examples of groups/nongroups, Part II</a></li>
-<li><a href="section-9.html" data-scroll="section-9">Summaries of groups we've seen</a></li>
-<li><a href="exercises-3.html" data-scroll="exercises-3">Exercises, Part II</a></li>
+<li><a href="section-4.html">Binary operations and structures</a></li>
+<li><a href="exercises-2.html">Exercises, Part I</a></li>
+<li><a href="section-5.html">The definition of a group</a></li>
+<li><a href="section-6.html">Examples of groups/nongroups, Part I</a></li>
+<li><a href="section-7.html">Group conventions and properties</a></li>
+<li><a href="section-8.html">Examples of groups/nongroups, Part II</a></li>
+<li><a href="section-9.html">Summaries of groups we've seen</a></li>
+<li><a href="exercises-3.html">Exercises, Part II</a></li>
 </ul>
-<h2 class="link"><a href="homoiso.html" data-scroll="homoiso"><span class="codenumber">3</span><span class="title">Homorphisms and Isomorphisms</span></a></h2>
+<h2 class="link"><a href="homoiso.html"><span class="codenumber">3</span><span class="title">Homorphisms and Isomorphisms</span></a></h2>
 <ul>
-<li><a href="section-10.html" data-scroll="section-10">Groups of small order</a></li>
-<li><a href="section-11.html" data-scroll="section-11">Introduction to homomorphisms and isomorphisms</a></li>
-<li><a href="section-12.html" data-scroll="section-12">Isomorphic groups</a></li>
-<li><a href="exercises-4.html" data-scroll="exercises-4">Exercises</a></li>
+<li><a href="section-10.html">Groups of small order</a></li>
+<li><a href="section-11.html">Introduction to homomorphisms and isomorphisms</a></li>
+<li><a href="section-12.html">Isomorphic groups</a></li>
+<li><a href="exercises-4.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="subgps.html" data-scroll="subgps"><span class="codenumber">4</span><span class="title">Subgroups</span></a></h2>
+<h2 class="link"><a href="subgps.html"><span class="codenumber">4</span><span class="title">Subgroups</span></a></h2>
 <ul>
-<li><a href="section-13.html" data-scroll="section-13">Introduction to subgroups</a></li>
-<li><a href="section-14.html" data-scroll="section-14">Subgroup proofs and lattices</a></li>
-<li><a href="exercises-5.html" data-scroll="exercises-5">Exercises</a></li>
+<li><a href="section-13.html">Introduction to subgroups</a></li>
+<li><a href="section-14.html">Subgroup proofs and lattices</a></li>
+<li><a href="exercises-5.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="cyc.html" data-scroll="cyc"><span class="codenumber">5</span><span class="title">Cyclic Groups</span></a></h2>
+<h2 class="link"><a href="cyc.html"><span class="codenumber">5</span><span class="title">Cyclic Groups</span></a></h2>
 <ul>
-<li><a href="section-15.html" data-scroll="section-15">Introduction to cyclic groups</a></li>
-<li><a href="section-16.html" data-scroll="section-16">The subgroup lattices of cyclic groups</a></li>
-<li><a href="exercises-6.html" data-scroll="exercises-6">Exercises</a></li>
+<li><a href="section-15.html">Introduction to cyclic groups</a></li>
+<li><a href="section-16.html">The subgroup lattices of cyclic groups</a></li>
+<li><a href="exercises-6.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="perm.html" data-scroll="perm"><span class="codenumber">6</span><span class="title">Permutation Groups and Dihedral Groups</span></a></h2>
+<h2 class="link"><a href="perm.html"><span class="codenumber">6</span><span class="title">Permutation Groups and Dihedral Groups</span></a></h2>
 <ul>
-<li><a href="section-17.html" data-scroll="section-17">Introduction to permutation groups</a></li>
-<li><a href="section-18.html" data-scroll="section-18">Symmetric groups</a></li>
-<li><a href="section-19.html" data-scroll="section-19">Alternating groups</a></li>
-<li><a href="section-20.html" data-scroll="section-20">Cayley's Theorem</a></li>
-<li><a href="dihedralgps.html" data-scroll="dihedralgps">Dihedral groups</a></li>
-<li><a href="exercises-7.html" data-scroll="exercises-7">Exercises</a></li>
+<li><a href="section-17.html">Introduction to permutation groups</a></li>
+<li><a href="section-18.html">Symmetric groups</a></li>
+<li><a href="section-19.html">Alternating groups</a></li>
+<li><a href="section-20.html">Cayley's Theorem</a></li>
+<li><a href="dihedralgps.html">Dihedral groups</a></li>
+<li><a href="exercises-7.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="coslag.html" data-scroll="coslag"><span class="codenumber">7</span><span class="title">The Wonderful World of Cosets</span></a></h2>
+<h2 class="link"><a href="coslag.html"><span class="codenumber">7</span><span class="title">The Wonderful World of Cosets</span></a></h2>
 <ul>
-<li><a href="section-22.html" data-scroll="section-22">Partitions of and equivalence relations on sets</a></li>
-<li><a href="section-23.html" data-scroll="section-23">Introduction to cosets and normal subgroups</a></li>
-<li><a href="section-24.html" data-scroll="section-24">The index of a subgroup and Lagrange's Theorem</a></li>
-<li><a href="exercises-8.html" data-scroll="exercises-8">Exercises</a></li>
+<li><a href="section-22.html">Partitions of and equivalence relations
+  on sets</a></li>
+<li><a href="section-23.html">Introduction to cosets and normal subgroups</a></li>
+<li><a href="section-24.html">The index of a subgroup and Lagrange's Theorem</a></li>
+<li><a href="exercises-8.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="factorgps.html" data-scroll="factorgps"><span class="codenumber">8</span><span class="title">Factor Groups</span></a></h2>
+<h2 class="link"><a href="factorgps.html"><span class="codenumber">8</span><span class="title">Factor Groups</span></a></h2>
 <ul>
-<li><a href="section-25.html" data-scroll="section-25">Motivation</a></li>
-<li><a href="section-26.html" data-scroll="section-26">Focusing on normal subgroups</a></li>
-<li><a href="section-27.html" data-scroll="section-27">Introduction to factor groups</a></li>
-<li><a href="exercises-9.html" data-scroll="exercises-9">Exercises</a></li>
+<li><a href="section-25.html">Motivation</a></li>
+<li><a href="section-26.html">Focusing on normal subgroups</a></li>
+<li><a href="section-27.html">Introduction to factor groups</a></li>
+<li><a href="exercises-9.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="isothms.html" data-scroll="isothms"><span class="codenumber">9</span><span class="title">The Isomorphism Theorems</span></a></h2>
+<h2 class="link"><a href="isothms.html"><span class="codenumber">9</span><span class="title">The Isomorphism Theorems</span></a></h2>
 <ul>
-<li><a href="section-28.html" data-scroll="section-28">The First Isomorphism Theorem</a></li>
-<li><a href="section-29.html" data-scroll="section-29">The Second and Third Isomorphism Theorems</a></li>
-<li><a href="exercises-10.html" data-scroll="exercises-10">Exercises</a></li>
+<li><a href="section-28.html">The First Isomorphism Theorem</a></li>
+<li><a href="section-29.html">The Second and Third Isomorphism Theorems</a></li>
+<li><a href="exercises-10.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<h2 class="link"><a href="backmatter-1.html"><span class="title">Back Matter</span></a></h2>
 <ul>
-<li><a href="appendix-1.html" data-scroll="appendix-1">Notation</a></li>
-<li><a href="appendix-2.html" data-scroll="appendix-2">Solutions to Exercises</a></li>
-<li><a href="references-1.html" data-scroll="references-1">Bibliography</a></li>
-<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
-<li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+<li><a href="appendix-1.html">Notation</a></li>
+<li><a href="appendix-2.html">Solutions to Exercises</a></li>
+<li><a href="references-1.html">Bibliography</a></li>
+<li><a href="appendix-gfdl.html">GNU Free Documentation License</a></li>
+<li><a href="colophon-2.html">Colophon</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-3"><header title="Section 1.3 Cardinality"><h1 class="heading hide-type" alt="Section 1.3 Cardinality">
 <span class="type">Section</span><span class="codenumber">1.3</span><span class="title">Cardinality</span>
-</h1></header><p id="p-70">One of the set traits that will be useful to us in distinguishing between algebraic structures is <!--Style me with CSS--><em>cardinality</em>.</p>
+</h1></header><p id="p-70">
+    One of the set traits that will be useful to us in
+    distinguishing between algebraic structures is <!--Style me with CSS--><em>cardinality</em>.
+  </p>
 <article class="definition-like" id="definition-12"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">1.3.1</span>
 </h5>
-<p id="p-71">A set is <em class="terminology">finite</em> if it contains a finite number of elements; otherwise, it's <em class="terminology">infinite</em>. The <em class="terminology">cardinality</em> of a finite set \(S\) is the number of elements in \(S\text{;}\) we denote the cardinality of \(S\) by \(|S|\text{.}\)</p></article><p id="p-72"><article class="remark-like" id="warning-3"><h5 class="heading">
+<p id="p-71">
+        A set is <em class="terminology">finite</em> if it contains a finite number of
+        elements;
+        otherwise, it's <em class="terminology">infinite</em>. The <em class="terminology">cardinality</em> of a finite set \(S\) is the
+        number of elements in \(S\text{;}\) we denote the cardinality of \(S\) by \(|S|\text{.}\)
+      </p></article><p id="p-72">
+    <article class="remark-like" id="warning-3"><h5 class="heading">
 <span class="type">Warning</span><span class="codenumber">1.3.2</span>
 </h5>
-<p id="p-73">Of course, vertical bars are used to denote other mathematical concepts; for instance, if \(x\) is a real number, \(|x|\) usually denotes the absolute value of \(x\text{.}\) You must determine from context, and from the nature of the expression within the bars, what vertical bars mean in a particular context.</p></article></p>
+<p id="p-73">Of course, vertical bars are used to denote
+    other mathematical concepts; for instance, if \(x\) is a real
+    number, \(|x|\) usually denotes the absolute value of \(x\text{.}\) You
+    must determine from context, and from the nature of the
+    expression within the bars, what vertical bars mean in a
+    particular context.</p></article>
+</p>
 <p id="p-74">Note that in the above definition, we omitted the definition of the cardinality of an infinite set.  This is because defining the cardinality of an infinite set is a more complicated endeavor, and one which is, in the most general context, beyond the scope of this class.  For us it will suffice to distinguish between two types of infinite sets: <!--Style me with CSS--><em>countably infinite</em> sets and <!--Style me with CSS--><em>uncountable</em> (or <!--Style me with CSS--><em>uncountably infinite</em>) sets.</p>
 <article class="definition-like" id="definition-13"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">1.3.3</span>
 </h5>
-<p id="p-75">A set \(S\) is said to be <em class="terminology">countably infinite</em> if there exists a bijection from \(S\) to \(\Z\) (equivalently, if there exists a bijection from \(\Z\) to \(S\)). It is said to be <em class="terminology">countable</em> if it is finite or countably infinite, and <em class="terminology">uncountable</em> (or <em class="terminology">uncountably infinite</em>) if it is not countable.</p></article><p id="p-76">Here are some straightforward examples to get us started:</p>
+<p id="p-75"> A set \(S\) is said to be <em class="terminology">countably infinite</em> if there exists a bijection from \(S\) to \(\Z\) (equivalently, if there
+        exists a bijection from \(\Z\) to \(S\)). It is said to be <em class="terminology">countable</em> if it is finite or countably infinite, and <em class="terminology">uncountable</em> (or <em class="terminology">uncountably infinite</em>) if it is not countable.</p></article><p id="p-76">  Here are some straightforward examples to get us started:</p>
 <article class="example-like" id="example-8"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">1.3.4</span>
 </h5>
-<p id="p-77"></p>
+<p id="p-77">
+
+ 
+    </p>
 <ol id="ol-3" style="list-style-type: decimal;">
-<li id="li-16">\(|\{a,b\}|=2\text{.}\)</li>
+<li id="li-16"> \(|\{a,b\}|=2\text{.}\) </li>
 <li id="li-17">\(|\emptyset|=0\text{.}\)</li>
-<li id="li-18">Clearly, \(\Z\) itself is countably infinite.</li>
-</ol></article><article class="remark-like" id="remark-3"><h5 class="heading">
+<li id="li-18"> Clearly, \(\Z\) itself is countably
+        infinite.
+      </li>
+</ol>
+<p>
+  </p></article><article class="remark-like" id="remark-3"><h5 class="heading">
 <span class="type">Remark</span><span class="codenumber">1.3.5</span>
 </h5>
-<p id="p-78">It turns out that countably infinite sets have the same cardinality as one another, while a countably infinite set and an uncountable set have different cardinalities. Intuitively, you  can think  of two countably infinite sets as having the same “size,” and a countable set and an uncountable set as having different “sizes”; however, this is a risky way of framing things, since it can  make some results seem counterintuitive when you're used to dealing only with finite sets (see, for instance, <a knowl="./knowl/zplus.html" knowl-id="xref-zplus" alt="Example 1.3.6 " title="Example 1.3.6 ">Example 6</a>).  Luckily, exploring the cardinality of infinite sets isn't the focus of this class.</p></article><p id="p-79">Perhaps surprisingly, a proper subset of a set can have the same cardinality as its superset, as the following example shows.</p>
+<p id="p-78">It turns out that countably infinite sets have the same cardinality as one another, while a countably infinite set and an uncountable set have different cardinalities. Intuitively, you  can think  of two countably infinite sets as having the same “size,” and a countable set and an uncountable set as having different “sizes”; however, this is a risky way of framing things, since it can  make some results seem counterintuitive when you're used to dealing only with finite sets (see, for instance, <a knowl="./knowl/zplus.html" knowl-id="xref-zplus" alt="Example 1.3.6 " title="Example 1.3.6 ">Example 1.3.6</a>).  Luckily, exploring the cardinality of infinite sets isn't the focus of this class.</p></article><p id="p-79">
+    Perhaps surprisingly, a proper subset of a set can have the
+    same cardinality as its superset, as the following example
+    shows.
+  </p>
 <article class="example-like" id="zplus"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">1.3.6</span>
 </h5>
-<p id="p-80">We claim that \(\Z^+\) is countably infinite. Indeed, consider the function \(f:\Z^+ \to \Z\) defined by \(f(n)=(-1)^n \lfloor n/2 \rfloor\text{,}\) where \(\lfloor x \rfloor\) denotes the greatest integer less than or equal to \(x\text{,}\) for each \(x\in \R\text{.}\) The fact that \(f\) is a bijection is demonstrated (though not proven) by the following visual representation, where each number maps via \(f\) to the value directly to the right of it: <div class="sidebyside" style="" id="sidebyside-1"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<p id="p-80">
+        We claim that \(\Z^+\) is countably infinite. Indeed, consider the function \(f:\Z^+ \to \Z\) defined by \(f(n)=(-1)^n \lfloor n/2 \rfloor\text{,}\) where \(\lfloor x \rfloor\)
+        denotes the greatest integer less than or equal to \(x\text{,}\) for each \(x\in \R\text{.}\) The fact that \(f\) is a bijection is demonstrated (though not proven) by the following visual representation,
+        where each number maps via \(f\) to the value directly to the right of it:
+<div class="sidebyside" style="" id="sidebyside-1"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
 <tr>
 <td class="r m b0 r0 l0 t0 lines">\(1\)</td>
 <td class="r m b0 r0 l0 t0 lines">\(0\)</td>
@@ -214,27 +247,62 @@ MathJax.Hub.Config({
 <td class="r m b0 r0 l0 t0 lines">\(\vdots\)</td>
 <td class="r m b0 r0 l0 t0 lines">\(\vdots\)</td>
 </tr>
-</table></div></div></div></p>
-<p id="p-81">Note that this means that \(\Z\) and its proper subset \(\Z^+\) have the same cardinality, that is, the same “size”!</p></article><p id="p-82">We summarize here examples of countably and uncountably infinite sets. (On pp. 5–6 of <a knowl="./knowl/F.html" knowl-id="xref-F" alt="Bibliographic Entry 1 A First Course in Abstract Algebra" title="Bibliographic Entry 1 A First Course in Abstract Algebra">[1]</a>, Fraleigh sketches proofs of the facts that \(\Q\) is countable and that the interval \((0,1)\) in \(\R\) is uncountable. The proof then that \(\R\) is uncountable follows from <a knowl="./knowl/cardthm.html" knowl-id="xref-cardthm" alt="Theorem 1.3.7 " title="Theorem 1.3.7 ">Theorem 7</a>, below.)</p>
+</table></div></div></div>
+</p>
+<p id="p-81">
+        Note that this means that \(\Z\) and its proper subset \(\Z^+\)
+        have the same cardinality, that is, the same “size”!
+      </p></article><p id="p-82">
+    We summarize here examples of countably and uncountably
+    infinite sets. (On pp. 5–6 of <a knowl="./knowl/F.html" knowl-id="xref-F" alt="Bibliographic Entry 1 A First Course in Abstract Algebra" title="Bibliographic Entry 1 A First Course in Abstract Algebra">[1]</a>, Fraleigh sketches proofs of the
+    facts that \(\Q\) is countable and that the interval \((0,1)\)
+    in \(\R\) is uncountable. The proof then that \(\R\) is
+    uncountable follows from <a knowl="./knowl/cardthm.html" knowl-id="xref-cardthm" alt="Theorem 1.3.7 " title="Theorem 1.3.7 ">Theorem 1.3.7</a>, below.)
+  </p>
 <p id="p-83">Countably infinite sets: \(\Z\text{,}\) \(\Z^+\text{,}\) \(\Z^-\text{,}\) \(\Z^*\text{,}\) \(\Q\text{,}\) \(\Q^+\text{,}\) \(\Q^-\text{,}\) \(\Q^*\text{,}\) \(\N\)</p>
 <p id="p-84">Uncountably infinite sets: \(\R\text{,}\) \(\R^+\text{,}\) \(\R^-\text{,}\) \(\R^*\text{,}\) \(\C\text{,}\) \(\C^*\text{,}\)  the interval \((0,1)\) in \(\R\)</p>
-<p id="p-85">The key idea here for us is that if two sets are essentially “the same,” then they must have the same “size.” Thus, we see that there is some fundamental difference between the sets \(\Z\) and \(\R\) (in fact, there are many such differences). On the other hand, cardinality alone won't allow us to distinguish structurally between the sets \(\Z\) and \(\Z^+\text{.}\)</p>
-<p id="p-86">We end our preliminary chapter with the following theorem and a corollary of it (which can be proved using induction on \(n\)). We prove only the fourth statement in the theorem, omitting the proofs of the first two statements and leaving the proof of the third statement as an exercise for the reader.</p>
+<p id="p-85">
+    The key idea here for us is that if two sets are
+    essentially “the same,” then they must have the same “size.”
+    Thus, we see that there is some fundamental difference between
+    the sets \(\Z\) and \(\R\) (in fact, there are many such
+    differences). On the other hand, cardinality alone won't allow
+    us to distinguish structurally between the sets \(\Z\) and
+    \(\Z^+\text{.}\)
+  </p>
+<p id="p-86">
+    We end our preliminary chapter with the following theorem and a corollary of it (which can be proved using induction on \(n\)). We prove only the fourth statement in the theorem, omitting the proofs of the first two statements and leaving the proof of the third statement as an exercise for the reader.
+  </p>
 <article class="theorem-like" id="cardthm"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">1.3.7</span>
 </h5>
-<p id="p-87">Let \(A\) and \(B\) be sets. </p>
+<p id="p-87">
+        Let \(A\) and \(B\) be sets.
+        </p>
 <ol id="ol-4" style="list-style-type: decimal;">
-<li id="li-19"><p id="p-88">If \(A\subseteq B\) and \(A\) is infinite [uncountable] then so is \(B\text{.}\)</p></li>
-<li id="li-20"><p id="p-89">If \(A\subseteq B\) and \(B\) is finite [countable] then so is \(A\text{.}\)</p></li>
-<li id="li-21"><p id="p-90">If \(|A|=n\lt \infty\) and \(|B|=m\lt  \infty\text{,}\) then \(|A\times B|=mn\text{.}\)</p></li>
-<li id="li-22"><p id="p-91">Any finite product of countable sets is countable.</p></li>
-</ol></article><div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-4" id="proof-4"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-4" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-92">To prove the fourth statement: Let \(A\) and \(B\) be countable sets. Assume that \(A\) and \(B\) are both countably infinite. Since \(\Z^+\) is countably infinite, we can index the elements of \(A\) and of \(B\) by \(\Z^+\text{,}\) writing</p>
-\begin{equation*}
-A=\{a_1,a_2,\ldots\} \text{ and }  B=\{b_1,b_2,\ldots\}.
-\end{equation*}
-<p id="p-93">Notice that the table</p>
+<li id="li-19"><p id="p-88">
+              If \(A\subseteq B\) and \(A\) is infinite [uncountable] then so is \(B\text{.}\)
+            </p></li>
+<li id="li-20"><p id="p-89">
+              If \(A\subseteq B\) and \(B\) is finite [countable] then so is \(A\text{.}\)
+            </p></li>
+<li id="li-21"><p id="p-90">
+              If \(|A|=n\lt \infty\) and \(|B|=m\lt  \infty\text{,}\) then \(|A\times B|=mn\text{.}\)
+            </p></li>
+<li id="li-22"><p id="p-91">
+              Any finite product of countable sets is countable.</p></li>
+</ol>
+<p>
+      </p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-4" id="proof-4"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-4" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-92">
+    To prove the fourth statement: Let \(A\) and \(B\) be countable sets. Assume that \(A\) and \(B\) are both countably infinite. Since \(\Z^+\) is countably infinite, we can index the elements of \(A\) and of \(B\) by \(\Z^+\text{,}\) writing
+    \begin{equation*}
+      A=\{a_1,a_2,\ldots\} \text{ and }  B=\{b_1,b_2,\ldots\}.
+    \end{equation*}
+  </p>
+<p id="p-93">
+    Notice that the table
+</p>
 <div class="sidebyside" style="" id="sidebyside-2"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">\((a_1,b_1)\)</td>
@@ -261,21 +329,36 @@ A=\{a_1,a_2,\ldots\} \text{ and }  B=\{b_1,b_2,\ldots\}.
 <td class="l m b0 r0 l0 t0 lines">\(\ddots\)</td>
 </tr>
 </table></div></div></div>
-<p id="p-94">contains every element of \(A\times B\text{.}\) We can then list the elements of \(A\times B\) by listing the elements in progressive upper-right to lower-left diagonals, starting with \((a_1,b_1)\) and moving to the right along the top row: that is, we can write</p>
-\begin{equation*}
-A\times B=\{(a_1,b_1),(a_1,b_2),(a_2,b_1),(a_2,b_3),(a_2,b_2),(a_3,b_1),\ldots\}
-\end{equation*}
-<p id="p-95">This implicitly yields a bijection from \(\Z^+\) to \(A\times B\text{;}\) thus, \(A\times B\) is countably infinite, and hence countable.</p>
-<p id="p-96">The proof in the case that one or both of sets \(A\) and \(B\) are finite is similar; the corresponding table in that case will simply have either only finitely many rows or finitely many columns, or both.</p></article></span>
+<p id="p-94">contains every element of \(A\times B\text{.}\) We can then list the elements of \(A\times B\) by listing the elements in progressive upper-right to lower-left diagonals, starting with \((a_1,b_1)\) and moving to the right along the top row: that is, we can write
+    \begin{equation*}
+      A\times B=\{(a_1,b_1),(a_1,b_2),(a_2,b_1),(a_2,b_3),(a_2,b_2),(a_3,b_1),\ldots\}
+    \end{equation*}
+  </p>
+<p id="p-95">
+    This implicitly yields a bijection from \(\Z^+\) to \(A\times B\text{;}\) thus, \(A\times B\) is countably infinite, and hence countable.
+  </p>
+<p id="p-96">
+    The proof in the case that one or both of sets \(A\) and \(B\) are finite is similar; the corresponding table in that case will simply have either only finitely many rows or finitely many columns, or both.
+  </p></article></span>
 </div>
 <article class="remark-like" id="remark-4"><h5 class="heading">
 <span class="type">Remark</span><span class="codenumber">1.3.8</span>
 </h5>
-<p id="p-97">It is <!--Style me with CSS--><em>not</em> true that any countable product of countable (or even finite) sets is countable. Indeed, even the set \(\{0,1\}\times \{0,1\}\times \cdots\) is uncountable. (If you want to get into the gory details of this, the key is that there is a bijection from this set to the power set of the natural numbers, which Cantor's Theorem tells us is uncountable.  You are welcome to jump down this rabbit hole by googling “Cantor's Theorem,” if you desire, but know that you will not be responsible for that material in class.)</p></article><article class="theorem-like" id="corollary-1"><h5 class="heading">
+<p id="p-97">It is <!--Style me with CSS--><em>not</em> true that any countable product
+              of countable (or even finite) sets is countable. Indeed, even
+              the set \(\{0,1\}\times \{0,1\}\times \cdots\) is
+              uncountable. (If you want to get into the gory details
+              of this, the key is that there is a bijection from this set to
+              the power set of the natural numbers, which Cantor's Theorem
+              tells us is uncountable.  You are welcome to jump down this
+              rabbit hole by googling “Cantor's Theorem,” if you desire, but
+              know that you will not be responsible for that material in
+              class.)</p></article><article class="theorem-like" id="corollary-1"><h5 class="heading">
 <span class="type">Corollary</span><span class="codenumber">1.3.9</span>
 </h5>
-<p id="p-98">Let \(n&gt;1\) be an integer and let \(A_1,A_2,\ldots, A_n\) be countable sets. Then \(A_1\times A_2\times \cdots \times A_n\) is countable.</p></article></section></div></main>
+<p id="p-98">
+        Let \(n&gt;1\) be an integer and let \(A_1,A_2,\ldots, A_n\) be countable sets. Then \(A_1\times A_2\times \cdots \times A_n\) is countable.
+      </p></article></section></div></main>
 </div>
-<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
 </body>
 </html>

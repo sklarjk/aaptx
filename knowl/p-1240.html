@@ -1,8 +1,8 @@
 <!doctype html>
 <html>
 <!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-06T12:57:27-07:00    *-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2017-08-07T00:21:45-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,15 +13,24 @@
 </head>
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Define \(\phi: G/K\to G/N\) by \(\phi(aK)=aN\text{.}\) We have that \(\phi\) is well defined: indeed, let \(aK=bK \in G/K\text{.}\) Then by Statement 6 of <a knowl="./knowl/cosetfacts.html" knowl-id="xref-cosetfacts" alt="Theorem 7.2.7 " title="Theorem 7.2.7 ">Theorem 7.2.7</a>, we have \(aN=bN\text{,}\) that is, \(\phi(aK)=\phi(bK)\text{.}\) So \(\phi\) is well defined. \(\phi\) is clearly onto, and we have</p>
-\begin{align*}
-\Ker \phi\amp =\{aK\in
-G/K\,:\,\phi(aK)=N\}\\
-\amp =\{aK\in G/K\,:\,aN=N\}\\
-\amp =\{aK\in
-G/K\,:\,a\in N\}\\
-\amp =N/K.
+<p>
+      Since \(N\unlhd G\) and \(N\subseteq HN\text{,}\), \(N\) is normal in \(HN\)
+      (do you see why?). So \(HN/N\) is a group under left coset
+      multiplication. We define \(\phi: H\to HN/N\) by \(\phi(h)=hN\)
+      (notice that when \(h\in H\text{,}\), \(h\in HN\) since \(h=he_G\)). Clearly,
+      \(\phi\) is a homomorphism. Further, \(\phi\) is onto: Indeed, let
+      \(y\in HN/N\text{.}\). Then \(y=hnN\) for some \(h\in H\) and \(n\in N\text{.}\). But
+      \(nN=N\text{,}\), so \(y=hN=\phi(h)\text{.}\). Finally,
+      
+
+         \begin{align*}
+\Ker \phi\amp =\{h\in H\,:\, \phi(h)=N\}\\
+\amp =\{h\in H\,:\, hN=N\}\\
+\amp =\{h\in
+        H\,:\, h\in N\}\\
+\amp =H\cap N.
 \end{align*}
+    </p>
 <span class="incontext"><a href="section-29.html#p-1240">in-context</a></span>
 </body>
 </html>

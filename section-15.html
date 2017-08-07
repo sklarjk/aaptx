@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-06T12:57:01-07:00    *-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2017-08-07T00:21:22-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -10,37 +10,38 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Introduction to cyclic groups</title>
-<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="Keywords" content="Authored in MathBook XML">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
     },
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", },
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
         TagSide: "right",
         TagIndent: ".8em",
     },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
     "HTML-CSS": {
         scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
     },
 });
-</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\def\Z{\mathbb{Z}}
@@ -59,9 +60,9 @@ MathJax.Hub.Config({
 \DeclareMathOperator{\Ker}{Ker}
 \def\siml{\sim_L}
 \def\simr{\sim_R}
-\newcommand{\lt}{&lt;}
-\newcommand{\gt}{&gt;}
-\newcommand{\amp}{&amp;}
+\newcommand{\lt}{ &lt; }
+\newcommand{\gt}{ &gt; }
+\newcommand{\amp}{ &amp; }
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
@@ -69,9 +70,9 @@ MathJax.Hub.Config({
 <p class="byline">Jessica K. Sklar</p>
 </div>
 </div></div>
-<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<nav id="primary-navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="cyc.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="cyc.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-16.html" title="Next" alt="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" onclick="window.location.href='index.html'">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a class="previous-button toolbar-item button" href="cyc.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="cyc.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="section-16.html" title="Next" alt="Next">Next</a></span></div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
@@ -79,279 +80,403 @@ MathJax.Hub.Config({
 </div>
 </div></nav></header><div class="page">
 <aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
-<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html"><span class="title">Front Matter</span></a></h2>
 <ul>
-<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
-<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
-<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="colophon-1.html">Colophon</a></li>
+<li><a href="acknowledgement-1.html">Acknowledgements</a></li>
+<li><a href="preface-1.html">Preface</a></li>
 </ul>
-<h2 class="link"><a href="pre.html" data-scroll="pre"><span class="codenumber">1</span><span class="title">Preliminaries</span></a></h2>
+<h2 class="link"><a href="pre.html"><span class="codenumber">1</span><span class="title">Preliminaries</span></a></h2>
 <ul>
-<li><a href="section-1.html" data-scroll="section-1">Sets</a></li>
-<li><a href="section-2.html" data-scroll="section-2">Functions</a></li>
-<li><a href="section-3.html" data-scroll="section-3">Cardinality</a></li>
-<li><a href="exercises-1.html" data-scroll="exercises-1">Exercises</a></li>
+<li><a href="section-1.html">Sets</a></li>
+<li><a href="section-2.html">Functions</a></li>
+<li><a href="section-3.html">Cardinality</a></li>
+<li><a href="exercises-1.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="gps.html" data-scroll="gps"><span class="codenumber">2</span><span class="title">Groups</span></a></h2>
+<h2 class="link"><a href="gps.html"><span class="codenumber">2</span><span class="title">Groups</span></a></h2>
 <ul>
-<li><a href="section-4.html" data-scroll="section-4">Binary operations and structures</a></li>
-<li><a href="exercises-2.html" data-scroll="exercises-2">Exercises, Part I</a></li>
-<li><a href="section-5.html" data-scroll="section-5">The definition of a group</a></li>
-<li><a href="section-6.html" data-scroll="section-6">Examples of groups/nongroups, Part I</a></li>
-<li><a href="section-7.html" data-scroll="section-7">Group conventions and properties</a></li>
-<li><a href="section-8.html" data-scroll="section-8">Examples of groups/nongroups, Part II</a></li>
-<li><a href="section-9.html" data-scroll="section-9">Summaries of groups we've seen</a></li>
-<li><a href="exercises-3.html" data-scroll="exercises-3">Exercises, Part II</a></li>
+<li><a href="section-4.html">Binary operations and structures</a></li>
+<li><a href="exercises-2.html">Exercises, Part I</a></li>
+<li><a href="section-5.html">The definition of a group</a></li>
+<li><a href="section-6.html">Examples of groups/nongroups, Part I</a></li>
+<li><a href="section-7.html">Group conventions and properties</a></li>
+<li><a href="section-8.html">Examples of groups/nongroups, Part II</a></li>
+<li><a href="section-9.html">Summaries of groups we've seen</a></li>
+<li><a href="exercises-3.html">Exercises, Part II</a></li>
 </ul>
-<h2 class="link"><a href="homoiso.html" data-scroll="homoiso"><span class="codenumber">3</span><span class="title">Homorphisms and Isomorphisms</span></a></h2>
+<h2 class="link"><a href="homoiso.html"><span class="codenumber">3</span><span class="title">Homorphisms and Isomorphisms</span></a></h2>
 <ul>
-<li><a href="section-10.html" data-scroll="section-10">Groups of small order</a></li>
-<li><a href="section-11.html" data-scroll="section-11">Introduction to homomorphisms and isomorphisms</a></li>
-<li><a href="section-12.html" data-scroll="section-12">Isomorphic groups</a></li>
-<li><a href="exercises-4.html" data-scroll="exercises-4">Exercises</a></li>
+<li><a href="section-10.html">Groups of small order</a></li>
+<li><a href="section-11.html">Introduction to homomorphisms and isomorphisms</a></li>
+<li><a href="section-12.html">Isomorphic groups</a></li>
+<li><a href="exercises-4.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="subgps.html" data-scroll="subgps"><span class="codenumber">4</span><span class="title">Subgroups</span></a></h2>
+<h2 class="link"><a href="subgps.html"><span class="codenumber">4</span><span class="title">Subgroups</span></a></h2>
 <ul>
-<li><a href="section-13.html" data-scroll="section-13">Introduction to subgroups</a></li>
-<li><a href="section-14.html" data-scroll="section-14">Subgroup proofs and lattices</a></li>
-<li><a href="exercises-5.html" data-scroll="exercises-5">Exercises</a></li>
+<li><a href="section-13.html">Introduction to subgroups</a></li>
+<li><a href="section-14.html">Subgroup proofs and lattices</a></li>
+<li><a href="exercises-5.html">Exercises</a></li>
 </ul>
-<h2 class="link active"><a href="cyc.html" data-scroll="cyc"><span class="codenumber">5</span><span class="title">Cyclic Groups</span></a></h2>
+<h2 class="link active"><a href="cyc.html"><span class="codenumber">5</span><span class="title">Cyclic Groups</span></a></h2>
 <ul>
-<li><a href="section-15.html" data-scroll="section-15" class="active">Introduction to cyclic groups</a></li>
-<li><a href="section-16.html" data-scroll="section-16">The subgroup lattices of cyclic groups</a></li>
-<li><a href="exercises-6.html" data-scroll="exercises-6">Exercises</a></li>
+<li><a href="section-15.html" class="active">Introduction to cyclic groups</a></li>
+<li><a href="section-16.html">The subgroup lattices of cyclic groups</a></li>
+<li><a href="exercises-6.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="perm.html" data-scroll="perm"><span class="codenumber">6</span><span class="title">Permutation Groups and Dihedral Groups</span></a></h2>
+<h2 class="link"><a href="perm.html"><span class="codenumber">6</span><span class="title">Permutation Groups and Dihedral Groups</span></a></h2>
 <ul>
-<li><a href="section-17.html" data-scroll="section-17">Introduction to permutation groups</a></li>
-<li><a href="section-18.html" data-scroll="section-18">Symmetric groups</a></li>
-<li><a href="section-19.html" data-scroll="section-19">Alternating groups</a></li>
-<li><a href="section-20.html" data-scroll="section-20">Cayley's Theorem</a></li>
-<li><a href="dihedralgps.html" data-scroll="dihedralgps">Dihedral groups</a></li>
-<li><a href="exercises-7.html" data-scroll="exercises-7">Exercises</a></li>
+<li><a href="section-17.html">Introduction to permutation groups</a></li>
+<li><a href="section-18.html">Symmetric groups</a></li>
+<li><a href="section-19.html">Alternating groups</a></li>
+<li><a href="section-20.html">Cayley's Theorem</a></li>
+<li><a href="dihedralgps.html">Dihedral groups</a></li>
+<li><a href="exercises-7.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="coslag.html" data-scroll="coslag"><span class="codenumber">7</span><span class="title">The Wonderful World of Cosets</span></a></h2>
+<h2 class="link"><a href="coslag.html"><span class="codenumber">7</span><span class="title">The Wonderful World of Cosets</span></a></h2>
 <ul>
-<li><a href="section-22.html" data-scroll="section-22">Partitions of and equivalence relations on sets</a></li>
-<li><a href="section-23.html" data-scroll="section-23">Introduction to cosets and normal subgroups</a></li>
-<li><a href="section-24.html" data-scroll="section-24">The index of a subgroup and Lagrange's Theorem</a></li>
-<li><a href="exercises-8.html" data-scroll="exercises-8">Exercises</a></li>
+<li><a href="section-22.html">Partitions of and equivalence relations
+  on sets</a></li>
+<li><a href="section-23.html">Introduction to cosets and normal subgroups</a></li>
+<li><a href="section-24.html">The index of a subgroup and Lagrange's Theorem</a></li>
+<li><a href="exercises-8.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="factorgps.html" data-scroll="factorgps"><span class="codenumber">8</span><span class="title">Factor Groups</span></a></h2>
+<h2 class="link"><a href="factorgps.html"><span class="codenumber">8</span><span class="title">Factor Groups</span></a></h2>
 <ul>
-<li><a href="section-25.html" data-scroll="section-25">Motivation</a></li>
-<li><a href="section-26.html" data-scroll="section-26">Focusing on normal subgroups</a></li>
-<li><a href="section-27.html" data-scroll="section-27">Introduction to factor groups</a></li>
-<li><a href="exercises-9.html" data-scroll="exercises-9">Exercises</a></li>
+<li><a href="section-25.html">Motivation</a></li>
+<li><a href="section-26.html">Focusing on normal subgroups</a></li>
+<li><a href="section-27.html">Introduction to factor groups</a></li>
+<li><a href="exercises-9.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="isothms.html" data-scroll="isothms"><span class="codenumber">9</span><span class="title">The Isomorphism Theorems</span></a></h2>
+<h2 class="link"><a href="isothms.html"><span class="codenumber">9</span><span class="title">The Isomorphism Theorems</span></a></h2>
 <ul>
-<li><a href="section-28.html" data-scroll="section-28">The First Isomorphism Theorem</a></li>
-<li><a href="section-29.html" data-scroll="section-29">The Second and Third Isomorphism Theorems</a></li>
-<li><a href="exercises-10.html" data-scroll="exercises-10">Exercises</a></li>
+<li><a href="section-28.html">The First Isomorphism Theorem</a></li>
+<li><a href="section-29.html">The Second and Third Isomorphism Theorems</a></li>
+<li><a href="exercises-10.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<h2 class="link"><a href="backmatter-1.html"><span class="title">Back Matter</span></a></h2>
 <ul>
-<li><a href="appendix-1.html" data-scroll="appendix-1">Notation</a></li>
-<li><a href="appendix-2.html" data-scroll="appendix-2">Solutions to Exercises</a></li>
-<li><a href="references-1.html" data-scroll="references-1">Bibliography</a></li>
-<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
-<li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+<li><a href="appendix-1.html">Notation</a></li>
+<li><a href="appendix-2.html">Solutions to Exercises</a></li>
+<li><a href="references-1.html">Bibliography</a></li>
+<li><a href="appendix-gfdl.html">GNU Free Documentation License</a></li>
+<li><a href="colophon-2.html">Colophon</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-15"><header title="Section 5.1 Introduction to cyclic groups"><h1 class="heading hide-type" alt="Section 5.1 Introduction to cyclic groups">
 <span class="type">Section</span><span class="codenumber">5.1</span><span class="title">Introduction to cyclic groups</span>
-</h1></header><p id="p-590">Certain groups and subgroups of groups have particularly nice structures.</p>
-<article class="definition-like" id="definition-38"><h5 class="heading">
+</h1></header><p id="p-593">
+    Certain groups and subgroups of groups have particularly nice structures.
+  </p>
+<article class="definition-like" id="definition-36"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">5.1.1</span>
 </h5>
-<p id="p-591">A group is <em class="terminology">cyclic</em> if it is isomorphic to \(\Z_n\) for some \(n\geq 1\text{,}\) or if it is isomorphic to \(\Z\text{.}\)</p></article><article class="example-like" id="example-42"><h5 class="heading">
+<p id="p-594">
+        A group is <em class="terminology">cyclic</em> if it is isomorphic to \(\Z_n\) for some \(n\geq 1\text{,}\) or if it is isomorphic to \(\Z\text{.}\)
+      </p></article><article class="example-like" id="example-44"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">5.1.2</span>
 </h5>
-<p id="p-592">Examples/nonexamples of cyclic groups. </p>
+<p id="p-595">
+        Examples/nonexamples of cyclic groups.
+        </p>
 <ol id="ol-61" style="list-style-type: decimal;">
-<li id="li-246"><p id="p-593">\(n\Z\) and \(\Z_n\) are cyclic for every \(n\in \Z^+\text{.}\)</p></li>
-<li id="li-247"><p id="p-594">\(\R\text{,}\) \(\R^*\text{,}\) \(\M_2(\R)\text{,}\) and \(GL(2,\R)\) are uncountable and hence can't be cyclic.</p></li>
-<li id="li-248"><p id="p-595">\(\Z_2^2\) is <!--Style me with CSS--><em>not</em> cyclic since it would have to be isomorphic to \(\Z_4\) if it were (since it has order 4).</p></li>
-<li id="li-249"><p id="p-596">\(\Q\) isn't cyclic. If it were cyclic it would have to be isomorphic to \(\Z\text{,}\) since \(\Q\) is an infinite group (so can't be isomorphic to \(\Z_n\) for any \(n\)). But we showed in <a knowl="./knowl/zq.html" knowl-id="xref-zq" alt="Example 3.3.16 " title="Example 3.3.16 ">Example 3.3.16</a> that \(\Q \not\simeq \Z\text{.}\)</p></li>
-</ol></article><article class="remark-like" id="remark-19"><h5 class="heading">
+<li id="li-243"><p id="p-596">
+              \(n\Z\) and \(\Z_n\) are cyclic for every \(n\in \Z^+\text{.}\)
+            </p></li>
+<li id="li-244"><p id="p-597">
+              \(\R\text{,}\) \(\R^*\text{,}\) \(\M_2(\R)\text{,}\) and \(GL(2,\R)\) are uncountable and hence can't be cyclic.
+            </p></li>
+<li id="li-245"><p id="p-598">
+              \(\Z_2^2\) is <!--Style me with CSS--><em>not</em> cyclic since it would have to be isomorphic to \(\Z_4\) if it were (since it has order 4).
+            </p></li>
+<li id="li-246"><p id="p-599">
+              \(\Q\) isn't cyclic. If it were cyclic it would have to be isomorphic to \(\Z\text{,}\) since \(\Q\)
+              is an infinite group (so can't be isomorphic to \(\Z_n\) for any \(n\)). But we showed in <a knowl="./knowl/zq.html" knowl-id="xref-zq" alt="Example 3.3.16 " title="Example 3.3.16 ">Example 3.3.16</a> that \(\Q \not\simeq \Z\text{.}\)
+            </p></li>
+</ol>
+<p>
+      </p></article><article class="remark-like" id="remark-19"><h5 class="heading">
 <span class="type">Remark</span><span class="codenumber">5.1.3</span>
 </h5>
-<p id="p-597">Clearly, cyclicity is a group invariant.</p></article><article class="theorem-like" id="abcyc"><h5 class="heading">
+<p id="p-600">
+      Clearly, cyclicity is a group invariant.
+    </p></article><article class="theorem-like" id="abcyc"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">5.1.4</span>
 </h5>
-<p id="p-598">If \(G\) is cyclic, then \(G\) is abelian; however, \(G\) can be abelian but not cyclic.</p></article><div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-20" id="proof-20"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-20" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-599">Since \(\Z\) and each \(\Z_n\) are abelian, every cyclic group is abelian. But, for instance, \(\R\) is an abelian noncyclic group (it can't be cyclic because it is uncountable).</p></article></span>
+<p id="p-601">
+        If \(G\) is cyclic, then \(G\) is abelian; however, \(G\)
+        can be abelian but not cyclic.
+      </p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-20" id="proof-20"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-20" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-602">
+      Since \(\Z\) and each \(\Z_n\) are abelian, every cyclic group is abelian. But, for instance, \(\R\) is an abelian noncyclic group (it can't be cyclic because it is uncountable).
+    </p></article></span>
 </div>
-<article class="definition-like" id="definition-39"><h5 class="heading">
+<article class="definition-like" id="definition-37"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">5.1.5</span>
 </h5>
-<p id="p-600">Let \(a\) be an element of a group \(G\text{.}\) Then</p>
-\begin{equation*}
-\langle a\rangle  = \{a^n:n\in \Z\}=\{\ldots, a^{-2},a^{-1},a^0,a^1,a^2,\ldots\}
-\end{equation*}
-<p>is called the <em class="terminology">(cyclic) subgroup of \(G\) generated by \(a\)</em>. (We will later see why the words “cyclic” and “generated” are used here.)</p></article><article class="remark-like" id="remark-20"><h5 class="heading">
+<p id="p-603">
+        Let \(a\) be an element of a group \(G\text{.}\) Then
+        \begin{equation*}
+          \langle a\rangle  = \{a^n:n\in \Z\}=\{\ldots, a^{-2},a^{-1},a^0,a^1,a^2,\ldots\}
+        \end{equation*}
+        is called the <em class="terminology">(cyclic) subgroup of \(G\) generated by \(a\)</em>.
+        (We will later see why the words “cyclic” and
+        “generated” are used here.)
+      </p></article><article class="remark-like" id="remark-20"><h5 class="heading">
 <span class="type">Remark</span><span class="codenumber">5.1.6</span>
 </h5>
-<p id="p-601">Note that in the above definition, we were using multiplicative notation. Using additive notation, we have \(\langle a\rangle =\{na:n\in \Z\}=\{\ldots, -2a, -a, 0a, 1a, 2a, \ldots\}.\)</p></article><article class="theorem-like" id="theorem-22"><h5 class="heading">
+<p id="p-604">
+      Note that in the above definition, we were using
+      multiplicative notation. Using additive notation, we have
+      \(\langle a\rangle =\{na:n\in \Z\}=\{\ldots, -2a, -a, 0a, 1a, 2a, \ldots\}.\)
+    </p></article><article class="theorem-like" id="theorem-20"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">5.1.7</span>
 </h5>
-<p id="p-602">Let \(a\) be an element of a group \(G\text{.}\) Then \(\langle a\rangle \leq G\text{.}\)</p></article><div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-21" id="proof-21"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-21" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-603">Let \(x,y\in \langle a\rangle\text{.}\) Then \(x=a^i\text{,}\) \(y=a^j\) for some \(i,j\in \Z\text{.}\) So \(xy=a^ia^j=a^{i+j}\in \langle a\rangle\text{.}\) Next, \(e_G=a^0\in H\text{.}\) Finally, \((a^i)^{-1}=a^{-i}\in H\text{.}\) So \(\langle a\rangle\) is a subgroup of \(G\text{.}\)</p></article></span>
+<p id="p-605">
+        Let \(a\) be an element of a group \(G\text{.}\) Then \(\langle a\rangle \leq G\text{.}\)
+      </p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-21" id="proof-21"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-21" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-606">
+      Let \(x,y\in \langle a\rangle\text{.}\) Then \(x=a^i\text{,}\) \(y=a^j\) for some \(i,j\in \Z\text{.}\) So \(xy=a^ia^j=a^{i+j}\in \langle a\rangle\text{.}\) Next, \(e_G=a^0\in H\text{.}\) Finally, \((a^i)^{-1}=a^{-i}\in H\text{.}\) So \(\langle a\rangle\) is a subgroup of \(G\text{.}\)
+    </p></article></span>
 </div>
-<p id="p-604">We next prove a lemma to which we will refer when proving the theorem which succeeds it.</p>
+<p id="p-607">We next prove a lemma to which we will refer when proving the theorem which succeeds it.</p>
 <article class="theorem-like" id="clock"><h5 class="heading">
 <span class="type">Lemma</span><span class="codenumber">5.1.8</span><span class="title">Clock Lemma</span>
 </h5>
-<p id="p-605">Let \(G\) be a group and let \(a \in G\text{.}\) Suppose there is a positive power of \(a\) which equals the identity element \(e\) of \(G\text{.}\) Let \(n\) be the least such positive integer. Then for all \(s,t\in \Z\text{,}\) \(a^s=a^t\) if and only if \(s\) is congruent to \(t\) modulo \(n\text{.}\)</p></article><div class="posterior">
+<p id="p-608"> Let \(G\) be a group and let \(a \in G\text{.}\) Suppose there is a positive power of \(a\) which equals the identity element \(e\) of \(G\text{.}\) Let \(n\) be the least such positive integer. Then for all \(s,t\in \Z\text{,}\) \(a^s=a^t\) if and only if \(s\) is congruent to \(t\) modulo \(n\text{.}\)
+    </p></article><div class="posterior">
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-22" id="proof-22"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></div>
-<div id="hk-proof-22" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-606">Let \(s,t\in \Z\text{.}\) By the <a knowl="./knowl/divalg.html" knowl-id="xref-divalg" alt="Theorem 2.6.6 Division Algorithm" title="Theorem 2.6.6 Division Algorithm">Division Algorithm</a>, there exist \(q\in \Z\) and \(r\in \Z_n\) with \(s-t=qn+r\text{.}\) Then \(a^{s-t}=a^{qn+r}=(a^n)^qa^r=e^qa^r=a^r\text{.}\) Since \(0\leq r\lt n\text{,}\) be definition of \(n\) we have that \(a^{s-t}=e\) if and only if \(r=0\text{;}\) that is, \(a^s=a^t\) if and only if \(s\) and \(t\) are congruent modulo \(n\text{.}\)</p></article></div>
+<div id="hk-proof-22" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-609">
+     Let \(s,t\in \Z\text{.}\) By the <a knowl="./knowl/divalg.html" knowl-id="xref-divalg" alt="Theorem 2.6.6 Division Algorithm" title="Theorem 2.6.6 Division Algorithm">2.6.6</a>, there exist \(q\in \Z\) and \(r\in \Z_n\) with \(s-t=qn+r\text{.}\) Then \(a^{s-t}=a^{qn+r}=(a^n)^qa^r=e^qa^r=a^r\text{.}\) Since \(0\leq r\lt n\text{,}\) be definition of \(n\) we have that \(a^{s-t}=e\) if and only if \(r=0\text{;}\) that is, \(a^s=a^t\) if and only if \(s\) and \(t\) are congruent modulo \(n\text{.}\)
+    </p></article></div>
 </div>
-<article class="theorem-like" id="theorem-23"><h5 class="heading">
+<article class="theorem-like" id="theorem-21"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">5.1.9</span>
 </h5>
-<p id="p-607">Let \(G\) be a group with identity element \(e\text{,}\) and let \(a\in G\text{.}\) Then the group \(\langle a\rangle\) is cyclic.</p></article><div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-23" id="proof-23"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-23" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-608"><!--Style me with CSS--><em>Case 1.</em> There is no positive integer \(k\) with \(a^k=e\text{.}\) In this case, we claim \(\langle a\rangle \simeq \Z\text{.}\) Indeed: Let \(\phi:\Z\to \langle a\rangle\) be defined by \(\phi(i)=a^i\text{.}\) Clearly, \(\phi\) is a homomorphism that is onto. So to show that \(\phi\) is an isomorphism, it suffices to show that \(\phi\) is one-to-one. Let \(i,j\in \Z\) with \(\phi(i)=\phi(j)\text{.}\) Then \(a^i=a^j\text{.}\) Without loss of generality, we may assume \(i\geq j\text{.}\) Then, multiplying both sides of the equation by \(a^{-j}\) (on the right or on the left) we obtain \(a^{i-j}=e\text{.}\) Since \(i-j\in \N\) and there is no positive integer \(k\) with \(a^k=e\text{,}\) we must have \(i-j=0\text{,}\) so \(i=j\text{.}\) Thus, \(\phi\) is an isomorphism from \(\Z\) to \(\langle a\rangle\text{.}\)</p>
-<p id="p-609"><!--Style me with CSS--><em>Case 2.</em>  There is a positive integer \(k\) such that \(a^k=e\text{.}\) In this case, let \(n\) be the least such positive integer. Define \(\phi:\Z_n\to \langle a\rangle\) be defined by \(\phi(i)=a^i\text{.}\) We claim that \(\phi\) is an isomorphism.</p>
-<p id="p-610">First, let \(i,j\in \Z\text{.}\) We want to show that \(\phi(i+_nj)=\phi(i)\phi(j)\text{,}\) that is, that \(a^{i+_nj}=a^ia^j\text{.}\) Since \(i+j\) is congruent to \(i+_nj\) modulo \(n\text{,}\) \(a^ia^j=a^{i+j}=a^{i+_nj}\text{,}\) by the <a knowl="./knowl/clock.html" knowl-id="xref-clock" alt="Lemma 5.1.8 Clock Lemma" title="Lemma 5.1.8 Clock Lemma">Clock Lemma</a>. So \(\phi\) is a homomorphism. Next we show that \(\phi\) is one-to-one. Let \(i,j\in \Z_n\) with \(\phi(i)=\phi(j)\text{,}\) so \(a^i=a^j\text{.}\) Then, by the Clock Lemma, \(i\) and \(j\) are congruent modulo \(n\text{.}\) Since they're both in \(\Z_n\text{,}\) they must be equal, so \(\phi\) is one-to-one. Finally, we show that \(\phi\) is onto. let \(x\in \langle a\rangle\text{.}\) Then \(x=a^i\) for some \(i\in \Z\text{.}\) Letting \(r\) be the remainder when we divide \(i\) by \(n\text{,}\) we have \(r\in \Z_n\) with \(i\) congruent to \(r\) modulo \(n\text{;}\) so, again using the <a knowl="./knowl/clock.html" knowl-id="xref-clock" alt="Lemma 5.1.8 Clock Lemma" title="Lemma 5.1.8 Clock Lemma">Clock Lemma</a>, \(x=a^i=a^r\text{.}\) Since \(r\in \Z_n\text{,}\) \(x=\phi(r)\text{.}\) So \(\phi\) is onto.</p>
-<p id="p-611">Thus, \(\phi\) is an isomorphism, and so in this case we have \(\Z_n \simeq \langle a \rangle\text{.}\)</p></article></span>
+<p id="p-610">
+        Let \(G\) be a group with identity element \(e\text{,}\) and let \(a\in G\text{.}\) Then the group \(\langle a\rangle\) is cyclic.
+      </p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-23" id="proof-23"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-23" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-611">
+    <!--Style me with CSS--><em>Case 1.</em> There is no positive integer \(k\) with \(a^k=e\text{.}\) In this case, we claim \(\langle a\rangle \simeq \Z\text{.}\) Indeed: Let \(\phi:\Z\to \langle a\rangle\) be defined by \(\phi(i)=a^i\text{.}\) Clearly, \(\phi\) is a homomorphism that is onto. So to show that \(\phi\) is an isomorphism, it suffices to show that \(\phi\) is one-to-one. Let \(i,j\in \Z\) with \(\phi(i)=\phi(j)\text{.}\) Then \(a^i=a^j\text{.}\) Without loss of generality, we may assume \(i\geq j\text{.}\) Then, multiplying both sides of the equation by \(a^{-j}\) (on the right or on the left) we obtain \(a^{i-j}=e\text{.}\) Since \(i-j\in \N\) and there is no positive integer \(k\) with \(a^k=e\text{,}\) we must have \(i-j=0\text{,}\) so \(i=j\text{.}\) Thus, \(\phi\) is an isomorphism from \(\Z\) to \(\langle a\rangle\text{.}\)
+  </p>
+<p id="p-612">
+    <!--Style me with CSS--><em>Case 2.</em>  There is a positive integer \(k\) such that \(a^k=e\text{.}\) In this case, let \(n\) be the least such positive integer. Define \(\phi:\Z_n\to \langle a\rangle\) be defined by \(\phi(i)=a^i\text{.}\) We claim that \(\phi\) is an isomorphism.
+  </p>
+<p id="p-613"> First, let \(i,j\in \Z\text{.}\) We want to show that \(\phi(i+_nj)=\phi(i)\phi(j)\text{,}\) that is, that \(a^{i+_nj}=a^ia^j\text{.}\) Since \(i+j\) is congruent to \(i+_nj\) modulo \(n\text{,}\) \(a^ia^j=a^{i+j}=a^{i+_nj}\text{,}\) by the <a knowl="./knowl/clock.html" knowl-id="xref-clock" alt="Lemma 5.1.8 Clock Lemma" title="Lemma 5.1.8 Clock Lemma">5.1.8</a>. So \(\phi\) is a homomorphism. Next we show that \(\phi\) is one-to-one. Let \(i,j\in \Z_n\) with \(\phi(i)=\phi(j)\text{,}\) so \(a^i=a^j\text{.}\) Then, by the Clock Lemma, \(i\) and \(j\) are congruent modulo \(n\text{.}\) Since they're both in \(\Z_n\text{,}\) they must be equal,
+    so \(\phi\) is one-to-one. Finally, we show that \(\phi\) is onto. let \(x\in \langle a\rangle\text{.}\) Then \(x=a^i\) for some \(i\in \Z\text{.}\) Letting \(r\) be the remainder when we divide \(i\) by \(n\text{,}\) we have \(r\in \Z_n\) with \(i\) congruent to \(r\) modulo \(n\text{;}\) so, again using the <a knowl="./knowl/clock.html" knowl-id="xref-clock" alt="Lemma 5.1.8 Clock Lemma" title="Lemma 5.1.8 Clock Lemma">5.1.8</a>, \(x=a^i=a^r\text{.}\) Since \(r\in \Z_n\text{,}\) \(x=\phi(r)\text{.}\) So \(\phi\) is onto.</p>
+<p id="p-614">Thus, \(\phi\) is an isomorphism, and so in this case we have \(\Z_n \simeq \langle a \rangle\text{.}\)
+  </p></article></span>
 </div>
-<article class="definition-like" id="definition-40"><h5 class="heading">
+<article class="definition-like" id="definition-38"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">5.1.10</span>
 </h5>
-<p id="p-612">Let \(G\) be a group and let \(a\in G\text{.}\) We define the <em class="terminology">order</em> of \(a\text{,}\) denoted \(o(a)\text{,}\) to be \(|\langle a\rangle |\text{.}\) (Note: If there exists a positive integer \(k\) such that \(a^k=e\text{,}\) then the least such integer is the order of \(a\text{;}\) otherwise, \(o(a)=\infty\text{.}\))</p></article><article class="remark-like" id="remark-21"><h5 class="heading">
+<p id="p-615">
+        Let \(G\) be a group and let \(a\in G\text{.}\) We define the <em class="terminology">order</em> of \(a\text{,}\) denoted \(o(a)\text{,}\) to be \(|\langle a\rangle |\text{.}\) (Note: If there exists a positive integer \(k\) such that \(a^k=e\text{,}\) then the least such integer is the order of \(a\text{;}\) otherwise, \(o(a)=\infty\text{.}\))
+      </p></article><article class="remark-like" id="remark-21"><h5 class="heading">
 <span class="type">Remark</span><span class="codenumber">5.1.11</span>
 </h5>
-<p id="p-613">Do not confuse the order of a group with the order of an <!--Style me with CSS--><em>element of a group</em>. These are related concepts, but they are distinct, and have distinct notations: as we've seen, the order of a group, \(G\text{,}\) is denoted by \(|G|\text{,}\) while the order of an element \(a\) of a group is denoted by \(o(a)\text{.}\)</p></article><p id="p-614">We have the following handy theorem.</p>
+<p id="p-616">
+      Do not confuse the order of a group with the order
+      of an <!--Style me with CSS--><em>element of a group</em>. These are related concepts, but they are distinct, and have distinct
+      notations: as we've seen, the order of a group, \(G\text{,}\) is denoted by
+      \(|G|\text{,}\) while the order of an element \(a\) of a group is denoted by
+      \(o(a)\text{.}\)
+    </p></article><p id="p-617">
+    We have the following handy theorem.
+  </p>
 <article class="theorem-like" id="invord"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">5.1.12</span>
 </h5>
-<p id="p-615">Let \(a\in G\text{.}\) Then \(o(a)=o(a^{-1})\text{.}\)</p></article><div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-24" id="proof-24"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-24" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-616">First, assume \(o(a)=n\lt \infty\text{.}\) Then</p>
-\begin{equation*}
-(a^{-1})^n=(a^n)^{-1}=e^{-1}=e,
-\end{equation*}
-<p>so \(o(a^{-1})\leq n=o(a)\text{.}\) Using the same argument, we have \(n=o(a)\leq o(a^{-1})\text{.}\) Since \(o(a^{-1})\leq n\) and \(n\leq o(a^{-1})\text{,}\) \(o(a^{-1})=n=o(a)\text{.}\)</p>
-<p id="p-617">On the other hand, assume \(o(a)= \infty\text{.}\) Then \(a^{-1}\) must also have infinite order, since if it had finite order \(m\text{,}\) \(a\) would, by the above argument, have order less than or equal to \(m\text{.}\)</p></article></span>
+<p id="p-618">
+        Let \(a\in G\text{.}\) Then \(o(a)=o(a^{-1})\text{.}\)
+      </p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-24" id="proof-24"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-24" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-619">
+      First, assume \(o(a)=n\lt \infty\text{.}\) Then
+      \begin{equation*}
+        (a^{-1})^n=(a^n)^{-1}=e^{-1}=e,
+      \end{equation*}
+      so \(o(a^{-1})\leq n=o(a)\text{.}\) Using the same argument, we have \(n=o(a)\leq o(a^{-1})\text{.}\) Since \(o(a^{-1})\leq n\) and \(n\leq o(a^{-1})\text{,}\) \(o(a^{-1})=n=o(a)\text{.}\)
+    </p>
+<p id="p-620">
+      On the other hand, assume \(o(a)= \infty\text{.}\) Then \(a^{-1}\) must also have infinite order, since if it had finite order \(m\text{,}\) \(a\) would, by the above argument, have order less than or equal to \(m\text{.}\)
+    </p></article></span>
 </div>
-<p id="p-618">Unfortunately, there's no formula one can simply use to compute the order of an element in an arbitrary group. However, in the special case that the group is cyclic of order \(n\text{,}\) we do have such a formula. We present the following result without proof.</p>
+<p id="p-621">
+    Unfortunately, there's no formula one can simply use to compute the order
+    of an element in an arbitrary group. However, in the special case
+    that the group is cyclic of order \(n\text{,}\) we do have such a formula. We
+    present the following result without proof.
+  </p>
 <article class="theorem-like" id="znorders"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">5.1.13</span>
 </h5>
-<p id="p-619">For each \(a\in \Z_n\text{,}\) \(o(a)=n/\gcd(n,a)\text{.}\)</p></article><p id="p-620">Here are some examples of cyclic subgroups of groups, and orders of group elements.</p>
+<p id="p-622">
+        For each \(a\in \Z_n\text{,}\) \(o(a)=n/\gcd(n,a)\text{.}\)
+      </p></article><p id="p-623">
+    Here are some examples of cyclic subgroups of groups, and orders of group elements.
+  </p>
 <article class="example-like" id="csexs"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">5.1.14</span>
 </h5>
 <ol id="ol-62" style="list-style-type: decimal;">
-<li id="li-250"><p id="p-621">In \(\Z\text{,}\) \(\langle 2\rangle =\{\ldots,-4,-2,0,2,4,\ldots\}=2\Z\text{.}\) More generally, given any \(n\in \Z\text{,}\) in \(\Z\) we have \(\langle n\rangle =n\Z\text{.}\) For \(a\in \Z\text{,}\) \(o(a)=\infty\) if \(a\neq 0\text{;}\) \(o(0)=1\text{.}\)</p></li>
-<li id="li-251"><p id="p-622">In \(\Z_8\text{,}\) we have \(\langle 0\rangle =\{0\}\text{,}\) \(\langle 1\rangle =\langle 3\rangle =\langle 5\rangle =\langle 7\rangle =\Z_8,\) \(\langle 2\rangle =\langle 6\rangle =\{0,2,4,6\},\) and \(\langle 4\rangle =\{0,4\}\text{.}\)</p></li>
-<li id="li-252"><p id="p-623">In \(\R\text{,}\) \(\langle \pi\rangle =\pi\Z\text{,}\) so \(o(\pi)=\infty\text{.}\)</p></li>
-<li id="li-253"><p id="p-624">In \(\R^*\text{,}\) \(\langle \pi\rangle =\{\pi^n:n\in \Z\}\text{.}\) Again, \(o(\pi)=\infty\text{.}\)</p></li>
-<li id="li-254">
-<p id="p-625">In \(\M_2(\R)\text{,}\)</p>
-\begin{equation*}
-\left\langle \left[
-\begin{array}{cc}
-1 \amp  1 \\
-0 \amp  1
-\end{array} 
-\right]\right\rangle =\left\{\left[
-\begin{array}{cc}
-c \amp  c \\
-0 \amp  c
-\end{array} 
-\right] : c\in \Z \right\}= \left\{c\left[
-\begin{array}{cc}
-1 \amp  1 \\
-0 \amp  1
-\end{array} 
-\right] : c\in \Z \right\}.
-\end{equation*}
-<p>The order of the the matrix is therefore infinity.</p>
-</li>
-<li id="li-255"><p id="p-626">In \(\M_2(\Z_2)\text{,}\) if \(A=\left[
-\begin{array}{cc}
-1 \amp  1 \\
-0 \amp  1
-\end{array} 
-\right]\text{,}\) then \(\langle A\rangle =\{A, \0\}\text{,}\) so \(A\) has order 2.</p></li>
-<li id="li-256"><p id="p-627">In \(GL(2,\Z_2)\text{,}\) \(\left[
-\begin{array}{cc}
-1 \amp  1 \\
-0 \amp  1
-\end{array} 
-\right]\) has order 2. (Why?)</p></li>
-<li id="li-257"><p id="p-628">In \(GL(2,\R)\text{,}\) \(\left[
-\begin{array}{cr}
-0 \amp  -1 \\
-1 \amp  0
-\end{array} 
-\right]\) has order 4. (Why?)</p></li>
-<li id="li-258"><p id="p-629">In \(GL(2,\R)\text{,}\) \(\left[
-\begin{array}{cc}
-1 \amp  1 \\
-0 \amp  1
-\end{array} 
-\right]\) has infinite order. (Why?)</p></li>
-<li id="li-259"><p id="p-630">In \(GL(4,\Z_2)\text{,}\) \(A=\left[
-\begin{array}{cccc}
-0 \amp  0 \amp  1 \amp  0 \\
-0 \amp  0 \amp  0 \amp  1 \\
-1 \amp  0 \amp  0 \amp  0 \\
-0 \amp  1 \amp  0 \amp  0
-\end{array} 
-\right]\) has order 2. (Why?)</p></li>
-</ol></article><article class="theorem-like" id="theorem-26"><h5 class="heading">
+<li id="li-247"><p id="p-624">
+            In \(\Z\text{,}\) \(\langle 2\rangle =\{\ldots,-4,-2,0,2,4,\ldots\}=2\Z\text{.}\) More generally, given any \(n\in \Z\text{,}\) in \(\Z\) we have \(\langle n\rangle =n\Z\text{.}\) For \(a\in \Z\text{,}\) \(o(a)=\infty\) if \(a\neq 0\text{;}\) \(o(0)=1\text{.}\)
+          </p></li>
+<li id="li-248"><p id="p-625">
+            In \(\Z_8\text{,}\) we have \(\langle 0\rangle =\{0\}\text{,}\) \(\langle 1\rangle =\langle 3\rangle =\langle 5\rangle =\langle 7\rangle =\Z_8,\) \(\langle 2\rangle =\langle 6\rangle =\{0,2,4,6\},\) and \(\langle 4\rangle =\{0,4\}\text{.}\)
+          </p></li>
+<li id="li-249"><p id="p-626">
+            In \(\R\text{,}\) \(\langle \pi\rangle =\pi\Z\text{,}\) so \(o(\pi)=\infty\text{.}\)
+          </p></li>
+<li id="li-250"><p id="p-627">
+            In \(\R^*\text{,}\) \(\langle \pi\rangle =\{\pi^n:n\in \Z\}\text{.}\) Again, \(o(\pi)=\infty\text{.}\)
+          </p></li>
+<li id="li-251"><p id="p-628">
+            In \(\M_2(\R)\text{,}\)
+            \begin{equation*}
+              \left\langle 
+              \begin{bmatrix}
+              1 \amp  1 \\
+              0 \amp  1
+              \end{bmatrix}\right\rangle =\left\{
+              \begin{bmatrix}
+              c \amp  c \\
+              0 \amp  c
+              \end{bmatrix} 
+              : c\in \Z \right\}= \left\{c
+              \begin{bmatrix}
+              1 \amp  1 \\
+              0 \amp  1
+              \end{bmatrix} 
+             : c\in \Z \right\}.
+            \end{equation*}
+            The matrix therefore has infinite order.
+          </p></li>
+<li id="li-252"><p id="p-629">
+            In \(\M_2(\Z_2)\text{,}\) if \(A=
+            \begin{bmatrix}
+            1 \amp  1 \\
+            0 \amp  1
+            \end{bmatrix} 
+           \text{,}\) then \(\langle A\rangle =\left\{A, \begin{bmatrix}0\amp 0 \\ 0\amp 0\end{bmatrix}\right\}\text{,}\) so \(A\) has order 2.
+          </p></li>
+<li id="li-253"><p id="p-630">
+            In \(GL(2,\Z_2)\text{,}\) \(
+            \begin{bmatrix}
+            1 \amp  1 \\
+            0 \amp  1
+            \end{bmatrix} 
+            \) has order 2. (Why?)
+          </p></li>
+<li id="li-254"><p id="p-631">
+            In \(GL(2,\R)\text{,}\) \(
+
+            \begin{bmatrix}            
+            0 \amp  -1 \\
+            1 \amp  \phantom{-}0
+            \end{bmatrix} 
+           \) has order 4. (Why?)
+          </p></li>
+<li id="li-255"><p id="p-632">
+            In \(GL(2,\R)\text{,}\) \(
+            \begin{bmatrix}
+            1 \amp  1 \\
+            0 \amp  1
+            \end{bmatrix} 
+           \) has infinite order. (Why?)
+          </p></li>
+<li id="li-256"><p id="p-633">
+            In \(GL(4,\Z_2)\text{,}\)
+            \(A=\
+            \begin{bmatrix}
+            0 \amp  0 \amp  1 \amp  0 \\
+            0 \amp  0 \amp  0 \amp  1 \\
+            1 \amp  0 \amp  0 \amp  0 \\
+            0 \amp  1 \amp  0 \amp  0
+            \end{bmatrix} 
+            \) has order 2. (Why?)
+          </p></li>
+</ol></article><article class="theorem-like" id="theorem-24"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">5.1.15</span>
 </h5>
-<p id="p-631">Every cyclic group \(G\) is of the form \(\langle a\rangle\) for some \(a\in G\text{.}\)</p></article><div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-25" id="proof-25"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-25" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-632">Let \(G\) be cyclic. Suppose \(|G|=\infty\text{.}\) Then there is an isomorphism \(\phi: \Z\to G\text{.}\) Note that \(\Z=\langle 1\rangle\text{.}\) So</p>
+<p id="p-634">
+        Every cyclic group \(G\) is of the form \(\langle a\rangle\) for some \(a\in G\text{.}\)
+      </p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-25" id="proof-25"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-25" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-635">
+      Let \(G\) be cyclic. Suppose \(|G|=\infty\text{.}\) Then there is an isomorphism \(\phi: \Z\to G\text{.}\) Note that \(\Z=\langle 1\rangle\text{.}\) So
+
 \begin{align*}
-G \amp =\phi(\Z)\\
+ G \amp =\phi(\Z)\\
 \amp =\{\phi(a)\,:\,a\in \Z\}\\
 \amp =\{\phi(a(1))\,:\,a\in \Z\}\\
 \amp =\{a\phi(1)\,:\,a\in \Z\}\\
 \amp =\langle \phi(1)\rangle.
-\end{align*}
-<p id="p-633">A similar argument shows that there exists \(a\in G\) such that \(G=\langle a\rangle\) when \(|G|\lt \infty\text{.}\)</p></article></span>
+\end{align*}</p>
+<p id="p-636">
+      A similar argument shows that there exists \(a\in G\) such that \(G=\langle a\rangle\) when \(|G|\lt \infty\text{.}\)
+    </p></article></span>
 </div>
-<article class="definition-like" id="definition-41"><h5 class="heading">
+<article class="definition-like" id="definition-39"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">5.1.16</span>
 </h5>
-<p id="p-634">Let \(G\) be a group. An element \(a\in G\) is a <em class="terminology">generator of \(G\)</em> (equivalently, \(a\) <em class="terminology">generates \(G\)</em>) if \(\langle a\rangle =G\text{.}\)</p></article><article class="remark-like" id="remark-22"><h5 class="heading">
+<p id="p-637">
+        Let \(G\) be a group. An element \(a\in G\) is a <em class="terminology">generator of \(G\)</em> (equivalently, \(a\) <em class="terminology">generates \(G\)</em>) if
+        \(\langle a\rangle =G\text{.}\)
+      </p></article><article class="remark-like" id="remark-22"><h5 class="heading">
 <span class="type">Remark</span><span class="codenumber">5.1.17</span>
 </h5>
 <ol id="ol-63" style="list-style-type: decimal;">
-<li id="li-260"><p id="p-635">Note that if \(G\) has a generator, then it is necessarily a cyclic group.</p></li>
-<li id="li-261"><p id="p-636">Note that an element \(a\) of a group \(G\) generates \(G\) if and only if every element of \(G\) is of the form \(a^n\) for some \(n\in \Z\text{.}\)</p></li>
-<li id="li-262"><p id="p-637">Generators of groups <!--Style me with CSS--><em>need not</em> be unique.  For instance, we saw in <a knowl="./knowl/csexs.html" knowl-id="xref-csexs" alt="Example 5.1.14 " title="Example 5.1.14 ">Example 14</a> that each of the elements \(1,3,5\) and \(7\) of \(\Z_8\) is a generator for \(\Z_8\text{.}\)</p></li>
-</ol></article><article class="example-like" id="example-44"><h5 class="heading">
+<li id="li-257"><p id="p-638">
+          Note that if \(G\) has a generator, then it is necessarily a cyclic group.
+        </p></li>
+<li id="li-258"><p id="p-639">
+          Note that an element \(a\) of a group \(G\) generates \(G\) if and only if every element of \(G\) is of the form \(a^n\) for some \(n\in \Z\text{.}\)
+        </p></li>
+<li id="li-259"><p id="p-640">
+          Generators of groups <!--Style me with CSS--><em>need not</em> be unique.  For instance, we saw in <a knowl="./knowl/csexs.html" knowl-id="xref-csexs" alt="Example 5.1.14 " title="Example 5.1.14 ">Example 5.1.14</a> that each of the elements \(1,3,5\) and \(7\) of \(\Z_8\) is a generator for \(\Z_8\text{.}\)
+        </p></li>
+</ol></article><article class="example-like" id="example-46"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">5.1.18</span>
 </h5>
 <ol id="ol-64" style="list-style-type: decimal;">
-<li id="li-263"><p id="p-638">\(\Z\) has generator \(1\) and generator \(-1\text{.}\)</p></li>
-<li id="li-264"><p id="p-639">Given \(n\in \Z\text{,}\) \(nZ\) has generator \(n\) and generator \(-n\text{.}\)</p></li>
-<li id="li-265"><p id="p-640">Given \(n\geq 2\) in \(\Z\text{,}\) the generators of \(\Z_n\) are exactly  the elements \(a\in \Z_n\) such that \(\gcd(n,a)=1\text{.}\) (This follows from <a knowl="./knowl/znorders.html" knowl-id="xref-znorders" alt="Theorem 5.1.13 " title="Theorem 5.1.13 ">Theorem 13</a>.)</p></li>
+<li id="li-260"><p id="p-641">
+            \(\Z\) has generator \(1\) and generator \(-1\text{.}\)
+          </p></li>
+<li id="li-261"><p id="p-642">
+            Given \(n\in \Z\text{,}\) \(nZ\) has generator \(n\) and generator \(-n\text{.}\)
+          </p></li>
+<li id="li-262"><p id="p-643">
+            Given \(n\geq 2\) in \(\Z\text{,}\) the generators of \(\Z_n\) are exactly  the elements \(a\in \Z_n\) such that \(\gcd(n,a)=1\text{.}\) (This follows from <a knowl="./knowl/znorders.html" knowl-id="xref-znorders" alt="Theorem 5.1.13 " title="Theorem 5.1.13 ">Theorem 5.1.13</a>.)
+          </p></li>
 </ol></article><article class="remark-like" id="remark-23"><h5 class="heading">
 <span class="type">Remark</span><span class="codenumber">5.1.19</span>
 </h5>
-<p id="p-641">Order of elements provides another group invariant.</p></article><article class="theorem-like" id="ophia"><h5 class="heading">
+<p id="p-644">
+      Order of elements provides another group invariant.
+    </p></article><article class="theorem-like" id="ophia"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">5.1.20</span>
 </h5>
-<p id="p-642">Let \(\phi:G\to G'\) be a group isomorphism and let \(a\in G\text{.}\) Then \(o(\phi(a))=o(a)\text{.}\)</p></article><div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-26" id="proof-26"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-26" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-643">This follows from the fact that \(\phi(\langle a\rangle )=\langle \phi(a)\rangle\text{.}\)</p></article></span>
+<p id="p-645">
+        Let \(\phi:G\to G'\) be a group isomorphism and let \(a\in G\text{.}\) Then \(o(\phi(a))=o(a)\text{.}\)
+      </p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-26" id="proof-26"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-26" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-646">
+      This follows from the fact that \(\phi(\langle a\rangle )=\langle \phi(a)\rangle\text{.}\)
+    </p></article></span>
 </div>
 <article class="theorem-like" id="corollary-4"><h5 class="heading">
 <span class="type">Corollary</span><span class="codenumber">5.1.21</span>
 </h5>
-<p id="p-644">If groups \(G\) and \(G'\) are isomorphic then for any \(n\in \Z^+\text{,}\) the number of elements of \(G\) of order \(n\) is the same as the number of elements of \(G'\) of order \(n\text{.}\)</p></article><article class="example-like" id="example-45"><h5 class="heading">
+<p id="p-647">
+        If groups \(G\) and \(G'\) are isomorphic then for any \(n\in \Z^+\text{,}\) the number of elements of \(G\) of order \(n\) is the same as the number of elements of \(G'\) of order \(n\text{.}\)
+      </p></article><article class="example-like" id="example-47"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">5.1.22</span>
 </h5>
-<p id="p-645">Since \(1\) in \(\Z_4\) has order 4 but every element in \(\Z_2 \times \Z_2\) has order less than or equal to 2, these groups cannot be isomorphic.</p></article><article class="remark-like" id="warning-15"><h5 class="heading">
+<p id="p-648">
+        Since \(1\) in \(\Z_4\) has order 4 but every element in \(\Z_2 \times \Z_2\) has order less than or equal to 2, these groups cannot be isomorphic.
+      </p></article><article class="remark-like" id="warning-15"><h5 class="heading">
 <span class="type">Warning</span><span class="codenumber">5.1.23</span>
 </h5>
-<p id="p-646">Note, however, that just because the orders of elements of two groups “match up” the groups need not be isomorphic. For example, every element of \(\Z\) has infinite order, except for its identity element, which has order 1; the same is true for the group \(\Q\text{.}\) However, we have previously proven that these groups are not isomorphic.</p></article></section></div></main>
+<p id="p-649">
+      Note, however, that just because the orders of elements of two groups “match up” the groups need not be isomorphic. For example, every element of \(\Z\) has infinite order, except for its identity element, which has order 1; the same is true for the group \(\Q\text{.}\) However, we have previously proven that these groups are not isomorphic.
+    </p></article></section></div></main>
 </div>
-<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
 </body>
 </html>

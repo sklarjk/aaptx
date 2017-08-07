@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-06T12:57:03-07:00    *-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2017-08-07T00:21:24-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -10,37 +10,38 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>The First Isomorphism Theorem</title>
-<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="Keywords" content="Authored in MathBook XML">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
     },
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", },
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
         TagSide: "right",
         TagIndent: ".8em",
     },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
     "HTML-CSS": {
         scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
     },
 });
-</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\def\Z{\mathbb{Z}}
@@ -59,9 +60,9 @@ MathJax.Hub.Config({
 \DeclareMathOperator{\Ker}{Ker}
 \def\siml{\sim_L}
 \def\simr{\sim_R}
-\newcommand{\lt}{&lt;}
-\newcommand{\gt}{&gt;}
-\newcommand{\amp}{&amp;}
+\newcommand{\lt}{ &lt; }
+\newcommand{\gt}{ &gt; }
+\newcommand{\amp}{ &amp; }
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
@@ -69,9 +70,9 @@ MathJax.Hub.Config({
 <p class="byline">Jessica K. Sklar</p>
 </div>
 </div></div>
-<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<nav id="primary-navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="isothms.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="isothms.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-29.html" title="Next" alt="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" onclick="window.location.href='index.html'">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a class="previous-button toolbar-item button" href="isothms.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="isothms.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="section-29.html" title="Next" alt="Next">Next</a></span></div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
@@ -79,246 +80,405 @@ MathJax.Hub.Config({
 </div>
 </div></nav></header><div class="page">
 <aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
-<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html"><span class="title">Front Matter</span></a></h2>
 <ul>
-<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
-<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
-<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="colophon-1.html">Colophon</a></li>
+<li><a href="acknowledgement-1.html">Acknowledgements</a></li>
+<li><a href="preface-1.html">Preface</a></li>
 </ul>
-<h2 class="link"><a href="pre.html" data-scroll="pre"><span class="codenumber">1</span><span class="title">Preliminaries</span></a></h2>
+<h2 class="link"><a href="pre.html"><span class="codenumber">1</span><span class="title">Preliminaries</span></a></h2>
 <ul>
-<li><a href="section-1.html" data-scroll="section-1">Sets</a></li>
-<li><a href="section-2.html" data-scroll="section-2">Functions</a></li>
-<li><a href="section-3.html" data-scroll="section-3">Cardinality</a></li>
-<li><a href="exercises-1.html" data-scroll="exercises-1">Exercises</a></li>
+<li><a href="section-1.html">Sets</a></li>
+<li><a href="section-2.html">Functions</a></li>
+<li><a href="section-3.html">Cardinality</a></li>
+<li><a href="exercises-1.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="gps.html" data-scroll="gps"><span class="codenumber">2</span><span class="title">Groups</span></a></h2>
+<h2 class="link"><a href="gps.html"><span class="codenumber">2</span><span class="title">Groups</span></a></h2>
 <ul>
-<li><a href="section-4.html" data-scroll="section-4">Binary operations and structures</a></li>
-<li><a href="exercises-2.html" data-scroll="exercises-2">Exercises, Part I</a></li>
-<li><a href="section-5.html" data-scroll="section-5">The definition of a group</a></li>
-<li><a href="section-6.html" data-scroll="section-6">Examples of groups/nongroups, Part I</a></li>
-<li><a href="section-7.html" data-scroll="section-7">Group conventions and properties</a></li>
-<li><a href="section-8.html" data-scroll="section-8">Examples of groups/nongroups, Part II</a></li>
-<li><a href="section-9.html" data-scroll="section-9">Summaries of groups we've seen</a></li>
-<li><a href="exercises-3.html" data-scroll="exercises-3">Exercises, Part II</a></li>
+<li><a href="section-4.html">Binary operations and structures</a></li>
+<li><a href="exercises-2.html">Exercises, Part I</a></li>
+<li><a href="section-5.html">The definition of a group</a></li>
+<li><a href="section-6.html">Examples of groups/nongroups, Part I</a></li>
+<li><a href="section-7.html">Group conventions and properties</a></li>
+<li><a href="section-8.html">Examples of groups/nongroups, Part II</a></li>
+<li><a href="section-9.html">Summaries of groups we've seen</a></li>
+<li><a href="exercises-3.html">Exercises, Part II</a></li>
 </ul>
-<h2 class="link"><a href="homoiso.html" data-scroll="homoiso"><span class="codenumber">3</span><span class="title">Homorphisms and Isomorphisms</span></a></h2>
+<h2 class="link"><a href="homoiso.html"><span class="codenumber">3</span><span class="title">Homorphisms and Isomorphisms</span></a></h2>
 <ul>
-<li><a href="section-10.html" data-scroll="section-10">Groups of small order</a></li>
-<li><a href="section-11.html" data-scroll="section-11">Introduction to homomorphisms and isomorphisms</a></li>
-<li><a href="section-12.html" data-scroll="section-12">Isomorphic groups</a></li>
-<li><a href="exercises-4.html" data-scroll="exercises-4">Exercises</a></li>
+<li><a href="section-10.html">Groups of small order</a></li>
+<li><a href="section-11.html">Introduction to homomorphisms and isomorphisms</a></li>
+<li><a href="section-12.html">Isomorphic groups</a></li>
+<li><a href="exercises-4.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="subgps.html" data-scroll="subgps"><span class="codenumber">4</span><span class="title">Subgroups</span></a></h2>
+<h2 class="link"><a href="subgps.html"><span class="codenumber">4</span><span class="title">Subgroups</span></a></h2>
 <ul>
-<li><a href="section-13.html" data-scroll="section-13">Introduction to subgroups</a></li>
-<li><a href="section-14.html" data-scroll="section-14">Subgroup proofs and lattices</a></li>
-<li><a href="exercises-5.html" data-scroll="exercises-5">Exercises</a></li>
+<li><a href="section-13.html">Introduction to subgroups</a></li>
+<li><a href="section-14.html">Subgroup proofs and lattices</a></li>
+<li><a href="exercises-5.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="cyc.html" data-scroll="cyc"><span class="codenumber">5</span><span class="title">Cyclic Groups</span></a></h2>
+<h2 class="link"><a href="cyc.html"><span class="codenumber">5</span><span class="title">Cyclic Groups</span></a></h2>
 <ul>
-<li><a href="section-15.html" data-scroll="section-15">Introduction to cyclic groups</a></li>
-<li><a href="section-16.html" data-scroll="section-16">The subgroup lattices of cyclic groups</a></li>
-<li><a href="exercises-6.html" data-scroll="exercises-6">Exercises</a></li>
+<li><a href="section-15.html">Introduction to cyclic groups</a></li>
+<li><a href="section-16.html">The subgroup lattices of cyclic groups</a></li>
+<li><a href="exercises-6.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="perm.html" data-scroll="perm"><span class="codenumber">6</span><span class="title">Permutation Groups and Dihedral Groups</span></a></h2>
+<h2 class="link"><a href="perm.html"><span class="codenumber">6</span><span class="title">Permutation Groups and Dihedral Groups</span></a></h2>
 <ul>
-<li><a href="section-17.html" data-scroll="section-17">Introduction to permutation groups</a></li>
-<li><a href="section-18.html" data-scroll="section-18">Symmetric groups</a></li>
-<li><a href="section-19.html" data-scroll="section-19">Alternating groups</a></li>
-<li><a href="section-20.html" data-scroll="section-20">Cayley's Theorem</a></li>
-<li><a href="dihedralgps.html" data-scroll="dihedralgps">Dihedral groups</a></li>
-<li><a href="exercises-7.html" data-scroll="exercises-7">Exercises</a></li>
+<li><a href="section-17.html">Introduction to permutation groups</a></li>
+<li><a href="section-18.html">Symmetric groups</a></li>
+<li><a href="section-19.html">Alternating groups</a></li>
+<li><a href="section-20.html">Cayley's Theorem</a></li>
+<li><a href="dihedralgps.html">Dihedral groups</a></li>
+<li><a href="exercises-7.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="coslag.html" data-scroll="coslag"><span class="codenumber">7</span><span class="title">The Wonderful World of Cosets</span></a></h2>
+<h2 class="link"><a href="coslag.html"><span class="codenumber">7</span><span class="title">The Wonderful World of Cosets</span></a></h2>
 <ul>
-<li><a href="section-22.html" data-scroll="section-22">Partitions of and equivalence relations on sets</a></li>
-<li><a href="section-23.html" data-scroll="section-23">Introduction to cosets and normal subgroups</a></li>
-<li><a href="section-24.html" data-scroll="section-24">The index of a subgroup and Lagrange's Theorem</a></li>
-<li><a href="exercises-8.html" data-scroll="exercises-8">Exercises</a></li>
+<li><a href="section-22.html">Partitions of and equivalence relations
+  on sets</a></li>
+<li><a href="section-23.html">Introduction to cosets and normal subgroups</a></li>
+<li><a href="section-24.html">The index of a subgroup and Lagrange's Theorem</a></li>
+<li><a href="exercises-8.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="factorgps.html" data-scroll="factorgps"><span class="codenumber">8</span><span class="title">Factor Groups</span></a></h2>
+<h2 class="link"><a href="factorgps.html"><span class="codenumber">8</span><span class="title">Factor Groups</span></a></h2>
 <ul>
-<li><a href="section-25.html" data-scroll="section-25">Motivation</a></li>
-<li><a href="section-26.html" data-scroll="section-26">Focusing on normal subgroups</a></li>
-<li><a href="section-27.html" data-scroll="section-27">Introduction to factor groups</a></li>
-<li><a href="exercises-9.html" data-scroll="exercises-9">Exercises</a></li>
+<li><a href="section-25.html">Motivation</a></li>
+<li><a href="section-26.html">Focusing on normal subgroups</a></li>
+<li><a href="section-27.html">Introduction to factor groups</a></li>
+<li><a href="exercises-9.html">Exercises</a></li>
 </ul>
-<h2 class="link active"><a href="isothms.html" data-scroll="isothms"><span class="codenumber">9</span><span class="title">The Isomorphism Theorems</span></a></h2>
+<h2 class="link active"><a href="isothms.html"><span class="codenumber">9</span><span class="title">The Isomorphism Theorems</span></a></h2>
 <ul>
-<li><a href="section-28.html" data-scroll="section-28" class="active">The First Isomorphism Theorem</a></li>
-<li><a href="section-29.html" data-scroll="section-29">The Second and Third Isomorphism Theorems</a></li>
-<li><a href="exercises-10.html" data-scroll="exercises-10">Exercises</a></li>
+<li><a href="section-28.html" class="active">The First Isomorphism Theorem</a></li>
+<li><a href="section-29.html">The Second and Third Isomorphism Theorems</a></li>
+<li><a href="exercises-10.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<h2 class="link"><a href="backmatter-1.html"><span class="title">Back Matter</span></a></h2>
 <ul>
-<li><a href="appendix-1.html" data-scroll="appendix-1">Notation</a></li>
-<li><a href="appendix-2.html" data-scroll="appendix-2">Solutions to Exercises</a></li>
-<li><a href="references-1.html" data-scroll="references-1">Bibliography</a></li>
-<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
-<li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+<li><a href="appendix-1.html">Notation</a></li>
+<li><a href="appendix-2.html">Solutions to Exercises</a></li>
+<li><a href="references-1.html">Bibliography</a></li>
+<li><a href="appendix-gfdl.html">GNU Free Documentation License</a></li>
+<li><a href="colophon-2.html">Colophon</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-28"><header title="Section 9.1 The First Isomorphism Theorem"><h1 class="heading hide-type" alt="Section 9.1 The First Isomorphism Theorem">
 <span class="type">Section</span><span class="codenumber">9.1</span><span class="title">The First Isomorphism Theorem</span>
-</h1></header><p id="p-1193">A very powerful theorem, called the <!--Style me with CSS--><em>First Isomorphism Theorem</em>, lets us in many cases identify factor groups (up to isomorphism) in a very slick way. Kernels will play an extremely important role in this. We therefore first provide some theorems relating to kernels.</p>
+</h1></header><p id="p-1196">
+    A very powerful theorem, called the <!--Style me with CSS--><em>First Isomorphism
+    Theorem</em>, lets us in many cases identify factor groups (up to
+    isomorphism) in a very slick way. Kernels will play an extremely
+    important role in this. We
+    therefore first provide some theorems relating to kernels.
+  </p>
 <article class="theorem-like" id="kermean"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">9.1.1</span>
 </h5>
-<p id="p-1194">Let \(G\) and \(G'\) be groups, let \(\phi\) be a homomorphism from \(G\) to \(G'\text{,}\) and let \(K=\Ker \phi\text{.}\) Then for \(a,b\in G\text{,}\) \(aK=bK\) if and only if \(\phi(a)=\phi(b)\text{.}\)</p></article><div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-49" id="proof-49"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-49" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-1195">Let \(a,b\in G\text{.}\) Then</p>
-\begin{align*}
+<p id="p-1197">
+        Let \(G\) and \(G'\) be groups, let \(\phi\) be a
+        homomorphism from \(G\) to \(G'\text{,}\) and let \(K=\Ker \phi\text{.}\) Then for
+        \(a,b\in G\text{,}\) \(aK=bK\) if and only if \(\phi(a)=\phi(b)\text{.}\)
+      </p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-49" id="proof-49"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-49" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-1198">
+      Let \(a,b\in G\text{.}\) Then
+      \begin{align*}
 \phi(a)=\phi(b)\amp \Leftrightarrow
-\phi(b)^{-1}\phi(a)=e_{G'}\\
+        \phi(b)^{-1}\phi(a)=e_{G'}\\
 \amp \Leftrightarrow \phi(b^{-1}a)=e_{G'}\\
 \amp \Leftrightarrow b^{-1}a\in K\\
 \amp \Leftrightarrow a \in bK\\
 \amp \Leftrightarrow aK=bK,
 \end{align*}
-<p>as desired.</p></article></span>
+      as desired.
+    </p></article></span>
 </div>
 <article class="theorem-like" id="kerone"><h5 class="heading">
 <span class="type">Corollary</span><span class="codenumber">9.1.2</span>
 </h5>
-<p id="p-1196">Let \(\phi\) be a homomorphism from group \(G\) to group \(G'\text{.}\) Then \(\phi\) is one-to-one (hence a monomorphism) if and only if \(\Ker \phi=\{e_G\}\text{.}\)</p></article><div class="posterior">
+<p id="p-1199">
+        Let \(\phi\) be a homomorphism from group \(G\) to group
+        \(G'\text{.}\) Then \(\phi\) is one-to-one (hence a monomorphism) if and only
+        if \(\Ker \phi=\{e_G\}\text{.}\)
+      </p></article><div class="posterior">
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-50" id="proof-50"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></div>
-<div id="hk-proof-50" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-1197">Clearly, if \(\phi\) is one-to-one then \(\Ker \phi=\{e_G\}\text{.}\) Conversely, assume \(\Ker \phi=\{e_G\}\text{.}\) If \(a,b\in G\) with \(\phi(a)=\phi(b)\text{,}\) then by the above theorem, \(a\Ker \phi=b\Ker
-\phi\text{.}\) But \(a\Ker \phi=a\{e_G\}=\{a\}\) and \(b\Ker
-\phi=b\{e_G\}=\{b\}\text{.}\) Thus, \(a=b\text{,}\) and we see that \(\phi\) is one-to-one.</p></article></div>
+<div id="hk-proof-50" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-1200">
+      Clearly, if \(\phi\) is one-to-one then \(\Ker \phi=\{e_G\}\text{.}\)
+      Conversely, assume \(\Ker \phi=\{e_G\}\text{.}\) If \(a,b\in G\) with
+      \(\phi(a)=\phi(b)\text{,}\) then by the above theorem, \(a\Ker \phi=b\Ker
+      \phi\text{.}\) But \(a\Ker \phi=a\{e_G\}=\{a\}\) and \(b\Ker
+      \phi=b\{e_G\}=\{b\}\text{.}\) Thus, \(a=b\text{,}\) and we see that \(\phi\) is
+      one-to-one.
+    </p></article></div>
 </div>
-<p id="p-1198">We now prove a theorem that provides the meat and potatoes of the <a knowl="./knowl/fit.html" knowl-id="xref-fit" alt="Theorem 9.1.6 First Isomorphism Theorem" title="Theorem 9.1.6 First Isomorphism Theorem">First Isomorphism Theorem</a>.</p>
+<p id="p-1201">
+    We now prove a theorem that
+    provides the meat and potatoes of the <a knowl="./knowl/fit.html" knowl-id="xref-fit" alt="Theorem 9.1.6 First Isomorphism Theorem" title="Theorem 9.1.6 First Isomorphism Theorem">9.1.6</a>.
+  </p>
 <article class="theorem-like" id="facthm"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">9.1.3</span><span class="title">Factorization Theorem</span>
 </h5>
-<p id="p-1199">Let \(G\) and \(G'\) be groups, let \(\phi\) be a homomorphism from \(G\) to \(G'\text{,}\) let \(K=\Ker \phi\text{,}\) let \(N\) be a normal subgroup of \(G\) with \(N\subseteq K\text{,}\) and let \(\Psi\) be the canonical epimorphism from \(G\) to \(G/N\text{.}\) Then the map \(\phibar: G/N \to G'\) defined by \(\phibar(aN)=\phi(a)\) is a well defined homomorphism, with \(\phibar \circ \Psi=\phi\text{.}\)</p>
-<p id="p-1200">We  summarize this in the following picture:</p>
-<figure class="figure-like" id="figure-3"><object type="image/svg+xml" style="width:30%; margin:auto; display:block;" data="images/image-10.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">9.1.4</span>Visual representation of the Factorization Theorem</figcaption></figure></article><div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-51" id="proof-51"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-51" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-1201">We define \(\phibar: G/N\to G'\text{,}\) as indicated above, by \(\phibar(aN)=\phi(a)\) for every \(aN\in G/N\text{.}\) Since \(\phibar\) is defined using coset representatives, we must first show that \(\phibar\) is well defined. So let \(aN=bN\in G/N\text{.}\) Then \(\phibar(aN)=\phi(a)\) and \(\phibar(bN)=\phi(b)\text{,}\) so we must show that \(\phi(a)=\phi(b)\text{.}\) Since \(aN=bN\) and \(N\subseteq K\text{,}\) we have that \(aK=bK\) by Statement 6 of <a knowl="./knowl/cosetfacts.html" knowl-id="xref-cosetfacts" alt="Theorem 7.2.7 " title="Theorem 7.2.7 ">Theorem 7.2.7</a>; thus \(\phi(a)=\phi(b)\) (using <a knowl="./knowl/kermean.html" knowl-id="xref-kermean" alt="Theorem 9.1.1 " title="Theorem 9.1.1 ">Lemma 1</a>). So \(\phibar\) is well defined.</p>
-<p id="p-1202">Next, we show that \(\phibar\) is a homomorphism. Let \(aN,bN\in
-G/N\text{.}\) Then</p>
-\begin{equation*}
-\phibar((aN)(bN))=\phibar(abN)=\phi(ab)=\phi(a)\phi(b)=\phibar(aN)\phibar(bN).
-\end{equation*}
-<p id="p-1203">Finally, for every \(a\in G\text{,}\)</p>
-\begin{equation*}
-(\phibar \circ
-\Psi)(a)=\phibar(\Psi(a))=\phibar(aN)=\phi(a);
-\end{equation*}
-<p>so \(\phibar \circ
-\Psi = \phi\text{,}\) as desired.</p></article></span>
+<p id="p-1202">
+         Let \(G\) and
+        \(G'\) be groups, let \(\phi\) be a homomorphism from \(G\) to \(G'\text{,}\)
+        let \(K=\Ker \phi\text{,}\) let \(N\) be a normal subgroup of \(G\) with
+        \(N\subseteq K\text{,}\) and let \(\Psi\) be the canonical epimorphism
+        from \(G\) to \(G/N\text{.}\) Then the map \(\phibar: G/N \to G'\) defined
+        by \(\phibar(aN)=\phi(a)\) is a well defined homomorphism, with
+        \(\phibar \circ \Psi=\phi\text{.}\)
+      </p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-51" id="proof-51"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-51" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-1204">
+      We define \(\phibar: G/N\to G'\text{,}\) as indicated above, by
+      \(\phibar(aN)=\phi(a)\) for every \(aN\in G/N\text{.}\) Since \(\phibar\)
+      is defined using coset representatives, we must first show that
+      \(\phibar\) is well defined. So let \(aN=bN\in G/N\text{.}\) Then
+      \(\phibar(aN)=\phi(a)\) and \(\phibar(bN)=\phi(b)\text{,}\) so we must
+      show that \(\phi(a)=\phi(b)\text{.}\) Since \(aN=bN\) and \(N\subseteq K\text{,}\)
+      we have that \(aK=bK\) by Statement 6 of <a knowl="./knowl/cosetfacts.html" knowl-id="xref-cosetfacts" alt="Theorem 7.2.7 " title="Theorem 7.2.7 ">Theorem 7.2.7</a>; thus \(\phi(a)=\phi(b)\) (using <a knowl="./knowl/kermean.html" knowl-id="xref-kermean" alt="Theorem 9.1.1 " title="Theorem 9.1.1 ">Lemma 9.1.1</a>). So \(\phibar\) is well defined.
+    </p>
+<p id="p-1205">
+      Next, we show that \(\phibar\) is a homomorphism. Let \(aN,bN\in
+      G/N\text{.}\) Then
+      \begin{equation*}
+        \phibar((aN)(bN))=\phibar(abN)=\phi(ab)=\phi(a)\phi(b)=\phibar(aN)\phibar(bN).
+      \end{equation*}
+    </p>
+<p id="p-1206">
+      Finally, for every \(a\in G\text{,}\)
+      \begin{equation*}
+        (\phibar \circ
+        \Psi)(a)=\phibar(\Psi(a))=\phibar(aN)=\phi(a);
+      \end{equation*}
+      so \(\phibar \circ
+      \Psi = \phi\text{,}\) as desired.
+    </p></article></span>
 </div>
-<p id="p-1204">Note that the above theorem does <!--Style me with CSS--><em>not</em> state that \(\phibar\) is a monomorphism or an epimorphism. This is because in general it may be neither! We do have the following theorem:</p>
+<p id="p-1207">
+    Note that the above theorem does <!--Style me with CSS--><em>not</em> state that
+    \(\phibar\) is a monomorphism or an epimorphism. This is because in
+    general it may be neither! We do have the following theorem:
+  </p>
 <article class="theorem-like" id="epimono"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">9.1.5</span>
 </h5>
-<p id="p-1205">Let \(G\text{,}\) \(G'\text{,}\) \(\phi\text{,}\) \(N\text{,}\) and \(\phibar\) be as defined in the  <a knowl="./knowl/facthm.html" knowl-id="xref-facthm" alt="Theorem 9.1.3 Factorization Theorem" title="Theorem 9.1.3 Factorization Theorem">Factorization Theorem</a>. Then </p>
+<p id="p-1208">
+        Let \(G\text{,}\) \(G'\text{,}\) \(\phi\text{,}\) \(N\text{,}\) and \(\phibar\) be as
+        defined in the  <a knowl="./knowl/facthm.html" knowl-id="xref-facthm" alt="Theorem 9.1.3 Factorization Theorem" title="Theorem 9.1.3 Factorization Theorem">9.1.3</a>. Then
+        </p>
 <ol id="ol-123" style="list-style-type: decimal;">
-<li id="li-509"><p id="p-1206">\(\phibar\) is onto (an epimorphism) if and only if \(\phi\) is onto (an epimorphism); and</p></li>
-<li id="li-510"><p id="p-1207">\(\phibar\) is one-to-one (a monomorphism) if and only if \(N=\Ker
-\phi\text{.}\)</p></li>
-</ol></article><div class="posterior">
+<li id="li-506"><p id="p-1209">
+              \(\phibar\) is onto (an epimorphism) if and only if \(\phi\) is onto
+              (an epimorphism); and
+            </p></li>
+<li id="li-507"><p id="p-1210">
+              \(\phibar\) is one-to-one (a monomorphism) if and only if \(N=\Ker
+              \phi\text{.}\)
+            </p></li>
+</ol>
+<p>
+      </p></article><div class="posterior">
 <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-52" id="proof-52"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-52" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><ol id="ol-124" style="list-style-type: decimal;">
-<li id="li-511"><p id="p-1208">This is clear, since \(\phibar(G/N)=\phi(G)\text{.}\)</p></li>
-<li id="li-512">
-<p id="p-1209">By <a knowl="./knowl/kerone.html" knowl-id="xref-kerone" alt="Corollary 9.1.2 " title="Corollary 9.1.2 ">Corollary 2</a>, \(\phibar\) is one-to-one if and only if \(\Ker
-\phibar=\{N\}\text{.}\)  But</p>
-\begin{align*}
+<li id="li-508"><p id="p-1211">
+          This is clear, since
+          \(\phibar(G/N)=\phi(G)\text{.}\)
+        </p></li>
+<li id="li-509"><p id="p-1212">
+          By <a knowl="./knowl/kerone.html" knowl-id="xref-kerone" alt="Corollary 9.1.2 " title="Corollary 9.1.2 ">Corollary 9.1.2</a>, \(\phibar\) is one-to-one if and only if \(\Ker
+          \phibar=\{N\}\text{.}\)  But
+          \begin{align*}
 \Ker \phibar\amp =\{aN\in G/N
-\,:\, \phibar(aN)=e_{G'}\}\\
+            \,:\, \phibar(aN)=e_{G'}\}\\
 \amp =\{aN\in G/N \,:\,
-\phi(a)=e_{G'}\}\\
+            \phi(a)=e_{G'}\}\\
 \amp =\{aN\in G/N \,:\, a\in
-\Ker\phi\}.
+            \Ker\phi\}.
 \end{align*}
-<p>So \(\Ker \phibar = \{N\}\) if and only if</p>
-\begin{equation*}
-\{aN\in G/N\,:\,a\in \Ker\phi\}=\{N\},
-\end{equation*}
-<p>in other words if and only if \(aN=N\) for all \(a\in \Ker\phi\text{.}\)  But</p>
-\begin{align*}
+          So \(\Ker \phibar = \{N\}\) if and only if
+          \begin{equation*}
+            \{aN\in G/N\,:\,a\in \Ker\phi\}=\{N\},
+          \end{equation*}
+          in other words if and
+          only if \(aN=N\) for all \(a\in \Ker\phi\text{.}\)  But
+          \begin{align*}
 {3}
-\amp \amp \amp aN=N \amp \amp \ \ \text{ for all \(a\in \Ker\phi\) }\\
+            \amp \amp \amp aN=N \amp \amp \ \ \text{ for all \(a\in \Ker\phi\) }\\
 \amp \Leftrightarrow  \amp \amp  a\in N \amp \amp \ \ \text{ for all \(a\in \Ker\phi\) }\\
 \amp \Leftrightarrow  \amp \amp  \Ker \phi\subseteq N\amp \amp\\
 \amp \Leftrightarrow  \amp \amp  \Ker\phi=N,\amp \amp
 \end{align*}
-<p>since we are given that \(N\subseteq \Ker \phi\text{.}\) Thus, \(\phibar\) is one-to-one if and only if \(N=\Ker\phi\text{,}\) as desired.</p>
-</li>
+          since we are given that
+          \(N\subseteq \Ker \phi\text{.}\) Thus, \(\phibar\) is one-to-one
+          if and only if \(N=\Ker\phi\text{,}\) as desired. 
+        </p></li>
 </ol></article></span>
 </div>
-<p id="p-1210">We are now ready to state the all-important First Isomorphism Theorem, which follows directly from the <a knowl="./knowl/facthm.html" knowl-id="xref-facthm" alt="Theorem 9.1.3 Factorization Theorem" title="Theorem 9.1.3 Factorization Theorem">Factorization Theorem</a>  and <a knowl="./knowl/epimono.html" knowl-id="xref-epimono" alt="Theorem 9.1.5 " title="Theorem 9.1.5 ">Theorem 5</a>.</p>
+<p id="p-1213">
+    We are now ready to state the all-important First Isomorphism
+    Theorem, which follows directly from the <a knowl="./knowl/facthm.html" knowl-id="xref-facthm" alt="Theorem 9.1.3 Factorization Theorem" title="Theorem 9.1.3 Factorization Theorem">9.1.3</a>  and
+      <a knowl="./knowl/epimono.html" knowl-id="xref-epimono" alt="Theorem 9.1.5 " title="Theorem 9.1.5 ">Theorem 9.1.5</a>.
+  </p>
 <article class="theorem-like" id="fit"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">9.1.6</span><span class="title">First Isomorphism Theorem</span>
 </h5>
-<p id="p-1211">Let \(G\) and \(G'\) be groups, with homomorphism \(\phi:G \rightarrow G'\text{.}\) Let \(K=\Ker
-\phi\text{.}\) Then \(G/K \simeq \phi(G)\text{.}\) In particular, if \(\phi\) is onto, then \(G/K\simeq G'\text{.}\)</p></article><p id="p-1212">So to prove that a factor group \(G/N\) is isomorphic to a group \(G'\text{,}\) it suffices to show there exists an epimorphism from \(G\) to \(G'\) that has \(N\) as its kernel.</p>
-<article class="example-like" id="example-86"><h5 class="heading">
+<p id="p-1214">
+       Let \(G\) and \(G'\)
+        be groups, with homomorphism \(\phi:G \rightarrow G'\text{.}\) Let \(K=\Ker
+        \phi\text{.}\) Then \(G/K \simeq \phi(G)\text{.}\) In particular, if \(\phi\) is onto,
+        then \(G/K\simeq G'\text{.}\)
+      </p></article><p id="p-1215">
+    So to prove that a factor group \(G/N\) is isomorphic to a group
+    \(G'\text{,}\) it suffices to show there exists an epimorphism from \(G\) to
+    \(G'\) that has \(N\) as its kernel.
+  </p>
+<article class="example-like" id="example-88"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">9.1.7</span>
 </h5>
-<p id="p-1213">Letting \(n\in \Z^+\text{,}\) let's identify a familiar group to which \(GL(n,\R)/SL(n,\R)\) is isomorphic. As in <a knowl="./knowl/slnormgl.html" knowl-id="xref-slnormgl" alt="Example 8.2.9 " title="Example 8.2.9 ">Example 8.2.9</a>, the map \(\phi:GL(n,\R)\to \R^*\) defined by \(\phi(A)\) is a homomorphism with kernel \(SL(n,\R)\text{.}\) Moreover, \(Phi\) clearly maps onto \(\R^*\text{:}\) indeed, given \(\lambda \in
-\R^*\text{,}\) the diagonal matrix having \(\lambda\) in the uppermost left position and 1's elsewhere down the diagonal gets sent to \(\lambda\) by \(\phi\text{.}\) So by the <a knowl="./knowl/fit.html" knowl-id="xref-fit" alt="Theorem 9.1.6 First Isomorphism Theorem" title="Theorem 9.1.6 First Isomorphism Theorem">First Isomorphism Theorem</a>, we have \(GL(n,\R)/SL(n,\R) \simeq \R^*\text{.}\)</p></article><article class="example-like" id="example-87"><h5 class="heading">
+<p id="p-1216">
+        Letting \(n\in \Z^+\text{,}\) let's identify a familiar group to which
+        \(GL(n,\R)/SL(n,\R)\) is isomorphic. As in <a knowl="./knowl/slnormgl.html" knowl-id="xref-slnormgl" alt="Example 8.2.9 " title="Example 8.2.9 ">Example 8.2.9</a>, the map \(\phi:GL(n,\R)\to \R^*\) defined by
+        \(\phi(A)\) is a homomorphism with kernel \(SL(n,\R)\text{.}\) Moreover,
+        \(Phi\) clearly maps onto \(\R^*\text{:}\) indeed, given \(\lambda \in
+        \R^*\text{,}\) the diagonal matrix having \(\lambda\) in the uppermost left
+        position and 1's elsewhere down the diagonal gets sent to \(\lambda\)
+        by \(\phi\text{.}\) So by the <a knowl="./knowl/fit.html" knowl-id="xref-fit" alt="Theorem 9.1.6 First Isomorphism Theorem" title="Theorem 9.1.6 First Isomorphism Theorem">9.1.6</a>, we have
+        \(GL(n,\R)/SL(n,\R) \simeq \R^*\text{.}\)
+      </p></article><article class="example-like" id="example-89"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">9.1.8</span>
 </h5>
-<p id="p-1214">Let \(G=S_3\times \Z_{52}\) and let \(N=S_3 \times
-\{0\}\subseteq G\text{.}\) It is straightforward to show that \(N\) is normal in \(G\text{.}\) What is the structure of \(G/N\text{?}\) Well, define \(\phi:G\to
-\Z_{52}\) by \(\phi((\sigma, a))=a\text{.}\) Then \(\phi\) is clearly an epimorphism and \(\Ker \phi=\{(\sigma,a)\in G\,:a=0\}=N\text{.}\) So \(G/N\) is isomorphic to \(\Z_{52}\text{.}\)</p></article><p id="p-1215">Generalizing the above example, we have the following theorem, whose proof we leave to the reader.</p>
-<article class="theorem-like" id="theorem-63"><h5 class="heading">
+<p id="p-1217">
+        Let \(G=S_3\times \Z_{52}\) and let \(N=S_3 \times
+        \{0\}\subseteq G\text{.}\) It is straightforward to show that \(N\) is normal
+        in \(G\text{.}\) What is the structure of \(G/N\text{?}\) Well, define \(\phi:G\to
+        \Z_{52}\) by \(\phi((\sigma, a))=a\text{.}\) Then \(\phi\) is clearly an
+        epimorphism and \(\Ker \phi=\{(\sigma,a)\in G\,:a=0\}=N\text{.}\) So \(G/N\) is
+        isomorphic to \(\Z_{52}\text{.}\)
+      </p></article><p id="p-1218">
+    Generalizing the above example, we have the following theorem, whose
+    proof we leave to the reader.
+  </p>
+<article class="theorem-like" id="theorem-61"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">9.1.9</span>
 </h5>
-<p id="p-1216">Let \(G=G_1\times G_2 \times \cdots \times G_k\) (where \(k\in \Z^+\)) and let \(N_i\) be a normal subgroup of \(G_i\) for each \(i=1,2,\ldots, k\text{.}\) Then \(N=N_1 \times N_2 \times \cdots \times N_k\) is a normal subgroup of \(G\text{,}\) with \(G/N \simeq G_1/N_1 \times G_2/N_2
-\cdots \times G_k/N_k.\)</p></article><p id="p-1217">We provide one more cool example of using the <a knowl="./knowl/fit.html" knowl-id="xref-fit" alt="Theorem 9.1.6 First Isomorphism Theorem" title="Theorem 9.1.6 First Isomorphism Theorem">First Isomorphism Theorem</a>. Clearly, since \(\R\) is abelian, \(\Z\) is a normal subgroup of \(\R\text{.}\) What is the structure of \(\R/\Z\text{?}\) Well, in modding \(\R\) out by \(\Z\) we have essentially identified together all real numbers that are an integer distance apart. So we can think of the canonical epimorphism from \(\R\) to \(\R/\Z\) as wrapping up \(\R\) like a garden hose! Thus, one might guess that \(\R/\Z\) has some circle-like structure—but if we want to think of it as a group, we have to figure out what the group structure on such a “circle” would be!</p>
-<p id="p-1218">We leave, for a moment, our group \(\R/\Z\text{,}\) and look at how we can consider a circle to be a group.</p>
-<p id="p-1219">Recall that for every \(\theta \in \R\text{,}\) \(e^{i\theta}\) is defined to be \(\cos \theta + i\sin \theta\text{.}\) It is clear then that the set \(\{e^{i\theta} \,:\, \theta\in
-\R\}\) is the unit circle in the complex plane; we denote this set by \(S^1\text{.}\)</p>
+<p id="p-1219">
+        Let \(G=G_1\times G_2 \times \cdots \times G_k\) (where
+        \(k\in \Z^+\)) and let \(N_i\) be a normal subgroup of \(G_i\) for each
+        \(i=1,2,\ldots, k\text{.}\) Then \(N=N_1 \times N_2 \times \cdots \times N_k\)
+        is a normal subgroup of \(G\text{,}\) with \(G/N \simeq G_1/N_1 \times G_2/N_2
+        \cdots \times G_k/N_k.\)
+      </p></article><p id="p-1220">
+    We provide one more cool example of using the <a knowl="./knowl/fit.html" knowl-id="xref-fit" alt="Theorem 9.1.6 First Isomorphism Theorem" title="Theorem 9.1.6 First Isomorphism Theorem">9.1.6</a>. Clearly, since \(\R\) is abelian, \(\Z\) is a normal
+    subgroup of \(\R\text{.}\) What is the structure of \(\R/\Z\text{?}\) Well, in
+    modding \(\R\) out by \(\Z\) we have essentially identified together
+    all real numbers that are an integer distance apart. So we can
+    think of the canonical epimorphism from \(\R\) to \(\R/\Z\) as
+    wrapping up \(\R\) like a garden hose! Thus, one might guess that
+    \(\R/\Z\) has some circle-like structure—but if we want to think
+    of it as a group, we have to figure out what the group structure on
+    such a “circle” would be!
+  </p>
+<p id="p-1221">
+    We leave, for a moment, our group \(\R/\Z\text{,}\) and look at how we can
+    consider a circle to be a group.
+  </p>
+<p id="p-1222">
+    Recall that for every \(\theta \in \R\text{,}\)
+    \(e^{i\theta}\) is defined to be \(\cos \theta + i\sin \theta\text{.}\) It
+    is clear then that the set \(\{e^{i\theta} \,:\, \theta\in
+    \R\}\) is the unit circle in the complex plane; we denote
+    this set by \(S^1\text{.}\)</p>
 <article class="remark-like" id="remark-42"><h5 class="heading">
 <span class="type">Remark</span><span class="codenumber">9.1.10</span>
 </h5>
-<p id="p-1220">Note that if \(\theta_1, \theta_2\in \R\text{,}\) then \(e^{i\theta_1}=e^{i\theta_2}\) if and only if \(\theta_1-\theta_2
-\in 2\pi \Z\text{.}\)</p></article><article class="theorem-like" id="theorem-64"><h5 class="heading">
+<p id="p-1223">
+      Note that if \(\theta_1, \theta_2\in \R\text{,}\) then
+      \(e^{i\theta_1}=e^{i\theta_2}\) if and only if \(\theta_1-\theta_2
+      \in 2\pi \Z\text{.}\)
+    </p></article><article class="theorem-like" id="theorem-62"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">9.1.11</span>
 </h5>
-<p id="p-1221">\(S^1\) is a group under the multiplication \(e^{i\theta_1}e^{i\theta_2}=e^{i(\theta_1+\theta_2)}\text{.}\)</p></article><div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-53" id="proof-53"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-53" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-1222">The tricky part is showing that the operation is well defined. Suppose \(\theta_1, \theta_2, t_1\text{,}\) and \(t_2\) are in \(\R\text{,}\) with \(e^{i\theta_1}=e^{it_1}\) and \(e^{i\theta_2}=e^{it_2}\text{.}\) We want to show that</p>
-\begin{equation*}
-e^{i\theta_1}e^{i\theta_2}=e^{it_1}e^{it_2},
-\end{equation*}
-<p>i.e., that</p>
-\begin{equation*}
-e^{i(\theta_1+\theta_2)}=e^{i(t_1+t_2)}.
-\end{equation*}
-<p id="p-1223">Now, \(e^{i\theta_1}=e^{it_1}\) and \(e^{i\theta_2}=e^{it_2}\) imply that \(\theta_1 -t_1 = 2\pi m\) and \(\theta_2-t_2 = 2\pi n\) for some \(m\) and \(n\) in \(\Z\text{;}\) hence,</p>
-\begin{equation*}
-\theta_1+\theta_2-(t_1+t_2)= 2\pi(m+n) \in 2\pi\Z.
-\end{equation*}
-<p id="p-1224">Thus, \(e^{i(\theta_1+\theta_2)}=e^{i(t_1+t_2)}\text{,}\) so our operation is well defined.</p>
-<p id="p-1225">Next, \(S^1\) is clearly closed under the operation, and associativity follows from associativity of addition in \(\R\text{.}\) Moreover, \(e^{i0}=1\) clearly acts as an identity element in \(S^1\text{,}\) and if \(e^{i\theta}\in S^1\text{,}\) then \(e^{i\theta}\) has inverse \(e^{i(-\theta)} \in S^1\text{.}\) So \(S^1\) is a group under the described operation.</p></article></span>
+<p id="p-1224">
+        \(S^1\) is a group under the multiplication
+        \(e^{i\theta_1}e^{i\theta_2}=e^{i(\theta_1+\theta_2)}\text{.}\)
+      </p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-53" id="proof-53"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-53" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-1225">
+      The tricky part is showing that the operation is well
+      defined. Suppose \(\theta_1, \theta_2, t_1\text{,}\) and \(t_2\) are in
+      \(\R\text{,}\) with \(e^{i\theta_1}=e^{it_1}\) and
+      \(e^{i\theta_2}=e^{it_2}\text{.}\) We want to show that
+      \begin{equation*}
+        e^{i\theta_1}e^{i\theta_2}=e^{it_1}e^{it_2},
+      \end{equation*}
+      i.e., that
+      \begin{equation*}
+        e^{i(\theta_1+\theta_2)}=e^{i(t_1+t_2)}.
+      \end{equation*}
+    </p>
+<p id="p-1226">
+      Now, \(e^{i\theta_1}=e^{it_1}\) and
+      \(e^{i\theta_2}=e^{it_2}\) imply that \(\theta_1 -t_1 = 2\pi m\)
+      and \(\theta_2-t_2 = 2\pi n\) for some \(m\) and \(n\) in \(\Z\text{;}\)
+      hence,
+      \begin{equation*}
+        \theta_1+\theta_2-(t_1+t_2)= 2\pi(m+n) \in 2\pi\Z.
+      \end{equation*}
+    </p>
+<p id="p-1227">
+      Thus,
+      \(e^{i(\theta_1+\theta_2)}=e^{i(t_1+t_2)}\text{,}\) so our operation is
+      well defined.
+    </p>
+<p id="p-1228">
+      Next, \(S^1\) is clearly closed under the operation, and
+      associativity follows from associativity of addition in
+      \(\R\text{.}\) Moreover, \(e^{i0}=1\) clearly acts as an identity
+      element in \(S^1\text{,}\) and if \(e^{i\theta}\in S^1\text{,}\) then
+      \(e^{i\theta}\) has inverse \(e^{i(-\theta)} \in S^1\text{.}\) So \(S^1\)
+      is a group under the described operation.
+
+    </p></article></span>
 </div>
-<p id="p-1226">Beautifully, it turns out that our group \(\R/\Z\) is isomorphic to \(S^1\text{.}\)</p>
-<article class="theorem-like" id="theorem-65"><h5 class="heading">
+<p id="p-1229"> Beautifully, it turns out that our group \(\R/\Z\) is
+      isomorphic to \(S^1\text{.}\)</p>
+<article class="theorem-like" id="theorem-63"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">9.1.12</span>
 </h5>
-<p id="p-1227">\(\R/\Z \simeq S^1\text{.}\)</p></article><div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-54" id="proof-54"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-54" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-1228">We will define an epimorphism \(\phi\) from \(\R\) to \(S^1\) with \(\Ker \phi=\Z\text{;}\) then we'll have \(\R/\Z \simeq S^1\text{,}\) by the <a knowl="./knowl/fit.html" knowl-id="xref-fit" alt="Theorem 9.1.6 First Isomorphism Theorem" title="Theorem 9.1.6 First Isomorphism Theorem">First Isomorphism Theorem</a>.</p>
-<p id="p-1229">Define \(\phi:\R \to S^1\) by \(\phi(r)=e^{i2\pi r}\text{.}\) We have that \(\phi\) is a homomorphism, since for every \(r,s\in \R\text{,}\) we have</p>
-\begin{equation*}
-\phi(r+s)=e^{i2\pi (r+s)}=e^{i2\pi r+i2\pi s}=e^{i2\pi
-r}e^{i2\pi s}=\phi(r)\phi(s).
-\end{equation*}
-<p id="p-1230">Moreover, \(\phi\) is clearly onto, since if \(e^{i\theta}\in S^1\text{,}\) then</p>
-\begin{equation*}
-e^{i\theta}=e^{i2\pi\left(\frac{\theta}{2\pi}\right)}=\phi\left(\frac{\theta}{2\pi}\right).
-\end{equation*}
-<p id="p-1231">Finally, \(\Ker\phi=\Z\text{:}\) indeed,</p>
-\begin{align*}
+<p id="p-1230">
+        \(\R/\Z \simeq S^1\text{.}\)
+      </p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-54" id="proof-54"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-54" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-1231">
+      We will define an epimorphism \(\phi\) from \(\R\) to \(S^1\)
+      with \(\Ker \phi=\Z\text{;}\) then we'll have \(\R/\Z \simeq S^1\text{,}\)
+      by the <a knowl="./knowl/fit.html" knowl-id="xref-fit" alt="Theorem 9.1.6 First Isomorphism Theorem" title="Theorem 9.1.6 First Isomorphism Theorem">9.1.6</a>.
+    </p>
+<p id="p-1232">
+      Define \(\phi:\R \to S^1\) by \(\phi(r)=e^{i2\pi r}\text{.}\) We have
+      that \(\phi\) is a homomorphism, since for every \(r,s\in \R\text{,}\)
+      we have
+      \begin{equation*}
+        \phi(r+s)=e^{i2\pi (r+s)}=e^{i2\pi r+i2\pi s}=e^{i2\pi
+        r}e^{i2\pi s}=\phi(r)\phi(s).
+      \end{equation*}
+    </p>
+<p id="p-1233">
+      Moreover, \(\phi\) is clearly
+      onto, since if \(e^{i\theta}\in S^1\text{,}\) then
+      \begin{equation*}
+        e^{i\theta}=e^{i2\pi\left(\frac{\theta}{2\pi}\right)}=\phi\left(\frac{\theta}{2\pi}\right).
+      \end{equation*}
+    </p>
+<p id="p-1234">
+      Finally, \(\Ker\phi=\Z\text{:}\) indeed,
+      \begin{align*}
 r\in \Ker\phi \amp \Leftrightarrow \phi(r)=1\\
 \amp \Leftrightarrow e^{i2\pi r}=1\\
 \amp \Leftrightarrow \cos 2\pi r + i\sin 2\pi r=1\\
 \amp \Leftrightarrow \cos 2\pi r = 1 \text{ and } \sin 2\pi r = 0\\
 \amp \Leftrightarrow r\in \Z.
 \end{align*}
-<p id="p-1232">Thus, \(\Ker \phi = \Z\text{,}\) and hence \(\R/\Z\simeq S^1\text{,}\) as desired.</p></article></span>
+    </p>
+<p id="p-1235">
+      Thus, \(\Ker \phi = \Z\text{,}\) and hence \(\R/\Z\simeq S^1\text{,}\) as
+      desired.
+    </p></article></span>
 </div></section></div></main>
 </div>
-<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
 </body>
 </html>

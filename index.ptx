@@ -2,7 +2,7 @@
 <mathbook xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
 <docinfo>
 
-<rename element="observation" lang="en-US">Recall</rename>
+<rename element="observation" lang="en-US">Convention</rename>
 <rename element="insight" lang="en-US">Terminology</rename>
 
 <macros>

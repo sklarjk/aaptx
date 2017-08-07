@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-06T12:57:01-07:00    *-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2017-08-07T00:21:23-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -10,37 +10,38 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Alternating groups</title>
-<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="Keywords" content="Authored in MathBook XML">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
     },
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", },
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
         TagSide: "right",
         TagIndent: ".8em",
     },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
     "HTML-CSS": {
         scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
     },
 });
-</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\def\Z{\mathbb{Z}}
@@ -59,9 +60,9 @@ MathJax.Hub.Config({
 \DeclareMathOperator{\Ker}{Ker}
 \def\siml{\sim_L}
 \def\simr{\sim_R}
-\newcommand{\lt}{&lt;}
-\newcommand{\gt}{&gt;}
-\newcommand{\amp}{&amp;}
+\newcommand{\lt}{ &lt; }
+\newcommand{\gt}{ &gt; }
+\newcommand{\amp}{ &amp; }
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
@@ -69,9 +70,9 @@ MathJax.Hub.Config({
 <p class="byline">Jessica K. Sklar</p>
 </div>
 </div></div>
-<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<nav id="primary-navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-18.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="perm.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-20.html" title="Next" alt="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" onclick="window.location.href='index.html'">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a class="previous-button toolbar-item button" href="section-18.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="perm.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="section-20.html" title="Next" alt="Next">Next</a></span></div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
@@ -79,128 +80,152 @@ MathJax.Hub.Config({
 </div>
 </div></nav></header><div class="page">
 <aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
-<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html"><span class="title">Front Matter</span></a></h2>
 <ul>
-<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
-<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
-<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="colophon-1.html">Colophon</a></li>
+<li><a href="acknowledgement-1.html">Acknowledgements</a></li>
+<li><a href="preface-1.html">Preface</a></li>
 </ul>
-<h2 class="link"><a href="pre.html" data-scroll="pre"><span class="codenumber">1</span><span class="title">Preliminaries</span></a></h2>
+<h2 class="link"><a href="pre.html"><span class="codenumber">1</span><span class="title">Preliminaries</span></a></h2>
 <ul>
-<li><a href="section-1.html" data-scroll="section-1">Sets</a></li>
-<li><a href="section-2.html" data-scroll="section-2">Functions</a></li>
-<li><a href="section-3.html" data-scroll="section-3">Cardinality</a></li>
-<li><a href="exercises-1.html" data-scroll="exercises-1">Exercises</a></li>
+<li><a href="section-1.html">Sets</a></li>
+<li><a href="section-2.html">Functions</a></li>
+<li><a href="section-3.html">Cardinality</a></li>
+<li><a href="exercises-1.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="gps.html" data-scroll="gps"><span class="codenumber">2</span><span class="title">Groups</span></a></h2>
+<h2 class="link"><a href="gps.html"><span class="codenumber">2</span><span class="title">Groups</span></a></h2>
 <ul>
-<li><a href="section-4.html" data-scroll="section-4">Binary operations and structures</a></li>
-<li><a href="exercises-2.html" data-scroll="exercises-2">Exercises, Part I</a></li>
-<li><a href="section-5.html" data-scroll="section-5">The definition of a group</a></li>
-<li><a href="section-6.html" data-scroll="section-6">Examples of groups/nongroups, Part I</a></li>
-<li><a href="section-7.html" data-scroll="section-7">Group conventions and properties</a></li>
-<li><a href="section-8.html" data-scroll="section-8">Examples of groups/nongroups, Part II</a></li>
-<li><a href="section-9.html" data-scroll="section-9">Summaries of groups we've seen</a></li>
-<li><a href="exercises-3.html" data-scroll="exercises-3">Exercises, Part II</a></li>
+<li><a href="section-4.html">Binary operations and structures</a></li>
+<li><a href="exercises-2.html">Exercises, Part I</a></li>
+<li><a href="section-5.html">The definition of a group</a></li>
+<li><a href="section-6.html">Examples of groups/nongroups, Part I</a></li>
+<li><a href="section-7.html">Group conventions and properties</a></li>
+<li><a href="section-8.html">Examples of groups/nongroups, Part II</a></li>
+<li><a href="section-9.html">Summaries of groups we've seen</a></li>
+<li><a href="exercises-3.html">Exercises, Part II</a></li>
 </ul>
-<h2 class="link"><a href="homoiso.html" data-scroll="homoiso"><span class="codenumber">3</span><span class="title">Homorphisms and Isomorphisms</span></a></h2>
+<h2 class="link"><a href="homoiso.html"><span class="codenumber">3</span><span class="title">Homorphisms and Isomorphisms</span></a></h2>
 <ul>
-<li><a href="section-10.html" data-scroll="section-10">Groups of small order</a></li>
-<li><a href="section-11.html" data-scroll="section-11">Introduction to homomorphisms and isomorphisms</a></li>
-<li><a href="section-12.html" data-scroll="section-12">Isomorphic groups</a></li>
-<li><a href="exercises-4.html" data-scroll="exercises-4">Exercises</a></li>
+<li><a href="section-10.html">Groups of small order</a></li>
+<li><a href="section-11.html">Introduction to homomorphisms and isomorphisms</a></li>
+<li><a href="section-12.html">Isomorphic groups</a></li>
+<li><a href="exercises-4.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="subgps.html" data-scroll="subgps"><span class="codenumber">4</span><span class="title">Subgroups</span></a></h2>
+<h2 class="link"><a href="subgps.html"><span class="codenumber">4</span><span class="title">Subgroups</span></a></h2>
 <ul>
-<li><a href="section-13.html" data-scroll="section-13">Introduction to subgroups</a></li>
-<li><a href="section-14.html" data-scroll="section-14">Subgroup proofs and lattices</a></li>
-<li><a href="exercises-5.html" data-scroll="exercises-5">Exercises</a></li>
+<li><a href="section-13.html">Introduction to subgroups</a></li>
+<li><a href="section-14.html">Subgroup proofs and lattices</a></li>
+<li><a href="exercises-5.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="cyc.html" data-scroll="cyc"><span class="codenumber">5</span><span class="title">Cyclic Groups</span></a></h2>
+<h2 class="link"><a href="cyc.html"><span class="codenumber">5</span><span class="title">Cyclic Groups</span></a></h2>
 <ul>
-<li><a href="section-15.html" data-scroll="section-15">Introduction to cyclic groups</a></li>
-<li><a href="section-16.html" data-scroll="section-16">The subgroup lattices of cyclic groups</a></li>
-<li><a href="exercises-6.html" data-scroll="exercises-6">Exercises</a></li>
+<li><a href="section-15.html">Introduction to cyclic groups</a></li>
+<li><a href="section-16.html">The subgroup lattices of cyclic groups</a></li>
+<li><a href="exercises-6.html">Exercises</a></li>
 </ul>
-<h2 class="link active"><a href="perm.html" data-scroll="perm"><span class="codenumber">6</span><span class="title">Permutation Groups and Dihedral Groups</span></a></h2>
+<h2 class="link active"><a href="perm.html"><span class="codenumber">6</span><span class="title">Permutation Groups and Dihedral Groups</span></a></h2>
 <ul>
-<li><a href="section-17.html" data-scroll="section-17">Introduction to permutation groups</a></li>
-<li><a href="section-18.html" data-scroll="section-18">Symmetric groups</a></li>
-<li><a href="section-19.html" data-scroll="section-19" class="active">Alternating groups</a></li>
-<li><a href="section-20.html" data-scroll="section-20">Cayley's Theorem</a></li>
-<li><a href="dihedralgps.html" data-scroll="dihedralgps">Dihedral groups</a></li>
-<li><a href="exercises-7.html" data-scroll="exercises-7">Exercises</a></li>
+<li><a href="section-17.html">Introduction to permutation groups</a></li>
+<li><a href="section-18.html">Symmetric groups</a></li>
+<li><a href="section-19.html" class="active">Alternating groups</a></li>
+<li><a href="section-20.html">Cayley's Theorem</a></li>
+<li><a href="dihedralgps.html">Dihedral groups</a></li>
+<li><a href="exercises-7.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="coslag.html" data-scroll="coslag"><span class="codenumber">7</span><span class="title">The Wonderful World of Cosets</span></a></h2>
+<h2 class="link"><a href="coslag.html"><span class="codenumber">7</span><span class="title">The Wonderful World of Cosets</span></a></h2>
 <ul>
-<li><a href="section-22.html" data-scroll="section-22">Partitions of and equivalence relations on sets</a></li>
-<li><a href="section-23.html" data-scroll="section-23">Introduction to cosets and normal subgroups</a></li>
-<li><a href="section-24.html" data-scroll="section-24">The index of a subgroup and Lagrange's Theorem</a></li>
-<li><a href="exercises-8.html" data-scroll="exercises-8">Exercises</a></li>
+<li><a href="section-22.html">Partitions of and equivalence relations
+  on sets</a></li>
+<li><a href="section-23.html">Introduction to cosets and normal subgroups</a></li>
+<li><a href="section-24.html">The index of a subgroup and Lagrange's Theorem</a></li>
+<li><a href="exercises-8.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="factorgps.html" data-scroll="factorgps"><span class="codenumber">8</span><span class="title">Factor Groups</span></a></h2>
+<h2 class="link"><a href="factorgps.html"><span class="codenumber">8</span><span class="title">Factor Groups</span></a></h2>
 <ul>
-<li><a href="section-25.html" data-scroll="section-25">Motivation</a></li>
-<li><a href="section-26.html" data-scroll="section-26">Focusing on normal subgroups</a></li>
-<li><a href="section-27.html" data-scroll="section-27">Introduction to factor groups</a></li>
-<li><a href="exercises-9.html" data-scroll="exercises-9">Exercises</a></li>
+<li><a href="section-25.html">Motivation</a></li>
+<li><a href="section-26.html">Focusing on normal subgroups</a></li>
+<li><a href="section-27.html">Introduction to factor groups</a></li>
+<li><a href="exercises-9.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="isothms.html" data-scroll="isothms"><span class="codenumber">9</span><span class="title">The Isomorphism Theorems</span></a></h2>
+<h2 class="link"><a href="isothms.html"><span class="codenumber">9</span><span class="title">The Isomorphism Theorems</span></a></h2>
 <ul>
-<li><a href="section-28.html" data-scroll="section-28">The First Isomorphism Theorem</a></li>
-<li><a href="section-29.html" data-scroll="section-29">The Second and Third Isomorphism Theorems</a></li>
-<li><a href="exercises-10.html" data-scroll="exercises-10">Exercises</a></li>
+<li><a href="section-28.html">The First Isomorphism Theorem</a></li>
+<li><a href="section-29.html">The Second and Third Isomorphism Theorems</a></li>
+<li><a href="exercises-10.html">Exercises</a></li>
 </ul>
-<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<h2 class="link"><a href="backmatter-1.html"><span class="title">Back Matter</span></a></h2>
 <ul>
-<li><a href="appendix-1.html" data-scroll="appendix-1">Notation</a></li>
-<li><a href="appendix-2.html" data-scroll="appendix-2">Solutions to Exercises</a></li>
-<li><a href="references-1.html" data-scroll="references-1">Bibliography</a></li>
-<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
-<li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+<li><a href="appendix-1.html">Notation</a></li>
+<li><a href="appendix-2.html">Solutions to Exercises</a></li>
+<li><a href="references-1.html">Bibliography</a></li>
+<li><a href="appendix-gfdl.html">GNU Free Documentation License</a></li>
+<li><a href="colophon-2.html">Colophon</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-19"><header title="Section 6.3 Alternating groups"><h1 class="heading hide-type" alt="Section 6.3 Alternating groups">
 <span class="type">Section</span><span class="codenumber">6.3</span><span class="title">Alternating groups</span>
-</h1></header><p id="p-788">Note that every \(k\)-cycle \((a_1a_2\ldots a_k)\in S_n\) can be written as a product of (not necessarily disjoint) transpositions:</p>
-\begin{equation*}
-(a_1a_2\ldots a_k)=(a_1a_n)(a_1a_{n-1})\cdots(a_1a_3)(a_1a_2).
-\end{equation*}
-<p id="p-789">We therefore have the following theorem.</p>
-<article class="theorem-like" id="theorem-34"><h5 class="heading">
+</h1></header><p id="p-791">
+    Note that every \(k\)-cycle \((a_1a_2\ldots a_k)\in S_n\) can be written as a product of (not necessarily disjoint) transpositions:
+    \begin{equation*}
+      (a_1a_2\ldots a_k)=(a_1a_n)(a_1a_{n-1})\cdots(a_1a_3)(a_1a_2).
+    \end{equation*}
+  </p>
+<p id="p-792">
+    We therefore have the following theorem.
+  </p>
+<article class="theorem-like" id="theorem-32"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">6.3.1</span>
 </h5>
-<p id="p-790">Every permutation in \(S_n\) can be written as a product of transpositions.</p></article><article class="definition-like" id="definition-50"><h5 class="heading">
+<p id="p-793">
+        Every permutation in \(S_n\) can be written as a product of transpositions.
+      </p></article><article class="definition-like" id="definition-48"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">6.3.2</span>
 </h5>
-<p id="p-791">We say that a permutation in \(S_n\) is <em class="terminology">even</em> [resp., <em class="terminology">odd</em>] if it can be written as a product of an even [resp., odd] number of transpositions.</p></article><article class="theorem-like" id="theorem-35"><h5 class="heading">
+<p id="p-794">
+        We say that a permutation in \(S_n\) is <em class="terminology">even</em> [resp., <em class="terminology">odd</em>] if it can be written as a product of an even [resp., odd] number of transpositions.
+      </p></article><article class="theorem-like" id="theorem-33"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">6.3.3</span>
 </h5>
-<p id="p-792">Every permutation in \(S_n\) is even or odd, but not both.</p></article><div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-28" id="proof-28"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-28" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-793">We already know that every permutation is \(S_n\) is a product of transpositions, so must be even or odd. For proof that no permutation is both even <!--Style me with CSS--><em>and</em> odd, see, for instance, Proof 1 or 2 of Theorem 9.15 on p. 91 in <a knowl="./knowl/F.html" knowl-id="xref-F" alt="Bibliographic Entry 1 A First Course in Abstract Algebra" title="Bibliographic Entry 1 A First Course in Abstract Algebra">[1]</a>.</p></article></span>
+<p id="p-795">
+        Every permutation in \(S_n\) is even or odd, but not both.
+      </p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-28" id="proof-28"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-28" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-796">
+      We already know that every permutation is \(S_n\) is a product of transpositions, so must be even or odd. For proof that no permutation is both even <!--Style me with CSS--><em>and</em> odd, see, for instance, Proof 1 or 2 of Theorem 9.15 on p. 91 in <a knowl="./knowl/F.html" knowl-id="xref-F" alt="Bibliographic Entry 1 A First Course in Abstract Algebra" title="Bibliographic Entry 1 A First Course in Abstract Algebra">[1]</a>.
+    </p></article></span>
 </div>
 <article class="theorem-like" id="evenodd"><h5 class="heading">
 <span class="type">Lemma</span><span class="codenumber">6.3.4</span>
 </h5>
-<p id="p-794">For each \(2\leq k\leq n\text{,}\) then a \(k\)-cycle is even if \(k\) is odd, and odd if \(k\) is even.</p>
-<p id="p-795">The proof of this is left as an exercise for the reader.</p></article><article class="example-like" id="example-58"><h5 class="heading">
+<p id="p-797">
+        For each \(2\leq k\leq n\text{,}\) then a \(k\)-cycle is even if \(k\) is odd, and odd if \(k\) is even.
+      </p>
+<p id="p-798">The proof of this is left as an exercise for the reader.</p></article><article class="example-like" id="example-60"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">6.3.5</span>
 </h5>
-<p id="p-796">In \(S_3\text{,}\) the permutations \(e\text{,}\) \((123)=(13)(12)\text{,}\) and \((132)=(12)(13)\) are even, while the permutations \((12)\text{,}\) \((13)\text{,}\) and \((23)\) are odd.</p></article><article class="example-like" id="example-59"><h5 class="heading">
+<p id="p-799">
+        In \(S_3\text{,}\) the permutations \(e\text{,}\) \((123)=(13)(12)\text{,}\) and \((132)=(12)(13)\) are even, while the permutations \((12)\text{,}\) \((13)\text{,}\) and \((23)\) are odd.
+      </p></article><article class="example-like" id="example-61"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">6.3.6</span>
 </h5>
-<p id="p-797">List all of the even [resp., odd] permutations in \(S_4\text{.}\)</p></article><p id="p-798">We have the following theorem, whose proof is left as an exercise for the reader.</p>
-<article class="theorem-like" id="theorem-36"><h5 class="heading">
+<p id="p-800">
+        List all of the even [resp., odd] permutations in \(S_4\text{.}\)
+      </p></article><p id="p-801">We have the following theorem, whose proof is left as an exercise for the reader.</p>
+<article class="theorem-like" id="theorem-34"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">6.3.7</span>
 </h5>
-<p id="p-799">The set of all even permutations in \(S_n\) is a subgroup of \(S_n\text{.}\)</p></article><article class="definition-like" id="definition-51"><h5 class="heading">
+<p id="p-802">
+ The set of all even permutations in \(S_n\) is a subgroup of \(S_n\text{.}\) 
+  </p></article><article class="definition-like" id="definition-49"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">6.3.8</span>
 </h5>
-<p id="p-800">The <em class="terminology">alternating group on \(n\) letters</em> is the subgroup \(A_n\) of \(S_n\) consisting of all of the  even permutations in \(S_n\text{.}\)</p></article><p id="p-801">We end with this theorem, whose proof can be found on p. 93 of <a knowl="./knowl/F.html" knowl-id="xref-F" alt="Bibliographic Entry 1 A First Course in Abstract Algebra" title="Bibliographic Entry 1 A First Course in Abstract Algebra">[1]</a>.</p>
-<article class="theorem-like" id="theorem-37"><h5 class="heading">
+<p id="p-803">The <em class="terminology">alternating group on \(n\) letters</em> is the subgroup \(A_n\) of \(S_n\) consisting of all of the  even permutations in \(S_n\text{.}\)      </p></article><p id="p-804">
+    We end with this theorem, whose proof can be found on p. 93 of <a knowl="./knowl/F.html" knowl-id="xref-F" alt="Bibliographic Entry 1 A First Course in Abstract Algebra" title="Bibliographic Entry 1 A First Course in Abstract Algebra">[1]</a>.
+  </p>
+<article class="theorem-like" id="theorem-35"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">6.3.9</span>
 </h5>
-<p id="p-802">\(A_n=(n!)/2\text{.}\)</p></article></section></div></main>
+<p id="p-805">
+        \(A_n=(n!)/2\text{.}\)
+      </p></article></section></div></main>
 </div>
-<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
 </body>
 </html>

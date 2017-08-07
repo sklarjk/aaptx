@@ -252,6 +252,11 @@
         </ol>
       </p>
     </statement>
+    <notation><usage>C^0</usage><description>the set of all continuous functions from
+        <m>\R</m> to <m>\R</m></description></notation>
+         <notation><usage>C^1</usage><description>the set of all differentiable functions from
+        <m>\R</m> to <m>\R</m> whose derivatives are continuous</description></notation>
+      
   </example>
 
   <example>
@@ -277,6 +282,7 @@
         refer to the function <m>x\mapsto a^{-1}xa</m>.) Both versions of conjugation by <m>a</m> in group <m>G</m> are
         automorphisms of <m>G</m>.)</p>
     </statement>
+ <notation><usage>c_a</usage><description>conjugation by <m>a</m></description></notation>
   </example>
 
   <p>
@@ -335,14 +341,16 @@
     <statement>
       <p>
         We say that two groups <m>G</m> and <m>G'</m> (or binary
-        structures <m>S</m> and <m>S'</m>) are <term>isomorphic</term>, and write
+        structures <m>S</m> and <m>S'</m>) are <term>isomorphic</term> (or <m>G</m> is isomorphic to <m>G'</m>), and write
         <m>G\simeq G'</m>, if there exists an isomorphism from <m>G</m> to <m>G'</m>.
         We say that <m>G</m> is <term>isomorphic to <m>G'</m> via <m>\phi</m></term> if
         <m>\phi</m> is an isomorphism from <m>G</m> to <m>G'</m>. If there exists no
         isomorphism from <m>G</m> and <m>G'</m>, then we say that <m>G</m> and <m>G'</m>
-        are <term>nonisomorphic</term>, and write <m>G\not\simeq G'</m>.
+        are <term>nonisomorphic</term> (or <m>G</m> is not isomorphic to <m>G'</m>), and write <m>G\not\simeq G'</m>.
       </p>
     </statement>
+     <notation><usage>G\simeq G'</usage><description><m>G</m> is isomorphic to <m>G'</m></description></notation>
+     <notation><usage>G\not \simeq G'</usage><description><m>G</m> is not isomorphic to <m>G'</m></description></notation>
   </definition>
 
   <warning>

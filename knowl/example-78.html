@@ -1,8 +1,8 @@
 <!doctype html>
 <html>
 <!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-06T12:57:24-07:00    *-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2017-08-06T22:47:58-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,21 +13,25 @@
 </head>
 <body>
 <article class="example-like"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">8.2.3</span>
+<span class="type">Example</span><span class="codenumber">8.1.1</span>
 </h5>
-<ol style="list-style-type: decimal;">
-<li><p>As previously mentioned, the trivial and improper subgroups of any group \(G\) are normal in \(G\text{.}\)</p></li>
-<li><p>As previously mentioned, if group \(G\) is abelian then each of its subgroups is normal in \(G\text{.}\)</p></li>
-<li><p>Suppose \(H\leq G\) has \((G:H)=2\text{.}\)  Then \(H \unlhd G\text{.}\) The proof of this is left as an exercise for the reader.</p></li>
-<li><p><a knowl="./knowl/s3_ex.html" knowl-id="xref-s3_ex" alt="Example 7.2.9 " title="Example 7.2.9 ">Example 7.2.9</a> shows that subgroup \(H=\langle (12)\rangle\) isn't normal in \(S_3\) (for example, \((13)H\neq H(13)\text{.}\)  But \(\langle (123)\rangle\) must be normal in \(S_3\) since \((S_3:\langle (123)\rangle )=6/3=2.\)</p></li>
-<li><p>\(\langle r\rangle\) is normal in \(D_n\) since \((D_n:\langle r\rangle )=2\text{.}\)</p></li>
-<li>
-<p>\(\langle f\rangle\) isn't normal in \(D_4\text{:}\) for instance,</p>
-\begin{equation*}
-r\langle f\rangle r^{-1}=\{e,rfr^3\}=\{e, fr^3r^3\}=\{e,fr^2\}\not\subseteq
-\langle f\rangle .
-\end{equation*}
-</li>
-</ol></article><span class="incontext"><a href="section-26.html#example-78">in-context</a></span>
+<p id="p-1089">
+        Let \(H=\langle (12)\rangle\) in \(S_3\text{,}\) and let \(a=(13)\) and
+        \(b=(132)\text{.}\) Let \(x=aH\) and \(y=bH\) in \(S_3/H\text{.}\) Then using the
+        above-defined operation on \(G/H\) we'd have
+        \begin{equation*}
+          xy=(aH)(bH)=abH=(13)(132)H=(23)H.
+        \end{equation*}
+      </p>
+<p id="p-1090">
+        But also \(x=(123)H\) and \(y=(23)H\text{,}\) so
+        we'd also have
+        \begin{equation*}
+          xy=((123)H)((23)H))=(123)(23)H=(12)H=H\neq (23)H.
+        \end{equation*}
+      </p>
+<p id="p-1091">
+        So this operation isn't well defined.
+      </p></article><span class="incontext"><a href="section-25.html#example-78">in-context</a></span>
 </body>
 </html>
