@@ -121,20 +121,11 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
     a Boolean expression involving the element name(s), all
     surrounded by curly braces.</p>
 
-   <warning>The use of a colon to denote <q>such that</q> is <em>only</em> valid in the above set-builder notation context.  Outside of this context, you should never use a colon to denote <q>such that</q>; instead, write out the actual words or use the abbreviation s.t. (or the symbol <m>\ni</m>, though I do not recommended).  Conversely, never use one of those ways of indicating <q>such that</q> within set-builder notation; always use a colon there.  Why?  Convention.</warning>
+ 
+  <warning><p>The use of a colon to denote <q>such that</q> is <em>only</em> valid in the above set-builder notation context.  Outside of this context, you should never use a colon to denote <q>such that</q>; instead, use the abbreviation <q>s.t.</q> or write out the actual words.   Conversely, never use one of those ways of indicating <q>such that</q> within set-builder notation; always use a colon there.  Why?  Convention.</p></warning>
 <p>
-    For example,
-    <me>
-      \{x\in \Z : x > 4\}
-    </me>
-    is the set <m>\{5, 6, 7, \ldots\}</m>, while
-    <me>
-      \{z\in \C : |z|=1\}
-    </me>
-    is the set of all complex numbers at
-    distance 1 from the origin in the complex plane.
+    For example, <me> \{x\in \Z : x > 4\} </me> is the set <m>\{5, 6, 7, \ldots\}</m>, while <me> \{z\in \C : |z|=1\}</me> is the set of all complex numbers at distance 1 from the origin in the complex plane.
   </p>
-
   <note>
 
   <p>
@@ -231,28 +222,14 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
 
         <li>
           <p>
-            More generally, given any collection of sets <m>A_i</m> (<m>i</m> in some index set <m>I</m>), the <term>union</term> of the <m>A_i</m> is
-            <me>
-              \bigcup_{i\in I}A_i=\{x: x\in A_i \text{ for some }  i\in I\},
-            </me>
-            and the <term>intersection</term> of the <m>A_i</m> is
-            <me>
-              \bigcap_{i\in I}A_i=\{x: x\in A_i \text{ for every }  i\in I\}.
-            </me>
+            More generally, given any collection of sets <m>A_i</m> (<m>i</m> in some index set <m>I</m>), the <term>union</term> of the <m>A_i</m> is <me>\bigcup_{i\in I}A_i=\{x: x\in A_i \text{ for some }  i\in I\},</me> and the <term>intersection</term> of the <m>A_i</m> is <me>\bigcap_{i\in I}A_i=\{x: x\in A_i \text{ for every }  i\in I\}.</me>
           </p>
         </li>
 
         <li>
           <p>
             Sets <m>A</m> and <m>B</m> are <em>disjoint</em> if <m>A\cap B=\emptyset</m>.  More generally, sets <m>A_i</m> (<m>i</m> in some index set <m>I</m>) are
-            <em>disjoint</em> if
-            <me>
-              \bigcap_{i\in I}A_i=\emptyset
-            </me>
-            and are <em>mutually disjoint</em> if
-            <me>
-              A_i\cap A_j=\emptyset \text{ for all } i\neq j \in I.
-            </me>
+            <em>disjoint</em> if <me>\bigcap_{i\in I}A_i=\emptyset</me> and are <em>mutually disjoint</em> if<me>A_i\cap A_j=\emptyset \text{ for all } i\neq j \in I. </me>
           </p>
         </li>
       </ol>
@@ -278,10 +255,7 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
       <p>
         Let <m>A</m> and <m>B</m> be sets. Then the <term>direct product</term> (or <term>Cartesian 
         product</term>) <m>A\times B</m> of <m>A</m> and <m>B</m> is the set
-        <me>
-          A\times B =
-          \{(a,b): \text{\(a\in A\), \(b\in B\)} \}.
-        </me>
+        <me>A\times B =\{(a,b): \text{\(a\in A\), \(b\in B\)} \}.</me>
       </p>
 
       <p>
@@ -289,19 +263,14 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
         <m>A\times B</m> is called an <term>ordered pair</term>. More generally, if
         <m>A_1, A_2, \ldots, A_n</m> are sets for some <m>n\in \Z^+</m>, then the
         <term>product</term> of the <m>A_i</m> is
-        <me>
-          A_1\times A_2 \times \cdots
-          \times A_n=\{(a_1, a_2 \ldots, a_n): a_i \in A_i \text{ for
-          } i=1,2, \ldots, n\}; 
-        </me>
+        <me>A_1\times A_2 \times \cdots \times A_n=\{(a_1, a_2 \ldots, a_n): a_i \in A_i \text{ for
+          } i=1,2, \ldots, n\}; </me>
         the elements <m>(a_1,a_2,\ldots,a_n)</m> of this
         product are called <m>n</m>-tuples (or triples, if <m>n=3</m>). (You can also have products of infinitely many sets, but we will
         not discuss that in this course.) Finally, if each set <m>A_i</m> is
         the same set <m>A</m>, we can use the notation <m>A^n</m> to denote the
         product
-        <me>
-          A\times A \times \cdots \times A
-        </me>
+        <me>A\times A \times \cdots \times A</me>
         of <m>n</m> copies of
         <m>A</m>.
       </p>
@@ -339,23 +308,17 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
         element <m>f(s)</m> in <m>T</m>; the element <m>f(s)</m> is called the <term>image of <m>s</m> under <m>f</m></term>. If <m>f</m> is a function from <m>S</m> to <m>T</m>,
         we write <m>f: S \to T</m>, and call <m>S</m> the <term>domain</term> of <m>f</m> and
         <m>T</m> the <term>codomain</term> of <m>f</m>. The <term>range</term> of <m>f</m> is
-        <me>
-          f(S)=\{f(s) \in T : s \in S\} \subseteq T.
-        </me>
+          <me>f(S)=\{f(s) \in T : s \in S\} \subseteq T.</me>
       </p>
 
       <p>
         More generally, if <m>U \subseteq S</m>, the <term>image of <m>U</m> in <m>T</m> under <m>f</m></term> is
-        <me>
-          f(U)=\{f(u)\in T : u\in U\}.
-        </me>
+        <me>f(U)=\{f(u)\in T : u\in U\}.</me>
       </p>
 
       <p>
         If <m>V\subseteq T</m>, the <term>preimage of <m>V</m> in <m>S</m> under <m>f</m></term> is the set
-        <me>
-          f^{\leftarrow}(V)=\{s\in S: f(s)\in V\}.
-        </me>
+        <me>f^{\leftarrow}(V)=\{s\in S: f(s)\in V\}.</me>
       </p>
     </statement>
   <notation><usage>f:S\to T</usage><description>function <m>f</m> from  <m>S</m> to  <m>T</m></description></notation>
@@ -462,11 +425,7 @@ To prove that <m>f</m> is <em>not</em> onto: Identify an element <m>t\in T</m> f
     Recall that we can combine certain functions using <em>composition</em>:</p>
 
   <definition>
-  <statement>If <m>f:S\to T</m> and <m>g:T\to U</m>, then the  <term>composition of <m>f</m> and <m>g</m></term> is the function <m>g\circ f: S\to U</m> defined by
-    <me>
-      (g\circ f)(s)=g(f(s))
-    </me>
-    for all <m>s\in S</m>. (More generally, you can <term>compose</term> functions <m>f:S\to T</m> and <m>g:R\to U</m> to form <m>g\circ f:S\to U</m>,  as long as <m>f(S)\subseteq R</m>.) Also recall that given any set <m>S</m>, the <em>identity function on <m>S</m></em> is the function <m>1_S: S\to S</m> defined by <m>1_S(s)=s</m> for every <m>s\in S</m>.
+  <statement>If <m>f:S\to T</m> and <m>g:T\to U</m>, then the  <term>composition of <m>f</m> and <m>g</m></term> is the function <m>g\circ f: S\to U</m> defined by <me>(g\circ f)(s)=g(f(s))</me> for all <m>s\in S</m>. (More generally, you can <term>compose</term> functions <m>f:S\to T</m> and <m>g:R\to U</m> to form <m>g\circ f:S\to U</m>,  as long as <m>f(S)\subseteq R</m>.) Also recall that given any set <m>S</m>, the <em>identity function on <m>S</m></em> is the function <m>1_S: S\to S</m> defined by <m>1_S(s)=s</m> for every <m>s\in S</m>.
   </statement>
 
   <notation><usage>f\circ g</usage><description>the composition of  <m>f</m> with  <m>g</m></description></notation>
@@ -713,9 +672,7 @@ To prove that <m>f</m> is <em>not</em> onto: Identify an element <m>t\in T</m> f
 <proof>
   <p>
     To prove the fourth statement: Let <m>A</m> and <m>B</m> be countable sets. Assume that <m>A</m> and <m>B</m> are both countably infinite. Since <m>\Z^+</m> is countably infinite, we can index the elements of <m>A</m> and of <m>B</m> by <m>\Z^+</m>, writing
-    <me>
-      A=\{a_1,a_2,\ldots\} \text{ and }  B=\{b_1,b_2,\ldots\}.
-    </me>
+    <me>A=\{a_1,a_2,\ldots\} \text{ and }  B=\{b_1,b_2,\ldots\}.</me>
   </p>
 
   <p>
@@ -754,9 +711,7 @@ To prove that <m>f</m> is <em>not</em> onto: Identify an element <m>t\in T</m> f
   </sidebyside>
     
     <p>contains every element of <m>A\times B</m>. We can then list the elements of <m>A\times B</m> by listing the elements in progressive upper-right to lower-left diagonals, starting with <m>(a_1,b_1)</m> and moving to the right along the top row: that is, we can write
-    <me>
-      A\times B=\{(a_1,b_1),(a_1,b_2),(a_2,b_1),(a_2,b_3),(a_2,b_2),(a_3,b_1),\ldots\}
-    </me>
+    <me>A\times B=\{(a_1,b_1),(a_1,b_2),(a_2,b_1),(a_2,b_3),(a_2,b_2),(a_3,b_1),\ldots\}.</me>
   </p>
 
   <p>
