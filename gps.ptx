@@ -34,6 +34,10 @@
         just by <m>S</m>, if <m>*</m> is understood from context.
       </p>
     </statement>
+
+    <notation><usage>a*b</usage><description><m>a</m> operated with <m>b</m> under operation <m>*</m></description></notation>
+<notation><usage>\langle S, *\rangle </usage><description>binary structure </description></notation>
+
   </definition>
 
   <remark>
@@ -112,6 +116,7 @@
         <m>x\in S</m>.
       </p>
     </statement>
+    <notation><usage>e</usage><description>identity element in a binary structure</description></notation>
   </definition>
 
   <note>
@@ -294,18 +299,18 @@
         <ol label="I">
           <li>
             <p>
-              <m>*</m> is associative on <m>G</m> (we call this axiom <m>\G_1</m>)
+              <m>*</m> is associative on <m>G</m>. (Axiom <m>\G_1</m>)
             </p>
           </li>
 
           <li>
             <p>
-              There exists an identity element for <m>*</m> in <m>G</m> (axiom <m>\G_2</m>)
+              There exists an identity element for <m>*</m> in <m>G</m>. (Axiom <m>\G_2</m>)
             </p>
           </li>
 
           <li> <p>
-              Every element <m>a\in G</m> has an inverse in <m>G</m> (axiom <m>\G_3</m>)
+              Every element <m>a\in G</m> has an inverse in <m>G</m>. (Axiom <m>\G_3</m>)
 
             </p>
           </li>
