@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-08-07T00:56:32-07:00    *-->
+<!--*    on 2017-08-07T15:14:32-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -14,16 +14,16 @@
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <p>
-      We want to show that \(\phi(a)^{-1}=\phi(a^{-1})\text{.}\).
-      Notice that
-      \begin{align*}
-\phi(a^{-1})\phi(a)\amp =\phi(a^{-1}a)\amp \amp \text{ (since \(\phi\) is a homomorphism) }\\
-\amp =\phi(e)\amp \amp \text{(by definition of \(a^{-1}\))}\\
-\amp =e'\amp \amp  \text{ (since \(\phi(e)\) is the identity element of
-        \(G'\)) }\\
-\amp =\phi(a)^{-1}\phi(a)\amp \amp \text{(by definition of \(\phi(a)^{-1}\))} .
+          Since \(G\simeq G'\text{,}\), there exists some isomorphism \(\phi:G\to G'\text{.}\).  Let \(x,y\in G'\text{.}\).  Since \(\phi\) is onto, there exist \(a,b\in G\) such that \(\phi(a)=x\) and \(\phi(b)=y\text{.}\).  So
+          \begin{align*}
+xy\amp =\phi(a)\phi(b)\amp \amp\\
+\amp =\phi(ab)\amp \amp \text{ (since \(\phi\) is a homomorphism) }\\
+\amp =\phi(ba) \amp \amp \text{ (since \(G\) is abelian) }\\
+\amp =\phi(b)\phi(a)\\
+\amp =yx.
 \end{align*}
-    </p>
+          Thus, \(G'\) is abelian.
+        </p>
 <span class="incontext"><a href="exercises-4.html#p-490">in-context</a></span>
 </body>
 </html>

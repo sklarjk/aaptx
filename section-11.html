@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-08-07T00:56:21-07:00    *-->
+<!--*    on 2017-08-07T15:14:22-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -166,35 +166,35 @@ MathJax.Hub.Config({
 </h1></header><article class="definition-like" id="definition-30"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">3.2.1</span>
 </h5>
-<p id="p-386">
+<p id="p-388">
         Let \(\langle S,*\rangle\) and \(\langle S',*'\rangle\) be binary structures. A
         function \(\phi\) from \(S\) to \(S'\) is a <em class="terminology">homomorphism</em> if
         \begin{equation*}
           \phi(a* b)=\phi(a)*'\phi(b)
         \end{equation*}
         for all \(a,b\in S\text{.}\) An <em class="terminology">isomorphism</em> is a homomorphism that is also a bijection.
-      </p></article><p id="p-387">
+      </p></article><p id="p-389">
     Intuitively, you can think of a homomorphism \(\phi\) as a
     “structure-preserving” map: if you multiply and then apply \(\phi\text{,}\)
     you get the same result as when you first apply \(\phi\) and then
     multiply. Isomorphisms, then, are both structure-preserving and
     cardinality-preserving.
   </p>
-<article class="remark-like" id="note-6"><h5 class="heading">
+<article class="remark-like" id="note-7"><h5 class="heading">
 <span class="type">Note</span><span class="codenumber">3.2.2</span>
 </h5>
-<p id="p-388">
+<p id="p-390">
     We may omit the \(*\) and \(*'\text{,}\) as per our group conventions, but we include them here to emphasize that the operations in the structures may be distinct from one another. When we omit them and write \(\phi(st)=\phi(s)\phi(t)\text{,}\) then it is the writers' and readers' responsibility to keep in mind that \(s\) and \(t\) are being operated together using the operation in \(S\text{,}\) while \(\phi(s)\) and \(\phi(t)\) are being operated together using the operation in \(S'\text{.}\)
-  </p></article><article class="remark-like" id="remark-16"><h5 class="heading">
+  </p></article><article class="remark-like" id="remark-17"><h5 class="heading">
 <span class="type">Remark</span><span class="codenumber">3.2.3</span>
 </h5>
-<p id="p-389">
+<p id="p-391">
       There may be more than one homomorphism
       [isomorphism] from one binary structure to another (see <a knowl="./knowl/homos.html" knowl-id="xref-homos" alt="Example 3.2.4 " title="Example 3.2.4 ">Example 3.2.4</a>).
     </p></article><article class="example-like" id="homos"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">3.2.4</span>
 </h5>
-<p id="p-390">
+<p id="p-392">
         For each of the following, decide whether or not the given function
         \(\phi\) from one binary structure to another is a homomorphism, and,
         if so, if it is an isomorphism. Prove or disprove your answers! For
@@ -206,26 +206,26 @@ MathJax.Hub.Config({
         inverses unless they are bijections.)
         </p>
 <ol id="ol-29" style="list-style-type: decimal;">
-<li id="li-132"><p id="p-391">
+<li id="li-132"><p id="p-393">
               \(\phi:\langle \Z,+\rangle \to \langle \Z,+\rangle\) defined by \(\phi(x)=x\text{;}\)
             </p></li>
-<li id="li-133"><p id="p-392">
+<li id="li-133"><p id="p-394">
               \(\phi:\langle \Z,+\rangle \to \langle \Z,+\rangle\) defined by \(\phi(x)=-x\text{;}\)
             </p></li>
-<li id="li-134"><p id="p-393">
+<li id="li-134"><p id="p-395">
               \(\phi:\langle \Z,+\rangle \to \langle \Z,+\rangle\) defined by \(\phi(x)=2x\text{;}\)
             </p></li>
-<li id="li-135"><p id="p-394">
+<li id="li-135"><p id="p-396">
               \(\phi:\langle \R,+\rangle \to \langle \R^+,\cdot\,\rangle\) defined by \(\phi(x)=e^x\text{;}\)
             </p></li>
-<li id="li-136"><p id="p-395">
+<li id="li-136"><p id="p-397">
               \(\phi:\langle \R,+\rangle \to \langle \R^*,\cdot\,\rangle\) defined by \(\phi(x)=e^x\text{;}\)
             </p></li>
-<li id="li-137"><p id="p-396">
+<li id="li-137"><p id="p-398">
               \(\phi:\langle C^1,+\rangle \to \langle C^0,+\rangle\) defined by \(\phi(f)=f'\) (the derivative of
               \(f\));
             </p></li>
-<li id="li-138"><p id="p-397">
+<li id="li-138"><p id="p-399">
               \(\phi:\langle C^0,+\rangle \to \langle \R,+\rangle\) defined by \(\phi(f)=\displaystyle{\int_0^1 f(x)\, dx}\text{.}\)
             </p></li>
 </ol>
@@ -233,7 +233,7 @@ MathJax.Hub.Config({
       </p></article><article class="example-like" id="example-27"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">3.2.5</span>
 </h5>
-<p id="p-398">
+<p id="p-400">
         Let \(\Gdot\) be a group and let \(a\in G\text{.}\) Then the
         function \(c_a\) from \(G\) to \(G\) defined by \(c_a(x)=axa^{-1}\) (for
         all \(x\in G\)) is a homomorphism. Indeed, let \(x,y\in G\text{.}\) Then
@@ -245,33 +245,33 @@ c_a(xy)\amp =a(xy)a^{-1}\\
 \amp =c_a(x)c_a(y).
 \end{align*}
       </p>
-<p id="p-399">
+<p id="p-401">
         The homomorphism \(c_a\) is called
         <em class="terminology">conjugation by \(a\)</em>. Homomorphisms from a group \(G\) to
         itself are called <em class="terminology">automorphisms</em>. Thus, conjugation by any
         element \(a\) in \(G\) is an automorphism of \(G\text{.}\) (Beware: Some texts use “conjugation by \(a\)” to 
         refer to the function \(x\mapsto a^{-1}xa\text{.}\)) Both versions of conjugation by \(a\) in group \(G\) are
-        automorphisms of \(G\text{.}\))</p></article><p id="p-400">
+        automorphisms of \(G\text{.}\))</p></article><p id="p-402">
     We end with a theorem stating basic facts about
     homomorphisms from one group to another. (<!--Style me with CSS--><em>Note.</em> This doesn't apply to arbitrary binary structures, which may or may not even have identity elements.)
   </p>
 <article class="theorem-like" id="homoprops"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">3.2.6</span>
 </h5>
-<p id="p-401">
+<p id="p-403">
         Let \(\langle G,\cdot\rangle\) and \(\langle G',\cdot'\rangle\) be groups with identity elements \(e\) and \(e'\text{,}\) respectively, and let \(\phi\) be a homomorphism from \(G\) to \(G'\text{.}\) Then:
         </p>
 <ol id="ol-30" style="list-style-type: decimal;">
-<li id="li-139"><p id="p-402">
+<li id="li-139"><p id="p-404">
               \(\phi(e)=e'\text{;}\) and
             </p></li>
-<li id="li-140"><p id="p-403">
+<li id="li-140"><p id="p-405">
               For every \(a\in G\text{,}\) \(\phi(a)^{-1}=\phi(a^{-1})\text{.}\)
             </p></li>
 </ol>
 <p>
       </p></article><div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-15" id="proof-15"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-15" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-404">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-15" id="proof-15"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-15" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-406">
       For Part 1, note that
       \begin{align*}
 \phi(e)\cdot'e'\amp =\phi(e)\amp \amp \text{ (by definition of \(e'\)) }\\
@@ -279,7 +279,7 @@ c_a(xy)\amp =a(xy)a^{-1}\\
 \amp =\phi(e)\cdot'\phi(e) \amp \amp \text{ (since \(\phi\) is a homomorphism). }
 \end{align*}
     </p>
-<p id="p-405">
+<p id="p-407">
       Thus, by left
       cancellation, \(e'=\phi(e)\text{.}\) The proof of Part 2 is left as an exercise for the reader.
     </p></article></span>

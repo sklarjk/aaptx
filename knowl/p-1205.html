@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-08-07T00:56:44-07:00    *-->
+<!--*    on 2017-08-07T15:14:45-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -14,11 +14,16 @@
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <p>
-      Next, we show that \(\phibar\) is a homomorphism. Let \(aN,bN\in
-      G/N\text{.}\). Then
-      \begin{equation*}
-        \phibar((aN)(bN))=\phibar(abN)=\phi(ab)=\phi(a)\phi(b)=\phibar(aN)\phibar(bN).
-      \end{equation*}
+      Let \(a,b\in G\text{.}\). Then
+      \begin{align*}
+\phi(a)=\phi(b)\amp \Leftrightarrow
+        \phi(b)^{-1}\phi(a)=e_{G'}\\
+\amp \Leftrightarrow \phi(b^{-1}a)=e_{G'}\\
+\amp \Leftrightarrow b^{-1}a\in K\\
+\amp \Leftrightarrow a \in bK\\
+\amp \Leftrightarrow aK=bK,
+\end{align*}
+      as desired.
     </p>
 <span class="incontext"><a href="section-28.html#p-1205">in-context</a></span>
 </body>

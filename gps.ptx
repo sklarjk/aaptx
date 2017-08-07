@@ -209,73 +209,24 @@
 <section>
   <title>The definition of a group</title>
   <p>
-    At this point you may be asking yourself, why do we care? We've covered a lot of definitions and proved some theorems, but what is the goal of all this? Well, there are actually many goals that we can achieve using such material. Consider the following as an example. Suppose we want to solve the equation <m>5+x=2</m>. We can probably solve this quite easily almost just by looking at it (<m>x=-3</m>), but what facts are we actually using there? If we break down the reasoning leading to this answer, we may obtain something like the following set of steps.
+    At this point you may be asking yourself, why do we care? We've covered a lot of definitions and proved some theorems, but what is the goal of all this? Well, there are actually many goals that we can achieve using such material. Consider the following as an example. Suppose we want to solve the equation <m>5+x=2</m>. We can probably solve this quite easily almost just by looking at it (<m>x=-3</m>), but what facts are we actually using there? If we break down the reasoning leading to this answer, we may obtain something like the following, where each line is equivalent to the one preceding it.
   </p>
 
 
-<!--FIX 
+
  <md>
-          <mrow>((f+g)+h)(x)\amp =(f+g)(x)+h(x)\amp \amp</mrow>
-          <mrow>\amp =((f(x)+g(x))+h(x)\amp \amp</mrow>
-          <mrow>\amp =f(x)+(g(x)+h(x))\amp \amp \text{ (since addition is associative on
-          \(\R\)) }</mrow>
-          <mrow>\amp =f(x)+(g+h)(x)\amp \amp</mrow>
-          <mrow>\amp =(f+(g+h))(x)\amp \amp .</mrow>
-        </md>-->
-
-
-  <tabular>
-    <row>
-      <cell></cell>
-      <cell><m>5+x</m></cell>
-      <cell>=</cell>
-      <cell><m>2</m></cell>
-      <cell></cell>
-    </row>
-    <row>
-      <cell><m>\Rightarrow</m></cell>
-      <cell><m>-5+(5+x)</m></cell>
-      <cell>=</cell>
-      <cell><m>-5+2</m></cell>
-      <cell></cell>
-    </row>
-    <row>
-      <cell><m>\Rightarrow</m></cell>
-      <cell><m>(-5+5)+x</m></cell>
-      <cell>=</cell>
-      <cell><m>-3</m></cell>
-      <cell></cell>
-    </row>
-    <row>
-      <cell><m>\Rightarrow</m></cell> <md>
-          <mrow>{2}
-          \amp \amp  a^{-1}(ab)\amp =a^{-1}(ac)</mrow>
-          <mrow>\amp \Rightarrow
-          \amp (a^{-1}a)b\amp =(a^{-1}a)c</mrow>
-          <mrow>\amp \Rightarrow
-          \amp eb\amp =ec</mrow>
-          <mrow>\amp \Rightarrow
-          \amp b\amp =c</mrow>
+          <mrow>5+x\amp =2 </mrow>
+          <mrow>-5+(5+x)\amp =-5+2</mrow>
+          <mrow>(-5+5)+x \amp =-3</mrow>
+          <mrow>0+x\amp =-3</mrow>
+          <mrow>x\amp =-3.</mrow>
         </md>
-      <cell><m>0+x</m></cell>
-      <cell>=</cell>
-      <cell><m>-3</m></cell>
-      <cell></cell>
-    </row>
-    <row>
-      <cell><m>\Rightarrow</m></cell>
-      <cell><m>x</m></cell>
-      <cell>=</cell>
-      <cell><m>-3</m></cell>
-      <cell>.</cell>
-    </row>
-  </tabular>
   <p>
-    In line 2, we add the inverse of <m>5</m> in <m>\langle \Z, +\rangle</m> to each side of
-    the equation. In line 3, we use associativity of <m>+</m> in <m>\Z</m> (along
-    with computation), while in line 4 we use the fact that <m>-5</m> is the
+    In the second line we add the inverse of <m>5</m> in <m>\langle \Z, +\rangle</m> to each side of
+    the equation; in the third line we use associativity of <m>+</m> in <m>\Z</m> (along
+    with computation); and in the fourth line we use the fact that <m>-5</m> is the
     additive inverse of <m>5</m> (that is, the inverse of <m>5</m> in <m>\Z</m> under
-    <m>+</m>). Finally, in line 5 we use the fact that 0 is an additive
+    <m>+</m>). Finally, we use the fact that 0 is an additive
     identity element in <m>\Z</m> (that is, the identity element in <m>\Z</m>
     under <m>+</m>).
   </p>
@@ -419,10 +370,12 @@
   <p>
     If you have taken
     linear algebra, you have also probably seen a collection of matrices
-    that is a group under matrix multiplication. Recall that given a square matrix <m>A</m>, the notation <m>\det A</m> denotes the 
-    determinant of <m>A</m>.
+    that is a group under matrix multiplication.</p>
+
+    <note><p>Recall that given a square matrix <m>A</m>, the notation <m>\det A</m> denotes the 
+    determinant of <m>A</m>.</p>
    <notation><usage>\det A</usage><description>the determinant of <m>A</m></description></notation>
-  </p>
+  </note>
 
 <p>
   <example xml:id="gl">

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-08-07T00:56:21-07:00    *-->
+<!--*    on 2017-08-07T15:14:23-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -163,13 +163,13 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-13"><header title="Section 4.1 Introduction to subgroups"><h1 class="heading hide-type" alt="Section 4.1 Introduction to subgroups">
 <span class="type">Section</span><span class="codenumber">4.1</span><span class="title">Introduction to subgroups</span>
-</h1></header><p id="p-492">
+</h1></header><p id="p-496">
     Sometimes groups are too complicated to understand directly. One method that can be used to identify a group's structure is to study its <!--Style me with CSS--><em>subgroups</em>.
   </p>
 <article class="definition-like" id="definition-34"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">4.1.1</span>
 </h5>
-<p id="p-493">
+<p id="p-497">
         A <em class="terminology">subgroup</em> of a group \(G\) is a subset of \(G\) that
         is also a group under \(G\)'s operation. If \(H\) is a subgroup of
         \(G\text{,}\) we write \(H \leq G\text{;}\) if \(H\subseteq G\) is not a subgroup of
@@ -177,7 +177,7 @@ MathJax.Hub.Config({
       </p></article><article class="remark-like" id="warning-14"><h5 class="heading">
 <span class="type">Warning</span><span class="codenumber">4.1.2</span>
 </h5>
-<p id="p-494">
+<p id="p-498">
       Do not confuse sub<!--Style me with CSS--><em>groups</em> with sub<!--Style me with CSS--><em>sets</em>!
       All subgroups of a group \(G\) are, by definition, subsets of
       \(G\text{,}\) but not all subsets of \(G\) are subgroups of \(G\) (see
@@ -188,16 +188,16 @@ MathJax.Hub.Config({
 <span class="type">Example</span><span class="codenumber">4.1.3</span>
 </h5>
 <ol id="ol-46" style="list-style-type: decimal;">
-<li id="li-186"><p id="p-495">
+<li id="li-186"><p id="p-499">
             Consider the subset \(\Z\) of the group \(\Q\text{,}\) assuming that \(\Q\) is equipped with the usual addition of real numbers (as we indicated above that we would assume, by default).  Since we already know that \(\Z\) is a group under this operation, \(\Z\) is not just a subset but in fact a subgroup of \(\Q\) (under addition).
           </p></li>
-<li id="li-187"><p id="p-496">
+<li id="li-187"><p id="p-500">
             Instead, consider the subset \(\Q^+\) of the group \(\Q\text{.}\)  This
             subset is <!--Style me with CSS--><em>not</em> a group under \(\Q\)'s operation \(+\text{,}\)
             since it does not contain an identity element for \(+\text{.}\)  Therefore,
             \(\Q^+\) is a subset but not a subgroup of \(\Q\text{.}\)
           </p></li>
-<li id="li-188"><p id="p-497">
+<li id="li-188"><p id="p-501">
             Let \(I\) be the subset
             \begin{equation*}
               I=\R-\Q=\{x\in \R: x
@@ -210,7 +210,7 @@ MathJax.Hub.Config({
             \(\pi+(-\pi)=0\not\in I\text{.}\)  So \(I\) is a subset but not a
             subgroup of \(\R\text{.}\)
           </p></li>
-<li id="li-189"><p id="p-498">
+<li id="li-189"><p id="p-502">
             Consider the subset \(\Z^+\) of the group \(\R^+\text{.}\)
             The set \(\Z^+\) is closed under multiplication, multiplication is
             associative on \(\Z^+\text{,}\) and \(\Z^+\) does contain an identity element
@@ -219,30 +219,30 @@ MathJax.Hub.Config({
             would have to be \(1/3\text{,}\) but \(1/3\not\in \Z^+\text{.}\)  Therefore, \(\Z^+\) is
             a subset but not a subgroup of \(\R^+\text{.}\)
           </p></li>
-<li id="li-190"><p id="p-499">
+<li id="li-190"><p id="p-503">
             Consider the subset \(GL(n,\R)\) of \(\M_n(\R)\text{.}\)  We know that \(GL(n,\R)\) is a group, so it might be tempting to say that it is a subgroup of \(\M_n(\R)\text{;}\) to be a subgroup of \(\M_n(\R)\text{,}\) \(GL(n,\R)\) must be a group under \(\M_n(\R)\)'s operation, which is matrix addition.  While \(GL(n,\R)\) is a group under matrix multiplication, it is not a group under matrix addition: for instance, it is not closed under matrix addition, since \(I_n, -I_n\in GL(n,\R)\) but \(I_n+(-I_n)\) is the matrix consisting of all zeros, which is not in \(GL(n,\R)\text{.}\) So \(GL(n,\R)\) is a subset but not a subgroup of \(\M_n(\R)\text{.}\)
           </p></li>
-<li id="li-191"><p id="p-500">
+<li id="li-191"><p id="p-504">
             Consider the subset \(H=\{0,2\}\) of \(\Z_4\text{.}\)  The subset \(H\) is closed under addition modulo 4 (\(0+0=0\text{,}\) \(0+2=2+0=2\text{,}\) \(2+2=0\)), addition modulo 4 is always associative, \(H\) contains an identity element (namely, 0) under addition modulo 4, and both 0 and 2 have inverses in \(\Z_4\) under this operation (0 and 2 are each their own inverses).  Thus, \(H\) <!--Style me with CSS--><em>is</em> a subgroup of \(\Z_4\text{.}\)
           </p></li>
-<li id="li-192"><p id="p-501">
+<li id="li-192"><p id="p-505">
             Let \(G\) be a group.  Then \(\{e_G\}\) and \(G\) are clearly both subgroups of \(G\text{.}\)
           </p></li>
 </ol></article><article class="definition-like" id="definition-35"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">4.1.4</span>
 </h5>
-<p id="p-502">
+<p id="p-506">
         Let \(G\) be a group. The subgroups \(\{e_G\}\) and \(G\) of
         \(G\) are called the <em class="terminology">trivial subgroup</em> and the <em class="terminology">improper
         subgroup</em> of \(G\text{,}\) respectively. Not surprisingly, if \(H\leq G\)
         and \(H\neq \{e_G\}\text{,}\) \(H\) is called a <em class="terminology">nontrivial</em> subgroup
-        of \(G\text{,}\) and if \(H\leq G\) and \(H\neq G\text{,}\) \(H\) is called a <em class="terminology">proper subgroup</em> of \(G\text{.}\)</p></article><article class="remark-like" id="remark-18"><h5 class="heading">
+        of \(G\text{,}\) and if \(H\leq G\) and \(H\neq G\text{,}\) \(H\) is called a <em class="terminology">proper subgroup</em> of \(G\text{.}\)</p></article><article class="remark-like" id="remark-19"><h5 class="heading">
 <span class="type">Remark</span><span class="codenumber">4.1.5</span>
 </h5>
-<p id="p-503">Sometimes the notation \(H\lt G\)
+<p id="p-507">Sometimes the notation \(H\lt G\)
         is used to indicate that \(H\) is a proper subgroup of \(G\text{,}\) but
         sometimes it is simply used to mean that \(H\) is a
-        subgroup—proper or improper—of \(G\text{.}\) We will not use the notation \(H\lt G\) in this text.</p></article><p id="p-504">
+        subgroup—proper or improper—of \(G\text{.}\) We will not use the notation \(H\lt G\) in this text.</p></article><p id="p-508">
     Notice that in the cases above, we saw subsets of groups fail to be subgroups because
     they were not closed under the groups' operations; because they did not contain identity elements; or because they didn't contain an
     inverse for each of their elements. None, however, failed because the relevant group's operation was not associative on them.
@@ -253,35 +253,35 @@ MathJax.Hub.Config({
 <article class="theorem-like" id="subsame"><h5 class="heading">
 <span class="type">Lemma</span><span class="codenumber">4.1.6</span>
 </h5>
-<p id="p-505">
+<p id="p-509">
         Let \(G\) be a group.
         </p>
 <ol id="ol-47" style="list-style-type: decimal;">
-<li id="li-193"><p id="p-506">
+<li id="li-193"><p id="p-510">
               If \(H\) is a subgroup of \(G\) then the identity element \(e_H\) of \(H\)
               is \(e_G\text{,}\) the identity element of \(G\text{.}\)
             </p></li>
-<li id="li-194"><p id="p-507">
+<li id="li-194"><p id="p-511">
               If \(H\) is a subgroup of \(G\) and \(a\in H\) has inverse \(a^{-1}\) in \(G\text{,}\) then \(a\)'s inverse in \(H\) is also \(a^{-1}\text{.}\)
             </p></li>
 </ol>
 <p>
       </p></article><div class="posterior">
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-18" id="proof-18"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></div>
-<div id="hk-proof-18" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-508">
+<div id="hk-proof-18" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-512">
       For Part 1: Since \(e_H\) is in both \(H\) and \(G\text{,}\) by the definition
       of \(e_H\text{,}\) we have
       \(e_He_H=e_H\text{,}\) and by the definition of \(e_G\) we have \(e_Ge_H=e_H\text{.}\) So \(e_He_H=e_Ge_H\text{,}\) and thus by right
       cancellation, \(e_H=e_G\text{.}\)
     </p>
-<p id="p-509">
+<p id="p-513">
       Next, for Part 2, let \(b\) be the inverse of \(a\) in \(H\text{.}\) Then using Part 1 of this lemma and the definition of an inverse, \(ab=e_H=e_G=aa^{-1}\text{.}\) By left cancellation, then, we have that \(b=a^{-1}\text{.}\)
     </p></article></div>
 </div>
 <article class="theorem-like" id="corollary-2"><h5 class="heading">
 <span class="type">Corollary</span><span class="codenumber">4.1.7</span>
 </h5>
-<p id="p-510">
+<p id="p-514">
         Let \(H\subseteq G\text{.}\) If the identity element of \(G\) is not in \(H\text{,}\) then \(H\not\leq G\text{.}\)
       </p></article></section></div></main>
 </div>

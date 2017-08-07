@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-08-07T00:56:42-07:00    *-->
+<!--*    on 2017-08-07T15:14:43-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,12 +13,20 @@
 </head>
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>
-    It is clear that normal subgroups will be
-    very important for us in studying group structures. We therefore
-    spend some time looking at normal subgroups before returning to
-    equipping \(G/H\) with a group structure.
-  </p>
+<p>Well, let \(x\in aH\text{.}\). Then
+      \begin{equation*}
+        (xH)(a^{-1}H)=xa^{-1}H
+      \end{equation*}
+      and, since
+      \(xH=aH\text{,}\),
+      \begin{equation*}
+        (xH)(a^{-1}H)=(aH)(a^{-1}H)=aa^{-1}H=H.
+      \end{equation*}
+      Since our operation on \(G/H\) is well defined, this means that
+      \(xa^{-1}H=H\text{,}\), so \(xa^{-1}\in H\text{;}\); thus, \(x\in Ha\text{.}\). We conclude that
+      \(aH\subseteq Ha\text{.}\). The proof that \(Ha\subseteq aH\) is similar. So \(aH=Ha\text{,}\), and thus, since \(a\in G\) was arbitrary, 
+      \(H\) is normal in \(G\text{.}\).
+    </p>
 <span class="incontext"><a href="section-25.html#p-1111">in-context</a></span>
 </body>
 </html>

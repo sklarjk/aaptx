@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-08-07T00:56:45-07:00    *-->
+<!--*    on 2017-08-07T15:14:46-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -14,10 +14,20 @@
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <p>
-        Let \(N=\{1,-1\}\subseteq \R^*\text{.}\). Prove that \(\R^*/N\) is
-        a group that's isomorphic to
-        \(\R^+\text{.}\).
-      </p>
-<span class="incontext"><a href="exercises-10.html#p-1250">in-context</a></span>
+      Define \(\phi: G/K\to G/N\) by \(\phi(aK)=aN\text{.}\). We have that
+      \(\phi\) is well defined: indeed, let \(aK=bK \in G/K\text{.}\). Then by
+      Statement 6 of <a knowl="./knowl/cosetfacts.html" knowl-id="xref-cosetfacts" alt="Theorem 7.2.7 " title="Theorem 7.2.7 ">Theorem 7.2.7</a>, we have \(aN=bN\text{,}\), that
+      is, \(\phi(aK)=\phi(bK)\text{.}\). So \(\phi\) is well defined. \(\phi\) is
+      clearly onto, and we have
+      \begin{align*}
+\Ker \phi\amp =\{aK\in
+        G/K\,:\,\phi(aK)=N\}\\
+\amp =\{aK\in G/K\,:\,aN=N\}\\
+\amp =\{aK\in
+        G/K\,:\,a\in N\}\\
+\amp =N/K.
+\end{align*}
+    </p>
+<span class="incontext"><a href="section-29.html#p-1250">in-context</a></span>
 </body>
 </html>

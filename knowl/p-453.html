@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-08-07T00:56:31-07:00    *-->
+<!--*    on 2017-08-07T15:14:32-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -14,8 +14,15 @@
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <p>
-              If \(|G|=|G'|=3\text{,}\), then we must have \(G\simeq G'\text{.}\).
-            </p>
-<span class="incontext"><a href="exercises-4.html#p-453">in-context</a></span>
+        A rigorous proof of the fact that \(V\) and \(\Z_4\) are not isomorphic is as follows: For now, denote the usual operation on \(V\) by \(*\text{.}\). Suppose that \(V\) and \(\Z_4\) are isomorphic, via isomorphism \(\phi\) from \(V\) to \(\Z_4\text{.}\). Then since \(\phi\) is onto, there exists an element \(a\in V\) such that \(\phi(a)=3\text{.}\). Then
+        \begin{align*}
+3+3\amp =\phi(a)+\phi(a)\amp \amp \text{ (by definition of \(a\)) }\\
+\amp =\phi(a*a) \amp \amp \text{ (since \(\phi\) is a homomorphism) }\\
+\amp =\phi((0,0)) \amp \amp \text{ (since every element of \(V\) is its own inverse) }\\
+\amp =0, \amp \amp
+\end{align*}
+        since \(\phi\) is a homomorphism, so sends identity element to identity element. But this is a contradiction, since \(3+3=2\neq 0\) in \(\Z_4\text{.}\). Thus, \(V\not\simeq \Z_4\text{.}\).
+      </p>
+<span class="incontext"><a href="section-12.html#p-453">in-context</a></span>
 </body>
 </html>

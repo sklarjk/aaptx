@@ -18,6 +18,8 @@
         <m>G</m>, we write <m>H\not\leq G</m>.
       </p>
     </statement>
+    <notation><usage>H\leq G</usage><description><m>H</m> is a subgroup of <m>G</m></description></notation>
+    <notation><usage>H\not \leq G</usage><description><m>H</m> is not a subgroup of <m>G</m></description></notation>
   </definition>
 
   <warning>

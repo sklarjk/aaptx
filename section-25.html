@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-08-07T00:56:23-07:00    *-->
+<!--*    on 2017-08-07T15:14:24-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -163,7 +163,7 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-25"><header title="Section 8.1 Motivation"><h1 class="heading hide-type" alt="Section 8.1 Motivation">
 <span class="type">Section</span><span class="codenumber">8.1</span><span class="title">Motivation</span>
-</h1></header><p id="p-1099">
+</h1></header><p id="p-1103">
     We mentioned previously that given a subgroup \(H\) of \(G\text{,}\) we'd like
     to use \(H\) to get at some understanding of \(G\)'s entire structure.
     Recall that we've defined \(G/H\) to be the set of all left cosets of
@@ -174,7 +174,7 @@ MathJax.Hub.Config({
       (aH)(bH)=abH \text{ for all } a,b\in G.
     \end{equation*}
   </p>
-<p id="p-1100">
+<p id="p-1104">
     Ok, so let's do that! But wait: we're defining this operation
     by referring to coset representatives, so we'd better make sure
     our operation is well defined. Only it sadly turns out that in
@@ -184,7 +184,7 @@ MathJax.Hub.Config({
 <article class="example-like" id="example-79"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">8.1.1</span>
 </h5>
-<p id="p-1101">
+<p id="p-1105">
         Let \(H=\langle (12)\rangle\) in \(S_3\text{,}\) and let \(a=(13)\) and
         \(b=(132)\text{.}\) Let \(x=aH\) and \(y=bH\) in \(S_3/H\text{.}\) Then using the
         above-defined operation on \(G/H\) we'd have
@@ -192,16 +192,16 @@ MathJax.Hub.Config({
           xy=(aH)(bH)=abH=(13)(132)H=(23)H.
         \end{equation*}
       </p>
-<p id="p-1102">
+<p id="p-1106">
         But also \(x=(123)H\) and \(y=(23)H\text{,}\) so
         we'd also have
         \begin{equation*}
           xy=((123)H)((23)H))=(123)(23)H=(12)H=H\neq (23)H.
         \end{equation*}
       </p>
-<p id="p-1103">
+<p id="p-1107">
         So this operation isn't well defined.
-      </p></article><p id="p-1104">
+      </p></article><p id="p-1108">
     The question for us now becomes: what conditions must hold
     for \(H\) in \(G\) in order for operation
     \begin{equation*}
@@ -215,7 +215,7 @@ MathJax.Hub.Config({
 <article class="theorem-like" id="cmwd"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">8.1.2</span>
 </h5>
-<p id="p-1105">
+<p id="p-1109">
         Let \(H\leq G\text{.}\) Then the operation
         \begin{equation*}
           (aH)(bH)=abH
@@ -223,9 +223,9 @@ MathJax.Hub.Config({
         on
         \(G/H\) is well defined if and only if \(H \unlhd G\text{.}\)
       </p></article><div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-41" id="proof-41"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-41" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-1106">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-41" id="proof-41"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-41" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-1110">
       First, assume that the described operation is well defined. Let \(a\in G\text{;}\) we want to show that \(aH=Ha\text{.}\)</p>
-<p id="p-1107">Well, let \(x\in aH\text{.}\) Then
+<p id="p-1111">Well, let \(x\in aH\text{.}\) Then
       \begin{equation*}
         (xH)(a^{-1}H)=xa^{-1}H
       \end{equation*}
@@ -239,7 +239,7 @@ MathJax.Hub.Config({
       \(aH\subseteq Ha\text{.}\) The proof that \(Ha\subseteq aH\) is similar. So \(aH=Ha\text{,}\) and thus, since \(a\in G\) was arbitrary, 
       \(H\) is normal in \(G\text{.}\)
     </p>
-<p id="p-1108"> Conversely, assume \(H\unlhd  G\text{.}\)
+<p id="p-1112"> Conversely, assume \(H\unlhd  G\text{.}\)
       Let \(a_1,a_2,b_1,b_2\in G\) with \(a_1H=a_2H\) and
       \(b_1H=b_2H\text{.}\) We want to show that then \(a_1b_1H=a_2b_2H\text{,}\) that is,
       that \((a_2b_2)^{-1}a_1b_1\in H\text{.}\) Well, since \(a_1H=a_2H\) we have
@@ -248,7 +248,7 @@ MathJax.Hub.Config({
         (a_2b_2)^{-1}a_1b_1=b_2^{-1}(a_2^{-1}a_1)b_1 \in b_2^{-1}Hb_1.
       \end{equation*}
     </p>
-<p id="p-1109">
+<p id="p-1113">
       Next, since \(H\unlhd G\text{,}\)
       we have \(Hb_1=b_1H\text{,}\) so \(b_2^{-1}Hb_1=b_2^{-1}b_1H\text{;}\) but since
       \(b_1H=b_2H\text{,}\) we have \(b_2^{-1}b_1\in H\text{,}\) so \(b_2^{-1}b_1H=H\text{.}\) Thus,
@@ -258,11 +258,11 @@ MathJax.Hub.Config({
 <article class="definition-like" id="definition-63"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">8.1.3</span>
 </h5>
-<p id="p-1110">
+<p id="p-1114">
         When \(H\unlhd G\text{,}\) the well defined operation
         \((aH)(bH)=abH\) on \(G/H\) is called <em class="terminology">left coset
         multiplication</em>.
-      </p></article><p id="p-1111">
+      </p></article><p id="p-1115">
     It is clear that normal subgroups will be
     very important for us in studying group structures. We therefore
     spend some time looking at normal subgroups before returning to

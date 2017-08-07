@@ -13,10 +13,8 @@
       <p>
         Consider the group <m>\Z_4</m> under addition modulo 4. Ordering the elements of <m>\Z_4</m> as <m>1,2,3,4</m>, we have the following group table for <m>\langle \Z_4,+\rangle</m>:
       </p>
-
-     <table xml:id="z4-Cayley">
-
-<tabular halign="left">
+<sidebyside>
+<tabular halign="center">
 	 <row bottom="medium">
 		<cell right="medium"><m>+</m></cell>
 		<cell><m>0</m></cell>
@@ -53,9 +51,8 @@
 		<cell><m>2</m></cell>
 	</row>
 	</tabular>
-			<caption>Group table for <m>\Z_4</m></caption>
-			</table>    
 
+</sidebyside>
     </statement>
   </example>
 
@@ -67,25 +64,28 @@
     <statement>
       <p>
         If <m>G</m> is a group with <m>|G|=1</m>, then <m>G</m> is called the
-        <term>trivial group</term><fn>A good question to ask here is
+        <term>trivial group</term>.
+      </p>
+    </statement>
+  </definition>
+
+<remark>
+<p>A good question to ask here is
         why it's called <q>the</q> trivial group, rather than <q>a</q> trivial
         group.  Indeed, there are infinitely many groups of order 1!
         (Do you see why?) But it turns out that all of these groups are
         <em>structurally</em> the same. Hence mathematicians end up
         thinking of them as various instantiations of one group, rather
         than separate groups. We will discuss this in more depth
-        shortly, when we introduce the idea of <em>isomorphism</em>.</fn>.
-      </p>
-    </statement>
-  </definition>
+        shortly, when we introduce the idea of <em>isomorphism</em>.</p>
+  </remark>
 
   <p>
     Next suppose that group <m>\Gdot</m> has order 2. Then <m>G</m> must contain an identity element, <m>e</m>, and a non-identity element, <m>a</m>. Since <m>e</m> is its own inverse, and inverses are unique, <m>a</m> must be its own inverse as well. So <m>G</m> must have the following table.
   </p>
 
-<table xml:id="Cayley2">
-
-<tabular halign="left">
+<sidebyside>
+<tabular halign="center">
 	 <row bottom="medium">
 		<cell right="medium"><m>*</m></cell>
 		<cell><m>e</m></cell>
@@ -102,8 +102,7 @@
 		<cell><m>e</m></cell>
 			</row>
 		</tabular>
-			<caption>Group table for a group of order <m>2</m></caption>
-			</table>    
+  </sidebyside>
 
   <p>
     It is straightforward to show that such a structure does satisfy all the group axioms (the only one we really need to check is associativity).
@@ -113,7 +112,7 @@
     Now, what if group <m>\Gdot</m> has order 3? Note that <em>you can't have any entry appear more than once in the same row or same column</em> (excluding of course the labels outside the grid we're filling in), given <xref ref="uniquesols">Theorem</xref>. Is there only one way of filling in the table for a group of order 3? (Hint: consider what element must be the second row, third column entry.)
   </p>
 
-<table xml:id="Cayley3">
+<sidebyside>
 
 <tabular halign="left">
 	 <row bottom="medium">
@@ -141,8 +140,8 @@
 		<cell><m></m></cell>
 		</row>
 	</tabular>
-			<caption>Incomplete group table for a group of order <m>3</m></caption>
-			</table>    
+  </sidebyside>
+	
 
   <p>
     Finally, what if group <m>\Gdot</m> has order 4? It turns out in this case there are <em>two</em> valid ways of filling in a group table!
@@ -509,11 +508,11 @@ To show that given groups <m>G</m> and <m>G'</m> are isomorphic, we must do thre
 
         <li>
           <p>
-            Let <m>G</m> be a group with <m>|G|=2</m>.  Then <m>G</m> must consist of an identity element <m>e</m> and a nonidentity element <m>a</m>, and have the following group table. Compare the group tables for <m>G</m> and for the specific two-element group <m>\Z_2</m>.
+            Let <m>G</m> be a group with <m>|G|=2</m>.  Then <m>G</m> must consist of an identity element <m>e</m> and a nonidentity element <m>a</m>, and have the following group table. Compare the respective group tables for <m>G</m> and for the specific two-element group <m>\Z_2</m>.
+</p>
 
-
-     <table xml:id="twoetable">
-
+<p>
+<sidebyside>    
 <tabular halign="center">
 	 <row bottom="medium">
 		<cell right="medium"><m>*</m></cell>
@@ -531,12 +530,7 @@ To show that given groups <m>G</m> and <m>G'</m> are isomorphic, we must do thre
 		<cell><m>e</m></cell>
 	</row>
 </tabular>
-		<caption>Group table for an arbitrary two-element group <m>G</m></caption>
-			</table>    
-
-
-
-    <table xml:id="z2table">
+	 
 
 <tabular halign="center">
 	 <row bottom="medium">
@@ -555,8 +549,9 @@ To show that given groups <m>G</m> and <m>G'</m> are isomorphic, we must do thre
 		<cell><m>0</m></cell>
 	</row>
 </tabular>
-		<caption>Group table for <m>\Z_2</m></caption>
-			</table>    
+      </sidebyside>
+      </p>
+      <p>    
 
 
 

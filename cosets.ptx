@@ -560,12 +560,12 @@ complete set
 <notation><usage>Ha, H+a</usage><description>the right coset of <m>H</m> containing <m>a</m></description></notation>
   </definition>
 
-<insight>
+<note>
 <p>
-  We  may use the notation <m>\Leftrightarrow</m> to denote the phrase <q>if and only if.</q>
+  In the following, we use the notation <m>\Leftrightarrow</m> to denote the phrase <q>if and only if.</q>
 </p>
 <notation><usage>\Leftrightarrow</usage><description>if and only if</description></notation>
-</insight>
+</note>
 
   <theorem xml:id="equivca">
     <statement>
@@ -615,7 +615,7 @@ complete set
                 b\in Ha \Leftrightarrow  Ha=Hb \Leftrightarrow  a\in
                 Hb.
               </me>
-              In particular, <m>a\in H \Leftrightarrow aH=H \Leftrightarrow Ha=H</m>.
+              In particular, <me>a\in H \Leftrightarrow aH=H \Leftrightarrow Ha=H.</me>
             </p>
           </li>
 

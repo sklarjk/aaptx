@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-08-07T00:56:28-07:00    *-->
+<!--*    on 2017-08-07T15:14:28-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,10 +13,43 @@
 </head>
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>The set
-\begin{equation*}GL(n,\R)=\{M\in \M_n(\R):\det M \neq 0\}\text{,}\end{equation*}, that is, 
+<p>
+  <article class="example-like" id="gl"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">2.4.4</span>
+</h5>
+<p id="p-210">The set
+\begin{equation*}GL(n,\R)=\{M\in \M_n(\R):\det M \neq 0\}\text{,}\end{equation*}that is, 
 the set of invertible \(n\times n\) matrices
-        over \(\R\text{,}\),  is a group under matrix multiplication, called the <em class="terminology">general linear group of degree \(n\) over \(\R\) </em>.</p>
+        over \(\R\text{,}\)  is a group under matrix multiplication, called the <em class="terminology">general linear group of degree \(n\) over \(\R\) </em>.</p>
+<p id="p-211">
+Its identity element is \begin{equation*}I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \amp  0 \\
+                0 \amp  1 \amp  0 \amp  \cdots \amp  0 \\
+                0 \amp  0 \amp  1 \amp  \cdots \amp  0 \\
+                \vdots \amp  \vdots \amp  \vdots \amp  \ddots \amp  \vdots \\
+                0 \amp  0 \amp  0 \amp  \cdots \amp  1
+                \end{bmatrix},\end{equation*} the \(n \times n\) identity matrix.</p>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-7" id="proof-7"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></div>
+<div id="hk-proof-7" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-212">
+  Let \(A,B\in GL(n, \R)\text{.}\) Then \(\det(AB)=(\det A)(\det B) \neq 0\) (since \(\det A, \det B \neq 0)\text{,}\) so \(AB\in GL(n,\R)\text{.}\)  Thus, 
+  \(\langle GL(n,\R), \cdot\rangle\) is a binary structure.</p>
+<p id="p-213">We know that matrix multiplication is always associative,so \(\G_2\) holds. Next, \(I_n\) is in \(GL(n,\R)\)since \(\det I_n=1\neq 0\text{,}\) and it
+     acts as an identity element for \(\langle GL(n,\R), \cdot\,\rangle\) since
+              \begin{equation*}
+                AI_n=I_nA = A
+              \end{equation*}
+              for all \(A\in GL(n,\R)\text{.}\)
+            </p>
+<p id="p-214"> Finally, let \(A\in GL(n,\R)\text{.}\)  Since \(\det A\neq 0\text{,}\) \(A\) has
+              (matrix multiplicative) inverse \(A^{-1}\) in
+              \(\M_2(\R)\text{.}\) But we need to verify that \(A^{-1}\) is in
+              \(G\text{.}\) This is in fact the case, however, since
+              \(A^{-1}\) is invertible (it has inverse \(A\)), hence \(\det
+              A^{-1} \neq 0\text{.}\)  Thus, \(A^{-1}\) is also in \(GL(n,\R)\text{.}\)
+            </p>
+<p id="p-215">
+        So \(GL(n,\R)\) is a group under multiplication.
+      </p></article></div></article>
+</p>
 <span class="incontext"><a href="section-6.html#p-209">in-context</a></span>
 </body>
 </html>

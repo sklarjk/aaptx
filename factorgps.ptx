@@ -476,7 +476,7 @@
 
       <p>
 
-     <table xml:id="z3-Cayley">
+     <sidebyside>
 
 <tabular>
 	 <row halign="center" bottom="medium">
@@ -505,17 +505,19 @@
 
 	</row>
 	</tabular>
-			<caption>Group table for <m>\Z/3\Z</m></caption>
-			</table>    
-
+		</sidebyside>
+</p>
+<p>
 
         Clearly, if we ignore all the <m>+N's</m> after the <m>0</m>'s, <m>1</m>'s, and
         <m>2'</m> in the above table, and consider <m>+</m> to be addition mod 3,
         rather than left coset addition in <m>\Z/3\Z</m>, we obtain the group
         table for <m>\Z_3</m>:
+</p>
+<p>
+<sidebyside>
 
-
-     <table xml:id="z3-Cayley2">
+    
 
 <tabular>
 	 <row bottom="medium">
@@ -544,9 +546,9 @@
 
 	</row>
 	</tabular>
-			<caption>Group table for <m>\Z_3</m></caption>
-			</table>    
-      
+</sidebyside>
+</p>
+<p>
     Thus, we see that <m>\Z/3\Z</m> is isomorphic to <m>\Z_3</m>.
 </p>
     </statement>

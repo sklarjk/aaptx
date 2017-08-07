@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-08-07T00:56:23-07:00    *-->
+<!--*    on 2017-08-07T15:14:24-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -163,18 +163,18 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="dihedralgps"><header title="Section 6.5 Dihedral groups"><h1 class="heading hide-type" alt="Section 6.5 Dihedral groups">
 <span class="type">Section</span><span class="codenumber">6.5</span><span class="title">Dihedral groups</span><a href="dihedralgps.html" class="permalink">¶ permalink</a>
-</h1></header><p id="p-821">
+</h1></header><p id="p-825">
     Dihedral groups are groups of symmetries of regular \(n\)-gons. We start with an example.
   </p>
 <article class="example-like" id="D3"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">6.5.1</span>
 </h5>
-<p id="p-822">
+<p id="p-826">
       Consider a regular triangle \(T\text{,}\) with vertices labeled \(1\text{,}\) \(2\text{,}\) and \(3\text{.}\) We show \(T\) below, also using dotted lines to indicate a vertical line of symmetry of \(T\) and a rotation of \(T\text{.}\)</p>
-<figure class="figure-like" id="figure-2"><object type="image/svg+xml" style="width:20%; margin:auto; display:block;" data="images/image-9.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.5.2</span>Symmetries of the triangle</figcaption></figure><p id="p-823">
+<figure class="figure-like" id="figure-2"><object type="image/svg+xml" style="width:20%; margin:auto; display:block;" data="images/image-9.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.5.2</span>Symmetries of the triangle</figcaption></figure><p id="p-827">
       Note that if we reflect \(T\) over the vertical dotted line (indicated in the picture by \(f\)), \(T\) maps onto itself, with \(1\) mapping to \(1\text{,}\) and \(2\) and \(3\) mapping to each other. Similarly, if we rotate \(T\) clockwise by \(120^{\circ}\) (indicated in the picture by \(r\)), \(T\) again maps onto itself, this time with \(1\) mapping to \(2\text{,}\) \(2\) mapping to \(3\text{,}\) and \(3\) mapping to \(1\text{.}\) Both of these maps are called <!--Style me with CSS--><em>symmetries</em> of \(T\text{;}\) \(f\) is a <!--Style me with CSS--><em>reflection</em> or <!--Style me with CSS--><em>flip</em> and \(r\) is a <!--Style me with CSS--><em>rotation</em>.
     </p>
-<p id="p-824">
+<p id="p-828">
       Of course, these are not the only symmetries of \(T\text{.}\) If we compose
       two symmetries of \(T\text{,}\) we obtain a symmetry of \(T\text{:}\) for instance, if
       we apply the map \(f\circ r\) to \(T\) (meaning first do \(r\text{,}\) then do
@@ -185,49 +185,49 @@ MathJax.Hub.Config({
       line segment \(\overline{12}\text{.}\) In fact, every symmetry of \(T\) can be
       obtained by composing applications of \(f\) and applications of \(r\text{.}\)
     </p>
-<p id="p-825">
+<p id="p-829">
       For convenience of notation, we omit the composition symbols, writing, for instance, \(fr\) for \(f\circ r\text{,}\) \(r\circ r\) as \(r^2\text{,}\) etc. It turns out there are exactly six symmetries of \(T\text{,}\) namely:
       </p>
 <ol id="ol-81" style="list-style-type: decimal;">
-<li id="li-343"><p id="p-826">
+<li id="li-343"><p id="p-830">
             the map \(e\) from \(T\) to \(T\) sending every element to itself;
           </p></li>
-<li id="li-344"><p id="p-827">
+<li id="li-344"><p id="p-831">
             \(f\) (that is, reflection over the line connecting \(1\) and the midpoint of \(\overline{23}\));
           </p></li>
-<li id="li-345"><p id="p-828">
+<li id="li-345"><p id="p-832">
             \(r\) (that is, clockwise rotation by \(120^{\circ}\));
           </p></li>
-<li id="li-346"><p id="p-829">
+<li id="li-346"><p id="p-833">
             \(r^2\) (that is, clockwise rotation by \(240^{\circ}\));
           </p></li>
-<li id="li-347"><p id="p-830">
+<li id="li-347"><p id="p-834">
             \(fr\) (that is, reflection over the line connecting \(2\) and the midpoint of \(\overline{13}\)); and
           </p></li>
-<li id="li-348"><p id="p-831">
+<li id="li-348"><p id="p-835">
             \(fr^2\) (that is, reflection over the line connecting \(3\) and the midpoint of \(\overline{12}\)).
           </p></li>
 </ol>
 <p>
     </p>
-<p id="p-832">
+<p id="p-836">
       Declaring that \(f^0=r^0=e\text{,}\) the set
       \begin{equation*}
         D_3=\{e, f, r, r^2, fr, fr^2\}=\{f^ir^j:i=0,1, j=0,1,2\}
       \end{equation*}
       is the collection of all symmetries of \(T\text{.}\)
-    </p></article><article class="remark-like" id="remark-31"><h5 class="heading">
+    </p></article><article class="remark-like" id="remark-32"><h5 class="heading">
 <span class="type">Remark</span><span class="codenumber">6.5.3</span>
 </h5>
-<p id="p-833">
+<p id="p-837">
         Notice that \(rf=fr^2\) and that \(f^2=r^3=e\text{.}\)
       </p></article><article class="theorem-like" id="di3"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">6.5.4</span>
 </h5>
-<p id="p-834">
+<p id="p-838">
           \(D_3\) is a group under composition.
         </p></article><div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-31" id="proof-31"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-31" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-835">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-31" id="proof-31"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-31" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-839">
         We first show that \(D_3\) is closed under composition. As
         noted above, \(rf=fr^2\text{.}\) So any map of the form \(f^ir^jf^kr^l\)
         (\(i,k=0,1\text{,}\) \(j,l=0,1,2\)) can be written in the form \(f^sr^t\)
@@ -236,7 +236,7 @@ MathJax.Hub.Config({
         \(f^sr^t=f^{R_2(s)}r^{R_3(t)} \in D_3\text{.}\) So \(D_3\) is closed under
         composition.
       </p>
-<p id="p-836">
+<p id="p-840">
         Next, function composition is always associative, and the function \(e\) clearly acts as identity
               element
               in \(D_3\text{.}\)
@@ -245,7 +245,7 @@ MathJax.Hub.Config({
               in \(D_3\) (since \(D_3\) is closed under composition) with \(xy=yx=e\text{.}\) So \(D_3\) is a group.
       </p></article></span>
 </div>
-<p id="p-837">
+<p id="p-841">
       Let us look at \(D_3\) another way. Note that each map in \(D_3\) can be uniquely described by how it permutes the vertices \(1,2,3\) of \(T\text{:}\) that is, each map in \(D_3\) can be uniquely identified with a unique element of \(S_3\text{.}\) For instance, \(f\) corresponds to the permutation \((23)\) in \(S_3\text{,}\) while \(fr\) corresponds to the permutation \((13)\text{.}\) In turns out that \(D_3 \simeq S_3\text{,}\) via the following correspondence.
       \begin{equation*}
         \begin{array}{ccl}
@@ -258,13 +258,13 @@ MathJax.Hub.Config({
         \end{array}
       \end{equation*}
     </p>
-<p id="p-838">
+<p id="p-842">
     The group \(D_3\) is an example of class of groups called <!--Style me with CSS--><em>dihedral groups</em>.
   </p>
 <article class="definition-like" id="definition-51"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">6.5.5</span>
 </h5>
-<p id="p-839">
+<p id="p-843">
         Let \(n\) be an integer greater than or equal to \(3\text{.}\) We
         let \(D_n\) be the collection of symmetries of the regular
         \(n\)-gon. It turns out that \(D_n\) is a group (see below), called
@@ -276,7 +276,7 @@ MathJax.Hub.Config({
       </p></article><article class="theorem-like" id="rf"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">6.5.6</span>
 </h5>
-<p id="p-840">
+<p id="p-844">
         Let \(n\) be an integer greater than or equal to \(3\text{.}\) Then, again using the convention that \(f^0=r^0=e\text{,}\) \(D_n\) can be uniquely described as
         \begin{equation*}
           D_n=\{f^ir^j: i=0,1, j=0,1,\ldots, n-1\}
@@ -286,84 +286,84 @@ MathJax.Hub.Config({
           rf=fr^{n-1} \text{ and }  f^2=r^n=e.
         \end{equation*}
       </p>
-<p id="p-841">
+<p id="p-845">
         The dihedral group \(D_n\) is a nonabelian group of order \(2n\text{.}\)
       </p></article><div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-32" id="proof-32"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-32" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-842">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-32" id="proof-32"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-32" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-846">
       The proof that \(D_n\) is a group parallels the proof, above, that \(D_3\) is a group. It is clear that \(D_n\) is nonabelian (e.g., \(rf=fr^{n-1}\neq fr\)) and has order \(2n\text{.}\)
     </p></article></span>
 </div>
-<article class="remark-like" id="remark-32"><h5 class="heading">
+<article class="remark-like" id="remark-33"><h5 class="heading">
 <span class="type">Remark</span><span class="codenumber">6.5.7</span>
 </h5>
-<p id="p-843">
+<p id="p-847">
       Throughout this course, if we are discussing a
       group \(D_n\) you should assume \(n\in \Z^+\text{,}\) \(n\geq 3\text{,}\) unless
       otherwise noted.
     </p></article><article class="definition-like" id="definition-52"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">6.5.8</span>
 </h5>
-<p id="p-844">
+<p id="p-848">
         We say that an element of \(D_n\) is written in <em class="terminology">standard form</em> if it is written in the form \(f^ir^j\) where
         \(i\in \{0,1\}\) and \(j\in \{0,1,\ldots,n-1\}\text{.}\)
       </p></article><article class="theorem-like" id="theorem-39"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">6.5.9</span>
 </h5>
-<p id="p-845">
+<p id="p-849">
         Each \(D_n\) is isomorphic to a subgroup of \(S_n\text{.}\)
       </p></article><div class="posterior">
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-33" id="proof-33"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-33" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-846"> We provide here a sketch of a proof; the details are left as an exercise for the reader. We described above how \(D_3\) is isomorphic to a subgroup
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-33" id="proof-33"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-33" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-850"> We provide here a sketch of a proof; the details are left as an exercise for the reader. We described above how \(D_3\) is isomorphic to a subgroup
     (namely, the improper subgroup) of \(S_3\text{.}\) One can show that each \(D_n\) is isomorphic to a subgroup of \(S_n\) by similarly labeling the vertices of the regular \(n\)-gon \(1,2,\ldots, n\) and determining how these vertices are permuted by each element of \(D_n\text{.}\)
   </p></article></span>
 </div>
 <article class="remark-like" id="warning-19"><h5 class="heading">
 <span class="type">Warning</span><span class="codenumber">6.5.10</span>
 </h5>
-<p id="p-847">
+<p id="p-851">
       While \(D_3\) is actually isomorphic to \(S_3\) itself, for \(n&gt;3\) we have that \(D_n\) is <!--Style me with CSS--><em>not</em> isomorphic to \(S_n\) but is rather isomorphic to a <!--Style me with CSS--><em>proper subgroup</em> of \(S_n\text{.}\) When \(n&gt;3\) you can see that \(D_n\) cannot be isomorphic to \(S_n\) since \(|D_n|=2n \lt  n! = |S_n|\) for \(n&gt;3\text{.}\)
-    </p></article><p id="p-848">
+    </p></article><p id="p-852">
     It is important to be able to do computations with specific elements of dihedral
     groups. We have the following theorem.
   </p>
 <article class="theorem-like" id="diords"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">6.5.11</span>
 </h5>
-<p id="p-849">
+<p id="p-853">
         The following relations hold in \(D_n\text{,}\) for every \(n\text{:}\)
         </p>
 <ol id="ol-82" style="list-style-type: decimal;">
-<li id="li-349"><p id="p-850">
+<li id="li-349"><p id="p-854">
               For every \(i\text{,}\) \(r^if=fr^{-i}\) (in particular, \(rf=fr^{-1}=fr^{n-1}\));
             </p></li>
-<li id="li-350"><p id="p-851">
+<li id="li-350"><p id="p-855">
               \(o(fr^i)=2\) for every \(i\) (in particular, \(f^2=e\));
             </p></li>
-<li id="li-351"><p id="p-852">
+<li id="li-351"><p id="p-856">
               \(o(r)=o(r^{-1})=n\text{;}\)
             </p></li>
-<li id="li-352"><p id="p-853">
+<li id="li-352"><p id="p-857">
               If \(n\) is even, then \(r^{n/2}\) commutes with every element of \(D_n\text{.}\)
             </p></li>
 </ol>
 <p>
       </p></article><div class="posterior">
 <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-34" id="proof-34"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-34" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><ol id="ol-83" style="list-style-type: decimal;">
-<li id="li-353"><p id="p-854">
+<li id="li-353"><p id="p-858">
           We use induction on the exponent of \(r\text{.}\) We already know that \(r^1f=fr^{-1}\text{.}\)  Now suppose \(r^{i-1}f=fr^{-(i-1)}\) for some \(i\geq 2\text{.}\)  Then
           \begin{equation*}
             r^if=r(r^{i-1}f)=r(fr^{-(i-1)})=(rf)r^{-i+1}=(fr^{-1})r^{-i+1}=fr^{-i}.
           \end{equation*}
         </p></li>
-<li id="li-354"><p id="p-855">
+<li id="li-354"><p id="p-859">
           For every \(i\text{,}\) \(fr^i\neq e\text{,}\) but
           \begin{equation*}
             (fr^i)^2=(fr^i)(fr^i)=f(r^if)r^i=f(fr^{-i})r^i=f^2r^0=e.
           \end{equation*}
         </p></li>
-<li id="li-355"><p id="p-856">
+<li id="li-355"><p id="p-860">
           This follows from <a knowl="./knowl/invord.html" knowl-id="xref-invord" alt="Theorem 5.1.12 " title="Theorem 5.1.12 ">Theorem 5.1.12</a> and the fact that \(o(r)=n\text{.}\)
         </p></li>
-<li id="li-356"><p id="p-857">
+<li id="li-356"><p id="p-861">
           The proof of this statement is left as an exercise for the reader. 
         </p></li>
 </ol></article></span>
@@ -372,19 +372,19 @@ MathJax.Hub.Config({
 <span class="type">Example</span><span class="codenumber">6.5.12</span>
 </h5>
 <ol id="ol-84" style="list-style-type: decimal;">
-<li id="li-357"><p id="p-858">
+<li id="li-357"><p id="p-862">
             Write \(fr^2f\) in \(D_3\) in standard form.  Do the same for \(fr^2f\) in \(D_4\text{.}\)
           </p></li>
-<li id="li-358"><p id="p-859">
+<li id="li-358"><p id="p-863">
             What is the inverse of \(fr^3\) in \(D_5\text{?}\)  Write it in standard form.
           </p></li>
-<li id="li-359"><p id="p-860">
+<li id="li-359"><p id="p-864">
             Explicitly describe an isomorphism from \(D_4\) to a subgroup of \(S_4\text{.}\)
           </p></li>
 </ol></article><article class="example-like" id="example-64"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">6.5.13</span>
 </h5>
-<p id="p-861">
+<p id="p-865">
         Classify the following groups up to isomorphism. (<!--Style me with CSS--><em>Hint:</em>
         You may want to look at the number of group elements that have
         a specific finite order.)

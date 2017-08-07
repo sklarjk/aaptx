@@ -119,10 +119,10 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
     Another method is using <term>set-builder notation</term>. This consists of an element name (or
     names), followed by a colon (meaning <q>such that</q>), followed by
     a Boolean expression involving the element name(s), all
-    surrounded by curly braces.
+    surrounded by curly braces.</p>
 
-   <warning><p>The use of a colon to denote <q>such that</q> is <em>only</em> valid in the above set-builder notation context.  Outside of this context, you should never use a colon to denote <q>such that</q>; instead, write out the actual words or use the abbreviation s.t. (or the symbol <m>\ni</m>, though I do not recommended).  Conversely, never use one of those ways of indicating <q>such that</q> within set-builder notation; always use a colon there.  Why?  Convention.</p></warning>
-
+   <warning>The use of a colon to denote <q>such that</q> is <em>only</em> valid in the above set-builder notation context.  Outside of this context, you should never use a colon to denote <q>such that</q>; instead, write out the actual words or use the abbreviation s.t. (or the symbol <m>\ni</m>, though I do not recommended).  Conversely, never use one of those ways of indicating <q>such that</q> within set-builder notation; always use a colon there.  Why?  Convention.</warning>
+<p>
     For example,
     <me>
       \{x\in \Z : x > 4\}

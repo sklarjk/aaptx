@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-08-07T00:56:21-07:00    *-->
+<!--*    on 2017-08-07T15:14:22-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -164,51 +164,19 @@ MathJax.Hub.Config({
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-5"><header title="Section 2.3 The definition of a group"><h1 class="heading hide-type" alt="Section 2.3 The definition of a group">
 <span class="type">Section</span><span class="codenumber">2.3</span><span class="title">The definition of a group</span>
 </h1></header><p id="p-181">
-    At this point you may be asking yourself, why do we care? We've covered a lot of definitions and proved some theorems, but what is the goal of all this? Well, there are actually many goals that we can achieve using such material. Consider the following as an example. Suppose we want to solve the equation \(5+x=2\text{.}\) We can probably solve this quite easily almost just by looking at it (\(x=-3\)), but what facts are we actually using there? If we break down the reasoning leading to this answer, we may obtain something like the following set of steps.
-  </p>
-<table>
-<tr>
-<td class="l m b0 r0 l0 t0 lines"></td>
-<td class="l m b0 r0 l0 t0 lines">\(5+x\)</td>
-<td class="l m b0 r0 l0 t0 lines">=</td>
-<td class="l m b0 r0 l0 t0 lines">\(2\)</td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">\(\Rightarrow\)</td>
-<td class="l m b0 r0 l0 t0 lines">\(-5+(5+x)\)</td>
-<td class="l m b0 r0 l0 t0 lines">=</td>
-<td class="l m b0 r0 l0 t0 lines">\(-5+2\)</td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">\(\Rightarrow\)</td>
-<td class="l m b0 r0 l0 t0 lines">\((-5+5)+x\)</td>
-<td class="l m b0 r0 l0 t0 lines">=</td>
-<td class="l m b0 r0 l0 t0 lines">\(-3\)</td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">\(\Rightarrow\)</td>
-<td class="l m b0 r0 l0 t0 lines">\(0+x\)</td>
-<td class="l m b0 r0 l0 t0 lines">=</td>
-<td class="l m b0 r0 l0 t0 lines">\(-3\)</td>
-<td class="l m b0 r0 l0 t0 lines"></td>
-</tr>
-<tr>
-<td class="l m b0 r0 l0 t0 lines">\(\Rightarrow\)</td>
-<td class="l m b0 r0 l0 t0 lines">\(x\)</td>
-<td class="l m b0 r0 l0 t0 lines">=</td>
-<td class="l m b0 r0 l0 t0 lines">\(-3\)</td>
-<td class="l m b0 r0 l0 t0 lines">.</td>
-</tr>
-</table>
-<p id="p-182">
-    In line 2, we add the inverse of \(5\) in \(\langle \Z, +\rangle\) to each side of
-    the equation. In line 3, we use associativity of \(+\) in \(\Z\) (along
-    with computation), while in line 4 we use the fact that \(-5\) is the
+    At this point you may be asking yourself, why do we care? We've covered a lot of definitions and proved some theorems, but what is the goal of all this? Well, there are actually many goals that we can achieve using such material. Consider the following as an example. Suppose we want to solve the equation \(5+x=2\text{.}\) We can probably solve this quite easily almost just by looking at it (\(x=-3\)), but what facts are we actually using there? If we break down the reasoning leading to this answer, we may obtain something like the following, where each line is equivalent to the one preceding it.
+  </p>\begin{align*}
+5+x\amp =2 \\
+-5+(5+x)\amp =-5+2\\
+(-5+5)+x \amp =-3\\
+0+x\amp =-3\\
+x\amp =-3.
+\end{align*}<p id="p-182">
+    In the second line we add the inverse of \(5\) in \(\langle \Z, +\rangle\) to each side of
+    the equation; in the third line we use associativity of \(+\) in \(\Z\) (along
+    with computation); and in the fourth line we use the fact that \(-5\) is the
     additive inverse of \(5\) (that is, the inverse of \(5\) in \(\Z\) under
-    \(+\)). Finally, in line 5 we use the fact that 0 is an additive
+    \(+\)). Finally, we use the fact that 0 is an additive
     identity element in \(\Z\) (that is, the identity element in \(\Z\)
     under \(+\)).
   </p>

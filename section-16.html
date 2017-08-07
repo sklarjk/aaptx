@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-08-07T00:56:22-07:00    *-->
+<!--*    on 2017-08-07T15:14:23-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -163,62 +163,62 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-16"><header title="Section 5.2 The subgroup lattices of cyclic groups"><h1 class="heading hide-type" alt="Section 5.2 The subgroup lattices of cyclic groups">
 <span class="type">Section</span><span class="codenumber">5.2</span><span class="title">The subgroup lattices of cyclic groups</span>
-</h1></header><p id="p-650">
+</h1></header><p id="p-654">
     We now explore the subgroups of cyclic groups. A complete proof of the following theorem is provided on p. 61 of <a knowl="./knowl/F.html" knowl-id="xref-F" alt="Bibliographic Entry 1 A First Course in Abstract Algebra" title="Bibliographic Entry 1 A First Course in Abstract Algebra">[1]</a>.
   </p>
 <article class="theorem-like" id="subc"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">5.2.1</span>
 </h5>
-<p id="p-651">
+<p id="p-655">
         Every subgroup of a cyclic group is cyclic.
-      </p></article><p id="p-652">
+      </p></article><p id="p-656">
     <!--Style me with CSS--><em>Sketch of proof:</em> Let \(G=\langle a\rangle\) and \(H\leq G\text{.}\) If \(H=\{e\}\text{,}\) then clearly \(H\) is cyclic. Else, there exists an element \(a^i\) in \(H\) with \(i&gt;0\text{;}\) let \(d\) be the least positive integer such that \(a^d\in H\text{.}\) It turns out that \(H=\langle a^d\rangle\text{.}\)
   </p>
 <article class="theorem-like" id="corollary-5"><h5 class="heading">
 <span class="type">Corollary</span><span class="codenumber">5.2.2</span>
 </h5>
-<p id="p-653">
+<p id="p-657">
         Every subgroup of \(\Z\) is of the form \(n\Z\) for \(n\in \Z\text{.}\) (Note that \(n\Z\simeq \Z\) unless \(n=0\text{.}\))
-      </p></article><p id="p-654">
+      </p></article><p id="p-658">
     Really, it suffices to study the subgroups of \(\Z\) and \(\Z_n\) to understand the subgroup lattice of every cyclic group.
   </p>
-<p id="p-655">
+<p id="p-659">
     We provide the following theorems without proof.
   </p>
 <article class="theorem-like" id="znsubgps"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">5.2.3</span>
 </h5>
-<p id="p-656">
+<p id="p-660">
         The nontrivial subgroups of \(\Z_n\) are exactly those of the form \(\langle d\rangle\text{,}\) where \(d\) is a positive divisor of \(n\text{.}\) Note that \begin{equation*}|\langle d\rangle |=n/d\end{equation*} for each such \(d\text{.}\)
       </p></article><article class="theorem-like" id="theorem-28"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">5.2.4</span>
 </h5>
-<p id="p-657">
+<p id="p-661">
         For each \(0\neq a\in \Z_n\text{,}\) 
-        \begin{equation*}\langle a\rangle =\left\langle \frac{n}{\gcd(n,a)}\right\rangle.\end{equation*} It follows that for each \(0\neq a \in \Z_n,\) \begin{equation*}|\langle a\rangle |=\frac{n}{\gcd(n,a)}.\end{equation*}</p></article><p id="p-658">
+        \begin{equation*}\langle a\rangle =\left\langle \frac{n}{\gcd(n,a)}\right\rangle.\end{equation*} It follows that for each \(0\neq a \in \Z_n,\) \begin{equation*}|\langle a\rangle |=\frac{n}{\gcd(n,a)}.\end{equation*}</p></article><p id="p-662">
     In fact:
   </p>
 <article class="theorem-like" id="theorem-29"><h5 class="heading">
 <span class="type">Theorem</span><span class="codenumber">5.2.5</span>
 </h5>
-<p id="p-659">
+<p id="p-663">
         \(\Z_n\) has a unique subgroup of order \(k\text{,}\) for each positive divisor \(k\) of \(n\text{.}\)
       </p></article><article class="example-like" id="example-48"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">5.2.6</span>
 </h5>
-<p id="p-660">
+<p id="p-664">
         How many subgroups does \(\Z_{18}\) have? What are the generators of \(\Z_{15}\text{?}\)
       </p>
-<p id="p-661">
+<p id="p-665">
         Well, the positive divisors of \(18\) are \(1,2,3,6,9,\) and \(18\text{,}\) so \(\Z_{18}\) has exactly six subgroups (namely, \(\langle 1\rangle\text{,}\) \(\langle 2\rangle\text{,}\) etc.).
         The generators of \(\Z_{15}\) are the elements of \(\Z_{15}\) that are relatively prime to \(15\text{,}\) namely \(1,2,4,7,8,11,13,\) and \(14\text{.}\)
       </p></article><article class="example-like" id="example-49"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">5.2.7</span>
 </h5>
-<p id="p-662">
+<p id="p-666">
         Draw a subgroup lattice for \(\Z_{12}\text{.}\)
       </p>
-<p id="p-663">
+<p id="p-667">
         The positive divisors of \(12\) are \(1,2,3,4,6,\) and \(12\text{;}\) so
         \(\Z_{12}\)'s subgroups are of the form \(\langle 1\rangle\text{,}\) \(\langle 2\rangle\text{,}\) etc. So
         \(\Z_{12}\) has the following subgroup lattice.

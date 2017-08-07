@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-08-07T00:56:45-07:00    *-->
+<!--*    on 2017-08-07T15:14:46-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -14,9 +14,23 @@
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <p>
-        Prove that \(F/N\) is a group that's
-        isomorphic to \(\R\text{.}\).
-      </p>
-<span class="incontext"><a href="exercises-10.html#p-1247">in-context</a></span>
+      Since \(N\unlhd G\) and \(N\subseteq HN\text{,}\), \(N\) is normal in \(HN\)
+      (do you see why?). So \(HN/N\) is a group under left coset
+      multiplication. We define \(\phi: H\to HN/N\) by \(\phi(h)=hN\)
+      (notice that when \(h\in H\text{,}\), \(h\in HN\) since \(h=he_G\)). Clearly,
+      \(\phi\) is a homomorphism. Further, \(\phi\) is onto: Indeed, let
+      \(y\in HN/N\text{.}\). Then \(y=hnN\) for some \(h\in H\) and \(n\in N\text{.}\). But
+      \(nN=N\text{,}\), so \(y=hN=\phi(h)\text{.}\). Finally,
+      
+
+         \begin{align*}
+\Ker \phi\amp =\{h\in H\,:\, \phi(h)=N\}\\
+\amp =\{h\in H\,:\, hN=N\}\\
+\amp =\{h\in
+        H\,:\, h\in N\}\\
+\amp =H\cap N.
+\end{align*}
+    </p>
+<span class="incontext"><a href="section-29.html#p-1247">in-context</a></span>
 </body>
 </html>

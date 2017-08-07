@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-08-07T00:56:29-07:00    *-->
+<!--*    on 2017-08-07T15:14:29-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -14,13 +14,19 @@
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <p>
-              Next, clearly, \(0\in \Z_n\) acts as an identity element
-              under \(+_n\text{,}\), since
-              \begin{equation*}
-                0+_n a =R_n(0+a)=R_n(a)
-              \end{equation*}
-              for each
-              \(a\in \Z_n\text{.}\).
+              Now, let \(a,b,c\in \Z_n\text{.}\).  We want to show that
+              \((a+_n b)+_n c = a +_n(b+_n c)\text{.}\). Now,
+              \begin{align*}
+(a+_n b)+_n c\amp =R_n(a+b)+_n c\\
+\amp \equiv_n R_n(a+b)+c\\\
+\amp \equiv_n (a+b)+c\\\
+\amp \equiv_n a+(b+c)\\
+\amp \equiv_n a+R_n(b+c)\\
+\amp \equiv_n a+_n (b+_n c).
+\end{align*}
+              So \((a+_n b)+_n c\) and \(a+_n (b+_n c)\) are congruent mod \(n\text{.}\).  Since
+              both of these values are in \(\{0,1,\ldots, n-1\}\text{,}\), this implies that
+              they are equal, as desired.
             </p>
 <span class="incontext"><a href="section-8.html#p-292">in-context</a></span>
 </body>
