@@ -81,7 +81,11 @@
 
 <acknowledgement>
 
+<<<<<<< HEAD
 <p>Thank you to Jennifer Nordstrom of Linfield College for introducing me to the <url href="http://mathbook.pugetsound.edu">PreTeXt</url> authoring system<!-- and the American Institute of Mathematics (AIM) <url href="https://aimath.org/textbooks/">Open Textbook Initiative</url>-->; to Rob Beezer at the University of Puget Sound for facilitating my entry into the PreTeXt world;  to David Farmer at the <url href="https://aimath.org/textbooks/"> Open Textbook Initiative</url> for typesetting the initial draft of this book in PreTeXt; and to Rob, David, Mitch Keller, Alex Jordan, Bob Plantz, Alex Best and everyone else for their extensive technical help via the <url href="https://groups.google.com/forum/?fromgroups#!forum/pretext-support">PreTeXt support</url> group.</p>
+=======
+<p>Thank you to Jennifer Nordstrom of Linfield College for introducing me to the <url href="http://mathbook.pugetsound.edu">PreTeXt</url> authoring system<!-- and the American Institute of Mathematics (AIM) <url href="https://aimath.org/textbooks/">Open Textbook Initiative</url>-->; to Rob Beezer at the University of Puget Sound for facilitating my entry into the PreTeXt world;  to David Farmer at the <url href="https://aimath.org/textbooks/"> Open Textbook Initiative</url> for typesetting the initial draft of this book in PreTeXt; and to Rob, David, Mitch Keller, Alex Jordan, Bob Plantz, Alex Best and everyone else on the  for their extensive technical help via the <url href="https://groups.google.com/forum/?fromgroups#!forum/pretext-support" PreTeXt support</url> group.</p>
+>>>>>>> 1cc9687fceaae93263cb3d5173de3b341d271eac
 </acknowledgement>
 
 
