@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-08-07T00:21:21-07:00    *-->
+<!--*    on 2017-08-07T00:56:21-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -200,7 +200,7 @@ MathJax.Hub.Config({
 <p id="p-274">
         We say integers \(a\) and \(b\) are <em class="terminology">congruent
         modulo [or mod] \(n\)</em> if \(n\) divides \(a-b\text{.}\) If \(a\) and \(b\) are
-        congruent mod \(n\text{,}\) we write \(a \equiv b\, \pmod{n}\text{.}\)
+        congruent mod \(n\text{,}\) we write \(a \equiv_n b\text{.}\)
       </p></article><article class="example-like" id="cong_ex"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">2.6.5</span>
 </h5>
@@ -304,12 +304,12 @@ Let \(n\in \Z^+\) and let \(a\) be any
               Now, let \(a,b,c\in \Z_n\text{.}\)  We want to show that
               \((a+_n b)+_n c = a +_n(b+_n c)\text{.}\) Now,
               \begin{align*}
-(a+_n b)+_n c\amp =R_n(a+b)+_n c\amp \amp\\
-\amp \equiv R_n(a+b)+c\amp \amp  \pmod n\\
-\amp \equiv (a+b)+c\amp \amp   \pmod n\\
-\amp \equiv a+(b+c)\amp \amp   \pmod n\\
-\amp \equiv a+R_n(b+c)\amp \amp   \pmod n\\
-\amp \equiv a+_n (b+_n c)\amp \amp  \pmod n.
+(a+_n b)+_n c\amp =R_n(a+b)+_n c\\
+\amp \equiv_n R_n(a+b)+c\\\
+\amp \equiv_n (a+b)+c\\\
+\amp \equiv_n a+(b+c)\\
+\amp \equiv_n a+R_n(b+c)\\
+\amp \equiv_n a+_n (b+_n c).
 \end{align*}
               So \((a+_n b)+_n c\) and \(a+_n (b+_n c)\) are congruent mod \(n\text{.}\)  Since
               both of these values are in \(\{0,1,\ldots, n-1\}\text{,}\) this implies that

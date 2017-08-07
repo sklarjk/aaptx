@@ -921,12 +921,12 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
       <p>
         We say integers <m>a</m> and <m>b</m> are <term>congruent
         modulo [or mod] <m>n</m></term> if <m>n</m> divides <m>a-b</m>. If <m>a</m> and <m>b</m> are
-        congruent mod <m>n</m>, we write <m>a \equiv b\, \pmod{n}</m>.
+        congruent mod <m>n</m>, we write <m>a \equiv_n b</m>.
       </p>
     </statement>
 
 
-            <notation><usage>a\equiv b\, \pmod{n}</usage><description><m>a</m> is congruent to <m>b</m> mod <m>n</m></description></notation>
+            <notation><usage>a\equiv_n b</usage><description><m>a</m> is congruent to <m>b</m> mod <m>n</m></description></notation>
   </definition>
 
   <example xml:id="cong_ex">
@@ -1064,12 +1064,12 @@ Let <m>n\in \Z^+</m> and let <m>a</m> be any
               Now, let <m>a,b,c\in \Z_n</m>.  We want to show that
               <m>(a+_n b)+_n c = a +_n(b+_n c)</m>. Now,
               <md>
-                <mrow>(a+_n b)+_n c\amp =R_n(a+b)+_n c\amp \amp</mrow>
-                <mrow>\amp \equiv R_n(a+b)+c\amp \amp  \pmod n</mrow>
-                <mrow>\amp \equiv (a+b)+c\amp \amp   \pmod n</mrow>
-                <mrow>\amp \equiv a+(b+c)\amp \amp   \pmod n</mrow>
-                <mrow>\amp \equiv a+R_n(b+c)\amp \amp   \pmod n</mrow>
-                <mrow>\amp \equiv a+_n (b+_n c)\amp \amp  \pmod n.</mrow>
+                <mrow>(a+_n b)+_n c\amp =R_n(a+b)+_n c</mrow>
+                <mrow>\amp \equiv_n R_n(a+b)+c\</mrow>
+                <mrow>\amp \equiv_n (a+b)+c\</mrow>
+                <mrow>\amp \equiv_n a+(b+c)</mrow>
+                <mrow>\amp \equiv_n a+R_n(b+c)</mrow>
+                <mrow>\amp \equiv_n a+_n (b+_n c).</mrow>
               </md>
               So <m>(a+_n b)+_n c</m> and <m>a+_n (b+_n c)</m> are congruent mod <m>n</m>.  Since
               both of these values are in <m>\{0,1,\ldots, n-1\}</m>, this implies that

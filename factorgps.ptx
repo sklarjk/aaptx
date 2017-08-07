@@ -145,6 +145,7 @@
         </me>
       </p>
     </statement>
+   <notation><usage>aHb</usage><description><m>\{ahb\,:h\in H\}</m></description></notation>
   </definition>
 
   <theorem xml:id="norm_thm">
@@ -477,7 +478,7 @@
 
      <table xml:id="z3-Cayley">
 
-<tabular halign="left">
+<tabular>
 	 <row halign="center" bottom="medium">
 		<cell right="medium"><m>+</m></cell>
 		<cell><m>0+N</m></cell>
@@ -516,7 +517,7 @@
 
      <table xml:id="z3-Cayley2">
 
-<tabular halign="center">
+<tabular>
 	 <row bottom="medium">
 		<cell right="medium"><m>+</m></cell>
 		<cell><m>0</m></cell>
@@ -793,6 +794,7 @@
         from <m>G</m> to <m>G/N</m></term>.
       </p>
     </statement>
+    <notation><usage>\Psi</usage><description>the canonical epimorphism from <m>G</m> to <m>G/N</m></description></notation>
   </definition>
 
   <p>

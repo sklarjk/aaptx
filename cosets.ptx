@@ -562,7 +562,7 @@ complete set
 
 <insight>
 <p>
-  We  may use the notation <m>\Leftrightarrow</m> to denote the phrase <q>if and only if</q>.
+  We  may use the notation <m>\Leftrightarrow</m> to denote the phrase <q>if and only if.</q>
 </p>
 <notation><usage>\Leftrightarrow</usage><description>if and only if</description></notation>
 </insight>
@@ -734,11 +734,13 @@ complete set
   <definition>
     <statement>
       <p>
-        We say that subgroup <m>H</m> of <m>G</m> is <term>normal</term> in <m>G</m>
+        We say that subgroup <m>H</m> of <m>G</m> is <term>normal</term> in <m>G</m> (or is  <term>normal subgroup of <m>G</m></term>)
         if <m>aH=Ha</m> for all <m>a\in G</m>. We denote that fact that <m>H</m> is
         normal in <m>G</m> by writing <m>H\unlhd G</m>.
       </p>
     </statement>
+
+     <notation><usage>H\unlhd G</usage><description><m>H</m> is a normal subgorup of <m>G</m></description></notation>
   </definition>
 
   <remark>

@@ -330,12 +330,9 @@
     Recall that for every <m>\theta \in \R</m>,
     <m>e^{i\theta}</m> is defined to be <m>\cos \theta + i\sin \theta</m>. It
     is clear then that the set <m>\{e^{i\theta} \,:\, \theta\in
-    \R\}</m> is the unit circle in the complex plane; we denote
-    this set by <m>S^1</m>.</p>
+    \R\}</m> is the unit circle in the complex plane.</p>
 
-  <notation><usage>S^1</usage><description>the unit circle  <m>\{e^{i\theta} \,:\, \theta\in
-    \R\}</m> in the complex plane</description>
-  </notation>
+ 
 
   <remark>
     <p>
@@ -347,10 +344,11 @@
 
   <theorem>
     <statement>
-      <p>
-        <m>S^1</m> is a group under the multiplication
+      <p>The unit circle in the complex plane,
+        <m>S^1=\{e^{i\theta} \,:\, \theta\in \R\}</m>, is a group under the multiplication
         <m>e^{i\theta_1}e^{i\theta_2}=e^{i(\theta_1+\theta_2)}</m>.
       </p>
+
     </statement>
   
 
@@ -395,7 +393,11 @@
 
     </p>
   </proof>
-</theorem>
+
+  <notation><usage>S^1</usage><description>the unit circle  <m>\{e^{i\theta} \,:\, \theta\in
+    \R\}</m> in the complex plane</description>
+  </notation></theorem>
+  
 
 <p> Beautifully, it turns out that our group <m>\R/\Z</m> is
       isomorphic to <m>S^1</m>.</p>
