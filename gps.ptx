@@ -48,10 +48,8 @@
           <em>well defined</em> and <em>in</em> <m>\mathbf{S}</m> for each <m>a,b\in S</m>.
           For instance, we cannot define a binary operation on
           <m>\R</m> by
-          <me>
-            a*b=\text{ the greatest number less than
-            \(a+b\)}
-          </me>
+          <me>a*b=\text{ the greatest number less than
+            \(a+b\)}</me>
           since there <em>is</em>  no such <q>greatest number.</q>
           Nor can we define a binary operation on <m>\Z</m> by <m>a*b=ab/2</m>,
           since for, say, <m>a=b=1 \in \Z</m>, <m>ab/2=1/2 \not\in \Z</m>.
@@ -99,9 +97,7 @@
     <statement>
       <p>
         A binary operation <m>*</m> on set <m>S</m> is <term>commutative</term> if
-        <me>
-          a*b=b*a
-        </me>
+        <me>a*b=b*a</me>
         for all <m>a,b\in S</m>. We say that specific elements
         <m>a</m> and <m>b</m> of <m>S</m> <term>commute</term> if <m>a*b=b*a</m>.
       </p>
@@ -399,9 +395,7 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
   <m>\langle GL(n,\R), \cdot\rangle</m> is a binary structure.</p>
    <p>We know that matrix multiplication is always associative,so <m>\G_2</m> holds. Next, <m>I_n</m> is in <m>GL(n,\R)</m>since <m>\det I_n=1\neq 0</m>, and it
      acts as an identity element for <m>\langle GL(n,\R), \cdot\,\rangle</m> since
-              <me>
-                AI_n=I_nA = A
-              </me>
+              <me>AI_n=I_nA = A</me>
               for all <m>A\in GL(n,\R)</m>.
             </p>
         <p> Finally, let <m>A\in GL(n,\R)</m>.  Since <m>\det A\neq 0</m>, <m>A</m> has
@@ -577,7 +571,7 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
             <notation><usage>-a</usage><description>the inverse of <m>a</m> in an abelian group</description></notation>
 
 </convention>
-            <p>
+         
             <warning>
               <p>
                 Be careful to always know where an element
@@ -590,7 +584,7 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
               </p>
             </warning>
 
-            </p>
+  
             
             <p>
             <remark>
@@ -806,18 +800,14 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
       <statement>
         <p>
           If <m>a</m> and <m>b</m> are elements of a group <m>\Gdot</m>, then
-          <me>
-            (ab)^{-1}=b^{-1}a^{-1}.
-          </me>
+          <me> (ab)^{-1}=b^{-1}a^{-1}.</me>
         </p>
       </statement>
 
     <proof>
       <p>
         We have that
-        <me>
-          (ab)(b^{-1}a^{-1})=a(bb^{-1})a^{-1}=aea^{-1}=aa^{-1}=e.
-        </me>
+        <me>(ab)(b^{-1}a^{-1})=a(bb^{-1})a^{-1}=aea^{-1}=aa^{-1}=e.</me>
       </p>
 
       <p>
@@ -832,9 +822,7 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
   <example>
     <p>
       Let <m>n\in \Z^+</m>. We define <m>n\Z</m> by
-      <me>
-        n\Z=\{nx: x\in \Z\}:
-      </me>
+      <me>n\Z=\{nx: x\in \Z\}:</me>
       that is, <m>n\Z</m> is the set of all (integer) multiples of <m>n</m>.
     </p>
             <notation><usage>n\Z</usage><description><m>\{nm\,:\,m\in \Z\}</m></description></notation>
@@ -935,9 +923,7 @@ Let <m>n\in \Z^+</m> and let <m>a</m> be any
       <p>
         We define <term>addition modulo <m>n</m></term>, <m>+_n</m>, on <m>\Z</m> by,
         for all <m>a,b\in \Z</m>,
-        <me>
-          a+_n b=R_n(a+b),
-        </me>
+        <me>a+_n b=R_n(a+b),</me>
         that is, the unique element of <m>\{0,1,\ldots, n-1\}</m> that's congruent to the integer <m>a+b</m> modulo <m>n</m>.
       </p>
       <notation><usage>+_n</usage><description>addition modulo <m>n</m></description></notation>
@@ -1001,10 +987,7 @@ Let <m>n\in \Z^+</m> and let <m>a</m> be any
       <p>
         We next check that <m>\Z_n</m> under <m>+_n</m> satisfies the three group
         axioms. Note that since addition is commutative on <m>\Z</m>,
-        <me>
-          a+_n
-          b =R_n(a+b)=R_n(b+a)=b+_n a
-        </me>
+        <me>a+_n b =R_n(a+b)=R_n(b+a)=b+_n a</me>
         for all <m>a,b\in \Z_n</m>. Again, a
         simpler way of stating this is that commutativity of <m>+_n</m> on
         <m>\Z_n</m> is inherited from the commutativity of addition on <m>\Z</m>.
@@ -1031,18 +1014,14 @@ Let <m>n\in \Z^+</m> and let <m>a</m> be any
             <p>
               Next, clearly, <m>0\in \Z_n</m> acts as an identity element
               under <m>+_n</m>, since
-              <me>
-                0+_n a =R_n(0+a)=R_n(a)
-              </me>
+              <me> 0+_n a =R_n(0+a)=R_n(a)</me>
               for each
               <m>a\in \Z_n</m>.
             </p>
           <p>Finally, let <m>a\in \Z_n</m>.  If <m>a=0</m>, then clearly <m>a</m> has
               inverse <m>0\in \Z_n</m> since <m>0+_n 0 = 0</m>. If <m>a\neq 0</m>, then
               the element <m>n-a\in \Z_n</m> is an inverse for <m>a</m> since
-              <me>
-                a+_n(n-a)=R_n(a+(n-a))=R_n(n)=0.
-              </me>
+              <me>a+_n(n-a)=R_n(a+(n-a))=R_n(n)=0.</me>
             </p>
 
       <p>
@@ -1121,9 +1100,7 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
     <statement>
       <p>
         Let <m>F</m> be the set of all functions from <m>\R</m> to <m>\R</m>, and define <em>pointwise addition</em> <m>+</m> on <m>F</m> by
-        <me>
-          (f+g)(x)=f(x)+g(x)
-        </me>
+        <me>(f+g)(x)=f(x)+g(x)</me>
         for all <m>f,g\in F</m> and <m>x\in \R</m>. We claim that <m>F</m> is a group under pointwise
         addition. (For variety, in this proof we don't explicitly refer
         to <m>\G_1</m><ndash /><m>\G_3</m>, though we certainly do verify they hold.)
@@ -1190,21 +1167,16 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
     <statement>
       <p>
         Let <m>\langle G_1,*_1\rangle</m>, <m>\langle G_2,*_2\rangle</m> , <m>\ldots</m>, <m>\langle G_n,*_n\rangle</m> be groups (<m>n\in \Z^+</m>). Then the <em>group product</em>
-        <me>
-          G=G_1\times G_2\times \cdots \times G_n
-        </me>
+        <me> G=G_1\times G_2\times \cdots \times G_n</me>
         is a group under the <em>componentwise</em> operation <m>*</m> defined by
-        <me>
-          (g_1,g_2,\ldots, g_n)*(h_1,h_2,\ldots,h_n)=(g_1*_1h_1, g_2*_2h_2,\ldots, g_n*_nh_n)
-        </me>
+        <me> (g_1,g_2,\ldots, g_n)*(h_1,h_2,\ldots,h_n)=(g_1*_1h_1, g_2*_2h_2,\ldots, g_n*_nh_n)</me>
         for all <m>(g_1,g_2,\ldots, g_n),(h_1,h_2,\ldots,h_n)\in G</m>.
       </p>
 
       <p>
         For instance, considering multiplication on <m>\R^*</m>, matrix multiplication on <m>GL(2,\R)</m>, and addition modulo <m>6</m> on <m>\Z_6</m>, we have that <m>\langle \R^*\times GL(2,\R) \times \Z_6,*\rangle</m> is a group in which, for instance,
 
-        <me>
-          \left(-1, \begin{bmatrix}
+        <me>\left(-1, \begin{bmatrix}
           1 \amp  \phantom{-}3 \\
           0 \amp  -1
           \end{bmatrix},
@@ -1219,8 +1191,7 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
           \phantom{-}5 \amp  \phantom{-}4 \\
           -1 \amp -1
           \end{bmatrix} 
-          ,1\right).
-        </me>
+          ,1\right).</me>
       </p>
     </statement>
   </example>

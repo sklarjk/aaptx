@@ -119,9 +119,7 @@
   <solution>
     <p>
       Let <m>f,g\in G</m>. Then for every <m>x\in \Z</m>,
-      <me>
-        (fg)(x)=f(x)g(x)=g(x)f(x),
-      </me>
+      <me>(fg)(x)=f(x)g(x)=g(x)f(x),</me>
       since <m>f(x), g(x)\in \R</m> and multiplication of real numbers is commutative. Since <m>g(x)f(x)=(gf)(x)</m>,
       <m>fg=gf</m>, and so pointwise multiplication on <m>G</m> is commutative.
     </p>
@@ -240,9 +238,7 @@
   <solution>
     <p>
       We know from <xref ref="sl">Example</xref> that <m>\langle SL(n,\R),\cdot\rangle</m> is a binary structure,and we know that matrix multiplication is always associative. Next, since <m>\det I_n=1</m>, <m>I_n</m> is in <m>SL(n,\R)</m>, and clearly acts as an identity element in <m>SL(n,\R)</m>. Finally, let <m>A\in SL(n,\R)</m>.  Since <m>\det A=1\neq 0</m>, <m>A</m> has an inverse matrix <m>A^{-1}</m> in <m>GL(n, \R)</m>.  <m>A^{-1}</m> is in <m>SL(n,\R)</m> since
-            <me>
-              \det(A^{-1})=\frac{1}{\det A}=1/1=1.
-            </me>
+            <me> \det(A^{-1})=\frac{1}{\det A}=1/1=1.</me>
             So <m>A</m> has an inverse in <m>SL(n,\R)</m>.
           </p>
     <p>
@@ -368,9 +364,7 @@
     <statement>
       <p>
         Let <m>G</m> be a group. The subset
-        <me>
-          Z(G):=\{z \in G\,:\, zg=gz \mbox{ for all } g\in Z(G)\}
-        </me>
+        <me>Z(G):=\{z \in G\,:\, zg=gz \mbox{ for all } g\in Z(G)\}</me>
         of <m>G</m> is called the <term>center</term> of <m>G</m>. In other words, <m>Z(G)</m> is the set of all elements of <m>G</m> that commute with every element of <m>G</m>.
         Prove that <m>Z(G)</m> is closed in <m>G</m>.
       </p>

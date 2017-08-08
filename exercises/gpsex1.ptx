@@ -135,9 +135,7 @@ in <m>\M_2(\R)</m>. Then <m>AB=B</m> while <m>BA</m> is the zero matrix. Since <
       <li>
         <p>
           Let <m>x, y\in 2\Z</m>. Then there exist <m>a,b\in \Z</m> such that <m>x=2a</m> and <m>y=2b</m>.  Then
-          <me>
-            x+y=2a+2b=2(a+b)\in 2\Z.
-          </me>
+          <me>x+y=2a+2b=2(a+b)\in 2\Z.</me>
           So <m>2\Z</m> is closed under addition.
         </p>
       </li>
@@ -153,8 +151,7 @@ in <m>\M_2(\R)</m>. Then <m>AB=B</m> while <m>BA</m> is the zero matrix. Since <
           Let <m>A=\begin{bmatrix}a \amp b \\ 0 \amp c\end{bmatrix}</m> and <m>B=\begin{bmatrix}\alpha \amp \beta \\ 0 \amp \gamma\end{bmatrix}</m> in <m>U</m>. 
 Then 
 
-          <me>
-            AB=
+          <me> AB=
             \begin{bmatrix}
             a \amp  b \\
             0 \amp  c
@@ -168,9 +165,7 @@ Then
             a\alpha \amp  a\beta+b\gamma \\
             0 \amp  c\gamma
             \end{bmatrix} 
-          \in U.
-          </me>
-          So <m>U</m> is closed under matrix multiplication.
+          \in U.</me> So <m>U</m> is closed under matrix multiplication.
         </p>
       </li>
     </ol>
