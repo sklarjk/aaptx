@@ -54,10 +54,7 @@
         <li>
           <p>
             Let <m>I</m> be the subset
-            <me>
-              I=\R-\Q=\{x\in \R: x
-              \text{ is irrational} \}
-            </me>
+            <me> I=\R-\Q=\{x\in \R: x \text{ is irrational} \}</me>
             of the group <m>\R</m>. The set
             <m>I</m> is <em>not</em> a group under <m>\R</m>'s
             operation <m>+</m> since it is not closed under addition:
@@ -421,7 +418,7 @@
   <example>
     <statement>
       <p>
-        By inspection, <m>\Z_4</m> and <m>\Z_2^2</m> have, respectively, the following subgroup lattices.
+        By inspection, <m>\Z_4</m> and <m>\Z_2^2</m> have, respectively, the following subgroup lattices.</p>
 
 <sidebyside widths="7% 60%" margins="10%">
     <image>
@@ -452,7 +449,7 @@
 
  </latex-image-code>
  </image>-->
-    </p>   
+    
    
       <p>
         Since <m>\Z_4</m> contains exactly 3 subgroups and <m>\Z_2^2</m> exactly 5, we have

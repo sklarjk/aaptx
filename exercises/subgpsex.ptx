@@ -162,9 +162,7 @@
         <p>
           Clearly, <m>H</m> is a nonempty subset of <m>GL(n,\R)</m> (for instance, <m>I_n\in H</m>).  Next, let <m>A,B\in H</m>.
           Then
-          <me>
-            \det(AB^{-1})=(\det A)(\det (B^{-1}))=(\pm 1)\left(\frac{1}{\pm 1}\right)=\pm 1,
-          </me>
+          <me> \det(AB^{-1})=(\det A)(\det (B^{-1}))=(\pm 1)\left(\frac{1}{\pm 1}\right)=\pm 1,</me>
           so <m>AB^{-1}\in H</m>.  Thus, <m>H\leq GL(n,\R)</m> by the <xref ref="twostep" text="title"/>.
         </p>
       </li>
