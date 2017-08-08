@@ -1175,7 +1175,6 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
 
       <p>
         For instance, considering multiplication on <m>\R^*</m>, matrix multiplication on <m>GL(2,\R)</m>, and addition modulo <m>6</m> on <m>\Z_6</m>, we have that <m>\langle \R^*\times GL(2,\R) \times \Z_6,*\rangle</m> is a group in which, for instance,
-
         <me>\left(-1, \begin{bmatrix}
           1 \amp  \phantom{-}3 \\
           0 \amp  -1
