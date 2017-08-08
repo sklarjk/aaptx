@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-08-07T15:14:32-07:00    *-->
+<!--*    on 2017-08-07T16:02:17-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -14,7 +14,17 @@
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <p>
-        The groups \(\Z_4\) and \(V=\Z_2^2\) are not isomorphic. Why? Well, they are both abelian of order 4, so we cannot use cardinality or commutativity to prove they are nonisomorphic. The gist of our argument will be to note that every element in \(V\) is its own inverse; so if \(V\) and \(\Z_4\) are isomorphic (hence structurally identical) we must have that every element of \(\Z_4\) is also its own inverse, which doesn't hold (e.g., in \(\Z_4\text{,}\), \(3+3=2\text{,}\), not \(0\)).
+        The groups \(\Z\) and \(\Q\) are not isomorphic. We use contradiction to prove this. Suppose that \(\Z\) and \(\Q\) are isomorphic via isomorphism
+        \(\phi :\Q \to \Z\text{.}\). Let \(a\in \Q\text{.}\). Then \(a/2 \in \Q\) with
+        \(a/2 + a/2 =a\text{.}\). Then
+        \begin{equation*}
+          \phi(a/2)+\phi(a/2)=
+          \phi(a/2+a/2)=\phi(a);
+        \end{equation*}
+        since \(\phi(a/2)\) is in \(\Z\text{,}\), \(\phi(a)\)
+        must be evenly divisible by 2. But \(a\) was arbitrary in \(\Q\) and
+        \(\phi\) is onto, so this means every element of \(\Z\) must be evenly
+        divisible by 2, which is clearly false. Thus, \(\Z\not\simeq \Q\text{.}\).
       </p>
 <span class="incontext"><a href="section-12.html#p-452">in-context</a></span>
 </body>

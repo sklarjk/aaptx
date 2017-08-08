@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-08-07T15:14:34-07:00    *-->
+<!--*    on 2017-08-07T15:57:38-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,8 +13,8 @@
 </head>
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Thus, \(\phi\) is an isomorphism, and so in this case we have \(\Z_n \simeq \langle a \rangle\text{.}\).
-  </p>
+<p> First, let \(i,j\in \Z\text{.}\). We want to show that \(\phi(i+_nj)=\phi(i)\phi(j)\text{,}\), that is, that \(a^{i+_nj}=a^ia^j\text{.}\). Since \(i+j\) is congruent to \(i+_nj\) modulo \(n\text{,}\), \(a^ia^j=a^{i+j}=a^{i+_nj}\text{,}\), by the <a knowl="./knowl/clock.html" knowl-id="xref-clock" alt="Lemma 5.1.8 Clock Lemma" title="Lemma 5.1.8 Clock Lemma">5.1.8</a>. So \(\phi\) is a homomorphism. Next we show that \(\phi\) is one-to-one. Let \(i,j\in \Z_n\) with \(\phi(i)=\phi(j)\text{,}\), so \(a^i=a^j\text{.}\). Then, by the Clock Lemma, \(i\) and \(j\) are congruent modulo \(n\text{.}\). Since they're both in \(\Z_n\text{,}\), they must be equal,
+    so \(\phi\) is one-to-one. Finally, we show that \(\phi\) is onto. let \(x\in \langle a\rangle\text{.}\). Then \(x=a^i\) for some \(i\in \Z\text{.}\). Letting \(r\) be the remainder when we divide \(i\) by \(n\text{,}\), we have \(r\in \Z_n\) with \(i\) congruent to \(r\) modulo \(n\text{;}\); so, again using the <a knowl="./knowl/clock.html" knowl-id="xref-clock" alt="Lemma 5.1.8 Clock Lemma" title="Lemma 5.1.8 Clock Lemma">5.1.8</a>, \(x=a^i=a^r\text{.}\). Since \(r\in \Z_n\text{,}\), \(x=\phi(r)\text{.}\). So \(\phi\) is onto.</p>
 <span class="incontext"><a href="section-15.html#p-618">in-context</a></span>
 </body>
 </html>

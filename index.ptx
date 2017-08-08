@@ -102,6 +102,8 @@
 
 <xi:include href="./pre.ptx" />
 
+<!--
+
 <xi:include href="./gps.ptx" />
 
 <xi:include href="./homoiso.ptx" />
@@ -116,7 +118,7 @@
 
 <xi:include href="./factorgps.ptx" />
 
-<xi:include href="./isothms.ptx" />
+<xi:include href="./isothms.ptx" />-->
 
 <backmatter>
 

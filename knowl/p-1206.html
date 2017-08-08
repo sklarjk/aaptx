@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-08-07T15:14:45-07:00    *-->
+<!--*    on 2017-08-07T15:57:47-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -14,10 +14,17 @@
 <body>
 <h5 class="heading"><span class="type">Paragraph</span></h5>
 <p>
-        Let \(\phi\) be a homomorphism from group \(G\) to group
-        \(G'\text{.}\). Then \(\phi\) is one-to-one (hence a monomorphism) if and only
-        if \(\Ker \phi=\{e_G\}\text{.}\).
-      </p>
+      Let \(a,b\in G\text{.}\). Then
+      \begin{align*}
+\phi(a)=\phi(b)\amp \Leftrightarrow
+        \phi(b)^{-1}\phi(a)=e_{G'}\\
+\amp \Leftrightarrow \phi(b^{-1}a)=e_{G'}\\
+\amp \Leftrightarrow b^{-1}a\in K\\
+\amp \Leftrightarrow a \in bK\\
+\amp \Leftrightarrow aK=bK,
+\end{align*}
+      as desired.
+    </p>
 <span class="incontext"><a href="section-28.html#p-1206">in-context</a></span>
 </body>
 </html>
