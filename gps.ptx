@@ -430,13 +430,11 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
   </example>
   </p>
 
-<p>
 <remark>
     <p>
       Throughout this course, if we are discussing a set <m>GL(n,\R)</m> or <m>SL(n,\R)</m>, you should assume <m>n\in \Z^+</m>, unless otherwise noted.
     </p>
   </remark>
-</p>
 
 <p>We end this section with a final example.</p>
 <p>
@@ -586,12 +584,12 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
 
   
             
-            <p>
+          
             <remark>
              <p>
               Multiplicative notation can be used when working with any arbitary group, while additive notation should be used only when working with a group whose binary operation is commutative.
              </p>
-            </remark></p>
+            </remark>
 
           <p>  We summarize multiplicative versus addition notation in the following table, where <m>a,b</m> are elements of a group <m>G</m>. </p>
 

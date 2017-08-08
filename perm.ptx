@@ -778,6 +778,7 @@ We say that <m>\lambda_a</m>, <m>\rho_a</m>, and <m>c_a</m>
       is the collection of all symmetries of <m>T</m>.
     </p>
 </example>
+
     <remark>
       <p>
         Notice that <m>rf=fr^2</m> and that <m>f^2=r^3=e</m>.
@@ -814,18 +815,20 @@ We say that <m>\lambda_a</m>, <m>\rho_a</m>, and <m>c_a</m>
    </theorem>
 
     <p>
-      Let us look at <m>D_3</m> another way. Note that each map in <m>D_3</m> can be uniquely described by how it permutes the vertices <m>1,2,3</m> of <m>T</m>: that is, each map in <m>D_3</m> can be uniquely identified with a unique element of <m>S_3</m>. For instance, <m>f</m> corresponds to the permutation <m>(23)</m> in <m>S_3</m>, while <m>fr</m> corresponds to the permutation <m>(13)</m>. In turns out that <m>D_3 \simeq S_3</m>, via the following correspondence.
-      <me>
-        \begin{array}{ccl}
-        e \amp \leftrightarrow \amp  e\\
-        f \amp \leftrightarrow \amp  (23)\\
-        r \amp \leftrightarrow \amp  (123)\\
-        r^2 \amp \leftrightarrow \amp  (132)\\
-        fr \amp \leftrightarrow \amp  (13)\\
-        fr^2 \amp \leftrightarrow \amp  (12)
-        \end{array}
-      </me>
-    </p>
+      Let us look at <m>D_3</m> another way. Note that each map in <m>D_3</m> can be uniquely described by how it permutes the vertices <m>1,2,3</m> of <m>T</m>: that is, each map in <m>D_3</m> can be uniquely identified with a unique element of <m>S_3</m>. For instance, <m>f</m> corresponds to the permutation <m>(23)</m> in <m>S_3</m>, while <m>fr</m> corresponds to the permutation <m>(13)</m>. In turns out that <m>D_3 \simeq S_3</m>, via the following correspondence.</p>
+      
+      <sidebyside>
+      <tabular halign="center">
+      <row><cell><m>e</m></cell><cell><m>\mapsto</m></cell><cell><m>e</m></cell></row>
+      <row><cell><m>f</m></cell><cell><m>\mapsto</m></cell><cell><m>(23)</m></cell></row>
+      <row><cell><m>r</m></cell><cell><m>\mapsto</m></cell><cell><m>(123)</m></cell></row>
+      <row><cell><m>r^2</m></cell><cell><m>\mapsto</m></cell><cell><m>(132)</m></cell></row>
+      <row><cell><m>fr</m></cell><cell><m>\mapsto</m></cell><cell><m>(13)</m></cell></row>
+      <row><cell><m>fr^2</m></cell><cell><m>\mapsto</m></cell><cell><m>(12)</m></cell></row>
+      </tabular>
+      
+  </sidebyside>
+<notation><usage>\mapsto</usage><description>maps to</description></notation>
   <p>
     The group <m>D_3</m> is an example of class of groups called <em>dihedral groups</em>.
   </p>
