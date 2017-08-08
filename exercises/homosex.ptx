@@ -101,9 +101,7 @@
           <p>
             The function <m>f</m> is a homomorphism, since for every <m>a,b \in
             \Z,</m> we have
-            <me>
-              f(a+b)=2(a+b)=2a+2b=f(a)+f(b).
-            </me>
+            <me> f(a+b)=2(a+b)=2a+2b=f(a)+f(b).</me>
           </p>
         </li>
 
@@ -122,9 +120,7 @@
         <li>
           <p>
             The function <m>g</m> isn't a homomorphism: for instance, we have
-            <me>
-              g(2+3)=g(5)=25\neq 13=4+9=g(2)+g(3).
-            </me>
+            <me> g(2+3)=g(5)=25\neq 13=4+9=g(2)+g(3).</me>
           </p>
         </li>
 
@@ -142,9 +138,7 @@
           <p>
             The function <m>h</m> is a homomorphism, since for every <m>a,b \in
             \Q,</m> we have
-            <me>
-              h(ab)=(ab)^2=a^2b^2=h(a)h(b).
-            </me>
+            <me>h(ab)=(ab)^2=a^2b^2=h(a)h(b).</me>
           </p>
         </li>
 
@@ -199,9 +193,7 @@
         <p>
           The function <m>d</m> is a homomorphism, since for every <m>A,B \in
           GL(n,\R),</m> we have
-          <me>
-            d(AB)=\det(AB)=(\det A)(\det B)=d(A)d(B).
-          </me>
+          <me>d(AB)=\det(AB)=(\det A)(\det B)=d(A)d(B).</me>
         </p>
       </li>
 
@@ -214,14 +206,12 @@
       <li>
         <p>
           <m>d</m> is onto: Let <m>a\in \R^*</m>. Then the matrix
-          <me>
-            A:=\begin{bmatrix}a \amp  0 \amp  0 \amp  \cdots \amp  0 \\
+          <me>A=\begin{bmatrix}a \amp  0 \amp  0 \amp  \cdots \amp  0 \\
             0 \amp  1 \amp  0 \amp  \cdots \amp  0 \\
             0 \amp  0 \amp  1 \amp  \cdots \amp  0 \\
             \vdots \amp  \vdots \amp  \vdots \amp  \ddots \amp  \vdots \\
             0 \amp  0 \amp  0 \amp  \cdots \amp  1
-            \end{bmatrix}
-          </me>
+            \end{bmatrix}</me>
           is in <m>GL(n,\R)</m>, with <m>d(A)=a</m>.
         </p>
       </li>
@@ -356,14 +346,10 @@
       Define <m>\phi\,:\,\Z \rightarrow n\Z</m>
       by <m>\phi(x)=nx</m>, for all <m>x\in \Z</m>. Clearly, <m>\phi</m>
       is a bijection. Moreover, for all <m>x,y\in \Z</m>,
-      <me>
-        \phi(x+y)=n(x+y)=nx+ny=\phi(x)+\phi(y);
-      </me>
+      <me> \phi(x+y)=n(x+y)=nx+ny=\phi(x)+\phi(y);</me>
       so <m>\phi</m> is a
       homomorphism. Thus, <m>\phi</m> is an isomorphism, and hence
-      <me>
-        \langle \Z, +\rangle \simeq \langle n\Z, +\rangle .
-      </me>
+      <me> \langle \Z, +\rangle \simeq \langle n\Z, +\rangle .</me>
     </p>
   </solution>
   </exercise>
