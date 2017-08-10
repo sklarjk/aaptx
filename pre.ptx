@@ -518,18 +518,16 @@ To prove that <m>f</m> is <em>not</em> onto: Identify an element <m>t\in T</m> f
         number of elements in <m>S</m>; we denote the cardinality of <m>S</m> by <m>|S|</m>.
       </p>
     </statement>
-    <notation><usage><m>|S|</m></usage><description>the cardinality of  <m>S</m></description></notation>
+    <notation><usage>|S|</usage><description>the cardinality of  <m>S</m></description></notation>
   </definition>
 
-  <p>
+
     <warning><p>Of course, vertical bars are used to denote
     other mathematical concepts; for instance, if <m>x</m> is a real
     number, <m>|x|</m> usually denotes the absolute value of <m>x</m>. You
     must determine from context, and from the nature of the
     expression within the bars, what vertical bars mean in a
     particular context.</p></warning>
-</p>
-
 
 <p>Note that in the above definition, we omitted the definition of the cardinality of an infinite set.  This is because defining the cardinality of an infinite set is a more complicated endeavor, and one which is, in the most general context, beyond the scope of this class.  For us it will suffice to distinguish between two types of infinite sets: <em>countably infinite</em> sets and <em>uncountable</em> (or <em>uncountably infinite</em>) sets.</p>
 
