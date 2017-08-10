@@ -419,20 +419,17 @@
     <statement>
       <p>
         By inspection, <m>\Z_4</m> and <m>\Z_2^2</m> have, respectively, the following subgroup lattices.</p>
-<sidebyside widths="7% 65%" margins="auto"> <!--change first width from .07 to 1 in .tex file-->
-    <image>
+<p></p>
+ <image>
     <latex-image-code>
-\xymatrix{\Z_4 \ar@{-}[d]\\ \{0,2\}\ar@{-}[d]\\ \{0\}}
- </latex-image-code>
-  </image>
-<!--<p>and</p>-->
-    <image>
-  <latex-image-code>
+\begin{tabular}{ccc}
+\xymatrix{\Z_4 \ar@{-}[d]\\ \{0,2\}\ar@{-}[d]\\ \{0\}} \amp  \amp
 \xymatrix{&amp;\Z_2^2 \ar@{-}[dl]\ar@{-}[d]\ar@{-}[dr]&amp;\\ \{(0,0),(1,0)\}\ar@{-}[dr]&amp;\{(0,0),(1,1)\}\ar@{-}[d]&amp;\{(0,0),(0,1)\}\ar@{-}[dl]\\ &amp;\{(0,0)\} &amp;}
+\end{tabular}
  </latex-image-code>
  </image>
- </sidebyside>
-      <p>
+<p></p>
+       <p>
         Since <m>\Z_4</m> contains exactly 3 subgroups and <m>\Z_2^2</m> exactly 5, we have
         that <m>\Z_4\not\simeq \Z_2^2</m>.
       </p>
