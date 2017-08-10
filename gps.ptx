@@ -1094,7 +1094,7 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
     We end this section by considering a few more examples.
   </p>
 
-  <example>
+  <example xml:id="funcrr">
     <statement>
       <p>
         Let <m>F</m> be the set of all functions from <m>\R</m> to <m>\R</m>, and define <em>pointwise addition</em> <m>+</m> on <m>F</m> by
@@ -1151,14 +1151,16 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
         Hence, <m>F</m> is a group under pointwise addition. Note that it is uncountably infinite and abelian.
       </p>
     </statement>
+  <notation><usage>F</usage><description>the set of all functions from <m>\R</m> to <m>\R</m></description></notation>
   </example>
 
-  <example>
+  <example xml:id="bijrr">
     <statement>
       <p>
         The set <m>F</m> is <em>not</em> a group under function composition (do you see why?). But if we define <m>B</m> to be the set of all <em>bijections</em> from <m>\R</m> to <m>\R</m>, then <m>B</m> is a group under function composition. (Prove it!) <m>B</m> is uncountably infinite and nonabelian.
       </p>
     </statement>
+      <notation><usage>B</usage><description>the set of all bijections from <m>\R</m> to <m>\R</m></description></notation>
   </example>
 
   <example xml:id="gpprod">
@@ -1212,136 +1214,89 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
 <section>
   <title>Summaries of groups we've seen</title>
   <p>
-    When you see the following identified as groups, you should
-    assume they are equipped with the following operations, unless
-    otherwise. Throughout, assume <m>m,n\in \Z^+</m>.
+    When you see the following groups in the wild, you should
+    assume they are equipped with the following default operations, unless
+    otherwise noted.  You should know:
+    <ul>
+    <li><p>What elements the groups contain;</p></li>
+    <li><p>What their default operations are;</p></li>
+    <li><p>Their orders (and, if they're infinite, whether they're countably infinite or uncountable);</p></li>
+    <li><p>Whether or not they are abelian.</p></li>
+    </ul>
   </p>
 
-  <tabular>
+
+
+<sidebyside>
+<tabular>
   
     <row bottom="medium">
       <cell><em>Group(s)</em></cell>
       <cell><em>Operation</em></cell>
-      <cell><em>Properties</em></cell>
     </row>
+
     <row >
-      <cell></cell>
-      <cell></cell>
-      <cell></cell>
-    </row>
-    <row>
       <cell><m>\Z</m>, <m>\Q</m></cell>
       <cell>addition of numbers</cell>
-      <cell>countably
-      infinite; abelian</cell>
+     
     </row>
-    <row >
-      <cell></cell>
-      <cell></cell>
-      <cell></cell>
-    </row>
+
     <row>
       <cell><m>n\Z</m></cell>
       <cell>addition of numbers</cell>
-      <cell>countably infinite; abelian (unless <m>m=0</m>)</cell>
     </row>
-    <row >
-      <cell></cell>
-      <cell></cell>
-      <cell></cell>
-    </row>
+  
     <row>
       <cell><m>\R</m>, <m>\C</m></cell>
       <cell>addition of numbers</cell>
-      <cell>uncountable; abelian</cell>
     </row>
-    <row >
-      <cell></cell>
-      <cell></cell>
-      <cell></cell>
-    </row>
+ 
     <row>
       <cell><m>\Q^*</m>, <m>\Q^+</m></cell>
       <cell>multiplication of  numbers</cell>
-      <cell>countably infinite; abelian</cell>
+    
     </row>
-    <row >
-      <cell></cell>
-      <cell></cell>
-      <cell></cell>
-    </row>
+ 
     <row>
       <cell><m>\R^*</m>, <m>\R^+</m>, <m>\C^*</m></cell>
       <cell>multiplication of  numbers</cell>
-      <cell>uncountable; abelian</cell>
+    
     </row>
-    <row >
-      <cell></cell>
-      <cell></cell>
-      <cell></cell>
-    </row>
+
     <row>
       <cell><m>\M_{m\times n}(\R), \M_n(\R)</m></cell>
       <cell>matrix addition</cell>
-      <cell>uncountable; abelian</cell>
+     
     </row>
-    <row >
-      <cell></cell>
-      <cell></cell>
-      <cell></cell>
-    </row>
+  
     <row>
       <cell><m>GL(n,\R), SL(n,\R)</m></cell>
       <cell>matrix multiplication</cell>
-      <cell>uncountable; nonabelian (unless <m>n=1</m>)</cell>
-    </row>
-    <row >
-      <cell></cell>
-      <cell></cell>
-      <cell></cell>
+     
     </row>
     <row>
       <cell><m>\Z_n</m></cell>
       <cell>addition mod <m>n</m></cell>
-      <cell>finite; abelian</cell>
     </row>
-    <row >
-      <cell></cell>
-      <cell></cell>
-      <cell></cell>
-    </row>
+
     <row>
       <cell><m>\Z_2^2</m></cell>
       <cell>componentwise addition mod 2</cell>
-      <cell>finite; abelian</cell>
+      
     </row>
-    <row >
-      <cell></cell>
-      <cell></cell>
-      <cell></cell>
-    </row>
-    <row>
-      <cell><m>F</m></cell>
-      <cell>pointwise addition</cell>
-      <cell>uncountable; abelian</cell>
-    </row>
-    <row >
-      <cell></cell>
-      <cell></cell>
-      <cell></cell>
-    </row>
-    <row>
-      <cell><m>B</m></cell>
-      <cell>composition</cell>
-      <cell>uncountable; nonabelian</cell>
-    </row>
-    <row >
-      <cell></cell>
-      <cell></cell>
-      <cell></cell>
-    </row>
-  </tabular>
 
+    <row>
+      <cell><m>F</m>  (see <xref ref="funcrr">Example</xref>)</cell>
+      <cell>pointwise addition</cell>
+    </row>
+
+    <row>
+      <cell><m>B</m> (see <xref ref="bijrr">Example</xref>) </cell>
+      <cell>composition </cell>
+    </row>
+   
+  </tabular>
+</sidebyside>
 </section>
 
   <xi:include  href="./exercises/gpsex2.ptx" />
