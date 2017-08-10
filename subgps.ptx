@@ -352,18 +352,14 @@
   <example>
     <statement>
       <p>
-        Consider the group <m>\Z_8</m>. We will see later that the subgroups of <m>\Z_8</m> are <m>\{0\}</m>, <m>\{0,2,4,6\}</m>, <m>\{0,4\}</m> and <m>\Z_8</m> itself. So <m>\Z_8</m> has the following subgroup lattice.
-      </p>
+        Consider the group <m>\Z_8</m>. We will see later that the subgroups of <m>\Z_8</m> are <m>\{0\}</m>, <m>\{0,2,4,6\}</m>, <m>\{0,4\}</m> and <m>\Z_8</m> itself. So <m>\Z_8</m> has the following subgroup lattice.</p>
+
 
    <image width="12%">
     <latex-image-code>
-    
-   \[\xymatrix{&amp;\Z_8 \ar@{-}[d]&amp;\\ &amp;\{0,2,4,6\}\ar@{-}[d]&amp;\\ &amp;\{0,4\} \ar@{-}[d]&amp;\\ &amp;\{0\} &amp;}\]
- 
+\[ \xymatrix{&amp;\Z_8 \ar@{-}[d]&amp;\\ &amp;\{0,2,4,6\}\ar@{-}[d]&amp;\\ &amp;\{0,4\} \ar@{-}[d]&amp;\\ &amp;\{0\} &amp;}\]
 </latex-image-code>
   </image>
-
-
 
     </statement>
    </example>
@@ -419,6 +415,30 @@
     <statement>
       <p>
         By inspection, <m>\Z_4</m> and <m>\Z_2^2</m> have, respectively, the following subgroup lattices.</p>
+
+<sidebyside margins="3%">
+<image>
+<latex-image-code>
+\xymatrix{\Z_4 \ar@{-}[d]&amp;&amp;&amp;&amp;\Z_2^2 \ar@{-}[dl]\ar@{-}[d]\ar@{-}[dr]&amp;\\ 
+\{0,2\}\ar@{-}[d]&amp;&amp;&amp; \{(0,0),(1,0)\}\ar@{-}[dr]&amp;\{(0,0),(1,1)\}\ar@{-}[d]&amp;\{(0,0),(0,1)\}\ar@{-}[dl]\\ 
+\{0\}&amp;&amp;&amp;&amp;\{(0,0)\}&amp;}
+</latex-image-code>
+</image>
+</sidebyside>
+
+<!--
+<sidebyside widths="12% 80%" margins="auto">
+<image>
+    <latex-image-code>
+    \vbox{\xymatrix{\Z_4 \ar@{-}[d]\\ \{0,2\}\ar@{-}[d]\\ \{0\}} }
+     </latex-image-code>
+ </image>
+<image>
+    <latex-image-code>
+\vbox{\xymatrix{&amp;\Z_2^2 \ar@{-}[dl]\ar@{-}[d]\ar@{-}[dr]&amp;\\ \{(0,0),(1,0)\}\ar@{-}[dr]&amp;\{(0,0),(1,1)\}\ar@{-}[d]&amp;\{(0,0),(0,1)\}\ar@{-}[dl]\\ &amp;\{(0,0)\} &amp;}}
+ </latex-image-code>
+ </image>
+ </sidebyside>
 <p></p>
  <image>
     <latex-image-code>
@@ -428,7 +448,8 @@
 \end{tabular}
  </latex-image-code>
  </image>
-<p></p>
+<p></p>-->
+
        <p>
         Since <m>\Z_4</m> contains exactly 3 subgroups and <m>\Z_2^2</m> exactly 5, we have
         that <m>\Z_4\not\simeq \Z_2^2</m>.
