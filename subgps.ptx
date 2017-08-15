@@ -355,18 +355,18 @@
       <p>
         Consider the group <m>\Z_8</m>. We will see later that the subgroups of <m>\Z_8</m> are <m>\{0\}</m>, <m>\{0,2,4,6\}</m>, <m>\{0,4\}</m> and <m>\Z_8</m> itself. So <m>\Z_8</m> has the following subgroup lattice.</p>
 
-<!--  <sidebyside width="35%">
-    <image width="5%">
+<sidebyside width="35%">
+    <image>
     <latex-image-code>
 \xymatrix{&amp;\Z_8 \ar@{-}[d]&amp;\\ &amp;\{0,2,4,6\}\ar@{-}[d]&amp;\\ &amp;\{0,4\} \ar@{-}[d]&amp;\\ &amp;\{0\} &amp;}
  </latex-image-code>
-  </image></sidebyside>-->
-
+  </image></sidebyside>
+<!--
 <image width="12%">
     <latex-image-code>
 \[\xymatrix{&amp;\Z_8 \ar@{-}[d]&amp;\\ &amp;\{0,2,4,6\}\ar@{-}[d]&amp;\\ &amp;\{0,4\} \ar@{-}[d]&amp;\\ &amp;\{0\} &amp;}\]
 </latex-image-code>
-  </image>
+  </image>-->
     </statement>
 
 
@@ -427,13 +427,13 @@
 <sidebyside margins="3%">
 <image>
 <latex-image-code>
-\[
 \xymatrix{\Z_4 \ar@{-}[d]&amp;&amp;&amp;&amp;\Z_2^2 \ar@{-}[dl]\ar@{-}[d]\ar@{-}[dr]&amp;\\ 
 \{0,2\}\ar@{-}[d]&amp;&amp;&amp; \{(0,0),(1,0)\}\ar@{-}[dr]&amp;\{(0,0),(1,1)\}\ar@{-}[d]&amp;\{(0,0),(0,1)\}\ar@{-}[dl]\\ 
-\{0\}&amp;&amp;&amp;&amp;\{(0,0)\}&amp;}\]
+\{0\}&amp;&amp;&amp;&amp;\{(0,0)\}&amp;}
 </latex-image-code>
 </image>
 </sidebyside>
+
 <!--
 
 <sidebyside widths="12% 80%" margins="auto">
