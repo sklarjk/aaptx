@@ -10,6 +10,8 @@
   </p>
 
   <definition>
+      <notation><usage>H\leq G</usage><description><m>H</m> is a subgroup of <m>G</m></description></notation>
+    <notation><usage>H\not \leq G</usage><description><m>H</m> is not a subgroup of <m>G</m></description></notation>
     <statement>
       <p>
         A <term>subgroup</term> of a group <m>G</m> is a subset of <m>G</m> that
@@ -18,8 +20,7 @@
         <m>G</m>, we write <m>H\not\leq G</m>.
       </p>
     </statement>
-    <notation><usage>H\leq G</usage><description><m>H</m> is a subgroup of <m>G</m></description></notation>
-    <notation><usage>H\not \leq G</usage><description><m>H</m> is not a subgroup of <m>G</m></description></notation>
+
   </definition>
 
   <warning>
@@ -34,7 +35,7 @@
   </warning>
 
   <example xml:id="subsetvsubgp1">
-    <statement>
+    <statement><p>
       <ol>
         <li>
           <p>
@@ -93,7 +94,7 @@
             Let <m>G</m> be a group.  Then <m>\{e_G\}</m> and <m>G</m> are clearly both subgroups of <m>G</m>.
           </p>
         </li>
-      </ol>
+      </ol></p>
     </statement>
   </example>
 
@@ -251,21 +252,21 @@
       <p>
         Consider the group <m>\langle F,+\rangle</m>, where <m>F</m> is the set of all functions from <m>\R</m> to <m>\R</m> and <m>+</m> is pointwise addition. Which of the following are subgroups of <m>F</m>?
         <ol>
-          <li class="custom-list-style-type" label="" >
+          <li>
 
           <p>
             <m>H=\{f\in F: f(5)=0\}</m>;
           </p>
           </li>
 
-          <li class="custom-list-style-type" label="" >
+          <li >
 
           <p>
             <m>K=\{f\in F: f \text{ is continuous} \}</m>;
           </p>
           </li>
 
-          <li class="custom-list-style-type" label="" >
+          <li >
 
           <p>
             <m>L=\{f\in F: f \text{ is differentiable} \}</m>.
@@ -292,11 +293,11 @@
       <p>
          Let <m>G</m> be
         a group and <m>H\subseteq G</m>. Then <m>H</m> is a subgroup of <m>G</m> if
-      </p>
+     
       <ol>
 <li><p>         <m>H\neq \emptyset</m>; and</p></li>
 <li><p>        For each <m>a,b\in H</m>, <m>ab^{-1}\in H</m>.</p></li>
-</ol>
+</ol></p>
             </statement>
 
   <proof>
@@ -313,7 +314,7 @@
 </theorem>
 
   <example>
-    <statement>
+    <statement><p>
       <ol>
         <li>
           <p>
@@ -326,7 +327,7 @@
             Use the <xref ref="twostep" text="title"/> to prove that <m>SL(n,\R)</m> is a subgroup of <m>GL(n,\R)</m>.
           </p>
         </li>
-      </ol>
+      </ol></p>
     </statement>
   </example>
 
@@ -354,14 +355,14 @@
       <p>
         Consider the group <m>\Z_8</m>. We will see later that the subgroups of <m>\Z_8</m> are <m>\{0\}</m>, <m>\{0,2,4,6\}</m>, <m>\{0,4\}</m> and <m>\Z_8</m> itself. So <m>\Z_8</m> has the following subgroup lattice.</p>
 
-
    <image width="12%">
     <latex-image-code>
 \xymatrix{&amp;\Z_8 \ar@{-}[d]&amp;\\ &amp;\{0,2,4,6\}\ar@{-}[d]&amp;\\ &amp;\{0,4\} \ar@{-}[d]&amp;\\ &amp;\{0\} &amp;}
 </latex-image-code>
   </image>
-
     </statement>
+
+
    </example>
 
 
@@ -419,9 +420,9 @@
 <sidebyside margins="3%">
 <image>
 <latex-image-code>
-\[\xymatrix{\Z_4 \ar@{-}[d]&amp;&amp;&amp;&amp;\Z_2^2 \ar@{-}[dl]\ar@{-}[d]\ar@{-}[dr]&amp;\\ 
+\xymatrix{\Z_4 \ar@{-}[d]&amp;&amp;&amp;&amp;\Z_2^2 \ar@{-}[dl]\ar@{-}[d]\ar@{-}[dr]&amp;\\ 
 \{0,2\}\ar@{-}[d]&amp;&amp;&amp; \{(0,0),(1,0)\}\ar@{-}[dr]&amp;\{(0,0),(1,1)\}\ar@{-}[d]&amp;\{(0,0),(0,1)\}\ar@{-}[dl]\\ 
-\{0\}&amp;&amp;&amp;&amp;\{(0,0)\}&amp;}\]
+\{0\}&amp;&amp;&amp;&amp;\{(0,0)\}&amp;}
 </latex-image-code>
 </image>
 </sidebyside>
