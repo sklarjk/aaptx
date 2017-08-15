@@ -506,7 +506,7 @@ To show that given groups <m>G</m> and <m>G'</m> are isomorphic, we must do thre
             Let <m>G</m> be a group with <m>|G|=2</m>.  Then <m>G</m> must consist of an identity element <m>e</m> and a nonidentity element <m>a</m>, and have the following group table. Compare the respective group tables for <m>G</m> and for the specific two-element group <m>\Z_2</m>.
 </p>
 
-<p>
+
 <sidebyside>    
 <tabular halign="center">
 	 <row bottom="medium">
@@ -545,7 +545,7 @@ To show that given groups <m>G</m> and <m>G'</m> are isomorphic, we must do thre
 	</row>
 </tabular>
       </sidebyside>
-      </p>
+
       <p>    
 
 
