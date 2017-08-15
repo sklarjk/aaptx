@@ -106,7 +106,7 @@
    <sidebyside width="30%">
     <image>
     <latex-image-code>
-\[\xymatrix{G\ar[rr]^{\phi}\ar[dr]_{\Psi}&amp;&amp;G'\\&amp;G/N\ar@{.>}[ur]_{\phibar}&amp;}\]
+\xymatrix{G\ar[rr]^{\phi}\ar[dr]_{\Psi}&amp;&amp;G'\\&amp;G/N\ar@{.>}[ur]_{\phibar}&amp;}
 </latex-image-code>
 </image>
   </sidebyside>
