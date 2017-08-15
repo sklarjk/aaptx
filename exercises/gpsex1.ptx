@@ -32,7 +32,7 @@
         </ol>
       </p>
     </statement>
-      <solution>
+      <solution><p>
     <ol>
       <li>
         <p>
@@ -57,7 +57,7 @@
           Y
         </p>
       </li>
-    </ol>
+    </ol></p>
   </solution>
   </exercise>
 
@@ -68,7 +68,7 @@
       </p>
     </statement>
     <solution>
-        <ol>
+<p>        <ol>
       <li>
         <p>
           Let <m>p,q\in \Q</m>.  Then <m>p*q=pq+1=qp+1</m> (since multiplication is commutative on <m>\Q</m>), which equals <m>q*p</m>.  So <m>*</m> is commutative.
@@ -81,7 +81,7 @@
         </p>
       </li>
     </ol>
-  </solution>
+</p>  </solution>
   </exercise>
   
   <exercise>
@@ -130,7 +130,7 @@ in <m>\M_2(\R)</m>. Then <m>AB=B</m> while <m>BA</m> is the zero matrix. Since <
         </ol>
       </p>
     </statement>
-  <solution>
+  <solution><p>
         <ol>
       <li>
         <p>
@@ -168,7 +168,7 @@ Then
           \in U.</me> So <m>U</m> is closed under matrix multiplication.
         </p>
       </li>
-    </ol>
+    </ol></p>
 
   </solution>
   </exercise>
@@ -181,10 +181,11 @@ Then
 
 
 <figure xml:id="zip">
+  <caption>&#169;  Bill Griffith. Reprinted with permission.</caption>
                 <image width="100%" source="zippy.png">
                     <description>A Zippy the Pinhead comic strip about idempotents</description>
                 </image>
-                <caption>&#169;  Bill Griffith. Reprinted with permission.</caption>
+              
 </figure>
 
     </statement>
