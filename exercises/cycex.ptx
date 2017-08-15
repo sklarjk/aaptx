@@ -430,42 +430,43 @@
       </p>
     </statement>
  
-  <solution>
+  <solution><p>The respective solutions are:</p>
+  <!--
 <p>
 <ol>
-<li>
-    <image width="30%">
+<li><sidebyside width="30%">
+    <image>
     <latex-image-code>
-    \[\xymatrix{&amp;\Z_6&amp;\\ \langle 2\rangle \ar@{-}[ur]&amp;&amp;\langle 3\rangle\ar@{-}[ul]\\&amp;\langle 0\rangle \ar@{-}[ul]\ar@{-}[ur]&amp;}\]
+   \xymatrix{&amp;\Z_6&amp;\\ \langle 2\rangle \ar@{-}[ur]&amp;&amp;\langle 3\rangle\ar@{-}[ul]\\&amp;\langle 0\rangle \ar@{-}[ul]\ar@{-}[ur]&amp;}
      </latex-image-code>
     </image>
-
+</sidebyside>
 </li>
-<li>
-    <image width="6%">
+<li><sidebyside width="10%">
+    <image>
     <latex-image-code>
-\[\xymatrix{\Z_{13}\ar@{-}[d]\\ \langle0\rangle}\]
+\xymatrix{\Z_{13}\ar@{-}[d]\\ \langle0\rangle}
 </latex-image-code>
-</image>
+</image></sidebyside>
 </li>
 
-<li>
-    <image width="50%">
+<li><sidebyside width="30%">
+    <image>
     <latex-image-code>
-\[\xymatrix{&amp;\Z_{18}&amp;&amp;\\ \langle 2\rangle\ar@{-}[ur]\ar@{-}[dr]&amp;&amp;\langle 3\rangle\ar@{-}[ul]\ar@{-}[dl]&amp;\\
-&amp;\langle 6 \rangle \ar@{-}[dr]\ar@{-}[ur]&amp;&amp; \langle 9 \rangle \ar@{-}[dl]\ar@{-}[ul]\\&amp;&amp; \langle 0 \rangle &amp;}\]
+\xymatrix{&amp;\Z_{18}&amp;&amp;\\ \langle 2\rangle\ar@{-}[ur]\ar@{-}[dr]&amp;&amp;\langle 3\rangle\ar@{-}[ul]\ar@{-}[dl]&amp;\\
+&amp;\langle 6 \rangle \ar@{-}[dr]\ar@{-}[ur]&amp;&amp; \langle 9 \rangle \ar@{-}[dl]\ar@{-}[ul]\\&amp;&amp; \langle 0 \rangle &amp;}
  </latex-image-code>
-  </image>
+  </image></sidebyside>
 </li>
-</ol></p>
-<!--
+</ol></p>-->
 
-<sidebyside>
 
+<sidebyside widths="39% 9% 51%">
     <image>
     <latex-image-code>
   \xymatrix{&amp;\Z_6&amp;\\ \langle 2\rangle \ar@{-}[ur]&amp;&amp;\langle 3\rangle\ar@{-}[ul]\\&amp;\langle 0\rangle \ar@{-}[ul]\ar@{-}[ur]&amp;}
      </latex-image-code>
+     </image>
 
     <image>
     <latex-image-code>
@@ -480,7 +481,7 @@
  </latex-image-code>
   </image>
 
-</sidebyside>-->
+</sidebyside>
 
   </solution>
   </exercise>
