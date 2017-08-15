@@ -335,6 +335,9 @@
   </p>
 
   <definition>
+  
+     <notation><usage>G\simeq G'</usage><description><m>G</m> is isomorphic to <m>G'</m></description></notation>
+     <notation><usage>G\not \simeq G'</usage><description><m>G</m> is not isomorphic to <m>G'</m></description></notation>
     <statement>
       <p>
         We say that two groups <m>G</m> and <m>G'</m> (or binary
@@ -346,8 +349,6 @@
         are <term>nonisomorphic</term> (or <m>G</m> is not isomorphic to <m>G'</m>), and write <m>G\not\simeq G'</m>.
       </p>
     </statement>
-     <notation><usage>G\simeq G'</usage><description><m>G</m> is isomorphic to <m>G'</m></description></notation>
-     <notation><usage>G\not \simeq G'</usage><description><m>G</m> is not isomorphic to <m>G'</m></description></notation>
   </definition>
 
   <warning>

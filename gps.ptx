@@ -19,7 +19,9 @@
   </p>
 
   <definition>
-    <statement>
+   
+<notation><usage>\langle S, *\rangle </usage><description>binary structure </description></notation>
+ <statement>
       <p>
         A <term>binary operation</term> on a set <m>S</m> is a function from
         <m>S\times S</m> to <m>S</m>. Given a binary operation <m>*</m> on <m>S</m>, for
@@ -36,7 +38,6 @@
     </statement>
 
    
-<notation><usage>\langle S, *\rangle </usage><description>binary structure </description></notation>
 
   </definition>
 
@@ -105,6 +106,8 @@
   </definition>
 
   <definition>
+
+    <notation><usage>e</usage><description>the identity element in a binary structure/group</description></notation>
     <statement>
       <p>
         Let <m>\langle S,*\rangle</m> be a binary structure. An element <m>e</m> in
@@ -112,7 +115,6 @@
         <m>x\in S</m>.
       </p>
     </statement>
-    <notation><usage>e</usage><description>the identity element in a binary structure/group</description></notation>
   </definition>
 
   <note>
@@ -856,6 +858,8 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
   </p>
 
   <definition>
+   <notation><usage>a\equiv_n b</usage><description><m>a</m> is congruent to <m>b</m> mod <m>n</m></description></notation>
+  </definition>
     <statement>
       <p>
         We say integers <m>a</m> and <m>b</m> are <term>congruent
@@ -865,8 +869,7 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
     </statement>
 
 
-            <notation><usage>a\equiv_n b</usage><description><m>a</m> is congruent to <m>b</m> mod <m>n</m></description></notation>
-  </definition>
+           
 
   <example xml:id="cong_ex">
     <statement>
@@ -908,15 +911,18 @@ Let <m>n\in \Z^+</m> and let <m>a</m> be any
   </p>
 
   <definition>
+  <notation><usage>R_n(a)</usage><description>the remainder when <m>a</m> is divided by <m>n</m></description></notation>
+
     <statement>
       <p>
         <m>R_n(a)</m> is the <term>remainder</term> when we divide <m>a</m> by <m>n</m>. (Note: You were probably already familiar with the remainder when you divide a positive integer by <m>n</m>.)
       </p>
-<notation><usage>R_n(a)</usage><description>the remainder when <m>a</m> is divided by <m>n</m></description></notation>
     </statement>
   </definition>
 
   <definition>
+
+      <notation><usage>+_n</usage><description>addition modulo <m>n</m></description></notation>
     <statement>
       <p>
         We define <term>addition modulo <m>n</m></term>, <m>+_n</m>, on <m>\Z</m> by,
@@ -924,7 +930,6 @@ Let <m>n\in \Z^+</m> and let <m>a</m> be any
         <me>a+_n b=R_n(a+b),</me>
         that is, the unique element of <m>\{0,1,\ldots, n-1\}</m> that's congruent to the integer <m>a+b</m> modulo <m>n</m>.
       </p>
-      <notation><usage>+_n</usage><description>addition modulo <m>n</m></description></notation>
     </statement>
   </definition>
 
@@ -1073,13 +1078,14 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
   </p>
 
   <definition>
+  <notation><usage>\Z_n^{\times}</usage><description><m>\{a\in \Z_n\,:\,\gcd(a,n)=1\}</m></description></notation>
     <statement>
       <p>
         For <m>n\in \Z^+</m>,
         we define <m>\Z_n^{\times}</m> to be the set <me>\{a\in \Z_n\,:\,\gcd(a,n)=1\}</me>.
       </p>
     </statement>
-      <notation><usage>\Z_n^{\times}</usage><description><m>\{a\in \Z_n\,:\,\gcd(a,n)=1\}</m></description></notation>
+      
   </definition>
 
   <example>
