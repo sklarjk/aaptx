@@ -103,7 +103,7 @@
     We  summarize this in the following picture:
   </p>
   
-   <sidebyside width="28%">
+   <sidebyside width="30%">
     <image>
     <latex-image-code>
 \[\xymatrix{G\ar[rr]^{\phi}\ar[dr]_{\Psi}&amp;&amp;G'\\&amp;G/N\ar@{.>}[ur]_{\phibar}&amp;}\]

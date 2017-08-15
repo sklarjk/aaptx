@@ -705,17 +705,15 @@ We say that <m>\lambda_a</m>, <m>\rho_a</m>, and <m>c_a</m>
     <p>
       Consider a regular triangle <m>T</m>, with vertices labeled <m>1</m>, <m>2</m>, and <m>3</m>. We show <m>T</m> below, also using dotted lines to indicate a vertical line of symmetry of <m>T</m> and a rotation of <m>T</m>.</p>
 
- <figure>
- 
-  <caption>Symmetries of the triangle</caption>
-    <image width="20%">
+<sidebyside width="20%">
+    <image>
     <latex-image-code>
  \[\xymatrix{&amp;1\ar@{-}[ldd]\ar@{-}[rdd]\ar@{--}[dd]\\ &amp;\stackrel{\longleftrightarrow}{\hspace{-10pt}f} &amp;
 \\ 3\ar@{-}[rr]&amp;&amp;2\ar@{-->}@/^{15pt}/[ll]^{\begin{array}{ccc}&amp;r&amp; \end{array}}}\]
  </latex-image-code>
   </image>
 
-  </figure>
+  </sidebyside>
 
 
     <p>
