@@ -307,10 +307,11 @@
   </p>
 
 
-  <p>
+  <p> <notation><usage>S^1</usage><description>the unit circle  <m>\{e^{i\theta} \,:\, \theta\in
+    \R\}</m> in the complex plane</description></notation>
     Recall that for every <m>\theta \in \R</m>,
     <m>e^{i\theta}</m> is defined to be <m>\cos \theta + i\sin \theta</m>. It
-    is clear then that the set <m>\{e^{i\theta} \,:\, \theta\in
+    is clear then that the set <m>S^1=\{e^{i\theta} \,:\, \theta\in
     \R\}</m> is the unit circle in the complex plane.</p>
 
  
@@ -325,8 +326,8 @@
 
   <theorem>
     <statement>
-      <p>The unit circle in the complex plane,
-        <m>S^1=\{e^{i\theta} \,:\, \theta\in \R\}</m>, is a group under the multiplication
+      <p>
+ <m>S^1</m> is a group under the multiplication
         <m>e^{i\theta_1}e^{i\theta_2}=e^{i(\theta_1+\theta_2)}</m>.
       </p>
 
@@ -374,10 +375,7 @@
 
     </p>
   </proof>
-
-  <notation><usage>S^1</usage><description>the unit circle  <m>\{e^{i\theta} \,:\, \theta\in
-    \R\}</m> in the complex plane</description>
-  </notation></theorem>
+</theorem>
   
 
 <p> Beautifully, it turns out that our group <m>\R/\Z</m> is

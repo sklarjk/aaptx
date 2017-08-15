@@ -564,9 +564,9 @@ complete set
 
 <note>
 <p>
+<notation><usage>\Leftrightarrow</usage><description>if and only if</description></notation>
   In the following, we use the notation <m>\Leftrightarrow</m> to denote the phrase <q>if and only if.</q>
 </p>
-<notation><usage>\Leftrightarrow</usage><description>if and only if</description></notation>
 </note>
 
   <theorem xml:id="equivca">
