@@ -34,8 +34,8 @@
       </p>
     </statement>
       <solution>
-    
-    <ol cols="4" type="a">
+    <p>
+    <ol cols="4">
       <li>
         <p>
           F
@@ -59,7 +59,7 @@
           F
         </p>
       </li>
-    </ol>
+    </ol></p>
   </solution>
   </exercise>
 
@@ -93,7 +93,7 @@
     </statement>
 
   <solution>
-    
+    <p>
     <ol>
     <li>
       <ol>
@@ -115,7 +115,7 @@
       </ol>
     </li>
 
-    <li>
+    <li><p>
       <ol>
         <li>
           <p>
@@ -129,10 +129,10 @@
             Since it isn't a homomorphism, it isn't an isomorphism.
           </p>
         </li>
-      </ol>
+      </ol></p>
     </li>
 
-    <li>
+    <li><p>
       <ol>
         <li>
           <p>
@@ -148,9 +148,9 @@
             numbers, not all of <m>\Q</m>. Thus, <m>h</m> is not an isomorphism.
           </p>
         </li>
-      </ol>
+      </ol></p>
     </li>
-    </ol>
+    </ol></p>
   </solution>
     </exercise>
 
@@ -187,7 +187,7 @@
     </statement>
 
   <solution>
-    
+    <p>
     <ol>
       <li>
         <p>
@@ -222,7 +222,7 @@
           isomorphism.
         </p>
       </li>
-    </ol>
+    </ol></p>
   </solution>
   </exercise>
 
@@ -241,7 +241,7 @@
 
 
      <table xml:id="z4-Cayley2">
-
+    <caption>Group table for <m>\Z_4</m></caption>
 <tabular halign="center">
 	 <row bottom="medium">
 		<cell right="medium"><m>+</m></cell>
@@ -279,13 +279,13 @@
 		<cell><m>2</m></cell>
 	</row>
 	</tabular>
-			<caption>Group table for <m>\Z_4</m></caption>
+	
 			</table>    
 
 <p>and</p>
 
      <table xml:id="z8cross-Cayley">
-
+  <caption>Group table for <m>\Z_8^{\times}</m></caption>
 <tabular halign="center">
 	 <row bottom="medium">
 		<cell right="medium"><m>\cdot_8</m></cell>
@@ -323,7 +323,7 @@
 		<cell><m>1</m></cell>
 	</row>
 	</tabular>
-			<caption>Group table for <m>\Z_8^{\times}</m></caption>
+		
 			</table>    
 
 
@@ -355,7 +355,7 @@
   </exercise>
 
   <exercise>
-    <statement>
+    <statement><p>
       <ol>
         <li>
           <p>
@@ -368,11 +368,11 @@
             Give an example of groups <m>G</m> and <m>G'</m>, where <m>G</m> is abelian and there exists a homomorphism from <m>G</m> to <m>G'</m>, but <m>G'</m> is NOT abelian.
           </p>
         </li>
-      </ol>
+      </ol></p>
     </statement>
 
   <solution>
-    
+    <p>
     <ol>
       <li>
         <p>
@@ -393,7 +393,7 @@
           Let <m>G=\{I_2\}</m> (under multiplication) and let <m>G'=GL(2,\R)</m>. Then the map <m>\phi: G\to G'</m> defined by <m>\phi(I_2)=I_2</m> is clearly a homomorphism, but note that <m>G</m> is abelian while <m>G'</m> is not.
         </p>
       </li>
-    </ol>
+    </ol></p>
   </solution>
     </exercise>
 
@@ -405,14 +405,11 @@
     </statement>
 
   <solution>
-    
-    <note>
+  
 
     <p>
       We omit the group operations in this solution in order to increase familiarity with the convention.
     </p>
-
-    </note>
 
     <p>
       We want to show that <m>\phi(a)^{-1}=\phi(a^{-1})</m>.
