@@ -34,14 +34,14 @@
     </statement>
 
   <solution>
-     
-    <ol  cols="4" type="a">
+    <p> 
+    <ol  cols="4">
       <li>Y</li>    
       <li>N</li>
       <li>Y (it's <m>\Q</m>)</li>
       <li>Y (it's <m>\emptyset</m>) </li> 
     </ol>
-
+</p>
   </solution> 
 </exercise>
 
@@ -83,7 +83,7 @@
       </p>
     </statement>
   <solution>
-    
+    <p>
     <ol>
       <li>
         <p>
@@ -109,7 +109,7 @@
           \{c\},\{a,b\},\{a,c\},\{b,c\}, \{a,b,c\}\}</m>
         </p>
       </li>
-    </ol>
+    </ol></p>
   </solution>
   
   </exercise>
@@ -132,7 +132,7 @@
     <statement>
       <p>
         Let <m>f: \Z^2 \to \R</m> be defined by <m>f(a,b)=ab</m>. (Note: technically, we should write <m>f((a,b))</m>, not <m>f(a,b)</m>, since <m>f</m> is being applied to an ordered pair, but this is one of those cases in which mathematicians abuse notation in the interest of concision.)
-      </p>
+     
       <ol>
       <li>
         <p>
@@ -143,7 +143,7 @@
       <li>
         <p>
           Prove or disprove each of the following statements. (Your proofs do not need to be long to be correct!)
-        </p>
+        
         <ol>
           <li>
             <p>
@@ -162,7 +162,7 @@
               <m>f</m> is a bijection. (You may refer to parts (i) and (ii) for this part.)
             </p>
           </li>
-        </ol>
+        </ol></p>
       </li>
 
       <li>
@@ -176,9 +176,9 @@
           Find the preimage of <m>\{2,3\}</m> under <m>f</m>. (Remember that the preimage of a set is a set.)
         </p>
       </li>
-      </ol>
+      </ol></p>
     </statement><solution>
-    
+    <p>
     <ol>
     <li>
       <p>
@@ -186,7 +186,7 @@
       </p>
     </li>
 
-    <li>
+    <li><p>
       <ol>
         <li>
           <p>
@@ -205,7 +205,7 @@
             <m>f</m> is not a bijection since it's not 1-1. (It would be equally valid to answer that it's not a bijection since it's not onto, or that it's not a bijection since it's neither 1-1 nor onto.)
           </p>
         </li>
-      </ol>
+      </ol></p>
     </li>
 
     <li>
@@ -224,7 +224,7 @@
         <me>\{(1,2),(2,1),(-1,-2),(-2,-1),(1,3),(3,1),(-1,-3),(-3,-1)\}.</me>
       </p>
     </li>
-    </ol>
+    </ol></p>
   </solution>
   </exercise>
   
@@ -259,8 +259,7 @@
       Consider the table
   </p>
 
-     <table xml:id="cardmn">
-
+     <sidebyside>
 <tabular halign="center">
 <row>
     <cell><m>(a_1,b_1)</m></cell>
@@ -288,8 +287,7 @@
     <cell><m>(a_n,b_m)</m></cell>
   </row>
   </tabular>
-  <caption>Elements of <m>A\times B</m> when <m>|A|=n</m> and <m>|B|=m</m></caption>
-      </table>
+      </sidebyside>
 
     <p>
       Clearly this table contains <m>mn</m> elements, and contains each element of <m>A\times B</m> exactly once. Therefore, <m>|A\times B|=mn</m>.

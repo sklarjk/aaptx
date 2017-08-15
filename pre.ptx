@@ -65,8 +65,8 @@
     We refer to some sets so frequently in mathematics that we have special notation for them.
   </p>
 
-<example>Some common sets are:
-<p>
+<example>
+<statement><p>Some common sets are:
 <dl>
 <li><title><m>\Z</m></title><p>the set of all integers  (the <m>\Z</m> comes <q>zahlen,</q> the German word for <q>numbers</q>)</p></li>
 <li><title><m>\Q</m></title><p>set of all rational numbers</p></li>
@@ -78,6 +78,7 @@ We can further write denote by <m>\Z^+</m> the set of all positive integers, and
 Can you guess what the penultimate notation represents if we replace <m>\Z</m> with <m>\Q</m> or <m>\R</m>, and/or <m>+</m> with <m>-</m>? What about 
 what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m>\C</m>?
 </p>
+</statement>
 
 <notation><usage>\Z</usage><description>the set of all integers</description></notation>
 <notation><usage>\Q</usage><description>the set of all rational numbers</description></notation>
@@ -98,10 +99,10 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
 
 <notation><usage>\M_{m\times n}(S)</usage><description>the set of all <m>m \times n</m> matrices over <m>S</m></description></notation>
 <notation><usage>\M_n(S)</usage><description>the set of all <m>n \times n</m> matrices over <m>S</m></description></notation>
-<statement>
+<statement><p>
  Given <m>m,n\in \Z^+</m> and a set <m>S</m>, we define <m>\M_{m\times n}(S)</m> to
     be the set of all <m>m\times n</m> matrices over <m>S</m> (that is, of all <m>m\times n</m> matrices with entries in <m>S</m>). We use the
-    shorthand notation <m>\M_n(S)</m> for the set <m>\M_{n\times n}(S)</m>.</statement>
+    shorthand notation <m>\M_n(S)</m> for the set <m>\M_{n\times n}(S)</m>.</p></statement>
 
     </definition>
   
@@ -219,7 +220,7 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
 <notation><usage>\bigcup_{i\in I}A_i</usage><description><m>\{x: x\in A_i \text{ for some }  i\in I\}</m></description></notation>
 <notation><usage>\bigcap_{i\in I}A_i</usage><description><m>\{x: x\in A_i \text{ for every }  i\in I\}</m></description></notation>
     <statement>
-      <ol>
+      <p><ol>
         <li>
           <p>
             If <m>A</m> and <m>B</m> are sets, then the <term>union</term> of <m>A</m> and <m>B</m>, denoted <m>A\cup B</m>, is the set
@@ -242,6 +243,7 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
           </p>
         </li>
       </ol>
+      </p>
     </statement>
      
   </definition>
@@ -381,7 +383,6 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
 
   <remark><p>
     We will often have to show functions are one-to-one or onto. Given a function <m>f:S\to T</m>, the following methods are recommended.
-</p>
 <ul>
 <li>
 <p>
@@ -404,7 +405,7 @@ To prove that <m>f</m> is onto: Let <m>t\in T</m> and prove that there exists an
 To prove that <m>f</m> is <em>not</em> onto: Identify an element <m>t\in T</m> for which there is no <m>s\in S</m> with <m>f(s)=t</m>.
 </p>
 </li>
-</ul>
+</ul></p>
 </remark>
 
   <example>
@@ -434,7 +435,7 @@ To prove that <m>f</m> is <em>not</em> onto: Identify an element <m>t\in T</m> f
   <definition>
    <notation><usage>f\circ g</usage><description>the composition of  <m>f</m> with  <m>g</m></description></notation>
   <notation><usage>1_S</usage><description>the identity function on <m>S</m></description></notation>
-  <statement>If <m>f:S\to T</m> and <m>g:T\to U</m>, then the  <term>composition of <m>f</m> and <m>g</m></term> is the function <m>g\circ f: S\to U</m> defined by <me>(g\circ f)(s)=g(f(s))</me> for all <m>s\in S</m>. (More generally, you can <term>compose</term> functions <m>f:S\to T</m> and <m>g:R\to U</m> to form <m>g\circ f:S\to U</m>,  as long as <m>f(S)\subseteq R</m>.) Also recall that given any set <m>S</m>, the <em>identity function on <m>S</m></em> is the function <m>1_S: S\to S</m> defined by <m>1_S(s)=s</m> for every <m>s\in S</m>.
+  <statement><p>If <m>f:S\to T</m> and <m>g:T\to U</m>, then the  <term>composition of <m>f</m> and <m>g</m></term> is the function <m>g\circ f: S\to U</m> defined by <me>(g\circ f)(s)=g(f(s))</me> for all <m>s\in S</m>. (More generally, you can <term>compose</term> functions <m>f:S\to T</m> and <m>g:R\to U</m> to form <m>g\circ f:S\to U</m>,  as long as <m>f(S)\subseteq R</m>.) Also recall that given any set <m>S</m>, the <em>identity function on <m>S</m></em> is the function <m>1_S: S\to S</m> defined by <m>1_S(s)=s</m> for every <m>s\in S</m>.</p>
   </statement>
 
  
@@ -473,8 +474,8 @@ To prove that <m>f</m> is <em>not</em> onto: Identify an element <m>t\in T</m> f
   </theorem>
 
   <theorem>
-    <statement>
-     Let <m>f:S\to T</m> be invertible. Then the  inverse of <m>f</m> is unique; we denote the unique inverse of <m>f</m> by <m>f^{-1}</m>.
+    <statement><p>
+     Let <m>f:S\to T</m> be invertible. Then the  inverse of <m>f</m> is unique; we denote the unique inverse of <m>f</m> by <m>f^{-1}</m>.</p>
     </statement>
 
   <proof><p>Suppose <m>f</m> has inverses <m>g</m> and <m>h</m>. Then for every <m>t\in T,</m>
@@ -583,6 +584,7 @@ To prove that <m>f</m> is <em>not</em> onto: Identify an element <m>t\in T</m> f
         We claim that <m>\Z^+</m> is countably infinite. Indeed, consider the function <m>f:\Z^+ \to \Z</m> defined by <m>f(n)=(-1)^n \lfloor n/2 \rfloor</m>, where <m>\lfloor x \rfloor</m>
         denotes the greatest integer less than or equal to <m>x</m>, for each <m>x\in \R</m>. The fact that <m>f</m> is a bijection is demonstrated (though not proven) by the following visual representation,
         where each number maps via <m>f</m> to the value directly to the right of it:
+        </p>
 <sidebyside><tabular halign="right">
 	 <row >
 		<cell ><m>1</m></cell>
@@ -610,7 +612,7 @@ To prove that <m>f</m> is <em>not</em> onto: Identify an element <m>t\in T</m> f
 	</row>
 	</tabular>
 </sidebyside>
-</p>
+
 
       <p>
         Note that this means that <m>\Z</m> and its proper subset <m>\Z^+</m>
