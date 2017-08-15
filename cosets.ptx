@@ -61,6 +61,7 @@
 
   <example>
     <statement>
+    <p>
       <ol>
         <li>
           <p>
@@ -82,28 +83,28 @@
             </me>
           </p>
         </li>
-      </ol>
+      </ol></p>
     </statement>
   </example>
 
   <p>
     The number of partitions of a finite set of <m>n</m> elements gets
     large very quickly as <m>n</m> goes to infinity. Indeed, there are 52
-    partitions of a set containing just 5 elements!<fn>The total
+    partitions of a set containing just 5 elements! (The total
     number of partitions of an <m>n</m>-element set is the <em>Bell number</em>,
     <m>B_n</m>. There is no trivial way of computing <m>B_n</m>, in general,
     though the <m>B_n</m> do satisfy the relatively simple recurrence
-    relation
-    <me>
-      B_{n+1}=\sum_{k=0}^n \binom{n}{k} B_k,
-    </me>
-    for each <m>n\geq 1</m>.</fn>But our goal here is not to count the number of
+    relation  <me>
+      B_{n+1}=\sum_{k=0}^n \binom{n}{k} B_k,</me>
+    for each <m>n\geq 1</m>.) But our goal here is not to count the number of
     partitions of a given set, but rather to use particular partitions
     of a group <m>G</m> to help us study that group's structure. We turn now
     to our next definition.
   </p>
 
   <definition>
+    <notation><usage>xRy</usage><description><m>x</m> is related to <m>y</m></description></notation>
+    <notation><usage>x\not R y</usage><description><m>x</m> is not related to <m>y</m></description></notation>
     <statement>
       <p>
         Let <m>S</m> be a set. Then a <term>relation</term> on <m>S</m> is a
@@ -116,8 +117,6 @@
         write <m>x \not R y</m>.
       </p>
     </statement>
-    <notation><usage>xRy</usage><description><m>x</m> is related to <m>y</m></description></notation>
-    <notation><usage>x\not R y</usage><description><m>x</m> is not related to <m>y</m></description></notation>
   </definition>
 
   <remark>
@@ -138,6 +137,7 @@
 
   <example>
     <statement>
+    <p>
       <ol>
         <li>
           <p>
@@ -164,7 +164,7 @@
             <m>f'=g'</m>.
           </p>
         </li>
-      </ol>
+      </ol></p>
     </statement>
   </example>
 
@@ -179,7 +179,7 @@
       <p>
         Let <m>R</m> be a relation on a set <m>S</m>. Then <m>R</m> is said to
         be:
-      </p>
+     
 <ul><li>
       <p>
         <term>reflexive on <m>S</m></term> if <m>xR x</m> for every <m>x\in S</m>;
@@ -193,7 +193,7 @@
         <term>transitive on <m>S</m></term> if
         whenever <m>x,y,z\in S</m> with <m>xR y</m> and <m>yR z</m> we also have <m>xR z</m>.
       </p></li>
-</ul>
+</ul></p>
 
       <p>
         A relation that is reflexive,
@@ -208,9 +208,7 @@
   </definition>
 
   <remark>
-    <ol>
-      <li>
-        <p>
+  <p>  
           You can think of an
           equivalence relation on a set <m>S</m> as being a <q>weak version</q> of
           equality on <m>S</m>.  Indeed, <m>=</m> is an equivalence relation on any set
@@ -218,13 +216,11 @@
           relations <em>don't</em> have: namely, no element of <m>S</m> is related to
           <em>any other element</em> of <m>S</m> under <m>=</m>.
         </p>
-      </li>
-
-    </ol>
   </remark>
 
   <example>
     <statement>
+    <p>
       <ol>
         <li>
           <p>
@@ -266,11 +262,13 @@
             <em>not</em> an equivalence relation.
           </p>
         </li>
-      </ol>
+      </ol></p>
     </statement>
   </example>
 
   <definition>
+
+<notation><usage>[x]</usage><description>the equivalence class of <m>x</m></description></notation>
     <statement>
       <p>
         Given an equivalence relation <m>\sim</m> on a set <m>S</m>, for
@@ -286,7 +284,6 @@
         called the <term>equivalence classes of <m>S</m> under <m>\sim</m></term>.
       </p>
     </statement>
-<notation><usage>[x]</usage><description>the equivalence class of <m>x</m></description></notation>
   </definition>
 
   <remark>
@@ -305,13 +302,12 @@
     <statement>
       <p>
         Let <m>\sim</m> be an equivalence relation on set <m>S</m>. Then for <m>x,y\in S</m>, the following are equivalent:
-<p>
 <ol>
 <li><p><m>y\in [x]</m>;</p></li>
 <li><p><m>[x]=[y]</m>;</p></li>
 <li><p><m>x\in [y]</m>.</p></li>
 </ol>
-     </p></p>
+     </p>
     </statement>
 
   <proof>
@@ -345,8 +341,10 @@
       </p>
    </statement>
 </definition>
+
   <example>
     <statement>
+    <p>
       <ol>
         <li>
           <p>
@@ -392,7 +390,7 @@
             </me>
           </p>
         </li>
-      </ol>
+      </ol></p>
     </statement>
   </example>
 
@@ -461,6 +459,7 @@ complete set
 
   <example>
     <statement>
+    <p>
       <ol>
         <li>
           <p>
@@ -471,7 +470,7 @@ complete set
             <m>n=2</m>.)
           </p>
         </li>
-      </ol>
+      </ol></p>
     </statement>
   </example>
 </section>
@@ -479,16 +478,18 @@ complete set
 <section>
   <title>Introduction to cosets and normal subgroups</title>
    
-    <definition><statement> Given a group <m>G</m> with subgroup <m>H</m>, we define
+<definition>
+<notation><usage>a\siml b </usage><description> <m>a^{-1}b\in H</m>, where <m>H\leq G</m> is specified</description></notation>
+<notation><usage>a\simr b</usage><description> <m>ab^{-1}\in H</m>, where <m>H\leq G</m> is specified</description></notation> 
+
+   <statement>
+   <p> Given a group <m>G</m> with subgroup <m>H</m>, we define
     <m>\siml</m> on <m>G</m> by  <me>a\siml b \text{ if and only if }
    a^{-1}b\in H</me> and
     <m>\simr</m> on <m>G</m> by  <me>a\simr b \text{ if and only if }
-   ab^{-1}\in H.</me>
+   ab^{-1}\in H.</me></p>
    </statement>
-   <notation><usage>a\siml b </usage><description> <m>
-   a^{-1}b\in H</m>, where <m>H\leq G</m> is specified</description></notation>
-    <notation><usage>a\simr b</usage><description><m>
-   ab^{-1}\in H</m>, where <m>H\leq G</m> is specified</description></notation>  
+  
    </definition>
 
   <theorem xml:id="simlreq">
@@ -536,6 +537,9 @@ complete set
   </p>
 
   <definition>
+
+    <notation><usage>aH, a+H</usage><description>the left coset of <m>H</m> containing <m>a</m></description></notation>
+<notation><usage>Ha, H+a</usage><description>the right coset of <m>H</m> containing <m>a</m></description></notation>
     <statement>
       <p>
         Given <m>a\in G</m>, we define
@@ -551,13 +555,11 @@ complete set
 
       <p>
         We call <m>aH</m> and <m>Ha</m>, respectively, the <term>left </term> and <term>right cosets of <m>H</m> containing
-        <m>a</m></term>.
+        <m>a</m></term>.</p>
 
         <p>If we know that <m>G</m> is abelian, with operation denoted by <m>+</m>, we may denote these left and right cosets by <m>a+H</m> and <m>H+a</m>, respectively.</p>
-      </p>
+     
     </statement>
-    <notation><usage>aH, a+H</usage><description>the left coset of <m>H</m> containing <m>a</m></description></notation>
-<notation><usage>Ha, H+a</usage><description>the right coset of <m>H</m> containing <m>a</m></description></notation>
   </definition>
 
 <note>
@@ -732,6 +734,7 @@ complete set
   </p>
 
   <definition>
+  <notation><usage>H\unlhd G</usage><description><m>H</m> is a normal subgorup of <m>G</m></description></notation>
     <statement>
       <p>
         We say that subgroup <m>H</m> of <m>G</m> is <term>normal</term> in <m>G</m> (or is  <term>normal subgroup of <m>G</m></term>)
@@ -740,11 +743,11 @@ complete set
       </p>
     </statement>
 
-     <notation><usage>H\unlhd G</usage><description><m>H</m> is a normal subgorup of <m>G</m></description></notation>
+     
   </definition>
 
   <remark>
-    <ol>
+<p>    <ol>
       <li>
         <p>
           If <m>H</m> is normal in <m>G</m>, we may refer to the left and
@@ -760,7 +763,7 @@ complete set
         </p>
       </li>
     </ol>
-  </remark>
+ </p> </remark>
 
   <example>
     <statement>
@@ -835,6 +838,8 @@ complete set
   </p>
 
    <definition>
+
+<notation><usage>G/H</usage><description>the set of all left cosets of <m>H</m> in <m>G</m></description></notation>
    <statement>
    <p>
     We let <m>G/H</m> be the set of
@@ -842,7 +847,6 @@ complete set
     mod <m>H</m>.</q> </p>
     <p>(We may denote the set of all right cosets of subgroup <m>H</m> in <m>G</m> by <m>H\backslash G</m>, but we will  not use that notation in this class.)</p>
     </statement>
-<notation><usage>G/H</usage><description>the set of all left cosets of <m>H</m> in <m>G</m></description></notation>
     </definition>
 
 </section>
@@ -850,13 +854,15 @@ complete set
 <section>
   <title>The index of a subgroup and Lagrange's Theorem</title>
   <definition>
+
+    <notation><usage>(G:H)</usage><description><m>|G/H|</m></description></notation>
+ 
     <statement>
       <p>
         We define the <term>index of <m>H</m> in <m>G</m></term>, denoted <m>(G:H)</m>,
         to be the cardinality of <m>G/H</m>.</p>
     </statement>
-    <notation><usage>(G:H)</usage><description><m>|G/H|</m></description></notation>
-  </definition>
+ </definition>
 
 <remark><p>
 If <m>H\leq G</m>, there are always have the same number of left cosets and right cosets of <m>H</m> in <m>G</m>.  The proof of this is left as an exercise for the reader.</p><p> (Keep in mind your proof must apply even when there are infinitely many left and/or right cosets of <m>H</m> in <m>G</m>.  Hint: Show there is a bijection between <m>G/H</m> and the set of all right cosets of <m>H</m> in <m>G</m>.)</p>

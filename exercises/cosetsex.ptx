@@ -11,7 +11,6 @@
       </p>
     </statement>
      <solution>
-    
     <p>
       There are 15 distinct partitions of the set <m>\{a,b,c,d\}</m>:
       <me>
@@ -27,16 +26,15 @@
       <me>
         \{\{a,b,c\},\{d\}\},\{\{a,b,d\},\{c\}\},\{\{a,c,d\},\{b\}\},\{\{b,c,d\},\{a\},\},
       </me>
-    </p>
     <me>
       \{\{a,b,c,d\}\}.
-    </me>
+    </me></p>
   </solution>
   </exercise>
  
   <exercise>
     <statement>
-      <ol>
+<p>      <ol>
         <li>
           <p>
             Let  <m>n\in \Z^+</m>. Prove that  <m>\equiv_n</m> is an equivalence relation on <m>\Z</m>.
@@ -52,10 +50,10 @@
             modulo <m>4</m>.
           </p>
         </li>
-      </ol>
+      </ol></p>
     </statement>
   <solution>
-    
+    <p>
     <ol>
       <li>
         <p>
@@ -91,7 +89,7 @@
           </md>
         </p>
       </li>
-    </ol>
+    </ol></p>
   </solution>
    </exercise>
  
@@ -136,7 +134,7 @@
       </p>
 
 <p>
-Write all permutations using <em>disjoint cycle notation</em>, and write all dihedral group elements using <em>standard form</em>.</p>
+Write all permutations using <em>disjoint cycle notation</em>, and write all dihedral group elements using <em>standard form</em>.
       
             <ol>
         <li>
@@ -168,12 +166,13 @@ Write all permutations using <em>disjoint cycle notation</em>, and write all dih
             <m>H=\langle f\rangle</m> in <m>G=D_4</m>
           </p>
         </li>
-      </ol>
+      </ol></p>
     </statement>
   <solution>
-    
+    <p>
     <ol>
     <li>
+    <p>
       <ol>
         <li>
           <p>
@@ -192,10 +191,10 @@ Write all permutations using <em>disjoint cycle notation</em>, and write all dih
             <m>(2\Z:6\Z)=3</m>.
           </p>
         </li>
-      </ol>
+      </ol></p>
     </li>
 
-    <li>
+    <li><p>
       <ol>
         <li>
           <p>
@@ -214,10 +213,10 @@ Write all permutations using <em>disjoint cycle notation</em>, and write all dih
             <m>(\Z_{20}:H)=4</m>.
           </p>
         </li>
-      </ol>
+      </ol></p>
     </li>
 
-    <li>
+    <li><p>
       <ol>
         <li>
           <p>
@@ -236,10 +235,10 @@ Write all permutations using <em>disjoint cycle notation</em>, and write all dih
             <m>(S_3:H)=3</m>.
           </p>
         </li>
-      </ol>
+      </ol></p>
     </li>
 
-    <li>
+    <li><p>
       <ol>
         <li>
           <p>
@@ -258,10 +257,10 @@ Write all permutations using <em>disjoint cycle notation</em>, and write all dih
             <m>(D_4:H)=2</m>.
           </p>
         </li>
-      </ol>
+      </ol></p>
     </li>
 
-    <li>
+    <li><p>
       <ol>
         <li>
           <p>
@@ -280,9 +279,9 @@ Write all permutations using <em>disjoint cycle notation</em>, and write all dih
             <m>(D_4:H)=4</m>.
           </p>
         </li>
-      </ol>
+      </ol></p>
     </li>
-    </ol>
+    </ol></p>
   </solution>
   </exercise>
   
@@ -455,8 +454,8 @@ Write all permutations using <em>disjoint cycle notation</em>, and write all dih
       </p>
     </statement>
   <solution>
-    
-    <ol cols="4" type="a">
+    <p>
+    <ol cols="4">
       <li>
         <p>
           T
@@ -504,7 +503,7 @@ Write all permutations using <em>disjoint cycle notation</em>, and write all dih
           T
         </p>
       </li>
-    </ol>
+    </ol></p>
   </solution>
   </exercise>
   
@@ -540,7 +539,7 @@ Write all permutations using <em>disjoint cycle notation</em>, and write all dih
       </p>
     </statement>
   <solution>
-    
+    <p>
     <ol>
       <li>
         <p>
@@ -565,7 +564,7 @@ Write all permutations using <em>disjoint cycle notation</em>, and write all dih
           <m>(S_n:A_n)=2</m>.
         </p>
       </li>
-    </ol>
+    </ol></p>
   </solution>
   </exercise>
   
