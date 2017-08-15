@@ -532,16 +532,16 @@
         <m>\Z_{12}</m>'s subgroups are of the form <m>\langle 1\rangle</m>, <m>\langle 2\rangle</m>, etc. So
         <m>\Z_{12}</m> has the following subgroup lattice.
       </p>
-
-    <image width="70%">
+      <sidebyside width="70%">
+    <image>
     <latex-image-code>
 
-      \[ \xymatrix{
+\xymatrix{
 &amp; &amp;\Z_{12} \ar@{-}[ld] \ar@{-}[rd]&amp;\\
 &amp;\{0,2,4,6,8,10\} \ar@{-}[ld]\ar@{-}[rd]&amp; &amp;\{0, 3,6,9,0\} \ar@{-}[ld]\\ \{0,4,8\}\ar@{-}[dr]&amp; &amp; \{0,6\} \ar@{-}[dl]&amp; \\
-&amp; \{0\} &amp; &amp;} \]
+&amp; \{0\} &amp; &amp;}
  </latex-image-code>
-  </image>
+  </image></sidebyside>
 
     </statement>
   </example>
