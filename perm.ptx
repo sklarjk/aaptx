@@ -86,13 +86,14 @@
   </example>
 
   <definition>
+
+    <notation><usage>S_A</usage><description>the set of all permutations on <m>A</m></description></notation>
     <statement>
       <p>
         Given a set <m>A</m>, we define <m>S_A</m> be the set of all
         permutations on <m>A</m>.
       </p>
     </statement>
-    <notation><usage>S_A</usage><description>the set of all permutations on <m>A</m></description></notation>
   </definition>
 
   <theorem xml:id="sym">
@@ -120,7 +121,7 @@
   
 
   <proof>
-   
+   <p>
 <ol><li><p>
       Let <m>\sigma, \tau \in S_A</m>. Since a composition of
       bijections is a bijection (see <xref ref="compbij">Theorem</xref>), <m>\sigma
@@ -156,7 +157,7 @@
     element of <m>A</m>, and let <m>\tau</m> be the permutation of <m>A</m> swapping
     <m>y</m> and <m>z</m> and fixing every other element of <m>A</m>. Then <m>\sigma
     \tau(x)=y</m> while <m>\tau \sigma(x)=z</m>, so <m>\sigma \tau \neq \tau
-    \sigma</m>, and hence <m>S_A</m> is nonabelian.</p></li></ol>
+    \sigma</m>, and hence <m>S_A</m> is nonabelian.</p></li></ol></p>
 </proof>
 </theorem>
 
@@ -193,6 +194,8 @@
 <section>
   <title>Symmetric groups</title>
   <definition>
+
+    <notation><usage>S_n</usage><description>the symmetric group on <m>n</m> letters</description></notation>
     <statement>
       <p>
         When <m>A=\{1,2,\ldots, n\}</m> (<m>n\in \Z^+</m>), we call <m>S_A</m>
@@ -202,7 +205,6 @@
       
 <p>    (We can, in fact,  define <m>S_0</m>, the set of all permutations on the empty set. One can show, using the fact that a function is a relation on a Cartesian product of sets, that <m>S_0</m> is the trivial group. However, this will not be relevant in this text.)</p>
     </statement>
-    <notation><usage>S_n</usage><description>the symmetric group on <m>n</m> letters</description></notation>
   </definition>
 
   <remark>
@@ -390,7 +392,7 @@
     <statement>
       <p>
         In <m>S_9</m>, let <m>\sigma=(134)</m>, <m>\tau=(26)(17)</m>, and <m>\rho=(358)(12)</m>. Find the following, writing your answers using disjoint cycle notation.
-      </p>
+    
 <ol cols="4" label="a">
 <li><p><m>\sigma^{-1}</m></p></li>
 <li><p><m>\sigma^{-1}\tau\sigma</m></p></li>
@@ -400,7 +402,7 @@
 <li><p><m>\rho^{-2}</m></p></li>
 <li><p><m>\sigma \tau</m></p></li>
 <li><p><m>\sigma \rho</m></p></li>
-</ol>
+</ol>  </p>
     </statement>
   </example>
 
@@ -432,7 +434,7 @@
   </warning>
 
   <example>
-    <statement>
+    <statement><p>
       <ol>
         <li>
           <p>
@@ -445,7 +447,7 @@
             Explicitly list the elements of <m>\langle \sigma\rangle</m>, <m>\langle \tau\rangle</m>, and <m>\langle \rho\rangle</m>.
           </p>
         </li>
-      </ol>
+      </ol></p>
     </statement>
   </example>
 </section>
@@ -528,10 +530,11 @@
 </theorem>
 
   <definition>
+
+      <notation><usage>A_n</usage><description>the alternating group on <m>n</m> letters</description></notation>
     <statement>
       <p>The <term>alternating group on <m>n</m> letters</term> is the subgroup <m>A_n</m> of <m>S_n</m> consisting of all of the  even permutations in <m>S_n</m>.      </p>
     </statement>
-      <notation><usage>A_n</usage><description>the alternating group on <m>n</m> letters</description></notation>
   </definition>
 
   <p>
@@ -605,6 +608,9 @@
 
    
 <definition>
+
+   <notation><usage>\lambda_a</usage><description>left multiplication by <m>a</m></description></notation>
+  <notation><usage>\rho_a</usage><description>right multiplication by <m>a</m></description></notation>
 <statement>
 <p>
 We say that <m>\lambda_a</m>, <m>\rho_a</m>, and <m>c_a</m>
@@ -613,8 +619,6 @@ We say that <m>\lambda_a</m>, <m>\rho_a</m>, and <m>c_a</m>
     to <m>a^{-1}xa</m>.)
   </p>
 </statement>
-   <notation><usage>\lambda_a</usage><description>left multiplication by <m>a</m></description></notation>
-  <notation><usage>\rho_a</usage><description>right multiplication by <m>a</m></description></notation>
 </definition>
 
   <p>
@@ -702,13 +706,14 @@ We say that <m>\lambda_a</m>, <m>\rho_a</m>, and <m>c_a</m>
       Consider a regular triangle <m>T</m>, with vertices labeled <m>1</m>, <m>2</m>, and <m>3</m>. We show <m>T</m> below, also using dotted lines to indicate a vertical line of symmetry of <m>T</m> and a rotation of <m>T</m>.</p>
 
  <figure>
+ 
+  <caption>Symmetries of the triangle</caption>
     <image width="20%">
     <latex-image-code>
  \[\xymatrix{&amp;1\ar@{-}[ldd]\ar@{-}[rdd]\ar@{--}[dd]\\ &amp;\stackrel{\longleftrightarrow}{\hspace{-10pt}f} &amp;
 \\ 3\ar@{-}[rr]&amp;&amp;2\ar@{-->}@/^{15pt}/[ll]^{\begin{array}{ccc}&amp;r&amp; \end{array}}}\]
  </latex-image-code>
   </image>
-  <caption>Symmetries of the triangle</caption>
 
   </figure>
 
@@ -835,6 +840,8 @@ We say that <m>\lambda_a</m>, <m>\rho_a</m>, and <m>c_a</m>
 
 
   <definition>
+
+       <notation><usage>D_n</usage><description>the dihedral group of order <m>2n</m></description></notation>
     <statement>
       <p>
         Let <m>n</m> be an integer greater than or equal to <m>3</m>. We
@@ -847,7 +854,6 @@ We say that <m>\lambda_a</m>, <m>\rho_a</m>, and <m>c_a</m>
         of the convention your book or colleague is using.)
       </p>
     </statement>
-       <notation><usage>D_n</usage><description>the dihedral group of order <m>2n</m></description></notation>
 
   </definition>
 
@@ -953,6 +959,7 @@ We say that <m>\lambda_a</m>, <m>\rho_a</m>, and <m>c_a</m>
     </statement>
 
   <proof>
+  <p>
     <ol>
       <li>
         <p>
@@ -984,12 +991,12 @@ We say that <m>\lambda_a</m>, <m>\rho_a</m>, and <m>c_a</m>
         </p>
       </li>
     </ol>
-  </proof>
+ </p> </proof>
 
   </theorem>
 
   <example>
-    <statement>
+    <statement><p>
       <ol>
         <li>
           <p>
@@ -1008,7 +1015,7 @@ We say that <m>\lambda_a</m>, <m>\rho_a</m>, and <m>c_a</m>
             Explicitly describe an isomorphism from <m>D_4</m> to a subgroup of <m>S_4</m>.
           </p>
         </li>
-      </ol>
+      </ol></p>
     </statement>
   </example>
 

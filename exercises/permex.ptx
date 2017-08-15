@@ -1,14 +1,13 @@
 <exercises>
   <title>Exercises</title>
 
-<p>
-Throughout, write all permutations using <em>disjoint cycle notation</em>, and write all dihedral group elements using <em>standard form</em>.</p>
+<introduction><p>Throughout, write all permutations using <em>disjoint cycle notation</em>, and write all dihedral group elements in <em>standard form</em>.</p></introduction>
 
   <exercise>
     <statement>
       <p>
         Let <m>\sigma=(134)</m>, <m>\tau=(23)(145)</m>, <m>\rho=(56)(78)</m>, and <m>\alpha=(12)(145)</m> in <m>S_8</m>. Compute the following.
-        <ol cols="4" type="a">
+        <ol cols="4">
           <li>
             <p>
               <m>\sigma \tau</m>
@@ -60,6 +59,7 @@ Throughout, write all permutations using <em>disjoint cycle notation</em>, and w
       </p>
     </statement>
     <solution>
+    <p>
     <ol>
       <li>
         <p>
@@ -108,7 +108,7 @@ Throughout, write all permutations using <em>disjoint cycle notation</em>, and w
           <m>\langle \tau\rangle =\{(23)(145), (154), (23), (145), e\}</m>
         </p>
       </li>
-    </ol>
+    </ol></p>
   </solution>
   </exercise>
   
@@ -181,7 +181,7 @@ Throughout, write all permutations using <em>disjoint cycle notation</em>, and w
       </p>
     </statement>
 
-  <solution>
+  <solution><p>
     <ol>
       <li>
         <p>
@@ -194,7 +194,7 @@ Throughout, write all permutations using <em>disjoint cycle notation</em>, and w
           <m>S_{n-1}</m>.
         </p>
       </li>
-    </ol>
+    </ol></p>
   </solution>
     </exercise>
 

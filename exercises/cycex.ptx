@@ -39,8 +39,8 @@
       </p>
     </statement>
   <solution>
-    
-    <ol cols="5" type="a">
+    <p>
+    <ol cols="5">
       <li>
         <p>
           F
@@ -70,7 +70,7 @@
           F
         </p>
       </li>
-    </ol>
+    </ol></p>
   </solution>
    </exercise>
  
@@ -191,7 +191,7 @@
     </statement>
   
   <solution>
-    
+    <p>
     <ol>
       <li>
         <p>
@@ -222,7 +222,7 @@
           <m>o((6,8))=5</m>, since <m>\langle (6,8)\rangle =\{(6,8),(2,6),(8,4),(4,2),(0,0)\}</m>.
         </p>
       </li>
-    </ol>
+    </ol></p>
   </solution>
   </exercise>
 
@@ -230,7 +230,7 @@
     <statement>
       <p>
         For each of the following, if the group is cyclic, list <em>all</em> of its generators. If the group is <em>not</em> cyclic, write NC.
-        <ol type="a">
+        <ol>
           <li>
             <p>
               <m>5\Z</m>
@@ -271,8 +271,8 @@
     </statement>
   
   <solution>
-    
-    <ol type="a">
+    <p>
+    <ol>
       <li>
         <p>
           <m>\pm 5</m>
@@ -308,7 +308,7 @@
           <m>8,1/8</m>
         </p>
       </li>
-    </ol>
+    </ol></p>
   </solution>
   </exercise>
 
@@ -359,8 +359,7 @@
     </statement>
   
   <solution>
-    
-    <ol>
+<p>    <ol>
       <li>
         <p>
           <m>3\Z</m>
@@ -402,7 +401,7 @@
         </p>
       </li>
     </ol>
-  </solution>
+  </p></solution>
   </exercise>
 
   <exercise>
@@ -432,7 +431,7 @@
     </statement>
  
   <solution>
-  
+  <p>
 <ol>
 <li>
     <image width="30%">
@@ -458,7 +457,7 @@
  </latex-image-code>
   </image>
 </li>
-</ol>
+</ol></p>
 
   </solution>
   </exercise>
