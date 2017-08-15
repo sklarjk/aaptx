@@ -364,6 +364,7 @@
   <exercise xml:id="zgdef">
     <statement>
       <p>
+  <notation><usage>Z(G)</usage><description>the center of a group <m>G</m></description></notation>
         Let <m>G</m> be a group. The subset
         <me>Z(G):=\{z \in G\,:\, zg=gz \mbox{ for all } g\in Z(G)\}</me>
         of <m>G</m> is called the <term>center</term> of <m>G</m>. In other words, <m>Z(G)</m> is the set of all elements of <m>G</m> that commute with every element of <m>G</m>.
@@ -391,6 +392,5 @@
       Thus, <m>Z(G)</m> is closed in <m>G</m>.
     </p>
   </solution>
-  <notation><usage>Z(G)</usage><description>the center of a group <m>G</m></description></notation>
   </exercise>
   </exercises>
