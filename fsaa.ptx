@@ -143,9 +143,10 @@ At its most basic level, abstract algebra is the study of structures. Just as an
         <index-list />
     </index-part>-->
 
-<xi:include href="./bibliography.ptx" />
+
 <xi:include href="./gfdl-mathbook.xml" />  <!-- GFDL License text -->
- 
+<xi:include href="./bibliography.ptx" />
+
     <colophon>
         <p>This book was authored in <url href="http://mathbook.pugetsound.edu">PreTeXt</url>.</p>
     </colophon>
