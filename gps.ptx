@@ -42,6 +42,7 @@
   </definition>
 
   <remark>
+  <p>
     <ol>
       <li>
         <p>
@@ -72,7 +73,7 @@
           placement. Also, make sure you correctly place these symbols!
         </p>
       </li>
-    </ol>
+    </ol></p>
   </remark>
 
   <definition>
@@ -171,6 +172,7 @@
   </note>
 
   <warning>
+  <p>
     <ul>
       <li><p>
           Not every element in a binary structure with an identity element has an inverse!
@@ -183,7 +185,7 @@
           structure does or does not have an inverse!
         </p>
       </li>
-    </ul>
+    </ul></p>
   </warning>
 
   <theorem xml:id="uniqueinverse">
@@ -208,9 +210,6 @@
   <title>The definition of a group</title>
   <p>
     At this point you may be asking yourself, why do we care? We've covered a lot of definitions and proved some theorems, but what is the goal of all this? Well, there are actually many goals that we can achieve using such material. Consider the following as an example. Suppose we want to solve the equation <m>5+x=2</m>. We can probably solve this quite easily almost just by looking at it (<m>x=-3</m>), but what facts are we actually using there? If we break down the reasoning leading to this answer, we may obtain something like the following, where each line is equivalent to the one preceding it.
-  </p>
-
-
 
  <md>
           <mrow>5+x\amp =2 </mrow>
@@ -219,7 +218,7 @@
           <mrow>0+x\amp =-3</mrow>
           <mrow>x\amp =-3.</mrow>
         </md>
-  <p>
+
     In the second line we add the inverse of <m>5</m> in <m>\langle \Z, +\rangle</m> to each side of
     the equation; in the third line we use associativity of <m>+</m> in <m>\Z</m> (along
     with computation); and in the fourth line we use the fact that <m>-5</m> is the
@@ -375,8 +374,7 @@
    <notation><usage>\det A</usage><description>the determinant of <m>A</m></description></notation>
   </note>
 
-<p>
-  <example xml:id="gl">
+  <theorem xml:id="gl">
 
  <statement> 
  <p>The set
@@ -414,11 +412,9 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
  </proof>
 <notation><usage>GL(n,\R)</usage><description>the general linear group of degree <m>n</m> over <m>\R</m></description></notation>
  <notation><usage>I_n</usage><description>the <m>n \times n</m> identity matrix</description></notation>
-  </example>
-</p>
+  </theorem>
 
-<p>
-  <example xml:id="sl">
+<theorem xml:id="sl">
  <statement><p> The set
 <me>SL(n,\R)=\{M\in \M_n(\R):\det M =1\}</me>, is a group under matrix multiplication, called the <term>special linear group of degree <m>n</m> over <m>\R</m> </term>. Like <m>GL(n,\R)</m>, it has <m>I_n</m> as its identity element.</p>
  </statement>
@@ -429,8 +425,7 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
    <p>The rest of the proof is left as an exercise for the reader.</p>
  </proof>
 <notation><usage>SL(n,\R)</usage><description>the special linear group of degree <m>n</m> over <m>\R</m></description></notation>
-  </example>
-  </p>
+  </theorem>
 
 <remark>
     <p>
@@ -439,14 +434,14 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
   </remark>
 
 <p>We end this section with a final example.</p>
-<p>
+
   <example>
     <statement>
       <p>
         Define <m>*</m> on <m>\Q^*</m> by <m>a*b=(ab)/2</m> for all <m>a,b\in \Q^*</m>. Prove that <m>\langle \Q^*,*\rangle</m> is a group.
       </p>
     </statement>
-    <proof>
+    <solution>
       <p>
         First, <m>\Q^*</m> is closed under <m>*</m>, since <m>(ab)/2</m> is
         rational and nonzero whenever <m>a,b</m> are rational and nonzero.
@@ -476,11 +471,10 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
       <p>
         Thus, <m>\langle \Q^*,*\rangle</m> is a group.
       </p>
-    </proof>
-
+    </solution>
 
   </example>
-</p>
+
 </section>
 <section>
   <title>Group conventions and properties</title>
@@ -502,14 +496,13 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
 </statement>
     </theorem>
 
-<p>
 <observation>
 <p>We will generally use <m>e</m>
           or <m>e_G</m> as our default notation for an identity element of group, but be aware that many mathematicians denote a group's identity element by 1. We  denote the inverse of element <m>a</m> in <m>G</m> by <m>a^{-1}</m>.</p>
           <notation><usage>e_G</usage><description>the identity element in a group <m>G</m></description></notation>
                 <notation><usage>a^{-1}</usage><description>the inverse of <m>a</m> in a group</description></notation>
           </observation>
-</p>
+
 
  <warning>
             <p>
@@ -524,7 +517,7 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
             </p>
           </warning>
 
-<convention>
+<convention><p>
         <ul>
 
 <li><p> We usually <em>don't</em> use the notation <m>*</m> when describing group
@@ -565,7 +558,7 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
             Using this notation, note that for <m>m\in \Z</m>, <m>na+ma=(n+m)a</m> and <m>n(ma)=(nm)a</m>.</p>
 </li>
 
-</ul>
+</ul></p>
 
 
             <notation><usage>-a</usage><description>the inverse of <m>a</m> in an abelian group</description></notation>
@@ -595,8 +588,8 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
 
           <p>  We summarize multiplicative versus addition notation in the following table, where <m>a,b</m> are elements of a group <m>G</m>. </p>
 
-<p>
 <table>
+<caption>Summary of multiplicative and addition notation in groups.</caption>
               <tabular>
       <row halign="center" bottom="medium">
                 <cell></cell>
@@ -625,9 +618,9 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
                 <cell><m>a^{-1}</m></cell>
                 <cell><m>-a</m></cell>
       </row>
-</tabular><caption>Summary of multiplicative and addition notation in groups.</caption>
+</tabular>
 
-</table></p>
+</table>
 
     <convention>
           <p>
@@ -859,7 +852,7 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
 
   <definition>
    <notation><usage>a\equiv_n b</usage><description><m>a</m> is congruent to <m>b</m> mod <m>n</m></description></notation>
-  </definition>
+
     <statement>
       <p>
         We say integers <m>a</m> and <m>b</m> are <term>congruent
@@ -868,7 +861,7 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
       </p>
     </statement>
 
-
+  </definition>
            
 
   <example xml:id="cong_ex">
@@ -946,11 +939,11 @@ Let <m>n\in \Z^+</m> and let <m>a</m> be any
   </p>
 
   <definition>
-
+<statement>
   <p>
     We define <m>\Z_n</m> to be the set <m>\{0,1,2,\ldots,n-1\}</m>.
   </p>
-
+</statement>
 
   </definition>
 
@@ -980,7 +973,7 @@ Let <m>n\in \Z^+</m> and let <m>a</m> be any
       </p>
         <notation><usage>\Z_n</usage><description>the cyclic group of order <m>n</m></description></notation>
     </statement>
-    <proof>
+    <solution>
       <p>
         We first check that <m>\Z_n</m> is closed under <m>+_n</m>. Note
         that by the definition of <m>+_n</m>, <m>a+_nb \in \Z_n</m> for each
@@ -1032,7 +1025,7 @@ Let <m>n\in \Z^+</m> and let <m>a</m> be any
 <p>
 Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
       </p>
-    </proof>
+    </solution>
 
   </example>
 

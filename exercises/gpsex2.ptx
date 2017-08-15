@@ -346,13 +346,13 @@
 
   <solution>
     <p>
-      Let <m>a,b\in G</m>. Then</p>
+      Let <m>a,b\in G</m>. Then
       <md>
         <mrow>ab\amp =(ab)^{-1}\amp \amp \text{ (since \(ab\)
         is its own inverse) }</mrow>
         <mrow>\amp =b^{-1}a^{-1}\amp \amp</mrow>
         <mrow>\amp =ba, \amp</mrow>
-      </md> <p>since <m>a</m>, <m>b</m> are their own inverses.</p>
+      </md> since <m>a</m>, <m>b</m> are their own inverses.</p>
     
 
     <p>
