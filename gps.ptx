@@ -369,33 +369,44 @@
     linear algebra, you have also probably seen a collection of matrices
     that is a group under matrix multiplication.</p>
 
-    <note><p> <notation><usage>\det A</usage><description>the determinant of <m>A</m></description></notation>Recall that given a square matrix <m>A</m>, the notation <m>\det A</m> denotes the 
-    determinant of <m>A</m>.</p>
-  
-  </note>
 
-  <example xml:id="gl">
 
- <statement> 
- <p>
+<definition>
+<notation><usage>\det A</usage><description>the determinant of <m>A</m></description></notation>
 <notation><usage>GL(n,\R)</usage><description>the general linear group of degree <m>n</m> over <m>\R</m></description></notation>
- <notation><usage>I_n</usage><description>the <m>n \times n</m> identity matrix</description></notation>The set
-<me>GL(n,\R)=\{M\in \M_n(\R):\det M \neq 0\}</me>, that is, 
-the set of invertible <m>n\times n</m> matrices
-        over <m>\R</m>,  is a group under matrix multiplication, called the <term>general linear group of degree <m>n</m> over <m>\R</m> </term>.</p>
-        <p>
-Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \amp  0 \\
-                0 \amp  1 \amp  0 \amp  \cdots \amp  0 \\
-                0 \amp  0 \amp  1 \amp  \cdots \amp  0 \\
-                \vdots \amp  \vdots \amp  \vdots \amp  \ddots \amp  \vdots \\
-                0 \amp  0 \amp  0 \amp  \cdots \amp  1
-                \end{bmatrix},</me> the <m>n \times n</m> identity matrix.</p>
+<statement>
+
+<p> Recall that given a square matrix <m>A</m>, the notation <m>\det A</m> denotes the 
+    determinant of <m>A</m>. Let
+<me>GL(n,\R)=\{M\in \M_n(\R):\det M \neq 0\}</me> (that is, let <m>GL(n,\R)</m> be  the set of all invertible <m>n \times n</m> matrices over <m>\R</m>) , and let
+<me>SL(n,\R)=\{M\in \M_n(\R):\det M =1\}</me>. These subsets of <m>\M_n(\R)</m> are called, respectively, the 
+<term>general</term> and <term>special linear groups of degree <m>n</m> over <m>\R</m> </term>.</p>
+
+
+</statement>
+</definition>
+
+<p>Note that these definitions imply that these subsets of <m>\M_n(\R)</m> are groups (under some operation). Sure enough, they are!</p>
+
+
+  <theorem xml:id="gl">
+
+ <statement>
+ <p><notation><usage>I_n</usage><description>the <m>n\times n</m> identity matrix</description></notation>
+<m>GL(n,\R)</m> is a group under matrix multiplication.</p>
  </statement>
+
  <proof>
 <p>
   Let <m>A,B\in GL(n, \R)</m>. Then <m>\det(AB)=(\det A)(\det B) \neq 0</m> (since <m>\det A, \det B \neq 0)</m>, so <m>AB\in GL(n,\R)</m>.  Thus, 
   <m>\langle GL(n,\R), \cdot\rangle</m> is a binary structure.</p>
-   <p>We know that matrix multiplication is always associative,so <m>\G_2</m> holds. Next, <m>I_n</m> is in <m>GL(n,\R)</m>since <m>\det I_n=1\neq 0</m>, and it
+   <p>We know that matrix multiplication is always associative,so <m>\G_2</m> holds. Next, 
+   <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \amp  0 \\
+                0 \amp  1 \amp  0 \amp  \cdots \amp  0 \\
+                0 \amp  0 \amp  1 \amp  \cdots \amp  0 \\
+                \vdots \amp  \vdots \amp  \vdots \amp  \ddots \amp  \vdots \\
+                0 \amp  0 \amp  0 \amp  \cdots \amp  1
+                \end{bmatrix},</me> the  is in <m>GL(n,\R)</m>since <m>\det I_n=1\neq 0</m>, and it
      acts as an identity element for <m>\langle GL(n,\R), \cdot\,\rangle</m> since
               <me>AI_n=I_nA = A</me>
               for all <m>A\in GL(n,\R)</m>.
@@ -412,12 +423,11 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
         So <m>GL(n,\R)</m> is a group under multiplication.
       </p>
  </proof>
-  </example>
+  </theorem>
 
-<example xml:id="sl">
+<theorem xml:id="sl">
  <statement><p>
-<notation><usage>SL(n,\R)</usage><description>the special linear group of degree <m>n</m> over <m>\R</m></description></notation> The set
-<me>SL(n,\R)=\{M\in \M_n(\R):\det M =1\}</me>, is a group under matrix multiplication, called the <term>special linear group of degree <m>n</m> over <m>\R</m> </term>. Like <m>GL(n,\R)</m>, it has <m>I_n</m> as its identity element.</p>
+<m>SL(n,\R)</m>, is a group under matrix multiplication.</p>
  </statement>
  <proof>
 <p>
@@ -425,7 +435,7 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
   <m>\langle SL(n,\R), \cdot\rangle</m> is a binary structure.</p>
    <p>The rest of the proof is left as an exercise for the reader.</p>
  </proof>
-  </example>
+  </theorem>
 
 <remark>
     <p>
