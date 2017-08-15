@@ -235,7 +235,10 @@
           </li>
 
           <li>
-            <p>
+            <p> <notation><usage>C^1</usage><description>the set of all differentiable functions from
+        <m>\R</m> to <m>\R</m> whose derivatives are continuous</description></notation>
+
+   
               <m>\phi:\langle C^1,+\rangle \to \langle C^0,+\rangle</m> defined by <m>\phi(f)=f'</m> (the derivative of
               <m>f</m>);
             </p>
@@ -243,22 +246,21 @@
 
           <li>
             <p>
-              <m>\phi:\langle C^0,+\rangle \to \langle \R,+\rangle</m> defined by <m>\phi(f)=\displaystyle{\int_0^1 f(x)\, dx}</m>.
+ <notation><usage>C^0</usage><description>the set of all continuous functions from
+        <m>\R</m> to <m>\R</m></description></notation>              
+        <m>\phi:\langle C^0,+\rangle \to \langle \R,+\rangle</m> defined by <m>\phi(f)=\displaystyle{\int_0^1 f(x)\, dx}</m>.
             </p>
           </li>
         </ol>
       </p>
     </statement>
-    <notation><usage>C^0</usage><description>the set of all continuous functions from
-        <m>\R</m> to <m>\R</m></description></notation>
-         <notation><usage>C^1</usage><description>the set of all differentiable functions from
-        <m>\R</m> to <m>\R</m> whose derivatives are continuous</description></notation>
       
   </example>
 
   <example>
     <statement>
       <p>
+ <notation><usage>c_a</usage><description>conjugation by <m>a</m></description></notation>
         Let <m>\Gdot</m> be a group and let <m>a\in G</m>. Then the
         function <m>c_a</m> from <m>G</m> to <m>G</m> defined by <m>c_a(x)=axa^{-1}</m> (for
         all <m>x\in G</m>) is a homomorphism. Indeed, let <m>x,y\in G</m>. Then
@@ -279,7 +281,6 @@
         refer to the function <m>x\mapsto a^{-1}xa</m>.) Both versions of conjugation by <m>a</m> in group <m>G</m> are
         automorphisms of <m>G</m>.)</p>
     </statement>
- <notation><usage>c_a</usage><description>conjugation by <m>a</m></description></notation>
   </example>
 
   <p>

@@ -818,6 +818,7 @@ We say that <m>\lambda_a</m>, <m>\rho_a</m>, and <m>c_a</m>
    </theorem>
 
     <p>
+<notation><usage>\mapsto</usage><description>maps to</description></notation>
       Let us look at <m>D_3</m> another way. Note that each map in <m>D_3</m> can be uniquely described by how it permutes the vertices <m>1,2,3</m> of <m>T</m>: that is, each map in <m>D_3</m> can be uniquely identified with a unique element of <m>S_3</m>. For instance, <m>f</m> corresponds to the permutation <m>(23)</m> in <m>S_3</m>, while <m>fr</m> corresponds to the permutation <m>(13)</m>. In turns out that <m>D_3 \simeq S_3</m>, via the following correspondence.</p>
       
       <sidebyside>
@@ -831,7 +832,6 @@ We say that <m>\lambda_a</m>, <m>\rho_a</m>, and <m>c_a</m>
       </tabular>
       
   </sidebyside>
-<notation><usage>\mapsto</usage><description>maps to</description></notation>
   <p>
     The group <m>D_3</m> is an example of class of groups called <em>dihedral groups</em>.
   </p>
