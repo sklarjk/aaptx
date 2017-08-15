@@ -137,6 +137,8 @@
   </p>
 
   <definition>
+
+   <notation><usage>aHb</usage><description><m>\{ahb\,:h\in H\}</m></description></notation>
     <statement>
       <p>
         Let <m>H</m> be a subgroup of <m>G</m> and <m>a,b</m> in <m>G</m>. We define
@@ -145,7 +147,6 @@
         </me>
       </p>
     </statement>
-   <notation><usage>aHb</usage><description><m>\{ahb\,:h\in H\}</m></description></notation>
   </definition>
 
   <theorem xml:id="norm_thm">
@@ -199,6 +200,7 @@
 
   <example>
     <statement>
+    <p>
       <ol>
         <li>
           <p>
@@ -243,7 +245,7 @@
             </me>
           </p>
         </li>
-      </ol>
+      </ol></p>
     </statement>
   </example>
 
@@ -312,6 +314,8 @@
   </p>
 
   <definition>
+
+    <notation><usage>\Ker \phi</usage><description>the kernel of <m>\phi</m></description></notation>
     <statement>
       <p>
         Let <m>G</m> and <m>G'</m> be groups and let <m>\phi</m> a
@@ -323,10 +327,9 @@
         </me>
       </p>
     </statement>
-    <notation><usage>\Ker \phi</usage><description>the kernel of <m>\phi</m></description></notation>
   </definition>
 
-  <example>
+  <theorem>
     <statement>
       <p>
         Let <m>G</m> and <m>G'</m> be groups and let <m>\phi</m> be a
@@ -360,7 +363,7 @@
       </p>
     </proof>
 
-  </example>
+  </theorem>
 
   <p>
     One slick way, therefore, of showing that a particular set is a
@@ -455,6 +458,8 @@
 
 
   <definition>
+
+    <notation><usage>G/N</usage><description>the factor group <m>G/N</m>, when <m>N\unlhd G</m></description></notation>
     <statement>
       <p>
         When <m>G</m> is a group and <m>N\unlhd G</m>, the above group
@@ -462,7 +467,6 @@
         group</term> or <term>quotient group</term>.
       </p>
     </statement>
-    <notation><usage>G/N</usage><description>the factor group <m>G/N</m>, when <m>N\unlhd G</m></description></notation>
   </definition>
 
   <example>
@@ -474,7 +478,6 @@
         <m>G/N</m> (that is, <m>\Z/3\Z</m>) has the following group table:
       </p>
 
-      <p>
 
      <sidebyside>
 
@@ -506,7 +509,7 @@
 	</row>
 	</tabular>
 		</sidebyside>
-</p>
+
 <p>
 
         Clearly, if we ignore all the <m>+N's</m> after the <m>0</m>'s, <m>1</m>'s, and
@@ -514,10 +517,8 @@
         rather than left coset addition in <m>\Z/3\Z</m>, we obtain the group
         table for <m>\Z_3</m>:
 </p>
-<p>
-<sidebyside>
 
-    
+<sidebyside>
 
 <tabular>
 	 <row bottom="medium">
@@ -547,7 +548,7 @@
 	</row>
 	</tabular>
 </sidebyside>
-</p>
+
 <p>
     Thus, we see that <m>\Z/3\Z</m> is isomorphic to <m>\Z_3</m>.
 </p>
@@ -587,6 +588,7 @@
     </statement>
 
   <proof>
+  <p>
     <ol>
       <li>
         <p>
@@ -615,7 +617,7 @@
           is cyclic. Since <m>(\Z_n:\langle d\rangle )=d</m> (again, see <xref ref="indices_ex">Example</xref>), <m>\Z_n/\langle d\rangle</m> is isomorphic to <m>\Z_d</m>, as desired. \qedhere
         </p>
       </li>
-    </ol>
+    </ol></p>
   </proof>
 
   </theorem>
@@ -668,6 +670,7 @@
     </statement>
 
   <proof>
+  <p>
     <ol>
       <li>
         <p>
@@ -691,7 +694,7 @@
           But every element of <m>G</m> is an integer power of <m>a</m>, so this set equals <m>\{xN\,:x\in G\}</m>, that is, it equals <m>G/N</m>.
 </p>
       </li>
-    </ol>
+    </ol></p>
   </proof>
 
   </theorem>
@@ -790,13 +793,14 @@
   </theorem>
 
   <definition>
+
+    <notation><usage>\Psi</usage><description>the canonical epimorphism from <m>G</m> to <m>G/N</m></description></notation>
     <statement>
       <p>
         We call this map <m>\Psi</m> the <term>canonical epimorphism
         from <m>G</m> to <m>G/N</m></term>.
       </p>
     </statement>
-    <notation><usage>\Psi</usage><description>the canonical epimorphism from <m>G</m> to <m>G/N</m></description></notation>
   </definition>
 
   <p>
