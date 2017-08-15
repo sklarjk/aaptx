@@ -66,7 +66,15 @@
   </p>
 
 <example>
-<statement><p>Some common sets are:
+<statement><p>
+<notation><usage>\Z</usage><description>the set of all integers</description></notation>
+<notation><usage>\Q</usage><description>the set of all rational numbers</description></notation>
+<notation><usage>\R</usage><description>the set of all real numbers</description></notation>
+<notation><usage>\C</usage><description>the set of all complex numbers</description></notation>
+<notation><usage>\N</usage><description>the set of all natural numbers, <m>\{0,1,2,\ldots\}</m></description></notation>
+<notation><usage>\Z^+,\Q^+,\R^+</usage><description>the set of all positive elements of <m>\Z,\Q,\R</m></description></notation>
+<notation><usage>\Z^-,\Q^-,\R^-</usage><description>the set of all negative elements of <m>\Z,\Q,\R</m></description></notation>
+<notation><usage>\Z^*,\Q^*,\R^*,\C^*</usage><description>the set of all nonzero elements of <m>\Z,\Q,\R,\C</m></description></notation>Some common sets are:
 <dl>
 <li><title><m>\Z</m></title><p>the set of all integers  (the <m>\Z</m> comes <q>zahlen,</q> the German word for <q>numbers</q>)</p></li>
 <li><title><m>\Q</m></title><p>set of all rational numbers</p></li>
@@ -80,14 +88,6 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
 </p>
 </statement>
 
-<notation><usage>\Z</usage><description>the set of all integers</description></notation>
-<notation><usage>\Q</usage><description>the set of all rational numbers</description></notation>
-<notation><usage>\R</usage><description>the set of all real numbers</description></notation>
-<notation><usage>\C</usage><description>the set of all complex numbers</description></notation>
-<notation><usage>\N</usage><description>the set of all natural numbers, <m>\{0,1,2,\ldots\}</m></description></notation>
-<notation><usage>\Z^+,\Q^+,\R^+</usage><description>the set of all positive elements of <m>\Z,\Q,\R</m></description></notation>
-<notation><usage>\Z^-,\Q^-,\R^-</usage><description>the set of all negative elements of <m>\Z,\Q,\R</m></description></notation>
-<notation><usage>\Z^*,\Q^*,\R^*,\C^*</usage><description>the set of all nonzero elements of <m>\Z,\Q,\R,\C</m></description></notation>
 
 </example>
  
@@ -474,7 +474,7 @@ To prove that <m>f</m> is <em>not</em> onto: Identify an element <m>t\in T</m> f
   </theorem>
 
   <theorem>
-    <statement><p>
+    <statement><p>   <notation><usage>f^{-1}</usage><description>the inverse of <m>f</m></description></notation>
      Let <m>f:S\to T</m> be invertible. Then the  inverse of <m>f</m> is unique; we denote the unique inverse of <m>f</m> by <m>f^{-1}</m>.</p>
     </statement>
 
@@ -482,7 +482,7 @@ To prove that <m>f</m> is <em>not</em> onto: Identify an element <m>t\in T</m> f
     <m>f(g(t))=t=f(h(t))</m>. But since <m>f</m> is invertible, it's one-to-one, so we must have <m>g(t)=h(t)</m> for every <m>t\in T</m>. Thus, <m>g=h</m>, and so <m>f</m> cannot have two or more distinct inverses.</p>
     </proof>
 
-      <notation><usage>f^{-1}</usage><description>the inverse of <m>f</m></description></notation>
+   
   </theorem>
   
 
@@ -520,14 +520,14 @@ To prove that <m>f</m> is <em>not</em> onto: Identify an element <m>t\in T</m> f
 
   <definition>
     <statement>
-      <p>
+      <p> <notation><usage>|S|</usage><description>the cardinality of  <m>S</m></description></notation>
         A set is <term>finite</term> if it contains a finite number of
         elements;
         otherwise, it's <term>infinite</term>. The <term>cardinality</term> of a finite set <m>S</m> is the
         number of elements in <m>S</m>; we denote the cardinality of <m>S</m> by <m>|S|</m>.
       </p>
     </statement>
-    <notation><usage>|S|</usage><description>the cardinality of  <m>S</m></description></notation>
+   
   </definition>
 
 

@@ -369,15 +369,17 @@
     linear algebra, you have also probably seen a collection of matrices
     that is a group under matrix multiplication.</p>
 
-    <note><p>Recall that given a square matrix <m>A</m>, the notation <m>\det A</m> denotes the 
+    <note><p> <notation><usage>\det A</usage><description>the determinant of <m>A</m></description></notation>Recall that given a square matrix <m>A</m>, the notation <m>\det A</m> denotes the 
     determinant of <m>A</m>.</p>
-   <notation><usage>\det A</usage><description>the determinant of <m>A</m></description></notation>
+  
   </note>
 
   <theorem xml:id="gl">
 
  <statement> 
- <p>The set
+ <p>
+<notation><usage>GL(n,\R)</usage><description>the general linear group of degree <m>n</m> over <m>\R</m></description></notation>
+ <notation><usage>I_n</usage><description>the <m>n \times n</m> identity matrix</description></notation>The set
 <me>GL(n,\R)=\{M\in \M_n(\R):\det M \neq 0\}</me>, that is, 
 the set of invertible <m>n\times n</m> matrices
         over <m>\R</m>,  is a group under matrix multiplication, called the <term>general linear group of degree <m>n</m> over <m>\R</m> </term>.</p>
@@ -410,12 +412,11 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
         So <m>GL(n,\R)</m> is a group under multiplication.
       </p>
  </proof>
-<notation><usage>GL(n,\R)</usage><description>the general linear group of degree <m>n</m> over <m>\R</m></description></notation>
- <notation><usage>I_n</usage><description>the <m>n \times n</m> identity matrix</description></notation>
   </theorem>
 
 <theorem xml:id="sl">
- <statement><p> The set
+ <statement><p>
+<notation><usage>SL(n,\R)</usage><description>the special linear group of degree <m>n</m> over <m>\R</m></description></notation> The set
 <me>SL(n,\R)=\{M\in \M_n(\R):\det M =1\}</me>, is a group under matrix multiplication, called the <term>special linear group of degree <m>n</m> over <m>\R</m> </term>. Like <m>GL(n,\R)</m>, it has <m>I_n</m> as its identity element.</p>
  </statement>
  <proof>
@@ -424,7 +425,6 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
   <m>\langle SL(n,\R), \cdot\rangle</m> is a binary structure.</p>
    <p>The rest of the proof is left as an exercise for the reader.</p>
  </proof>
-<notation><usage>SL(n,\R)</usage><description>the special linear group of degree <m>n</m> over <m>\R</m></description></notation>
   </theorem>
 
 <remark>
@@ -497,10 +497,10 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
     </theorem>
 
 <observation>
-<p>We will generally use <m>e</m>
+<p>  <notation><usage>e_G</usage><description>the identity element in a group <m>G</m></description></notation>
+                <notation><usage>a^{-1}</usage><description>the inverse of <m>a</m> in a group</description></notation>We will generally use <m>e</m>
           or <m>e_G</m> as our default notation for an identity element of group, but be aware that many mathematicians denote a group's identity element by 1. We  denote the inverse of element <m>a</m> in <m>G</m> by <m>a^{-1}</m>.</p>
-          <notation><usage>e_G</usage><description>the identity element in a group <m>G</m></description></notation>
-                <notation><usage>a^{-1}</usage><description>the inverse of <m>a</m> in a group</description></notation>
+        
           </observation>
 
 
@@ -541,13 +541,16 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
       </li>  
   
 
-<li><p>When we know our operation is commutative, we typically
-            continue to use additive notation (<m>+</m> for the group operation, <m>-a</m>
-            for the inverse of element <m>a</m> in the group) and call the operation
-            <q>addition,</q> though using <m>\cdot</m> is also valid in these cases. When
+<li><p>
+
+            <notation><usage>-a</usage><description>the inverse of <m>a</m> in an abelian group</description></notation>
+            When we know our operation is commutative, we typically
+            use additive notation, denoting the group operation by <m>+</m>, calling the group operation <q>addition,</q> and denoting
+            the inverse of an element <m>a</m> by <m>-a</m>. When
             we use additive notation, we do <em>not</em> omit the <m>+</m> when
             operating in a group <m>\langle G,+\rangle</m>, and we call <m>a+b</m> a <em>sum</em> rather
-            than a product. Also, when working with an operation that is known to be commutative, the identity element may be denoted by 0 rather than by <m>e</m>, <m>e_G</m>, or 1, and for <m>n\in \N</m>, we write <m>na</m> instead of <m>a^n</m>.</p>
+            than a product. Also, when working with an operation that is known to be commutative,  the identity element may be denoted by 0 rather than by <m>e</m>, <m>e_G</m>, or 1, and for <m>n\in \N</m>, we write <m>na</m> instead of <m>a^n</m>.</p>
+            
 
 
 
@@ -560,8 +563,6 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
 
 </ul></p>
 
-
-            <notation><usage>-a</usage><description>the inverse of <m>a</m> in an abelian group</description></notation>
 
 </convention>
          
@@ -813,12 +814,12 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
 <section>
   <title>Examples of groups/nongroups, Part II</title>
   <example>
-    <p>
+    <p>   <notation><usage>n\Z</usage><description><m>\{nm\,:\,m\in \Z\}</m></description></notation>
       Let <m>n\in \Z^+</m>. We define <m>n\Z</m> by
       <me>n\Z=\{nx: x\in \Z\}:</me>
       that is, <m>n\Z</m> is the set of all (integer) multiples of <m>n</m>.
     </p>
-            <notation><usage>n\Z</usage><description><m>\{nm\,:\,m\in \Z\}</m></description></notation>
+         
  </example>
 
     <theorem xml:id="nz">
@@ -968,10 +969,10 @@ Let <m>n\in \Z^+</m> and let <m>a</m> be any
   <example>
     <statement>
       <p>
+        <notation><usage>\Z_n</usage><description>the cyclic group of order <m>n</m></description></notation>
         For each <m>n\in \Z^+</m>, <m>\langle \Z_n,+_n\rangle</m> is a group, called the <em>cyclic group of order <m>n</m></em> (we will see later why we use the word <q>cyclic</q> here).
         This group is abelian and of order <m>n</m>.
       </p>
-        <notation><usage>\Z_n</usage><description>the cyclic group of order <m>n</m></description></notation>
     </statement>
     <solution>
       <p>
@@ -1096,6 +1097,7 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
   <example xml:id="funcrr">
     <statement>
       <p>
+  <notation><usage>F</usage><description>the set of all functions from <m>\R</m> to <m>\R</m></description></notation>
         Let <m>F</m> be the set of all functions from <m>\R</m> to <m>\R</m>, and define <em>pointwise addition</em> <m>+</m> on <m>F</m> by
         <me>(f+g)(x)=f(x)+g(x)</me>
         for all <m>f,g\in F</m> and <m>x\in \R</m>. We claim that <m>F</m> is a group under pointwise
@@ -1150,16 +1152,15 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
         Hence, <m>F</m> is a group under pointwise addition. Note that it is uncountably infinite and abelian.
       </p>
     </statement>
-  <notation><usage>F</usage><description>the set of all functions from <m>\R</m> to <m>\R</m></description></notation>
   </example>
 
   <example xml:id="bijrr">
     <statement>
       <p>
+      <notation><usage>B</usage><description>the set of all bijections from <m>\R</m> to <m>\R</m></description></notation>
         The set <m>F</m> is <em>not</em> a group under function composition (do you see why?). But if we define <m>B</m> to be the set of all <em>bijections</em> from <m>\R</m> to <m>\R</m>, then <m>B</m> is a group under function composition. (Prove it!) <m>B</m> is uncountably infinite and nonabelian.
       </p>
     </statement>
-      <notation><usage>B</usage><description>the set of all bijections from <m>\R</m> to <m>\R</m></description></notation>
   </example>
 
   <example xml:id="gpprod">
