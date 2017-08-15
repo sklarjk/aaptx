@@ -7,9 +7,9 @@
     We start off by providing a <q>definition</q> of a basic mathematical structure to which we will soon add bells and whistles. We use quotes here because what follows doesn't have the precision we usually require when defining a mathematical object.
   </p>
 
-  <definition> <p> A <term>set</term> is an (unordered)
-    collection of objects.
-  </p></definition>
+  <definition> <statement><p> A <term>set</term> is an (unordered)
+    collection of objects.  </p></statement>
+</definition>
 
   <p>
     This is only sort of  a <q>definition</q> because it is not a
@@ -35,6 +35,10 @@
 
 
   <definition>
+
+<notation><usage>x \in S</usage><description><m>x</m> is an element of <m>S</m></description></notation>
+<notation><usage>x \not\in S</usage><description><m>x</m> is not an element of <m>S</m></description></notation>
+<notation><usage>\emptyset</usage><description>the empty set, <m>\{\}</m></description></notation>
     <statement>
       <p>
         The members of a set are called its <term>elements</term>. If
@@ -46,9 +50,6 @@
     </statement>
 
 
-<notation><usage>x \in S</usage><description><m>x</m> is an element of <m>S</m></description></notation>
-<notation><usage>x \not\in S</usage><description><m>x</m> is not an element of <m>S</m></description></notation>
-<notation><usage>\emptyset</usage><description>the empty set, <m>\{\}</m></description></notation>
   </definition>
 
 
@@ -94,12 +95,13 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
   </p>
 
 <definition>
+
+<notation><usage>\M_{m\times n}(S)</usage><description>the set of all <m>m \times n</m> matrices over <m>S</m></description></notation>
+<notation><usage>\M_n(S)</usage><description>the set of all <m>n \times n</m> matrices over <m>S</m></description></notation>
 <statement>
  Given <m>m,n\in \Z^+</m> and a set <m>S</m>, we define <m>\M_{m\times n}(S)</m> to
     be the set of all <m>m\times n</m> matrices over <m>S</m> (that is, of all <m>m\times n</m> matrices with entries in <m>S</m>). We use the
     shorthand notation <m>\M_n(S)</m> for the set <m>\M_{n\times n}(S)</m>.</statement>
-<notation><usage>\M_{m\times n}(S)</usage><description>the set of all <m>m \times n</m> matrices over <m>S</m></description></notation>
-<notation><usage>\M_n(S)</usage><description>the set of all <m>n \times n</m> matrices over <m>S</m></description></notation>
 
     </definition>
   
@@ -140,6 +142,9 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
   </note>
 
   <definition>
+  <notation><usage>A\subseteq B</usage><description> <m>A</m> is a subset of the <m>B</m></description></notation>
+<notation><usage>A\subsetneq B</usage><description> <m>A</m> is a proper subset of <m>B</m></description></notation>
+
     <statement>
       <p>
         Set <m>A</m> is a <term>subset</term> of <m>B</m> (and set <m>B</m> is a <term>superset</term> of <m>A</m>) if every element in <m>A</m> is also in <m>B</m>. We
@@ -151,8 +156,6 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
         </p>
     </statement>
 
-<notation><usage>A\subseteq B</usage><description> <m>A</m> is a subset of the <m>B</m></description></notation>
-<notation><usage>A\subsetneq B</usage><description> <m>A</m> is a proper subset of <m>B</m></description></notation>
 
   </definition>
 
@@ -178,6 +181,8 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
   </example>
 
   <definition>
+
+    <notation><usage>P(A)</usage><description>the power set of <m>A</m></description></notation>
     <statement>
       <p>
         The <term>power set</term> of <m>A</m>, denoted <m>P(A)</m>, is the set of
@@ -186,7 +191,6 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
       </p>
     </statement>
 
-    <notation><usage>P(A)</usage><description>the power set of <m>A</m></description></notation>
   </definition>
 
   <warning>
@@ -209,6 +213,11 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
   </example>
 
   <definition>
+  <notation><usage>A\cap B</usage><description>the intersection of  <m>A</m> and <m>B</m></description></notation>
+     <notation><usage>A\cup B</usage><description>the union of  <m>A</m> and <m>B</m></description></notation>
+     <notation><usage>A - B</usage><description>the difference of  <m>A</m> and <m>B</m></description></notation>
+<notation><usage>\bigcup_{i\in I}A_i</usage><description><m>\{x: x\in A_i \text{ for some }  i\in I\}</m></description></notation>
+<notation><usage>\bigcap_{i\in I}A_i</usage><description><m>\{x: x\in A_i \text{ for every }  i\in I\}</m></description></notation>
     <statement>
       <ol>
         <li>
@@ -234,11 +243,7 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
         </li>
       </ol>
     </statement>
-     <notation><usage>A\cap B</usage><description>the intersection of  <m>A</m> and <m>B</m></description></notation>
-     <notation><usage>A\cup B</usage><description>the union of  <m>A</m> and <m>B</m></description></notation>
-     <notation><usage>A - B</usage><description>the difference of  <m>A</m> and <m>B</m></description></notation>
-<notation><usage>\bigcup_{i\in I}A_i</usage><description><m>\{x: x\in A_i \text{ for some }  i\in I\}</m></description></notation>
-<notation><usage>\bigcap_{i\in I}A_i</usage><description><m>\{x: x\in A_i \text{ for every }  i\in I\}</m></description></notation>
+     
   </definition>
 
   <p>
@@ -251,6 +256,8 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
   </p>
 
   <definition>
+
+    <notation><usage>A\times B</usage><description>the direct product of  <m>A</m> and <m>B</m></description></notation>
     <statement>
       <p>
         Let <m>A</m> and <m>B</m> be sets. Then the <term>direct product</term> (or <term>Cartesian 
@@ -275,7 +282,6 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
         <m>A</m>.
       </p>
     </statement>
-    <notation><usage>A\times B</usage><description>the direct product of  <m>A</m> and <m>B</m></description></notation>
   
   </definition>
 
@@ -301,6 +307,9 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
   </p>
 
   <definition>
+   <notation><usage>f:S\to T</usage><description>function <m>f</m> from  <m>S</m> to  <m>T</m></description></notation>
+  <notation><usage>f(U)</usage><description>the image of a set <m>U</m> under <m>f</m></description></notation>
+    <notation><usage>f^{\leftarrow}(V)</usage><description>the preimage of a set <m>V</m> under <m>f</m></description></notation>
     <statement>
       <p>
         A <term>function</term> <m>f</m> from a set <m>S</m> to a set <m>T</m> is a
@@ -321,9 +330,7 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
         <me>f^{\leftarrow}(V)=\{s\in S: f(s)\in V\}.</me>
       </p>
     </statement>
-  <notation><usage>f:S\to T</usage><description>function <m>f</m> from  <m>S</m> to  <m>T</m></description></notation>
-  <notation><usage>f(U)</usage><description>the image of a set <m>U</m> under <m>f</m></description></notation>
-    <notation><usage>f^{\leftarrow}(V)</usage><description>the preimage of a set <m>V</m> under <m>f</m></description></notation>
+ 
   </definition>
 
   <example>
@@ -425,11 +432,12 @@ To prove that <m>f</m> is <em>not</em> onto: Identify an element <m>t\in T</m> f
     Recall that we can combine certain functions using <em>composition</em>:</p>
 
   <definition>
+   <notation><usage>f\circ g</usage><description>the composition of  <m>f</m> with  <m>g</m></description></notation>
+  <notation><usage>1_S</usage><description>the identity function on <m>S</m></description></notation>
   <statement>If <m>f:S\to T</m> and <m>g:T\to U</m>, then the  <term>composition of <m>f</m> and <m>g</m></term> is the function <m>g\circ f: S\to U</m> defined by <me>(g\circ f)(s)=g(f(s))</me> for all <m>s\in S</m>. (More generally, you can <term>compose</term> functions <m>f:S\to T</m> and <m>g:R\to U</m> to form <m>g\circ f:S\to U</m>,  as long as <m>f(S)\subseteq R</m>.) Also recall that given any set <m>S</m>, the <em>identity function on <m>S</m></em> is the function <m>1_S: S\to S</m> defined by <m>1_S(s)=s</m> for every <m>s\in S</m>.
   </statement>
 
-  <notation><usage>f\circ g</usage><description>the composition of  <m>f</m> with  <m>g</m></description></notation>
-  <notation><usage>1_S</usage><description>the identity function on <m>S</m></description></notation>
+ 
   </definition>
  
 

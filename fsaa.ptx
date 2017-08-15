@@ -90,8 +90,9 @@
 
    <alert>A note on rendering:</alert> If you are accessing the HTML version of this book, please be patient; the mathematical content may take a minute to load. If you see what appears to be strange code, or a box at the bottom of your screen saying <c>Processing Math: 0%</c>, just give the page a little time to fully load.</p>
 
+<p>
 <alert>A note on algebra:</alert>
-    <p>At its most basic level, abstract algebra is the study of structures. Just as an architect may examine buildings or an anthropologist societal hierarchies, an algebraist explores the nature of sets equipped with binary operations that satisfy certain properties. While these structures may not seem at first to be very important, they are at the heart of most, if not all, mathematical endeavors. On an elemental level, they allow us to solve systems of equations; on a more global-level, they are behind some of our most important cryptographic systems. We even use them implicitly when telling time!
+At its most basic level, abstract algebra is the study of structures. Just as an architect may examine buildings or an anthropologist societal hierarchies, an algebraist explores the nature of sets equipped with binary operations that satisfy certain properties. While these structures may not seem at first to be very important, they are at the heart of most, if not all, mathematical endeavors. On an elemental level, they allow us to solve systems of equations; on a more global-level, they are behind some of our most important cryptographic systems. We even use them implicitly when telling time!
   </p>
 
   <p>
