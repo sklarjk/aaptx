@@ -374,7 +374,7 @@
   
   </note>
 
-  <theorem xml:id="gl">
+  <example xml:id="gl">
 
  <statement> 
  <p>
@@ -412,9 +412,9 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
         So <m>GL(n,\R)</m> is a group under multiplication.
       </p>
  </proof>
-  </theorem>
+  </example>
 
-<theorem xml:id="sl">
+<example xml:id="sl">
  <statement><p>
 <notation><usage>SL(n,\R)</usage><description>the special linear group of degree <m>n</m> over <m>\R</m></description></notation> The set
 <me>SL(n,\R)=\{M\in \M_n(\R):\det M =1\}</me>, is a group under matrix multiplication, called the <term>special linear group of degree <m>n</m> over <m>\R</m> </term>. Like <m>GL(n,\R)</m>, it has <m>I_n</m> as its identity element.</p>
@@ -425,7 +425,7 @@ Its identity element is <me>I_n= \begin{bmatrix}1 \amp  0 \amp  0 \amp  \cdots \
   <m>\langle SL(n,\R), \cdot\rangle</m> is a binary structure.</p>
    <p>The rest of the proof is left as an exercise for the reader.</p>
  </proof>
-  </theorem>
+  </example>
 
 <remark>
     <p>
