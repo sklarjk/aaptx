@@ -355,18 +355,12 @@
       <p>
         Consider the group <m>\Z_8</m>. We will see later that the subgroups of <m>\Z_8</m> are <m>\{0\}</m>, <m>\{0,2,4,6\}</m>, <m>\{0,4\}</m> and <m>\Z_8</m> itself. So <m>\Z_8</m> has the following subgroup lattice.</p>
 
-<sidebyside width="35%">
+<sidebyside width="15%">
     <image>
     <latex-image-code>
-\xymatrix{&amp;\Z_8 \ar@{-}[d]&amp;\\ &amp;\{0,2,4,6\}\ar@{-}[d]&amp;\\ &amp;\{0,4\} \ar@{-}[d]&amp;\\ &amp;\{0\} &amp;}
+\xymatrix{\Z_8 \ar@{-}[d]\\ \{0,2,4,6\}\ar@{-}[d]\\ \{0,4\} \ar@{-}[d]\\ \{0\} }
  </latex-image-code>
   </image></sidebyside>
-<!--
-<image width="12%">
-    <latex-image-code>
-\[\xymatrix{&amp;\Z_8 \ar@{-}[d]&amp;\\ &amp;\{0,2,4,6\}\ar@{-}[d]&amp;\\ &amp;\{0,4\} \ar@{-}[d]&amp;\\ &amp;\{0\} &amp;}\]
-</latex-image-code>
-  </image>-->
     </statement>
 
 
