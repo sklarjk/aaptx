@@ -104,12 +104,13 @@
   </p>
   
    <figure>
+
+  <caption>Visual representation of the Factorization Theorem</caption>
     <image width="30%">
     <latex-image-code>
   \[\xymatrix{G\ar[rr]^{\phi}\ar[dr]_{\Psi}&amp;&amp;G'\\&amp;G/N\ar@{.>}[ur]_{\phibar}&amp;}\]
 </latex-image-code>
 </image>
-  <caption>Visual representation of the Factorization Theorem</caption>
   </figure>
     </statement>
   <proof>
@@ -176,6 +177,7 @@
   
 
   <proof>
+  <p>
     <ol>
       <li>
         <p>
@@ -214,7 +216,7 @@
           if and only if <m>N=\Ker\phi</m>, as desired. 
         </p>
       </li>
-    </ol>
+    </ol></p>
   </proof>
 </theorem>
 
@@ -441,8 +443,9 @@
   </p>
 
   <theorem xml:id="sit">
+      <title>Second Isomorphism Theorem</title>
     <statement>
-    <title>Second Isomorphism Theorem</title>
+
       <p>
  Let <m>G</m> be a
         group, let <m>H\leq G</m>, and let <m>N\unlhd G</m>. Then the set
