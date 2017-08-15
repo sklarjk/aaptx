@@ -492,7 +492,7 @@ To show that given groups <m>G</m> and <m>G'</m> are isomorphic, we must do thre
 
   <example>
     <statement>
-      <ol>
+<p>      <ol>
         <li>
           <p>
             If <m>G</m> and <m>G'</m>are groups with <m>|G|=|G'|=1</m>, then <m>G\simeq G'</m>, since the map from <m>G</m> to <m>G'</m> sending <m>G</m>'s identity (and sole) element to <m>G'</m>'s identity
@@ -571,11 +571,11 @@ Note that the first table looks exactly like the second table if we
             We will see later, in <xref ref="x4nonunique">Example</xref>, that there is <em>not</em> a unique group of order 4 up to isomorphism: that is, there are two nonisomorphic groups of order 4.
           </p>
         </li>
-      </ol>
+      </ol></p>
     </statement>
   </example>
 
-  <example>
+  <theorem>
     <statement>
       <p>
         The groups <m>\langle \R,+\rangle</m> and <m>\langle \R^+, \cdot\rangle</m> are isomorphic.
@@ -595,7 +595,7 @@ Note that the first table looks exactly like the second table if we
       </p>
     </proof>
 
-  </example>
+  </theorem>
 
   <example>
     <statement>
