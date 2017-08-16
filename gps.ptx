@@ -1066,7 +1066,7 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
   <definition>
     <statement>
       <p>
-        For <m>n\in \Z^+</m>, we define binary operation <m>\cdot_n</m> (<term>multiplication modulo <m>n</m></term>) on <m>\Z_n</m> by <m>a\cdot_n b = r_n(a)</m>, the remainder when <m>ab</m> is divided by <m>n</m>.
+        For <m>n\in \Z^+</m>, we define <term>multiplication modulo <m>n</m></term>, denoted <m>\cdot_n</m>, on <m>\Z_n</m> by <m>a\cdot_n b = r_n(a)</m>, the remainder when <m>ab</m> is divided by <m>n</m>.
       </p>
     </statement>
   </definition>
