@@ -430,9 +430,14 @@
       Associativity of this operation on <m>G/N</m> follows from the
       associativity of <m>G</m>'s operation: indeed, if <m>aN</m>, <m>bN</m>, <m>cN \in
       G/N</m>, then
-      <me>
-        ((aN)(bN))(cN)=(abN)(cN)=(ab)cN=a(bc)N=(aN)(bcN)=(aN)((bN)(cN)).
-      </me>
+      <md>
+      <mrow>
+        ((aN)(bN))(cN)\amp =(abN)(cN)</mrow>
+        <mrow>\amp =(ab)cN</mrow>
+        <mrow>\amp =a(bc)N</mrow>
+        <mrow>\amp =(aN)(bcN)</mrow>
+        <mrow>\amp =(aN)((bN)(cN)).</mrow>
+      </md>
     </p>
 
     <p>
