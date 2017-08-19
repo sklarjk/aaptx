@@ -430,58 +430,36 @@
       </p>
     </statement>
  
-  <solution><p>The respective solutions are:</p>
-  <!--
-<p>
-<ol>
-<li><sidebyside width="30%">
-    <image>
-    <latex-image-code>
-   \xymatrix{&amp;\Z_6&amp;\\ \langle 2\rangle \ar@{-}[ur]&amp;&amp;\langle 3\rangle\ar@{-}[ul]\\&amp;\langle 0\rangle \ar@{-}[ul]\ar@{-}[ur]&amp;}
-     </latex-image-code>
-    </image>
-</sidebyside>
-</li>
-<li><sidebyside width="10%">
-    <image>
-    <latex-image-code>
-\xymatrix{\Z_{13}\ar@{-}[d]\\ \langle0\rangle}
-</latex-image-code>
-</image></sidebyside>
-</li>
-
-<li><sidebyside width="30%">
-    <image>
-    <latex-image-code>
-\xymatrix{&amp;\Z_{18}&amp;&amp;\\ \langle 2\rangle\ar@{-}[ur]\ar@{-}[dr]&amp;&amp;\langle 3\rangle\ar@{-}[ul]\ar@{-}[dl]&amp;\\
-&amp;\langle 6 \rangle \ar@{-}[dr]\ar@{-}[ur]&amp;&amp; \langle 9 \rangle \ar@{-}[dl]\ar@{-}[ul]\\&amp;&amp; \langle 0 \rangle &amp;}
- </latex-image-code>
-  </image></sidebyside>
-</li>
-</ol></p>-->
-
-
-<sidebyside widths="39% 9% 51%">
+  <solution> <p>The respective solutions are:</p>
+ 
+ <!-- this is the LaTeX code-->
+<sidebyside>
     <image>
     <latex-image-code>
   \xymatrix{&amp;\Z_6&amp;\\ \langle 2\rangle \ar@{-}[ur]&amp;&amp;\langle 3\rangle\ar@{-}[ul]\\&amp;\langle 0\rangle \ar@{-}[ul]\ar@{-}[ur]&amp;}
-     </latex-image-code>
-     </image>
 
-    <image>
-    <latex-image-code>
-\xymatrix{\Z_{13}\ar@{-}[d]\\ \langle0\rangle}
-</latex-image-code>
-</image>
+\xymatrix{&amp;\Z_{13}\ar@{-}[d]&amp;\\ &amp;\langle0\rangle &amp;}
 
-    <image>
-    <latex-image-code>
 \xymatrix{&amp;\Z_{18}&amp;&amp;\\ \langle 2\rangle\ar@{-}[ur]\ar@{-}[dr]&amp;&amp;\langle 3\rangle\ar@{-}[ul]\ar@{-}[dl]&amp;\\
 &amp;\langle 6 \rangle \ar@{-}[dr]\ar@{-}[ur]&amp;&amp; \langle 9 \rangle \ar@{-}[dl]\ar@{-}[ul]\\&amp;&amp; \langle 0 \rangle &amp;}
  </latex-image-code>
   </image>
-
 </sidebyside>
+
+<!-- this is the HTML code -->
+<!--
+<sidebyside width="45%">
+    <image>
+    <latex-image-code>
+   \[\xymatrix{&amp;\Z_6&amp;\\ \langle 2\rangle \ar@{-}[ur]&amp;&amp;\langle 3\rangle\ar@{-}[ul]\\&amp;\langle 0\rangle \ar@{-}[ul]\ar@{-}[ur]&amp;}\]
+
+\[\xymatrix{\Z_{13}\ar@{-}[d]\\ \langle0\rangle}\]
+\[
+\xymatrix{&amp;\Z_{18}&amp;&amp;\\ \langle 2\rangle\ar@{-}[ur]\ar@{-}[dr]&amp;&amp;\langle 3\rangle\ar@{-}[ul]\ar@{-}[dl]&amp;\\
+&amp;\langle 6 \rangle \ar@{-}[dr]\ar@{-}[ur]&amp;&amp; \langle 9 \rangle \ar@{-}[dl]\ar@{-}[ul]\\&amp;&amp; \langle 0 \rangle &amp;}\]
+ </latex-image-code>
+  </image>
+</sidebyside>-->
 
   </solution>
   </exercise>
