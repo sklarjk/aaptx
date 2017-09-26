@@ -1,6 +1,6 @@
 
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="homoiso">
-  <title>Homorphisms and Isomorphisms</title>
+  <title>Homomorphisms and Isomorphisms</title>
 
 <section>
   <title>Groups of small order</title>
@@ -156,7 +156,7 @@
 </section>
 
 <section>
-  <title>Introduction to homomorphisms and isomorphisms</title>
+  <title>Definitions of Homomorphisms and Isomorphisms</title>
   <definition>
     <statement>
       <p>
