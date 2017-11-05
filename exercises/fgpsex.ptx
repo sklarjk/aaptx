@@ -76,4 +76,17 @@ Find the indices of:
 
 </exercise>
 
+<exercise>
+<statement><p>  Let <m>H\unlhd G</m> with index <m>k</m>, and let <m>a\in G</m>. Prove that <m>a^k\in H</m>.</p>
+</statement>
+<solution>
+<p>
+Since <m>k=(G:H)</m>, <m>|G/H|=k</m>.  Then 
+<m>aH\in G/H</m> has an order, call it <m>d</m>, which must divide <m>|G/H|=k</m>.
+So <m>k=dm</m> for some <m>m\in \Z</m>.  Then
+<m>(aH)^k=(aH)^{dm}=((aH)^d)^m=H^m=H</m>. Since <m>(aH)^k=a^kH</m>, we thus
+have <m>a^kH=H</m>, implying that <m>a^k\in H</m>, as desired.
+</p>
+</solution>
+</exercise>
 </exercises>

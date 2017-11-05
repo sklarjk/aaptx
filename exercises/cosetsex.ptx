@@ -604,4 +604,24 @@ Write all permutations using <em>disjoint cycle notation</em>, and write all dih
   </solution>
   </exercise>
 
+    <exercise>
+    <statement>
+      <p>
+       Let <m>G</m> be a group of finite order <m>n</m>, containing identity element <m>e</m>. Let <m>a\in G</m>. Prove that <m>a^n=e</m>.
+      </p>
+    </statement>
+
+       <solution>
+    
+    <p>
+
+By Lagrange's
+    Theorem, <m>o(a)=|\angle a\rangle|</m> divides <m>n</m> ; 
+ that is, <m>n=o(a)m</m>
+    for some <m>m\in \fatz^+</m>.  Thus,
+<me>a^n=a^{o(a)m}=(a^{o(a)})^m=e^m=e.</me></p>
+  </solution>
+ 
+  </exercise>
+
 </exercises>
