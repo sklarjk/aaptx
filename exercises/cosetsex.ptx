@@ -138,15 +138,11 @@
             </p>
           </li>
 
-          <li>
-            <p>
-              <m>K=\langle (1453)(25)\rangle</m> in <m>S_5</m>
-            </p>
-          </li>
+    
 
           <li>
             <p>
-              <m>L=\langle (2354)(34)\rangle</m> in <m>S_6</m>
+              <m>K=\langle (2354)(34)\rangle</m> in <m>S_6</m>
             </p>
           </li>
 
@@ -167,15 +163,11 @@
         </p>
       </li>
 
-      <li>
-        <p>
-          In disjoint cycle notation, the permutation <m>(1453)(25)</m> is written <m>(14523)</m>, so <m>K</m> has order 5. Thus, <m>(S_5:K)=|S_5|/|K|=120/5=24.</m>
-        </p>
-      </li>
+   
 
       <li>
         <p>
-          In disjoint cycle notation, the permutation <m>(2354)(34)</m> is written <m>(23)(45)</m>, so <m>L</m> has order 2. Thus, <m>(S_6:L)=|S_6|/|L|=720/2=360.</m>
+          In disjoint cycle notation, the permutation <m>(2354)(34)</m> is written <m>(23)(45)</m>, so <m>L</m> has order 2. Thus, <m>(S_6:K)=|S_6|/|K|=720/2=360.</m>
         </p>
       </li>
 
