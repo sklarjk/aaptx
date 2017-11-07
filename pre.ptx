@@ -524,7 +524,8 @@ To prove that <m>f</m> is <em>not</em> onto: Identify an element <m>t\in T</m> f
         A set is <term>finite</term> if it contains a finite number of
         elements;
         otherwise, it's <term>infinite</term>. The <term>cardinality</term> of a finite set <m>S</m> is the
-        number of elements in <m>S</m>; we denote the cardinality of <m>S</m> by <m>|S|</m>.
+        number of elements in <m>S</m>; we denote the cardinality of <m>S</m> by <m>|S|</m>. When <m>S</m> is infinite, we may
+        write <m>|S|=\infty</m>.
       </p>
     </statement>
    
