@@ -115,14 +115,15 @@
 
 <p>We next prove a lemma to which we will refer when proving the theorem which succeeds it.</p>
 
-<lemma xml:id="clock"><title>Clock Lemma</title> <statement><p> Let <m>G</m> be a group and let <m>a \in G</m>. Suppose there is a positive power of <m>a</m> which equals the identity element <m>e</m> of <m>G</m>. Let <m>n</m> be the least such positive integer. Then for all <m>s,t\in \Z</m>, <m>a^s=a^t</m> if and only if <m>s</m> is congruent to <m>t</m> modulo <m>n</m>.
+<lemma xml:id="clock"><title>Clock Lemma</title> <statement><p> Let <m>G</m> be a group and let <m>a \in G</m>. Suppose there is a positive power of <m>a</m> which equals the identity element <m>e</m> of <m>G</m>. Let <m>n</m> be the least such positive integer. Then for all <m>s,t\in \Z</m>, <m>a^s=a^t</m> if and only if <m>s</m> is congruent to <m>t</m> modulo <m>n</m>. In particular, if <m>s\in \Z^+</m> with <m>a^s=e,</m> then <m>n</m> divides <m>s</m>.
     </p>
     </statement>
   
   <proof>
     <p>
-     Let <m>s,t\in \Z</m>. By the <xref ref="divalg" text="title"/>, there exist <m>q\in \Z</m> and <m>r\in \Z_n</m> with <m>s-t=qn+r</m>. Then <m>a^{s-t}=a^{qn+r}=(a^n)^qa^r=e^qa^r=a^r</m>. Since <m>0\leq r\lt n</m>, be definition of <m>n</m> we have that <m>a^{s-t}=e</m> if and only if <m>r=0</m>; that is, <m>a^s=a^t</m> if and only if <m>s</m> and <m>t</m> are congruent modulo <m>n</m>.
+     Let <m>s,t\in \Z</m>. By the <xref ref="divalg" text="title"/>, there exist <m>q\in \Z</m> and <m>r\in \Z_n</m> with <m>s-t=qn+r</m>. Then <m>a^{s-t}=a^{qn+r}=(a^n)^qa^r=e^qa^r=a^r</m>. Since <m>0\leq r\lt n</m>, be definition of <m>n</m> we have that <m>a^{s-t}=e</m> if and only if <m>r=0</m>; that is, <m>a^s=a^t</m> if and only if <m>s</m> and <m>t</m> are congruent modulo <m>n</m>. 
     </p>
+    <p>The last statement follows from the fact that <m>n</m> divides any positive integer to which it is congruent modulo itself.</p>
   </proof>
 </lemma>
 
@@ -171,6 +172,19 @@
     </p>
   </remark>
 
+<theorem xml:id="eltorderdivides">
+<statement>
+<p>Let element <m>a</m> in group <m>G</m> have <m>o(a)=k \lt \infty</m>. Then for <m>m\in \Z^+</m>, <m>a^m=e</m> if and only if <m>k</m> divides <m>m</m>.
+</p>
+</statement>
+
+<proof>
+<p>This follows from the last statement of the Clock Lemma.
+</p>
+</proof>
+</theorem>
+
+
   <p>
     We have the following handy theorem.
   </p>
@@ -210,6 +224,38 @@
       </p>
     </statement>
   </theorem>
+
+
+<theorem>
+<statement>
+<p>
+Let <m>m,n \in \Z^+</m> and let <m>(a,b)\in \Z_m \times \Z_n</m>. Let <m>c, d</m> be the respective orders of <m>a</m> in <m>\Z_m</m> and 
+<m>b</m> in <m>\Z_n</m>. Then <m>o((a,b))=\lcm(c,d)</m>.
+</p>
+</statement>
+
+<proof>
+<p>
+Let <m>k\in \Z^+</m>. By definition of <m>c</m> and <m>d</m> and by <xref ref="eltorderdivides">Theorem</xref>, we have <m>k(a,b)=(ka,kb)=(0,0)</m> if and only if <m>c</m> and <m>d</m> divide <m>
+k</m>. Since <m>\gcd(c,d)=1</m>, the least positive integer divisble by both <m>c</m> and <m>d</m> is <m>\lcm(c,d)</m>. Thus, <m>o((a,b))=\lcm(c,d)</m>, as desired.
+</p>
+</proof>
+</theorem>
+
+    <corollary>
+    <statement>
+      <p>
+        Suppose <m>m,n\in \Z^+</m> with <m>\gcd(m,n)=1</m>. Then <m>\Z_m \times \Z_n</m> is cyclic.
+      </p>
+</statement>
+    
+<proof>
+<p>
+Since <m>\gcd(m,n)=1</m>, <m>\lcm(m,n)=mn</m>. So 
+<me>o((1,1))=\lcm(m,n)=mn=|\Z_m \times \Z_n|,</me> and we see that <m>(1,1)</m> generates <m>\Z_m \times \Z_n</m>.</p>
+</proof>
+</corollary>
+
 
   <p>
     Here are some examples of cyclic subgroups of groups, and orders of group elements.
@@ -544,6 +590,8 @@
 
     </statement>
   </example>
+
+
 </section>
 
   <xi:include  href="./exercises/cycex.ptx" />
