@@ -64,6 +64,35 @@ of <m>(\Z_{15} \times \Z_{24})/\langle (5,4)\rangle</m> is <m>\frac{(15)(24)}{6}
 
 
 <exercise>
+<statement><p>  For each of the following, find a familiar group to which the given group is isomorphic. (Hint: Consider the group order, properties such as abelianness and cyclicity, group tables, etc.)
+
+
+<ol>
+<li><m>\Z/14\Z</m></li>
+<li><m>3\Z/12\Z</m></li>
+<li><m>S_8/A_8</m></li>
+<li><m>(4\Z \times 15\Z)/(\langle 2 \rangle \times \langle 3 \rangle )</m></li>
+</ol>
+</p>
+</statement>
+<solution>
+<p>
+<ol>
+<li><m>\Z_{14}</m></li>
+<li><m>3\Z/12\Z</m> is cyclic (since <m>3\Z</m> is cyclic) with order 4, so is isomorphic to <m>\Z_4</m>. </li>
+<li><m>S_8/A_8</m> has order 2, so is isomorphic to <m>\Z_2</m>.</li>
+
+<li>Since <m>\gcd(4,15)=1</m>, the group <m>4\Z \times 15\Z</m> is cyclic. So since <m>|4\Z \times 15\Z|/|\langle 2 \rangle \times \langle 3 \rangle|=60/10=6</m>, we have  <m>(4\Z \times 15\Z)/(\langle 2 \rangle \times \langle 3 \rangle) \simeq \Z_6</m>.
+</li>
+</ol>
+</p>
+</solution>
+
+</exercise>
+
+
+
+<exercise>
 <statement><p>  Let <m>H\unlhd G</m> with index <m>k</m>, and let <m>a\in G</m>. Prove that <m>a^k\in H</m>.</p>
 </statement>
 <solution>
