@@ -64,7 +64,7 @@ of <m>(\Z_{15} \times \Z_{24})/\langle (5,4)\rangle</m> is <m>\frac{(15)(24)}{6}
 
 
 <exercise>
-<statement><p>  For each of the following, find a familiar group to which the given group is isomorphic. (Hint: Consider the group order, properties such as abelianness and cyclicity, group tables, etc.)
+<statement><p>  For each of the following, find a familiar group to which the given group is isomorphic. (Hint: Consider the group order, properties such as abelianness and cyclicity, group tables, orders of elements, etc.)
 
 
 <ol>
@@ -72,6 +72,8 @@ of <m>(\Z_{15} \times \Z_{24})/\langle (5,4)\rangle</m> is <m>\frac{(15)(24)}{6}
 <li><m>3\Z/12\Z</m></li>
 <li><m>S_8/A_8</m></li>
 <li><m>(4\Z \times 15\Z)/(\langle 2 \rangle \times \langle 3 \rangle )</m></li>
+<li><m>D_4/\langle r^2 \rangle</m></li>
+
 </ol>
 </p>
 </statement>
@@ -84,6 +86,8 @@ of <m>(\Z_{15} \times \Z_{24})/\langle (5,4)\rangle</m> is <m>\frac{(15)(24)}{6}
 
 <li>Since <m>\gcd(4,15)=1</m>, the group <m>4\Z \times 15\Z</m> is cyclic. So since <m>|4\Z \times 15\Z|/|\langle 2 \rangle \times \langle 3 \rangle|=60/10=6</m>, we have  <m>(4\Z \times 15\Z)/(\langle 2 \rangle \times \langle 3 \rangle) \simeq \Z_6</m>.
 </li>
+<li><m>|D_4/\langle r^2\rangle|=8/2=4</m>, and <m>f\langle r^2\rangle</m> and <m>r\langle r^2\rangle</m> in <m>D_4/\langle r^2\rangle</m> each have order 2, so
+<m>D_4/\langle r^2 \rangle \simeq \Z_2^2</m>.</li>
 </ol>
 </p>
 </solution>
