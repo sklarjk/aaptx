@@ -56,7 +56,9 @@
 <department>Department of Mathematics</department>
 <institution>Pacific Lutheran University</institution><email>sklarjk@plu.edu</email>
 </author>
-
+<date>
+<today/>
+</date>
 
 </titlepage>
 
