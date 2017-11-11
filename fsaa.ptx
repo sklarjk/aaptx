@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <mathbook xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
 <docinfo>
-
+<cross-references text="type-global" />  <!--makes even local cross-references include chapter and section numbers-->
 <rename element="observation" lang="en-US">Convention</rename>
 <rename element="insight" lang="en-US">Terminology</rename>
 
@@ -26,6 +26,7 @@
 </macros>
 
 <latex-image-preamble>
+<!--
 \usepackage{tikz}
 \usepackage{tkz-graph}
 \usepackage{tkz-euclide}
@@ -34,7 +35,7 @@
 \usetikzlibrary{matrix,arrows}
 \usetikzlibrary{calc}
 \usetikzlibrary{shapes}
-\usetikzlibrary{through,intersections,decorations,shadows,fadings}
+\usetikzlibrary{through,intersections,decorations,shadows,fadings}-->
 
 \usepackage[all]{xy}
 \usepackage{pgfplots}
@@ -73,9 +74,10 @@
 			<holder>Jessica K. Sklar</holder>
 			<minilicense>GFDL License</minilicense>
 			<shortlicense>Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license is included in the appendix entitled <q>GNU Free Documentation License.</q></shortlicense>
+
 		</copyright>
 
-		<p>Source material is available at <url href="https://github.com/sklarjk/aaptx"/>.</p>
+	
 
 	</colophon>
 
