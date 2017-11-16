@@ -490,8 +490,8 @@ To prove that <m>f</m> is <em>not</em> onto: Identify an element <m>t\in T</m> f
     <statement>
       <p>
         Let <m>f:S\to T</m> and <m>g:T\to U</m> be functions.
-        If <m>f</m> and <m>g</m> are both 1-1 [onto], then so is <m>g\circ f: S\to U</m>.
-      </p>
+        If <m>f</m> and <m>g</m> are both 1-1 [resp., onto], then <m>g\circ f: S\to U</m> is 1-1 [resp., onto].
+        It follows that if <m>f</m> and <m>g</m> are both bijections, then <m>g\circ f: S\to U</m> is a bijection.   </p>
     </statement>
   
 
@@ -499,9 +499,8 @@ To prove that <m>f</m> is <em>not</em> onto: Identify an element <m>t\in T</m> f
     <p>
       Assume <m>f</m> and <m>g</m> are 1-1. Let <m>s_1, s_2\in S</m>
       with <m>(g\circ f)(s_1)=(g\circ f)(s_2)</m>. Then <m>g(f(s_1))=g(f(s_2))</m>;
-      since <m>g</m> is one-to-one (since it's a bijection), this shows that
-      <m>f(s_1)=f(s_2)</m>. Then since <m>f</m> is one-to-one (since <m>f</m> is also a
-      bijection), we must have <m>s_1=s_2</m>. Thus, <m>g\circ f</m> is one-to-one.
+      since <m>g</m> is one-to-one, this shows that
+      <m>f(s_1)=f(s_2)</m>. Then since <m>f</m> is one-to-one, we must have <m>s_1=s_2</m>. Thus, <m>g\circ f</m> is one-to-one.
     </p>
   <p>
     The proof that <m>g\circ f</m> is onto if <m>f</m> and <m>g</m> are onto is left as an exercise for the reader.
