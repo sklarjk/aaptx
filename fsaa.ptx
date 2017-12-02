@@ -107,11 +107,11 @@ At its most basic level, abstract algebra is the study of structures. Just as an
   </p>
 
   <p>
-    Our focus in this course will be the study of algebraic structures called <em>groups</em>. Along the way, we will explore rigorous mathematical notions of similarity and difference: When can we consider two objects to be more or less <q>the same</q>? When are they fundamentally different? For instance, consider two houses that have exactly the same construction, but are painted different colors. Are they the same house? No. But viewed structurally (as opposed to aesthetically) they are the same. This means that if we know certain information about one of the houses (say, how far the bathroom is from the kitchen) we know the same information about the other house. However, knowing that the first house is painted yellow does not tell us anything about the second house's color. We explore an analogous idea in mathematics, namely, the concept of <em>isomorphism</em>.
+    Our focus in this book is the study of algebraic structures called <em>groups</em>.  Along the way, we will explore rigorous mathematical notions of similarity and difference: When can we consider two objects to be more or less <q>the same</q>? When are they fundamentally different? For instance, consider two houses that have exactly the same construction, but are painted different colors. Are they the same house? No. But viewed structurally (as opposed to aesthetically) they are the same. This means that if we know certain information about one of the houses (say, how far the bathroom is from the kitchen) we know the same information about the other house. However, knowing that the first house is painted yellow does not tell us anything about the second house's color. We explore an analogous idea in mathematics, namely, the concept of <em>isomorphism</em>.
   </p>
 
   <p>
-    Along the way, we will gain experience writing mathematical proofs and will see plenty of specific examples demonstrating more general ideas.
+   Throughout, we provide readers with many mathematical proofs, as well as specific examples demonstrating more general ideas.
   </p>
 </preface>
 </frontmatter>
