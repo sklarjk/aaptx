@@ -1,7 +1,7 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="gps">
   <title>Groups</title>
 
-<section>
+<section xml:id="binops">
   <title>Binary operations and structures</title>
 
   <p>
@@ -47,7 +47,7 @@
       <li>
         <p>
           For <m>*</m> to be a binary operation on <m>S</m>, <m>a*b</m> must be
-          <em>well defined</em> and <em>in</em> <m>\mathbf{S}</m> for each <m>a,b\in S</m>.
+          <em>well-defined</em> and <em>in</em> <m>\mathbf{S}</m> for each <m>a,b\in S</m>.
           For instance, we cannot define a binary operation on
           <m>\R</m> by
           <me>a*b=\text{ the greatest number less than
@@ -202,11 +202,45 @@
   </proof>
   </theorem>
 
+<p>We end by discussing the idea of <em>closure</em> under a binary operation.</p>
+
+ <definition>
+    <statement>
+      <p>Let <m>\langle S,*\rangle</m> be a binary structure and let <m>T \subseteq S</m>. Then <m>T</m> is said to be <em>closed</em> under <m>*</m> if <m>t_1 * t_2 \in T</m> whenever <m>t_1,t_2\in T</m>. </p>
+    </statement>
+</definition>
+
+
+<example xml:id="closed1">
+    <statement>
+      <p>
+        Consider the binary structure <m>\langle \M_2(\R), +\rangle</m>, where <m>+</m> denotes matrix addition.  Let \[T=\{A\in M_2(\R): A \mbox{ is invertible}\}.\]  We claim that <m>T</m> is <em>not</em> closed under <m>+</m>. Indeed, if we denote the identity matrix in <m>\M_2(\R)</m> by <m>I_2</m>, then we observe that <m>I_2, -I_2\in T</m>, but <m>I_2+(-I_2)\not\in T</m>, since the zero matrix isn't invertible. </p>
+    </statement>
+  </example>
+
+
+<example xml:id="closed2">
+    <statement>
+      <p>
+        Consider the binary structure <m>\langle \M_2(\R), \cdot\rangle</m>, where <m>\cdot</m> denotes matrix multiplication.  Again, let <m>T</m>  be the set of all invertible matrices in <m>\M_2(\R)</m>. We claim that <m>T</m> is closed under <m>\cdot\,</m>. Indeed, let <m>A,B\in T</m>. Then <m>A</m> and <m>B</m> are invertible, so their determinants are nonzero. Thus, <m>\det(AB)=(\det A)(\det B)\neq 0,</m> so <m>AB</m> is invertible, and hence  <m>AB\in T</m>.</p>
+    </statement>
+  </example>
+
+
+
+
+
+
+
+
+
+
+
 </section>
 
   <xi:include  href="./exercises/gpsex1.ptx" />
 
-<section>
+<section xml:id="gpdef">
   <title>The definition of a group</title>
   <p>
     At this point you may be asking yourself, why do we care? We've covered a lot of definitions and proved some theorems, but what is the goal of all this? Well, there are actually many goals that we can achieve using such material. Consider the following as an example. Suppose we want to solve the equation <m>5+x=2</m>. We can probably solve this quite easily almost just by looking at it (<m>x=-3</m>), but what facts are we actually using there? If we break down the reasoning leading to this answer, we may obtain something like the following, where each line is equivalent to the one preceding it.
@@ -284,7 +318,7 @@
       <li>
         <p>
           The first thing you should do is check to make sure that  <m>\langle G,*\rangle</m>
-          is a binary structure by making sure <m>G</m> is closed under <m>*</m><mdash />if not, it doesn't make sense to
+          is a binary structure: that is, you should make sure that <m>a*b</m> is well-defined and in <m>G</m> for every <m>a, b \in G</m>. If this is not the case, it doesn't make sense to
           check to see if axioms <m>\G_1</m><ndash /><m>\G_3</m> hold). (For instance: <m>\Z^*</m> has no chance of being a group under
           <m>\div</m>, since, e.g., <m>3,4\in \Z^*</m> but <m>3 \div 4 \not\in\Z^*</m>.)
         </p>
@@ -302,7 +336,7 @@
 </remark>
 </section>
 
-<section>
+<section xml:id="gpexs1">
   <title>Examples of groups/nongroups, Part I</title>
   <p>
     Let's look at some examples of groups/nongroups.
@@ -311,8 +345,7 @@
   <example>
     <statement>
       <p>
-        We claim that <m>\Z</m> is a group under addition. Indeed, we already
-        know that <m>\Z</m> is closed under addition and that addition is
+        We claim that <m>\Z</m> is a group under addition. Indeed, <m>\langle\Z,+\rangle</m> is a binary structure and that addition is
         associative on the integers. The integer <m>0</m> acts as an identity
         element of <m>\Z</m> under addition (since <m>a+0=0+a=a</m> for each <m>a\in
         \Z</m>), and each element <m>a</m> in <m>G</m> has inverse <m>-a</m> since
@@ -451,9 +484,9 @@
         Define <m>*</m> on <m>\Q^*</m> by <m>a*b=(ab)/2</m> for all <m>a,b\in \Q^*</m>. Prove that <m>\langle \Q^*,*\rangle</m> is a group.
       </p>
     </statement>
-    <solution>
+    <proof>
       <p>
-        First, <m>\Q^*</m> is closed under <m>*</m>, since <m>(ab)/2</m> is
+        First, <m>\langle\Q^*,\rangle</m> is a binary structure, since <m>(ab)/2</m> is
         rational and nonzero whenever <m>a,b</m> are rational and nonzero.
       </p>
 
@@ -481,12 +514,12 @@
       <p>
         Thus, <m>\langle \Q^*,*\rangle</m> is a group.
       </p>
-    </solution>
+    </proof>
 
   </example>
 
 </section>
-<section>
+<section xml:id="gpconvs">
   <title>Group conventions and properties</title>
   <introduction>
     <p>
@@ -541,7 +574,7 @@
           product <m>a\cdot b</m> as <m>ab</m>. We call this the <q>product</q> of <m>a</m> and <m>b</m>. </p>
 
         <p>
-          For every element <m>a</m> in a group <m>\Gdot</m> and <m>n\in \Z^+</m>, we use the expression <m>a^n</m> to denote  the product <me>a \times a \times \cdots \times a</me> of <m>n</m> copies of <m>a</m>, 
+          For every element <m>a</m> in a group <m>\Gdot</m> and <m>n\in \Z^+</m>, we use the expression <m>a^n</m> to denote  the product <me>a \cdot a \cdot \cdots \cdot a</me> of <m>n</m> copies of <m>a</m>, 
       and <m>a^{-n}</m> to denote <m>(a^{-1})^n</m> (that is, the product of <m>n</m> copies of <m>a^{-1}</m>).
           Finally, we define <m>a^0</m> to be <m>e</m>.  Note that our <q>usual</q> rules for exponents then hold in an arbitrary group: that is, if <m>a</m> is in group <m>\langle G, \cdot\,\rangle</m>
           and <m>m,n\in \Z</m>, then <m>a^m a^n = a^{m+n}</m> and <m>(a^m)^n=a^{mn}=(a^n)^m</m>.
@@ -821,7 +854,7 @@
 </theorem>
   </subsection>
 </section>
-<section>
+<section xml:id="gpexs2">
   <title>Examples of groups/nongroups, Part II</title>
   <example>
     <p>   <notation><usage>n\Z</usage><description><m>\{nm\,:\,m\in \Z\}</m></description></notation>
@@ -958,13 +991,6 @@ Let <m>n\in \Z^+</m> and let <m>a</m> be any
 
   </definition>
 
-  <p>
-    Throughout this course, if we are discussing a set <m>\Z_n</m>, you
-    should assume <m>n\in \Z^+, n\geq 2</m>, unless otherwise noted.
-    (Though it will rarely come up for us, we may occasionally make
-    reference to <m>\Z_1=\{0\}</m>.)
-  </p>
-
   <warning>
     <p>
       Note that by our definition of <m>\Z_n</m>, the
@@ -984,9 +1010,9 @@ Let <m>n\in \Z^+</m> and let <m>a</m> be any
         This group is abelian and of order <m>n</m>.
       </p>
     </statement>
-    <solution>
+    <proof>
       <p>
-        We first check that <m>\Z_n</m> is closed under <m>+_n</m>. Note
+        We first check that <m>\langle\Z_n,+_n\rangle</m> is a binary structure. Note
         that by the definition of <m>+_n</m>, <m>a+_nb \in \Z_n</m> for each
         <m>a,b\in \Z</m>. Thus, <m>a+_nb \in \Z_n</m> for each <m>a,b\in \Z_n</m>.
       </p>
@@ -1036,7 +1062,7 @@ Let <m>n\in \Z^+</m> and let <m>a</m> be any
 <p>
 Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
       </p>
-    </solution>
+    </proof>
 
   </example>
 
@@ -1066,7 +1092,7 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
   <definition>
     <statement>
       <p>
-        For <m>n\in \Z^+</m>, we define <term>multiplication modulo <m>n</m></term>, denoted <m>\cdot_n</m>, on <m>\Z_n</m> by <m>a\cdot_n b = r_n(a)</m>, the remainder when <m>ab</m> is divided by <m>n</m>.
+        For <m>n\in \Z^+</m>, we define <term>multiplication modulo <m>n</m></term>, denoted <m>\cdot_n</m>, on <m>\Z_n</m> by <m>a\cdot_n b = R_n(ab)</m>, the remainder when <m>ab</m> is divided by <m>n</m>.
       </p>
     </statement>
   </definition>
@@ -1095,7 +1121,7 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
   <example>
     <statement>
       <p>
-        <m>\langle \Z_n^{\times},\,\cdot\, \rangle</m> is a group under multiplication. We omit the proof.
+        <m>\langle \Z_n^{\times},\,\cdot_n\, \rangle</m> is a group under multiplication. We omit the proof.
       </p>
     </statement>
   </example>
@@ -1112,9 +1138,12 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
         <me>(f+g)(x)=f(x)+g(x)</me>
         for all <m>f,g\in F</m> and <m>x\in \R</m>. We claim that <m>F</m> is a group under pointwise
         addition. (For variety, in this proof we don't explicitly refer
-        to <m>\G_1</m><ndash /><m>\G_3</m>, though we certainly do verify they hold.)
-        Indeed, if <m>f,g\in F</m> then clearly <m>f+g</m> is also a function
-        from <m>\R</m> to <m>\R</m>, so <m>F</m> is closed under <m>+</m>.
+        to <m>\G_1</m><ndash /><m>\G_3</m>, though we certainly do verify they hold.)</p>
+</statement>
+
+<proof>
+       <p>  If <m>f,g\in F</m> then clearly <m>f+g</m> is also a function
+        from <m>\R</m> to <m>\R</m>, so <m>\langle F,+\rangle</m> is a binary structure.
       </p>
 
       <p>
@@ -1161,7 +1190,7 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
       <p>
         Hence, <m>F</m> is a group under pointwise addition. Note that it is uncountably infinite and abelian.
       </p>
-    </statement>
+    </proof>
   </example>
 
   <example xml:id="bijrr">
@@ -1221,7 +1250,7 @@ Finally, we already know that <m>|\Z_n|=|\{0,1,2,\ldots,n-1\}|=n</m>.
   </definition>
 </section>
 
-<section>
+<section xml:id="summariesofgps">
   <title>Summaries of groups we've seen</title>
   <p>
     When you see the following groups in the wild, you should

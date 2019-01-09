@@ -18,8 +18,8 @@
   <p>
     Ok, so let's do that! But wait: we're defining this operation
     by referring to coset representatives, so we'd better make sure
-    our operation is well defined. Only it sadly turns out that in
-    general this operation is <em>not</em> well defined. For
+    our operation is well-defined. Only it sadly turns out that in
+    general this operation is <em>not</em> well-defined. For
     example:
   </p>
 
@@ -43,7 +43,7 @@
       </p>
 
       <p>
-        So this operation isn't well defined.
+        So this operation isn't well-defined.
       </p>
     </statement>
   </example>
@@ -55,8 +55,7 @@
       (aH)(bH)=abH
     </me>
     on <m>G/H</m>
-    to be well defined? It turns out that this operation is well
-    defined exactly when <m>H</m> is normal in <m>G</m>! We state this in the
+    to be well-defined? It turns out that this operation is well-defined exactly when <m>H</m> is normal in <m>G</m>! We state this in the
     following theorem:
   </p>
 
@@ -68,14 +67,14 @@
           (aH)(bH)=abH
         </me>
         on
-        <m>G/H</m> is well defined if and only if <m>H \unlhd G</m>.
+        <m>G/H</m> is well-defined if and only if <m>H \unlhd G</m>.
       </p>
     </statement>
   
 
   <proof>
     <p>
-      First, assume that the described operation is well defined. Let <m>a\in G</m>; we want to show that <m>aH=Ha</m>.</p><p>Well, let <m>x\in aH</m>. Then
+      First, assume that the described operation is well-defined. Let <m>a\in G</m>; we want to show that <m>aH=Ha</m>.</p><p>Well, let <m>x\in aH</m>. Then
       <me>
         (xH)(a^{-1}H)=xa^{-1}H
       </me>
@@ -84,7 +83,7 @@
       <me>
         (xH)(a^{-1}H)=(aH)(a^{-1}H)=aa^{-1}H=H.
       </me>
-      Since our operation on <m>G/H</m> is well defined, this means that
+      Since our operation on <m>G/H</m> is well-defined, this means that
       <m>xa^{-1}H=H</m>, so <m>xa^{-1}\in H</m>; thus, <m>x\in Ha</m>. We conclude that
       <m>aH\subseteq Ha</m>. The proof that <m>Ha\subseteq aH</m> is similar. So <m>aH=Ha</m>, and thus, since <m>a\in G</m> was arbitrary, 
       <m>H</m> is normal in <m>G</m>.
@@ -114,7 +113,7 @@
   <definition>
     <statement>
       <p>
-        When <m>H\unlhd G</m>, the well defined operation
+        When <m>H\unlhd G</m>, the well-defined operation
         <m>(aH)(bH)=abH</m> on <m>G/H</m> is called <term>left coset
         multiplication</term>.
       </p>
@@ -397,7 +396,7 @@
     We now return to the notion
     of equipping <m>G/H</m>, when <m>H\unlhd G</m>, with a group structure.
     We have already saw that left coset multiplication on <m>G/H</m>
-    is well defined when <m>H\unlhd G</m> (<xref ref="cmwd">Theorem</xref>); it turns out that given this,
+    is well-defined when <m>H\unlhd G</m> (<xref ref="cmwd">Theorem</xref>); it turns out that given this,
     it is very easy to prove that <m>G/H</m> under this operation is a
     group.
   </p>
@@ -420,12 +419,12 @@
     </statement>
 
   <proof>
-    <p>
+ 
+   <p>
       We already know that since <m>N\unlhd G</m>, left coset
-      multiplication on <m>G/N</m> is well defined; further, it is clear
-      that <m>G/N</m> is closed under this operation.
+      multiplication on <m>G/N</m> is well-defined; further, by definition,
+      that <m>(aN)(bN)=abN\in G/N</m> for every <m>aN,bN\in G/N</m>.
     </p>
-
     <p>
       Associativity of this operation on <m>G/N</m> follows from the
       associativity of <m>G</m>'s operation: indeed, if <m>aN</m>, <m>bN</m>, <m>cN \in

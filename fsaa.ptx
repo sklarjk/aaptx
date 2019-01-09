@@ -26,21 +26,20 @@
 </macros>
 
 <latex-image-preamble>
-<!--
-\usepackage{tikz}
-\usepackage{tkz-graph}
-\usepackage{tkz-euclide}
-\usetikzlibrary{patterns}
-\usetikzlibrary{positioning}
-\usetikzlibrary{matrix,arrows}
-\usetikzlibrary{calc}
-\usetikzlibrary{shapes}
-\usetikzlibrary{through,intersections,decorations,shadows,fadings}-->
+
+        \usepackage{pgfplots}               % loads tikz package
+        \usepackage{smartdiagram}           % for a circular diagram
+        \pgfplotsset{axis x line = middle,
+                     axis y line = middle}
+        \usetikzlibrary{backgrounds}
+        \usetikzlibrary{arrows,matrix}
+        \usetikzlibrary{positioning}        % for Dave R's worksheet
+        \usepackage{circuitikz}             % for Virgil P's worksheet
 
 \usepackage[all]{xy}
-\usepackage{pgfplots}
+        </latex-image-preamble>
 
-</latex-image-preamble>
+
 
 </docinfo>
 
@@ -146,9 +145,9 @@ At its most basic level, abstract algebra is the study of structures. Just as an
 
 	 <appendix>
        <title>Solutions to Exercises</title>
-   <p>Instructors: To request solutions to the exercises, please email the author at  <email>sklarjk@plu.edu</email>.</p>
-<!--     
-        <solution-list />-->
+  <!-- <p>Instructors: To request solutions to the exercises, please email the author at  <email>sklarjk@plu.edu</email>.</p>-->
+    
+        <solution-list />
     </appendix>
 
 

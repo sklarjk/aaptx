@@ -94,7 +94,7 @@
         let <m>K=\Ker \phi</m>, let <m>N</m> be a normal subgroup of <m>G</m> with
         <m>N\subseteq K</m>, and let <m>\Psi</m> be the canonical epimorphism
         from <m>G</m> to <m>G/N</m>. Then the map <m>\phibar: G/N \to G'</m> defined
-        by <m>\phibar(aN)=\phi(a)</m> is a well defined homomorphism, with
+        by <m>\phibar(aN)=\phi(a)</m> is a well-defined homomorphism, with
         <m>\phibar \circ \Psi=\phi</m>.
       </p>
 
@@ -116,10 +116,10 @@
       We define <m>\phibar: G/N\to G'</m>, as indicated above, by
       <m>\phibar(aN)=\phi(a)</m> for every <m>aN\in G/N</m>. Since <m>\phibar</m>
       is defined using coset representatives, we must first show that
-      <m>\phibar</m> is well defined. So let <m>aN=bN\in G/N</m>. Then
+      <m>\phibar</m> is well-defined. So let <m>aN=bN\in G/N</m>. Then
       <m>\phibar(aN)=\phi(a)</m> and <m>\phibar(bN)=\phi(b)</m>, so we must
       show that <m>\phi(a)=\phi(b)</m>. Since <m>aN=bN</m> and <m>N\subseteq K</m>,
-      we have that <m>aK=bK</m> by Statement 6 of <xref ref="cosetfacts">Theorem</xref>; thus <m>\phi(a)=\phi(b)</m> (using <xref ref="kermean">Lemma</xref>). So <m>\phibar</m> is well defined.
+      we have that <m>aK=bK</m> by Statement 6 of <xref ref="cosetfacts">Theorem</xref>; thus <m>\phi(a)=\phi(b)</m> (using <xref ref="kermean">Lemma</xref>). So <m>\phibar</m> is well-defined.
     </p>
 
     <p>
@@ -336,8 +336,7 @@
 
   <proof>
     <p>
-      The tricky part is showing that the operation is well
-      defined. Suppose <m>\theta_1, \theta_2, t_1</m>, and <m>t_2</m> are in
+      The tricky part is showing that the operation is well-defined. Suppose <m>\theta_1, \theta_2, t_1</m>, and <m>t_2</m> are in
       <m>\R</m>, with <m>e^{i\theta_1}=e^{it_1}</m> and
       <m>e^{i\theta_2}=e^{it_2}</m>. We want to show that
       <me>
@@ -362,12 +361,12 @@
     <p>
       Thus,
       <m>e^{i(\theta_1+\theta_2)}=e^{i(t_1+t_2)}</m>, so our operation is
-      well defined.
+      well-defined.
     </p>
 
     <p>
-      Next, <m>S^1</m> is clearly closed under the operation, and
-      associativity follows from associativity of addition in
+      Since products of elements in <m>S^1</m> are in <m>S^1</m>, we have that <m>S^1</m> is a binary structure; moreover, 
+      associativity of the operation in <m>S^1</m> follows from the associativity of addition in
       <m>\R</m>. Moreover, <m>e^{i0}=1</m> clearly acts as an identity
       element in <m>S^1</m>, and if <m>e^{i\theta}\in S^1</m>, then
       <m>e^{i\theta}</m> has inverse <m>e^{i(-\theta)} \in S^1</m>. So <m>S^1</m>
@@ -521,9 +520,9 @@
   <proof>
     <p>
       Define <m>\phi: G/K\to G/N</m> by <m>\phi(aK)=aN</m>. We have that
-      <m>\phi</m> is well defined: indeed, let <m>aK=bK \in G/K</m>. Then by
+      <m>\phi</m> is well-defined: indeed, let <m>aK=bK \in G/K</m>. Then by
       Statement 6 of <xref ref="cosetfacts">Theorem</xref>, we have <m>aN=bN</m>, that
-      is, <m>\phi(aK)=\phi(bK)</m>. So <m>\phi</m> is well defined. <m>\phi</m> is
+      is, <m>\phi(aK)=\phi(bK)</m>. So <m>\phi</m> is well-defined. <m>\phi</m> is
       clearly onto, and we have
       <md>
         <mrow>\Ker \phi\amp =\{aK\in

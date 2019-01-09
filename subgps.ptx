@@ -3,7 +3,7 @@
   <title>Subgroups</title>
 
   
-<section>
+<section xml:id="subgpsintro">
   <title>Introduction to subgroups</title>
   <p>
     Sometimes groups are too complicated to understand directly. One method that can be used to identify a group's structure is to study its <em>subgroups</em>.
@@ -170,7 +170,7 @@
   </corollary>
 </section>
 
-<section>
+<section xml:id="subgppfsandlattices">
   <title>Subgroup proofs and lattices</title>
   <p>
     Using <xref ref="subsame">Lemma</xref> and the argument preceding it, we
@@ -344,10 +344,10 @@
   <p>
     It can be useful to look at how subgroups of a group relate to one
     another. One way of doing this is to consider <term>subgroup
-    lattices</term> (also known as <term>subgroup diagrams</term>. To draw a
+    lattices</term> (also known as <term>subgroup diagrams</term>). To draw a
     subgroup lattice for a group <m>G</m>, we list all the subgroups of <m>G</m>,
     writing a subgroup <m>K</m> below a subgroup <m>H</m>, and connecting them
-    with a line, if <m>K</m> is a subgroup of <m>H</m>.
+    with a line, if <m>K</m> is a subgroup of <m>H</m> and there is no proper subgroup <m>L</m> of <m>H</m> that contains <m>K</m> as a proper subgroup.
   </p>
 
   <example>

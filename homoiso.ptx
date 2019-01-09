@@ -2,10 +2,10 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="homoiso">
   <title>Homomorphisms and Isomorphisms</title>
 
-<section>
+<section xml:id="smallordergps">
   <title>Groups of small order</title>
   <p>
-    Let's start exploring groups in order of increasing, well, order. Before we do this, it will be helpful to introduce the notion of a <em>group table</em> (also known as a <em>Cayley table</em><fn>Named after the British mathematician Arthur Cayley.</fn>) for a finite group. Given a finite group <m>G</m>, list its elements in some fixed order, say, <m>a_1, a_2, \ldots, a_n</m>, and then construct its group table by creating an array with exactly one row and exactly one column corresponding to each group element. We then put in the row <m>i</m> and column <m>j</m> the element <m>a_ia_j</m> of <m>G</m>. Note that a single group can have group tables that look different from one another, since reordering a group's elements will change its table.
+    Let's start exploring groups in order of increasing, um, order. Before we do this, it will be helpful to introduce the notion of a <em>group table</em> (also known as a <em>Cayley table</em><fn>Named after the British mathematician Arthur Cayley.</fn>) for a finite group. Given a finite group <m>G</m>, list its elements in some fixed order, say, <m>a_1, a_2, \ldots, a_n</m>, and then construct its group table by creating an array with exactly one row and exactly one column corresponding to each group element. We then put in the row <m>i</m> and column <m>j</m> the element <m>a_ia_j</m> of <m>G</m>. Note that a single group can have group tables that look different from one another, since reordering a group's elements will change its table.
   </p>
 
   <example>
@@ -155,7 +155,7 @@
   </p>
 </section>
 
-<section>
+<section xml:id="homosandisos">
   <title>Definitions of Homomorphisms and Isomorphisms</title>
   <definition>
     <statement>
@@ -200,9 +200,7 @@
         Parts 6 and 7, <m>C^0</m> is the set of all continuous functions from
         <m>\R</m> to <m>\R</m>; <m>C^1</m> is the set of all differentiable functions
         from <m>\R</m> to <m>\R</m> whose derivatives are continuous; and each
-        <m>+</m> indicates pointwise addition on <m>C^0</m> and <m>C^1</m>. (Note that
-        <m>C^1</m> and <m>C^0</m> are not groups, since elements of them will not have
-        inverses unless they are bijections.)
+        <m>+</m> indicates pointwise addition on <m>C^0</m> and <m>C^1</m>. 
         <ol>
           <li>
             <p>
@@ -275,13 +273,24 @@
 
       <p>
         The homomorphism <m>c_a</m> is called
-        <term>conjugation by <m>a</m></term>. Homomorphisms from a group <m>G</m> to
-        itself are called <term>automorphisms</term>. Thus, conjugation by any
-        element <m>a</m> in <m>G</m> is an automorphism of <m>G</m>. (Beware: Some texts use <q>conjugation by <m>a</m></q> to 
-        refer to the function <m>x\mapsto a^{-1}xa</m>.) Both versions of conjugation by <m>a</m> in group <m>G</m> are
-        automorphisms of <m>G</m>.)</p>
+        <term>conjugation by <m>a</m></term>. 
+        </p>
     </statement>
   </example>
+
+  <definition>
+    <statement>
+      <p>
+Homomorphisms from a group <m>G</m> to
+        itself are called <term>endomorphisms</term>, and isomorphisms from a group to itself are called <term>automorphisms</term>.
+      </p>
+    </statement>
+  </definition>
+  <p> It can be shown that conjugation by any
+        element <m>a</m> of a group <m>G</m> is a bijection from <m>G</m> to itself (can you prove this?), so such conjugation is an automorphism of <m>G</m>. (Beware: Some texts use <q>conjugation by <m>a</m></q> to 
+        refer to the function <m>x\mapsto a^{-1}xa</m>.) Both versions of conjugation by <m>a</m> in group <m>G</m> are
+        automorphisms of <m>G</m>.)</p>
+
 
   <p>
     We end with a theorem stating basic facts about
@@ -327,7 +336,7 @@
   </theorem>
 </section>
 
-<section>
+<section xml:id="isomorphicgps">
   <title>Isomorphic groups</title>
   <p>
     One of the key ideas we've discussed in determining whether binary
@@ -436,8 +445,8 @@
       For Part 3: Since <m>G\simeq G'</m> and <m>G'\simeq G''</m>, there exist
       isomorphisms <m>\phi:G\to G'</m> and <m>\psi:G'\to G''</m>. Define
       <m>\theta:G\to G''</m> by <m>\theta=\psi \circ \phi</m>. Since <m>\phi</m> and
-      <m>\psi</m> are both bijections, <m>\theta</m> is a bijection (<xref ref="compbij">Theorem</xref>). Next, let <m>a,b\in G</m>. The
-      <md>
+      <m>\psi</m> are both bijections, <m>\theta</m> is a bijection (<xref ref="compbij">Theorem</xref>). Next, let <m>a,b\in G</m>. Then
+        <md>
         <mrow>\theta(a\cdot b)\amp =\psi(\phi(a\cdot b))\amp \amp \text{ (by definition of \(\theta\)) }</mrow>
         <mrow>\amp =\psi(\phi(a)\cdot'\phi(b))\amp \amp \text{ (since \(\phi\) is a homomorphism) }</mrow>
         <mrow>\amp =\psi(\phi(a))\cdot''\psi(\phi(b))\amp \amp \text{ (since \(\psi\) is a homomorphism) }</mrow>
@@ -620,7 +629,7 @@ Note that the first table looks exactly like the second table if we
   <definition>
     <statement>
       <p>
-        A group property <m>P</m> is called a <term>group invariant</term>
+        A group property is called a <term>group invariant</term>
         if it is preserved under isomorphism.
       </p>
     </statement>

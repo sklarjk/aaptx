@@ -12,7 +12,7 @@
 
 
 
-<section>
+<section xml:id="permutationgps">
   <title>Introduction to permutation groups</title>
 
 
@@ -90,7 +90,7 @@
     <notation><usage>S_A</usage><description>the set of all permutations on <m>A</m></description></notation>
     <statement>
       <p>
-        Given a set <m>A</m>, we define <m>S_A</m> be the set of all
+        Given a set <m>A</m>, we define <m>S_A</m> to be the set of all
         permutations on <m>A</m>.
       </p>
     </statement>
@@ -126,7 +126,7 @@
       Let <m>\sigma, \tau \in S_A</m>. Since a composition of
       bijections is a bijection (see <xref ref="compbij">Theorem</xref>), <m>\sigma
       \tau</m> is a bijection from <m>A</m> to <m>A</m>, hence is in <m>S_A</m>. So
-      <m>S_A</m> is closed under composition.</p> <p>Next,            function composition is always associative.</p><p> The identity function <m>1_A : A\to A</m> defined by
+      <m>\langle S_A,\circ\rangle</m> is a binary structure</p> <p>Next, function composition is always associative.</p><p> The identity function <m>1_A : A\to A</m> defined by
             <me>
               1_A(a)=a \text{ for all \(a\in A\)}
             </me>
@@ -191,7 +191,7 @@
     <m>\{1,2,\ldots, n\}</m> (<m>n\in \Z^+</m>).</p>
 </section>
 
-<section>
+<section xml:id="symmgps">
   <title>Symmetric groups</title>
   <definition>
 
@@ -256,7 +256,7 @@
     <statement>
       <p>
         A permutation <m>\sigma</m> in <m>S_n</m> is called a <term><m>k</m>-cycle</term> or a <term>cycle of length <m>k</m></term> (or, less
-        specifically, a <term>cycle</term>) if there exist elements <m>a_1,
+        specifically, a <term>cycle</term>) if there exist distinct elements <m>a_1,
         a_2,\ldots, a_k</m> in <m>\{1,2,\ldots,n\}</m> such that
 
       <ul>
@@ -350,7 +350,7 @@
       written in cycle notation and the number <m>a\in \{1,2,\ldots, n\}</m>
       appears nowhere in <m>\sigma</m>'s representation, this means that
       <m>\sigma</m> fixes <m>a</m>. The only permutation that we cannot really write
-      in cycle notation is the identity element <m>1_A</m> of <m>S_A</m>, which we
+      in cycle notation is the identity element of <m>S_n</m>, which we
       henceforth denote by <m>e</m>.
     </p>
   </remark>
@@ -452,12 +452,12 @@
   </example>
 </section>
 
-<section>
+<section xml:id="altgps">
   <title>Alternating groups</title>
   <p>
     Note that every <m>k</m>-cycle <m>(a_1a_2\ldots a_k)\in S_n</m> can be written as a product of (not necessarily disjoint) transpositions:
     <me>
-      (a_1a_2\ldots a_k)=(a_1a_n)(a_1a_{n-1})\cdots(a_1a_3)(a_1a_2).
+      (a_1a_2\ldots a_k)=(a_1a_k)(a_1a_{k-1})\cdots(a_1a_3)(a_1a_2).
     </me>
   </p>
   <p>
@@ -489,7 +489,7 @@
 
   <proof>
     <p>
-      We already know that every permutation is <m>S_n</m> is a product of transpositions, so must be even or odd. For proof that no permutation is both even <em>and</em> odd, see, for instance, Proof 1 or 2 of Theorem 9.15 on p. 91 in<nbsp /><xref ref="F" />.
+      We already know that every permutation in <m>S_n</m> is a product of transpositions, so must be even or odd. For proof that no permutation is both even <em>and</em> odd, see, for instance, Proof 1 or 2 of Theorem 9.15 on p. 91 in<nbsp /><xref ref="F" />.
     </p>
   </proof>
 
@@ -544,13 +544,13 @@
   <theorem>
     <statement>
       <p>
-        <m>A_n=(n!)/2</m>.
+        <m>|A_n|=(n!)/2</m>.
       </p>
     </statement>
   </theorem>
 </section>
 
-<section>
+<section xml:id="cayleysthm">
   <title>Cayley's Theorem</title>
   <p>
     One might wonder how <q>common</q> permutation groups are in math. They
@@ -705,17 +705,30 @@ We say that <m>\lambda_a</m>, <m>\rho_a</m>, and <m>c_a</m>
     <p>
       Consider a regular triangle <m>T</m>, with vertices labeled <m>1</m>, <m>2</m>, and <m>3</m>. We show <m>T</m> below, also using dotted lines to indicate a vertical line of symmetry of <m>T</m> and a rotation of <m>T</m>.</p>
 
-<sidebyside width="20%">
+
+<sidebyside width="30%">
     <image>
     <latex-image-code>
- \xymatrix{&amp;1\ar@{-}[ldd]\ar@{-}[rdd]\ar@{--}[dd]\\ &amp;\stackrel{\longleftrightarrow}{\hspace{-10pt}f} &amp;
-\\ 3\ar@{-}[rr]&amp;&amp;2\ar@{-->}@/^{15pt}/[ll]^{\begin{array}{ccc}&amp;r&amp; \end{array}}}
+\begin{tikzpicture}[scale=1.5, >=latex]
+
+\draw
+(0,1.732) node[above] {1} 
+-- (1,0) node[right] {2}
+-- (-1,0)[left] node {3}
+-- cycle;
+
+\draw[dashed] (0,1.732) -- (0,0);
+
+\draw[->] (0,1) -- (-0.25,1);
+\draw[->] (0,1) -- (0.25,1);
+\draw (0.02,1.15) node [right]{$f$};
+
+\draw [dashed,->] (1,0) to [out=210,in=-30] (-1,0);
+\draw (0,-0.3) node[below] {$r$};
+\end{tikzpicture}
  </latex-image-code>
   </image>
-
   </sidebyside>
-
-
     <p>
       Note that if we reflect <m>T</m> over the vertical dotted line (indicated in the picture by <m>f</m>), <m>T</m> maps onto itself, with <m>1</m> mapping to <m>1</m>, and <m>2</m> and <m>3</m> mapping to each other. Similarly, if we rotate <m>T</m> clockwise by <m>120^{\circ}</m> (indicated in the picture by <m>r</m>), <m>T</m> again maps onto itself, this time with <m>1</m> mapping to <m>2</m>, <m>2</m> mapping to <m>3</m>, and <m>3</m> mapping to <m>1</m>. Both of these maps are called <em>symmetries</em> of <m>T</m>; <m>f</m> is a <em>reflection</em> or <em>flip</em> and <m>r</m> is a <em>rotation</em>.
     </p>
@@ -797,13 +810,12 @@ We say that <m>\lambda_a</m>, <m>\rho_a</m>, and <m>c_a</m>
 
     <proof>
       <p>
-        We first show that <m>D_3</m> is closed under composition. As
+        First, as
         noted above, <m>rf=fr^2</m>. So any map of the form <m>f^ir^jf^kr^l</m>
         (<m>i,k=0,1</m>, <m>j,l=0,1,2</m>) can be written in the form <m>f^sr^t</m>
         for some <m>s,t \in \N</m>. Finally, let <m>R_2(s)</m> and <m>R_3(t)</m> be
         the remainders when you divide <m>s</m> by <m>2</m> and <m>t</m> by <m>3</m>; then
-        <m>f^sr^t=f^{R_2(s)}r^{R_3(t)} \in D_3</m>. So <m>D_3</m> is closed under
-        composition.
+        <m>f^sr^t=f^{R_2(s)}r^{R_3(t)} \in D_3</m>. So <m>\langle D_3,\circ\rangle </m> is a binary structure.
       </p>
 
       <p>
@@ -812,7 +824,7 @@ We say that <m>\lambda_a</m>, <m>\rho_a</m>, and <m>c_a</m>
               in <m>D_3</m>.
          Finally, let <m>x=f^ir^j\in D_3</m>. Then <m>y=r^{3-j}f^{2-i}</m>
               is
-              in <m>D_3</m> (since <m>D_3</m> is closed under composition) with <m>xy=yx=e</m>. So <m>D_3</m> is a group.
+              in <m>D_3</m> with <m>xy=yx=e</m>. So <m>D_3</m> is a group.
       </p>
     </proof>
    </theorem>

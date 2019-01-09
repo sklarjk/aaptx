@@ -1,7 +1,7 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="pre">
   <title>Preliminaries</title>
 
-<section>
+<section xml:id="sets">
   <title>Sets</title>
   <p>
     We start off by providing a <q>definition</q> of a basic mathematical structure to which we will soon add bells and whistles. We use quotes here because what follows doesn't have the precision we usually require when defining a mathematical object.
@@ -54,10 +54,10 @@
 
 
   <p>
-    Sets must be <em>well defined</em>: that is, it must be clear
+    Sets must be <em>well-defined</em>: that is, it must be clear
     exactly which objects are in a set, and which objects aren't.
-    For instance, the set of all integers is well defined, but the
-    set of all big integers is not well defined, since it is
+    For instance, the set of all integers is well-defined, but the
+    set of all big integers is not well-defined, since it is
     unclear what <q>big</q> means in this context.
   </p>
 
@@ -223,16 +223,16 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
       <p><ol>
         <li>
           <p>
-            If <m>A</m> and <m>B</m> are sets, then the <term>union</term> of <m>A</m> and <m>B</m>, denoted <m>A\cup B</m>, is the set
-            <m>A\cup B=\{x: x\in A \text{ or }  x\in B\};</m> the <term>intersection</term> of <m>A</m> and <m>B</m>, denoted <m>A\cap B</m>, is the set
-            <m>A\cap B=\{x: x\in A \text{ and }  x\in B\};</m> and the <term>difference</term> of <m>A</m> and <m>B</m>, denoted <m>A-B</m> (or <m>A\setminus B</m>), is the set
+            If <m>A</m> and <m>B</m> are subsets of a set <m>U</m>, then the <term>union</term> of <m>A</m> and <m>B</m>, denoted <m>A\cup B</m>, is the set
+            <m>A\cup B=\{x\in U : x\in A \text{ or }  x\in B\};</m> the <term>intersection</term> of <m>A</m> and <m>B</m>, denoted <m>A\cap B</m>, is the set
+            <m>A\cap B=\{x \in U: x\in A \text{ and }  x\in B\};</m> and the <term>difference</term> of <m>A</m> and <m>B</m>, denoted <m>A-B</m> (or <m>A\setminus B</m>), is the set
             <m>A-B=\{x: x\in A \text{ and }  x\not\in B\}.</m>
           </p>
         </li>
 
         <li>
           <p>
-            More generally, given any collection of sets <m>A_i</m> (<m>i</m> in some index set <m>I</m>), the <term>union</term> of the <m>A_i</m> is <me>\bigcup_{i\in I}A_i=\{x: x\in A_i \text{ for some }  i\in I\},</me> and the <term>intersection</term> of the <m>A_i</m> is <me>\bigcap_{i\in I}A_i=\{x: x\in A_i \text{ for every }  i\in I\}.</me>
+            More generally, given any collection of subsets <m>A_i</m> (<m>i</m> in some index set <m>I</m>) of a set <m>U</m>, the <term>union</term> of the <m>A_i</m> is <me>\bigcup_{i\in I}A_i=\{x\in U: x\in A_i \text{ for some }  i\in I\},</me> and the <term>intersection</term> of the <m>A_i</m> is <me>\bigcap_{i\in I}A_i=\{x\in U: x\in A_i \text{ for every }  i\in I\}.</me>
           </p>
         </li>
 
@@ -249,7 +249,7 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
   </definition>
 
   <p>
-    Notice that for any sets <m>A</m> and <m>B</m>, <m>A\cap B \subseteq A \subseteq A\cup B</m> and
+    Notice that for any subsets <m>A</m> and <m>B</m> of a set <m>U</m>, <m>A\cap B \subseteq A \subseteq A\cup B</m> and
     <m>A\cap B \subseteq B \subseteq A\cup B</m>. Also note that if sets <m>A_i</m> (<m>i \in I</m>) are mutually disjoint then they are also disjoint, but they may be disjoint without being mutually disjoint. For example, the sets <m>\{i, i+1\}</m> for <m>i\in \Z</m> are disjoint but not mutually disjoint. (Do you see why?)
   </p>
 
@@ -297,7 +297,7 @@ what the last notation, if we replace <m>\Z</m> with <m>\Q</m>, <m>\R</m>, or <m
   </example>
 </section>
 
-<section>
+<section xml:id="funcs">
   <title>Functions</title>
   <p>
     You have probably encountered functions before. In introductory
@@ -510,7 +510,7 @@ To prove that <m>f</m> is <em>not</em> onto: Identify an element <m>t\in T</m> f
 
 </section>
 
-<section>
+<section xml:id="card">
   <title>Cardinality</title>
   <p>
     One of the set traits that will be useful to us in
@@ -642,7 +642,7 @@ To prove that <m>f</m> is <em>not</em> onto: Identify an element <m>t\in T</m> f
   </p>
 
   <p>
-    We end our preliminary chapter with the following theorem and a corollary of it (which can be proved using induction on <m>n</m>). We prove only the fourth statement in the theorem, omitting the proofs of the first two statements and leaving the proof of the third statement as an exercise for the reader.
+    We end our preliminary chapter with the following theorem and a corollary of it (which can be proved using induction on <m>n</m>). We omit the proofs of the first two statements.
   </p>
 
   <theorem xml:id="cardthm">
@@ -661,16 +661,19 @@ To prove that <m>f</m> is <em>not</em> onto: Identify an element <m>t\in T</m> f
               If <m>A\subseteq B</m> and <m>B</m> is finite [countable] then so is <m>A</m>.
             </p>
           </li>
+     
 
           <li>
             <p>
-              If <m>|A|=n\lt \infty</m> and <m>|B|=m\lt  \infty</m>, then <m>|A\times B|=mn</m>.
+           If <m>|A|=m\lt \infty</m> and <m>|B|=n\lt  \infty</m>, then <m>|A\times B|=mn</m>.  More generally, if <m>n>1</m> is an integer and <m>A_1, A_2, \ldots, A_n</m>  are sets with <m>|A_i|=k_i\lt \infty</m> for each <m>i=1,2,\ldots, n</m>, then <m>|A_1 \times A_2 \times \cdots \times A_n|=k_1k_2\cdots k_n</m>.
             </p>
           </li>
 
+
+
           <li>
             <p>
-              Any finite product of countable sets is countable.</p>
+              Let <m>A</m> and <m>B</m> be countable sets. Then <m>A \times B</m> is countable. More generally,  if <m>n>1</m> be an integer and <m>A_1,A_2,\ldots, A_n</m> are countable  sets, then <m>A_1\times A_2\times \cdots \times A_n</m> is countable.</p>
               
           </li>
         </ol>
@@ -678,8 +681,9 @@ To prove that <m>f</m> is <em>not</em> onto: Identify an element <m>t\in T</m> f
     </statement>
 
 <proof>
+  <p>You prove the first statement in Part 3 in your homework. The second statement in Part 3 follows using induction on the number of sets.</p>
   <p>
-    To prove the fourth statement: Let <m>A</m> and <m>B</m> be countable sets. Assume that <m>A</m> and <m>B</m> are both countably infinite. Since <m>\Z^+</m> is countably infinite, we can index the elements of <m>A</m> and of <m>B</m> by <m>\Z^+</m>, writing
+  To prove the first statement in Part 4: Assume that <m>A</m> and <m>B</m> are both countably infinite. Since <m>\Z^+</m> is countably infinite, we can index the elements of <m>A</m> and of <m>B</m> by <m>\Z^+</m>, writing
     <me>A=\{a_1,a_2,\ldots\} \text{ and }  B=\{b_1,b_2,\ldots\}.</me>
   </p>
 
@@ -727,8 +731,11 @@ To prove that <m>f</m> is <em>not</em> onto: Identify an element <m>t\in T</m> f
   </p>
 
   <p>
-    The proof in the case that one or both of sets <m>A</m> and <m>B</m> are finite is similar; the corresponding table in that case will simply have either only finitely many rows or finitely many columns, or both.
-  </p>
+    The proof in the case that one or both <m>A</m> and <m>B</m> are finite is similar; the corresponding table in that case will simply have either only finitely many rows or finitely many columns, or both.</p> 
+
+<p>The second statement in Part 4 follows using induction on the number of sets.</p>
+
+
 
   </proof>
 </theorem>
@@ -744,14 +751,8 @@ To prove that <m>f</m> is <em>not</em> onto: Identify an element <m>t\in T</m> f
               know that you will not be responsible for that material in
               class.)</p></remark>
 
-  <corollary>
-    <statement>
-      <p>
-        Let <m>n>1</m> be an integer and let <m>A_1,A_2,\ldots, A_n</m> be countable sets. Then <m>A_1\times A_2\times \cdots \times A_n</m> is countable.
-      </p>
-    </statement>
-  </corollary>
+
 </section>
 
-  <xi:include href="./exercises/preex.ptx" />
+<xi:include href="./exercises/preex.ptx" />
 </chapter>
