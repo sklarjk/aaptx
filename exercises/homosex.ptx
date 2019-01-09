@@ -157,7 +157,7 @@
   <exercise>
     <statement>
       <p>
-        Define <m>d : GL(n,\R)\to \R^*</m> by <m>d(A)=\det A</m>. Prove/disprove that <m>d</m> is:
+        LDefine <m>d : GL(2,\R)\to \R^*</m> by <m>d(A)=\det A</m>. Prove/disprove that <m>d</m> is:
         <ol>
           <li>
             <p>
@@ -192,7 +192,7 @@
       <li>
         <p>
           The function <m>d</m> is a homomorphism, since for every <m>A,B \in
-          GL(n,\R),</m> we have
+          GL(2,\R),</m> we have
           <me>d(AB)=\det(AB)=(\det A)(\det B)=d(A)d(B).</me>
         </p>
       </li>
@@ -205,6 +205,7 @@
 
       <li>
         <p>
+        <!--
           <m>d</m> is onto: Let <m>a\in \R^*</m>. Then the matrix
           <me>A=\begin{bmatrix}a \amp  0 \amp  0 \amp  \cdots \amp  0 \\
             0 \amp  1 \amp  0 \amp  \cdots \amp  0 \\
@@ -212,7 +213,14 @@
             \vdots \amp  \vdots \amp  \vdots \amp  \ddots \amp  \vdots \\
             0 \amp  0 \amp  0 \amp  \cdots \amp  1
             \end{bmatrix}</me>
-          is in <m>GL(n,\R)</m>, with <m>d(A)=a</m>.
+          is in <m>GL(n,\R)</m>, with <m>d(A)=a</m>.-->
+
+          <m>d</m> is onto: Let <m>a\in \R^*</m>. Then the matrix
+          <me>A=\begin{bmatrix}a \amp  0  \\
+            0 \amp  1 
+            \end{bmatrix}</me>
+          is in <m>GL(2,\R)</m>, with <m>d(A)=a</m>.
+
         </p>
       </li>
 

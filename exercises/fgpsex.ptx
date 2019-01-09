@@ -33,7 +33,7 @@ Find the following.
 <li><m>|2\Z/6\Z|</m></li>
 <li><m>|H|</m>, for <m>H=2+\langle 6\rangle \subseteq \Z_{12}</m></li>
 <li><m>o(2+\langle 6\rangle)</m> in <m>\Z_{12}/\langle 6\rangle</m></li>
-<li><m>\langle f+H\rangle </m> in <m>D_4/H</m>, where <m>H=\{e,r^2\}</m></li>
+<li><m>\langle fH\rangle </m> in <m>D_4/H</m>, where <m>H=\{e,r^2\}</m></li>
 <li><m>|(\Z_6\times \Z_8)/(\langle 3\rangle\times \langle 2\rangle)|</m></li>
 
 
@@ -52,7 +52,7 @@ Find the following.
 <li><m>|2\Z/6\Z|=(2\Z:6\Z)=3</m></li>
 <li><m>\langle 6\rangle=\{6,0\}</m>, so <m>|H|=|\{8,2\}|=2</m></li>
 <li><m>o(2+\langle 6\rangle)=3</m></li>
-<li><m>\langle f+H\rangle= \{f+H, H\}</m></li>
+<li><m>\langle fH\rangle= \{fH, H\}</m></li>
 <li><m>|\Z_6\times \Z_8|=6(8)=48</m> and <m>|\langle 3\rangle \times \langle 2\rangle|=2(4)=8</m>, so <m>|(\Z_6\times \Z_8)/(\langle 3\rangle\times \langle 2\rangle)|=48/8=6</m>.</li>
 <li><m>\langle (5,4)\rangle=\{(5,4),(10,8),(0,12),(5,16),(10,20),(0,0)\}</m>; so the order
 of <m>(\Z_{15} \times \Z_{24})/\langle (5,4)\rangle</m> is <m>\frac{(15)(24)}{6}=60</m>.</li>
@@ -71,7 +71,7 @@ of <m>(\Z_{15} \times \Z_{24})/\langle (5,4)\rangle</m> is <m>\frac{(15)(24)}{6}
 <li><m>\Z/14\Z</m></li>
 <li><m>3\Z/12\Z</m></li>
 <li><m>S_8/A_8</m></li>
-<li><m>(4\Z \times 15\Z)/(\langle 2 \rangle \times \langle 3 \rangle )</m></li>
+<li><m>(\Z_4 \times \Z_{15})/(\langle 2 \rangle \times \langle 3 \rangle )</m></li>
 <li><m>D_4/\langle r^2 \rangle</m></li>
 
 </ol>

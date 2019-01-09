@@ -4,7 +4,7 @@
   <exercise>
     <statement>
       <p>
-        For each of the following, write Y if the given <q>operation</q> is a well-defined binary operation on the given set; otherwise, write N. In each case in which it <em>isn't</em> a well-defined binary operation on the set, provide a <em>brief</em> explanations. You do not need to prove or explain anything in the cases in which it <em>is</em> a binary operation.
+        For each of the following, write Y if the given <q>operation</q> is a well-defined binary operation on the given set; otherwise, write N. In each case in which it <em>isn't</em> a well-defined binary operation on the set, provide a <em>brief</em> explanation. You do not need to prove or explain anything in the cases in which it <em>is</em> a binary operation.
         <ol>
           <li>
             <p>
@@ -36,7 +36,7 @@
     <ol>
       <li>
         <p>
-          Y
+          N; for instance, <m>1,-1\in \C^*</m>, but <m>1+(-1)=0\not \in \C^*</m>.
         </p>
       </li>
 
@@ -130,8 +130,9 @@ in <m>\M_2(\R)</m>. Then <m>AB=B</m> while <m>BA</m> is the zero matrix. Since <
         </ol>
       </p>
     </statement>
-  <solution><p>
-        <ol>
+  <solution>
+
+<p>        <ol>
       <li>
         <p>
           Let <m>x, y\in 2\Z</m>. Then there exist <m>a,b\in \Z</m> such that <m>x=2a</m> and <m>y=2b</m>.  Then

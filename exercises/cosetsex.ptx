@@ -251,7 +251,7 @@ Write all permutations using <em>disjoint cycle notation</em>, and write all dih
       <ol>
         <li>
           <p>
-            The left and the right cosets of <m>H=\langle 4\rangle =\{0,4,8,12,16\}</m> in <m>\Z_{20}</m> are <m>H</m>, <m>1+H=\{1,5,9,13,17\}=H+1</m>, <m>2+H=\{2,7,10,14,18\}=H+2</m>, and <m>3+H=\{3,8,11,15,19\}=H+3</m>.
+            The left and the right cosets of <m>H=\langle 4\rangle =\{0,4,8,12,16\}</m> in <m>\Z_{20}</m> are <m>H</m>, <m>1+H=\{1,5,9,13,17\}=H+1</m>, <m>2+H=\{2,6,10,14,18\}=H+2</m>, and <m>3+H=\{3,7,11,15,19\}=H+3</m>.
           </p>
         </li>
 
@@ -494,13 +494,13 @@ Write all permutations using <em>disjoint cycle notation</em>, and write all dih
 
           <li>
             <p>
-              <m>|G/H|</m> must be less than <m>|G|</m>.
+              If <m>G</m> is finite, then <m>|G/H|</m> must be less than <m>|G|</m>.
             </p>
           </li>
 
           <li>
             <p>
-              <m>(G:H)</m> must be less than or equal to <m>|G|</m>.
+              If <m>G</m> is finite, then <m>(G:H)</m> must be less than or equal to <m>|G|</m>.
             </p>
           </li>
         </ol>
@@ -597,7 +597,7 @@ Write all permutations using <em>disjoint cycle notation</em>, and write all dih
   </solution>
   </exercise>
 
-    <exercise>
+<!--    <exercise>
     <statement>
       <p>
        Let <m>G</m> be a group of finite order <m>n</m>, containing identity element <m>e</m>. Let <m>a\in G</m>. Prove that <m>a^n=e</m>.
@@ -611,10 +611,10 @@ Write all permutations using <em>disjoint cycle notation</em>, and write all dih
 By Lagrange's
     Theorem, <m>o(a)=|\angle a\rangle|</m> divides <m>n</m> ; 
  that is, <m>n=o(a)m</m>
-    for some <m>m\in \fatz^+</m>.  Thus,
+    for some <m>m\in \Z^+</m>.  Thus,
 <me>a^n=a^{o(a)m}=(a^{o(a)})^m=e^m=e.</me></p>
   </solution>
  
-  </exercise>
+  </exercise>-->
 
 </exercises>

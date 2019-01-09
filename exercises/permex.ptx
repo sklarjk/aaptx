@@ -6,8 +6,9 @@
   <exercise>
     <statement>
       <p>
-        Let <m>\sigma=(134)</m>, <m>\tau=(23)(145)</m>, <m>\rho=(56)(78)</m>, and <m>\alpha=(12)(145)</m> in <m>S_8</m>. Compute the following.
-        <ol cols="4">
+        Let <m>\sigma=(134)</m>, <m>\tau=(23)(145)</m>, <m>\rho=(56)(78)</m>, and <m>\alpha=(12)(145)</m> in <m>S_8</m>. Compute the following.</p>
+<p>
+    <ol>
           <li>
             <p>
               <m>\sigma \tau</m>
@@ -56,10 +57,11 @@
             </p>
           </li>
         </ol>
-      </p>
+      </p>     
     </statement>
+
     <solution>
-    <p>
+ <p>
     <ol>
       <li>
         <p>
@@ -105,10 +107,11 @@
 
       <li>
         <p>
-          <m>\langle \tau\rangle =\{(23)(145), (154), (23), (145), e\}</m>
+          <m>\langle \tau\rangle =\{(23)(145), (154), (23), (145), (23)(154), e\}</m>
         </p>
       </li>
     </ol></p>
+   
   </solution>
   </exercise>
   
@@ -135,14 +138,14 @@
   
   <solution>
     <p>
-      Since <m>e\in A_n</m>, <m>A_n\neq \emptyset</m>. Next, let <m>\sigma, \tau \in A_n</m>. Then <m>\sigma</m> can be written as a product of <m>k</m> transpositions and <m>\tau</m> can be written as <m>\tau=\tau_1\tau_2\cdots \tau_m</m>, where <m>k</m> and <m>m</m> are even and the <m>\tau_i</m> are transpositions. Since each <m>\tau_i</m> is a transposition, each <m>\tau_i</m> is its own inverse; so
+      First, clearly <m>e\in A_n</m>. Next, let <m>\sigma, \tau \in A_n</m>. Then <m>\sigma</m> can be written as a product of <m>k</m> transpositions and <m>\tau</m> can be written as <m>m</m> transpositions, where <m>k</m> and <m>m</m> are even.  Then <m>\sigma \tau</m> is a product of <m>k+m</m> transpositions; since <m>k</m> and <m>m</m> are even, <m>k+m</m> is even, so <m>\sigma\tau\in A_n</m>. Finally, if we write <m>\sigma</m> as <m>\sigma= \sigma_1\sigma_2\cdots \sigma_k</m>, where the <m>\sigma_i</m> are transpositions, then
       <me>
-        \tau^{-1}=(\tau_m)^{-1}(\tau_{m-1})^{-1}\cdots \tau_1^{-1}=\tau_m^{-1}\tau_{m-1}^{-1}\cdots \tau_1^{-1}.
+        \sigma^{-1}=(\sigma_k)^{-1}(\sigma_{k-1})^{-1}\cdots \sigma_1^{-1}=\sigma_k\sigma_{k-1}\cdots \sigma_1.
       </me>
     </p>
 
     <p>
-      Thus, <m>\sigma \tau^{-1}</m> is a product of <m>k+m</m> transpositions; since <m>k</m> and <m>m</m> are even, <m>k+m</m> is even, and so <m>\sigma \tau^{-1}\in A_n</m>. Thus, <m>A_n\leq S_n</m>, by the <xref ref="twostep" text="title"/>.
+      Thus, <m>\sigma</m> is a product of <m>k</m> transpositions; since <m>k</m> is even, <m>\sigma^{-1}\in A_n</m>. Thus, <m>A_n\leq S_n</m>.
     </p>
   </solution>
   </exercise>

@@ -26,7 +26,7 @@
 
           <li>
             <p>
-              For every integer <m>m</m> and integer <m>n>2</m>, there exist infinitely many integers <m>a</m> such that <m>a</m> is congruent to <m>m</m> modulo <m>n</m>.
+              For every integer <m>m</m> and integer <m>n\geq 2</m>, there exist infinitely many integers <m>a</m> such that <m>a</m> is congruent to <m>m</m> modulo <m>n</m>.
             </p>
           </li>
 
@@ -44,13 +44,13 @@
 
           <li>
             <p>
-              If <m>e\in \langle S,*\rangle</m> is an identity element of <m>S</m>, then <m>e</m> is an idempotent in <m>S</m> (that is, <m>e*e=e</m>).
+              If  <m>e</m> is an identity element of a binary structure (not necessarily a group) <m>\langle S,*\rangle</m>, then <m>e</m> is an idempotent in <m>S</m> (that is, <m>e*e=e</m>).
             </p>
           </li>
 
           <li>
             <p>
-              If <m>s\in \langle S,*\rangle</m> is an idempotent, then <m>s</m> must be an identity element of <m>S</m>.
+              If <m>s</m> is an idempotent in a binary structure (not necessarily a group) <m>\langle S,*\rangle</m>, then <m>s</m> must be an identity element of <m>S</m>.
             </p>
           </li>
         </ol>
@@ -113,11 +113,11 @@
   <exercise>
     <statement>
       <p>
-        Let <m>G</m> be the set of all functions from <m>\Z</m> to <m>\R</m>. Prove that pointwise multiplication on <m>G</m> is commutative. (<em>Note.</em> To prove that two functions, <m>h</m> and <m>j</m>, sharing the same domain <m>D</m> are equal, you need to show that <m>h(x)=j(x)</m> for every <m>x\in D</m>.)
+        Let <m>G</m> be the set of all functions from <m>\Z</m> to <m>\R</m>. Prove that pointwise multiplication on <m>G</m> (that is, the operation defined by <m>(fg)(x)=f(x)g(x)</m> for all <m>f,g\in G</m> and <m>x\in \Z</m>) is commutative. (<em>Note.</em> To prove that two functions, <m>h</m> and <m>j</m>, sharing the same domain <m>D</m> are equal, you need to show that <m>h(x)=j(x)</m> for every <m>x\in D</m>.)
       </p>
     </statement>
-  
-  <solution>
+ 
+   <solution>
     <p>
       Let <m>f,g\in G</m>. Then for every <m>x\in \Z</m>,
       <me>(fg)(x)=f(x)g(x)=g(x)f(x),</me>
@@ -366,7 +366,7 @@
       <p>
   <notation><usage>Z(G)</usage><description>the center of a group <m>G</m></description></notation>
         Let <m>G</m> be a group. The subset
-        <me>Z(G):=\{z \in G\,:\, zg=gz \mbox{ for all } g\in Z(G)\}</me>
+        <me>Z(G):=\{z \in G\,:\, zg=gz \mbox{ for all } g\in G\}</me>
         of <m>G</m> is called the <term>center</term> of <m>G</m>. In other words, <m>Z(G)</m> is the set of all elements of <m>G</m> that commute with every element of <m>G</m>.
         Prove that <m>Z(G)</m> is closed in <m>G</m>.
       </p>

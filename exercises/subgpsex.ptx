@@ -174,11 +174,11 @@
   <exercise>
     <statement>
       <p>
-        For each group <m>G</m> and subset <m>H</m>, decide whether or not <m>H</m> is a subgroup of <m>G</m>. In the cases in which <m>H</m> is <em>not</em> a subgroup of <m>G</m>, provide a proof. (<em>Note.</em> Your proofs do not need to be long to be correct!)
+        Let <m>n\in \Z^+</m>. For each group <m>G</m> and subset <m>H</m>, decide whether or not <m>H</m> is a subgroup of <m>G</m>. In the cases in which <m>H</m> is <em>not</em> a subgroup of <m>G</m>, provide a proof. (<em>Note.</em> Your proofs do not need to be long to be correct!)
         <ol>
           <li>
             <p>
-              <m>G=\Z</m>, <m>H=\R</m>
+              <m>G=\R</m>, <m>H=\Z</m>
             </p>
           </li>
 
@@ -225,7 +225,8 @@
     <ol>
       <li>
         <p>
-          <m>H\not\subseteq G</m>, so <m>H\not\leq G</m>.
+          <m>H \leq G</m>.
+          <!--<m>H\not\subseteq G</m>, so <m>H\not\leq G</m>.-->
         </p>
       </li>
 
@@ -271,7 +272,7 @@
   <exercise>
     <statement>
       <p>
-        Let <m>G</m> and <m>G'</m> be groups, let <m>\phi</m> a homomorphism from <m>G</m> to <m>G'</m>, and let <m>H</m> a subgroup of <m>G</m>. Then <m>\phi(H)</m> is a subgroup of <m>G'</m>.
+        Let <m>G</m> and <m>G'</m> be groups, let <m>\phi</m> be a homomorphism from <m>G</m> to <m>G'</m>, and let <m>H</m> be a subgroup of <m>G</m>. Prove that <m>\phi(H)</m> is a subgroup of <m>G'</m>.
       </p>
     </statement>
     <solution>
@@ -285,23 +286,15 @@
   <exercise>
     <statement>
       <p>
-        Recall that an element <m>u</m> of a binary structure is said to be an <em>idempotent</em> if <m>u^2=u</m>. Let <m>G</m> be an abelian group, and let <m>U</m> be the set of all idempotents of <m>G</m>. Prove that <m>U</m> is a subgroup of <m>G</m>.
+         Let <m>G</m> be an abelian group, and let <m>U=\{g\in G\,:\, g^{-1}=g\}.</m> Prove that <m>U</m> is a subgroup of <m>G</m>.
       </p>
     </statement>
     <solution>
     
     <p>
-      Clearly, <m>e\in H</m>, so <m>H\neq \emptyset</m>. Next, let <m>u,v\in H</m>. Then
-      <md>
-        <mrow>(uv^{-1})^2\amp =(uv^{-1})(uv^{-1})\amp \amp</mrow>
-        <mrow>\amp =u^2(v^{-1})^2 \amp \amp \text{ (since the group operation is assoc. and comm.) }</mrow>
-        <mrow>\amp =u^2(v^2)^{-1} \amp \amp \text{ (using the rules for exponents) }</mrow>
-        <mrow>\amp =uv^{-1}\amp \amp \text{ (since \(u,v\in H\)). }</mrow>
-      </md>
-    </p>
-
-    <p>
-      Thus, <m>uv^{-1}\in H</m>, and so <m>H \leq G</m> by the <xref ref="twostep" text="title"/>.
+      Clearly, <m>U \subseteq G</m> and <m>e\in U</m>. Next, let <m>u,v\in U</m>. Then
+      <me>(uv)^2=(uv)(uv)=u^2v^2=uv,</me> so <m>uv\in U</m>. Finally, since <m>u\in U</m>, we have <m>u^{-1}=u</m>, so 
+      <m>(u^{-1})^2=u^2=e</m>; thus, <m>u^{-1}\in U</m>.
     </p>
   </solution>
   </exercise>

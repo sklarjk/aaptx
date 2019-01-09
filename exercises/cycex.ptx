@@ -325,7 +325,7 @@
 
           <li>
             <p>
-              <m>\langle i\rangle</m> in <m>C^*</m>
+              <m>\langle i\rangle</m> in <m>\C^*</m>
             </p>
           </li>
 
@@ -404,7 +404,7 @@
   </p></solution>
   </exercise>
 
-  <exercise>
+<exercise>
     <statement>
       <p>
         Draw subgroup lattices for the following groups.
